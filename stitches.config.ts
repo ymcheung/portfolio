@@ -6,6 +6,18 @@ export const { css, styled, global, getCssString } = createCss({
       hiContrast: 'hsl(206,10%,5%)',
       loContrast: 'white',
 
+      laurel: 'hsl(162,57%,62%)',
+
+      shade1600: 'hsl(162,2%,99%)',
+      shade1500: 'hsl(162,2%,92%)',
+      shade1200: 'hsl(162,2%,72%)',
+      shade1000: 'hsl(162,2%,64%)',
+      shade800: 'hsl(162,2%,56%)',
+      shade700: 'hsl(162,2%,48%)',
+      shade600: 'hsl(162,2%,40%)',
+      shade300: 'hsl(162,2%,24%)',
+      shade0: 'hsl(162,2%,6%)',
+
       gray100: 'hsl(206,22%,99%)',
       gray200: 'hsl(206,12%,97%)',
       gray300: 'hsl(206,11%,92%)',
@@ -37,12 +49,12 @@ export const { css, styled, global, getCssString } = createCss({
       6: '35px',
     },
     fontSizes: {
-      1: '12px',
-      2: '13px',
-      3: '15px',
-      4: '17px',
-      5: '19px',
-      6: '21px',
+      1: '14px',
+      2: '16px',
+      3: '18px',
+      4: '20px',
+      5: '24px',
+      6: '32px',
     },
     fonts: {
       system: 'system-ui',
@@ -67,7 +79,8 @@ export const { css, styled, global, getCssString } = createCss({
     }),
   },
   media: {
-    bp1: '@media (min-width: 520px)',
-    bp2: '@media (min-width: 900px)',
+    m1: '@media (min-width: 768px)',
+    m2: '@media (min-width: 992px)',
+    m3: '@media (min-width: 1200px)',
   },
 })

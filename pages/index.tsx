@@ -1,6 +1,8 @@
-import Head from 'next/head'
-import { styled } from '../stitches.config'
-import StitchesLogo from '../components/StitchesLogo'
+import Head from 'next/head';
+import { styled } from '../stitches.config';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import StitchesLogo from '../components/StitchesLogo';
 
 const Box = styled('div', {})
 
@@ -35,6 +37,8 @@ const Container = styled('div', {
 })
 
 export default function Home() {
+  const { t } = useTranslation('index')
+
   return (
     <Box css={{ paddingY: '$6' }}>
       <Head>
@@ -51,3 +55,9 @@ export default function Home() {
     </Box>
   )
 }
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['index']),
+  },
+})
