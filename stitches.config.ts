@@ -1,6 +1,6 @@
 import { createCss } from '@stitches/react'
 
-export const { css, styled, global, getCssString } = createCss({
+export const { css, styled, global, theme, getCssString } = createCss({
   theme: {
     colors: {
       hiContrast: 'hsl(206,10%,5%)',
@@ -57,7 +57,7 @@ export const { css, styled, global, getCssString } = createCss({
       6: '32px',
     },
     fonts: {
-      system: 'system-ui',
+      default: '\'Overpass\', -apple-system, BlinkMacSystemFont, \'Segoe UI\'',
     },
   },
   utils: {

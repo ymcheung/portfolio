@@ -1,4 +1,4 @@
-import { global } from '@stitches/react';
+import { global } from '../stitches.config';
 
 const globalStyles = global({
   'html': {
