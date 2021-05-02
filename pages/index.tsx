@@ -11,7 +11,12 @@ import { Heading } from '../components/Headings';
 const indexBody = global({
   'body': {
     minHeight: '100vh',
-    backgroundColor: '$shade1600'
+    paddingTop: '$4',
+    backgroundColor: '$shade1600',
+
+    '@m768': {
+      paddingTop: '$12'
+    }
   }
 });
 
@@ -32,9 +37,12 @@ export default function Home() {
         <title>{TITLE}</title>
         <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700i,800,800i&display=swap" rel="stylesheet" />
       </Head>
-      <Container as="header" size={{ '@initial': '1', '@m992': '2', '@m1200': '3' }}>
+      <Container as="header" hasSibling>
         <Heading as="h1" nameTag="index">{AUTHOR}</Heading>
         <NameDescription>{DESCRIPTION}</NameDescription>
+      </Container>
+      <Container as="main" hasSibling>
+        <Heading as="h2" position="index">Projects</Heading>
       </Container>
     </>
   )

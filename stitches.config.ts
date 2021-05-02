@@ -16,20 +16,12 @@ export const { css, styled, global, theme, getCssString } = createCss({
       shade0: 'hsl(162,2%,6%)'
     },
     space: {
-      1: '4px',
-      2: '8px',
-      3: '12px',
-      4: '16px',
-      5: '18px',
-      6: '24px',
-    },
-    sizes: {
-      1: '5px',
-      2: '10px',
-      3: '15px',
-      4: '20px',
-      5: '25px',
-      6: '35px',
+      4: '4px',
+      8: '8px',
+      12: '12px',
+      16: '16px',
+      18: '18px',
+      20: '24px',
     },
     fontSizes: {
       14: '1.4rem',

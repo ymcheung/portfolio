@@ -23,7 +23,12 @@ export default class Document extends NextDocument {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link rel="icon" href="/favicon/ym.ico" />
+          <link rel="icon" href="/favicon/ym.svg" type="image/svg+xml" />
+          <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+          <link rel="manifest" href="/favicon/manifest.webmanifest" />
+        </Head>
         <body>
           <Main />
           <NextScript />

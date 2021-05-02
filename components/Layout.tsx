@@ -2,19 +2,20 @@ import { styled } from '../stitches.config';
 
 export const Container = styled('div', {
   marginX: 'auto',
-  paddingX: '$4',
+  paddingX: '$16',
+
+  '@m992': {
+    maxWidth: '960px'
+  },
+  '@m1200': {
+    maxWidth: '1168px'
+  },
 
   variants: {
-    size: {
-      '1': {
-        width: '100%'
-      },
-      '2': {
-        maxWidth: '960px'
-      },
-      '3': {
-        maxWidth: '1168px'
-      },
-    },
-  },
+    hasSibling: {
+      true: {
+        marginBottom: '$16'
+      }
+    }
+  }
 });
