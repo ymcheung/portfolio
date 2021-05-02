@@ -3,9 +3,6 @@ import { createCss } from '@stitches/react'
 export const { css, styled, global, theme, getCssString } = createCss({
   theme: {
     colors: {
-      hiContrast: 'hsl(206,10%,5%)',
-      loContrast: 'white',
-
       laurel: 'hsl(162,57%,62%)',
 
       shade1600: 'hsl(162,2%,99%)',
@@ -16,21 +13,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       shade700: 'hsl(162,2%,48%)',
       shade600: 'hsl(162,2%,40%)',
       shade300: 'hsl(162,2%,24%)',
-      shade0: 'hsl(162,2%,6%)',
-
-      gray100: 'hsl(206,22%,99%)',
-      gray200: 'hsl(206,12%,97%)',
-      gray300: 'hsl(206,11%,92%)',
-      gray400: 'hsl(206,10%,84%)',
-      gray500: 'hsl(206,10%,76%)',
-      gray600: 'hsl(206,10%,44%)',
-
-      purple100: 'hsl(252,100%,99%)',
-      purple200: 'hsl(252,100%,98%)',
-      purple300: 'hsl(252,100%,94%)',
-      purple400: 'hsl(252,75%,84%)',
-      purple500: 'hsl(252,78%,60%)',
-      purple600: 'hsl(252,80%,53%)',
+      shade0: 'hsl(162,2%,6%)'
     },
     space: {
       1: '4px',
@@ -49,15 +32,17 @@ export const { css, styled, global, theme, getCssString } = createCss({
       6: '35px',
     },
     fontSizes: {
-      1: '14px',
-      2: '16px',
-      3: '18px',
-      4: '20px',
-      5: '24px',
-      6: '32px',
+      14: '1.4rem',
+      16: '1.6rem',
+      18: '1.8rem',
+      20: '2.0rem',
+      24: '2.4rem',
+      32: '3.2rem',
     },
     fonts: {
       default: '\'Overpass\', -apple-system, BlinkMacSystemFont, \'Segoe UI\'',
+      slab: '\'Crete Round\', sans-serif',
+      mono: '\'Inconsolata\', monospace'
     },
   },
   utils: {
