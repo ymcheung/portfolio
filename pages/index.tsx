@@ -1,10 +1,11 @@
 import Head from 'next/head';
-import { styled, global } from '../stitches.config';
 
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { TITLE, AUTHOR } from '../constant';
+import { styled, global } from '../stitches.config';
 import { globalStyles } from '../utils/globalStyles';
-import StitchesLogo from '../components/StitchesLogo';
+import { Container } from '../components/Layout';
 
 const indexBody = global({
   'body': {
@@ -14,32 +15,12 @@ const indexBody = global({
 
 const Text = styled('p', {
   fontFamily: '$default',
-  color: '$hiContrast',
+  color: '$hiContrast'
 })
 
 const Link = styled('a', {
   fontFamily: '$default',
-  textDecoration: 'none',
-  color: '$purple600',
-})
-
-const Container = styled('div', {
-  marginX: 'auto',
-  paddingX: '$3',
-
-  variants: {
-    size: {
-      '1': {
-        maxWidth: '300px',
-      },
-      '2': {
-        maxWidth: '585px',
-      },
-      '3': {
-        maxWidth: '865px',
-      },
-    },
-  },
+  textDecoration: 'none'
 })
 
 export default function Home() {
@@ -50,11 +31,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Use Stitches with Next.js</title>
+        <title>{TITLE}</title>
       </Head>
-      <Container size={{ '@initial': '1', '@bp1': '2' }}>
-        <StitchesLogo />
-        <Text as="h1">Hello, from Stitches.</Text>
+      <Container size={{ '@initial': '1', '@m992': '2', '@m1200': '3' }}>
+        <Text as="h1">{AUTHOR}</Text>
         <Text>
           For full documentation, visit{' '}
           <Link href="https://stitches.dev">stitches.dev</Link>.

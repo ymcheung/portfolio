@@ -79,8 +79,8 @@ export const { css, styled, global, theme, getCssString } = createCss({
     }),
   },
   media: {
-    m1: '@media (min-width: 768px)',
-    m2: '@media (min-width: 992px)',
-    m3: '@media (min-width: 1200px)',
+    m768: '(min-width: 768px)',
+    m992: '(min-width: 992px)',
+    m1200: '(min-width: 1200px)'
   },
 })
