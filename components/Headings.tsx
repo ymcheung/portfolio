@@ -14,7 +14,8 @@ export const Heading = styled('h2', {
         fontStyle: 'italic'
       },
       footer: {
-        fontSize: '$14',
+        marginRight: '$8',
+        fontSize: '$18',
         fontWeight: 800,
         fontStyle: 'italic'
       }
@@ -22,11 +23,11 @@ export const Heading = styled('h2', {
     position: {
       index: {
         color: '$laurel',
-        fontSize: '$18',
+        fontSize: '$16',
         fontWeight: 800,
         fontStyle: 'italic',
         textTransform: 'uppercase',
-        letterSpacing: '2px'
+        letterSpacing: '1px'
       }
     }
   }

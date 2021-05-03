@@ -7,6 +7,7 @@ import { styled, global } from '../stitches.config';
 import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/Layout';
 import { Heading } from '../components/Headings';
+import Footer from '../components/Footer';
 
 const indexBody = global({
   'body': {
@@ -44,6 +45,7 @@ export default function Home() {
       <Container as="main" hasSibling>
         <Heading as="h2" position="index">Projects</Heading>
       </Container>
+      <Footer />
     </>
   )
 }

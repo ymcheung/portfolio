@@ -14,7 +14,12 @@ export const Container = styled('div', {
   variants: {
     hasSibling: {
       true: {
-        marginBottom: '$16'
+        marginBottom: '$18'
+      }
+    },
+    asProjectFooter: {
+      true: {
+        marginLeft: '-64px'
       }
     }
   }
