@@ -17,6 +17,11 @@ export const Container = styled('div', {
         marginBottom: '$18'
       }
     },
+    isGroupEnd: {
+      true: {
+        marginBottom: '64px'
+      }
+    },
     asProjectFooter: {
       true: {
         marginLeft: '-64px'

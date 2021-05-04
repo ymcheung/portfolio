@@ -1,0 +1,94 @@
+{
+  "intro":
+    "The &ldquo;Chinese&rdquo; languages used by Taiwan and China look similar but are very different from each other. However, the industry relied heavily on the translations from China. This causes the terms we use to be assimilated rapidly. Therefore, I started translating great articles based on the terms used in Taiwan.",
+  "stat":
+  {
+    "title":
+      "Statistics",
+    "count":
+    "Translation Articles",
+    "followers":
+      "Followers"
+  },
+  "worth": 
+  {
+    "title":
+      "Worth Mentioning",
+    "rank":
+      "Average Keyword Position<span class=\"worth-rank-toremark\">&ast;</span>",
+    "asof":
+      "&ast; As of April 2021"
+  },
+  "standalone":
+  {
+    "title":
+      "Websites",
+    "websites":
+    [
+      {
+        "slug":
+          "storybookintro",
+        "url":
+          "https://storybook.js.org/tutorials/intro-to-storybook/",
+        "name":
+          "Intro to Storybook for React",
+        "time": {
+          "format":
+            "2021-04",
+          "full":
+            "April, 2021"
+        },
+        "description":
+          "The famous design system tool: Storybook‘s official tutorials. The translation is under community <a class=\"paragraph-link\" href=\"https://github.com/chromaui/learnstorybook.com/pull/441\" target=\"_blank\" rel=\"noopener\">proofreading</a>."
+      },
+      {
+        "slug":
+          "statecss",
+        "url":
+          "https://stateofcss.com",
+        "name":
+          "State of CSS",
+        "time": {
+          "format":
+            "2020-12",
+          "full":
+            "December, 2020"
+        },
+        "description":
+          "The State of CSS received more than 10,000 responses in both 2019 and 2020. Most of the respondents were web front-end professionals. I cooperated with <a class=\"paragraph-link\" href=\"https://github.com/mingjunlu\" target=\"_blank\" rel=\"noopener\">&commat;mingjunlu</a> to get the translation done."
+      },
+      {
+        "slug":
+          "inclusive",
+        "url":
+          "https://inclusivedesignprinciples.intersection.tw",
+        "name":
+          "Inclusive Design Principles",
+        "time": {
+          "format":
+            "2020-08",
+          "full":
+            "August, 2020"
+        },
+        "description":
+          "Written by accessibility experts, the principles are about designing for the needs of people with permanent, temporary, situational, or changing disabilities — all of us really."
+      },
+      {
+        "slug":
+          "process",
+        "url":
+          "https://thecosignstudio.github.io/process",
+        "name":
+          "Design Process for Pros",
+        "time": {
+          "format":
+            "2018-11",
+          "full":
+            "November, 2018"
+        },
+        "description":
+          "The community activity gathered 20 designers to translate an e-book collectively. Please <a class=\"paragraph-link\" href=\"/translate-design-process\">read this post for details</a>."
+      }
+    ]
+  }
+}

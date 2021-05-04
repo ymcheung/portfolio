@@ -1,0 +1,45 @@
+{
+  "experience":
+  {
+    "title": 
+      "360&deg; 插畫體驗",
+    "featured":
+      "諾米以精緻的台灣城市風景插畫聞名。此個人作品網站展示他的手繪 360&deg 插畫作品，與 Nuomi 和插畫家經紀人 <a class=\"paragraph-link\" href=\"http://charlene.com.tw\" target=\"_blank\"  rel=\"noopener\">Charlene</a> 緊密合作。"
+  },
+  "gallery": {
+    "all":
+      "諾米的作品列表",
+    "detail":
+      "諾米的一幅建築盒子作品細節",
+    "course":
+      "諾米的課程"
+  },
+  "retrospect":
+  {
+    "title":
+      "回顧",
+    "specification":
+      "2017 年初完成之後，至今網頁設計的規格又提升許多。回顧此網站，現在已成為最低要求，而當初未考量到的設計：",
+      "https":
+      {
+        "title":
+          "HTTPS 加密",
+        "description": 
+          "Google Chrome 瀏覽器從 2018 年 10 月起，提醒訪客：沒有 HTTPS 的網站不安全。"
+      },
+      "structured":
+      {
+        "title":
+          "結構化資料",
+        "description":
+          "搜尋結果排名和訪問次數是讓設立網站有價值的最基本觀念。"
+      },
+      "accessibility":
+      {
+        "title":
+          "無障礙設計",
+        "description":
+          "無障礙設計已經有評分的標準和工具，且 Google Chrome 瀏覽器開發工具的指示越來越完善。"
+      }
+  }
+}

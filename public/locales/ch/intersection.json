@@ -1,0 +1,94 @@
+{
+  "intro":
+    "台灣和中國使用的「中文」，看似相近但事實上非常不同。我認為業界用語已經過度依賴中國翻譯，導致用語迅速被同化。因此開始尋找不錯的文章，翻譯成台灣在地化口氣。",
+  "stat":
+  {
+    "title":
+      "累積",
+    "count":
+      "篇翻譯文章",
+    "followers":
+      "位追蹤"
+  },
+  "worth": 
+  {
+    "title":
+      "值得一提",
+    "rank":
+      "關鍵字平均排名<span class=\"worth-rank-toremark\">&ast;</span>",
+    "asof":
+      "&ast; 2021 年 4 月採計"
+  },
+  "standalone":
+  {
+    "title":
+      "網站",
+    "websites":
+    [
+      {
+        "slug":
+          "storybookintro",
+        "url":
+          "https://storybook.js.org/tutorials/intro-to-storybook/",
+        "name":
+          "Storybook 入門：React 篇",
+        "time": {
+          "format":
+            "2021-04",
+          "full":
+            "2021 年 4 月"
+        },
+        "description":
+          "知名設計系統工具：Storybook 的官方教學課程。目前翻譯正在<a class=\"paragraph-link\" href=\"https://github.com/chromaui/learnstorybook.com/pull/441\" target=\"_blank\" rel=\"noopener\">進行社群校稿</a>。"
+      },
+      {
+        "slug":
+          "statecss",
+        "url":
+          "https://stateofcss.com",
+        "name":
+          "CSS 現況調查",
+        "time": {
+          "format":
+            "2020-12",
+          "full":
+            "2020 年 12 月"
+        },
+        "description":
+          "2019 與 2020 年的 CSS 現況調查皆收到超過 1 萬份回饋，參與答題者主要來自網頁前端領域。此翻譯與 <a class=\"paragraph-link\" href=\"https://github.com/mingjunlu\" target=\"_blank\" rel=\"noopener\">&commat;mingjunlu</a> 合作完成。"
+      },
+      {
+        "slug":
+          "inclusive",
+        "url":
+          "https://inclusivedesignprinciples.intersection.tw",
+        "name":
+          "平權設計原則",
+        "time": {
+          "format":
+            "2020-08",
+          "full":
+            "2020 年 8 月"
+        },
+        "description":
+          "無障礙設計專家整理出為有協助需求的人，包含永久、暫時、在某些情況和漸漸不便（其實就是我們所有人）的設計。"
+      },
+      {
+        "slug":
+          "process",
+        "url":
+          "https://thecosignstudio.github.io/process",
+        "name":
+          "專業人士的設計流程",
+        "time": {
+          "format":
+            "2018-11",
+          "full":
+            "2018 年 11 月"
+        },
+        "description":
+          "由 20 位設計師協作的電子書翻譯社群活動，請在<a class=\"paragraph-link\" href=\"/translate-design-process\">此篇文章閱讀細節</a>。"
+      }
+    ]
+  }
+}

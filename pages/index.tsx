@@ -7,6 +7,8 @@ import { styled, global } from '../stitches.config';
 import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/Layout';
 import { Heading } from '../components/Headings';
+import Projects from '../components/home/Projects';
+import Activity from '../components/home/Activity';
 import Footer from '../components/Footer';
 
 const indexBody = global({
@@ -42,9 +44,8 @@ export default function Home() {
         <Heading as="h1" nameTag="index">{AUTHOR}</Heading>
         <NameDescription>{DESCRIPTION}</NameDescription>
       </Container>
-      <Container as="main" hasSibling>
-        <Heading as="h2" position="index">Projects</Heading>
-      </Container>
+      <Projects />
+      <Activity />
       <Footer />
     </>
   )
@@ -54,4 +55,4 @@ export const getStaticProps = async ({ locale }) => ({
   props: {
     ...await serverSideTranslations(locale, ['index']),
   },
-})
+});

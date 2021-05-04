@@ -1,0 +1,153 @@
+{
+  "intro":
+  {
+    "title":
+      "問題",
+    "description":
+      "是否有可能呈現「在電視影劇裡聽到喜歡歌曲」的那一刻？"
+  },
+  "how":
+  {
+    "lead":
+      "進一步構想：",
+    "title":
+      "會如何找到此網站？",
+    "description":
+      "根據實際資料，人們在搜尋引擎輸入的歌詞關鍵字有：",
+    "hows":
+    [
+      {
+        "keyword":
+          "lawrence of arabia british beatlemania",
+        "name":
+          "搜尋歌詞片段。"
+      },
+      {
+        "keyword":
+          "the umbrella academy i think we re alone now",
+        "name":
+          "搜尋電視影劇名稱加上聽到的歌詞片段。"
+      }
+    ]
+  },
+  "obstacle":
+  {
+    "title":
+      "現有方式與阻礙",
+    "description":
+      "IMDB 是電視影劇資料的首選。然而，很難根據歌詞找到，因為：",
+    "execuses":
+    [
+      {
+        "name":
+          "在電影、電視劇、歌手、樂團的頁面不會附上歌詞。若要找到歌詞，得再進一步搜尋"
+      },
+      {
+        "name":      
+          "中文資料非常稀少"
+      }
+    ],
+    "conclusion":
+      "因此，從聽到歌曲的「那一刻」尋找資料，仍是一段旅程。"
+  },
+  "what":
+  {
+    "title":
+      "網站內容",
+    "items":
+    [
+      {
+        "symbol":
+          "🤘",
+        "name":
+          "歌手/樂團"
+      },
+      {
+        "symbol":
+          "♪",
+        "name":
+          "歌曲 & 歌詞"
+      },
+      {
+        "symbol":
+          "🎬 📺 ▶️",
+        "name":
+          "出現的電影/電視劇"
+      }
+    ]
+  },
+  "asap":
+  {
+    "title":
+      "最小可行性產品",
+    "description":
+      "就像許多產品，核心概念成形就公開。即使非常陽春，還是先申請讓 Google 收錄內容與網址，接著再不斷修正。",
+    "prefix":
+      "第",
+    "affix":
+      "版",
+    "versions":
+    {
+      "first":
+      {
+        "position":
+          "{{prefix}} <span class=\"number\">1</span> {{affix}}",
+        "description":
+          "所有資訊架構都是手動放置"
+      },
+      "second":
+      {
+        "position":
+          "{{prefix}} <span class=\"number\">2</span> {{affix}}",
+        "description":
+          "做好清單、演唱與歌曲的版型"
+      },
+      "third":
+      {
+        "position":
+          "{{prefix}} <span class=\"number\">3</span> {{affix}}",
+        "description":
+          "Headless 內容管理系統：<a class=\"paragraph-link\" href=\"https://sanity.io\" target=\"_blank\" rel=\"noopener\">Sanity</a>"
+      }
+    }
+  },
+  "expected":
+  {
+    "title":
+      "預期成果",
+    "description":
+      "訪客找到「那一刻」的歌曲而感覺良好。"
+  },
+  "measure":
+  {
+    "title":
+      "觀測",
+    "methods":
+    [
+      {
+        "name":
+          "蒐集關鍵字語法"
+      },
+      {
+        "name":
+          "意見回饋"
+      }
+    ]
+  },
+  "grow":
+  {
+    "title":
+      "成長方向",
+    "description":
+      "預期同樣喜歡 60-80 年代流行文化的創作者持續增加每首歌的深度。"
+  },
+  "nongoal":
+  {
+    "title":
+      "非目標",
+    "description":
+      "盜版"
+  },
+  "ending":
+    "此閒暇專案仍在活躍開發，試試看：<a class=\"paragraph-link\" href=\"https://moment.intersection.tw/songs/heroes\" target=\"_blank\" rel=\"noopener\">David Bowie 的 Heroes</a> 出現在哪些電視影劇？"
+}

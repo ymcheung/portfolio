@@ -21,7 +21,7 @@ export const Heading = styled('h2', {
       }
     },
     position: {
-      index: {
+      home: {
         color: '$laurel',
         fontSize: '$16',
         fontWeight: 800,
