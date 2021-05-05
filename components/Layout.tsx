@@ -4,14 +4,24 @@ export const Container = styled('div', {
   marginX: 'auto',
   paddingX: '$16',
 
-  '@m992': {
-    maxWidth: '960px'
-  },
-  '@m1200': {
-    maxWidth: '1168px'
-  },
-
   variants: {
+    asHome: {
+      true: {
+        '@m992': {
+          maxWidth: '960px'
+        },
+        '@m1200': {
+          maxWidth: '1168px'
+        }
+      }
+    },
+    asProjects: {
+      true: {
+        '@m992': {
+          maxWidth: '640px'
+        }
+      }
+    },
     hasSibling: {
       true: {
         marginBottom: '$18'
@@ -20,11 +30,6 @@ export const Container = styled('div', {
     isGroupEnd: {
       true: {
         marginBottom: '64px'
-      }
-    },
-    asProjectFooter: {
-      true: {
-        marginLeft: '-64px'
       }
     }
   }

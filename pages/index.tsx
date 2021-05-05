@@ -5,10 +5,12 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from '../constant';
 import { styled, global } from '../stitches.config';
 import { globalStyles } from '../utils/globalStyles';
+
 import { Container } from '../components/Layout';
 import { Heading } from '../components/Headings';
 import Projects from '../components/home/Projects';
 import Activity from '../components/home/Activity';
+import ExternalLinks from '../components/home/ExternalLinks';
 import Footer from '../components/Footer';
 
 const indexBody = global({
@@ -46,6 +48,7 @@ export default function Home() {
       </Container>
       <Projects />
       <Activity />
+      <ExternalLinks />
       <Footer />
     </>
   )
