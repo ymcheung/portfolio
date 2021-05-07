@@ -5,7 +5,7 @@ export const Container = styled('div', {
   paddingX: '$16',
 
   variants: {
-    asHome: {
+    atHome: {
       true: {
         '@m992': {
           maxWidth: '960px'
@@ -15,7 +15,7 @@ export const Container = styled('div', {
         }
       }
     },
-    asProjects: {
+    atProject: {
       true: {
         '@m992': {
           maxWidth: '640px'

@@ -17,11 +17,16 @@ const NameTagDescription = styled('span', {
   fontSize: '$14'
 });
 
-function Footer() {
+export interface FooterProps {
+  readonly atHome?: boolean;
+  readonly atProject?: boolean;
+}
+
+function Footer({ atHome, atProject }: FooterProps) {
   const Year = new Date().getFullYear();
 
   return(
-    <Container as="footer">
+    <Container as="footer" atHome={atHome} atProject={atProject}>
       <Separate />
       <Heading as="strong" nameTag="footer">{AUTHOR}</Heading>
       <NameTagDescription>Portfolio {Year}</NameTagDescription>

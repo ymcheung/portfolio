@@ -42,14 +42,14 @@ export default function Home() {
         <title>{TITLE}</title>
         <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700i,800,800i&display=swap" rel="stylesheet" />
       </Head>
-      <Container as="header" hasSibling>
+      <Container as="header" atHome hasSibling>
         <Heading as="h1" nameTag="index">{AUTHOR}</Heading>
         <NameDescription>{DESCRIPTION}</NameDescription>
       </Container>
       <Projects />
       <Activity />
       <ExternalLinks />
-      <Footer />
+      <Footer atHome />
     </>
   )
 }

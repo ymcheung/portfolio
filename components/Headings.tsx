@@ -21,13 +21,19 @@ export const Heading = styled('h2', {
       }
     },
     position: {
-      home: {
+      homeSection: {
         color: '$laurel',
         fontSize: '$16',
         fontWeight: 800,
         fontStyle: 'italic',
         textTransform: 'uppercase',
         letterSpacing: '1px'
+      },
+      homeItem: {
+        marginBottom: '$4px',
+        color: '$shade0',
+        fontSize: '$16',
+        fontWeight: 700
       }
     }
   }

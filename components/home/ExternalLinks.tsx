@@ -16,7 +16,7 @@ const IconLink = styled('a', {
 
 function ExternalLinks() {
   return(
-    <Container as="aside">
+    <Container as="aside" atHome>
       <Link href="https://www.linkedin.com/in/ymcheungtw" passHref>
         <IconLink target="_blank" rel="noopener">
           <IconLinkedIn />
