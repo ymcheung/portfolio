@@ -9,5 +9,17 @@ export const HomeItemsLayout = styled('section', {
 });
 
 export const HomeItemLink = styled('a', {
-  display: 'block'
+  display: 'block',
+  textDecoration: 'none'
+});
+
+export const HomeItemContainer = styled('figure', {
+  margin: 0
+});
+
+export const HomeItemDescription = styled('span', {
+  color: '$shade800',
+  fontFamily: '$default',
+  fontSize: '1.4rem',
+  fontWeight: 400
 });

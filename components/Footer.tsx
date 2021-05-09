@@ -17,16 +17,15 @@ const NameTagDescription = styled('span', {
   fontSize: '$14'
 });
 
-export interface FooterProps {
-  readonly atHome?: boolean;
-  readonly atProject?: boolean;
+interface FooterProps {
+  readonly responsive: {};
 }
 
-function Footer({ atHome, atProject }: FooterProps) {
+function Footer({ responsive }: FooterProps) {
   const Year = new Date().getFullYear();
 
   return(
-    <Container as="footer" atHome={atHome} atProject={atProject}>
+    <Container as="footer" responsive={responsive}>
       <Separate />
       <Heading as="strong" nameTag="footer">{AUTHOR}</Heading>
       <NameTagDescription>Portfolio {Year}</NameTagDescription>

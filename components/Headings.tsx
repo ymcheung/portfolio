@@ -8,6 +8,7 @@ export const Heading = styled('h2', {
     nameTag: {
       index: {
         marginBottom: 0,
+        marginLeft: '-2px',
         color: '$shade0',
         fontSize: '2.8rem',
         fontWeight: 800,

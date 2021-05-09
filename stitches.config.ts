@@ -54,6 +54,10 @@ export const { css, styled, global, theme, getCssString } = createCss({
       paddingTop: value,
       paddingBottom: value,
     }),
+    size: (config) => (value) => ({
+      width: value,
+      height: value,
+    })
   },
   media: {
     m768: '(min-width: 768px)',

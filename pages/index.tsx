@@ -42,14 +42,14 @@ export default function Home() {
         <title>{TITLE}</title>
         <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700i,800,800i&display=swap" rel="stylesheet" />
       </Head>
-      <Container as="header" atHome hasSibling>
+      <Container as="header" responsive={{'@initial': 'full', '@m992': 'max960', '@m1200': 'max1168'}} hasSibling>
         <Heading as="h1" nameTag="index">{AUTHOR}</Heading>
         <NameDescription>{DESCRIPTION}</NameDescription>
       </Container>
       <Projects />
       <Activity />
       <ExternalLinks />
-      <Footer atHome />
+      <Footer responsive={{'@initial': 'full', '@m992': 'max960', '@m1200': 'max1168'}} />
     </>
   )
 }

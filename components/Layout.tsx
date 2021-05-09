@@ -5,21 +5,18 @@ export const Container = styled('div', {
   paddingX: '$16',
 
   variants: {
-    atHome: {
-      true: {
-        '@m992': {
-          maxWidth: '960px'
-        },
-        '@m1200': {
-          maxWidth: '1168px'
-        }
-      }
-    },
-    atProject: {
-      true: {
-        '@m992': {
-          maxWidth: '640px'
-        }
+    responsive: {
+      full: {
+        width: '100%'
+      },
+      max640: {
+        maxWidth: '640px'
+      },
+      max960: {
+        maxWidth: '960px'
+      },
+      max1168: {
+        maxWidth: '1168px'
       }
     },
     hasSibling: {
