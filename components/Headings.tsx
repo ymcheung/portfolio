@@ -17,24 +17,47 @@ export const Heading = styled('h2', {
       footer: {
         marginRight: '$8',
         fontSize: '$18',
-        fontWeight: 800,
+        fontWeight: 700,
         fontStyle: 'italic'
       }
     },
     position: {
       homeSection: {
+        marginTop: 0,
+        marginBottom: ' $4',
         color: '$laurel',
-        fontSize: '$16',
+        fontSize: '$20',
         fontWeight: 800,
         fontStyle: 'italic',
         textTransform: 'uppercase',
         letterSpacing: '1px'
       },
       homeItem: {
-        marginBottom: '$4px',
+        marginBottom: '$4',
         color: '$shade0',
         fontSize: '$16',
-        fontWeight: 700
+        fontWeight: 600
+      }
+    }
+  }
+});
+
+export const Verb = styled('span', {
+  display: 'inline-block',
+
+  variants: {
+    item: {
+      pie: {
+
+      },
+      moment: {
+
+      },
+      intersection: {
+
+      },
+      process: {
+
       }
     }
   }

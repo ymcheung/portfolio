@@ -1,16 +1,25 @@
 import { styled } from '../../stitches.config';
 
 export const HomeItemsLayout = styled('section', {
-  '@m768': {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, 320px)',
-    gridColumnGap: '16px'
-  }
+    grid: 'auto / auto-flow 288px',
+    gridColumnGap: '16px',
+    overflowX: 'auto',
+    marginX: '-16px',
+    paddingX: '$16'
 });
 
 export const HomeItemLink = styled('a', {
   display: 'block',
-  textDecoration: 'none'
+  textDecoration: 'none',
+
+  variants: {
+    hasSibling: {
+      true: {
+        marginBottom: '$18'
+      }
+    }
+  }
 });
 
 export const HomeItemContainer = styled('figure', {

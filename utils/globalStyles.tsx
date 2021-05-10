@@ -5,12 +5,16 @@ export const globalStyles = global({
     boxSizing: 'border-box',
     fontSize: '62.5%'
   },
+
   '*, *::before, *::after': {
     boxSizing: 'inherit'
   },
+
   'body': {
     margin: 0,
-    fontSize: '$2'
+    fontSize: '$16',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale'
   }
 });
 

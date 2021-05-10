@@ -13,7 +13,9 @@ export const { css, styled, global, theme, getCssString } = createCss({
       shade700: 'hsl(162,2%,48%)',
       shade600: 'hsl(162,2%,40%)',
       shade300: 'hsl(162,2%,24%)',
-      shade0: 'hsl(162,2%,6%)'
+      shade0: 'hsl(162,2%,6%)',
+
+      intersection: 'hsl(11,71%,61%)'
     },
     space: {
       4: '4px',
@@ -27,7 +29,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       14: '1.4rem',
       16: '1.6rem',
       18: '1.8rem',
-      20: '2.0rem',
+      20: '2rem',
       24: '2.4rem',
       32: '3.2rem',
     },
