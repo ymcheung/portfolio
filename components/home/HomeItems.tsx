@@ -1,14 +1,36 @@
 import { styled } from '../../stitches.config';
 
 export const HomeItemsLayout = styled('section', {
-    display: 'grid',
-    grid: 'auto / auto-flow 288px',
-    gridColumnGap: '16px',
-    overflowX: 'auto',
-    marginX: '-16px',
-    marginBottom: '$4',
-    paddingX: '$16',
-    paddingBottom: '$8'
+  display: 'grid',
+  overflowX: 'auto',
+  marginX: '-16px',
+
+  variants: {
+    forProjects: {
+      mobile: {
+        grid: 'auto / auto-flow 304px',
+        gridColumnGap: '$8',
+        marginBottom: '$4',
+        paddingX: '$8',
+        paddingBottom: '$8'
+      }
+    },
+    forActivity: {
+      mobile: {
+        grid: 'auto / 100%',
+        gridRowGap: '$18',
+        marginY: 0,
+        paddingX: '$16',
+      }
+    }
+  }
+});
+
+export const HomeItem = styled('li', {
+  display: 'grid',
+  grid: 'auto / 24px 1fr',
+  alignItems: 'start',
+  gridColumnGap: '$8'
 });
 
 export const HomeItemLink = styled('a', {
@@ -16,9 +38,9 @@ export const HomeItemLink = styled('a', {
   textDecoration: 'none',
 
   variants: {
-    hasSibling: {
+    forProjects: {
       true: {
-        marginBottom: '$18'
+        paddingX: '$8'
       }
     }
   }

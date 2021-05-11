@@ -23,7 +23,7 @@ export const Heading = styled('h2', {
     },
     position: {
       homeSection: {
-        marginY: 0,
+        margin: '0 0 $4',
         color: '$laurel',
         fontSize: '$20',
         fontWeight: 800,
@@ -31,7 +31,7 @@ export const Heading = styled('h2', {
         textTransform: 'uppercase',
         letterSpacing: '1px'
       },
-      homeItem: {
+      homeItemName: {
         marginBottom: '$4',
         color: '$shade0',
         fontSize: '$16',

@@ -25,7 +25,7 @@ function Footer({ responsive }: FooterProps) {
   const Year = new Date().getFullYear();
 
   return(
-    <Container as="footer" responsive={responsive}>
+    <Container as="footer" responsive={responsive} isGroupEnd>
       <Separate />
       <Heading as="strong" nameTag="footer">{AUTHOR}</Heading>
       <NameTagDescription>Portfolio {Year}</NameTagDescription>

@@ -5,7 +5,7 @@ const Icon = styled(Svg, {
   variants: {
     wh: {
       sq18: {
-        size: '18px'
+        size: '$18'
       }
     }
   }
