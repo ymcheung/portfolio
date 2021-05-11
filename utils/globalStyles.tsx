@@ -1,7 +1,7 @@
 import { global } from '../stitches.config';
 
 export const globalStyles = global({
-  'html': {
+  html: {
     boxSizing: 'border-box',
     fontSize: '62.5%'
   },
@@ -10,7 +10,7 @@ export const globalStyles = global({
     boxSizing: 'inherit'
   },
 
-  'body': {
+  body: {
     margin: 0,
     fontSize: '$16',
     WebkitFontSmoothing: 'antialiased',
