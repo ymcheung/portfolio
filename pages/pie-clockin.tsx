@@ -7,7 +7,7 @@ import { globalStyles } from '../utils/globalStyles';
 const pageBody = global({
   'body[data-body-style=pie]': {
     minHeight: '100vh',
-    backgroundColor: '$shade300'
+    backgroundColor: '$pie0'
   }
 });
 

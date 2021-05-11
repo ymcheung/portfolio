@@ -15,10 +15,10 @@ export const { css, styled, global, theme, getCssString } = createCss({
       shade300: 'hsl(162,2%,24%)',
       shade0: 'hsl(162,2%,6%)',
 
-      pie800: 'hsl(240),62%,72%)',
-      pie700: 'hsl(240),62%,64%)',
-      pie400: 'hsl(240),62%,52%)',
-      pie0: 'hsl(240),62%,5%)',
+      pie800: 'hsl(240,62%,72%)',
+      pie700: 'hsl(240,62%,64%)',
+      pie400: 'hsl(240,62%,52%)',
+      pie0: 'hsl(240,62%,5%)',
 
       mtDawn: 'hsl(16,68%,67%)',
       mtMidnight700: 'hsl(225,26%,56%)',
