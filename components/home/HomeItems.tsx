@@ -6,7 +6,9 @@ export const HomeItemsLayout = styled('section', {
     gridColumnGap: '16px',
     overflowX: 'auto',
     marginX: '-16px',
-    paddingX: '$16'
+    marginBottom: '$4',
+    paddingX: '$16',
+    paddingBottom: '$8'
 });
 
 export const HomeItemLink = styled('a', {
@@ -24,6 +26,10 @@ export const HomeItemLink = styled('a', {
 
 export const HomeItemContainer = styled('figure', {
   margin: 0
+});
+
+export const HomeItemImage = styled('img', {
+  size: '288px'
 });
 
 export const HomeItemDescription = styled('span', {

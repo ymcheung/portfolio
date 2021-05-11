@@ -23,8 +23,7 @@ export const Heading = styled('h2', {
     },
     position: {
       homeSection: {
-        marginTop: 0,
-        marginBottom: ' $4',
+        marginY: 0,
         color: '$laurel',
         fontSize: '$20',
         fontWeight: 800,
