@@ -8,29 +8,29 @@ function Activity() {
   return(
     <Container responsive={{'@initial': 'full', '@m992': 'max960', '@m1200': 'max1168'}} isGroupEnd>
       <Heading as="h2" position="homeSection">C<small>ommunity</small> A<small>ctivity</small></Heading>
-      <HomeItemsLayout as="ul" forActivity={{'@initial': 'mobile'}}>
-        <HomeItem>
-          <IconHyphen />
+      <HomeItemsLayout as="ul" forActivity={{'@initial': 'mobile', '@m768': 'tablet'}}>
+        <HomeItem removeIcon={{ '@m768': true }}>
+          <IconHyphen showInMobile={{ '@m768': true }} />
           <Link href="/intersection" passHref>
             <HomeItemLink>
               <Heading as="h2" position="homeItemName">
                 Translate Articles and Websites
               </Heading>
               <HomeItemDescription>
-                <Verb>Explore</Verb> search engine optimization and internationalization by translating
+                <Verb>Explore</Verb> search engine optimization and internationalization by translations.
               </HomeItemDescription>
             </HomeItemLink>
           </Link>
           </HomeItem>
-        <HomeItem>
-          <IconHyphen />
+        <HomeItem removeIcon={{ '@m768': true }}>
+          <IconHyphen showInMobile={{ '@m768': true }} />
           <Link href="/translate-design-process" passHref>
             <HomeItemLink>
               <Heading as="h2" position="homeItemName">
                 Design Process for Pros
               </Heading>
               <HomeItemDescription>
-                <Verb>Retrospect</Verb> an event gathing 20 designers to translate an e-book
+                <Verb>Retrospect</Verb> an event gathing 20 designers to translate an e-book.
               </HomeItemDescription>
             </HomeItemLink>
           </Link>

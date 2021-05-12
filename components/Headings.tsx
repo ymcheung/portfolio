@@ -25,7 +25,7 @@ export const Heading = styled('h2', {
       homeSection: {
         margin: '0 0 $4',
         color: '$laurel',
-        fontSize: '$20',
+        fontSize: '$18',
         fontWeight: 800,
         fontStyle: 'italic',
         textTransform: 'uppercase',
@@ -34,8 +34,9 @@ export const Heading = styled('h2', {
       homeItemName: {
         marginBottom: '$4',
         color: '$shade0',
-        fontSize: '$16',
-        fontWeight: 600
+        fontSize: '$18',
+        fontWeight: 600,
+        lineHeight: '24px'
       }
     }
   }

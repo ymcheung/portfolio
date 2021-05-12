@@ -28,6 +28,11 @@ export const Container = styled('div', {
       true: {
         marginBottom: '64px'
       }
+    },
+    footerEnd: {
+      true: {
+        paddingBottom: '64px'
+      }
     }
   }
 });
