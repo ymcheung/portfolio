@@ -7,8 +7,20 @@ import { AUTHOR } from '../constant';
 const Separate = styled('hr', {
   width: '120px',
   margin: '0 auto $8 0',
-  borderTop: 0,
-  borderBottom: '1px solid $shade1500'
+  border: 0,
+  borderBottomWidth: '1px',
+  borderBottomStyle: 'solid',
+  
+  variants: {
+    scheme: {
+      dark: {
+        borderBottomColor: '$shade300'
+      },
+      light: {
+        borderBottomColor: '$shade1500'
+      }
+    }
+  }
 });
 
 const NameTagDescription = styled('span', {
@@ -19,15 +31,16 @@ const NameTagDescription = styled('span', {
 
 interface FooterProps {
   readonly responsive: {};
+  readonly scheme: 'dark' | 'light';
 }
 
-function Footer({ responsive }: FooterProps) {
+function Footer({ responsive, scheme }: FooterProps) {
   const Year = new Date().getFullYear();
 
   return(
     <Container as="footer" responsive={responsive} footerEnd>
-      <Separate />
-      <Heading as="strong" nameTag="footer">{AUTHOR}</Heading>
+      <Separate scheme={scheme} />
+      <Heading as="strong" nameTag="footer" footerScheme={scheme}>{AUTHOR}</Heading>
       <NameTagDescription>Portfolio {Year}</NameTagDescription>
     </Container>
   );

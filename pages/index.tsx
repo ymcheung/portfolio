@@ -4,9 +4,11 @@ import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from '../constant';
-import { styled, global } from '../stitches.config';
 import SEO from '../utils/seo';
 
+import { styled, global } from '../stitches.config';
+
+import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/Layout';
 import { Heading } from '../components/Headings';
 import Projects from '../composition/Projects';
@@ -37,9 +39,11 @@ export default function Home() {
     document.body.setAttribute('data-body-style', 'home');
   });
 
-  const { t } = useTranslation('index');
+  globalStyles();
   pageBody();
 
+  const { t } = useTranslation('index');
+  
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@graph':
@@ -100,7 +104,7 @@ export default function Home() {
       <Projects />
       <Activity />
       <ExternalLinks />
-      <Footer responsive={{'@initial': 'full', '@m992': 'max960', '@m1200': 'max1168'}} />
+      <Footer responsive={{'@initial': 'full', '@m992': 'max960', '@m1200': 'max1168'}} scheme="light" />
     </>
   )
 }
