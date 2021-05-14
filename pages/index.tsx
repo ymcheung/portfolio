@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from '../constant';
-import SEO from '../utils/seo';
+import HeadMeta from '../utils/HeadMeta';
 
 import { styled, global } from '../stitches.config';
 
@@ -97,7 +97,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,600;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet" />
       </Head>
-      <SEO />
+      <HeadMeta />
       <Container as="header" responsive={{'@m992': 'max960', '@m1200': 'max1168'}} hasSibling>
         <Heading as="h1" nameTag="index">{AUTHOR}</Heading>
         <NameDescription>{DESCRIPTION}</NameDescription>

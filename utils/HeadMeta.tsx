@@ -1,8 +1,7 @@
 import Head from 'next/head'
+import * as headMetaDefault from '../constant';
 
-import * as SEODefault from '../constant';
-
-type SEOProps = {
+type headMetaProps = {
   title: string;
   description: string;
   canonical: string;
@@ -10,13 +9,13 @@ type SEOProps = {
 } & typeof defaultProps;
 
 const defaultProps = {
-  title: SEODefault.TITLE,
-  description: SEODefault.DESCRIPTION,
+  title: headMetaDefault.TITLE,
+  description: headMetaDefault.DESCRIPTION,
   canonical: '',
   ogCover: '/home/og-cover.jpg'
 };
 
-function SEO({ title, description, canonical, ogCover }: SEOProps) {
+function HeadMeta({ title, description, canonical, ogCover }: headMetaProps) {
   return (
     <Head>
       <title>{title}</title>
@@ -32,5 +31,5 @@ function SEO({ title, description, canonical, ogCover }: SEOProps) {
   )
 }
 
-SEO.defaultProps = defaultProps;
-export default SEO;
+HeadMeta.defaultProps = defaultProps;
+export default HeadMeta;
