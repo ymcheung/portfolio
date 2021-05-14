@@ -94,17 +94,18 @@ export default function Home() {
       <Head>
         <title>{TITLE}</title>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700i,800,800i&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,600;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet" />
       </Head>
       <SEO />
-      <Container as="header" responsive={{'@initial': 'full', '@m992': 'max960', '@m1200': 'max1168'}} hasSibling>
+      <Container as="header" responsive={{'@m992': 'max960', '@m1200': 'max1168'}} hasSibling>
         <Heading as="h1" nameTag="index">{AUTHOR}</Heading>
         <NameDescription>{DESCRIPTION}</NameDescription>
       </Container>
       <Projects />
       <Activity />
       <ExternalLinks />
-      <Footer responsive={{'@initial': 'full', '@m992': 'max960', '@m1200': 'max1168'}} scheme="light" />
+      <Footer responsive={{'@m992': 'max960', '@m1200': 'max1168'}} scheme="light" />
     </>
   )
 }

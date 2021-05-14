@@ -6,10 +6,12 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import SEO from '../utils/seo';
 
-import { styled, global } from '../stitches.config';
+import { global } from '../stitches.config';
 
 import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/Layout';
+import { Heading } from '../components/Headings';
+import Meta from '../projects/pie/Meta';
 import Footer from '../components/Footer';
 
 const pageBody = global({
@@ -29,15 +31,17 @@ export default function ProjectPie() {
   return(
     <>
       <Head>
-        <title>Pie</title>
         {/* <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} /> */}
-        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700i,800,800i&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&family=Overpass:ital,wght@0,300;0,400;0,600;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet" />
       </Head>
-      <SEO />
-      <Container responsive={{'@initial': 'full', '@m768': 'max640'}} hasSibling>
+      <SEO title="Explore UI of a Clock-In Web App" description="A side project exploring fluent UI design." />
+      <Container responsive={{'@m768': 'max640'}} hasSibling>
+        <Heading itemName="dark">Explore UI of a Clock-In Web App</Heading>
+        <Meta />
         <Link href="/">Home</Link>
       </Container>
-      <Footer responsive={{'@initial': 'full', '@m768': 'max640'}} scheme="dark" />
+      <Footer responsive={{'@m768': 'max640'}} inProject={{'@m992': true}} scheme="dark" />
     </>
   );
 }

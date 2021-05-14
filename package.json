@@ -2,7 +2,7 @@
   "name": "ym-portfolio",
   "version": "0.1.0",
   "scripts": {
-    "dev": "yarn && next --hostname 0.0.0.0",
+    "dev": "yarn && node server.js",
     "build": "next build",
     "start": "next start"
   },

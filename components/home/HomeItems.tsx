@@ -9,7 +9,7 @@ export const HomeItemsLayout = styled('section', {
     forProjects: {
       mobile: {
         grid: 'auto / auto-flow 304px',
-        gridColumnGap: '$8',
+        columnGap: '$8',
         marginBottom: '$4',
         paddingX: '$8',
         paddingBottom: '$8'
@@ -21,13 +21,13 @@ export const HomeItemsLayout = styled('section', {
     forActivity: {
       mobile: {
         grid: 'auto / 100%',
-        gridRowGap: '$18',
+        rowGap: '$18',
         marginY: 0,
         paddingX: '$16',
       },
       tablet: {
         grid: 'auto / repeat(3, 1fr)',
-        gridColumnGap: '$16',
+        columnGap: '$16',
       }
     }
   }
@@ -37,7 +37,7 @@ export const HomeItem = styled('li', {
   display: 'grid',
   grid: 'auto / 24px 1fr',
   alignItems: 'start',
-  gridColumnGap: '$8',
+  columnGap: '$8',
 
   variants: {
     removeIcon: {

@@ -36,3 +36,7 @@ yarn-error.log*
 
 # vs code
 .vscode
+
+# https
+https_cert
+server.js

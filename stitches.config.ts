@@ -47,9 +47,9 @@ export const { css, styled, global, theme, getCssString } = createCss({
       32: '3.2rem',
     },
     fonts: {
-      default: '\'Overpass\', -apple-system, BlinkMacSystemFont, \'Segoe UI\'',
+      default: '\'Overpass\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', serif',
       slab: '\'Crete Round\', sans-serif',
-      mono: '\'Inconsolata\', monospace'
+      mono: '\'Inconsolata\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', serif'
     },
   },
   utils: {

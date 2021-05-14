@@ -23,6 +23,16 @@ const Separate = styled('hr', {
   }
 });
 
+const FooterLayout = styled('div', {
+  variants: {
+    inProject: {
+      true: {
+        marginLeft: '-120px'
+      }
+    },
+  }
+});
+
 const NameTagDescription = styled('span', {
   color: '$shade800',
   fontFamily: '$default',
@@ -31,17 +41,20 @@ const NameTagDescription = styled('span', {
 
 interface FooterProps {
   readonly responsive: {};
+  readonly inProject?: {};
   readonly scheme: 'dark' | 'light';
 }
 
-function Footer({ responsive, scheme }: FooterProps) {
+function Footer({ responsive, inProject, scheme }: FooterProps) {
   const Year = new Date().getFullYear();
 
   return(
     <Container as="footer" responsive={responsive} footerEnd>
-      <Separate scheme={scheme} />
-      <Heading as="strong" nameTag="footer" footerScheme={scheme}>{AUTHOR}</Heading>
-      <NameTagDescription>Portfolio {Year}</NameTagDescription>
+      <FooterLayout inProject={inProject}>
+        <Separate scheme={scheme} />
+        <Heading as="strong" nameTag="footer" footerScheme={scheme}>{AUTHOR}</Heading>
+        <NameTagDescription>Portfolio {Year}</NameTagDescription>
+      </FooterLayout>
     </Container>
   );
 }

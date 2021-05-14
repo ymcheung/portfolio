@@ -49,12 +49,18 @@ export const Heading = styled('h2', {
     },
     itemName: {
       dark: {
+        marginBottom: '$16',
         color: '$shade1600',
-        fontSize: '$24'
+        fontSize: '$24',
+        fontWeight: 600,
+        lineHeight: '32px'
       },
       light: {
+        marginBottom: '$16',
         color: '$shade0',
-        fontSize: '$24'
+        fontSize: '$24',
+        fontWeight: 600,
+        lineHeight: '32px'
       }
     }
   }
