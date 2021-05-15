@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link';
 
-import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '../utils/HeadMeta';
 import { webPage } from '../utils/schema/webPage';
@@ -11,8 +10,9 @@ import { global } from '../stitches.config';
 
 import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/Layout';
-import { Heading } from '../components/Headings';
+import { Heading } from '../components/headings';
 import Meta from '../projects/pie/Meta';
+import Content from '../projects/pie/Content';
 import Footer from '../components/Footer';
 
 const pageBody = global({
@@ -58,6 +58,7 @@ export default function ProjectPie() {
         <Heading itemName="dark">{pageInfo.name}</Heading>
         <Meta />
       </Container>
+      <Content />
       <Footer responsive={{'@m768': 'max640'}} inProject={{'@m992': true}} scheme="dark" />
     </>
   );

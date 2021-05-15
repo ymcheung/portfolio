@@ -1,6 +1,6 @@
 import { styled } from '../stitches.config';
 import { Container } from './Layout';
-import { Heading } from './Headings';
+import { Heading } from './headings';
 
 import { AUTHOR } from '../constant';
 

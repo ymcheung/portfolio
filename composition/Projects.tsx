@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { Container } from '../components/Layout';
-import { Heading, Verb } from '../components/Headings';
+import { Heading, Verb } from '../components/headings';
 import { HomeItemsLayout, HomeItemLink, HomeItemContainer, HomeItemCover, HomeItemImage } from '../components/home/HomeItems';
 
 function Projects() {
   return(
-    <Container as="main" responsive={{'@initial': 'full', '@m992': 'max960', '@m1200': 'max1168'}} hasSibling>
+    <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} hasSibling>
       <Heading as="h2" position="homeSection">P<small>rojects</small></Heading>
       <HomeItemsLayout forProjects={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <Link href="/pie-clockin" passHref>

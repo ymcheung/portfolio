@@ -10,7 +10,7 @@ import { styled, global } from '../stitches.config';
 
 import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/Layout';
-import { Heading } from '../components/Headings';
+import { Heading } from '../components/headings';
 import Projects from '../composition/Projects';
 import Activity from '../composition/Activity';
 import ExternalLinks from '../composition/ExternalLinks';
