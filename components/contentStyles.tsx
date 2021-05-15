@@ -14,7 +14,7 @@ export const ContentTitle = styled('h2', {
       },
       paragraph: {
         display: 'inline-block',
-        margin: '0 0 $8',
+        margin: '0 0 $4',
         fontSize: '$16',
         lineHeight: '20px'
       }
@@ -25,8 +25,6 @@ export const ContentTitle = styled('h2', {
 export const Section = styled('section', {
   marginBottom: '$24'
 });
-
-// export const 
 
 export const Paragraph = styled('p', {
   margin: '0 0 $16',
