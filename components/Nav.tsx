@@ -45,49 +45,30 @@ const NavItem = styled('li', {
 const NavItemLink = styled('a', {
   display: 'inline-block',
   minWidth: '48px',
+  color: '$shade1200',
   fontFamily: '$default',
   fontSize: '$14',
   lineHeight: '48px',
-  
-  variants: {
-    home: {
-      true: {
-
-      }
-    },
-    project: {
-      pie: {
-
-      },
-      moment: {
-
-      }
-    },
-    activity: {
-      intersection: {
-
-      },
-      process: {
-
-      }
-    }
-  }
+  textDecoration: 'none'
 });
 
 interface NavProps {
   hasPrev?: string;
+  prevSlug?: string;
+  prevBg?: string;
   hasNext?: string;
-  slug: string;
+  nextSlug?: string;
+  nextBg?: string;
 }
 
-function Nav({ hasPrev, hasNext, slug }: NavProps) {
+function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps) {
   return(
     <Container as="nav" responsive={{'@m768': 'max640'}} hasSibling>
       <NavList responsive={{'@m992': 'desktop'}}>
         {hasPrev &&
           <NavItem position="prev">
-            <IconArrow purpose="prev" gotoText={hasPrev} />&nbsp;
-            <Link href={`/${slug}`} passHref>
+            <IconArrow purpose="prev" gotoText={hasPrev} background={prevBg} />&nbsp;
+            <Link href={`/${prevSlug}`} passHref>
               <NavItemLink>
                 {hasPrev}
               </NavItemLink>
@@ -96,12 +77,12 @@ function Nav({ hasPrev, hasNext, slug }: NavProps) {
         }
         {hasNext &&
           <NavItem position="next">
-            <Link href={`/${slug}`} passHref>
+            <Link href={`/${nextSlug}`} passHref>
               <NavItemLink>
                 {hasNext}
               </NavItemLink>
             </Link>
-            &nbsp;<IconArrow purpose="next" gotoText={hasNext} />
+            &nbsp;<IconArrow purpose="next" gotoText={hasNext} background={nextBg}  />
           </NavItem>
         }
         <NavItem>
