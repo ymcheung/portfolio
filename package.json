@@ -2,7 +2,7 @@
   "name": "ym-portfolio",
   "version": "0.1.0",
   "scripts": {
-    "dev": "yarn && next --hostname 0.0.0.0",
+    "dev": "yarn && node server.js",
     "build": "next build",
     "start": "next start"
   },
@@ -16,6 +16,9 @@
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^17.0.3",
+    "eslint": "^7.26.0",
+    "prettier": "^2.3.0",
+    "prettier-eslint": "^12.0.0",
     "typescript": "^4.2.4"
   }
 }

@@ -1,4 +1,6 @@
+import { appWithTranslation } from 'next-i18next';
 import { globalStyles } from '../utils/globalStyles';
+
 
 function Portfolio({ Component, pageProps }) {
   globalStyles();
@@ -6,4 +8,4 @@ function Portfolio({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 
-export default Portfolio;
+export default  appWithTranslation(Portfolio);

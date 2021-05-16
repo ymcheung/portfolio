@@ -4,11 +4,13 @@ import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from '../constant';
-import { styled, global } from '../stitches.config';
-import SEO from '../utils/seo';
+import HeadMeta from '../utils/HeadMeta';
 
-import { Container } from '../components/Layout';
-import { Heading } from '../components/Headings';
+import { styled, global } from '../stitches.config';
+
+import { globalStyles } from '../utils/globalStyles';
+import { Container } from '../components/layout';
+import { Heading } from '../components/headings';
 import Projects from '../composition/Projects';
 import Activity from '../composition/Activity';
 import ExternalLinks from '../composition/ExternalLinks';
@@ -37,9 +39,11 @@ export default function Home() {
     document.body.setAttribute('data-body-style', 'home');
   });
 
-  const { t } = useTranslation('index');
+  globalStyles();
   pageBody();
 
+  const { t } = useTranslation('index');
+  
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@graph':
@@ -90,17 +94,18 @@ export default function Home() {
       <Head>
         <title>{TITLE}</title>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700i,800,800i&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,600;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet" />
       </Head>
-      <SEO />
-      <Container as="header" responsive={{'@initial': 'full', '@m992': 'max960', '@m1200': 'max1168'}} hasSibling>
+      <HeadMeta />
+      <Container as="header" responsive={{'@m992': 'max960', '@m1200': 'max1168'}} hasSibling>
         <Heading as="h1" nameTag="index">{AUTHOR}</Heading>
         <NameDescription>{DESCRIPTION}</NameDescription>
       </Container>
       <Projects />
       <Activity />
       <ExternalLinks />
-      <Footer responsive={{'@initial': 'full', '@m992': 'max960', '@m1200': 'max1168'}} />
+      <Footer responsive={{'@m992': 'max960', '@m1200': 'max1168'}} scheme="light" />
     </>
   )
 }

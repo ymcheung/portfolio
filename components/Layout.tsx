@@ -6,9 +6,6 @@ export const Container = styled('div', {
 
   variants: {
     responsive: {
-      full: {
-        width: '100%'
-      },
       max640: {
         maxWidth: '640px'
       },

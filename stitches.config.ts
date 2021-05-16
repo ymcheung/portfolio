@@ -18,17 +18,21 @@ export const { css, styled, global, theme, getCssString } = createCss({
       pie800: 'hsl(240,62%,72%)',
       pie700: 'hsl(240,62%,64%)',
       pie400: 'hsl(240,62%,52%)',
+      pie100: 'hsl(240,62%,18%)',
       pie0: 'hsl(240,62%,5%)',
 
       mtDawn: 'hsl(16,68%,67%)',
       mtMidnight700: 'hsl(225,26%,56%)',
       mtMidnight500: 'hsl(225,26%,45%)',
+      mtMidnight200: 'hsl(225,26%,24%)',
       mtMidnight100: 'hsl(225,26%,16%)',
 
       nuomiBlack: 'hsl(180,1%,20%)',
-      nuomiGold: 'hsl(32,55%,54%)',
+      nuomiGold1200: 'hsl(32,55%,54%)',
+      nuomiGold400: 'hsl(32,55%,20%)',
 
-      intersection: 'hsl(11,71%,61%)'
+      intersection1500: 'hsl(11,71%,61%)',
+      intersection300: 'hsl(11,71%,12%)'
     },
     space: {
       4: '4px',
@@ -36,6 +40,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       12: '12px',
       16: '16px',
       18: '18px',
+      20: '20px',
       24: '24px',
     },
     fontSizes: {
@@ -47,9 +52,9 @@ export const { css, styled, global, theme, getCssString } = createCss({
       32: '3.2rem',
     },
     fonts: {
-      default: '\'Overpass\', -apple-system, BlinkMacSystemFont, \'Segoe UI\'',
+      default: '\'Overpass\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', serif',
       slab: '\'Crete Round\', sans-serif',
-      mono: '\'Inconsolata\', monospace'
+      mono: '\'Inconsolata\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', serif'
     },
   },
   utils: {

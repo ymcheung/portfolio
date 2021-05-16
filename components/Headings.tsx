@@ -21,6 +21,14 @@ export const Heading = styled('h2', {
         fontStyle: 'italic'
       }
     },
+    footerScheme: {
+      dark: {
+        color: '$shade1500'
+      },
+      light: {
+        color: '$shade300'
+      }
+    },
     position: {
       homeSection: {
         margin: '0 0 $4',
@@ -37,6 +45,22 @@ export const Heading = styled('h2', {
         fontSize: '$18',
         fontWeight: 600,
         lineHeight: '24px'
+      }
+    },
+    itemName: {
+      dark: {
+        marginBottom: '$16',
+        color: '$shade1600',
+        fontSize: '$24',
+        fontWeight: 600,
+        lineHeight: '32px'
+      },
+      light: {
+        marginBottom: '$16',
+        color: '$shade0',
+        fontSize: '$24',
+        fontWeight: 600,
+        lineHeight: '32px'
       }
     }
   }
