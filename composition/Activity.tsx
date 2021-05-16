@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Container } from '../components/Layout';
+import { Container } from '../components/layout';
 import { Heading, Verb } from '../components/headings';
 import { HomeItemsLayout, HomeItemLink, HomeItem, HomeItemDescription } from '../components/home/HomeItems';
 import IconHyphen from '../elements/IconHyphen';

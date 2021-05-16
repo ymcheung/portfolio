@@ -1,5 +1,5 @@
 import { styled } from '../stitches.config';
-import { Container } from './Layout';
+import { Container } from './layout';
 import { Heading } from './headings';
 
 import { AUTHOR } from '../constant';

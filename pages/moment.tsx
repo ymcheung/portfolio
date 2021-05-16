@@ -12,30 +12,29 @@ import { global } from '../stitches.config';
 import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
-import Meta from '../projects/pie/Meta';
-import Content from '../projects/pie/Content';
-import Nav from '../components/Nav';
+import Meta from '../projects/moment/Meta';
+import Content from '../projects/moment/Content';
 import Footer from '../components/Footer';
 
 const pageBody = global({
-  'body[data-body-style=pie]': {
+  'body[data-body-style=moment]': {
     minHeight: '100vh',
-    backgroundColor: '$pie0'
+    backgroundColor: '$mtMidnight100'
   }
 });
 
-export default function ProjectPie() {
+export default function ProjectMoment() {
   const router = useRouter();
 
   const pageInfo = {
-    name: 'Explore UI of a Clock-In Web App',
-    description: 'A side project exploring fluent UI design.',
+    name: 'Explore: The Moment',
+    description: 'The Moment when hearing a song you like in the movies/drama.',
     datePublished: '2020-08-29',
     dateModified: '2021-05-20'
   }
 
   useEffect(() => {
-    document.body.setAttribute('data-body-style', 'pie');
+    document.body.setAttribute('data-body-style', 'moment');
   });
   globalStyles();
   pageBody();
@@ -57,7 +56,7 @@ export default function ProjectPie() {
       <HeadMeta
         title={pageInfo.name}
         description={pageInfo.description}
-        ogCover="/project/pie/og-cover.jpg"
+        ogCover="/project/moment/og-cover.jpg"
         canonical={router.pathname}
       />
       <Container responsive={{'@m768': 'max640'}} isGroupEnd>
@@ -65,7 +64,6 @@ export default function ProjectPie() {
         <Meta />
       </Container>
       <Content />
-      <Nav hasNext="The Moment" slug="moment" />
       <Footer responsive={{'@m768': 'max640'}} inProject={{'@m992': true}} scheme="dark" />
     </>
   );
@@ -73,6 +71,6 @@ export default function ProjectPie() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['pie']),
+    ...await serverSideTranslations(locale, ['moment']),
   },
 });
