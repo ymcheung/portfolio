@@ -1,57 +1,27 @@
-import { styled } from '../../stitches.config';
-
-const List = styled('ul', {
-  display: 'grid',
-  rowGap: '$12',
-  margin: 0,
-  padding: 0,
-
-  variants: {
-    responsive: {
-      half: {
-        grid: 'auto / repeat(2, 1fr)',
-        columnGap: '$12'
-      }
-    }
-  }
-});
-
-const Item = styled('li', {
-  listStyle: 'none'
-});
-
-const ItemTitle = styled('strong', {
-  display: 'block',
-  color: '$pie800',
-  fontFamily: '$mono',
-  fontSize: '$14',
-  fontWeight: 500,
-  lineHeight: '20px'
-});
-
-const ItemValue = styled('span', {
-  display: 'inline-block',
-  color: '$shade1000',
-  fontFamily: '$mono',
-  fontSize: '$14',
-  fontWeight: 500
-});
+import Link from 'next/link';
+import { MetaList, MetaItem, MetaItemTitle, MetaItemValue  } from "../../components/meta";
 
 export default function Meta() {
   return(
-    <List responsive={{ '@m768': 'half' }}>
-      <Item>
-        <ItemTitle>Role</ItemTitle>
-        <ItemValue>Organizer, UI Designer</ItemValue>
-      </Item>
-      <Item>
-        <ItemTitle>Status</ItemTitle>
-        <ItemValue>UI Design</ItemValue>
-      </Item>
-      <Item>
-        <ItemTitle>Languages</ItemTitle>
-        <ItemValue>正體中文, English</ItemValue>
-      </Item>
-    </List>
+    <MetaList responsive={{ '@m768': 'half' }}>
+      <MetaItem>
+        <MetaItemTitle project="moment">Role</MetaItemTitle>
+        <MetaItemValue scheme="dark">Organizer, UI Design, Web Front-End</MetaItemValue>
+      </MetaItem>
+      <MetaItem>
+        <MetaItemTitle project="moment">Status</MetaItemTitle>
+        <MetaItemValue scheme="dark">Minimum Viable</MetaItemValue>
+      </MetaItem>
+      <MetaItem>
+        <MetaItemTitle project="moment">Languages</MetaItemTitle>
+        <MetaItemValue scheme="dark">Mostly English</MetaItemValue>
+      </MetaItem>
+      <MetaItem>
+        <MetaItemTitle project="moment">Link</MetaItemTitle>
+        <Link href="https://moment.intersection.tw" passHref>
+          <MetaItemValue as="a" scheme="dark" target="_blank" rel="noopener">The Moment</MetaItemValue>
+        </Link>
+      </MetaItem>
+    </MetaList>
   );
 }

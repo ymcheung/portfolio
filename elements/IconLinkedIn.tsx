@@ -1,10 +1,9 @@
 import { styled } from '../stitches.config';
+import { Svg } from './Svg';
 // import { DarkModeProps } from './DarkModeProps';
 
-const LinkedIn = styled('svg', {
-  width: '48px',
-  height: '48px',
-  verticalAlign: 'sub'
+const LinkedIn = styled(Svg, {
+  size: '$48'
 });
 
 const Background = styled('path', {

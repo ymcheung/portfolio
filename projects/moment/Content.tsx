@@ -1,94 +1,75 @@
 import { useTranslation } from 'next-i18next';
+
 import { styled } from '../../stitches.config';
+import IconSearch from '../../elements/IconSearch';
 import { Container } from '../../components/layout';
 
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
-import React from 'react';
 
-type itemProps = {
+type howProps = {
   [x: string]: any;
   name: string;
   description: string;
 };
 
-const Gallery = styled('ul', {
-  display: 'grid',
-  grid: 'auto / auto-flow 304px',
-  columnGap: '$16',
-  overflowX: 'auto',
-  margin: '0 -16px',
-  paddingX: '$8',
-  paddingBottom: '$8',
-
-  variants: {
-    responsive: {
-      desktop: {
-        grid: 'auto / auto-flow 1fr',
-        margin: '0 -64px'
-      }
-    }
-  }
+const BubbleList = styled('ul', {
+  margin: 0,
+  padding: 0
 });
 
-const GalleryItem = styled('li', {
+const BubbleListItem = styled('li', {
+  display: 'grid',
+  grid: `"prefix title" auto
+        ". description" auto / 32px 1fr`,
+  rowGap: '$4',
+  alignItems: 'center',
+  margin: '0 0 $12',
+  fontFamily: '$default',
   listStyle: 'none'
 });
 
-const GalleryFigure = styled('figure', {
-  margin: 0
+const BubbleSearch = styled('div', {
+  maxWidth: 'max-content',
+  padding: '8px 12px',
+  color: '$shade1500',
+  fontSize: '$14',
+  lineHeight: '24px',
+  backgroundColor: '$shade300',
+  borderRadius: '12px'
+});
+
+const BubbleDescription = styled(Paragraph, {
+  gridArea: 'description'
 });
 
 export default function Content() {
-  const { t } = useTranslation('pie');
+  const { t } = useTranslation('moment');
 
   return(
     <Container as="article" responsive={{'@m768': 'max640'}} isGroupEnd>
       <Section>
-        <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionEnd  />
+        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('intro.title')}} />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('intro.description')}} indent sectionEnd />
       </Section>
       <Section>
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
-        <Paragraph indent dangerouslySetInnerHTML={{__html: t('why.problem')}} />
-        <Paragraph indent dangerouslySetInnerHTML={{__html: t('why.opinion')}} sectionEnd />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('how.lead')}} sectionEnd />
+        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('how.title')}} />
+        <Paragraph indent dangerouslySetInnerHTML={{__html: t('how.description')}} />
+        <BubbleList>
+          {t<string, howProps>('how.hows', { returnObjects: true }).map(({ keyword, name }: howProps, index: number) => (
+            <BubbleListItem key={`how-${index}`}>
+              <div>
+                <IconSearch />
+              </div>
+              <BubbleSearch dangerouslySetInnerHTML={{__html: keyword}} />
+              <BubbleDescription dangerouslySetInnerHTML={{__html: name}} sectionEnd />
+            </BubbleListItem>
+          ))}
+        </BubbleList>
       </Section>
       <Section>
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('questions.title')}} />
-        <Gallery responsive={{'@m992': 'desktop'}}>
-          <GalleryItem>
-            <GalleryFigure>
-              <figcaption>
-                <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('questions.flat.title')}} />
-                <Paragraph dangerouslySetInnerHTML={{__html: t('questions.flat.question')}} sectionEnd />
-              </figcaption>
-            </GalleryFigure>
-          </GalleryItem>
-          <GalleryItem>
-            <GalleryFigure>
-              <figcaption>
-                <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('questions.back.title')}} />
-                <Paragraph dangerouslySetInnerHTML={{__html: t('questions.back.question')}} sectionEnd />
-              </figcaption>
-            </GalleryFigure>
-          </GalleryItem>
-        </Gallery>
-      </Section>
-      <Section>
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('document.title')}} />
-        {t<string, itemProps>('document.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
-          <React.Fragment key={`doc-${index}`}>
-            <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: name}} />
-            <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />
-          </React.Fragment>
-        ))}
-      </Section>
-      <Section>
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('note.title')}} />
-        {t<string, itemProps>('note.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
-          <React.Fragment key={`note-${index}`}>
-            <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: name}} />
-            <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />
-          </React.Fragment>
-        ))}
+        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('obstacle.title')}} />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('obstacle.description')}} indent sectionEnd />
       </Section>
     </Container>
   );

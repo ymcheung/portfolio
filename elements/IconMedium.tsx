@@ -1,10 +1,9 @@
 import { styled } from '../stitches.config';
+import { Svg } from './Svg';
 // import { DarkModeProps } from './DarkModeProps';
 
-const Medium = styled('svg', {
-  width: '48px',
-  height: '48px',
-  verticalAlign: 'sub'
+const Medium = styled(Svg, {
+  size: '$48'
 });
 
 const Oval = styled('path', {

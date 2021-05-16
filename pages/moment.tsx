@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-// import Link from 'next/link';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '../utils/HeadMeta';
@@ -14,6 +13,7 @@ import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
 import Meta from '../projects/moment/Meta';
 import Content from '../projects/moment/Content';
+import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
 const pageBody = global({
@@ -64,6 +64,14 @@ export default function ProjectMoment() {
         <Meta />
       </Container>
       <Content />
+      <Nav
+        hasNext="Nuomi&rsquo;s Portfolio"
+        nextSlug="nuomi"
+        nextBg="nuomi"
+        hasPrev="Pie: a Clock-In Web App"
+        prevSlug="pie-clockin"
+        prevBg="pie"
+      />
       <Footer responsive={{'@m768': 'max640'}} inProject={{'@m992': true}} scheme="dark" />
     </>
   );
