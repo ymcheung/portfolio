@@ -18,13 +18,13 @@ export const { css, styled, global, theme, getCssString } = createCss({
       pie800: 'hsl(240,62%,72%)',
       pie700: 'hsl(240,62%,64%)',
       pie400: 'hsl(240,62%,52%)',
-      pie100: 'hsl(240,62%,25%)',
+      pie100: 'hsl(240,62%,18%)',
       pie0: 'hsl(240,62%,5%)',
 
       mtDawn: 'hsl(16,68%,67%)',
       mtMidnight700: 'hsl(225,26%,56%)',
       mtMidnight500: 'hsl(225,26%,45%)',
-      mtMidnight200: 'hsl(225,26%,24%)',
+      mtMidnight200: 'hsl(225,26%,18%)',
       mtMidnight100: 'hsl(225,26%,12%)',
 
       nuomiBlack: 'hsl(180,1%,20%)',

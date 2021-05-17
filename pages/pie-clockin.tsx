@@ -59,7 +59,7 @@ export default function ProjectPie() {
         ogCover="/project/pie/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} isGroupEnd>
+      <Container responsive={{'@m768': 'max640'}} isgroupend>
         <Heading itemName="dark">{pageInfo.name}</Heading>
         <Meta />
       </Container>
