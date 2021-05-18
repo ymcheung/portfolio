@@ -27,8 +27,8 @@ export default function ProjectMoment() {
   const router = useRouter();
 
   const pageInfo = {
-    name: 'Explore: The Moment',
-    description: 'The Moment when hearing a song you like in the movies/drama.',
+    name: 'Explore the moment when hearing a song in the movies/dramas',
+    description: 'How might we display the moment when hearing the songs you like in the movies/dramas?',
     datePublished: '2020-08-29',
     dateModified: '2021-05-20'
   }
