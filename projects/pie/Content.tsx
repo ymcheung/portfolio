@@ -42,14 +42,14 @@ export default function Content() {
   const { t } = useTranslation('pie');
 
   return(
-    <Container as="article" responsive={{'@m768': 'max640'}} isGroupEnd>
+    <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
       <Section>
-        <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionEnd  />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>
       <Section>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
         <Paragraph indent dangerouslySetInnerHTML={{__html: t('why.problem')}} />
-        <Paragraph indent dangerouslySetInnerHTML={{__html: t('why.opinion')}} sectionEnd />
+        <Paragraph indent dangerouslySetInnerHTML={{__html: t('why.opinion')}} sectionend />
       </Section>
       <Section>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('questions.title')}} />
@@ -58,7 +58,7 @@ export default function Content() {
             <GalleryFigure>
               <figcaption>
                 <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('questions.flat.title')}} />
-                <Paragraph dangerouslySetInnerHTML={{__html: t('questions.flat.question')}} sectionEnd />
+                <Paragraph dangerouslySetInnerHTML={{__html: t('questions.flat.question')}} sectionend />
               </figcaption>
             </GalleryFigure>
           </GalleryItem>
@@ -66,7 +66,7 @@ export default function Content() {
             <GalleryFigure>
               <figcaption>
                 <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('questions.back.title')}} />
-                <Paragraph dangerouslySetInnerHTML={{__html: t('questions.back.question')}} sectionEnd />
+                <Paragraph dangerouslySetInnerHTML={{__html: t('questions.back.question')}} sectionend />
               </figcaption>
             </GalleryFigure>
           </GalleryItem>

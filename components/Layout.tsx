@@ -21,7 +21,7 @@ export const Container = styled('div', {
         marginBottom: '$18'
       }
     },
-    isGroupEnd: {
+    isgroupend: {
       true: {
         marginBottom: '64px'
       }
@@ -29,6 +29,21 @@ export const Container = styled('div', {
     footerEnd: {
       true: {
         paddingBottom: '64px'
+      }
+    }
+  }
+});
+
+export const ListItem = styled('li', {
+  variants: {
+    nomark: {
+      true: {
+        listStyleType: 'none'
+      }
+    },
+    square: {
+      true: {
+        listStyleType: 'square'
       }
     }
   }

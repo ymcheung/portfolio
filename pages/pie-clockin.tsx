@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-// import Link from 'next/link';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '../utils/HeadMeta';
@@ -60,7 +59,7 @@ export default function ProjectPie() {
         ogCover="/project/pie/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} isGroupEnd>
+      <Container responsive={{'@m768': 'max640'}} isgroupend>
         <Heading itemName="dark">{pageInfo.name}</Heading>
         <Meta />
       </Container>

@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-// import Link from 'next/link';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '../utils/HeadMeta';
@@ -14,6 +13,7 @@ import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
 import Meta from '../projects/moment/Meta';
 import Content from '../projects/moment/Content';
+import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
 const pageBody = global({
@@ -27,8 +27,8 @@ export default function ProjectMoment() {
   const router = useRouter();
 
   const pageInfo = {
-    name: 'Explore: The Moment',
-    description: 'The Moment when hearing a song you like in the movies/drama.',
+    name: 'Explore the moment when hearing a song in the movies/dramas',
+    description: 'How might we display the moment when hearing the songs you like in the movies/dramas?',
     datePublished: '2020-08-29',
     dateModified: '2021-05-20'
   }
@@ -59,11 +59,19 @@ export default function ProjectMoment() {
         ogCover="/project/moment/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} isGroupEnd>
+      <Container responsive={{'@m768': 'max640'}} isgroupend>
         <Heading itemName="dark">{pageInfo.name}</Heading>
         <Meta />
       </Container>
       <Content />
+      <Nav
+        hasNext="Nuomi&rsquo;s Portfolio"
+        nextSlug="nuomi"
+        nextBg="nuomi"
+        hasPrev="Pie: a Clock-In Web App"
+        prevSlug="pie-clockin"
+        prevBg="pie"
+      />
       <Footer responsive={{'@m768': 'max640'}} inProject={{'@m992': true}} scheme="dark" />
     </>
   );

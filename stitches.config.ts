@@ -24,8 +24,8 @@ export const { css, styled, global, theme, getCssString } = createCss({
       mtDawn: 'hsl(16,68%,67%)',
       mtMidnight700: 'hsl(225,26%,56%)',
       mtMidnight500: 'hsl(225,26%,45%)',
-      mtMidnight200: 'hsl(225,26%,24%)',
-      mtMidnight100: 'hsl(225,26%,16%)',
+      mtMidnight200: 'hsl(225,26%,18%)',
+      mtMidnight100: 'hsl(225,26%,12%)',
 
       nuomiBlack: 'hsl(180,1%,20%)',
       nuomiGold1200: 'hsl(32,55%,54%)',
@@ -43,6 +43,11 @@ export const { css, styled, global, theme, getCssString } = createCss({
       20: '20px',
       24: '24px',
     },
+    sizes: {
+      18: '18px',
+      24: '24px',
+      48: '48px'
+    },
     fontSizes: {
       14: '1.4rem',
       16: '1.6rem',
@@ -52,9 +57,9 @@ export const { css, styled, global, theme, getCssString } = createCss({
       32: '3.2rem',
     },
     fonts: {
-      default: '\'Overpass\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', serif',
-      slab: '\'Crete Round\', sans-serif',
-      mono: '\'Inconsolata\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', serif'
+      default: '\'Overpass\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', sans-serif',
+      slab: '\'Crete Round\', serif',
+      mono: '\'Inconsolata\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', monospace'
     },
   },
   utils: {
