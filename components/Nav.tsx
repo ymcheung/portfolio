@@ -67,9 +67,9 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps)
       <NavList responsive={{'@m992': 'desktop'}}>
         {hasPrev &&
           <NavItem position="prev">
-            <IconArrow purpose="prev" gotoText={hasPrev} background={prevBg} />&nbsp;
             <Link href={`/${prevSlug}`} passHref>
               <NavItemLink>
+                <IconArrow purpose="prev" gotoText={hasPrev} background={prevBg} />&nbsp;
                 {hasPrev}
               </NavItemLink>
             </Link>
@@ -80,15 +80,15 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps)
             <Link href={`/${nextSlug}`} passHref>
               <NavItemLink>
                 {hasNext}
+                &nbsp;<IconArrow purpose="next" gotoText={hasNext} background={nextBg}  />
               </NavItemLink>
             </Link>
-            &nbsp;<IconArrow purpose="next" gotoText={hasNext} background={nextBg}  />
           </NavItem>
         }
         <NavItem>
-          <IconArrow />&nbsp;
           <Link href="/" passHref>
             <NavItemLink>
+              <IconArrow />&nbsp;
               Home
             </NavItemLink>
           </Link>

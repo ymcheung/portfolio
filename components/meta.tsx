@@ -34,6 +34,9 @@ export const MetaItemTitle = styled('strong', {
       },
       moment: {
         color: '$mtDawn'
+      },
+      nuomi: {
+        color: '$nuomiGold1200'
       }
     }
   }
