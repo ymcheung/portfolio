@@ -13,29 +13,53 @@ type itemProps = {
 
 const Gallery = styled('ul', {
   display: 'grid',
-  grid: 'auto / auto-flow 304px',
+  grid: 'auto / auto-flow 288px',
   columnGap: '$16',
   overflowX: 'auto',
   margin: '0 -16px',
-  paddingX: '$8',
-  paddingBottom: '$8',
+  padding: '0 0 $8',
 
   variants: {
     responsive: {
       desktop: {
         grid: 'auto / auto-flow 1fr',
-        margin: '0 -64px'
+        // margin: '0 -64px'
       }
     }
   }
 });
 
 const GalleryItem = styled('li', {
+  padding: '0 $8',
   listStyle: 'none'
 });
 
 const GalleryFigure = styled('figure', {
-  margin: 0
+  position: 'relative',
+  margin: 0,
+  padding: '0 $8',
+
+  '&::before': {
+    width: '100%',
+    height: '464px',
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    zIndex: 0,
+    content: '',
+    background: 'linear-gradient(to bottom, transparent 0%, $shadeMockup50 50%, $shadeMockup75 75%, transparent 100%) top center / cover no-repeat',
+  }
+});
+
+const GalleryCover = styled('img', {
+  maxWidth: '100%',
+  overflow: 'hidden',
+  position: 'relative',
+  zIndex: 1,
+  marginBottom: '$8',
+  borderRadius: '16px'
 });
 
 export default function Content() {
@@ -56,6 +80,7 @@ export default function Content() {
         <Gallery responsive={{'@m992': 'desktop'}}>
           <GalleryItem>
             <GalleryFigure>
+              <GalleryCover src="/projects/pie/gallery-full.jpg" alt={t('questions.flat.question')} />
               <figcaption>
                 <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('questions.flat.title')}} />
                 <Paragraph dangerouslySetInnerHTML={{__html: t('questions.flat.question')}} sectionend />
@@ -65,6 +90,7 @@ export default function Content() {
           <GalleryItem>
             <GalleryFigure>
               <figcaption>
+              <GalleryCover src="/projects/pie/gallery-statistics.jpg" alt={t('questions.back.question')} />
                 <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('questions.back.title')}} />
                 <Paragraph dangerouslySetInnerHTML={{__html: t('questions.back.question')}} sectionend />
               </figcaption>

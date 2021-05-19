@@ -15,6 +15,9 @@ export const { css, styled, global, theme, getCssString } = createCss({
       shade300: 'hsl(162,2%,24%)',
       shade0: 'hsl(162,2%,6%)',
 
+      shadeMockup50: 'hsla(162,2%,24%,0.5)',
+      shadeMockup75: 'hsla(162,2%,24%,0.75)',
+
       pie800: 'hsl(240,62%,72%)',
       pie700: 'hsl(240,62%,64%)',
       pie400: 'hsl(240,62%,52%)',
