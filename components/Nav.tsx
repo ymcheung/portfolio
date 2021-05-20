@@ -45,11 +45,21 @@ const NavItem = styled('li', {
 const NavItemLink = styled('a', {
   display: 'inline-block',
   minWidth: '48px',
-  color: '$shade1200',
   fontFamily: '$default',
   fontSize: '$14',
   lineHeight: '48px',
-  textDecoration: 'none'
+  textDecoration: 'none',
+
+  variants: {
+    scheme: {
+      dark: {
+        color: '$shade1200'
+      },
+      light: {
+        color: '$shade300'
+      }
+    }
+  }
 });
 
 interface NavProps {
@@ -59,17 +69,17 @@ interface NavProps {
   hasNext?: string;
   nextSlug?: string;
   nextBg?: string;
-  homeBg?: string;
+  scheme?: 'dark' | 'light';
 }
 
-function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, homeBg }: NavProps) {
+function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, scheme }: NavProps) {
   return(
     <Container as="nav" responsive={{'@m768': 'max640'}} hasSibling>
       <NavList responsive={{'@m992': 'desktop'}}>
         {hasPrev &&
           <NavItem position="prev">
             <Link href={`/${prevSlug}`} passHref>
-              <NavItemLink>
+              <NavItemLink scheme={scheme}>
                 <IconArrow purpose="prev" gotoText={hasPrev} background={prevBg} />&nbsp;
                 {hasPrev}
               </NavItemLink>
@@ -79,7 +89,7 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, homeBg }: N
         {hasNext &&
           <NavItem position="next">
             <Link href={`/${nextSlug}`} passHref>
-              <NavItemLink>
+              <NavItemLink scheme={scheme}>
                 {hasNext}
                 &nbsp;<IconArrow purpose="next" gotoText={hasNext} background={nextBg}  />
               </NavItemLink>
@@ -88,8 +98,8 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, homeBg }: N
         }
         <NavItem>
           <Link href="/" passHref>
-            <NavItemLink>
-              <IconArrow background={homeBg} />&nbsp;
+            <NavItemLink scheme={scheme}>
+              <IconArrow background={scheme} />&nbsp;
               Home
             </NavItemLink>
           </Link>

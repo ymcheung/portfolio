@@ -71,7 +71,7 @@ export default function ProjectNuomi() {
         hasPrev="Nuomi’s Portfolio"
         prevSlug="nuomi"
         prevBg="nuomiLight"
-        homeBg="light"
+        scheme="light"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="light" />
     </>
