@@ -1,68 +1,43 @@
 import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
-import { Container } from '../../components/layout';
+import { Container, ListItem } from '../../components/layout';
 
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
-import React from 'react';
+import IconAccessibility from './IconAccessibility';
+import IconLock from './IconLock';
+import IconStructured from './IconStructured';
 
-type itemProps = {
-  [x: string]: any;
-  name: string;
-  description: string;
-};
+import Gallery from './Gallery';
 
-const Gallery = styled('ul', {
+const IconList = styled('ul', {
   display: 'grid',
-  grid: 'auto / auto-flow 288px',
-  columnGap: '$16',
-  overflowX: 'auto',
-  margin: '0 -16px',
-  padding: '0 0 $8',
-
-  variants: {
-    responsive: {
-      desktop: {
-        grid: 'auto / auto-flow 1fr'
-      }
-    }
-  }
-});
-
-const GalleryItem = styled('li', {
-  padding: '0 $8',
-  listStyle: 'none'
-});
-
-const GalleryFigure = styled('figure', {
-  position: 'relative',
+  rowGap: '$12',
   margin: 0,
-  padding: '0 $8',
-
-  '&::before': {
-    width: '100%',
-    height: '464px',
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    zIndex: 0,
-    content: '',
-    background: 'linear-gradient(to bottom, transparent 0%, $shadeMockup50 50%, $shadeMockup75 75%, transparent 100%) top center / cover no-repeat',
-  }
+  padding: 0
 });
 
-const GalleryCover = styled('img', {
-  maxWidth: '100%',
-  overflow: 'hidden',
-  position: 'relative',
-  zIndex: 1,
-  marginBottom: '$8',
-  borderRadius: '16px'
+const IconListItem = styled(ListItem, {
+  display: 'grid',
+  grid: `"prefix title" auto
+        ". description" auto / 32px 1fr`,
+  rowGap: '$4',
+  alignItems: 'center',
+  margin: '0',
+  fontFamily: '$default'
+});
+
+const IconListDescription = styled(Paragraph, {
+  gridArea: 'description'
 });
 
 export default function Content() {
   const { t } = useTranslation('nuomi');
+
+  const galleryItemAlt = {
+    all: t('gallery.all'),
+    detail: t('gallery.detail'),
+    course: t('gallery.course')
+  }
 
   return(
     <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
@@ -71,8 +46,28 @@ export default function Content() {
         <Paragraph dangerouslySetInnerHTML={{__html: t('experience.featured')}} indent sectionend />
       </Section>
       <Section>
+        <Gallery galleryItemAlt={galleryItemAlt} />
+      </Section>
+      <Section>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retrospect.title')}} />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('retrospect.description')}} indent sectionend />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('retrospect.description')}} indent />
+        <IconList>
+          <IconListItem>
+            <div><IconAccessibility /></div>
+            <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('retrospect.https.title')}} />
+            <IconListDescription dangerouslySetInnerHTML={{__html: t('retrospect.https.description')}} />
+          </IconListItem>
+          <IconListItem>
+            <div><IconLock /></div>
+            <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('retrospect.structured.title')}} />
+            <IconListDescription dangerouslySetInnerHTML={{__html: t('retrospect.structured.description')}} />
+          </IconListItem>
+          <IconListItem>
+            <div><IconStructured /></div>
+            <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.title')}} />
+            <IconListDescription dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.description')}} />
+          </IconListItem>
+        </IconList>
       </Section>
     </Container>
   );

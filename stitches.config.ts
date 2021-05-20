@@ -15,6 +15,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       shade300: 'hsl(162,2%,24%)',
       shade0: 'hsl(162,2%,6%)',
 
+      shadeMockup25: 'hsla(162,2%,24%,0.25)',
       shadeMockup50: 'hsla(162,2%,24%,0.5)',
       shadeMockup75: 'hsla(162,2%,24%,0.75)',
 

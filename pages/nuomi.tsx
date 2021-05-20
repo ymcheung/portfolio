@@ -27,8 +27,8 @@ export default function ProjectNuomi() {
   const router = useRouter();
 
   const pageInfo = {
-    name: 'Retrospect Nuomi&rsquo;s Portfolio',
-    description: 'Nuomirsquo;s Portfolio with hand-drawn VR experience',
+    name: 'Retrospect Nuomi’s Portfolio',
+    description: 'Nuomi’s Portfolio with hand-drawn VR experience',
     datePublished: '2020-08-29',
     dateModified: '2021-05-20'
   }
@@ -67,7 +67,7 @@ export default function ProjectNuomi() {
       <Nav
         hasNext="Intersection: Translation on Design"
         nextSlug="intersection"
-        nextBg="intersection"
+        nextBg="default"
         hasPrev="The Moment"
         prevSlug="moment"
         prevBg="moment"
