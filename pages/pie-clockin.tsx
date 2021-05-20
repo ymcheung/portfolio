@@ -64,7 +64,7 @@ export default function ProjectPie() {
         <Meta />
       </Container>
       <Content />
-      <Nav hasNext="The Moment" nextSlug="moment" nextBg="moment" />
+      <Nav scheme="dark" hasNext="The Moment" nextSlug="moment" nextBg="moment" />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="dark" />
     </>
   );

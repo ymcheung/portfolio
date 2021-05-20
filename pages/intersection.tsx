@@ -67,10 +67,10 @@ export default function ProjectNuomi() {
       <Nav
         hasNext="Translate Design Process for Pros"
         nextSlug="process"
-        nextBg="default"
+        nextBg="light"
         hasPrev="Nuomi’s Portfolio"
         prevSlug="nuomi"
-        prevBg="nuomiLight"
+        prevBg="light"
         scheme="light"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="light" />

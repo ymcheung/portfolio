@@ -10,6 +10,7 @@ const NavList = styled('ul', {
   grid: `"next" auto
          "prev" auto
          "home" auto / auto`,
+  rowGap: '$12',
   margin: 0,
   padding: 0,
 
@@ -17,6 +18,7 @@ const NavList = styled('ul', {
     responsive: {
       desktop: {
         grid: '"home prev next" auto / 120px 1fr 1fr',
+        rowGap: 'unset',
         marginLeft: '-120px'
       }
     }
@@ -44,10 +46,10 @@ const NavItem = styled('li', {
 
 const NavItemLink = styled('a', {
   display: 'inline-block',
-  minWidth: '48px',
+  minWidth: '60px',
   fontFamily: '$default',
   fontSize: '$14',
-  lineHeight: '48px',
+  lineHeight: '28px',
   textDecoration: 'none',
 
   variants: {

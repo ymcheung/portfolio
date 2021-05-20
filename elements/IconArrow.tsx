@@ -28,9 +28,6 @@ const Circle = styled('circle', {
       },
       nuomi: {
         fill: '$nuomiGold400'
-      },
-      nuomiLight: {
-        fill: '$nuomiGold1200'
       }
     }
   }

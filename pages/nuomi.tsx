@@ -65,9 +65,10 @@ export default function ProjectNuomi() {
       </Container>
       <Content />
       <Nav
+        scheme="dark"
         hasNext="Intersection: Translation on Design"
         nextSlug="intersection"
-        nextBg="default"
+        nextBg="dark"
         hasPrev="The Moment"
         prevSlug="moment"
         prevBg="moment"

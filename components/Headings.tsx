@@ -57,7 +57,7 @@ export const Heading = styled('h2', {
       },
       light: {
         marginBottom: '$16',
-        color: '$shade0',
+        color: '$shade300',
         fontSize: '$24',
         fontWeight: 600,
         lineHeight: '32px'
