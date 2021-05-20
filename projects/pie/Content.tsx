@@ -22,8 +22,7 @@ const Gallery = styled('ul', {
   variants: {
     responsive: {
       desktop: {
-        grid: 'auto / auto-flow 1fr',
-        // margin: '0 -64px'
+        grid: 'auto / auto-flow 1fr'
       }
     }
   }

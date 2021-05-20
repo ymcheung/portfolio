@@ -15,6 +15,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       shade300: 'hsl(162,2%,24%)',
       shade0: 'hsl(162,2%,6%)',
 
+      shadeMockup25: 'hsla(162,2%,24%,0.25)',
       shadeMockup50: 'hsla(162,2%,24%,0.5)',
       shadeMockup75: 'hsla(162,2%,24%,0.75)',
 
@@ -30,7 +31,8 @@ export const { css, styled, global, theme, getCssString } = createCss({
       mtMidnight200: 'hsl(225,26%,18%)',
       mtMidnight100: 'hsl(225,26%,12%)',
 
-      nuomiBlack: 'hsl(180,1%,20%)',
+      nuomiBlack300: 'hsl(180,1%,20%)',
+      nuomiBlack100: 'hsl(180,1%,12%)',
       nuomiGold1200: 'hsl(32,55%,54%)',
       nuomiGold400: 'hsl(32,55%,20%)',
 
