@@ -25,7 +25,7 @@ const Separate = styled('hr', {
 
 const FooterLayout = styled('div', {
   variants: {
-    inProject: {
+    inproject: {
       true: {
         marginLeft: '-120px'
       }
@@ -41,18 +41,18 @@ const NameTagDescription = styled('span', {
 
 interface FooterProps {
   readonly responsive: {};
-  readonly inProject?: {};
+  readonly inproject?: {};
   readonly scheme: 'dark' | 'light';
 }
 
-function Footer({ responsive, inProject, scheme }: FooterProps) {
+function Footer({ responsive, inproject, scheme }: FooterProps) {
   const Year = new Date().getFullYear();
 
   return(
-    <Container as="footer" responsive={responsive} footerEnd>
-      <FooterLayout inProject={inProject}>
+    <Container as="footer" responsive={responsive} footerend>
+      <FooterLayout inproject={inproject}>
         <Separate scheme={scheme} />
-        <Heading as="strong" nameTag="footer" footerScheme={scheme}>{AUTHOR}</Heading>
+        <Heading as="strong" nametag="footer" footerscheme={scheme}>{AUTHOR}</Heading>
         <NameTagDescription>Portfolio {Year}</NameTagDescription>
       </FooterLayout>
     </Container>

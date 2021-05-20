@@ -99,7 +99,7 @@ export default function Home() {
       </Head>
       <HeadMeta />
       <Container as="header" responsive={{'@m992': 'max960', '@m1200': 'max1168'}} hasSibling>
-        <Heading as="h1" nameTag="index">{AUTHOR}</Heading>
+        <Heading as="h1" nametag="index">{AUTHOR}</Heading>
         <NameDescription>{DESCRIPTION}</NameDescription>
       </Container>
       <Projects />

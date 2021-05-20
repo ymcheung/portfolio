@@ -5,7 +5,7 @@ export const Heading = styled('h2', {
   fontFamily: '$default',
 
   variants: {
-    nameTag: {
+    nametag: {
       index: {
         marginBottom: 0,
         marginLeft: '-2px',
@@ -21,12 +21,12 @@ export const Heading = styled('h2', {
         fontStyle: 'italic'
       }
     },
-    footerScheme: {
+    footerscheme: {
       dark: {
         color: '$shade1500'
       },
       light: {
-        color: '$shade300'
+        color: '$shade0'
       }
     },
     position: {

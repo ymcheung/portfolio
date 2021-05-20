@@ -37,6 +37,9 @@ export const MetaItemTitle = styled('strong', {
       },
       nuomi: {
         color: '$nuomiGold1200'
+      },
+      intersection: {
+        color: '$intersection1500'
       }
     }
   }
@@ -52,6 +55,9 @@ export const MetaItemValue = styled('span', {
     scheme: {
       dark: {
         color: '$shade1000'
+      },
+      light: {
+        color: '$shade300'
       }
     }
   }

@@ -14,8 +14,11 @@ const Icon = styled(Svg, {
 const Circle = styled('circle', {
   variants: {
     background: {
-      default: {
+      dark: {
         fill: '$shade300'
+      },
+      light: {
+        fill: '$shade1500'
       },
       pie: {
         fill: '$pie100'
@@ -25,6 +28,9 @@ const Circle = styled('circle', {
       },
       nuomi: {
         fill: '$nuomiGold400'
+      },
+      nuomiLight: {
+        fill: '$nuomiGold1200'
       }
     }
   }
@@ -65,7 +71,7 @@ type IconArrowProps = {
 const defaultProps = {
   wh: 'sq18',
   purpose: 'home',
-  background: 'default',
+  background: 'dark',
   gotoText: 'Home'
 };
 

@@ -59,9 +59,10 @@ interface NavProps {
   hasNext?: string;
   nextSlug?: string;
   nextBg?: string;
+  homeBg?: string;
 }
 
-function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps) {
+function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, homeBg }: NavProps) {
   return(
     <Container as="nav" responsive={{'@m768': 'max640'}} hasSibling>
       <NavList responsive={{'@m992': 'desktop'}}>
@@ -88,7 +89,7 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps)
         <NavItem>
           <Link href="/" passHref>
             <NavItemLink>
-              <IconArrow />&nbsp;
+              <IconArrow background={homeBg} />&nbsp;
               Home
             </NavItemLink>
           </Link>

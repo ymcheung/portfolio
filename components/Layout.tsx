@@ -26,7 +26,7 @@ export const Container = styled('div', {
         marginBottom: '64px'
       }
     },
-    footerEnd: {
+    footerend: {
       true: {
         paddingBottom: '64px'
       }

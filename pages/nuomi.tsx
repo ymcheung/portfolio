@@ -72,7 +72,7 @@ export default function ProjectNuomi() {
         prevSlug="moment"
         prevBg="moment"
       />
-      <Footer responsive={{'@m768': 'max640'}} inProject={{'@m992': true}} scheme="dark" />
+      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="dark" />
     </>
   );
 }

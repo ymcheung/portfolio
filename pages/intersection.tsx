@@ -11,30 +11,30 @@ import { global } from '../stitches.config';
 import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
-import Meta from '../projects/moment/Meta';
-import Content from '../projects/moment/Content';
+import Meta from '../projects/intersection/Meta';
+import Content from '../projects/intersection/Content';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
 const pageBody = global({
-  'body[data-body-style=moment]': {
+  'body[data-body-style=intersection]': {
     minHeight: '100vh',
-    backgroundColor: '$mtMidnight100'
+    backgroundColor: '$shade1600'
   }
 });
 
-export default function ProjectMoment() {
+export default function ProjectNuomi() {
   const router = useRouter();
 
   const pageInfo = {
-    name: 'Explore the moment when hearing a song in the movies/dramas',
-    description: 'How might we display the moment when hearing the songs you like in the movies/dramas?',
+    name: 'Intersection: A Publication of translating articles & websites',
+    description: 'Explore SEO and internationalization by translations.',
     datePublished: '2020-08-29',
     dateModified: '2021-05-20'
   }
 
   useEffect(() => {
-    document.body.setAttribute('data-body-style', 'moment');
+    document.body.setAttribute('data-body-style', 'intersection');
   });
   globalStyles();
   pageBody();
@@ -56,29 +56,30 @@ export default function ProjectMoment() {
       <HeadMeta
         title={pageInfo.name}
         description={pageInfo.description}
-        ogCover="/project/moment/og-cover.jpg"
+        ogCover="/project/nuomi/og-cover.jpg"
         canonical={router.pathname}
       />
       <Container responsive={{'@m768': 'max640'}} isgroupend>
-        <Heading itemName="dark">{pageInfo.name}</Heading>
+        <Heading itemName="light">{pageInfo.name}</Heading>
         <Meta />
       </Container>
-      <Content />
+      {/* <Content /> */}
       <Nav
-        hasNext="Nuomi&rsquo;s Portfolio"
-        nextSlug="nuomi"
-        nextBg="nuomi"
-        hasPrev="Pie: a Clock-In Web App"
-        prevSlug="pie-clockin"
-        prevBg="pie"
+        hasNext="Translate Design Process for Pros"
+        nextSlug="process"
+        nextBg="default"
+        hasPrev="Nuomi’s Portfolio"
+        prevSlug="nuomi"
+        prevBg="nuomiLight"
+        homeBg="light"
       />
-      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="dark" />
+      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="light" />
     </>
   );
 }
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['moment']),
+    ...await serverSideTranslations(locale, ['intersection']),
   },
 });
