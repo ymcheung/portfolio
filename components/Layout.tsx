@@ -59,7 +59,8 @@ export const IconList = styled('ul', {
 export const IconListItem = styled(ListItem, {
   display: 'grid',
   grid: `"prefix title" auto
-        ". description" auto / 32px 1fr`,
+        ". description" auto
+        ". timestamp" auto / 32px 1fr`,
   rowGap: '$4',
   alignItems: 'center',
   margin: '0',

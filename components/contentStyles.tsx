@@ -71,6 +71,11 @@ export const Paragraph = styled('p', {
         margin: 0
       }
     },
+    timestamp: {
+      true: {
+        fontSize: '$14'
+      }
+    },
     scheme: {
       dark: {
         color: '$shade1200',
