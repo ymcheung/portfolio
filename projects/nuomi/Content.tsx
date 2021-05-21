@@ -1,6 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
-import { Container, ListItem } from '../../components/layout';
+import { Container, IconList, IconListItem } from '../../components/layout';
 
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 import IconAccessibility from './IconAccessibility';
@@ -8,23 +8,6 @@ import IconLock from './IconLock';
 import IconStructured from './IconStructured';
 
 import Gallery from './Gallery';
-
-const IconList = styled('ul', {
-  display: 'grid',
-  rowGap: '$12',
-  margin: 0,
-  padding: 0
-});
-
-const IconListItem = styled(ListItem, {
-  display: 'grid',
-  grid: `"prefix title" auto
-        ". description" auto / 32px 1fr`,
-  rowGap: '$4',
-  alignItems: 'center',
-  margin: '0',
-  fontFamily: '$default'
-});
 
 const IconListDescription = styled(Paragraph, {
   gridArea: 'description'
@@ -53,18 +36,18 @@ export default function Content() {
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.description')}} indent />
         <IconList>
           <IconListItem>
-            <div><IconAccessibility /></div>
-            <ContentTitle as="h3" purpose="paragraph" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.https.title')}} />
+            <div><IconLock /></div>
+            <ContentTitle as="h3" purpose="iconListItem" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.https.title')}} />
             <IconListDescription scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.https.description')}} />
           </IconListItem>
           <IconListItem>
-            <div><IconLock /></div>
-            <ContentTitle as="h3" purpose="paragraph" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.structured.title')}} />
+            <div><IconStructured /></div>
+            <ContentTitle as="h3" purpose="iconListItem" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.structured.title')}} />
             <IconListDescription scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.structured.description')}} />
           </IconListItem>
           <IconListItem>
-            <div><IconStructured /></div>
-            <ContentTitle as="h3" purpose="paragraph" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.title')}} />
+            <div><IconAccessibility /></div>
+            <ContentTitle as="h3" purpose="iconListItem" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.title')}} />
             <IconListDescription scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.description')}} />
           </IconListItem>
         </IconList>

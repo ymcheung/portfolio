@@ -48,3 +48,20 @@ export const ListItem = styled('li', {
     }
   }
 });
+
+export const IconList = styled('ul', {
+  display: 'grid',
+  rowGap: '$12',
+  margin: 0,
+  padding: 0
+});
+
+export const IconListItem = styled(ListItem, {
+  display: 'grid',
+  grid: `"prefix title" auto
+        ". description" auto / 32px 1fr`,
+  rowGap: '$4',
+  alignItems: 'center',
+  margin: '0',
+  fontFamily: '$default'
+});

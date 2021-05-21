@@ -23,7 +23,7 @@ const Path = styled('path', {
 
 function IconHyphen({ showInMobile }: IconProps) {
   return(
-    <Icon viewBox="0 0 24 24" role="img" showInMobile={showInMobile} aria-hidden="true">
+    <Icon viewBox="0 0 24 24" role="img" showInMobile={showInMobile} aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <Path d="M1 12H23" />
     </Icon>
   );

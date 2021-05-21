@@ -5,26 +5,9 @@ import IconSearch from './IconSearch';
 import IconManually from './IconManually';
 import IconTemplate from './IconTemplate';
 import IconCMS from './IconCMS';
-import { Container, ListItem } from '../../components/layout';
+import { Container, ListItem, IconList, IconListItem } from '../../components/layout';
 
 import { ContentTitle, Section, Paragraph, ContentList, ContentListItem } from '../../components/contentStyles';
-
-const IconList = styled('ul', {
-  display: 'grid',
-  rowGap: '$12',
-  margin: 0,
-  padding: 0
-});
-
-const IconListItem = styled(ListItem, {
-  display: 'grid',
-  grid: `"prefix title" auto
-        ". description" auto / 32px 1fr`,
-  rowGap: '$4',
-  alignItems: 'center',
-  margin: '0',
-  fontFamily: '$default'
-});
 
 const BubbleSearch = styled('div', {
   maxWidth: 'max-content',

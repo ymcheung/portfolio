@@ -20,7 +20,7 @@ const Oval = styled('path', {
 
 function IconMedium() {
   return(
-    <Medium viewBox="0 0 96 96" aria-labelledby="MediumLink">
+    <Medium viewBox="0 0 96 96" aria-labelledby="MediumLink" xmlns="http://www.w3.org/2000/svg">
       <title id="MediumLink">Medium Publication 連結</title>
       <Oval d="M52.0998 48.1741C52.0998 58.2111 44.0185 66.3476 34.0502 66.3476C24.0819 66.3476 16 58.2092 16 48.1741C16 38.139 24.0813 30 34.0502 30C44.0191 30 52.0998 38.1371 52.0998 48.1741Z" />
       <Oval d="M71.9009 48.1741C71.9009 57.6218 67.8602 65.2837 62.8758 65.2837C57.8913 65.2837 53.8507 57.6218 53.8507 48.1741C53.8507 38.7265 57.8907 31.0646 62.8752 31.0646C67.8596 31.0646 71.9003 38.7241 71.9003 48.1741" />

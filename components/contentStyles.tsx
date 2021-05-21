@@ -17,6 +17,18 @@ export const ContentTitle = styled('h2', {
         margin: '0 0 $4',
         fontSize: '$16',
         lineHeight: '20px'
+      },
+      iconListItem: {
+        margin: 0,
+        fontSize: '$16',
+        lineHeight: '24px'
+      },
+      featuredNumber: {
+        margin: 0,
+        fontSize: '$16',
+        fontWeight: 800,
+        fontStyle: 'italic',
+        lineHeight: '24px',
       }
     },
     scheme: {
@@ -61,17 +73,20 @@ export const Paragraph = styled('p', {
     },
     scheme: {
       dark: {
-        color: '$shade1200'
+        color: '$shade1200',
+
+        '& .paragraph-link': {
+          color: '$shade1500',
+        }
       },
       light: {
-        color: '$shade600'
+        color: '$shade600',
+
+        '& .paragraph-link': {
+          color: '$shade300',
+        }
       }
     }
-  },
-
-  '& .paragraph-link': {
-    textDecoration: 'none',
-    color: 'inherit',
   }
 });
 

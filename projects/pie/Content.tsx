@@ -54,6 +54,7 @@ const GalleryFigure = styled('figure', {
 
 const GalleryCover = styled('img', {
   maxWidth: '100%',
+  minHeight: '455px',
   overflow: 'hidden',
   position: 'relative',
   zIndex: 1,

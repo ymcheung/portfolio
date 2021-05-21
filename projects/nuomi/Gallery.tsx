@@ -70,6 +70,7 @@ const GalleryItem = styled('li', {
 
 const NuomiScreenshotImg = styled('img', {
   maxWidth: '100%',
+  minHeight: '512px',
   position: 'relative',
   zIndex: 1
 });
