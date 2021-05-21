@@ -2,7 +2,6 @@ import { styled } from '../stitches.config';
 import { ListItem } from './layout';
 
 export const ContentTitle = styled('h2', {
-  color: '$shade1500',
   fontFamily: '$default',
   fontWeight: 600,
 
@@ -18,6 +17,14 @@ export const ContentTitle = styled('h2', {
         margin: '0 0 $4',
         fontSize: '$16',
         lineHeight: '20px'
+      }
+    },
+    scheme: {
+      dark: {
+        color: '$shade1500'
+      },
+      light: {
+        color: '$shade600'
       }
     }
   }
@@ -37,7 +44,6 @@ export const Section = styled('section', {
 
 export const Paragraph = styled('p', {
   margin: '0 0 $16',
-  color: '$shade1200',
   fontFamily: '$default',
   fontSize: '$16',
   lineHeight: '24px',
@@ -52,12 +58,20 @@ export const Paragraph = styled('p', {
       true: {
         margin: 0
       }
+    },
+    scheme: {
+      dark: {
+        color: '$shade1200'
+      },
+      light: {
+        color: '$shade600'
+      }
     }
   },
 
   '& .paragraph-link': {
     textDecoration: 'none',
-    color: '$shade1500',
+    color: 'inherit',
   }
 });
 

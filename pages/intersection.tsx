@@ -23,14 +23,14 @@ const pageBody = global({
   }
 });
 
-export default function ProjectNuomi() {
+export default function ProjectIntersection() {
   const router = useRouter();
 
   const pageInfo = {
-    name: 'Intersection: A Publication of translating articles & websites',
+    name: 'Intersection: A Publication of Translating Articles & Websites',
     description: 'Explore SEO and internationalization by translations.',
     datePublished: '2020-08-29',
-    dateModified: '2021-05-20'
+    dateModified: '2021-05-21'
   }
 
   useEffect(() => {
@@ -56,14 +56,14 @@ export default function ProjectNuomi() {
       <HeadMeta
         title={pageInfo.name}
         description={pageInfo.description}
-        ogCover="/project/nuomi/og-cover.jpg"
+        ogCover="/project/intersection/og-cover.jpg"
         canonical={router.pathname}
       />
       <Container responsive={{'@m768': 'max640'}} isgroupend>
         <Heading itemName="light">{pageInfo.name}</Heading>
         <Meta />
       </Container>
-      {/* <Content /> */}
+      <Content />
       <Nav
         hasNext="Translate Design Process for Pros"
         nextSlug="process"

@@ -1,6 +1,6 @@
 module.exports = {
   i18n: {
-    defaultNS: 'index',
+    defaultNS: 'home',
     defaultLocale: 'en',
     locales: ['en', 'ch']
   },

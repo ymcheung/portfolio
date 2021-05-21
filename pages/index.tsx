@@ -42,7 +42,7 @@ export default function Home() {
   globalStyles();
   pageBody();
 
-  const { t } = useTranslation('index');
+  const { t } = useTranslation('home');
   
   const webPageSchema = {
     '@context': 'https://schema.org',
@@ -99,7 +99,7 @@ export default function Home() {
       </Head>
       <HeadMeta />
       <Container as="header" responsive={{'@m992': 'max960', '@m1200': 'max1168'}} hasSibling>
-        <Heading as="h1" nametag="index">{AUTHOR}</Heading>
+        <Heading as="h1" nametag="home">{AUTHOR}</Heading>
         <NameDescription>{DESCRIPTION}</NameDescription>
       </Container>
       <Projects />
@@ -112,6 +112,6 @@ export default function Home() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['index']),
+    ...await serverSideTranslations(locale, ['home']),
   },
 });
