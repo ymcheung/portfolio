@@ -80,7 +80,7 @@ export default function Content() {
             <IconListItem key={index}>
               <div><IconListImage src={`/projects/intersection/${slug}_24.jpg`} alt="" /></div>
               <Link href={url} passHref>
-                <ContentTitle as="a" purpose="iconListItem" scheme="light" dangerouslySetInnerHTML={{__html: name}} target="_blank" rel="noopener" />
+                <ContentTitle as="a" purpose="iconListItem" scheme="light" dangerouslySetInnerHTML={{__html: name}} data-splitbee-event={`Website Translation: ${name}`} target="_blank" rel="noopener" />
               </Link>
               <IconListDescription scheme="light" dangerouslySetInnerHTML={{__html: description}} sectionend="true" />
               <IconListTimestamp as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} scheme="light" timestamp />

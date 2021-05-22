@@ -18,12 +18,12 @@ function ExternalLinks() {
   return(
     <Container as="aside" responsive={{'@m992': 'max960', '@m1200': 'max1168'}}>
       <Link href="https://www.linkedin.com/in/ymcheungtw" passHref>
-        <IconLink target="_blank" rel="noopener">
+        <IconLink data-splitbee-event="External Link: LinkedIn" target="_blank" rel="noopener">
           <IconLinkedIn />
         </IconLink>
       </Link>
       <Link href="https://intersection.tw" passHref>
-        <IconLink target="_blank" rel="noopener">
+        <IconLink data-splitbee-event="External Link: Intersection" target="_blank" rel="noopener">
           <IconMedium />
         </IconLink>
       </Link>
