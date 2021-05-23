@@ -51,16 +51,13 @@ export const ListItem = styled('li', {
 
 export const IconList = styled('ul', {
   display: 'grid',
-  rowGap: '$12',
+  rowGap: '$16',
   margin: 0,
   padding: 0
 });
 
 export const IconListItem = styled(ListItem, {
   display: 'grid',
-  gridTemplateRows: 'auto auto',
-  gridTemplateAreas: `"prefix title"
-                      ". description"`,
   rowGap: '$4',
   alignItems: 'center',
   margin: '0',
@@ -74,6 +71,24 @@ export const IconListItem = styled(ListItem, {
       48: {
         gridTemplateColumns: '48px 1fr'
       }
+    },
+    purpose: {
+      default: {
+        gridTemplateRows: 'auto auto',
+        gridTemplateAreas: `"prefix title"
+                            ". description"`
+      },
+      timestamp: {
+        gridTemplateRows: 'auto auto auto',
+        gridTemplateAreas: `"prefix title"
+                            ". description"
+                            ". timestamp"`
+      }
     }
-  }
+  },
+
+  defaultVariants: {
+    iconWidth: '32',
+    purpose: 'default'
+  },
 });
