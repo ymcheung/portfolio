@@ -58,11 +58,22 @@ export const IconList = styled('ul', {
 
 export const IconListItem = styled(ListItem, {
   display: 'grid',
-  grid: `"prefix title" auto
-        ". description" auto
-        ". timestamp" auto / 32px 1fr`,
+  gridTemplateRows: 'auto auto',
+  gridTemplateAreas: `"prefix title"
+                      ". description"`,
   rowGap: '$4',
   alignItems: 'center',
   margin: '0',
-  fontFamily: '$default'
+  fontFamily: '$default',
+
+  variants: {
+    iconWidth: {
+      32: {
+        gridTemplateColumns: '32px 1fr'
+      },
+      48: {
+        gridTemplateColumns: '48px 1fr'
+      }
+    }
+  }
 });

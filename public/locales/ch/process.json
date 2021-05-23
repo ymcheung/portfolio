@@ -21,24 +21,5 @@
       "「實際體驗後總算理解：翻譯難在中文程度，而不是原文。」",
     "obstacleBy":
       "— 許多參與者的回饋"
-  },
-  "frontend":
-  {
-    "title":
-      "前端技術",
-    "aggregation":
-    {
-      "name":
-        "成果頁面",
-      "description":
-        "此頁面是根據桌面版網頁設計稿，回推手機版的呈現方式。"
-    },
-    "gatsbyjs":
-    {
-      "name":
-        "電子書",
-      "description":
-        "原作即是使用 Gatsby.js。Markdown 格式讓稿件整合更輕鬆，可以在活動現場把已經完成的草稿投影出來。"
-    }
   }
 }

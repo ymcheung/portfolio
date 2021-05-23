@@ -98,7 +98,7 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, scheme }: N
             </Link>
           </NavItem>
         }
-        <NavItem>
+        <NavItem position="home">
           <Link href="/" passHref>
             <NavItemLink scheme={scheme}>
               <IconArrow background={scheme} />&nbsp;

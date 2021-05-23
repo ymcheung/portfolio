@@ -22,24 +22,5 @@
       "&ldquo;Now I find translation challenging because of Mandarin Chinese literacy but English comprehension.&rdquo;",
     "obstacleBy":
       "- Feedbacks from many participants"
-  },
-  "frontend":
-  {
-    "title":
-      "Front-End Stack",
-    "aggregation":
-    {
-      "name":
-        "Landing Page",
-      "description":
-        "The design file for the page was for desktop only. I inferred from the design and created the mobile layout."
-    },
-    "gatsbyjs":
-    {
-      "name":
-        "E-Book",
-      "description":
-        "The original version used Gatsby.js. Markdown format made drafts easy to be integrated. I projected some of the drafts at the scene."
-    }
   }
 }

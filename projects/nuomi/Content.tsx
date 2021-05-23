@@ -35,17 +35,17 @@ export default function Content() {
         <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.title')}} />
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.description')}} indent />
         <IconList>
-          <IconListItem>
+          <IconListItem nomark="true" iconWidth="32">
             <div><IconLock /></div>
             <ContentTitle as="h3" purpose="iconListItem" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.https.title')}} />
             <IconListDescription scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.https.description')}} />
           </IconListItem>
-          <IconListItem>
+          <IconListItem nomark="true" iconWidth="32">
             <div><IconStructured /></div>
             <ContentTitle as="h3" purpose="iconListItem" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.structured.title')}} />
             <IconListDescription scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.structured.description')}} />
           </IconListItem>
-          <IconListItem>
+          <IconListItem nomark="true" iconWidth="32">
             <div><IconAccessibility /></div>
             <ContentTitle as="h3" purpose="iconListItem" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.title')}} />
             <IconListDescription scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.description')}} />
