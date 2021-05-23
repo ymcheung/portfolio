@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
-import { Container, ListItem, IconList, IconListItem } from '../../components/layout';
 
+import { Container, ListItem, IconList, IconListItem } from '../../components/layout';
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
 const FeatureList = styled('ul', {
@@ -21,6 +21,15 @@ const FeatureList = styled('ul', {
       }
     }
   }
+});
+
+const RetroIcon = styled('img', {
+  width: '36px',
+  height: '30px'
+});
+
+const IconListDescription = styled(Paragraph, {
+  gridArea: 'description'
 });
 
 export default function Content() {
@@ -43,6 +52,16 @@ export default function Content() {
       </Section>
       <Section>
         <ContentTitle purpose="section" scheme="light" dangerouslySetInnerHTML={{__html: t('retro.title')}} />
+        <IconList>
+          <IconListItem prefixwidth="48" purpose="noTitle">
+            <div><RetroIcon src="/projects/process/bubbleGit.svg" alt="" /></div>
+            <IconListDescription scheme="light" sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.knowledge')}} />
+          </IconListItem>
+          <IconListItem prefixwidth="48" purpose="noTitle">
+            <div><RetroIcon src="/projects/process/bubbleObstacle.svg" alt="" /></div>
+            <IconListDescription scheme="light" sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.obstacle')}} />
+          </IconListItem>
+        </IconList>
       </Section>
     </Container>
   );
