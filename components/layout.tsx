@@ -87,6 +87,11 @@ export const IconListItem = styled(ListItem, {
                             ". description"
                             ". timestamp"`
       }
+    },
+    vertical: {
+      middle: {
+        alignItems: 'center'
+      }
     }
   },
 

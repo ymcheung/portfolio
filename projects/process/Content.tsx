@@ -54,12 +54,12 @@ export default function Content() {
         <ContentTitle purpose="section" scheme="light" dangerouslySetInnerHTML={{__html: t('retro.title')}} />
         <IconList>
           <IconListItem prefixwidth="48" purpose="noTitle">
-            <div><RetroIcon src="/projects/process/bubbleGit.svg" alt="" /></div>
-            <IconListDescription scheme="light" sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.knowledge')}} />
+            <div><RetroIcon src="/projects/process/bubbleGit.svg" alt={t('retro.knowledge.alt')} /></div>
+            <IconListDescription scheme="light" sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.knowledge.description')}} />
           </IconListItem>
           <IconListItem prefixwidth="48" purpose="noTitle">
-            <div><RetroIcon src="/projects/process/bubbleObstacle.svg" alt="" /></div>
-            <IconListDescription scheme="light" sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.obstacle')}} />
+            <div><RetroIcon src="/projects/process/bubbleObstacle.svg" alt={t('retro.obstacle.alt')} /></div>
+            <IconListDescription scheme="light" sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.obstacle.description')}} />
           </IconListItem>
         </IconList>
       </Section>

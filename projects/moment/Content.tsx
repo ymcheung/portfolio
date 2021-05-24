@@ -103,7 +103,7 @@ export default function Content() {
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('how.description')}} indent />
         <IconList>
           {t<string, howProps>('how.hows', { returnObjects: true }).map(({ keyword, name }: howProps, index: number) => (
-            <IconListItem nomark="true" key={`how-${index}`}>
+            <IconListItem nomark="true" vertical="middle" key={`how-${index}`}>
               <div>
                 <IconSearch />
               </div>

@@ -17,10 +17,20 @@
     "title":
       "Retrospect",
     "knowledge":
-      "2 of the participants had the knowledge of version control tool: Git. The event had them experience the concept of Git by replacing sentences. I aggregated and polished the drafts after the event.",
+    {
+      "alt":
+        "Use Git",
+      "description": 
+        "2 of the participants had the knowledge of version control tool: Git. The event had them experience the concept of Git by replacing sentences. I aggregated and polished the drafts after the event."
+    },
     "obstacle":
-      "&ldquo;Now I find translation challenging because of Mandarin Chinese literacy but English comprehension.&rdquo;",
-    "obstacleBy":
-      "- Feedbacks from many participants"
+    {
+      "alt":
+        "Translation is challenging",
+      "description":
+        "&ldquo;Now I find translation challenging because of Mandarin Chinese literacy but English comprehension.&rdquo;",
+      "by":
+        "- Feedbacks from many participants"
+    }
   }
 }
