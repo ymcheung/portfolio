@@ -35,6 +35,8 @@ export const Container = styled('div', {
 });
 
 export const ListItem = styled('li', {
+  fontFamily: '$default',
+
   variants: {
     nomark: {
       true: {
@@ -60,7 +62,6 @@ export const IconListItem = styled(ListItem, {
   display: 'grid',
   rowGap: '$4',
   margin: '0',
-  fontFamily: '$default',
 
   variants: {
     prefixwidth: {

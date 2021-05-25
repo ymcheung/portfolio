@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
 
@@ -6,13 +5,14 @@ import { Container, ListItem, IconList, IconListItem } from '../../components/la
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
 const FeatureList = styled('ul', {
-  display: 'grid',
-  grid: 'auto / auto-flow max-content',
   margin: 0,
   padding: 0,
 
   variants: {
     space: {
+      mobile: {
+        rowGap: '$12'
+      },
       normal: {
         columnGap: '32px'
       },
@@ -21,6 +21,27 @@ const FeatureList = styled('ul', {
       }
     }
   }
+});
+
+const FeatureItem = styled(ListItem, {
+  display: 'grid',
+  grid: 'auto / 60px 1fr',
+
+  variants: {
+    responsive: {
+      tablet: {
+        grid: 'auto-flow auto / minmax(120px, 320px)'
+      }
+    }
+  }
+});
+
+const FeaturedNumberMark = styled('sup', {
+  fontFamily: 'inherit',
+  color: '$shade1200',
+  fontSize: '$18',
+  fontStyle: 'normal',
+  fontWeight: 400
 });
 
 const RetroIcon = styled('img', {
@@ -44,10 +65,15 @@ export default function Content() {
       </Section>
       <Section>
         <ContentTitle purpose="section" scheme="light" dangerouslySetInnerHTML={{__html: t('worth.title')}} />
-        <FeatureList space={itemSpace}>
-          <ListItem nomark>
-            <ContentTitle purpose="featuredNumber" scheme="light">40+</ContentTitle>
-          </ListItem>
+        <FeatureList space={{ '@initial': 'mobile', '@m768': itemSpace }}>
+          <FeatureItem nomark="true" responsive={{ '@m768': 'tablet' }}>
+            <ContentTitle as="strong" featurednumber="large" scheme="light">
+              4.7
+              <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
+            </ContentTitle>
+            <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('worth.position')}} />
+            <Paragraph as="div" postmark scheme="light" dangerouslySetInnerHTML={{__html: t('worth.asof')}} sectionend />
+          </FeatureItem>
         </FeatureList>
       </Section>
       <Section>

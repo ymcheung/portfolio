@@ -7,7 +7,7 @@ import { ContentTitle, Section, Paragraph } from '../../components/contentStyles
 
 const FeatureList = styled('ul', {
   display: 'grid',
-  grid: 'auto / auto-flow max-content',
+  grid: 'auto / repeat(auto-fill, minmax(48px, 140px))',
   margin: 0,
   padding: 0,
 
@@ -64,11 +64,11 @@ export default function Content() {
         <ContentTitle purpose="section" scheme="light" dangerouslySetInnerHTML={{__html: t('stat.title')}} />
         <FeatureList space={itemSpace}>
           <ListItem nomark>
-            <ContentTitle purpose="featuredNumber" scheme="light">40+</ContentTitle>
+            <ContentTitle featurednumber="normal" scheme="light">40+</ContentTitle>
             <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('stat.count')}} sectionend />
           </ListItem>
           <ListItem nomark>
-            <ContentTitle purpose="featuredNumber" scheme="light">3,600+</ContentTitle>
+            <ContentTitle featurednumber="normal" scheme="light">3,600+</ContentTitle>
             <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('stat.followers')}} sectionend />
           </ListItem>
         </FeatureList>
@@ -83,7 +83,7 @@ export default function Content() {
                 <ContentTitle as="a" purpose="iconListItem" scheme="light" dangerouslySetInnerHTML={{__html: name}} data-splitbee-event={`Website Translation: ${name}`} target="_blank" rel="noopener" />
               </Link>
               <IconListDescription scheme="light" dangerouslySetInnerHTML={{__html: description}} sectionend="true" />
-              <IconListTimestamp as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} scheme="light" timestamp="true" sectionend="true" />
+              <IconListTimestamp as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} scheme="light" postmark="true" sectionend="true" />
             </IconListItem>
           ))}
         </IconList>

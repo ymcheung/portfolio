@@ -23,12 +23,23 @@ export const ContentTitle = styled('h2', {
         fontSize: '$16',
         lineHeight: '24px'
       },
-      featuredNumber: {
+    },
+    featurednumber: {
+      normal: {
         margin: 0,
-        fontSize: '$16',
+        display: 'inline-block',
+        fontSize: '$18',
         fontWeight: 800,
         fontStyle: 'italic',
         lineHeight: '24px',
+      },
+      large: {
+        display: 'inline-block',
+        margin: 0,
+        fontSize: '24px',
+        fontWeight: 800,
+        fontStyle: 'italic',
+        lineHeight: '32px',
       }
     },
     scheme: {
@@ -71,7 +82,7 @@ export const Paragraph = styled('p', {
         margin: 0
       }
     },
-    timestamp: {
+    postmark: {
       true: {
         fontSize: '$14'
       }

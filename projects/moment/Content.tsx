@@ -10,7 +10,7 @@ import { Container, ListItem, IconList, IconListItem } from '../../components/la
 import { ContentTitle, Section, Paragraph, ContentList, ContentListItem } from '../../components/contentStyles';
 
 const BubbleSearch = styled('div', {
-  maxWidth: 'max-content',
+  maxWidth: 'fit-content',
   padding: '8px 12px',
   color: '$shade1500',
   fontSize: '$14',
