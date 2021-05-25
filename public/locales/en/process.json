@@ -17,29 +17,20 @@
     "title":
       "Retrospect",
     "knowledge":
-      "2 of the participants had the knowledge of version control tool: Git. The event had them experience the concept of Git by replacing sentences. I aggregated and polished the drafts after the event.",
-    "obstacle":
-      "&ldquo;Now I find translation challenging because of Mandarin Chinese literacy but English comprehension.&rdquo;",
-    "obstacleBy":
-      "- Feedbacks from many participants"
-  },
-  "frontend":
-  {
-    "title":
-      "Front-End Stack",
-    "aggregation":
     {
-      "name":
-        "Landing Page",
-      "description":
-        "The design file for the page was for desktop only. I inferred from the design and created the mobile layout."
+      "alt":
+        "Use Git",
+      "description": 
+        "2 of the participants had the knowledge of version control tool: Git. The event had them experience the concept of Git by replacing sentences. I aggregated and polished the drafts after the event."
     },
-    "gatsbyjs":
+    "obstacle":
     {
-      "name":
-        "E-Book",
+      "alt":
+        "Translation is challenging",
       "description":
-        "The original version used Gatsby.js. Markdown format made drafts easy to be integrated. I projected some of the drafts at the scene."
+        "&ldquo;Now I find translation challenging because of Mandarin Chinese literacy but English comprehension.&rdquo;",
+      "by":
+        "- Feedbacks from many participants"
     }
   }
 }

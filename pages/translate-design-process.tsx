@@ -11,30 +11,30 @@ import { global } from '../stitches.config';
 import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
-import Meta from '../projects/nuomi/Meta';
-import Content from '../projects/nuomi/Content';
+import Meta from '../projects/process/Meta';
+import Content from '../projects/process/Content';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
 const pageBody = global({
-  'body[data-body-style=nuomi]': {
+  'body[data-body-style=intersection]': {
     minHeight: '100vh',
-    backgroundColor: '$nuomiBlack100'
+    backgroundColor: '$shade1600'
   }
 });
 
-export default function ProjectNuomi() {
+export default function ProjectProcess() {
   const router = useRouter();
 
   const pageInfo = {
-    name: 'Retrospect Nuomi’s Portfolio',
-    description: 'Nuomi’s Portfolio with hand-drawn VR experience',
+    name: 'Translating “Design Process for Pros”',
+    description: 'Retrospect an event gathing 20 designers to translate an e-book. Co-Operated with Cosign.',
     datePublished: '2020-08-29',
-    dateModified: '2021-05-20'
+    dateModified: '2021-05-24'
   }
 
   useEffect(() => {
-    document.body.setAttribute('data-body-style', 'nuomi');
+    document.body.setAttribute('data-body-style', 'intersection');
   });
   globalStyles();
   pageBody();
@@ -56,30 +56,27 @@ export default function ProjectNuomi() {
       <HeadMeta
         title={pageInfo.name}
         description={pageInfo.description}
-        ogCover="/project/nuomi/og-cover.jpg"
+        ogCover="/project/process/og-cover.jpg"
         canonical={router.pathname}
       />
       <Container responsive={{'@m768': 'max640'}} isgroupend>
-        <Heading itemName="dark">{pageInfo.name}</Heading>
+        <Heading itemName="light">{pageInfo.name}</Heading>
         <Meta />
       </Container>
       <Content />
       <Nav
-        scheme="dark"
-        hasNext="Intersection"
-        nextSlug="intersection"
-        nextBg="dark"
-        hasPrev="The Moment"
-        prevSlug="moment"
-        prevBg="moment"
+        hasPrev="Intersection"
+        prevSlug="intersection"
+        prevBg="light"
+        scheme="light"
       />
-      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="dark" />
+      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="light" />
     </>
   );
 }
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['nuomi']),
+    ...await serverSideTranslations(locale, ['process']),
   },
 });

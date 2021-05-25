@@ -77,13 +77,13 @@ export default function Content() {
         <ContentTitle purpose="section" scheme="light" dangerouslySetInnerHTML={{__html: t('standalone.title')}} />
         <IconList>
           {t<string, websiteProps>('standalone.websites', { returnObjects: true }).map(({ slug, url, name, time, description }: websiteProps, index: number) => (
-            <IconListItem key={index}>
+            <IconListItem nomark="true" purpose="timestamp" key={index}>
               <div><IconListImage src={`/projects/intersection/${slug}_24.jpg`} alt="" /></div>
               <Link href={url} passHref>
                 <ContentTitle as="a" purpose="iconListItem" scheme="light" dangerouslySetInnerHTML={{__html: name}} data-splitbee-event={`Website Translation: ${name}`} target="_blank" rel="noopener" />
               </Link>
               <IconListDescription scheme="light" dangerouslySetInnerHTML={{__html: description}} sectionend="true" />
-              <IconListTimestamp as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} scheme="light" timestamp />
+              <IconListTimestamp as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} scheme="light" timestamp="true" sectionend="true" />
             </IconListItem>
           ))}
         </IconList>

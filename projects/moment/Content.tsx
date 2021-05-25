@@ -103,7 +103,7 @@ export default function Content() {
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('how.description')}} indent />
         <IconList>
           {t<string, howProps>('how.hows', { returnObjects: true }).map(({ keyword, name }: howProps, index: number) => (
-            <IconListItem nomark="true" key={`how-${index}`}>
+            <IconListItem nomark="true" vertical="middle" key={`how-${index}`}>
               <div>
                 <IconSearch />
               </div>
@@ -142,21 +142,21 @@ export default function Content() {
         <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('asap.title')}} />
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('asap.description')}} indent />
         <IconList>
-          <IconListItem>
+          <IconListItem nomark="true">
             <div>
               <IconManually aria-hidden="true" />
             </div>
-            <Iteration dangerouslySetInnerHTML={{__html: t('asap.versions.first.position', {prefix: t('asap.prefix'), affix: t('asap.affix')})}} isItalic={isItalic} />
+            <Iteration dangerouslySetInnerHTML={{__html: t('asap.versions.first.position', { prefix: t('asap.prefix'), affix: t('asap.affix')})} } isItalic={isItalic} />
             <IconListDescription as="div" scheme="dark" dangerouslySetInnerHTML={{__html: t('asap.versions.first.description')}} sectionend="true" />
           </IconListItem>
-          <IconListItem>
+          <IconListItem nomark="true">
             <div>
               <IconTemplate aria-hidden="true" />
             </div>
             <Iteration dangerouslySetInnerHTML={{__html: t('asap.versions.second.position', {prefix: t('asap.prefix'), affix: t('asap.affix')})}} isItalic={isItalic} />
             <IconListDescription as="div" scheme="dark" dangerouslySetInnerHTML={{__html: t('asap.versions.second.description')}} sectionend="true" />
           </IconListItem>
-          <IconListItem>
+          <IconListItem nomark="true">
             <div>
               <IconCMS aria-hidden="true" />
             </div>

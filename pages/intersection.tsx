@@ -65,8 +65,8 @@ export default function ProjectIntersection() {
       </Container>
       <Content />
       <Nav
-        hasNext="Translate Design Process for Pros"
-        nextSlug="process"
+        hasNext="Translating Design Process for Pros"
+        nextSlug="translate-design-process"
         nextBg="light"
         hasPrev="Nuomi’s Portfolio"
         prevSlug="nuomi"
