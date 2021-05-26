@@ -13,7 +13,7 @@ import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
 import Meta from '../projects/intersection/Meta';
 import Content from '../projects/intersection/Content';
-import Nav from '../components/Nav';
+import Nav from '../projects/Nav';
 import Footer from '../components/Footer';
 
 const pageBody = global({
@@ -36,7 +36,6 @@ export default function ProjectIntersection() {
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'intersection');
   });
-  globalStyles();
   pageBody();
 
   const schema = {

@@ -13,7 +13,7 @@ import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
 import Meta from '../projects/nuomi/Meta';
 import Content from '../projects/nuomi/Content';
-import Nav from '../components/Nav';
+import Nav from '../projects/Nav';
 import Footer from '../components/Footer';
 
 const pageBody = global({
@@ -36,7 +36,6 @@ export default function ProjectNuomi() {
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'nuomi');
   });
-  globalStyles();
   pageBody();
 
   const schema = {

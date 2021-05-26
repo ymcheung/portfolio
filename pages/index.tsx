@@ -39,7 +39,6 @@ export default function Home() {
     document.body.setAttribute('data-body-style', 'home');
   });
 
-  globalStyles();
   pageBody();
 
   const { t } = useTranslation('home');

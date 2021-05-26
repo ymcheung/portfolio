@@ -5,6 +5,8 @@ import { Container } from '../../components/layout';
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 import React from 'react';
 
+import LangSwitch from '../LangSwitch';
+
 type itemProps = {
   [x: string]: any;
   name: string;
@@ -67,6 +69,7 @@ export default function Content() {
 
   return(
     <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+      <LangSwitch />
       <Section>
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>
