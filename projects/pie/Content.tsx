@@ -69,7 +69,7 @@ export default function Content() {
 
   return(
     <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
-      <LangSwitch />
+      <LangSwitch scheme="dark" />
       <Section>
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>

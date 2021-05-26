@@ -9,8 +9,20 @@ const Button = styled('button', {
   margin: '0 0 12px -8px',
   padding: '$8',
   background: 'transparent',
-  border: '2px solid $shade300',
-  borderRadius: '4px'
+  borderWidth: '2px',
+  borderStyle: 'solid',
+  borderRadius: '4px',
+
+  variants: {
+    scheme: {
+      dark: {
+        borderColor: '$shade300'
+      },
+      light: {
+        borderColor: '$shade1500'
+      }
+    }
+  }
 });
 
 const LangName = styled('span', {
@@ -20,22 +32,31 @@ const LangName = styled('span', {
   color: '$shade1200',
   fontFamily: '$default',
   fontSize: '$14',
-  lineHeight: '20px'
+  lineHeight: '20px',
+
+  variants: {
+    scheme: {
+      dark: {
+        color: '$shade1200'
+      },
+      light: {
+        color: '$shade600'
+      }
+    }
+  }
 });
 
-function LangSwitch() {
+function LangSwitch({ scheme }) {
   const router = useRouter();
   const { i18n } = useTranslation();
 
   const langName = i18n.language === 'en' ? '中文' : 'English';
 
   return(
-    <Link href={router.pathname}
-          locale={router.locale === 'en' ? 'tw' : 'en'}
-    >
-      <Button type="button" data-splitbee-event="切換語言">
-        <IconLangSwitch />
-        <LangName>{langName}</LangName>
+    <Link href={router.pathname} locale={router.locale === 'en' ? 'tw' : 'en'}>
+      <Button type="button" scheme={scheme} data-splitbee-event="切換語言">
+        <IconLangSwitch scheme={scheme} />
+        <LangName scheme={scheme}>{langName}</LangName>
       </Button>
     </Link>
   );
