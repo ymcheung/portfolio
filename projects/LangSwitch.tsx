@@ -24,7 +24,6 @@ const LangName = styled('span', {
 });
 
 function LangSwitch() {
-
   const router = useRouter();
   const { i18n } = useTranslation();
 

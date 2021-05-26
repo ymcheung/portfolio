@@ -8,7 +8,6 @@ import HeadMeta from '../utils/HeadMeta';
 
 import { styled, global } from '../stitches.config';
 
-import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
 import Projects from '../composition/Projects';

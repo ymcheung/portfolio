@@ -1,11 +1,11 @@
+import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
 import { Container } from '../../components/layout';
 
-import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
-import React from 'react';
-
 import LangSwitch from '../LangSwitch';
+
+import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
 type itemProps = {
   [x: string]: any;

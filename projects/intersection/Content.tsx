@@ -3,6 +3,8 @@ import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
 import { Container, ListItem, IconList, IconListItem } from '../../components/layout';
 
+import LangSwitch from '../LangSwitch';
+
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
 const FeatureList = styled('ul', {
@@ -57,6 +59,7 @@ export default function Content() {
 
   return(
     <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+      <LangSwitch />
       <Section>
         <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MetaList, MetaItem, MetaItemTitle, MetaItemValue  } from "../../components/meta";
+import { MetaList, MetaItem, MetaItemTitle, MetaItemValue  } from "../meta";
 
 export default function Meta() {
   return(

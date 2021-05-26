@@ -8,7 +8,6 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
 import Meta from '../projects/nuomi/Meta';

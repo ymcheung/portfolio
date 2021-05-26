@@ -2,6 +2,8 @@ import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
 import { Container, IconList, IconListItem } from '../../components/layout';
 
+import LangSwitch from '../LangSwitch';
+
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 import IconAccessibility from './IconAccessibility';
 import IconLock from './IconLock';
@@ -24,6 +26,7 @@ export default function Content() {
 
   return(
     <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+      <LangSwitch />
       <Section>
         <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('experience.title')}} />
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('experience.featured')}} indent sectionend />
