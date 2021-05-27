@@ -3,7 +3,7 @@ module.exports = {
     defaultNS: 'home',
     ns: ['home', 'pie', 'moment', 'nuomi', 'intersection', 'process'],
     defaultLocale: 'en',
-    locales: ['en', 'tw'],
+    locales: ['en', 'zh-Hant-TW'],
     localeDetection: false
   },
 }
