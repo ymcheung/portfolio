@@ -18,6 +18,7 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=moment]': {
     minHeight: '100vh',
+    paddingTop: '$16',
     backgroundColor: '$mtMidnight100'
   }
 });
@@ -57,7 +58,7 @@ export default function ProjectMoment() {
         ogCover="/project/moment/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} ascover="noCover" isgroupend>
+      <Container responsive={{'@m768': 'max640'}} isgroupend>
         <Heading itemName="dark">{pageInfo.name}</Heading>
         <Meta />
       </Container>

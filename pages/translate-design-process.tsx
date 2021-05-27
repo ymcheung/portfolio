@@ -8,7 +8,6 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
 import Meta from '../projects/process/Meta';
@@ -19,6 +18,7 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=intersection]': {
     minHeight: '100vh',
+    paddingTop: '$16',
     backgroundColor: '$shade1600'
   }
 });
@@ -27,7 +27,7 @@ export default function ProjectProcess() {
   const router = useRouter();
 
   const pageInfo = {
-    name: 'Translating “Design Process for Pros”',
+    name: 'Translate “Design Process for Pros”',
     description: 'Retrospect an event gathing 20 designers to translate an e-book. Co-Operated with Cosign.',
     datePublished: '2020-08-29',
     dateModified: '2021-05-24'
@@ -58,7 +58,7 @@ export default function ProjectProcess() {
         ogCover="/project/process/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} ascover="noCover" isgroupend>
+      <Container responsive={{'@m768': 'max640'}} isgroupend>
         <Heading itemName="light">{pageInfo.name}</Heading>
         <Meta />
       </Container>

@@ -18,6 +18,7 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=intersection]': {
     minHeight: '100vh',
+    paddingTop: '$16',
     backgroundColor: '$shade1600'
   }
 });
@@ -57,7 +58,7 @@ export default function ProjectIntersection() {
         ogCover="/project/intersection/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} ascover="noCover" isgroupend>
+      <Container responsive={{'@m768': 'max640'}} isgroupend>
         <Heading itemName="light">{pageInfo.name}</Heading>
         <Meta />
       </Container>

@@ -18,6 +18,7 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=pie]': {
     minHeight: '100vh',
+    paddingTop: '520px',
     backgroundColor: '$pie0'
   }
 });
@@ -59,7 +60,6 @@ export default function ProjectPie() {
       />
       <Container
         responsive={{'@m768': 'max640'}}
-        ascover={{ '@initial': 'mobile', '@m768': 'tablet' }}
         isgroupend
       >
         <Heading itemName="dark">{pageInfo.name}</Heading>

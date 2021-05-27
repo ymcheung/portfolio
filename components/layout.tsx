@@ -16,25 +16,6 @@ export const Container = styled('div', {
         maxWidth: '1168px'
       }
     },
-    ashomeheader: {
-      mobile: {
-        marginTop: '$8'
-      },
-      tablet: {
-        marginTop: '$16'
-      }
-    },
-    ascover: {
-      noCover: {
-        marginTop: '$24'
-      },
-      mobile: {
-        marginTop: '520px'
-      },
-      tablet: {
-        marginTop: '640px'
-      }
-    },
     hassibling: {
       true: {
         marginBottom: '$18'

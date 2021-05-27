@@ -18,7 +18,8 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=home]': {
     minHeight: '100vh',
-    backgroundColor: '$shade1600'
+    paddingTop: '$16',
+    backgroundColor: '$shade1600',
   }
 });
 
@@ -91,7 +92,7 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,600;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet" />
       </Head>
       <HeadMeta />
-      <Container as="header" responsive={{'@m992': 'max960', '@m1200': 'max1168'}} ashomeheader={{ '@initial': 'mobile', '@m768': 'tablet' }} hassibling>
+      <Container as="header" responsive={{'@m992': 'max960', '@m1200': 'max1168'}} hassibling>
         <Heading as="h1" nametag="home">{AUTHOR}</Heading>
         <NameDescription>{DESCRIPTION}</NameDescription>
       </Container>

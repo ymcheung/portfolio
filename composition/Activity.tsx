@@ -27,7 +27,7 @@ function Activity() {
           <Link href="/translate-design-process" passHref>
             <HomeItemLink>
               <Heading as="h2" position="homeItemName">
-                Translating “Design Process for Pros”
+                Translate “Design Process for Pros”
               </Heading>
               <HomeItemDescription>
                 <Verb>Retrospect</Verb> an event gathing 20 designers to translate an e-book.
