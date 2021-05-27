@@ -75,8 +75,10 @@ export default function Content() {
               4.7
               <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
             </ContentTitle>
-            <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('worth.position')}} />
-            <Paragraph as="div" postmark scheme="light" dangerouslySetInnerHTML={{__html: t('worth.asof')}} sectionend />
+            <div>
+              <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('worth.position')}} />
+              <Paragraph as="div" postmark scheme="light" dangerouslySetInnerHTML={{__html: t('worth.asof')}} sectionend />
+            </div>
           </FeatureItem>
         </FeatureList>
       </Section>
@@ -89,7 +91,10 @@ export default function Content() {
           </IconListItem>
           <IconListItem prefixwidth="48" purpose="noTitle">
             <div><RetroIcon src="/projects/process/bubbleObstacle.svg" alt={t('retro.obstacle.alt')} /></div>
-            <IconListDescription scheme="light" sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.obstacle.description')}} />
+            <div>
+              <IconListDescription scheme="light" sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.obstacle.description')}} />
+              <Paragraph as="div" postmark scheme="light" dangerouslySetInnerHTML={{__html: t('retro.obstacle.by')}} sectionend />
+            </div>
           </IconListItem>
         </IconList>
       </Section>
