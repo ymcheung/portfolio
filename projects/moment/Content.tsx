@@ -36,7 +36,8 @@ const Iteration = styled('h2', {
   },
 
   '& .number': {
-    fontSize: '$24'
+    fontSize: '$24',
+    lineHeight: '24px'
   }
 });
 
