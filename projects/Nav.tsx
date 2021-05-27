@@ -76,7 +76,7 @@ interface NavProps {
 
 function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, scheme }: NavProps) {
   return(
-    <Container as="nav" responsive={{'@m768': 'max640'}} hasSibling>
+    <Container as="nav" responsive={{'@m768': 'max640'}} hassibling>
       <NavList responsive={{'@m992': 'desktop'}}>
         {hasPrev &&
           <NavItem position="prev">
