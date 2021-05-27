@@ -8,12 +8,11 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { globalStyles } from '../utils/globalStyles';
 import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
 import Meta from '../projects/moment/Meta';
 import Content from '../projects/moment/Content';
-import Nav from '../components/Nav';
+import Nav from '../projects/Nav';
 import Footer from '../components/Footer';
 
 const pageBody = global({
@@ -36,7 +35,6 @@ export default function ProjectMoment() {
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'moment');
   });
-  globalStyles();
   pageBody();
 
   const schema = {

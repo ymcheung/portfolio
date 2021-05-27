@@ -2,6 +2,9 @@ import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
 
 import { Container, ListItem, IconList, IconListItem } from '../../components/layout';
+
+import LangSwitch from '../LangSwitch';
+
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
 const FeatureList = styled('ul', {
@@ -60,6 +63,7 @@ export default function Content() {
 
   return(
     <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+      <LangSwitch scheme="light" />
       <Section>
         <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>
@@ -71,8 +75,10 @@ export default function Content() {
               4.7
               <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
             </ContentTitle>
-            <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('worth.position')}} />
-            <Paragraph as="div" postmark scheme="light" dangerouslySetInnerHTML={{__html: t('worth.asof')}} sectionend />
+            <div>
+              <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('worth.position')}} />
+              <Paragraph as="div" postmark scheme="light" dangerouslySetInnerHTML={{__html: t('worth.asof')}} sectionend />
+            </div>
           </FeatureItem>
         </FeatureList>
       </Section>
@@ -85,7 +91,10 @@ export default function Content() {
           </IconListItem>
           <IconListItem prefixwidth="48" purpose="noTitle">
             <div><RetroIcon src="/projects/process/bubbleObstacle.svg" alt={t('retro.obstacle.alt')} /></div>
-            <IconListDescription scheme="light" sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.obstacle.description')}} />
+            <div>
+              <IconListDescription scheme="light" sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.obstacle.description')}} />
+              <Paragraph as="div" postmark scheme="light" dangerouslySetInnerHTML={{__html: t('retro.obstacle.by')}} sectionend />
+            </div>
           </IconListItem>
         </IconList>
       </Section>

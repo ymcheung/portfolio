@@ -7,6 +7,8 @@ import IconTemplate from './IconTemplate';
 import IconCMS from './IconCMS';
 import { Container, ListItem, IconList, IconListItem } from '../../components/layout';
 
+import LangSwitch from '../LangSwitch';
+
 import { ContentTitle, Section, Paragraph, ContentList, ContentListItem } from '../../components/contentStyles';
 
 const BubbleSearch = styled('div', {
@@ -93,6 +95,7 @@ export default function Content() {
 
   return(
     <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+      <LangSwitch scheme="dark" />
       <Section>
         <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('intro.title')}} />
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('intro.description')}} indent sectionend />

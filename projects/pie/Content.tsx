@@ -1,9 +1,11 @@
+import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
 import { Container } from '../../components/layout';
 
+import LangSwitch from '../LangSwitch';
+
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
-import React from 'react';
 
 type itemProps = {
   [x: string]: any;
@@ -67,6 +69,7 @@ export default function Content() {
 
   return(
     <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+      <LangSwitch scheme="dark" />
       <Section>
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>
