@@ -25,6 +25,9 @@ export const Container = styled('div', {
       }
     },
     ascover: {
+      noCover: {
+        marginTop: '$24'
+      },
       mobile: {
         marginTop: '520px'
       },

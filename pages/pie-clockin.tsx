@@ -57,7 +57,11 @@ export default function ProjectPie() {
         ogCover="/project/pie/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} ascover={{ '@initial': 'mobile', '@m768': 'tablet' }} isgroupend>
+      <Container
+        responsive={{'@m768': 'max640'}}
+        ascover={{ '@initial': 'mobile', '@m768': 'tablet' }}
+        isgroupend
+      >
         <Heading itemName="dark">{pageInfo.name}</Heading>
         <Meta />
       </Container>
