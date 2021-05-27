@@ -5,7 +5,8 @@ import { styled } from '../stitches.config';
 
 import IconLangSwitch from '../elements/IconLangSwitch';
 
-const Button = styled('button', {
+const Button = styled('a', {
+  display: 'inline-block',
   margin: '0 0 12px -8px',
   padding: '$8',
   background: 'transparent',
@@ -53,8 +54,8 @@ function LangSwitch({ scheme }) {
   const langName = i18n.language === 'en' ? '中文' : 'English';
 
   return(
-    <Link href={router.pathname} locale={router.locale === 'en' ? 'tw' : 'en'}>
-      <Button type="button" scheme={scheme} data-splitbee-event="切換語言">
+    <Link href={router.pathname} locale={router.locale === 'en' ? 'tw' : 'en'} passHref>
+      <Button scheme={scheme} data-splitbee-event="切換語言">
         <IconLangSwitch scheme={scheme} />
         <LangName scheme={scheme}>{langName}</LangName>
       </Button>
