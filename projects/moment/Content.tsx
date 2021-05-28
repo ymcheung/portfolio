@@ -95,7 +95,7 @@ export default function Content() {
   const isItalic = i18n.language === 'en';
 
   return(
-    <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+    <article>
       <LangSwitch scheme="dark" />
       <Section>
         <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('intro.title')}} />
@@ -192,6 +192,6 @@ export default function Content() {
       <Section>
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('ending')}} indent />
       </Section>
-    </Container>
+    </article>
   );
 }

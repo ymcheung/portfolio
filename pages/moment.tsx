@@ -58,11 +58,11 @@ export default function ProjectMoment() {
         ogCover="/project/moment/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} isgroupend>
+      <Container as="main" responsive={{'@m768': 'max640'}} asarticle isgroupend>
         <Heading itemName="dark">{pageInfo.name}</Heading>
         <Meta />
+        <Content />
       </Container>
-      <Content />
       <Nav
         scheme="dark"
         hasNext="Nuomi&rsquo;s Portfolio"

@@ -58,11 +58,11 @@ export default function ProjectProcess() {
         ogCover="/project/process/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} isgroupend>
+      <Container responsive={{'@m768': 'max640'}} asarticle isgroupend>
         <Heading itemName="light">{pageInfo.name}</Heading>
         <Meta />
+        <Content />
       </Container>
-      <Content />
       <Nav
         hasPrev="Intersection"
         prevSlug="intersection"

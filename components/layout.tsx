@@ -16,6 +16,12 @@ export const Container = styled('div', {
         maxWidth: '1168px'
       }
     },
+    asarticle: {
+      true: {
+        position: 'relative',
+        zIndex: 2
+      }
+    },
     hassibling: {
       true: {
         marginBottom: '$18'

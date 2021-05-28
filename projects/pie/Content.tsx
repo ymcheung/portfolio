@@ -68,7 +68,7 @@ export default function Content() {
   const { t } = useTranslation('pie');
 
   return(
-    <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+    <article>
       <LangSwitch scheme="dark" />
       <Section>
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
@@ -119,6 +119,6 @@ export default function Content() {
           </React.Fragment>
         ))}
       </Section>
-    </Container>
+    </article>
   );
 }
