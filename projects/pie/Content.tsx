@@ -49,7 +49,7 @@ const GalleryFigure = styled('figure', {
     bottom: 0,
     left: 0,
     zIndex: 0,
-    content: '',
+    content: `''`,
     background: 'linear-gradient(to bottom, transparent 0%, $shadeMockup50 50%, $shadeMockup75 75%, transparent 100%) top center / cover no-repeat',
   }
 });
@@ -110,7 +110,7 @@ export default function Content() {
           </React.Fragment>
         ))}
       </Section>
-      <Section>
+      <Section isgroupend>
         <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('note.title')}} />
         {t<string, itemProps>('note.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
           <React.Fragment key={`note-${index}`}>

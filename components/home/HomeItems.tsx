@@ -6,7 +6,7 @@ export const HomeItemsLayout = styled('section', {
   marginX: '-16px',
 
   variants: {
-    forProjects: {
+    forprojects: {
       mobile: {
         grid: 'auto / auto-flow 304px',
         columnGap: '$8',
@@ -18,7 +18,7 @@ export const HomeItemsLayout = styled('section', {
         grid: 'auto / repeat(3, 1fr)'
       }
     },
-    forActivity: {
+    foractivity: {
       mobile: {
         grid: 'auto / 100%',
         rowGap: '$18',
@@ -53,7 +53,7 @@ export const HomeItemLink = styled('a', {
   textDecoration: 'none',
 
   variants: {
-    forProjects: {
+    forprojects: {
       true: {
         paddingX: '$8'
       }

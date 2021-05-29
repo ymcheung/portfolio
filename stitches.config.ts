@@ -13,7 +13,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       shade700: 'hsl(162,2%,48%)',
       shade600: 'hsl(162,2%,40%)',
       shade300: 'hsl(162,2%,24%)',
-      shade0: 'hsl(162,2%,6%)',
+      shade0: '162,2%,6%',
 
       shadeMockup25: 'hsla(162,2%,24%,0.25)',
       shadeMockup50: 'hsla(162,2%,24%,0.5)',
@@ -24,6 +24,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       pie400: 'hsl(240,62%,52%)',
       pie100: 'hsl(240,62%,18%)',
       pie0: 'hsl(240,62%,5%)',
+      pie0Alpha92: 'hsla(240,62%,5%,0.92)',
 
       mtDawn: 'hsl(16,68%,67%)',
       mtMidnight700: 'hsl(225,26%,56%)',
@@ -70,23 +71,23 @@ export const { css, styled, global, theme, getCssString } = createCss({
   utils: {
     marginX: (config) => (value) => ({
       marginLeft: value,
-      marginRight: value,
+      marginRight: value
     }),
     marginY: (config) => (value) => ({
       marginTop: value,
-      marginBottom: value,
+      marginBottom: value
     }),
     paddingX: (config) => (value) => ({
       paddingLeft: value,
-      paddingRight: value,
+      paddingRight: value
     }),
     paddingY: (config) => (value) => ({
       paddingTop: value,
-      paddingBottom: value,
+      paddingBottom: value
     }),
     size: (config) => (value) => ({
       width: value,
-      height: value,
+      height: value
     })
   },
   media: {

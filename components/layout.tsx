@@ -19,7 +19,27 @@ export const Container = styled('div', {
     asarticle: {
       true: {
         position: 'relative',
-        zIndex: 2
+        zIndex: 2,
+        paddingBottom: '64px',
+
+        '&::before': {
+          width: '100%',
+          height: '36px',
+          position: 'absolute',
+          top: '-36px',
+          right: 0,
+          left: 0,
+          content: `''`
+        }  
+      }
+    },
+    articlebackground: {
+      pie: {
+        backgroundColor: '$pie0Alpha92',
+
+        '&::before': {
+          backgroundImage: 'linear-gradient(to bottom, transparent 0%, $pie0 100%)'
+        }
       }
     },
     hassibling: {

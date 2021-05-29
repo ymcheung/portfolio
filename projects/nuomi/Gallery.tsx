@@ -43,7 +43,7 @@ const GalleryItem = styled('li', {
     bottom: 0,
     left: 0,
     zIndex: 0,
-    content: '',
+    content: `''`,
     backgroundImage: 'linear-gradient(to bottom, transparent 0%, $shadeMockup50 50%, transparent 100%)'
   },
 

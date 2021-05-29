@@ -9,7 +9,7 @@ export const Heading = styled('h2', {
       home: {
         marginBottom: 0,
         marginLeft: '-2px',
-        color: '$shade0',
+        color: 'hsl($shade0)',
         fontSize: '2.8rem',
         fontWeight: 800,
         fontStyle: 'italic'
@@ -26,7 +26,7 @@ export const Heading = styled('h2', {
         color: '$shade1500'
       },
       light: {
-        color: '$shade0'
+        color: 'hsl($shade0)'
       }
     },
     position: {
@@ -41,7 +41,7 @@ export const Heading = styled('h2', {
       },
       homeItemName: {
         marginBottom: '$4',
-        color: '$shade0',
+        color: 'hsl($shade0)',
         fontSize: '$18',
         fontWeight: 600,
         lineHeight: '24px'

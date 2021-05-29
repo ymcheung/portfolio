@@ -60,12 +60,12 @@ export default function ProjectPie() {
         canonical={router.pathname}
       />
       <Cover />
-      <Container as="main" responsive={{'@m768': 'max640'}} asarticle isgroupend>
+      <Container as="main" responsive={{'@m768': 'max640'}} asarticle articlebackground="pie">
         <Heading itemName="dark">{pageInfo.name}</Heading>
         <Meta />
         <Content />
       </Container>
-      <Nav scheme="dark" hasNext="The Moment" nextSlug="moment" nextBg="moment" />
+      <Nav scheme="dark" hasNext="The Moment" nextSlug="moment" nextBg="moment" project="pie" />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="dark" />
     </>
   );
