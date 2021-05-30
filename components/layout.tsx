@@ -38,7 +38,26 @@ export const Container = styled('div', {
         backgroundColor: '$pie0Alpha92',
 
         '&::before': {
-          backgroundImage: 'linear-gradient(to bottom, transparent 0%, $pie0 100%)'
+          backgroundImage: `
+            linear-gradient(
+              to bottom,
+              hsla($pie0, 0) 0%,
+              hsla($pie0, 0.012) 8.1%,
+              hsla($pie0, 0.045) 15.5%,
+              hsla($pie0, 0.096) 22.5%,
+              hsla($pie0, 0.161) 29%,
+              hsla($pie0, 0.239) 35.3%,
+              hsla($pie0, 0.324) 41.2%,
+              hsla($pie0, 0.414) 47.1%,
+              hsla($pie0, 0.506) 52.9%,
+              hsla($pie0, 0.596) 58.8%,
+              hsla($pie0, 0.681) 64.7%,
+              hsla($pie0, 0.759) 71%,
+              hsla($pie0, 0.824) 77.5%,
+              hsla($pie0, 0.875) 84.5%,
+              hsla($pie0, 0.908) 91.9%,
+              hsla($pie0, 0.92) 100%
+            )`
         }
       }
     },

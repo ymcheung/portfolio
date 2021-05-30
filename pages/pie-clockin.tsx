@@ -20,7 +20,7 @@ const pageBody = global({
   'body[data-body-style=pie]': {
     minHeight: '100vh',
     paddingTop: '560px',
-    backgroundColor: '$pie0'
+    backgroundColor: 'hsl($pie0)'
   }
 });
 

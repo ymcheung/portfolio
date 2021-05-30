@@ -23,7 +23,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       pie700: 'hsl(240,62%,64%)',
       pie400: 'hsl(240,62%,52%)',
       pie100: 'hsl(240,62%,18%)',
-      pie0: 'hsl(240,62%,5%)',
+      pie0: '240,62%,5%',
       pie0Alpha92: 'hsla(240,62%,5%,0.92)',
 
       mtDawn: 'hsl(16,68%,67%)',
