@@ -88,6 +88,13 @@ export const { css, styled, global, theme, getCssString } = createCss({
     size: (config) => (value) => ({
       width: value,
       height: value
+    }),
+    fullAbsolute: (config) => () => ({
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0
     })
   },
   media: {

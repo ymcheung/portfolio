@@ -43,12 +43,7 @@ const GalleryFigure = styled('figure', {
   '&::before': {
     width: '100%',
     height: '464px',
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    zIndex: 0,
+    fullAbsolute: '',
     content: `''`,
     background: 'linear-gradient(to bottom, transparent 0%, $shadeMockup50 50%, $shadeMockup75 75%, transparent 100%) top center / cover no-repeat',
   }

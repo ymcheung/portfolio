@@ -12,12 +12,21 @@ const Device = styled('figure', {
   width: '288px',
   position: 'relative',
   margin: '0 auto',
-  padding: '0 $16'
+  padding: '0 $16',
+  
+  '&::before': {
+    fullAbsolute: '',
+    zIndex: 0,
+    content: `''`,
+    backgroundImage: 'linear-gradient(to bottom, transparent 0%, $shadeMockup50 50%, transparent 100%)'
+  }
 });
 
 const ImageMobile = styled('img', {
   width: '100%',
-  borderRadius: '12px'
+  position: 'relative',
+  zIndex: 1,
+  borderRadius: '12px',
 });
 
 export default function Cover() {
