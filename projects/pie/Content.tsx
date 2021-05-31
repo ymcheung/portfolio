@@ -78,7 +78,7 @@ export default function Content() {
         <Gallery responsive={{'@m992': 'desktop'}}>
           <GalleryItem>
             <GalleryFigure>
-              <GalleryCover src="/projects/pie/gallery-full.jpg" alt={t('questions.flat.question')} />
+              <GalleryCover src="/projects/pie/gallery-full.jpg" alt={t('questions.flat.question')} loading="lazy" />
               <figcaption>
                 <ContentTitle as="strong" purpose="paragraph" scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.flat.title')}} />
                 <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.flat.question')}} sectionend />
@@ -88,7 +88,7 @@ export default function Content() {
           <GalleryItem>
             <GalleryFigure>
               <figcaption>
-              <GalleryCover src="/projects/pie/gallery-statistics.jpg" alt={t('questions.back.question')} />
+              <GalleryCover src="/projects/pie/gallery-statistics.jpg" alt={t('questions.back.question')} loading="lazy" />
                 <ContentTitle as="strong" purpose="paragraph" scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.back.title')}} />
                 <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.back.question')}} sectionend />
               </figcaption>

@@ -58,7 +58,7 @@ export default function ProjectProcess() {
         ogCover="/project/process/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} asarticle isgroupend>
+      <Container responsive={{'@m768': 'max640'}} asarticle>
         <Heading itemName="light">{pageInfo.name}</Heading>
         <Meta />
         <Content />

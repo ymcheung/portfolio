@@ -58,7 +58,7 @@ export default function ProjectIntersection() {
         ogCover="/project/intersection/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container as="main" responsive={{'@m768': 'max640'}} isgroupend>
+      <Container as="main" responsive={{'@m768': 'max640'}} asarticle>
         <Heading itemName="light">{pageInfo.name}</Heading>
         <Meta />
         <Content />

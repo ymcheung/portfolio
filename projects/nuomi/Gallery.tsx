@@ -83,13 +83,13 @@ function Gallery({ galleryItemAlt }: GalleryProps) {
   return(
     <GalleryList responsive={{ '@m768': 'tablet' }}>
       <GalleryItem item={{ '@m768': 'all' }} responsive={{ '@m768': 'tablet' }}>
-        <NuomiScreenshotImg src={screenshotNuomiAll} alt={galleryItemAlt.all} />
+        <NuomiScreenshotImg src={screenshotNuomiAll} alt={galleryItemAlt.all} loading="lazy" />
       </GalleryItem>
       <GalleryItem item={{ '@m768': 'detail' }} responsive={{ '@m768': 'tablet' }}>
-        <NuomiScreenshotImg src={screenshotDetail} alt={galleryItemAlt.detail} />
+        <NuomiScreenshotImg src={screenshotDetail} alt={galleryItemAlt.detail} loading="lazy" />
       </GalleryItem>
       <GalleryItem item={{ '@m768': 'course' }} responsive={{ '@m768': 'tablet' }}>
-        <NuomiScreenshotImg src={screenshotCourse} alt={galleryItemAlt.course} />
+        <NuomiScreenshotImg src={screenshotCourse} alt={galleryItemAlt.course} loading="lazy" />
       </GalleryItem>
     </GalleryList>
   );

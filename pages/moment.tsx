@@ -58,7 +58,7 @@ export default function ProjectMoment() {
         ogCover="/project/moment/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container as="main" responsive={{'@m768': 'max640'}} asarticle isgroupend>
+      <Container as="main" responsive={{'@m768': 'max640'}} asarticle>
         <Heading itemName="dark">{pageInfo.name}</Heading>
         <Meta />
         <Content />
