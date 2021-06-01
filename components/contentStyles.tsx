@@ -49,6 +49,11 @@ export const ContentTitle = styled('h2', {
       light: {
         color: '$shade600'
       }
+    },
+    nounderline: {
+      true: {
+        textDecoration: 'none'
+      }
     }
   }
 });

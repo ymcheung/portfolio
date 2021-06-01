@@ -9,18 +9,15 @@ const Button = styled('a', {
   display: 'inline-block',
   margin: '0 0 12px -8px',
   padding: '$8',
-  background: 'transparent',
-  borderWidth: '2px',
-  borderStyle: 'solid',
   borderRadius: '4px',
 
   variants: {
     scheme: {
       dark: {
-        borderColor: '$shade300'
+        background: '$shade100'
       },
       light: {
-        borderColor: '$shade1500'
+        background: '$shade1500'
       }
     }
   }

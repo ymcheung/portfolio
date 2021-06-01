@@ -19,7 +19,7 @@ const pageBody = global({
   'body[data-body-style=nuomi]': {
     minHeight: '100vh',
     paddingTop: '520px',
-    backgroundColor: '$nuomiBlack100'
+    backgroundColor: '$nuomiBlack0'
   }
 });
 
