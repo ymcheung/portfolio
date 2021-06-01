@@ -26,10 +26,10 @@ const NavList = styled('ul', {
     },
     project: {
       pie: {
-        backgroundColor: '$pie0Alpha92'
+        backgroundColor: 'hsla($pie0, 0.92)'
       },
-      intersection: {
-
+      nuomi: {
+        backgroundColor: 'hsla($nuomiBlack0, 0.92)'
       }
     }
   }
@@ -68,7 +68,7 @@ const NavItemLink = styled('a', {
         color: '$shade1200'
       },
       light: {
-        color: '$shade300'
+        color: 'hsl($shade300)'
       }
     }
   }

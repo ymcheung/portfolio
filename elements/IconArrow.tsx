@@ -15,7 +15,7 @@ const Circle = styled('circle', {
   variants: {
     background: {
       dark: {
-        fill: '$shade300'
+        fill: 'hsl($shade300)'
       },
       light: {
         fill: '$shade1500'

@@ -45,7 +45,7 @@ const GalleryFigure = styled('figure', {
     height: '464px',
     fullAbsolute: '',
     content: `''`,
-    background: 'linear-gradient(to bottom, transparent 0%, $shadeMockup50 50%, $shadeMockup75 75%, transparent 100%) top center / cover no-repeat',
+    background: 'linear-gradient(to bottom, transparent 0%, hsla($shade300, 0.5) 50%, hsla($shade300, 0.75) 75%, transparent 100%) top center / cover no-repeat',
   }
 });
 

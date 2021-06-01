@@ -104,7 +104,7 @@ export const Paragraph = styled('p', {
         color: '$shade600',
 
         '& .paragraph-link': {
-          color: '$shade300',
+          color: 'hsl($shade300)',
         }
       }
     }

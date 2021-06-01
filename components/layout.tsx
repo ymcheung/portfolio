@@ -35,7 +35,7 @@ export const Container = styled('div', {
     },
     articlebackground: {
       pie: {
-        backgroundColor: '$pie0Alpha92',
+        backgroundColor: 'hsla($pie0, 0.92)',
 
         '&::before': {
           backgroundImage: `
@@ -57,6 +57,32 @@ export const Container = styled('div', {
               hsla($pie0, 0.875) 84.5%,
               hsla($pie0, 0.908) 91.9%,
               hsla($pie0, 0.92) 100%
+            )`
+        }
+      },
+      nuomi: {
+        backgroundColor: 'hsla($nuomiBlack0, 0.92)',
+
+        '&::before': {
+          backgroundImage: `
+            linear-gradient(
+              to bottom,
+              hsla($nuomiBlack0, 0) 0%,
+              hsla($nuomiBlack0, 0.012) 8.1%,
+              hsla($nuomiBlack0, 0.045) 15.5%,
+              hsla($nuomiBlack0, 0.096) 22.5%,
+              hsla($nuomiBlack0, 0.161) 29%,
+              hsla($nuomiBlack0, 0.239) 35.3%,
+              hsla($nuomiBlack0, 0.324) 41.2%,
+              hsla($nuomiBlack0, 0.414) 47.1%,
+              hsla($nuomiBlack0, 0.506) 52.9%,
+              hsla($nuomiBlack0, 0.596) 58.8%,
+              hsla($nuomiBlack0, 0.681) 64.7%,
+              hsla($nuomiBlack0, 0.759) 71%,
+              hsla($nuomiBlack0, 0.824) 77.5%,
+              hsla($nuomiBlack0, 0.875) 84.5%,
+              hsla($nuomiBlack0, 0.908) 91.9%,
+              hsla($nuomiBlack0, 0.92) 100%
             )`
         }
       }

@@ -12,20 +12,15 @@ export const { css, styled, global, theme, getCssString } = createCss({
       shade800: 'hsl(162,2%,56%)',
       shade700: 'hsl(162,2%,48%)',
       shade600: 'hsl(162,2%,40%)',
-      shade300: 'hsl(162,2%,24%)',
+      shade300: '162,2%,24%',
       shade100: 'hsl(162,2%,10%)',
       shade0: '162,2%,6%',
-
-      shadeMockup25: 'hsla(162,2%,24%,0.25)',
-      shadeMockup50: 'hsla(162,2%,24%,0.5)',
-      shadeMockup75: 'hsla(162,2%,24%,0.75)',
 
       pie800: 'hsl(240,62%,72%)',
       pie700: 'hsl(240,62%,64%)',
       pie400: 'hsl(240,62%,52%)',
       pie100: 'hsl(240,62%,18%)',
       pie0: '240,62%,5%',
-      pie0Alpha92: 'hsla(240,62%,5%,0.92)',
 
       mtDawn: 'hsl(16,68%,67%)',
       mtMidnight700: 'hsl(225,26%,56%)',
@@ -36,7 +31,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
 
       nuomiBlack300: 'hsl(180,1%,20%)',
       nuomiBlack100: 'hsl(180,1%,12%)',
-      nuomiBlack0: 'hsl(180,1%,6%)',
+      nuomiBlack0: '180,1%,6%',
       nuomiGold1200: 'hsl(32,55%,54%)',
       nuomiGold400: 'hsl(32,55%,20%)',
 

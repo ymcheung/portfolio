@@ -14,7 +14,7 @@ const Separate = styled('hr', {
   variants: {
     scheme: {
       dark: {
-        borderBottomColor: '$shade300'
+        borderBottomColor: 'hsl($shade300)'
       },
       light: {
         borderBottomColor: '$shade1500'

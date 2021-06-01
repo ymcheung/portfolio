@@ -7,14 +7,13 @@ const ImageMobile = styled('img', {
   width: '100%',
   position: 'relative',
   zIndex: 1,
-  borderRadius: '12px',
 });
 
 const ImageTablet = styled('img', {
   position: 'absolute',
   width: '256px',
   zIndex: 1,
-  borderRadius: '12px',
+  borderRadius: '4px',
 
   variants: {
     placement: {
@@ -35,7 +34,7 @@ export default function Cover() {
     <Wrap responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
       <Device responsive={{ '@initial': 'mobile' }} dualmobile={{ '@m768': 'tablet' }}>
         {screenMobile &&
-          <ImageMobile src="/projects/pie/cover-mobile.jpg" alt="" />
+          <ImageMobile src="/projects/nuomi/cover-mobile.jpg" alt="" />
         }
         {screenTablet &&
           <>

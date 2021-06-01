@@ -10,6 +10,7 @@ import { global } from '../stitches.config';
 
 import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
+import Cover from '../projects/nuomi/Cover';
 import Meta from '../projects/nuomi/Meta';
 import Content from '../projects/nuomi/Content';
 import Nav from '../projects/Nav';
@@ -18,8 +19,8 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=nuomi]': {
     minHeight: '100vh',
-    paddingTop: '520px',
-    backgroundColor: '$nuomiBlack0'
+    paddingTop: '560px',
+    backgroundColor: 'hsl($nuomiBlack0)'
   }
 });
 
@@ -58,7 +59,8 @@ export default function ProjectNuomi() {
         ogCover="/project/nuomi/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container as="main" responsive={{'@m768': 'max640'}} asarticle>
+      <Cover />
+      <Container as="main" responsive={{'@m768': 'max640'}} asarticle articlebackground="nuomi">
         <Heading itemName="dark">{pageInfo.name}</Heading>
         <Meta />
         <Content />
@@ -71,6 +73,7 @@ export default function ProjectNuomi() {
         hasPrev="The Moment"
         prevSlug="moment"
         prevBg="moment"
+        project="nuomi"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="dark" />
     </>

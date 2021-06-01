@@ -9,7 +9,7 @@ const Circle = styled('circle', {
   variants: {
     scheme: {
       dark: {
-        fill: '$shade300'
+        fill: 'hsl($shade300)'
       },
       light: {
         fill: '$shade1200'
