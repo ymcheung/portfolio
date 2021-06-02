@@ -60,13 +60,13 @@ const WhatFigure = styled('figure', {
 });
 
 const WhatFigureCover = styled('div', {
-  color: '$shade1600',
+  color: 'hsl($shade1600)',
   fontSize: '$24',
   lineHeight: '48px'
 });
 
 const WhatFigcaption = styled('div', {
-  color: '$shade1200',
+  color: 'hsl($shade1200)',
   fontFamily: '$default',
   fontSize: '$16',
   lineHeight: '20px'

@@ -14,10 +14,32 @@ const Button = styled('a', {
   variants: {
     scheme: {
       dark: {
-        background: '$shade100'
+        background: '$shade100',
+        transition: 'background-color $easeOut',
+
+        '&:active, &:hover': {
+          background: 'hsl($shade300)',
+          transition: 'background-color $easeIn'
+        }
       },
       light: {
-        background: '$shade1500'
+        background: '$shade1500',
+        transition: 'background-color $easeOut',
+
+        '&:active, &:hover': {
+          background: 'hsla($shade1200, 0.5)',
+          transition: 'background-color $easeIn',
+
+          '& circle': {
+            fill: 'hsl($shade1200)',
+            transition: 'fill $easeIn'
+          },
+
+          '& path': {
+            fill: 'hsla($shade1600,0.75)',
+            transition: 'fill $easeIn'
+          }
+        }
       }
     }
   }
@@ -27,7 +49,7 @@ const LangName = styled('span', {
   display: 'inline-block',
   paddingLeft: '4px',
   verticalAlign: 'bottom',
-  color: '$shade1200',
+  color: 'hsl($shade1200)',
   fontFamily: '$default',
   fontSize: '$14',
   lineHeight: '20px',
@@ -35,10 +57,10 @@ const LangName = styled('span', {
   variants: {
     scheme: {
       dark: {
-        color: '$shade1200'
+        color: 'hsl($shade1200)'
       },
       light: {
-        color: '$shade600'
+        color: 'hsl($shade600)'
       }
     }
   }

@@ -5,13 +5,13 @@ export const { css, styled, global, theme, getCssString } = createCss({
     colors: {
       laurel: 'hsl(162,57%,62%)',
 
-      shade1600: 'hsl(162,2%,99%)',
+      shade1600: '162,2%,99%',
       shade1500: 'hsl(162,2%,92%)',
-      shade1200: 'hsl(162,2%,72%)',
+      shade1200: '162,2%,72%',
       shade1000: 'hsl(162,2%,64%)',
       shade800: 'hsl(162,2%,56%)',
       shade700: 'hsl(162,2%,48%)',
-      shade600: 'hsl(162,2%,40%)',
+      shade600: '162,2%,40%',
       shade300: '162,2%,24%',
       shade100: 'hsl(162,2%,10%)',
       shade0: '162,2%,6%',
@@ -65,6 +65,10 @@ export const { css, styled, global, theme, getCssString } = createCss({
       slab: '\'Crete Round\', serif',
       mono: '\'Inconsolata\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', monospace'
     },
+    transitions: {
+      easeIn: '0.16s ease-in',
+      easeOut: '0.16s ease-out'
+    }
   },
   utils: {
     marginX: (config) => (value) => ({

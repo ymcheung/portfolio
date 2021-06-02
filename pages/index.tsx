@@ -19,7 +19,7 @@ const pageBody = global({
   'body[data-body-style=home]': {
     minHeight: '100vh',
     paddingTop: '$16',
-    backgroundColor: '$shade1600',
+    backgroundColor: 'hsl($shade1600)',
   }
 });
 

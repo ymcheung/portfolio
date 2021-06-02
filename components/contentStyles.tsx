@@ -47,7 +47,7 @@ export const ContentTitle = styled('h2', {
         color: '$shade1500'
       },
       light: {
-        color: '$shade600'
+        color: 'hsl($shade600)'
       }
     },
     nounderline: {
@@ -94,14 +94,14 @@ export const Paragraph = styled('p', {
     },
     scheme: {
       dark: {
-        color: '$shade1200',
+        color: 'hsl($shade1200)',
 
         '& .paragraph-link': {
           color: '$shade1500',
         }
       },
       light: {
-        color: '$shade600',
+        color: 'hsl($shade600)',
 
         '& .paragraph-link': {
           color: 'hsl($shade300)',
@@ -117,7 +117,7 @@ export const ContentList = styled('ul', {
 });
 
 export const ContentListItem = styled(ListItem, {
-  color: '$shade1200',
+  color: 'hsl($shade1200)',
   fontFamily: '$default',
   fontSize: '$16',
   lineHeight: '24px'
