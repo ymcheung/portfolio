@@ -11,6 +11,8 @@ const NavList = styled('ul', {
          "prev" auto
          "home" auto / auto`,
   rowGap: '$12',
+  position: 'relative',
+  zIndex: 2,
   margin: 0,
   padding: 0,
 
@@ -20,6 +22,14 @@ const NavList = styled('ul', {
         grid: '"home prev next" auto / 120px 1fr 1fr',
         rowGap: 'unset',
         marginLeft: '-120px'
+      }
+    },
+    project: {
+      pie: {
+        backgroundColor: 'hsla($pie0, 0.92)'
+      },
+      nuomi: {
+        backgroundColor: 'hsla($nuomiBlack0, 0.92)'
       }
     }
   }
@@ -58,13 +68,14 @@ const NavItemLink = styled('a', {
         color: '$shade1200'
       },
       light: {
-        color: '$shade300'
+        color: 'hsl($shade300)'
       }
     }
   }
 });
 
 interface NavProps {
+  project?: {};
   hasPrev?: string;
   prevSlug?: string;
   prevBg?: string;
@@ -74,10 +85,10 @@ interface NavProps {
   scheme?: 'dark' | 'light';
 }
 
-function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, scheme }: NavProps) {
+function Nav({ project, hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, scheme }: NavProps) {
   return(
-    <Container as="nav" responsive={{'@m768': 'max640'}} hasSibling>
-      <NavList responsive={{'@m992': 'desktop'}}>
+    <Container as="nav" responsive={{'@m768': 'max640'}} hassibling>
+      <NavList responsive={{'@m992': 'desktop'}} project={project}>
         {hasPrev &&
           <NavItem position="prev">
             <Link href={`/${prevSlug}`} passHref>

@@ -8,8 +8,9 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container } from '../components/layout';
+import { Container, ArticleBackground } from '../components/layout';
 import { Heading } from '../components/headings';
+import Cover from '../projects/pie/Cover';
 import Meta from '../projects/pie/Meta';
 import Content from '../projects/pie/Content';
 import Nav from '../projects/Nav';
@@ -18,7 +19,8 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=pie]': {
     minHeight: '100vh',
-    backgroundColor: '$pie0'
+    paddingTop: '560px',
+    backgroundColor: 'hsl($pie0)'
   }
 });
 
@@ -57,12 +59,15 @@ export default function ProjectPie() {
         ogCover="/project/pie/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} isgroupend>
-        <Heading itemName="dark">{pageInfo.name}</Heading>
-        <Meta />
-      </Container>
-      <Content />
-      <Nav scheme="dark" hasNext="The Moment" nextSlug="moment" nextBg="moment" />
+      <Cover />
+      <ArticleBackground as="main" project="pie">
+        <Container responsive={{'@m768': 'max640'}}>
+          <Heading itemName="dark">{pageInfo.name}</Heading>
+          <Meta />
+          <Content />
+        </Container>
+      </ArticleBackground>
+      <Nav scheme="dark" hasNext="The Moment" nextSlug="moment" nextBg="moment" project="pie" />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="dark" />
     </>
   );

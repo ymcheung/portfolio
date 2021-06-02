@@ -6,7 +6,7 @@ export const HomeItemsLayout = styled('section', {
   marginX: '-16px',
 
   variants: {
-    forProjects: {
+    forprojects: {
       mobile: {
         grid: 'auto / auto-flow 304px',
         columnGap: '$8',
@@ -18,7 +18,7 @@ export const HomeItemsLayout = styled('section', {
         grid: 'auto / repeat(3, 1fr)'
       }
     },
-    forActivity: {
+    foractivity: {
       mobile: {
         grid: 'auto / 100%',
         rowGap: '$18',
@@ -53,7 +53,7 @@ export const HomeItemLink = styled('a', {
   textDecoration: 'none',
 
   variants: {
-    forProjects: {
+    forprojects: {
       true: {
         paddingX: '$8'
       }
@@ -74,11 +74,7 @@ export const HomeItemCover = styled('div', {
 export const HomeItemImage = styled('img', {
   width: '100%',
   height: '100%',
-  position: 'absolute',
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
+  fullAbsolute: '',
   objectFit: 'cover'
 });
 

@@ -9,10 +9,10 @@ const Circle = styled('circle', {
   variants: {
     scheme: {
       dark: {
-        fill: '$shade300'
+        fill: 'hsl($shade300)'
       },
       light: {
-        fill: '$shade1500'
+        fill: '$shade1200'
       }
     }
   }
@@ -22,10 +22,10 @@ const Bubble = styled('path', {
   variants: {
     scheme: {
       dark: {
-        fill: '$shade700'
+        fill: '$shade600'
       },
       light: {
-        fill: '$shade1200'
+        fill: '$shade800'
       }
     }
   }

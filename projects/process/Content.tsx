@@ -62,7 +62,7 @@ export default function Content() {
   const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
 
   return(
-    <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+    <article>
       <LangSwitch scheme="light" />
       <Section>
         <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
@@ -98,6 +98,6 @@ export default function Content() {
           </IconListItem>
         </IconList>
       </Section>
-    </Container>
+    </article>
   );
 }

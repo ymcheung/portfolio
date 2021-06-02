@@ -16,7 +16,7 @@ export const Container = styled('div', {
         maxWidth: '1168px'
       }
     },
-    hasSibling: {
+    hassibling: {
       true: {
         marginBottom: '$18'
       }
@@ -29,6 +29,79 @@ export const Container = styled('div', {
     footerend: {
       true: {
         paddingBottom: '64px'
+      }
+    }
+  }
+});
+
+export const ArticleBackground = styled('div', {
+  position: 'relative',
+  zIndex: 2,
+  paddingBottom: '64px',
+
+  '&::before': {
+    width: '100%',
+    height: '36px',
+    position: 'absolute',
+    top: '-36px',
+    right: 0,
+    left: 0,
+    content: `''`
+  },
+
+  variants: {
+    project: {
+      pie: {
+        backgroundColor: 'hsla($pie0, 0.92)',
+
+        '&::before': {
+          backgroundImage: `
+            linear-gradient(
+              to bottom,
+              hsla($pie0, 0) 0%,
+              hsla($pie0, 0.012) 8.1%,
+              hsla($pie0, 0.045) 15.5%,
+              hsla($pie0, 0.096) 22.5%,
+              hsla($pie0, 0.161) 29%,
+              hsla($pie0, 0.239) 35.3%,
+              hsla($pie0, 0.324) 41.2%,
+              hsla($pie0, 0.414) 47.1%,
+              hsla($pie0, 0.506) 52.9%,
+              hsla($pie0, 0.596) 58.8%,
+              hsla($pie0, 0.681) 64.7%,
+              hsla($pie0, 0.759) 71%,
+              hsla($pie0, 0.824) 77.5%,
+              hsla($pie0, 0.875) 84.5%,
+              hsla($pie0, 0.908) 91.9%,
+              hsla($pie0, 0.92) 100%
+            )`
+        }
+      },
+      nuomi: {
+        backgroundColor: 'hsla($nuomiBlack0, 0.92)',
+
+        '&::before': {
+          backgroundImage: `
+            linear-gradient(
+              to bottom,
+              hsla($nuomiBlack0, 0) 0%,
+              hsla($nuomiBlack0, 0.012) 8.1%,
+              hsla($nuomiBlack0, 0.045) 15.5%,
+              hsla($nuomiBlack0, 0.096) 22.5%,
+              hsla($nuomiBlack0, 0.161) 29%,
+              hsla($nuomiBlack0, 0.239) 35.3%,
+              hsla($nuomiBlack0, 0.324) 41.2%,
+              hsla($nuomiBlack0, 0.414) 47.1%,
+              hsla($nuomiBlack0, 0.506) 52.9%,
+              hsla($nuomiBlack0, 0.596) 58.8%,
+              hsla($nuomiBlack0, 0.681) 64.7%,
+              hsla($nuomiBlack0, 0.759) 71%,
+              hsla($nuomiBlack0, 0.824) 77.5%,
+              hsla($nuomiBlack0, 0.875) 84.5%,
+              hsla($nuomiBlack0, 0.908) 91.9%,
+              hsla($nuomiBlack0, 0.92) 100%
+            )`
+        }
       }
     }
   }

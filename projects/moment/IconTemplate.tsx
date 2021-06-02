@@ -22,19 +22,19 @@ const Document = styled('rect', {
 const Nav = styled('rect', {
   width: '5px',
   height: '4px',
-  fill: '$shade300'
+  fill: 'hsl($shade300)'
 });
 
 const Lyric = styled('rect', {
   width: '8px',
   height: '11px',
-  fill: '$shade300'
+  fill: 'hsl($shade300)'
 });
 
 const Footer = styled('rect', {
   width: '14px',
   height: '4px',
-  fill: '$shade300'
+  fill: 'hsl($shade300)'
 });
 
 function IconTemplate() {

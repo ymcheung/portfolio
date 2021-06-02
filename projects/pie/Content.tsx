@@ -43,14 +43,9 @@ const GalleryFigure = styled('figure', {
   '&::before': {
     width: '100%',
     height: '464px',
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    zIndex: 0,
-    content: '',
-    background: 'linear-gradient(to bottom, transparent 0%, $shadeMockup50 50%, $shadeMockup75 75%, transparent 100%) top center / cover no-repeat',
+    fullAbsolute: '',
+    content: `''`,
+    background: 'linear-gradient(to bottom, transparent 0%, hsla($shade300, 0.5) 50%, hsla($shade300, 0.75) 75%, transparent 100%) top center / cover no-repeat',
   }
 });
 
@@ -68,7 +63,7 @@ export default function Content() {
   const { t } = useTranslation('pie');
 
   return(
-    <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+    <article>
       <LangSwitch scheme="dark" />
       <Section>
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
@@ -83,7 +78,7 @@ export default function Content() {
         <Gallery responsive={{'@m992': 'desktop'}}>
           <GalleryItem>
             <GalleryFigure>
-              <GalleryCover src="/projects/pie/gallery-full.jpg" alt={t('questions.flat.question')} />
+              <GalleryCover src="/projects/pie/gallery-full.jpg" alt={t('questions.flat.question')} loading="lazy" />
               <figcaption>
                 <ContentTitle as="strong" purpose="paragraph" scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.flat.title')}} />
                 <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.flat.question')}} sectionend />
@@ -93,7 +88,7 @@ export default function Content() {
           <GalleryItem>
             <GalleryFigure>
               <figcaption>
-              <GalleryCover src="/projects/pie/gallery-statistics.jpg" alt={t('questions.back.question')} />
+              <GalleryCover src="/projects/pie/gallery-statistics.jpg" alt={t('questions.back.question')} loading="lazy" />
                 <ContentTitle as="strong" purpose="paragraph" scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.back.title')}} />
                 <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.back.question')}} sectionend />
               </figcaption>
@@ -110,7 +105,7 @@ export default function Content() {
           </React.Fragment>
         ))}
       </Section>
-      <Section>
+      <Section isgroupend>
         <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('note.title')}} />
         {t<string, itemProps>('note.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
           <React.Fragment key={`note-${index}`}>
@@ -119,6 +114,6 @@ export default function Content() {
           </React.Fragment>
         ))}
       </Section>
-    </Container>
+    </article>
   );
 }

@@ -17,7 +17,7 @@ const BubbleSearch = styled('div', {
   color: '$shade1500',
   fontSize: '$14',
   lineHeight: '24px',
-  backgroundColor: '$shade300',
+  backgroundColor: 'hsl($shade300)',
   borderRadius: '12px'
 });
 
@@ -36,7 +36,8 @@ const Iteration = styled('h2', {
   },
 
   '& .number': {
-    fontSize: '$24'
+    fontSize: '$24',
+    lineHeight: '24px'
   }
 });
 
@@ -94,7 +95,7 @@ export default function Content() {
   const isItalic = i18n.language === 'en';
 
   return(
-    <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+    <article>
       <LangSwitch scheme="dark" />
       <Section>
         <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('intro.title')}} />
@@ -191,6 +192,6 @@ export default function Content() {
       <Section>
         <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('ending')}} indent />
       </Section>
-    </Container>
+    </article>
   );
 }

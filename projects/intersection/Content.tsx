@@ -58,7 +58,7 @@ export default function Content() {
   const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
 
   return(
-    <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+    <article>
       <LangSwitch scheme="light" />
       <Section>
         <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
@@ -83,7 +83,7 @@ export default function Content() {
             <IconListItem nomark="true" purpose="timestamp" key={index}>
               <div><IconListImage src={`/projects/intersection/${slug}_24.jpg`} alt="" /></div>
               <Link href={url} passHref>
-                <ContentTitle as="a" purpose="iconListItem" scheme="light" dangerouslySetInnerHTML={{__html: name}} data-splitbee-event={`Website Translation: ${name}`} target="_blank" rel="noopener" />
+                <ContentTitle as="a" purpose="iconListItem" scheme="light" dangerouslySetInnerHTML={{__html: name}} data-splitbee-event={`Website Translation: ${name}`} target="_blank" rel="noopener" nounderline />
               </Link>
               <IconListDescription scheme="light" dangerouslySetInnerHTML={{__html: description}} sectionend="true" />
               <IconListTimestamp as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} scheme="light" postmark="true" sectionend="true" />
@@ -91,6 +91,6 @@ export default function Content() {
           ))}
         </IconList>
       </Section>
-    </Container>
+    </article>
   );
 }

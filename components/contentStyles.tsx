@@ -49,6 +49,11 @@ export const ContentTitle = styled('h2', {
       light: {
         color: '$shade600'
       }
+    },
+    nounderline: {
+      true: {
+        textDecoration: 'none'
+      }
     }
   }
 });
@@ -99,7 +104,7 @@ export const Paragraph = styled('p', {
         color: '$shade600',
 
         '& .paragraph-link': {
-          color: '$shade300',
+          color: 'hsl($shade300)',
         }
       }
     }

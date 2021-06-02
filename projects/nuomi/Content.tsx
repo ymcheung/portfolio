@@ -25,7 +25,7 @@ export default function Content() {
   }
 
   return(
-    <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+    <article>
       <LangSwitch scheme="dark" />
       <Section>
         <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('experience.title')}} />
@@ -55,6 +55,6 @@ export default function Content() {
           </IconListItem>
         </IconList>
       </Section>
-    </Container>
+    </article>
   );
 }

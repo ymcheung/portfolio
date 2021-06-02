@@ -37,14 +37,10 @@ const GalleryItem = styled('li', {
   listStyle: 'none',
 
   '&::before': { 
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
+    fullAbsolute: '',
     zIndex: 0,
-    content: '',
-    backgroundImage: 'linear-gradient(to bottom, transparent 0%, $shadeMockup50 50%, transparent 100%)'
+    content: `''`,
+    backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade300, 0.5) 50%, transparent 100%)'
   },
 
   variants: {

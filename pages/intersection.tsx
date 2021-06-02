@@ -8,7 +8,7 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container } from '../components/layout';
+import { Container, ArticleBackground } from '../components/layout';
 import { Heading } from '../components/headings';
 import Meta from '../projects/intersection/Meta';
 import Content from '../projects/intersection/Content';
@@ -18,6 +18,7 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=intersection]': {
     minHeight: '100vh',
+    paddingTop: '$16',
     backgroundColor: '$shade1600'
   }
 });
@@ -57,11 +58,13 @@ export default function ProjectIntersection() {
         ogCover="/project/intersection/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} isgroupend>
-        <Heading itemName="light">{pageInfo.name}</Heading>
-        <Meta />
-      </Container>
-      <Content />
+      <ArticleBackground as="main">
+        <Container responsive={{'@m768': 'max640'}}>
+          <Heading itemName="light">{pageInfo.name}</Heading>
+          <Meta />
+          <Content />
+        </Container>
+      </ArticleBackground>
       <Nav
         hasNext="Translating Design Process for Pros"
         nextSlug="translate-design-process"

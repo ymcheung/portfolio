@@ -37,14 +37,10 @@ const GalleryItem = styled('li', {
   listStyle: 'none',
 
   '&::before': { 
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
+    fullAbsolute: '',
     zIndex: 0,
-    content: '',
-    backgroundImage: 'linear-gradient(to bottom, transparent 0%, $shadeMockup50 50%, transparent 100%)'
+    content: `''`,
+    backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade300, 0.5) 50%, transparent 100%)'
   },
 
   variants: {
@@ -87,13 +83,13 @@ function Gallery({ galleryItemAlt }: GalleryProps) {
   return(
     <GalleryList responsive={{ '@m768': 'tablet' }}>
       <GalleryItem item={{ '@m768': 'all' }} responsive={{ '@m768': 'tablet' }}>
-        <NuomiScreenshotImg src={screenshotNuomiAll} alt={galleryItemAlt.all} />
+        <NuomiScreenshotImg src={screenshotNuomiAll} alt={galleryItemAlt.all} loading="lazy" />
       </GalleryItem>
       <GalleryItem item={{ '@m768': 'detail' }} responsive={{ '@m768': 'tablet' }}>
-        <NuomiScreenshotImg src={screenshotDetail} alt={galleryItemAlt.detail} />
+        <NuomiScreenshotImg src={screenshotDetail} alt={galleryItemAlt.detail} loading="lazy" />
       </GalleryItem>
       <GalleryItem item={{ '@m768': 'course' }} responsive={{ '@m768': 'tablet' }}>
-        <NuomiScreenshotImg src={screenshotCourse} alt={galleryItemAlt.course} />
+        <NuomiScreenshotImg src={screenshotCourse} alt={galleryItemAlt.course} loading="lazy" />
       </GalleryItem>
     </GalleryList>
   );

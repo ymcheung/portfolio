@@ -8,7 +8,7 @@ const Icon = styled(Svg, {
 const File = styled('rect', {
   width: '20px',
   height: '24px',
-  fill: '$shade300'
+  fill: 'hsl($shade300)'
 });
 
 const Bracket = styled('path', {

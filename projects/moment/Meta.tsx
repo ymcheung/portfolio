@@ -10,7 +10,7 @@ export default function Meta() {
       </MetaItem>
       <MetaItem>
         <MetaItemTitle project="moment">Status</MetaItemTitle>
-        <MetaItemValue scheme="dark">Minimum Viable</MetaItemValue>
+        <MetaItemValue scheme="dark">First Release</MetaItemValue>
       </MetaItem>
       <MetaItem>
         <MetaItemTitle project="moment">Languages</MetaItemTitle>

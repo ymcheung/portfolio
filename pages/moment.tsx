@@ -8,7 +8,7 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container } from '../components/layout';
+import { Container, ArticleBackground } from '../components/layout';
 import { Heading } from '../components/headings';
 import Meta from '../projects/moment/Meta';
 import Content from '../projects/moment/Content';
@@ -18,7 +18,8 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=moment]': {
     minHeight: '100vh',
-    backgroundColor: '$mtMidnight100'
+    paddingTop: '$16',
+    backgroundColor: '$mtMidnight0'
   }
 });
 
@@ -57,11 +58,13 @@ export default function ProjectMoment() {
         ogCover="/project/moment/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} isgroupend>
-        <Heading itemName="dark">{pageInfo.name}</Heading>
-        <Meta />
-      </Container>
-      <Content />
+      <ArticleBackground as="main">
+        <Container responsive={{'@m768': 'max640'}}>
+          <Heading itemName="dark">{pageInfo.name}</Heading>
+          <Meta />
+          <Content />
+        </Container>
+      </ArticleBackground>
       <Nav
         scheme="dark"
         hasNext="Nuomi&rsquo;s Portfolio"

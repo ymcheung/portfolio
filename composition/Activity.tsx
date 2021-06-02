@@ -8,7 +8,7 @@ function Activity() {
   return(
     <Container responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} isgroupend>
       <Heading as="h2" position="homeSection">C<small>ommunity</small> A<small>ctivity</small></Heading>
-      <HomeItemsLayout as="ul" forActivity={{'@initial': 'mobile', '@m768': 'tablet'}}>
+      <HomeItemsLayout as="ul" foractivity={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <HomeItem removeIcon={{ '@m768': true }}>
           <IconHyphen showInMobile={{ '@m768': true }} />
           <Link href="/intersection" passHref>
@@ -27,7 +27,7 @@ function Activity() {
           <Link href="/translate-design-process" passHref>
             <HomeItemLink>
               <Heading as="h2" position="homeItemName">
-                Translating “Design Process for Pros”
+                Translate “Design Process for Pros”
               </Heading>
               <HomeItemDescription>
                 <Verb>Retrospect</Verb> an event gathing 20 designers to translate an e-book.
