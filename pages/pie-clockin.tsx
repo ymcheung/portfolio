@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import React, { useEffect, useRef, forwardRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { debounce } from 'underscore';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '../utils/HeadMeta';
@@ -24,19 +25,37 @@ const pageBody = global({
   }
 });
 
-export default function ProjectPie() {
-  const router = useRouter();
-
+function ProjectPie() {
   const pageInfo = {
     name: 'Explore UI of a Clock-In Web App',
     description: 'A side project exploring fluent UI design.',
     datePublished: '2020-08-29',
     dateModified: '2021-05-20'
-  }
+  };
+
+  const router = useRouter();
+  const coverRef = useRef<HTMLElement>(null);
+  const articleRef = useRef<HTMLElement>(null);
+  const [overlapped, setOverlapped] = useState(false);
+
+  const scrollHandler = () => {
+    
+    console.log(coverRef.current);
+    console.log(articleRef.current);
+    // setOverlapped(overlap);
+  };
+
+  const debouncedScroll = debounce(() => {scrollHandler()}, 100);
 
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'pie');
-  });
+    document.addEventListener('scroll', debouncedScroll, false);
+
+    return () => {
+      document.removeEventListener('scroll', debouncedScroll, false);
+    };
+  }, []);
+
   pageBody();
 
   const schema = {
@@ -59,8 +78,8 @@ export default function ProjectPie() {
         ogCover="/project/pie/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Cover />
-      <ArticleBackground as="main" project="pie">
+      <Cover forwardRef={coverRef} />
+      <ArticleBackground as="main" project="pie" ref={articleRef}>
         <Container responsive={{'@m768': 'max640'}}>
           <Heading itemName="dark">{pageInfo.name}</Heading>
           <Meta />
@@ -78,3 +97,5 @@ export const getStaticProps = async ({ locale }) => ({
     ...await serverSideTranslations(locale, ['pie']),
   },
 });
+
+export default ProjectPie;
