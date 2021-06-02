@@ -8,7 +8,7 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container } from '../components/layout';
+import { Container, ArticleBackground } from '../components/layout';
 import { Heading } from '../components/headings';
 import Cover from '../projects/pie/Cover';
 import Meta from '../projects/pie/Meta';
@@ -60,11 +60,13 @@ export default function ProjectPie() {
         canonical={router.pathname}
       />
       <Cover />
-      <Container as="main" responsive={{'@m768': 'max640'}} asarticle articlebackground="pie">
-        <Heading itemName="dark">{pageInfo.name}</Heading>
-        <Meta />
-        <Content />
-      </Container>
+      <ArticleBackground as="main" project="pie">
+        <Container responsive={{'@m768': 'max640'}}>
+          <Heading itemName="dark">{pageInfo.name}</Heading>
+          <Meta />
+          <Content />
+        </Container>
+      </ArticleBackground>
       <Nav scheme="dark" hasNext="The Moment" nextSlug="moment" nextBg="moment" project="pie" />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="dark" />
     </>

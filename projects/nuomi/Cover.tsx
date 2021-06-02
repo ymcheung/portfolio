@@ -31,16 +31,10 @@ const ImageTablet = styled('img', {
 
 export default function Cover() {
   return(
-    <Wrap responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-      <Device responsive={{ '@initial': 'mobile' }} dualmobile={{ '@m768': 'tablet' }}>
+    <Wrap responsive={{ '@initial': 'mobile', '@m768': 'tabletMacbook', '@m992': 'desktopMacbook' }}>
+      <Device responsive={{ '@initial': 'mobile' }} device={{ '@m768': 'tabletMacbook', '@m992': 'desktopMacbook' }}>
         {screenMobile &&
           <ImageMobile src="/projects/nuomi/cover-mobile.jpg" alt="" />
-        }
-        {screenTablet &&
-          <>
-            <ImageTablet src="/projects/pie/cover-mobile.jpg" placement="left" alt="" />
-            <ImageTablet src="/projects/pie/cover-apply.jpg" placement="right" alt="" />
-          </>
         }
       </Device>
     </Wrap>

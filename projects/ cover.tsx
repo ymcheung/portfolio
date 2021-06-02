@@ -13,6 +13,12 @@ export const Wrap = styled('header', {
       },
       tablet: {
         top: 0
+      },
+      tabletMacbook: {
+        top: '72px'
+      },
+      desktopMacbook: {
+        top: '36px'
       }
     }
   }
@@ -40,8 +46,8 @@ export const Device = styled('figure', {
         }
       }
     },
-    dualmobile: {
-      tablet: {
+    device: {
+      mobileDual: {
         width: '640px',
         height: '524px',
         padding: 0,
@@ -55,6 +61,21 @@ export const Device = styled('figure', {
             top 0 left 0,
             top 24px right 0`
         }
+      },
+      tabletMacbook: {
+        width: '720px',
+        height: '394px',
+        padding: '43px 72px 0',
+        backgroundSize: 'cover',
+
+        '&::before': {
+          backgroundImage: `url('/projects/mockupMacbook.svg')`,
+        }
+      },
+      desktopMacbook: {
+        width: '850px',
+        height: '465px',
+        padding: '51px 85px 0'
       }
     }
   }

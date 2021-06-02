@@ -16,24 +16,41 @@ export const Container = styled('div', {
         maxWidth: '1168px'
       }
     },
-    asarticle: {
+    hassibling: {
       true: {
-        position: 'relative',
-        zIndex: 2,
-        paddingBottom: '64px',
-
-        '&::before': {
-          width: '100%',
-          height: '36px',
-          position: 'absolute',
-          top: '-36px',
-          right: 0,
-          left: 0,
-          content: `''`
-        }  
+        marginBottom: '$18'
       }
     },
-    articlebackground: {
+    isgroupend: {
+      true: {
+        marginBottom: '64px'
+      }
+    },
+    footerend: {
+      true: {
+        paddingBottom: '64px'
+      }
+    }
+  }
+});
+
+export const ArticleBackground = styled('div', {
+  position: 'relative',
+  zIndex: 2,
+  paddingBottom: '64px',
+
+  '&::before': {
+    width: '100%',
+    height: '36px',
+    position: 'absolute',
+    top: '-36px',
+    right: 0,
+    left: 0,
+    content: `''`
+  },
+
+  variants: {
+    project: {
       pie: {
         backgroundColor: 'hsla($pie0, 0.92)',
 
@@ -85,21 +102,6 @@ export const Container = styled('div', {
               hsla($nuomiBlack0, 0.92) 100%
             )`
         }
-      }
-    },
-    hassibling: {
-      true: {
-        marginBottom: '$18'
-      }
-    },
-    isgroupend: {
-      true: {
-        marginBottom: '64px'
-      }
-    },
-    footerend: {
-      true: {
-        paddingBottom: '64px'
       }
     }
   }

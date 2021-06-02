@@ -8,7 +8,7 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container } from '../components/layout';
+import { Container, ArticleBackground } from '../components/layout';
 import { Heading } from '../components/headings';
 import Cover from '../projects/nuomi/Cover';
 import Meta from '../projects/nuomi/Meta';
@@ -60,11 +60,13 @@ export default function ProjectNuomi() {
         canonical={router.pathname}
       />
       <Cover />
-      <Container as="main" responsive={{'@m768': 'max640'}} asarticle articlebackground="nuomi">
-        <Heading itemName="dark">{pageInfo.name}</Heading>
-        <Meta />
-        <Content />
-      </Container>
+      <ArticleBackground as="main" project="nuomi">
+        <Container responsive={{'@m768': 'max640'}}>
+          <Heading itemName="dark">{pageInfo.name}</Heading>
+          <Meta />
+          <Content />
+        </Container>
+      </ArticleBackground>
       <Nav
         scheme="dark"
         hasNext="Intersection"
