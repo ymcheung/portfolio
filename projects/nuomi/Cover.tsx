@@ -3,30 +3,10 @@ import { screenMobile, screenTablet } from '../../utils/screens';
 
 import { Wrap, Device } from '../ cover';
 
-const ImageMobile = styled('img', {
+const Image = styled('img', {
   width: '100%',
   position: 'relative',
   zIndex: 1,
-});
-
-const ImageTablet = styled('img', {
-  position: 'absolute',
-  width: '256px',
-  zIndex: 1,
-  borderRadius: '4px',
-
-  variants: {
-    placement: {
-      left: {
-        top: '$16',
-        left: '$16'
-      },
-      right: {
-        top: '40px',
-        right: '16px'
-      }
-    }
-  }
 });
 
 export default function Cover() {
@@ -34,7 +14,10 @@ export default function Cover() {
     <Wrap responsive={{ '@initial': 'mobile', '@m768': 'tabletMacbook', '@m992': 'desktopMacbook' }}>
       <Device responsive={{ '@initial': 'mobile' }} device={{ '@m768': 'tabletMacbook', '@m992': 'desktopMacbook' }}>
         {screenMobile &&
-          <ImageMobile src="/projects/nuomi/cover-mobile.jpg" alt="" />
+          <Image src="/projects/nuomi/cover-mobile.jpg" alt="Mobile Landing Page of Nuomi’s Portfolio" />
+        }
+        {screenTablet &&
+          <Image src="/projects/nuomi/cover-desktop.jpg" alt="Desktop Landing Page of Nuomi’s Portfolio" />
         }
       </Device>
     </Wrap>

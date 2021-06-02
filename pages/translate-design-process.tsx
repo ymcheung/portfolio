@@ -8,7 +8,7 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container } from '../components/layout';
+import { Container, ArticleBackground } from '../components/layout';
 import { Heading } from '../components/headings';
 import Meta from '../projects/process/Meta';
 import Content from '../projects/process/Content';
@@ -58,11 +58,13 @@ export default function ProjectProcess() {
         ogCover="/project/process/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container responsive={{'@m768': 'max640'}} asarticle>
-        <Heading itemName="light">{pageInfo.name}</Heading>
-        <Meta />
-        <Content />
-      </Container>
+      <ArticleBackground>
+        <Container responsive={{'@m768': 'max640'}}>
+          <Heading itemName="light">{pageInfo.name}</Heading>
+          <Meta />
+          <Content />
+        </Container>
+      </ArticleBackground>
       <Nav
         hasPrev="Intersection"
         prevSlug="intersection"
