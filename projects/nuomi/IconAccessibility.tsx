@@ -7,7 +7,7 @@ const Icon = styled(Svg, {
 });
 
 const Slope = styled('path', {
-  fill: '$shade600'
+  fill: 'hsl($shade600)'
 });
 
 export default function IconAccessibility() {

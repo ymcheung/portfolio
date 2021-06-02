@@ -50,7 +50,7 @@ export const Heading = styled('h2', {
     itemName: {
       dark: {
         marginBottom: '$16',
-        color: '$shade1600',
+        color: 'hsl($shade1600)',
         fontSize: '$24',
         fontWeight: 600,
         lineHeight: '32px'

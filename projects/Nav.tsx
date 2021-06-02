@@ -65,7 +65,7 @@ const NavItemLink = styled('a', {
   variants: {
     scheme: {
       dark: {
-        color: '$shade1200'
+        color: 'hsl($shade1200)'
       },
       light: {
         color: 'hsl($shade300)'

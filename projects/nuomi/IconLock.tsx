@@ -7,7 +7,7 @@ const Icon = styled(Svg, {
 });
 
 const Lock = styled('path', {
-  fill: '$shade600'
+  fill: 'hsl($shade600)'
 });
 
 export default function IconLock() {

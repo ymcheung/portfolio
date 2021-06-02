@@ -41,7 +41,7 @@ const FeatureItem = styled(ListItem, {
 
 const FeaturedNumberMark = styled('sup', {
   fontFamily: 'inherit',
-  color: '$shade1200',
+  color: 'hsl($shade1200)',
   fontSize: '$18',
   fontStyle: 'normal',
   fontWeight: 400
