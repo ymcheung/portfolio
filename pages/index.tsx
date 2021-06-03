@@ -36,8 +36,6 @@ export default function Home() {
 
   pageBody();
 
-  const { t } = useTranslation('home');
-  
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@graph':
@@ -92,7 +90,7 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,600;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet" />
       </Head>
       <HeadMeta />
-      <Container as="header" responsive={{'@m992': 'max960', '@m1200': 'max1168'}} className={darkTheme} hassibling>
+      <Container as="header" responsive={{'@m992': 'max960', '@m1200': 'max1168'}} className={null} hassibling>
         <Heading as="h1" nametag="home">{AUTHOR}</Heading>
         <NameDescription>{DESCRIPTION}</NameDescription>
       </Container>

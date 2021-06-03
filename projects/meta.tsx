@@ -54,7 +54,7 @@ export const MetaItemValue = styled('span', {
   variants: {
     scheme: {
       dark: {
-        color: 'hsl(hsl($shade100)0)'
+        color: 'hsl($shade1000)'
       },
       light: {
         color: 'hsl($shade300)'
