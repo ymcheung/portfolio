@@ -1,12 +1,11 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 
-import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from '../constant';
 import HeadMeta from '../utils/HeadMeta';
 
-import { styled, global, darkTheme } from '../stitches.config';
+import { styled, global } from '../stitches.config';
 
 import { Container } from '../components/layout';
 import { Heading } from '../components/headings';

@@ -38,7 +38,10 @@ export const { css, styled, global, theme, getCssString } = createCss({
       nuomiGold400: 'hsl(32,55%,20%)',
 
       intersection1500: 'hsl(11,71%,61%)',
-      intersection300: 'hsl(11,71%,12%)'
+      intersection300: 'hsl(11,71%,12%)',
+
+      schemeIconDarkBg: '$shade1500',
+      schemeIconLightBg: '$shade300'
     },
     space: {
       4: '4px',
@@ -108,7 +111,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
   },
 })
 
-export const darkTheme = theme({
+export const dark = theme({
   colors: {
     shade0:    '162,2%,99%',
     shade100:  '162,2%,92%',
@@ -120,6 +123,12 @@ export const darkTheme = theme({
     shade1200: '162,2%,40%',
     shade1400: '162,2%,24%',
     shade1500: '162,2%,10%',
-    shade1600: '162,2%, 6%'
+    shade1600: '162,2%, 6%',
+
+    nameTag: '$shade0',
+    homeItemName: '$shade0',
+
+    schemeIconDarkBg: '$shade300',
+    schemeIconLightBg: '$shade1400'
   }
 });

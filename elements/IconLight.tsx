@@ -2,12 +2,11 @@ import { styled } from '../stitches.config';
 import { Svg } from './Svg';
 
 const Light = styled(Svg, {
-  width: '28px',
-  height: '28px'
+  size: '28px'
 });
 
 const Background = styled('circle', {
-  fill: 'hsl($shade300)'
+  fill: 'hsl($schemeIconLightBg)'
 });
 
 const Sun = styled('circle', {
@@ -16,7 +15,7 @@ const Sun = styled('circle', {
 
 function IconLight() {
   return(
-    <Light>
+    <Light viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
       <Background cx="14" cy="14" r="14" />
       <Sun cx="14" cy="14" r="6" />
     </Light>

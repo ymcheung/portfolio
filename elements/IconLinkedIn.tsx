@@ -1,26 +1,17 @@
 import { styled } from '../stitches.config';
 import { Svg } from './Svg';
-// import { DarkModeProps } from './DarkModeProps';
 
 const LinkedIn = styled(Svg, {
   size: '$48'
 });
 
 const Background = styled('path', {
-  fill: '#1A1918'
+  fill: 'hsl($shade0)'
 });
 
 const Text = styled('path', {
-  fill: '#FDFDFF'
+  fill: 'hsl($shade1600)'
 });
-
-// const Background = styled.path<DarkModeProps>`
-//   fill: ${props => props.darkmode ? '#FDFDFF' : '#1A1918'};
-// `;
-
-// const Text = styled.path<DarkModeProps>`
-//   fill: ${props => props.darkmode ? '#1A1918' : '#FDFDFF'};
-// `;
 
 function IconLinkedIn() {
   return(
