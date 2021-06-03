@@ -23,7 +23,7 @@ export const Heading = styled('h2', {
     },
     footerscheme: {
       dark: {
-        color: '$shade1500'
+        color: 'hsl($shade1500)'
       },
       light: {
         color: 'hsl($shade0)'

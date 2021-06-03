@@ -14,7 +14,7 @@ const Button = styled('a', {
   variants: {
     scheme: {
       dark: {
-        background: '$shade100',
+        background: 'hsl($shade100)',
         transition: 'background-color $easeOut',
 
         '&:active, &:hover': {
@@ -23,7 +23,7 @@ const Button = styled('a', {
         }
       },
       light: {
-        background: '$shade1500',
+        background: 'hsl($shade1500)',
         transition: 'background-color $easeOut',
 
         '&:active, &:hover': {

@@ -17,7 +17,7 @@ const Separate = styled('hr', {
         borderBottomColor: 'hsl($shade300)'
       },
       light: {
-        borderBottomColor: '$shade1500'
+        borderBottomColor: 'hsl($shade1500)'
       }
     }
   }

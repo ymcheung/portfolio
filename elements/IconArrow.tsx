@@ -18,7 +18,7 @@ const Circle = styled('circle', {
         fill: 'hsl($shade300)'
       },
       light: {
-        fill: '$shade1500'
+        fill: 'hsl($shade1500)'
       },
       pie: {
         fill: '$pie100'

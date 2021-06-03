@@ -44,7 +44,7 @@ export const ContentTitle = styled('h2', {
     },
     scheme: {
       dark: {
-        color: '$shade1500'
+        color: 'hsl($shade1500)'
       },
       light: {
         color: 'hsl($shade600)'
@@ -97,7 +97,7 @@ export const Paragraph = styled('p', {
         color: 'hsl($shade1200)',
 
         '& .paragraph-link': {
-          color: '$shade1500',
+          color: 'hsl($shade1500)',
         }
       },
       light: {

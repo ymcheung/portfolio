@@ -17,7 +17,7 @@ const Icon = styled(Svg, {
 });
 
 const Path = styled('path', {
-  stroke: '$shade700',
+  stroke: 'hsl($shade700)',
   strokeLinecap: 'round'
 });
 

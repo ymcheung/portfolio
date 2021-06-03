@@ -6,15 +6,15 @@ export const { css, styled, global, theme, getCssString } = createCss({
       laurel: 'hsl(162,57%,62%)',
 
       shade1600: '162,2%,99%',
-      shade1500: 'hsl(162,2%,92%)',
+      shade1500: '162,2%,92%',
       shade1200: '162,2%,72%',
-      shade1000: 'hsl(162,2%,64%)',
-      shade800: '162,2%,56%',
-      shade700: 'hsl(162,2%,48%)',
-      shade600: '162,2%,40%',
-      shade300: '162,2%,24%',
-      shade100: 'hsl(162,2%,10%)',
-      shade0: '162,2%,6%',
+      shade1000: '162,2%,64%',
+      shade800:  '162,2%,56%',
+      shade700:  '162,2%,48%',
+      shade600:  '162,2%,40%',
+      shade300:  '162,2%,24%',
+      shade100:  '162,2%,10%',
+      shade0:    '162,2%, 6%',
 
       pie800: 'hsl(240,62%,72%)',
       pie700: 'hsl(240,62%,64%)',
@@ -105,3 +105,18 @@ export const { css, styled, global, theme, getCssString } = createCss({
     m1200: '(min-width: 1200px)'
   },
 })
+
+export const darkTheme = theme({
+  colors: {
+    shade0: '162,2%,99%',
+    shade100: '162,2%,92%',
+    shade300: '162,2%,72%',
+    shade600: '162,2%,64%',
+    shade700: '162,2%,56%',
+    shade800: '162,2%,48%',
+    shade1000: '162,2%,40%',
+    shade1200: '162,2%,24%',
+    shade1500: '162,2%,10%',
+    shade1600: '162,2%,6%'
+  }
+});

@@ -6,14 +6,14 @@ const Icon = styled(Svg, {
 });
 
 const Handle = styled('path', {
-  stroke: '$shade700',
+  stroke: 'hsl($shade700)',
   strokeWidth: '2px',
   strokeLinecap: 'round'
 });
 
 const Glass = styled('circle', {
   fill: 'transparent',
-  stroke: '$shade700',
+  stroke: 'hsl($shade700)',
   strokeWidth: '2px'
 });
 

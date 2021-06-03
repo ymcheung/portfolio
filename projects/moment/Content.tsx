@@ -14,7 +14,7 @@ import { ContentTitle, Section, Paragraph, ContentList, ContentListItem } from '
 const BubbleSearch = styled('div', {
   maxWidth: 'fit-content',
   padding: '8px 12px',
-  color: '$shade1500',
+  color: 'hsl($shade1500)',
   fontSize: '$14',
   lineHeight: '24px',
   backgroundColor: 'hsl($shade300)',
@@ -24,7 +24,7 @@ const BubbleSearch = styled('div', {
 const Iteration = styled('h2', {
   margin: 0,
   padding: '0 $12',
-  color: '$shade1500',
+  color: 'hsl($shade1500)',
   fontSize: '$16',
 
   variants: {
