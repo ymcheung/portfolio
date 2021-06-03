@@ -10,7 +10,7 @@ function Activity() {
       <Heading as="h2" position="homeSection">C<small>ommunity</small> A<small>ctivity</small></Heading>
       <HomeItemsLayout as="ul" foractivity={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <HomeItem removeIcon={{ '@m768': true }}>
-          <IconHyphen showInMobile={{ '@m768': true }} />
+          <IconHyphen showinmobile={{ '@m768': true }} />
           <Link href="/intersection" passHref>
             <HomeItemLink>
               <Heading as="h2" position="homeItemName">
@@ -23,7 +23,7 @@ function Activity() {
           </Link>
           </HomeItem>
         <HomeItem removeIcon={{ '@m768': true }}>
-          <IconHyphen showInMobile={{ '@m768': true }} />
+          <IconHyphen showinmobile={{ '@m768': true }} />
           <Link href="/translate-design-process" passHref>
             <HomeItemLink>
               <Heading as="h2" position="homeItemName">

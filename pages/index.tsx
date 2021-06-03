@@ -96,7 +96,7 @@ export default function Home() {
       <Projects />
       <Activity />
       <ExternalLinks />
-      <Footer responsive={{'@m992': 'max960', '@m1200': 'max1168'}} scheme="light" />
+      <Footer responsive={{'@m992': 'max960', '@m1200': 'max1168'}} />
     </>
   )
 }

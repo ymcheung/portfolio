@@ -13,19 +13,9 @@ const Separate = styled('hr', {
   width: '120px',
   margin: '0 auto $8 0',
   border: 0,
+  borderBottomColor: 'hsl($footerSeparate)',
   borderBottomWidth: '1px',
-  borderBottomStyle: 'solid',
-  
-  variants: {
-    scheme: {
-      dark: {
-        borderBottomColor: 'hsl($shade300)'
-      },
-      light: {
-        borderBottomColor: 'hsl($shade1500)'
-      }
-    }
-  }
+  borderBottomStyle: 'solid'
 });
 
 const FooterLayout = styled('div', {
@@ -61,7 +51,7 @@ const ToggleDark = styled('button', {
 interface FooterProps {
   readonly responsive: {};
   readonly inproject?: {};
-  readonly scheme: 'dark' | 'light';
+  readonly scheme?: 'dark' | 'light';
 }
 
 function Footer({ responsive, inproject, scheme }: FooterProps) {
@@ -81,15 +71,16 @@ function Footer({ responsive, inproject, scheme }: FooterProps) {
   };
 
   const isDarkTheme = resolvedTheme === 'dark';
+  const toogleSchemeMessage = isDarkTheme ? '亮色' : '暗色';
 
   return(
     <Container as="footer" responsive={responsive} footerend>
       <FooterLayout inproject={inproject}>
-        <Separate scheme={scheme} />
+        <Separate />
         <Heading as="strong" nametag="footer" footerscheme={scheme}>{AUTHOR}</Heading>
         <NameTagDescription>Portfolio {Year}</NameTagDescription>
         {!inproject &&
-          <ToggleDark type="button" aria-label={`切換為`} data-splitbee-event="切換暗色模式" onClick={toggleTheme}>
+          <ToggleDark type="button" onClick={toggleTheme} aria-label={`切換 Scheme：${toogleSchemeMessage}`} data-splitbee-event={`切換 Scheme：${toogleSchemeMessage}`}>
             {!isDarkTheme &&
               <IconDark />
             }

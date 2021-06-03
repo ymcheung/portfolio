@@ -40,6 +40,9 @@ export const { css, styled, global, theme, getCssString } = createCss({
       intersection1500: 'hsl(11,71%,61%)',
       intersection300: 'hsl(11,71%,12%)',
 
+      activityHyphen: '$shade1200',
+
+      footerSeparate: '$shade1500',
       schemeIconDarkBg: '$shade1500',
       schemeIconLightBg: '$shade300'
     },
@@ -125,6 +128,9 @@ export const dark = theme({
     shade1500: '162,2%,10%',
     shade1600: '162,2%, 6%',
 
+    activityHyphen: '$shade1000',
+
+    footerSeparate: '$shade1200',
     schemeIconDarkBg: '$shade300',
     schemeIconLightBg: '$shade1400'
   }
