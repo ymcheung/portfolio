@@ -125,9 +125,6 @@ export const dark = theme({
     shade1500: '162,2%,10%',
     shade1600: '162,2%, 6%',
 
-    nameTag: '$shade0',
-    homeItemName: '$shade0',
-
     schemeIconDarkBg: '$shade300',
     schemeIconLightBg: '$shade1400'
   }
