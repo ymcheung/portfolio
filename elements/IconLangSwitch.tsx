@@ -12,7 +12,7 @@ const Circle = styled('circle', {
         fill: 'hsla($shade600, 0.5)'
       },
       light: {
-        fill: 'hsl($shade1200)',
+        fill: 'hsla($shade1200, 0.75)',
         transition: 'fill $easeOut'
       }
     }
@@ -26,8 +26,7 @@ const Bubble = styled('path', {
         fill: 'hsla($shade1200, 0.5)'
       },
       light: {
-        fill: '$shade800',
-        transition: 'fill $easeOut'
+        fill: 'hsl($shade1600)'
       }
     }
   }

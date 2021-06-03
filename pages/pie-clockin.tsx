@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, forwardRef, useState } from 'react';
+import { useEffect, useRef, useState} from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { debounce } from 'underscore';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '../utils/HeadMeta';
@@ -34,26 +33,11 @@ function ProjectPie() {
   };
 
   const router = useRouter();
-  const coverRef = useRef<HTMLElement>(null);
   const articleRef = useRef<HTMLElement>(null);
   const [overlapped, setOverlapped] = useState(false);
 
-  const scrollHandler = () => {
-    
-    console.log(coverRef.current);
-    console.log(articleRef.current);
-    // setOverlapped(overlap);
-  };
-
-  const debouncedScroll = debounce(() => {scrollHandler()}, 100);
-
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'pie');
-    document.addEventListener('scroll', debouncedScroll, false);
-
-    return () => {
-      document.removeEventListener('scroll', debouncedScroll, false);
-    };
   }, []);
 
   pageBody();
@@ -78,10 +62,10 @@ function ProjectPie() {
         ogCover="/project/pie/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Cover forwardRef={coverRef} />
-      <ArticleBackground as="main" project="pie" ref={articleRef}>
+      <Cover />
+      <ArticleBackground ref={articleRef} as="main" project="pie">
         <Container responsive={{'@m768': 'max640'}}>
-          <Heading itemName="dark">{pageInfo.name}</Heading>
+          <Heading as="h1" itemName="dark">{pageInfo.name}</Heading>
           <Meta />
           <Content />
         </Container>

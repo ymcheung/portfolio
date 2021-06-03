@@ -41,9 +41,7 @@ export const ArticleBackground = styled('div', {
 
   '&::before': {
     width: '100%',
-    height: '36px',
     position: 'absolute',
-    top: '-36px',
     right: 0,
     left: 0,
     content: `''`
@@ -103,7 +101,24 @@ export const ArticleBackground = styled('div', {
             )`
         }
       }
+    },
+    overlapped: {
+      true: {
+        '&::before': {
+          height: '120px',
+          top: '-120px',
+        }
+      },
+      false: {
+        '&::before': {
+          height: '36px',
+          top: '-36px',
+        }
+      }
     }
+  },
+  defaultVariants: {
+    overlapped: 'false' 
   }
 });
 

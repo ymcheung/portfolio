@@ -1,7 +1,7 @@
 import { styled } from '../../stitches.config';
 import { screenMobile, screenTablet } from '../../utils/screens';
 
-import { Wrap, Device } from '../ cover';
+import { Wrap, Device } from '../cover';
 
 const Image = styled('img', {
   width: '100%',

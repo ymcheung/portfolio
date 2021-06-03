@@ -1,7 +1,7 @@
 import { styled } from '../../stitches.config';
 import { screenMobile, screenTablet } from '../../utils/screens';
 
-import { Wrap, Device } from '../ cover';
+import { Wrap, Device } from '../cover';
 
 const ImageMobile = styled('img', {
   width: '100%',
@@ -30,9 +30,9 @@ const ImageTablet = styled('img', {
   }
 });
 
-export default function Cover({ forwardRef }) {
+export default function Cover() {
   return(
-    <Wrap ref={forwardRef} responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+    <Wrap responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
       <Device responsive={{ '@initial': 'mobile' }} device={{ '@m768': 'mobileDual' }}>
         {screenMobile &&
           <ImageMobile src="/projects/pie/cover-mobile.jpg" alt="" />

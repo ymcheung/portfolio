@@ -9,7 +9,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       shade1500: 'hsl(162,2%,92%)',
       shade1200: '162,2%,72%',
       shade1000: 'hsl(162,2%,64%)',
-      shade800: 'hsl(162,2%,56%)',
+      shade800: '162,2%,56%',
       shade700: 'hsl(162,2%,48%)',
       shade600: '162,2%,40%',
       shade300: '162,2%,24%',

@@ -34,7 +34,7 @@ const Circle = styled('circle', {
 });
 
 const Arrow = styled('path', {
-  fill: '$shade800',
+  fill: 'hsl($shade800)',
   transformOrigin: 'center',
 
   variants: {

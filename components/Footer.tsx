@@ -34,7 +34,7 @@ const FooterLayout = styled('div', {
 });
 
 const NameTagDescription = styled('span', {
-  color: '$shade800',
+  color: 'hsl($shade800)',
   fontFamily: '$default',
   fontSize: '$14'
 });

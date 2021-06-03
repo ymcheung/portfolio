@@ -33,11 +33,6 @@ const Button = styled('a', {
           '& circle': {
             fill: 'hsl($shade1200)',
             transition: 'fill $easeIn'
-          },
-
-          '& path': {
-            fill: 'hsla($shade1600,0.75)',
-            transition: 'fill $easeIn'
           }
         }
       }
