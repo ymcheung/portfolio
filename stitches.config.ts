@@ -3,10 +3,12 @@ import { createCss } from '@stitches/react'
 export const { css, styled, global, theme, getCssString } = createCss({
   theme: {
     colors: {
-      laurel: 'hsl(162,57%,62%)',
+      laurel: '162,57%,62%',
+      sun: '50,50%,70%',
 
       shade1600: '162,2%,99%',
       shade1500: '162,2%,92%',
+      shade1400: '162,2%,84%',
       shade1200: '162,2%,72%',
       shade1000: '162,2%,64%',
       shade800:  '162,2%,56%',
@@ -108,15 +110,16 @@ export const { css, styled, global, theme, getCssString } = createCss({
 
 export const darkTheme = theme({
   colors: {
-    shade0: '162,2%,99%',
-    shade100: '162,2%,92%',
-    shade300: '162,2%,72%',
-    shade600: '162,2%,64%',
-    shade700: '162,2%,56%',
-    shade800: '162,2%,48%',
-    shade1000: '162,2%,40%',
-    shade1200: '162,2%,24%',
+    shade0:    '162,2%,99%',
+    shade100:  '162,2%,92%',
+    shade300:  '162,2%,84%',
+    shade600:  '162,2%,72%',
+    shade700:  '162,2%,64%',
+    shade800:  '162,2%,56%',
+    shade1000: '162,2%,48%',
+    shade1200: '162,2%,40%',
+    shade1400: '162,2%,24%',
     shade1500: '162,2%,10%',
-    shade1600: '162,2%,6%'
+    shade1600: '162,2%, 6%'
   }
 });
