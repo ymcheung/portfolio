@@ -3,29 +3,31 @@ import { createCss } from '@stitches/react'
 export const { css, styled, global, theme, getCssString } = createCss({
   theme: {
     colors: {
-      laurel: 'hsl(162,57%,62%)',
+      laurel: '162,57%,62%',
+      sun: '50,50%,70%',
 
       shade1600: '162,2%,99%',
-      shade1500: 'hsl(162,2%,92%)',
+      shade1500: '162,2%,92%',
+      shade1400: '162,2%,84%',
       shade1200: '162,2%,72%',
-      shade1000: 'hsl(162,2%,64%)',
-      shade800: 'hsl(162,2%,56%)',
-      shade700: 'hsl(162,2%,48%)',
-      shade600: '162,2%,40%',
-      shade300: '162,2%,24%',
-      shade100: 'hsl(162,2%,10%)',
-      shade0: '162,2%,6%',
+      shade1000: '162,2%,64%',
+      shade800:  '162,2%,56%',
+      shade700:  '162,2%,48%',
+      shade600:  '162,2%,40%',
+      shade300:  '162,2%,24%',
+      shade100:  '162,2%,10%',
+      shade0:    '162,2%, 6%',
 
-      pie800: 'hsl(240,62%,72%)',
-      pie700: 'hsl(240,62%,64%)',
-      pie400: 'hsl(240,62%,52%)',
-      pie100: 'hsl(240,62%,18%)',
+      pie800: '240,62%,72%',
+      pie700: '240,62%,64%',
+      pie400: '240,62%,52%',
+      pie100: '240,62%,18%',
       pie0: '240,62%,5%',
 
-      mtDawn: 'hsl(16,68%,67%)',
-      mtMidnight700: 'hsl(225,26%,56%)',
-      mtMidnight500: 'hsl(225,26%,45%)',
-      mtMidnight200: 'hsl(225,26%,18%)',
+      mtDawn: '16,68%,67%',
+      mtMidnight700: '225,26%,56%',
+      mtMidnight500: '225,26%,45%',
+      mtMidnight200: '225,26%,18%',
       mtMidnight100: 'hsl(225,26%,12%)',
       mtMidnight0: 'hsl(225,26%,6%)',
 
@@ -36,7 +38,21 @@ export const { css, styled, global, theme, getCssString } = createCss({
       nuomiGold400: 'hsl(32,55%,20%)',
 
       intersection1500: 'hsl(11,71%,61%)',
-      intersection300: 'hsl(11,71%,12%)'
+      intersection300: 'hsl(11,71%,12%)',
+
+      activityHyphen: '$shade1200',
+
+      footerSeparate: '$shade1500',
+      schemeIconDarkBg: '$shade1500',
+      schemeIconLightBg: '$shade300',
+
+      metaTitlePie: '$pie400',
+
+      backgroundPie: '$shade1600',
+      backgroundMoment: '$shade1600',
+
+      navGenericIconBg: '$shade1500',
+      navMomentIconBg:  '$shade1500'
     },
     space: {
       4: '4px',
@@ -105,3 +121,33 @@ export const { css, styled, global, theme, getCssString } = createCss({
     m1200: '(min-width: 1200px)'
   },
 })
+
+export const dark = theme({
+  colors: {
+    shade0:    '162,2%,99%',
+    shade100:  '162,2%,92%',
+    shade300:  '162,2%,84%',
+    shade600:  '162,2%,72%',
+    shade700:  '162,2%,64%',
+    shade800:  '162,2%,56%',
+    shade1000: '162,2%,48%',
+    shade1200: '162,2%,40%',
+    shade1400: '162,2%,24%',
+    shade1500: '162,2%,10%',
+    shade1600: '162,2%, 6%',
+
+    activityHyphen: '$shade1000',
+
+    footerSeparate: '$shade1200',
+    schemeIconDarkBg: '$shade300',
+    schemeIconLightBg: '$shade1400',
+
+    metaTitlePie: '$pie800',
+
+    backgroundPie: '$pie0',
+    backgroundMoment: '$mtMidnight0',
+
+    navGenericIconBg: '$shade1400',
+    navMomentIconBg:  '$mtMidnight200'
+  }
+});

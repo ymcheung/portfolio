@@ -8,7 +8,7 @@ const Icon = styled(Svg, {
 const Document = styled('rect', {
   width: '18px',
   height: '20px',
-  fill: '$shade700',
+  fill: 'hsl($shade700)',
 
   variants: {
     front: {

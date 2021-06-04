@@ -30,10 +30,10 @@ export const MetaItemTitle = styled('strong', {
   variants: {
     project: {
       pie: {
-        color: '$pie800'
+        color: 'hsl($metaTitlePie)'
       },
       moment: {
-        color: '$mtDawn'
+        color: 'hsl($mtDawn)'
       },
       nuomi: {
         color: '$nuomiGold1200'
@@ -47,18 +47,8 @@ export const MetaItemTitle = styled('strong', {
 
 export const MetaItemValue = styled('span', {
   display: 'inline-block',
+  color: 'hsl($shade300)',
   fontFamily: '$mono',
   fontSize: '$14',
-  fontWeight: 500,
-
-  variants: {
-    scheme: {
-      dark: {
-        color: '$shade1000'
-      },
-      light: {
-        color: 'hsl($shade300)'
-      }
-    }
-  }
+  fontWeight: 500
 });

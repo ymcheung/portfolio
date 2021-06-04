@@ -1,10 +1,11 @@
 import { styled } from '../../stitches.config';
 import { screenMobile, screenTablet } from '../../utils/screens';
 
-import { Wrap, Device } from '../ cover';
+import { Wrap, Device } from '../cover';
 
 const ImageMobile = styled('img', {
   width: '100%',
+  minHeight: '458px',
   position: 'relative',
   zIndex: 1,
   borderRadius: '12px',

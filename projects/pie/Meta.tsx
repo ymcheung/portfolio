@@ -5,15 +5,15 @@ export default function Meta() {
     <MetaList responsive={{ '@m768': 'half' }}>
       <MetaItem>
         <MetaItemTitle project="pie">Role</MetaItemTitle>
-        <MetaItemValue scheme="dark">Organizer, UI Designer</MetaItemValue>
+        <MetaItemValue>Organizer, UI Designer</MetaItemValue>
       </MetaItem>
       <MetaItem>
         <MetaItemTitle project="pie">Status</MetaItemTitle>
-        <MetaItemValue scheme="dark">UI Design</MetaItemValue>
+        <MetaItemValue>UI Design</MetaItemValue>
       </MetaItem>
       <MetaItem>
         <MetaItemTitle project="pie">Languages</MetaItemTitle>
-        <MetaItemValue scheme="dark">正體中文, English</MetaItemValue>
+        <MetaItemValue>正體中文, English</MetaItemValue>
       </MetaItem>
     </MetaList>
   );

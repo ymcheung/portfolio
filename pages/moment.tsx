@@ -19,7 +19,7 @@ const pageBody = global({
   'body[data-body-style=moment]': {
     minHeight: '100vh',
     paddingTop: '$16',
-    backgroundColor: '$mtMidnight0'
+    backgroundColor: '$backgroundMoment'
   }
 });
 
@@ -60,7 +60,7 @@ export default function ProjectMoment() {
       />
       <ArticleBackground as="main">
         <Container responsive={{'@m768': 'max640'}}>
-          <Heading itemName="dark">{pageInfo.name}</Heading>
+          <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />
           <Content />
         </Container>
@@ -74,7 +74,7 @@ export default function ProjectMoment() {
         prevSlug="pie-clockin"
         prevBg="pie"
       />
-      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="dark" />
+      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>
   );
 }

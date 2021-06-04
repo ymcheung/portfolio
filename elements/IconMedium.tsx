@@ -7,16 +7,8 @@ const Medium = styled(Svg, {
 });
 
 const Oval = styled('path', {
-  fill: 'black'
+  fill: 'hsl($shade0)'
 });
-
-// const Background = styled.path<DarkModeProps>`
-//   fill: ${props => props.darkmode ? '#FDFDFF' : '#1A1918'};
-// `;
-
-// const Text = styled.path<DarkModeProps>`
-//   fill: ${props => props.darkmode ? '#1A1918' : '#FDFDFF'};
-// `;
 
 function IconMedium() {
   return(

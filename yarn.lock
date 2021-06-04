@@ -186,6 +186,11 @@
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.1.tgz#18845205e86ff0038517aab7a18a62a6b9f71275"
   integrity sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==
 
+"@types/underscore@^1.11.2":
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/@types/underscore/-/underscore-1.11.2.tgz#9441e0f6402bbcb72dbee771582fa57c5a1dedd3"
+  integrity sha512-Ls2ylbo7++ITrWk2Yc3G/jijwSq5V3GT0tlgVXEl2kKYXY3ImrtmTCoE2uyTWFRI5owMBriloZFWbE1SXOsE7w==
+
 "@typescript-eslint/experimental-utils@3.10.1":
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-3.10.1.tgz#e179ffc81a80ebcae2ea04e0332f8b251345a686"
@@ -1727,6 +1732,11 @@ next-i18next@^8.2.0:
     i18next-fs-backend "^1.0.7"
     react-i18next "^11.8.13"
 
+next-themes@^0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.0.14.tgz#2b9861990bc453149e23d8e6ef1a25a119e36675"
+  integrity sha512-x09OaM+wg3SIlEjOv8B21aw/E36jxTtfW3Dm/DPwMsSMluGt7twe1LigA6nc+mXP1u0qu9MxBaIrPPH6UTiKnA==
+
 next@^10.2.0:
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/next/-/next-10.2.0.tgz#6654cc925d8abcb15474fa062fc6b3ee527dd6dc"
@@ -2631,6 +2641,11 @@ unbox-primitive@^1.0.0:
     has-bigints "^1.0.1"
     has-symbols "^1.0.2"
     which-boxed-primitive "^1.0.2"
+
+underscore@^1.13.1:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.13.1.tgz#0c1c6bd2df54b6b69f2314066d65b6cde6fcf9d1"
+  integrity sha512-hzSoAVtJF+3ZtiFX0VgfFPHEDRm7Y/QPjGyNo4TVdnDTdft3tr8hEkD25a1jC+TjTuE7tkHGKkhwCgs9dgBB2g==
 
 unpipe@1.0.0:
   version "1.0.0"

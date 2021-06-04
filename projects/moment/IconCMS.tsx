@@ -12,7 +12,7 @@ const File = styled('rect', {
 });
 
 const Bracket = styled('path', {
-  fill: '$shade700'
+  fill: 'hsl($shade700)'
 });
 
 function IconCMS() {

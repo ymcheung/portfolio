@@ -14,17 +14,14 @@ const Icon = styled(Svg, {
 const Circle = styled('circle', {
   variants: {
     background: {
-      dark: {
-        fill: 'hsl($shade300)'
-      },
-      light: {
-        fill: '$shade1500'
+      generic: {
+        fill: 'hsl($navGenericIconBg)'
       },
       pie: {
         fill: '$pie100'
       },
       moment: {
-        fill: '$mtMidnight200'
+        fill: 'hsl($navMomentIconBg)'
       },
       nuomi: {
         fill: '$nuomiGold400'
@@ -34,7 +31,7 @@ const Circle = styled('circle', {
 });
 
 const Arrow = styled('path', {
-  fill: '$shade800',
+  fill: 'hsl($shade800)',
   transformOrigin: 'center',
 
   variants: {

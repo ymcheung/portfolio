@@ -2,6 +2,7 @@ import { styled } from '../stitches.config';
 import { ListItem } from './layout';
 
 export const ContentTitle = styled('h2', {
+  color: 'hsl($shade100)',
   fontFamily: '$default',
   fontWeight: 600,
 
@@ -42,14 +43,6 @@ export const ContentTitle = styled('h2', {
         lineHeight: '32px',
       }
     },
-    scheme: {
-      dark: {
-        color: '$shade1500'
-      },
-      light: {
-        color: 'hsl($shade600)'
-      }
-    },
     nounderline: {
       true: {
         textDecoration: 'none'
@@ -73,6 +66,7 @@ export const Section = styled('section', {
 export const Paragraph = styled('p', {
   margin: '0 0 $16',
   fontFamily: '$default',
+  color: 'hsl($shade600)',
   fontSize: '$16',
   lineHeight: '24px',
 
@@ -91,24 +85,12 @@ export const Paragraph = styled('p', {
       true: {
         fontSize: '$14'
       }
-    },
-    scheme: {
-      dark: {
-        color: 'hsl($shade1200)',
-
-        '& .paragraph-link': {
-          color: '$shade1500',
-        }
-      },
-      light: {
-        color: 'hsl($shade600)',
-
-        '& .paragraph-link': {
-          color: 'hsl($shade300)',
-        }
-      }
     }
-  }
+  },
+
+  '& .paragraph-link': {
+    color: 'hsl($shade300)'
+  },
 });
 
 export const ContentList = styled('ul', {
@@ -117,7 +99,7 @@ export const ContentList = styled('ul', {
 });
 
 export const ContentListItem = styled(ListItem, {
-  color: 'hsl($shade1200)',
+  color: 'hsl($shade600)',
   fontFamily: '$default',
   fontSize: '$16',
   lineHeight: '24px'

@@ -4,23 +4,15 @@ import { Heading } from './headings';
 
 import { AUTHOR } from '../constant';
 
+import ToggleScheme from './ToggleScheme';
+
 const Separate = styled('hr', {
   width: '120px',
   margin: '0 auto $8 0',
   border: 0,
+  borderBottomColor: 'hsl($footerSeparate)',
   borderBottomWidth: '1px',
-  borderBottomStyle: 'solid',
-  
-  variants: {
-    scheme: {
-      dark: {
-        borderBottomColor: 'hsl($shade300)'
-      },
-      light: {
-        borderBottomColor: '$shade1500'
-      }
-    }
-  }
+  borderBottomStyle: 'solid'
 });
 
 const FooterLayout = styled('div', {
@@ -34,7 +26,7 @@ const FooterLayout = styled('div', {
 });
 
 const NameTagDescription = styled('span', {
-  color: '$shade800',
+  color: 'hsl($shade800)',
   fontFamily: '$default',
   fontSize: '$14'
 });
@@ -42,18 +34,18 @@ const NameTagDescription = styled('span', {
 interface FooterProps {
   readonly responsive: {};
   readonly inproject?: {};
-  readonly scheme: 'dark' | 'light';
 }
 
-function Footer({ responsive, inproject, scheme }: FooterProps) {
+function Footer({ responsive, inproject }: FooterProps) {
   const Year = new Date().getFullYear();
 
   return(
     <Container as="footer" responsive={responsive} footerend>
       <FooterLayout inproject={inproject}>
-        <Separate scheme={scheme} />
-        <Heading as="strong" nametag="footer" footerscheme={scheme}>{AUTHOR}</Heading>
+        <Separate />
+        <Heading as="strong" nametag="footer">{AUTHOR}</Heading>
         <NameTagDescription>Portfolio {Year}</NameTagDescription>
+        <ToggleScheme />
       </FooterLayout>
     </Container>
   );

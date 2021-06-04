@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState} from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
@@ -20,23 +20,26 @@ const pageBody = global({
   'body[data-body-style=pie]': {
     minHeight: '100vh',
     paddingTop: '560px',
-    backgroundColor: 'hsl($pie0)'
+    backgroundColor: 'hsl($backgroundPie)'
   }
 });
 
-export default function ProjectPie() {
-  const router = useRouter();
-
+function ProjectPie() {
   const pageInfo = {
     name: 'Explore UI of a Clock-In Web App',
     description: 'A side project exploring fluent UI design.',
     datePublished: '2020-08-29',
     dateModified: '2021-05-20'
-  }
+  };
+
+  const router = useRouter();
+  const articleRef = useRef<HTMLElement>(null);
+  const [overlapped, setOverlapped] = useState(false);
 
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'pie');
-  });
+  }, []);
+
   pageBody();
 
   const schema = {
@@ -60,15 +63,15 @@ export default function ProjectPie() {
         canonical={router.pathname}
       />
       <Cover />
-      <ArticleBackground as="main" project="pie">
+      <ArticleBackground ref={articleRef} as="main" project="pie">
         <Container responsive={{'@m768': 'max640'}}>
-          <Heading itemName="dark">{pageInfo.name}</Heading>
+          <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />
           <Content />
         </Container>
       </ArticleBackground>
-      <Nav scheme="dark" hasNext="The Moment" nextSlug="moment" nextBg="moment" project="pie" />
-      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="dark" />
+      <Nav hasNext="The Moment" nextSlug="moment" nextBg="moment" project="pie" />
+      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>
   );
 }
@@ -78,3 +81,5 @@ export const getStaticProps = async ({ locale }) => ({
     ...await serverSideTranslations(locale, ['pie']),
   },
 });
+
+export default ProjectPie;

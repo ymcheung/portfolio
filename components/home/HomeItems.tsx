@@ -79,7 +79,7 @@ export const HomeItemImage = styled('img', {
 });
 
 export const HomeItemDescription = styled('span', {
-  color: '$shade800',
+  color: 'hsl($shade800)',
   fontFamily: '$default',
   fontSize: '1.4rem',
   fontWeight: 400

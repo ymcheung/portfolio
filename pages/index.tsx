@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 
-import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from '../constant';
 import HeadMeta from '../utils/HeadMeta';
@@ -24,7 +23,7 @@ const pageBody = global({
 });
 
 const NameDescription = styled('span', {
-  color: '$shade700',
+  color: 'hsl($shade700)',
   fontFamily: '$default',
   fontSize: '$14'
 });
@@ -36,8 +35,6 @@ export default function Home() {
 
   pageBody();
 
-  const { t } = useTranslation('home');
-  
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@graph':
@@ -92,14 +89,14 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,600;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet" />
       </Head>
       <HeadMeta />
-      <Container as="header" responsive={{'@m992': 'max960', '@m1200': 'max1168'}} hassibling>
+      <Container as="header" responsive={{'@m992': 'max960', '@m1200': 'max1168'}} className={null} hassibling>
         <Heading as="h1" nametag="home">{AUTHOR}</Heading>
         <NameDescription>{DESCRIPTION}</NameDescription>
       </Container>
       <Projects />
       <Activity />
       <ExternalLinks />
-      <Footer responsive={{'@m992': 'max960', '@m1200': 'max1168'}} scheme="light" />
+      <Footer responsive={{'@m992': 'max960', '@m1200': 'max1168'}} />
     </>
   )
 }

@@ -15,6 +15,7 @@ const NavList = styled('ul', {
   zIndex: 2,
   margin: 0,
   padding: 0,
+  backdropFilter: 'blur(12px)',
 
   variants: {
     responsive: {
@@ -26,10 +27,10 @@ const NavList = styled('ul', {
     },
     project: {
       pie: {
-        backgroundColor: 'hsla($pie0, 0.92)'
+        backgroundColor: 'hsla($backgroundPie, 0.95)'
       },
       nuomi: {
-        backgroundColor: 'hsla($nuomiBlack0, 0.92)'
+        backgroundColor: 'hsla($nuomiBlack0, 0.95)'
       }
     }
   }
@@ -57,21 +58,11 @@ const NavItem = styled('li', {
 const NavItemLink = styled('a', {
   display: 'inline-block',
   minWidth: '60px',
+  color: 'hsl($shade300)',
   fontFamily: '$default',
   fontSize: '$14',
   lineHeight: '28px',
-  textDecoration: 'none',
-
-  variants: {
-    scheme: {
-      dark: {
-        color: 'hsl($shade1200)'
-      },
-      light: {
-        color: 'hsl($shade300)'
-      }
-    }
-  }
+  textDecoration: 'none'
 });
 
 interface NavProps {
@@ -92,7 +83,7 @@ function Nav({ project, hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, sc
         {hasPrev &&
           <NavItem position="prev">
             <Link href={`/${prevSlug}`} passHref>
-              <NavItemLink scheme={scheme}>
+              <NavItemLink>
                 <IconArrow purpose="prev" gotoText={hasPrev} background={prevBg} />&nbsp;
                 {hasPrev}
               </NavItemLink>
@@ -102,7 +93,7 @@ function Nav({ project, hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, sc
         {hasNext &&
           <NavItem position="next">
             <Link href={`/${nextSlug}`} passHref>
-              <NavItemLink scheme={scheme}>
+              <NavItemLink>
                 {hasNext}
                 &nbsp;<IconArrow purpose="next" gotoText={hasNext} background={nextBg}  />
               </NavItemLink>
@@ -111,8 +102,8 @@ function Nav({ project, hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, sc
         }
         <NavItem position="home">
           <Link href="/" passHref>
-            <NavItemLink scheme={scheme}>
-              <IconArrow background={scheme} />&nbsp;
+            <NavItemLink>
+              <IconArrow background="generic" />&nbsp;
               Home
             </NavItemLink>
           </Link>

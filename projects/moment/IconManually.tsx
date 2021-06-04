@@ -8,13 +8,13 @@ const Icon = styled(Svg, {
 const Third = styled('rect', {
   width: '18px',
   height: '20px',
-  fill: '$shade700'
+  fill: 'hsl($shade700)'
 });
 
 const FirstTwo = styled('rect', {
   width: '19px',
   height: '21px',
-  fill: '$shade700',
+  fill: 'hsl($shade700)',
   stroke: '$mtMidnight100'
 });
 
