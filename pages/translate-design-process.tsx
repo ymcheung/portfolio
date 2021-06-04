@@ -69,7 +69,6 @@ export default function ProjectProcess() {
         hasPrev="Intersection"
         prevSlug="intersection"
         prevBg="light"
-        scheme="light"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>

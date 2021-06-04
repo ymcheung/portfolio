@@ -66,7 +66,6 @@ export default function ProjectMoment() {
         </Container>
       </ArticleBackground>
       <Nav
-        scheme="dark"
         hasNext="Nuomi&rsquo;s Portfolio"
         nextSlug="nuomi"
         nextBg="nuomi"
