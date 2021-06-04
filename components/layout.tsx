@@ -28,7 +28,23 @@ export const Container = styled('div', {
     },
     footerend: {
       true: {
-        paddingBottom: '64px'
+        paddingBottom: '32px'
+      }
+    }
+  }
+});
+
+export const GalleryContainer = styled('section', {
+  marginBottom: '$16',
+  padding: '$16 0',
+
+  variants: {
+    project: {
+      pie: {
+        backgroundColor: 'hsl($pie0)'
+      },
+      nuomi: {
+        backgroundColor: 'hsl($nuomiBlack0)'
       }
     }
   }
@@ -38,17 +54,6 @@ export const ArticleBackground = styled('div', {
   position: 'relative',
   zIndex: 2,
   paddingBottom: '64px',
-
-  variants: {
-    project: {
-      pie: {
-        backgroundColor: 'hsla($backgroundPie, 0.95)',
-      },
-      nuomi: {
-        backgroundColor: 'hsla($nuomiBlack0, 0.92)',
-      }
-    }
-  }
 });
 
 export const ListItem = styled('li', {

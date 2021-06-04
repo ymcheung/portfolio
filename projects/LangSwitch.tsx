@@ -41,7 +41,7 @@ function LangSwitch() {
   const langName = i18n.language === 'en' ? '中文' : 'English';
 
   return(
-    <Link href={router.pathname} locale={router.locale === 'en' ? 'zh-Hant-TW' : 'en'} passHref>
+    <Link href={`${router.pathname}#article`} locale={router.locale === 'en' ? 'zh-Hant-TW' : 'en'} passHref>
       <Button data-splitbee-event={`切換語言：${langName}`}>
         <IconLangSwitch />
         <LangName>{langName}</LangName>

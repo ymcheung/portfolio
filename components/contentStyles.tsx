@@ -51,7 +51,7 @@ export const ContentTitle = styled('h2', {
   }
 });
 
-export const Section = styled('section', {
+export const Section = styled('div', {
   marginBottom: '$24',
 
   variants: {

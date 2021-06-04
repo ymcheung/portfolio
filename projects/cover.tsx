@@ -4,7 +4,8 @@ export const Wrap = styled('header', {
   variants: {
     responsive: {
       mobile: {
-        paddingY: '36px'
+        marginBottom: '$16',
+        paddingY: '24px'
       },
       tablet: {
         top: 0
