@@ -18,10 +18,10 @@ export const { css, styled, global, theme, getCssString } = createCss({
       shade100:  '162,2%,10%',
       shade0:    '162,2%, 6%',
 
-      pie800: 'hsl(240,62%,72%)',
-      pie700: 'hsl(240,62%,64%)',
-      pie400: 'hsl(240,62%,52%)',
-      pie100: 'hsl(240,62%,18%)',
+      pie800: '240,62%,72%',
+      pie700: '240,62%,64%',
+      pie400: '240,62%,52%',
+      pie100: '240,62%,18%',
       pie0: '240,62%,5%',
 
       mtDawn: '16,68%,67%',
@@ -46,7 +46,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       schemeIconDarkBg: '$shade1500',
       schemeIconLightBg: '$shade300',
 
-      langButtonBg: 'hsl($shade1500)',
+      metaTitlePie: '$pie400',
 
       backgroundPie: '$shade1600',
       backgroundMoment: '$shade1600',
@@ -141,6 +141,8 @@ export const dark = theme({
     footerSeparate: '$shade1200',
     schemeIconDarkBg: '$shade300',
     schemeIconLightBg: '$shade1400',
+
+    metaTitlePie: '$pie800',
 
     backgroundPie: '$pie0',
     backgroundMoment: '$mtMidnight0',

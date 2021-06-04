@@ -14,7 +14,7 @@ const Button = styled('a', {
   transition: 'background-color $easeOut',
 
   '&:active, &:hover': {
-    background: 'hsl($shade300)',
+    background: 'hsl($shade1400)',
     transition: 'background-color $easeIn',
 
     '& circle': {
@@ -22,30 +22,6 @@ const Button = styled('a', {
       transition: 'fill $easeIn'
     }
   }
-
-  // variants: {
-  //   scheme: {
-  //     dark: {
-  //       background: 'hsl($shade100)',
-
-        
-  //     },
-  //     light: {
-  //       background: 'hsl($shade1500)',
-  //       transition: 'background-color $easeOut',
-
-  //       '&:active, &:hover': {
-  //         background: 'hsla($shade1200, 0.5)',
-  //         transition: 'background-color $easeIn',
-
-  //         '& circle': {
-  //           fill: 'hsl($shade1200)',
-  //           transition: 'fill $easeIn'
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 });
 
 const LangName = styled('span', {
