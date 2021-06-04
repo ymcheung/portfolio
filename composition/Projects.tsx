@@ -21,7 +21,7 @@ function Projects() {
 
   return(
     <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} hassibling>
-      <Heading as="h2" position="homeSection">P<small>rojects</small></Heading>
+      <Heading position="homeSection">P<small>rojects</small></Heading>
       <HomeItemsLayout forprojects={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <Link href="/pie-clockin" passHref>
           <HomeItemLink forprojects>
@@ -30,7 +30,7 @@ function Projects() {
                 <HomeItemImage src={`/home/shot/pie/${resolvedTheme}.jpg`} alt="Clock-In Feature of Pie: a Clock-In Web App" />
               </HomeItemCover>
               <figcaption>
-                <Heading as="h2" position="homeItemName">
+                <Heading position="homeItemName">
                   <Verb item="pie">Explore</Verb> UI of a Clock-In Web App
                 </Heading>
               </figcaption>
@@ -44,7 +44,7 @@ function Projects() {
               <HomeItemImage src={`/home/shot/moment/${resolvedTheme}.jpg`} alt="Moment" />
             </HomeItemCover>
               <figcaption>
-                <Heading as="h2" position="homeItemName">
+                <Heading position="homeItemName">
                   <Verb item="moment">Explore</Verb> the moment when hearing a song in the movies/dramas
                 </Heading>
               </figcaption>

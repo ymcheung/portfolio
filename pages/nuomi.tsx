@@ -62,7 +62,7 @@ export default function ProjectNuomi() {
       <Cover />
       <ArticleBackground as="main" project="nuomi">
         <Container responsive={{'@m768': 'max640'}}>
-          <Heading itemName="dark">{pageInfo.name}</Heading>
+          <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />
           <Content />
         </Container>
@@ -77,7 +77,7 @@ export default function ProjectNuomi() {
         prevBg="moment"
         project="nuomi"
       />
-      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="dark" />
+      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>
   );
 }

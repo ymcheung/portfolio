@@ -60,7 +60,7 @@ export default function ProjectIntersection() {
       />
       <ArticleBackground as="main">
         <Container responsive={{'@m768': 'max640'}}>
-          <Heading itemName="light">{pageInfo.name}</Heading>
+          <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />
           <Content />
         </Container>
@@ -74,7 +74,7 @@ export default function ProjectIntersection() {
         prevBg="light"
         scheme="light"
       />
-      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="light" />
+      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>
   );
 }
