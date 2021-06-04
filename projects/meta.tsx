@@ -33,7 +33,7 @@ export const MetaItemTitle = styled('strong', {
         color: '$pie800'
       },
       moment: {
-        color: '$mtDawn'
+        color: 'hsl($mtDawn)'
       },
       nuomi: {
         color: '$nuomiGold1200'

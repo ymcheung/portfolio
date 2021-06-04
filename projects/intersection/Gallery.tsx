@@ -12,7 +12,6 @@ const GalleryList = styled('ul', {
   overflowX: 'auto',
   margin: '0 -16px',
   padding: '0 32px $8',
-  backdropFilter: 'blur(4px)',
 
   variants: {
     responsive: {

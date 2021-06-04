@@ -24,10 +24,10 @@ export const { css, styled, global, theme, getCssString } = createCss({
       pie100: 'hsl(240,62%,18%)',
       pie0: '240,62%,5%',
 
-      mtDawn: 'hsl(16,68%,67%)',
-      mtMidnight700: 'hsl(225,26%,56%)',
-      mtMidnight500: 'hsl(225,26%,45%)',
-      mtMidnight200: 'hsl(225,26%,18%)',
+      mtDawn: '16,68%,67%',
+      mtMidnight700: '225,26%,56%',
+      mtMidnight500: '225,26%,45%',
+      mtMidnight200: '225,26%,18%',
       mtMidnight100: 'hsl(225,26%,12%)',
       mtMidnight0: 'hsl(225,26%,6%)',
 
@@ -48,7 +48,11 @@ export const { css, styled, global, theme, getCssString } = createCss({
 
       langButtonBg: 'hsl($shade1500)',
 
-      backgroundPie: '$shade1600'
+      backgroundPie: '$shade1600',
+      backgroundMoment: '$shade1600',
+
+      navGenericIconBg: '$shade1500',
+      navMomentIconBg:  '$shade1500'
     },
     space: {
       4: '4px',
@@ -138,6 +142,10 @@ export const dark = theme({
     schemeIconDarkBg: '$shade300',
     schemeIconLightBg: '$shade1400',
 
-    backgroundPie: '$pie0'
+    backgroundPie: '$pie0',
+    backgroundMoment: '$mtMidnight0',
+
+    navGenericIconBg: '$shade1400',
+    navMomentIconBg:  '$mtMidnight200'
   }
 });

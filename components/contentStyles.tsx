@@ -2,6 +2,7 @@ import { styled } from '../stitches.config';
 import { ListItem } from './layout';
 
 export const ContentTitle = styled('h2', {
+  color: 'hsl($shade100)',
   fontFamily: '$default',
   fontWeight: 600,
 
@@ -40,14 +41,6 @@ export const ContentTitle = styled('h2', {
         fontWeight: 800,
         fontStyle: 'italic',
         lineHeight: '32px',
-      }
-    },
-    scheme: {
-      dark: {
-        color: 'hsl($shade1500)'
-      },
-      light: {
-        color: 'hsl($shade600)'
       }
     },
     nounderline: {
@@ -106,7 +99,7 @@ export const ContentList = styled('ul', {
 });
 
 export const ContentListItem = styled(ListItem, {
-  color: 'hsl($shade1200)',
+  color: 'hsl($shade600)',
   fontFamily: '$default',
   fontSize: '$16',
   lineHeight: '24px'

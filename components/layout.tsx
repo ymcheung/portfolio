@@ -38,7 +38,7 @@ export const ArticleBackground = styled('div', {
   position: 'relative',
   zIndex: 2,
   paddingBottom: '64px',
-  backdropFilter: 'blur(4px)',
+  backdropFilter: 'blur(12px)',
 
   '&::before': {
     width: '100%',
