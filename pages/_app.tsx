@@ -10,7 +10,7 @@ function Portfolio({ Component, pageProps }) {
   return (
     <ThemeProvider
       attribute='class'
-      defaultTheme='system'
+      defaultTheme='light'
       value={{
         dark: dark.className,
         light: 'light',

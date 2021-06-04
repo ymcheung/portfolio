@@ -9,6 +9,7 @@ export const Wrap = styled('header', {
   variants: {
     responsive: {
       mobile: {
+        minHeight: '458px',
         top: '36px'
       },
       tablet: {
