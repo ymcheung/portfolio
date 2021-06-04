@@ -9,56 +9,53 @@ const Button = styled('a', {
   display: 'inline-block',
   margin: '0 0 12px -8px',
   padding: '$8',
+  background: 'hsl($shade1500)',
   borderRadius: '4px',
+  transition: 'background-color $easeOut',
 
-  variants: {
-    scheme: {
-      dark: {
-        background: 'hsl($shade100)',
-        transition: 'background-color $easeOut',
+  '&:active, &:hover': {
+    background: 'hsl($shade300)',
+    transition: 'background-color $easeIn',
 
-        '&:active, &:hover': {
-          background: 'hsl($shade300)',
-          transition: 'background-color $easeIn'
-        }
-      },
-      light: {
-        background: 'hsl($shade1500)',
-        transition: 'background-color $easeOut',
-
-        '&:active, &:hover': {
-          background: 'hsla($shade1200, 0.5)',
-          transition: 'background-color $easeIn',
-
-          '& circle': {
-            fill: 'hsl($shade1200)',
-            transition: 'fill $easeIn'
-          }
-        }
-      }
+    '& circle': {
+      fill: 'hsl($shade1200)',
+      transition: 'fill $easeIn'
     }
   }
+
+  // variants: {
+  //   scheme: {
+  //     dark: {
+  //       background: 'hsl($shade100)',
+
+        
+  //     },
+  //     light: {
+  //       background: 'hsl($shade1500)',
+  //       transition: 'background-color $easeOut',
+
+  //       '&:active, &:hover': {
+  //         background: 'hsla($shade1200, 0.5)',
+  //         transition: 'background-color $easeIn',
+
+  //         '& circle': {
+  //           fill: 'hsl($shade1200)',
+  //           transition: 'fill $easeIn'
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 });
 
 const LangName = styled('span', {
   display: 'inline-block',
   paddingLeft: '4px',
   verticalAlign: 'bottom',
-  color: 'hsl($shade1200)',
+  color: 'hsl($shade600)',
   fontFamily: '$default',
   fontSize: '$14',
-  lineHeight: '20px',
-
-  variants: {
-    scheme: {
-      dark: {
-        color: 'hsl($shade1200)'
-      },
-      light: {
-        color: 'hsl($shade600)'
-      }
-    }
-  }
+  lineHeight: '20px'
 });
 
 function LangSwitch({ scheme }) {
@@ -69,9 +66,9 @@ function LangSwitch({ scheme }) {
 
   return(
     <Link href={router.pathname} locale={router.locale === 'en' ? 'zh-Hant-TW' : 'en'} passHref>
-      <Button scheme={scheme} data-splitbee-event="切換語言">
+      <Button data-splitbee-event={`切換語言：${langName}`}>
         <IconLangSwitch scheme={scheme} />
-        <LangName scheme={scheme}>{langName}</LangName>
+        <LangName>{langName}</LangName>
       </Button>
     </Link>
   );

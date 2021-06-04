@@ -45,9 +45,7 @@ function Footer({ responsive, inproject }: FooterProps) {
         <Separate />
         <Heading as="strong" nametag="footer">{AUTHOR}</Heading>
         <NameTagDescription>Portfolio {Year}</NameTagDescription>
-        {!inproject &&
-          <ToggleScheme />
-        }
+        <ToggleScheme />
       </FooterLayout>
     </Container>
   );

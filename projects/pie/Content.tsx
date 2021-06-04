@@ -65,7 +65,6 @@ export default function Content() {
   return(
     <article>
       <LangSwitch scheme="dark" />
-      <ToggleScheme />
       <Section>
         <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>

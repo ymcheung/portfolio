@@ -51,7 +51,7 @@ export const ArticleBackground = styled('div', {
   variants: {
     project: {
       pie: {
-        backgroundColor: 'hsla($backgroundPie, 0.92)',
+        backgroundColor: 'hsla($backgroundPie, 0.95)',
 
         '&::before': {
           backgroundImage: `

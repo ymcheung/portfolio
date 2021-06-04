@@ -46,6 +46,8 @@ export const { css, styled, global, theme, getCssString } = createCss({
       schemeIconDarkBg: '$shade1500',
       schemeIconLightBg: '$shade300',
 
+      langButtonBg: 'hsl($shade1500)',
+
       backgroundPie: '$shade1600'
     },
     space: {
