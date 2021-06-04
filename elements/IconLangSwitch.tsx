@@ -13,7 +13,7 @@ const Bubble = styled('path', {
   fill: 'hsla($shade800, 0.75)'
 });
 
-function IconLangSwitch({ scheme }) {
+function IconLangSwitch() {
   return(
     <Icon viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <Circle cx="10" cy="10" r="10"/>

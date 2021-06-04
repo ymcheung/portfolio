@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
 
 import LangSwitch from '../LangSwitch';
-import ToggleScheme from '../../components/ToggleScheme';
+// import ToggleScheme from '../../components/ToggleScheme';
 
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
@@ -64,7 +64,7 @@ export default function Content() {
 
   return(
     <article>
-      <LangSwitch scheme="dark" />
+      <LangSwitch />
       <Section>
         <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>

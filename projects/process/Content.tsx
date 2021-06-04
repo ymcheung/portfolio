@@ -63,37 +63,37 @@ export default function Content() {
 
   return(
     <article>
-      <LangSwitch scheme="light" />
+      <LangSwitch />
       <Section>
-        <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>
       <Section>
-        <ContentTitle purpose="section" scheme="light" dangerouslySetInnerHTML={{__html: t('worth.title')}} />
+        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('worth.title')}} />
         <FeatureList space={{ '@initial': 'mobile', '@m768': itemSpace }}>
           <FeatureItem nomark="true" responsive={{ '@m768': 'tablet' }}>
-            <ContentTitle as="strong" featurednumber="large" scheme="light">
+            <ContentTitle as="strong" featurednumber="large">
               4.7
               <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
             </ContentTitle>
             <div>
-              <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('worth.position')}} />
-              <Paragraph as="div" postmark scheme="light" dangerouslySetInnerHTML={{__html: t('worth.asof')}} sectionend />
+              <Paragraph dangerouslySetInnerHTML={{__html: t('worth.position')}} />
+              <Paragraph as="div" postmark dangerouslySetInnerHTML={{__html: t('worth.asof')}} sectionend />
             </div>
           </FeatureItem>
         </FeatureList>
       </Section>
       <Section>
-        <ContentTitle purpose="section" scheme="light" dangerouslySetInnerHTML={{__html: t('retro.title')}} />
+        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retro.title')}} />
         <IconList>
           <IconListItem prefixwidth="48" purpose="noTitle">
             <div><RetroIcon src="/projects/process/bubbleGit.svg" alt={t('retro.knowledge.alt')} /></div>
-            <IconListDescription scheme="light" sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.knowledge.description')}} />
+            <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.knowledge.description')}} />
           </IconListItem>
           <IconListItem prefixwidth="48" purpose="noTitle">
             <div><RetroIcon src="/projects/process/bubbleObstacle.svg" alt={t('retro.obstacle.alt')} /></div>
             <div>
-              <IconListDescription scheme="light" sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.obstacle.description')}} />
-              <Paragraph as="div" postmark scheme="light" dangerouslySetInnerHTML={{__html: t('retro.obstacle.by')}} sectionend />
+              <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.obstacle.description')}} />
+              <Paragraph as="div" postmark dangerouslySetInnerHTML={{__html: t('retro.obstacle.by')}} sectionend />
             </div>
           </IconListItem>
         </IconList>

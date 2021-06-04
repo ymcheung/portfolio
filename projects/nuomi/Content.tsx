@@ -26,32 +26,32 @@ export default function Content() {
 
   return(
     <article>
-      <LangSwitch scheme="dark" />
+      <LangSwitch />
       <Section>
-        <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('experience.title')}} />
-        <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('experience.featured')}} indent sectionend />
+        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('experience.title')}} />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('experience.featured')}} indent sectionend />
       </Section>
       <Section>
         <Gallery galleryItemAlt={galleryItemAlt} />
       </Section>
       <Section>
-        <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.title')}} />
-        <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.description')}} indent />
+        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retrospect.title')}} />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('retrospect.description')}} indent />
         <IconList>
           <IconListItem nomark="true">
             <div><IconLock /></div>
-            <ContentTitle as="h3" purpose="iconListItem" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.https.title')}} />
-            <IconListDescription scheme="dark" sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.https.description')}} />
+            <ContentTitle as="h3" purpose="iconListItem" dangerouslySetInnerHTML={{__html: t('retrospect.https.title')}} />
+            <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.https.description')}} />
           </IconListItem>
           <IconListItem nomark="true">
             <div><IconStructured /></div>
-            <ContentTitle as="h3" purpose="iconListItem" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.structured.title')}} />
-            <IconListDescription scheme="dark" sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.structured.description')}} />
+            <ContentTitle as="h3" purpose="iconListItem" dangerouslySetInnerHTML={{__html: t('retrospect.structured.title')}} />
+            <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.structured.description')}} />
           </IconListItem>
           <IconListItem nomark="true">
             <div><IconAccessibility /></div>
-            <ContentTitle as="h3" purpose="iconListItem" scheme="dark" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.title')}} />
-            <IconListDescription scheme="dark" sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.description')}} />
+            <ContentTitle as="h3" purpose="iconListItem" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.title')}} />
+            <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.description')}} />
           </IconListItem>
         </IconList>
       </Section>

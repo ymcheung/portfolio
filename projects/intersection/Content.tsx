@@ -59,34 +59,34 @@ export default function Content() {
 
   return(
     <article>
-      <LangSwitch scheme="light" />
+      <LangSwitch />
       <Section>
-        <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>
       <Section>
-        <ContentTitle purpose="section" scheme="light" dangerouslySetInnerHTML={{__html: t('stat.title')}} />
+        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('stat.title')}} />
         <FeatureList space={itemSpace}>
           <ListItem nomark>
-            <ContentTitle featurednumber="normal" scheme="light">40+</ContentTitle>
-            <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('stat.count')}} sectionend />
+            <ContentTitle featurednumber="normal">40+</ContentTitle>
+            <Paragraph dangerouslySetInnerHTML={{__html: t('stat.count')}} sectionend />
           </ListItem>
           <ListItem nomark>
-            <ContentTitle featurednumber="normal" scheme="light">3,600+</ContentTitle>
-            <Paragraph scheme="light" dangerouslySetInnerHTML={{__html: t('stat.followers')}} sectionend />
+            <ContentTitle featurednumber="normal">3,600+</ContentTitle>
+            <Paragraph dangerouslySetInnerHTML={{__html: t('stat.followers')}} sectionend />
           </ListItem>
         </FeatureList>
       </Section>
       <Section>
-        <ContentTitle purpose="section" scheme="light" dangerouslySetInnerHTML={{__html: t('standalone.title')}} />
+        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('standalone.title')}} />
         <IconList>
           {t<string, websiteProps>('standalone.websites', { returnObjects: true }).map(({ slug, url, name, time, description }: websiteProps, index: number) => (
             <IconListItem nomark="true" purpose="timestamp" key={index}>
               <div><IconListImage src={`/projects/intersection/${slug}_24.jpg`} alt="" /></div>
               <Link href={url} passHref>
-                <ContentTitle as="a" purpose="iconListItem" scheme="light" dangerouslySetInnerHTML={{__html: name}} data-splitbee-event={`Website Translation: ${name}`} target="_blank" rel="noopener" nounderline />
+                <ContentTitle as="a" purpose="iconListItem" dangerouslySetInnerHTML={{__html: name}} data-splitbee-event={`Website Translation: ${name}`} target="_blank" rel="noopener" nounderline />
               </Link>
-              <IconListDescription scheme="light" dangerouslySetInnerHTML={{__html: description}} sectionend="true" />
-              <IconListTimestamp as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} scheme="light" postmark="true" sectionend="true" />
+              <IconListDescription dangerouslySetInnerHTML={{__html: description}} sectionend="true" />
+              <IconListTimestamp as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} postmark="true" sectionend="true" />
             </IconListItem>
           ))}
         </IconList>

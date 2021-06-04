@@ -34,7 +34,7 @@ const LangName = styled('span', {
   lineHeight: '20px'
 });
 
-function LangSwitch({ scheme }) {
+function LangSwitch() {
   const router = useRouter();
   const { i18n } = useTranslation();
 
@@ -43,7 +43,7 @@ function LangSwitch({ scheme }) {
   return(
     <Link href={router.pathname} locale={router.locale === 'en' ? 'zh-Hant-TW' : 'en'} passHref>
       <Button data-splitbee-event={`切換語言：${langName}`}>
-        <IconLangSwitch scheme={scheme} />
+        <IconLangSwitch />
         <LangName>{langName}</LangName>
       </Button>
     </Link>
