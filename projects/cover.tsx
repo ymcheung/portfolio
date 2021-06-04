@@ -1,16 +1,10 @@
 import { styled } from '../stitches.config';
 
 export const Wrap = styled('header', {
-  position: 'fixed',
-  top: 0,
-  right: 0,
-  left: 0,
-  zIndex: 0,
-
   variants: {
     responsive: {
       mobile: {
-        padding: '36px 0 18px'
+        paddingY: '36px'
       },
       tablet: {
         top: 0
@@ -20,6 +14,11 @@ export const Wrap = styled('header', {
       },
       desktopMacbook: {
         top: '36px'
+      }
+    },
+    project: {
+      pie: {
+        backgroundColor: 'hsl($pie0)'
       }
     }
   }
@@ -43,7 +42,7 @@ export const Device = styled('figure', {
 
         '&::before': {
           fullAbsolute: '',
-          backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade300, 0.5) 50%, transparent 100%)'
+          backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.25) 50%, transparent 100%)'
         }
       }
     },

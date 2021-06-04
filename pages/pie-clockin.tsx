@@ -19,7 +19,6 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=pie]': {
     minHeight: '100vh',
-    paddingTop: '560px',
     backgroundColor: 'hsl($backgroundPie)'
   }
 });
@@ -34,7 +33,7 @@ function ProjectPie() {
 
   const router = useRouter();
   const articleRef = useRef<HTMLElement>(null);
-  const [overlapped, setOverlapped] = useState(false);
+  // const [overlapped, setOverlapped] = useState(false);
 
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'pie');
