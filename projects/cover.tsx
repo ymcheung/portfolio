@@ -2,6 +2,7 @@ import { styled } from '../stitches.config';
 
 export const Wrap = styled('header', {
   position: 'fixed',
+  top: 0,
   right: 0,
   left: 0,
   zIndex: 0,
@@ -9,8 +10,7 @@ export const Wrap = styled('header', {
   variants: {
     responsive: {
       mobile: {
-        minHeight: '458px',
-        top: '36px'
+        padding: '36px 0 18px'
       },
       tablet: {
         top: 0

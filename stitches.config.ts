@@ -44,7 +44,9 @@ export const { css, styled, global, theme, getCssString } = createCss({
 
       footerSeparate: '$shade1500',
       schemeIconDarkBg: '$shade1500',
-      schemeIconLightBg: '$shade300'
+      schemeIconLightBg: '$shade300',
+
+      backgroundPie: '$shade1600'
     },
     space: {
       4: '4px',
@@ -132,6 +134,8 @@ export const dark = theme({
 
     footerSeparate: '$shade1200',
     schemeIconDarkBg: '$shade300',
-    schemeIconLightBg: '$shade1400'
+    schemeIconLightBg: '$shade1400',
+
+    backgroundPie: '$pie0'
   }
 });

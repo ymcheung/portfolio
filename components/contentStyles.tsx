@@ -73,6 +73,7 @@ export const Section = styled('section', {
 export const Paragraph = styled('p', {
   margin: '0 0 $16',
   fontFamily: '$default',
+  color: 'hsl($shade600)',
   fontSize: '$16',
   lineHeight: '24px',
 
@@ -91,24 +92,12 @@ export const Paragraph = styled('p', {
       true: {
         fontSize: '$14'
       }
-    },
-    scheme: {
-      dark: {
-        color: 'hsl($shade1200)',
-
-        '& .paragraph-link': {
-          color: 'hsl($shade1500)',
-        }
-      },
-      light: {
-        color: 'hsl($shade600)',
-
-        '& .paragraph-link': {
-          color: 'hsl($shade300)',
-        }
-      }
     }
-  }
+  },
+
+  '& .paragraph-link': {
+    color: 'hsl($shade300)'
+  },
 });
 
 export const ContentList = styled('ul', {

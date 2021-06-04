@@ -20,7 +20,7 @@ const pageBody = global({
   'body[data-body-style=pie]': {
     minHeight: '100vh',
     paddingTop: '560px',
-    backgroundColor: 'hsl($pie0)'
+    backgroundColor: 'hsl($backgroundPie)'
   }
 });
 
@@ -65,13 +65,13 @@ function ProjectPie() {
       <Cover />
       <ArticleBackground ref={articleRef} as="main" project="pie">
         <Container responsive={{'@m768': 'max640'}}>
-          <Heading as="h1" itemName="dark">{pageInfo.name}</Heading>
+          <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />
           <Content />
         </Container>
       </ArticleBackground>
       <Nav scheme="dark" hasNext="The Moment" nextSlug="moment" nextBg="moment" project="pie" />
-      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} scheme="dark" />
+      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>
   );
 }

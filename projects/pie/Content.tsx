@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
-import { Container } from '../../components/layout';
 
 import LangSwitch from '../LangSwitch';
+import ToggleScheme from '../../components/ToggleScheme';
 
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
@@ -65,13 +65,14 @@ export default function Content() {
   return(
     <article>
       <LangSwitch scheme="dark" />
+      <ToggleScheme />
       <Section>
-        <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>
       <Section>
         <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('why.title')}} />
-        <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('why.problem')}} indent />
-        <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('why.opinion')}} indent sectionend />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('why.problem')}} indent />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('why.opinion')}} indent sectionend />
       </Section>
       <Section>
         <ContentTitle purpose="section" scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.title')}} />
@@ -81,7 +82,7 @@ export default function Content() {
               <GalleryCover src="/projects/pie/gallery-full.jpg" alt={t('questions.flat.question')} loading="lazy" />
               <figcaption>
                 <ContentTitle as="strong" purpose="paragraph" scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.flat.title')}} />
-                <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.flat.question')}} sectionend />
+                <Paragraph dangerouslySetInnerHTML={{__html: t('questions.flat.question')}} sectionend />
               </figcaption>
             </GalleryFigure>
           </GalleryItem>
@@ -90,7 +91,7 @@ export default function Content() {
               <figcaption>
               <GalleryCover src="/projects/pie/gallery-statistics.jpg" alt={t('questions.back.question')} loading="lazy" />
                 <ContentTitle as="strong" purpose="paragraph" scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.back.title')}} />
-                <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: t('questions.back.question')}} sectionend />
+                <Paragraph dangerouslySetInnerHTML={{__html: t('questions.back.question')}} sectionend />
               </figcaption>
             </GalleryFigure>
           </GalleryItem>
@@ -101,7 +102,7 @@ export default function Content() {
         {t<string, itemProps>('document.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
           <React.Fragment key={`doc-${index}`}>
             <ContentTitle as="strong" purpose="paragraph" scheme="dark" dangerouslySetInnerHTML={{__html: name}} />
-            <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: description}} indent />
+            <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />
           </React.Fragment>
         ))}
       </Section>
@@ -110,7 +111,7 @@ export default function Content() {
         {t<string, itemProps>('note.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
           <React.Fragment key={`note-${index}`}>
             <ContentTitle as="strong" purpose="paragraph" scheme="dark" dangerouslySetInnerHTML={{__html: name}} />
-            <Paragraph scheme="dark" dangerouslySetInnerHTML={{__html: description}} indent />
+            <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />
           </React.Fragment>
         ))}
       </Section>

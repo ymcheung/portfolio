@@ -5,6 +5,7 @@ import { Wrap, Device } from '../cover';
 
 const ImageMobile = styled('img', {
   width: '100%',
+  minHeight: '458px',
   position: 'relative',
   zIndex: 1,
   borderRadius: '12px',

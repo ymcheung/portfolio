@@ -34,17 +34,16 @@ const NameTagDescription = styled('span', {
 interface FooterProps {
   readonly responsive: {};
   readonly inproject?: {};
-  readonly scheme?: 'dark' | 'light';
 }
 
-function Footer({ responsive, inproject, scheme }: FooterProps) {
+function Footer({ responsive, inproject }: FooterProps) {
   const Year = new Date().getFullYear();
 
   return(
     <Container as="footer" responsive={responsive} footerend>
       <FooterLayout inproject={inproject}>
         <Separate />
-        <Heading as="strong" nametag="footer" footerscheme={scheme}>{AUTHOR}</Heading>
+        <Heading as="strong" nametag="footer">{AUTHOR}</Heading>
         <NameTagDescription>Portfolio {Year}</NameTagDescription>
         {!inproject &&
           <ToggleScheme />
