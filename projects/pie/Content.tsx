@@ -19,8 +19,8 @@ const Gallery = styled('ul', {
   grid: 'auto / auto-flow 288px',
   columnGap: '$16',
   overflowX: 'auto',
-  margin: '0 auto $16',
-  padding: 0,
+  margin: '0 auto',
+  padding: '0 0 $16',
 
   variants: {
     responsive: {
@@ -47,7 +47,7 @@ const GalleryFigure = styled('figure', {
     height: '464px',
     fullAbsolute: '',
     content: `''`,
-    background: 'linear-gradient(to bottom, transparent 0%, hsla($shade300, 0.5) 50%, hsla($shade300, 0.75) 75%, transparent 100%) top center / cover no-repeat',
+    background: 'linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.5) 50%, transparent 100%) top center / cover no-repeat',
   }
 });
 
