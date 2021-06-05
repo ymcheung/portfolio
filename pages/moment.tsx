@@ -19,7 +19,7 @@ const pageBody = global({
   'body[data-body-style=moment]': {
     minHeight: '100vh',
     paddingTop: '$16',
-    backgroundColor: '$backgroundMoment'
+    backgroundColor: 'hsl($themeMoment)'
   }
 });
 

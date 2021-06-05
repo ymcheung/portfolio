@@ -8,14 +8,14 @@ const Icon = styled(Svg, {
 const Third = styled('rect', {
   width: '18px',
   height: '20px',
-  fill: 'hsl($shade700)'
+  fill: 'hsl($iterationIconDoc)'
 });
 
 const FirstTwo = styled('rect', {
   width: '19px',
   height: '21px',
-  fill: 'hsl($shade700)',
-  stroke: '$mtMidnight100'
+  fill: 'hsl($iterationIconDoc)',
+  stroke: 'hsl($themeMoment)'
 });
 
 function IconManually() {
