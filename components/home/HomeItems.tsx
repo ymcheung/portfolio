@@ -75,7 +75,8 @@ export const HomeItemImage = styled('img', {
   width: '100%',
   height: '100%',
   fullAbsolute: '',
-  objectFit: 'cover'
+  objectFit: 'cover',
+  borderRadius: '16px'
 });
 
 export const HomeItemDescription = styled('span', {

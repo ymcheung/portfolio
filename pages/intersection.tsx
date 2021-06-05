@@ -68,10 +68,10 @@ export default function ProjectIntersection() {
       <Nav
         hasNext="Translating Design Process for Pros"
         nextSlug="translate-design-process"
-        nextBg="light"
+        nextBg="generic"
         hasPrev="Nuomi’s Portfolio"
         prevSlug="nuomi"
-        prevBg="light"
+        prevBg="nuomi"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>

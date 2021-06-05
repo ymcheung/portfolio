@@ -68,7 +68,7 @@ export default function ProjectProcess() {
       <Nav
         hasPrev="Intersection"
         prevSlug="intersection"
-        prevBg="light"
+        prevBg="generic"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>

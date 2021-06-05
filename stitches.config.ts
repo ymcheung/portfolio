@@ -35,7 +35,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       nuomiBlack100: 'hsl(180,1%,12%)',
       nuomiBlack0: '180,1%,6%',
       nuomiGold1200: 'hsl(32,55%,54%)',
-      nuomiGold400: 'hsl(32,55%,20%)',
+      nuomiGold400: '32,55%,20%',
 
       intersection1500: 'hsl(11,71%,61%)',
       intersection300: 'hsl(11,71%,12%)',
@@ -54,8 +54,12 @@ export const { css, styled, global, theme, getCssString } = createCss({
       galleryContentTitle: '$shade1500',
       galleryContentParagraph: '$shade1200',
 
+      searchBubble: '$shade1500',
+
       navGenericIconBg: '$shade1500',
-      navMomentIconBg:  '$shade1500'
+      navPieIconBg:     '$shade1500',
+      navMomentIconBg:  '$shade1500',
+      navNuomiIconBg:   '$shade1500'
     },
     space: {
       4: '4px',
@@ -153,7 +157,11 @@ export const dark = theme({
     galleryContentTitle: '$shade100',
     galleryContentParagraph: '$shade600',
 
+    searchBubble: '$shade1400',
+
     navGenericIconBg: '$shade1400',
-    navMomentIconBg:  '$mtMidnight200'
+    navPieIconBg:     '$pie100',
+    navMomentIconBg:  '$mtMidnight200',
+    navNuomiIconBg:  '$nuomiGold400'
   }
 });

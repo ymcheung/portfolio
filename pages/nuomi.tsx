@@ -19,7 +19,6 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=nuomi]': {
     minHeight: '100vh',
-    paddingTop: '560px',
     backgroundColor: 'hsl($nuomiBlack0)'
   }
 });
@@ -60,17 +59,15 @@ export default function ProjectNuomi() {
         canonical={router.pathname}
       />
       <Cover />
-      {/* <ArticleBackground as="main" project="nuomi"> */}
-        <Container responsive={{'@m768': 'max640'}}>
-          <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
-          <Meta />
-          <Content />
-        </Container>
-      {/* </ArticleBackground> */}
+      <Container responsive={{'@m768': 'max640'}}>
+        <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
+        <Meta />
+        <Content />
+      </Container>
       <Nav
         hasNext="Intersection"
         nextSlug="intersection"
-        nextBg="dark"
+        nextBg="generic"
         hasPrev="The Moment"
         prevSlug="moment"
         prevBg="moment"

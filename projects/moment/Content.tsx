@@ -17,7 +17,7 @@ const BubbleSearch = styled('div', {
   color: 'hsl($shade300)',
   fontSize: '$14',
   lineHeight: '24px',
-  backgroundColor: 'hsl($shade1400)',
+  backgroundColor: 'hsl($searchBubble)',
   borderRadius: '12px'
 });
 

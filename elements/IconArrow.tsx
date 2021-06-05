@@ -18,13 +18,13 @@ const Circle = styled('circle', {
         fill: 'hsl($navGenericIconBg)'
       },
       pie: {
-        fill: '$pie100'
+        fill: 'hsl($navPieIconBg)'
       },
       moment: {
         fill: 'hsl($navMomentIconBg)'
       },
       nuomi: {
-        fill: '$nuomiGold400'
+        fill: 'hsl($navNuomiIconBg)'
       }
     }
   }
