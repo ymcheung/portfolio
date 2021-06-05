@@ -19,7 +19,7 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=nuomi]': {
     minHeight: '100vh',
-    backgroundColor: 'hsl($nuomiBlack0)'
+    backgroundColor: 'hsl($themeNuomi)'
   }
 });
 
@@ -71,7 +71,6 @@ export default function ProjectNuomi() {
         hasPrev="The Moment"
         prevSlug="moment"
         prevBg="moment"
-        project="nuomi"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>

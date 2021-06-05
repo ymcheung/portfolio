@@ -67,7 +67,7 @@ function ProjectPie() {
         <Meta />
       </Container>
       <Content />
-      <Nav hasNext="The Moment" nextSlug="moment" nextBg="moment" project="pie" />
+      <Nav hasNext="The Moment" nextSlug="moment" nextBg="moment" />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>
   );
