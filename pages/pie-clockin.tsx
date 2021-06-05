@@ -62,13 +62,11 @@ function ProjectPie() {
         canonical={router.pathname}
       />
       <Cover />
-      {/* <ArticleBackground ref={articleRef} as="main" project="pie"> */}
-        <Container responsive={{'@m768': 'max640'}}>
-          <Heading as="h1" id="article" position="itemName">{pageInfo.name}</Heading>
-          <Meta />
-        </Container>
-        <Content />
-      {/* </ArticleBackground> */}
+      <Container responsive={{'@m768': 'max640'}}>
+        <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
+        <Meta />
+      </Container>
+      <Content />
       <Nav hasNext="The Moment" nextSlug="moment" nextBg="moment" project="pie" />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>

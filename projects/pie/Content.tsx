@@ -76,18 +76,18 @@ export default function Content() {
           <Paragraph dangerouslySetInnerHTML={{__html: t('why.problem')}} indent />
           <Paragraph dangerouslySetInnerHTML={{__html: t('why.opinion')}} indent sectionend />
         </Section>
-        <Section isgroupend>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('questions.title')}} />
-        </Section>
       </Container>
       <GalleryContainer project="pie">
+        <Container as="section" responsive={{'@m768': 'max640'}}>
+          <ContentTitle purpose="section" scheme="gallery" dangerouslySetInnerHTML={{__html: t('questions.title')}} />
+        </Container>
         <Gallery responsive={{'@m768': 'tablet'}}>
           <GalleryItem>
             <GalleryFigure>
               <GalleryCover src="/projects/pie/gallery-full.jpg" alt={t('questions.flat.question')} loading="lazy" />
               <figcaption>
-                <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('questions.flat.title')}} />
-                <Paragraph dangerouslySetInnerHTML={{__html: t('questions.flat.question')}} sectionend />
+                <ContentTitle as="strong" purpose="paragraph" scheme="gallery" dangerouslySetInnerHTML={{__html: t('questions.flat.title')}} />
+                <Paragraph scheme="gallery" sectionend dangerouslySetInnerHTML={{__html: t('questions.flat.question')}} />
               </figcaption>
             </GalleryFigure>
           </GalleryItem>
@@ -95,8 +95,8 @@ export default function Content() {
           <GalleryFigure>
             <figcaption>
             <GalleryCover src="/projects/pie/gallery-statistics.jpg" alt={t('questions.back.question')} loading="lazy" />
-              <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('questions.back.title')}} />
-              <Paragraph dangerouslySetInnerHTML={{__html: t('questions.back.question')}} sectionend />
+              <ContentTitle as="strong" purpose="paragraph" scheme="gallery" dangerouslySetInnerHTML={{__html: t('questions.back.title')}} />
+              <Paragraph scheme="gallery" sectionend dangerouslySetInnerHTML={{__html: t('questions.back.question')}} />
             </figcaption>
           </GalleryFigure>
         </GalleryItem>

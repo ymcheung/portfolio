@@ -2,7 +2,6 @@ import { styled } from '../stitches.config';
 import { ListItem } from './layout';
 
 export const ContentTitle = styled('h2', {
-  color: 'hsl($shade100)',
   fontFamily: '$default',
   fontWeight: 600,
 
@@ -24,6 +23,14 @@ export const ContentTitle = styled('h2', {
         fontSize: '$16',
         lineHeight: '24px'
       },
+    },
+    scheme: {
+      default: {
+        color: 'hsl($shade100)'
+      },
+      gallery: {
+        color: 'hsl($galleryContentTitle)'
+      }
     },
     featurednumber: {
       normal: {
@@ -48,6 +55,9 @@ export const ContentTitle = styled('h2', {
         textDecoration: 'none'
       }
     }
+  },
+  defaultVariants: {
+    scheme: 'default'
   }
 });
 
@@ -66,11 +76,18 @@ export const Section = styled('div', {
 export const Paragraph = styled('p', {
   margin: '0 0 $16',
   fontFamily: '$default',
-  color: 'hsl($shade600)',
   fontSize: '$16',
   lineHeight: '24px',
 
   variants: {
+    scheme: {
+      default: {
+        color: 'hsl($shade600)'
+      },
+      gallery: {
+        color: 'hsl($galleryContentParagraph)'
+      }
+    },
     indent: {
       true: {
         textIndent: '36px'
@@ -86,6 +103,9 @@ export const Paragraph = styled('p', {
         fontSize: '$14'
       }
     }
+  },
+  defaultVariants: {
+    scheme: 'default'
   },
 
   '& .paragraph-link': {
