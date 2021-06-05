@@ -8,12 +8,12 @@ const Icon = styled(Svg, {
 const Document = styled('rect', {
   width: '18px',
   height: '20px',
-  fill: 'hsl($shade700)',
+  fill: 'hsl($iterationIconDoc)',
 
   variants: {
     front: {
       true: {
-        stroke: '$mtMidnight100'
+        stroke: 'hsl($themeMoment)'
       }
     }
   }
@@ -22,19 +22,19 @@ const Document = styled('rect', {
 const Nav = styled('rect', {
   width: '5px',
   height: '4px',
-  fill: 'hsl($shade300)'
+  fill: 'hsl($iterationIconChild)'
 });
 
 const Lyric = styled('rect', {
   width: '8px',
   height: '11px',
-  fill: 'hsl($shade300)'
+  fill: 'hsl($iterationIconChild)'
 });
 
 const Footer = styled('rect', {
   width: '14px',
   height: '4px',
-  fill: 'hsl($shade300)'
+  fill: 'hsl($iterationIconChild)'
 });
 
 function IconTemplate() {

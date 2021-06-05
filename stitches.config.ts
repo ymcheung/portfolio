@@ -29,7 +29,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       mtMidnight500: '225,26%,45%',
       mtMidnight200: '225,26%,18%',
       mtMidnight100: 'hsl(225,26%,12%)',
-      mtMidnight0: 'hsl(225,26%,6%)',
+      mtMidnight0: '225,26%,6%',
 
       nuomiBlack300: 'hsl(180,1%,20%)',
       nuomiBlack100: 'hsl(180,1%,12%)',
@@ -49,12 +49,14 @@ export const { css, styled, global, theme, getCssString } = createCss({
       metaTitlePie: '$pie400',
 
       backgroundPie: '$shade1600',
-      backgroundMoment: '$shade1600',
 
       galleryContentTitle: '$shade1500',
       galleryContentParagraph: '$shade1200',
 
+      themeMoment: '$shade1600',
       searchBubble: '$shade1500',
+      iterationIconDoc: '$shade1200',
+      iterationIconChild: '$shade800',
 
       navGenericIconBg: '$shade1500',
       navPieIconBg:     '$shade1500',
@@ -152,12 +154,14 @@ export const dark = theme({
     metaTitlePie: '$pie800',
 
     backgroundPie: '$pie0',
-    backgroundMoment: '$mtMidnight0',
 
     galleryContentTitle: '$shade100',
     galleryContentParagraph: '$shade600',
 
+    themeMoment: '$mtMidnight0',
     searchBubble: '$shade1400',
+    iterationIconDoc: '$shade1200',
+    iterationIconChild: '$shade1400',
 
     navGenericIconBg: '$shade1400',
     navPieIconBg:     '$pie100',

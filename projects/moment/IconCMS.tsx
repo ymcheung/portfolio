@@ -8,11 +8,11 @@ const Icon = styled(Svg, {
 const File = styled('rect', {
   width: '20px',
   height: '24px',
-  fill: 'hsl($shade300)'
+  fill: 'hsl($iterationIconDoc)'
 });
 
 const Bracket = styled('path', {
-  fill: 'hsl($shade700)'
+  fill: 'hsl($iterationIconChild)'
 });
 
 function IconCMS() {

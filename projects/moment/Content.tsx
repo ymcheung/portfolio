@@ -21,26 +21,6 @@ const BubbleSearch = styled('div', {
   borderRadius: '12px'
 });
 
-const Iteration = styled('h2', {
-  margin: 0,
-  padding: '0 $12',
-  color: 'hsl($shade1500)',
-  fontSize: '$16',
-
-  variants: {
-    isItalic: {
-      true: {
-        fontStyle: 'italic'
-      }
-    }
-  },
-
-  '& .number': {
-    fontSize: '$24',
-    lineHeight: '24px'
-  }
-});
-
 const IconListDescription = styled(Paragraph, {
   gridArea: 'description',
   paddingX: '$12' 
@@ -60,16 +40,36 @@ const WhatFigure = styled('figure', {
 });
 
 const WhatFigureCover = styled('div', {
-  color: 'hsl($shade1600)',
+  color: 'hsl($shade100)',
   fontSize: '$24',
   lineHeight: '48px'
 });
 
 const WhatFigcaption = styled('div', {
-  color: 'hsl($shade1200)',
+  color: 'hsl($shade600)',
   fontFamily: '$default',
   fontSize: '$16',
   lineHeight: '20px'
+});
+
+const Iteration = styled('strong', {
+  margin: 0,
+  padding: '0 $12',
+  color: 'hsl($shade100)',
+  fontSize: '$16',
+
+  variants: {
+    isItalic: {
+      true: {
+        fontStyle: 'italic'
+      }
+    }
+  },
+
+  '& .number': {
+    fontSize: '$24',
+    lineHeight: '24px'
+  }
 });
 
 type howProps = {
