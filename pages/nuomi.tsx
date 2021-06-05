@@ -60,15 +60,14 @@ export default function ProjectNuomi() {
         canonical={router.pathname}
       />
       <Cover />
-      <ArticleBackground as="main" project="nuomi">
+      {/* <ArticleBackground as="main" project="nuomi"> */}
         <Container responsive={{'@m768': 'max640'}}>
           <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />
           <Content />
         </Container>
-      </ArticleBackground>
+      {/* </ArticleBackground> */}
       <Nav
-        scheme="dark"
         hasNext="Intersection"
         nextSlug="intersection"
         nextBg="dark"

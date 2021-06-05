@@ -72,7 +72,6 @@ export default function ProjectIntersection() {
         hasPrev="Nuomi’s Portfolio"
         prevSlug="nuomi"
         prevBg="light"
-        scheme="light"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>

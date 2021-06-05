@@ -47,7 +47,7 @@ export const MetaItemTitle = styled('strong', {
 
 export const MetaItemValue = styled('span', {
   display: 'inline-block',
-  color: 'hsl($shade300)',
+  color: 'hsl($shade600)',
   fontFamily: '$mono',
   fontSize: '$14',
   fontWeight: 500

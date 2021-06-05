@@ -33,7 +33,7 @@ const ImageTablet = styled('img', {
 
 export default function Cover() {
   return(
-    <Wrap responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+    <Wrap responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} project="pie">
       <Device responsive={{ '@initial': 'mobile' }} device={{ '@m768': 'mobileDual' }}>
         {screenMobile &&
           <ImageMobile src="/projects/pie/cover-mobile.jpg" alt="" />

@@ -28,7 +28,23 @@ export const Container = styled('div', {
     },
     footerend: {
       true: {
-        paddingBottom: '64px'
+        paddingBottom: '32px'
+      }
+    }
+  }
+});
+
+export const GalleryContainer = styled('section', {
+  marginBottom: '$16',
+  padding: '$16 0',
+
+  variants: {
+    project: {
+      pie: {
+        backgroundColor: 'hsl($pie0)'
+      },
+      nuomi: {
+        backgroundColor: 'hsl($nuomiBlack0)'
       }
     }
   }
@@ -38,89 +54,6 @@ export const ArticleBackground = styled('div', {
   position: 'relative',
   zIndex: 2,
   paddingBottom: '64px',
-  backdropFilter: 'blur(12px)',
-
-  '&::before': {
-    width: '100%',
-    position: 'absolute',
-    right: 0,
-    left: 0,
-    content: `''`
-  },
-
-  variants: {
-    project: {
-      pie: {
-        backgroundColor: 'hsla($backgroundPie, 0.95)',
-
-        '&::before': {
-          backgroundImage: `
-            linear-gradient(
-              to bottom,
-              hsla($backgroundPie, 0) 0%,
-              hsla($backgroundPie, 0.012) 8.1%,
-              hsla($backgroundPie, 0.045) 15.5%,
-              hsla($backgroundPie, 0.096) 22.5%,
-              hsla($backgroundPie, 0.161) 29%,
-              hsla($backgroundPie, 0.239) 35.3%,
-              hsla($backgroundPie, 0.324) 41.2%,
-              hsla($backgroundPie, 0.414) 47.1%,
-              hsla($backgroundPie, 0.506) 52.9%,
-              hsla($backgroundPie, 0.596) 58.8%,
-              hsla($backgroundPie, 0.681) 64.7%,
-              hsla($backgroundPie, 0.759) 71%,
-              hsla($backgroundPie, 0.824) 77.5%,
-              hsla($backgroundPie, 0.875) 84.5%,
-              hsla($backgroundPie, 0.908) 91.9%,
-              hsla($backgroundPie, 0.92) 100%
-            )`
-        }
-      },
-      nuomi: {
-        backgroundColor: 'hsla($nuomiBlack0, 0.92)',
-
-        '&::before': {
-          backgroundImage: `
-            linear-gradient(
-              to bottom,
-              hsla($nuomiBlack0, 0) 0%,
-              hsla($nuomiBlack0, 0.012) 8.1%,
-              hsla($nuomiBlack0, 0.045) 15.5%,
-              hsla($nuomiBlack0, 0.096) 22.5%,
-              hsla($nuomiBlack0, 0.161) 29%,
-              hsla($nuomiBlack0, 0.239) 35.3%,
-              hsla($nuomiBlack0, 0.324) 41.2%,
-              hsla($nuomiBlack0, 0.414) 47.1%,
-              hsla($nuomiBlack0, 0.506) 52.9%,
-              hsla($nuomiBlack0, 0.596) 58.8%,
-              hsla($nuomiBlack0, 0.681) 64.7%,
-              hsla($nuomiBlack0, 0.759) 71%,
-              hsla($nuomiBlack0, 0.824) 77.5%,
-              hsla($nuomiBlack0, 0.875) 84.5%,
-              hsla($nuomiBlack0, 0.908) 91.9%,
-              hsla($nuomiBlack0, 0.92) 100%
-            )`
-        }
-      }
-    },
-    overlapped: {
-      true: {
-        '&::before': {
-          height: '120px',
-          top: '-120px',
-        }
-      },
-      false: {
-        '&::before': {
-          height: '36px',
-          top: '-36px',
-        }
-      }
-    }
-  },
-  defaultVariants: {
-    overlapped: 'false' 
-  }
 });
 
 export const ListItem = styled('li', {

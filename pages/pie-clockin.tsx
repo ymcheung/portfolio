@@ -19,7 +19,6 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=pie]': {
     minHeight: '100vh',
-    paddingTop: '560px',
     backgroundColor: 'hsl($backgroundPie)'
   }
 });
@@ -34,7 +33,7 @@ function ProjectPie() {
 
   const router = useRouter();
   const articleRef = useRef<HTMLElement>(null);
-  const [overlapped, setOverlapped] = useState(false);
+  // const [overlapped, setOverlapped] = useState(false);
 
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'pie');
@@ -63,13 +62,11 @@ function ProjectPie() {
         canonical={router.pathname}
       />
       <Cover />
-      <ArticleBackground ref={articleRef} as="main" project="pie">
-        <Container responsive={{'@m768': 'max640'}}>
-          <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
-          <Meta />
-          <Content />
-        </Container>
-      </ArticleBackground>
+      <Container responsive={{'@m768': 'max640'}}>
+        <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
+        <Meta />
+      </Container>
+      <Content />
       <Nav hasNext="The Moment" nextSlug="moment" nextBg="moment" project="pie" />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>

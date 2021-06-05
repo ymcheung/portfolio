@@ -13,8 +13,8 @@ const NavList = styled('ul', {
   rowGap: '$12',
   position: 'relative',
   zIndex: 2,
-  margin: 0,
-  padding: 0,
+  margin: '0 -16px',
+  padding: '0 $16 32px',
   backdropFilter: 'blur(12px)',
 
   variants: {
@@ -73,12 +73,11 @@ interface NavProps {
   hasNext?: string;
   nextSlug?: string;
   nextBg?: string;
-  scheme?: 'dark' | 'light';
 }
 
-function Nav({ project, hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg, scheme }: NavProps) {
+function Nav({ project, hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps) {
   return(
-    <Container as="nav" responsive={{'@m768': 'max640'}} hassibling>
+    <Container as="nav" responsive={{'@m768': 'max640'}}>
       <NavList responsive={{'@m992': 'desktop'}} project={project}>
         {hasPrev &&
           <NavItem position="prev">

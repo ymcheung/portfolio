@@ -5,6 +5,7 @@ import { styled } from '../../stitches.config';
 import LangSwitch from '../LangSwitch';
 // import ToggleScheme from '../../components/ToggleScheme';
 
+import { Container, GalleryContainer } from '../../components/layout';
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
 type itemProps = {
@@ -18,12 +19,13 @@ const Gallery = styled('ul', {
   grid: 'auto / auto-flow 288px',
   columnGap: '$16',
   overflowX: 'auto',
-  margin: '0 -16px',
-  padding: '0 0 $8',
+  margin: '0 auto',
+  padding: '0 0 $16',
 
   variants: {
     responsive: {
-      desktop: {
+      tablet: {
+        maxWidth: '640px',
         grid: 'auto / auto-flow 1fr'
       }
     }
@@ -45,7 +47,7 @@ const GalleryFigure = styled('figure', {
     height: '464px',
     fullAbsolute: '',
     content: `''`,
-    background: 'linear-gradient(to bottom, transparent 0%, hsla($shade300, 0.5) 50%, hsla($shade300, 0.75) 75%, transparent 100%) top center / cover no-repeat',
+    background: 'linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.5) 50%, transparent 100%) top center / cover no-repeat',
   }
 });
 
@@ -64,48 +66,53 @@ export default function Content() {
 
   return(
     <article>
-      <LangSwitch />
-      <Section>
-        <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
-      </Section>
-      <Section>
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('why.problem')}} indent />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('why.opinion')}} indent sectionend />
-      </Section>
-      <Section>
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('questions.title')}} />
-        <Gallery responsive={{'@m992': 'desktop'}}>
+      <Container as="section" responsive={{'@m768': 'max640'}}>
+        <LangSwitch />
+        <Section>
+          <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
+        </Section>
+        <Section>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('why.problem')}} indent />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('why.opinion')}} indent sectionend />
+        </Section>
+      </Container>
+      <GalleryContainer project="pie">
+        <Container as="section" responsive={{'@m768': 'max640'}}>
+          <ContentTitle purpose="section" scheme="gallery" dangerouslySetInnerHTML={{__html: t('questions.title')}} />
+        </Container>
+        <Gallery responsive={{'@m768': 'tablet'}}>
           <GalleryItem>
             <GalleryFigure>
               <GalleryCover src="/projects/pie/gallery-full.jpg" alt={t('questions.flat.question')} loading="lazy" />
               <figcaption>
-                <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('questions.flat.title')}} />
-                <Paragraph dangerouslySetInnerHTML={{__html: t('questions.flat.question')}} sectionend />
+                <ContentTitle as="strong" purpose="paragraph" scheme="gallery" dangerouslySetInnerHTML={{__html: t('questions.flat.title')}} />
+                <Paragraph scheme="gallery" sectionend dangerouslySetInnerHTML={{__html: t('questions.flat.question')}} />
               </figcaption>
             </GalleryFigure>
           </GalleryItem>
           <GalleryItem>
-            <GalleryFigure>
-              <figcaption>
-              <GalleryCover src="/projects/pie/gallery-statistics.jpg" alt={t('questions.back.question')} loading="lazy" />
-                <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('questions.back.title')}} />
-                <Paragraph dangerouslySetInnerHTML={{__html: t('questions.back.question')}} sectionend />
-              </figcaption>
-            </GalleryFigure>
-          </GalleryItem>
+          <GalleryFigure>
+            <figcaption>
+            <GalleryCover src="/projects/pie/gallery-statistics.jpg" alt={t('questions.back.question')} loading="lazy" />
+              <ContentTitle as="strong" purpose="paragraph" scheme="gallery" dangerouslySetInnerHTML={{__html: t('questions.back.title')}} />
+              <Paragraph scheme="gallery" sectionend dangerouslySetInnerHTML={{__html: t('questions.back.question')}} />
+            </figcaption>
+          </GalleryFigure>
+        </GalleryItem>
         </Gallery>
-      </Section>
-      <Section>
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('document.title')}} />
-        {t<string, itemProps>('document.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
-          <React.Fragment key={`doc-${index}`}>
-            <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: name}} />
-            <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />
-          </React.Fragment>
-        ))}
-      </Section>
-      <Section isgroupend>
+      </GalleryContainer>
+      <Container as="section" responsive={{'@m768': 'max640'}}>
+        <Section>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('document.title')}} />
+          {t<string, itemProps>('document.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
+            <React.Fragment key={`doc-${index}`}>
+              <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: name}} />
+              <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />
+            </React.Fragment>
+          ))}
+        </Section>
+        <Section isgroupend>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('note.title')}} />
         {t<string, itemProps>('note.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
           <React.Fragment key={`note-${index}`}>
@@ -114,6 +121,7 @@ export default function Content() {
           </React.Fragment>
         ))}
       </Section>
+      </Container>
     </article>
   );
 }

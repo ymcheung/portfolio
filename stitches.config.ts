@@ -51,6 +51,9 @@ export const { css, styled, global, theme, getCssString } = createCss({
       backgroundPie: '$shade1600',
       backgroundMoment: '$shade1600',
 
+      galleryContentTitle: '$shade1500',
+      galleryContentParagraph: '$shade1200',
+
       navGenericIconBg: '$shade1500',
       navMomentIconBg:  '$shade1500'
     },
@@ -146,6 +149,9 @@ export const dark = theme({
 
     backgroundPie: '$pie0',
     backgroundMoment: '$mtMidnight0',
+
+    galleryContentTitle: '$shade100',
+    galleryContentParagraph: '$shade600',
 
     navGenericIconBg: '$shade1400',
     navMomentIconBg:  '$mtMidnight200'
