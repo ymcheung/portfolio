@@ -7,14 +7,22 @@ const Image = styled('img', {
   width: '100%',
   position: 'relative',
   zIndex: 1,
+
+  variants: {
+    responsive: {
+      mobile: {
+        borderRadius: '0 0 12px 12px'
+      }
+    }
+  }
 });
 
 export default function Cover() {
   return(
-    <Wrap responsive={{ '@initial': 'mobile', '@m768': 'tabletMacbook', '@m992': 'desktopMacbook' }}>
+    <Wrap responsive={{ '@initial': 'mobile', '@m768': 'tabletMacbook', '@m992': 'desktopMacbook' }} project="nuomi">
       <Device responsive={{ '@initial': 'mobile' }} device={{ '@m768': 'tabletMacbook', '@m992': 'desktopMacbook' }}>
         {screenMobile &&
-          <Image src="/projects/nuomi/cover-mobile.jpg" alt="Mobile Landing Page of Nuomi’s Portfolio" />
+          <Image src="/projects/nuomi/cover-mobile.jpg" responsive="mobile" alt="Mobile Landing Page of Nuomi’s Portfolio" />
         }
         {screenTablet &&
           <Image src="/projects/nuomi/cover-desktop.jpg" alt="Desktop Landing Page of Nuomi’s Portfolio" />

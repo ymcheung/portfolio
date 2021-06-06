@@ -7,23 +7,22 @@ const screenshotDetail = '/projects/nuomi/detail-mobile.jpg';
 const GalleryList = styled('ul', {
   display: 'grid',
   gridAutoFlow: 'column',
-  gridAutoColumns: '256px',
-  gridGap: '0 60px',
+  gridAutoColumns: '288px',
+  columnGap: '32px',
   overflowX: 'auto',
-  margin: '0 -16px',
-  padding: '0 32px $8',
+  margin: '0 auto',
+  padding: '0 $16 $16',
 
   variants: {
     responsive: {
       tablet: {
+        maxWidth: '640px',
         grid: `"all ." 120px
                "all course" auto
                "detail course" 120px
                "detail ." auto / 1fr 1fr`,
         gridAutoFlow: 'row',
-        gridAutoColumns: 'unset',
-        backgroundColor: 'unset',
-        backdropFilter: 'unset'
+        gridAutoColumns: 'unset'
       }
     }
   }
@@ -31,7 +30,7 @@ const GalleryList = styled('ul', {
 
 const GalleryItem = styled('li', {
   position: 'relative',
-  margin: '0 -24px',
+  margin: '0 -8px',
   padding: '0 $8',
   listStyle: 'none',
 
@@ -39,7 +38,7 @@ const GalleryItem = styled('li', {
     fullAbsolute: '',
     zIndex: 0,
     content: `''`,
-    backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade300, 0.5) 50%, transparent 100%)'
+    backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade600, 0.5) 50%, transparent 92%)'
   },
 
   variants: {
@@ -65,9 +64,10 @@ const GalleryItem = styled('li', {
 
 const NuomiScreenshotImg = styled('img', {
   maxWidth: '100%',
-  minHeight: '512px',
+  minHeight: '455px',
   position: 'relative',
-  zIndex: 1
+  zIndex: 1,
+  borderRadius: '0 0 12px 12px'
 });
 
 type GalleryProps = {

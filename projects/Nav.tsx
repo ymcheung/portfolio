@@ -13,8 +13,8 @@ const NavList = styled('ul', {
   rowGap: '$12',
   position: 'relative',
   zIndex: 2,
-  margin: '0 -16px',
-  padding: '0 $16 32px',
+  margin: '0 -16px 16px',
+  padding: '0 $16',
   backdropFilter: 'blur(12px)',
 
   variants: {
@@ -22,15 +22,8 @@ const NavList = styled('ul', {
       desktop: {
         grid: '"home prev next" auto / 120px 1fr 1fr',
         rowGap: 'unset',
-        marginLeft: '-120px'
-      }
-    },
-    project: {
-      pie: {
-        backgroundColor: 'hsla($backgroundPie, 0.95)'
-      },
-      nuomi: {
-        backgroundColor: 'hsla($nuomiBlack0, 0.95)'
+        margin: '0 0 16px -120px',
+        padding: 0
       }
     }
   }
@@ -66,7 +59,6 @@ const NavItemLink = styled('a', {
 });
 
 interface NavProps {
-  project?: {};
   hasPrev?: string;
   prevSlug?: string;
   prevBg?: string;
@@ -75,10 +67,10 @@ interface NavProps {
   nextBg?: string;
 }
 
-function Nav({ project, hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps) {
+function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps) {
   return(
     <Container as="nav" responsive={{'@m768': 'max640'}}>
-      <NavList responsive={{'@m992': 'desktop'}} project={project}>
+      <NavList responsive={{'@m992': 'desktop'}}>
         {hasPrev &&
           <NavItem position="prev">
             <Link href={`/${prevSlug}`} passHref>

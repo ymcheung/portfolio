@@ -20,6 +20,9 @@ export const Wrap = styled('header', {
     project: {
       pie: {
         backgroundColor: 'hsl($pie0)'
+      },
+      nuomi: {
+        backgroundColor: 'hsl($nuomiBlack0)'
       }
     }
   }
@@ -74,9 +77,9 @@ export const Device = styled('figure', {
         }
       },
       desktopMacbook: {
-        width: '850px',
-        height: '465px',
-        padding: '51px 85px 0'
+        width: '960px',
+        height: '524px',
+        padding: '55px 92px 0'
       }
     }
   }

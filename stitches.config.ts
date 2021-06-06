@@ -46,9 +46,10 @@ export const { css, styled, global, theme, getCssString } = createCss({
       schemeIconDarkBg: '$shade1500',
       schemeIconLightBg: '$shade300',
 
+      backgroundPie: '$shade1600',
       metaTitlePie: '$pie400',
 
-      backgroundPie: '$shade1600',
+      themeNuomi: '$shade1600',
 
       galleryContentTitle: '$shade1500',
       galleryContentParagraph: '$shade1200',
@@ -56,7 +57,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       themeMoment: '$shade1600',
       searchBubble: '$shade1500',
       iterationIconDoc: '$shade1200',
-      iterationIconChild: '$shade800',
+      iterationIconChild: '$shade1500',
 
       navGenericIconBg: '$shade1500',
       navPieIconBg:     '$shade1500',
@@ -151,9 +152,10 @@ export const dark = theme({
     schemeIconDarkBg: '$shade300',
     schemeIconLightBg: '$shade1400',
 
+    backgroundPie: '$pie0',
     metaTitlePie: '$pie800',
 
-    backgroundPie: '$pie0',
+    themeNuomi: '$nuomiBlack0',
 
     galleryContentTitle: '$shade100',
     galleryContentParagraph: '$shade600',
