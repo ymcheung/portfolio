@@ -66,7 +66,8 @@ const NuomiScreenshotImg = styled('img', {
   maxWidth: '100%',
   minHeight: '455px',
   position: 'relative',
-  zIndex: 1
+  zIndex: 1,
+  borderRadius: '0 0 12px 12px'
 });
 
 type GalleryProps = {

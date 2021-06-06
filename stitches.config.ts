@@ -57,7 +57,7 @@ export const { css, styled, global, theme, getCssString } = createCss({
       themeMoment: '$shade1600',
       searchBubble: '$shade1500',
       iterationIconDoc: '$shade1200',
-      iterationIconChild: '$shade800',
+      iterationIconChild: '$shade1500',
 
       navGenericIconBg: '$shade1500',
       navPieIconBg:     '$shade1500',
