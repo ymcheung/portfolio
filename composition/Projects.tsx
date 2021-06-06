@@ -13,12 +13,6 @@ function Projects() {
 
   if (!mounted) return null;
 
-  const toggleTheme = () => {
-    const targetTheme = resolvedTheme === 'light' ? 'dark' : 'light';
-
-    setTheme(targetTheme);
-  };
-
   return(
     <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} hassibling>
       <Heading position="homeSection">P<small>rojects</small></Heading>

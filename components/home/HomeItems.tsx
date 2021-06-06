@@ -40,7 +40,7 @@ export const HomeItem = styled('li', {
   columnGap: '$8',
 
   variants: {
-    removeIcon: {
+    removeicon: {
       true: {
         grid: 'auto / 1fr'
       }
@@ -62,11 +62,11 @@ export const HomeItemLink = styled('a', {
 });
 
 export const HomeItemContainer = styled('figure', {
+  minHeight: '320px',
   margin: 0
 });
 
 export const HomeItemCover = styled('div', {
-  size: '288px',
   position: 'relative',
   marginBottom: '$8',
   paddingTop: '100%'

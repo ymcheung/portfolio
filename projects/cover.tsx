@@ -42,6 +42,7 @@ export const Device = styled('figure', {
     responsive: {
       mobile: {
         width: '288px',
+        minHeight: '455px',
         padding: '0 $16',
 
         '&::before': {
