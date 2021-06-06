@@ -66,14 +66,14 @@ export const HomeItemContainer = styled('figure', {
 });
 
 export const HomeItemCover = styled('div', {
+  size: '288px',
   position: 'relative',
   marginBottom: '$8',
   paddingTop: '100%'
 });
 
 export const HomeItemImage = styled('img', {
-  width: '100%',
-  height: '100%',
+  size: '100%',
   fullAbsolute: '',
   objectFit: 'cover',
   borderRadius: '16px'
