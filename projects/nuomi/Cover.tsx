@@ -11,11 +11,7 @@ const Image = styled('img', {
   variants: {
     responsive: {
       mobile: {
-        minHeight: '455px',
         borderRadius: '0 0 12px 12px'
-      },
-      tablet: {
-        minHeight: '412px',
       }
     }
   }
@@ -29,7 +25,7 @@ export default function Cover() {
           <Image src="/projects/nuomi/cover-mobile.jpg" responsive="mobile" alt="Mobile Landing Page of Nuomi’s Portfolio" />
         }
         {screenTablet &&
-          <Image src="/projects/nuomi/cover-desktop.jpg" responsive="tablet" alt="Desktop Landing Page of Nuomi’s Portfolio" />
+          <Image src="/projects/nuomi/cover-desktop.jpg" alt="Desktop Landing Page of Nuomi’s Portfolio" />
         }
       </Device>
     </Wrap>
