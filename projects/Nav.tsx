@@ -13,7 +13,7 @@ const NavList = styled('ul', {
   rowGap: '$12',
   position: 'relative',
   zIndex: 2,
-  margin: '0 -16px 32px',
+  margin: '0 -16px 16px',
   padding: '0 $16',
   backdropFilter: 'blur(12px)',
 
@@ -22,7 +22,7 @@ const NavList = styled('ul', {
       desktop: {
         grid: '"home prev next" auto / 120px 1fr 1fr',
         rowGap: 'unset',
-        margin: '0 0 32px -120px',
+        margin: '0 0 16px -120px',
         padding: 0
       }
     }

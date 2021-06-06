@@ -8,7 +8,7 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container, ArticleBackground } from '../components/layout';
+import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
 import Cover from '../projects/pie/Cover';
 import Meta from '../projects/pie/Meta';

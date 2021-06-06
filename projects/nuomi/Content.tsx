@@ -1,6 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
-import { Container, IconList, IconListItem } from '../../components/layout';
+import { Container, ArticleBody, GalleryContainer, IconList, IconListItem } from '../../components/layout';
 
 import LangSwitch from '../LangSwitch';
 
@@ -25,16 +25,19 @@ export default function Content() {
   }
 
   return(
-    <article>
-      <LangSwitch />
-      <Section>
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('experience.title')}} />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('experience.featured')}} indent sectionend />
-      </Section>
-      <Section>
+    <ArticleBody>
+      <Container as="section" responsive={{'@m768': 'max640'}}>
+        <LangSwitch />
+        <Section>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('experience.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('experience.featured')}} indent sectionend />
+        </Section>
+      </Container>
+      <GalleryContainer project="nuomi">
         <Gallery galleryItemAlt={galleryItemAlt} />
-      </Section>
-      <Section>
+      </GalleryContainer>
+      <Container as="section" responsive={{'@m768': 'max640'}}>
+        <Section>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retrospect.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('retrospect.description')}} indent />
         <IconList>
@@ -55,6 +58,7 @@ export default function Content() {
           </IconListItem>
         </IconList>
       </Section>
-    </article>
+      </Container>
+    </ArticleBody>
   );
 }

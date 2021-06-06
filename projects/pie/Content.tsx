@@ -3,9 +3,8 @@ import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
 
 import LangSwitch from '../LangSwitch';
-// import ToggleScheme from '../../components/ToggleScheme';
 
-import { Container, GalleryContainer } from '../../components/layout';
+import { Container, ArticleBody, GalleryContainer } from '../../components/layout';
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
 type itemProps = {
@@ -65,7 +64,7 @@ export default function Content() {
   const { t } = useTranslation('pie');
 
   return(
-    <article>
+    <ArticleBody>
       <Container as="section" responsive={{'@m768': 'max640'}}>
         <LangSwitch />
         <Section>
@@ -122,6 +121,6 @@ export default function Content() {
         ))}
       </Section>
       </Container>
-    </article>
+    </ArticleBody>
   );
 }

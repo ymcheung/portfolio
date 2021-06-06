@@ -50,10 +50,8 @@ export const GalleryContainer = styled('section', {
   }
 });
 
-export const ArticleBackground = styled('div', {
-  position: 'relative',
-  zIndex: 2,
-  paddingBottom: '64px',
+export const ArticleBody = styled('article', {
+  marginBottom: '64px',
 });
 
 export const ListItem = styled('li', {
