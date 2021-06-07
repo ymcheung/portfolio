@@ -28,7 +28,7 @@ function ProjectPie() {
     name: 'Explore UI of a Clock-In Web App',
     description: 'A side project exploring fluent UI design.',
     datePublished: '2020-08-29',
-    dateModified: '2021-05-20'
+    dateModified: '2021-06-07'
   };
 
   const router = useRouter();
