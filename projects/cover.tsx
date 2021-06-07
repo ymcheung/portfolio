@@ -41,9 +41,9 @@ export const Device = styled('figure', {
   variants: {
     responsive: {
       mobile: {
-        width: '288px',
+        width: '272px',
         minHeight: '455px',
-        padding: '0 $16',
+        padding: '0 $8',
 
         '&::before': {
           fullAbsolute: '',

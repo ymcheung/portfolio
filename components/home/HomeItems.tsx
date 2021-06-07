@@ -1,4 +1,5 @@
 import { styled } from '../../stitches.config';
+import Image from 'next/image';
 
 export const HomeItemsLayout = styled('section', {
   display: 'grid',
@@ -8,6 +9,7 @@ export const HomeItemsLayout = styled('section', {
   variants: {
     forprojects: {
       mobile: {
+        minHeight: '366px',
         grid: 'auto / auto-flow 304px',
         columnGap: '$8',
         marginBottom: '$4',
@@ -62,20 +64,10 @@ export const HomeItemLink = styled('a', {
 });
 
 export const HomeItemContainer = styled('figure', {
-  minHeight: '320px',
   margin: 0
 });
 
-export const HomeItemCover = styled('div', {
-  position: 'relative',
-  marginBottom: '$8',
-  paddingTop: '100%'
-});
-
-export const HomeItemImage = styled('img', {
-  size: '100%',
-  fullAbsolute: '',
-  objectFit: 'cover',
+export const HomeItemImage = styled(Image, {
   borderRadius: '16px'
 });
 
