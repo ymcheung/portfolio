@@ -9,6 +9,7 @@ export const HomeItemsLayout = styled('section', {
   variants: {
     forprojects: {
       mobile: {
+        minHeight: '366px',
         grid: 'auto / auto-flow 304px',
         columnGap: '$8',
         marginBottom: '$4',

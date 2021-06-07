@@ -11,7 +11,7 @@ const ScreenshotMobile = styled(Image, {
 });
 
 const ScreenshotTablet = styled('img', {
-  width: '256px',
+  width: '272px',
   position: 'absolute',
   zIndex: 1,
   borderRadius: '12px',
@@ -20,11 +20,11 @@ const ScreenshotTablet = styled('img', {
     placement: {
       left: {
         top: '$16',
-        left: '$16'
+        left: '$8'
       },
       right: {
         top: '40px',
-        right: '16px'
+        right: '8px'
       }
     }
   }
@@ -35,7 +35,7 @@ export default function Cover() {
     <Wrap responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} project="pie">
       <Device responsive={{ '@initial': 'mobile' }} device={{ '@m768': 'mobileDual' }}>
         {screenMobile &&
-          <ScreenshotMobile src="/projects/pie/cover-mobile.jpg" width={272} height={484} alt="" />
+          <ScreenshotMobile src="/projects/pie/cover-mobile.jpg" width={256} height={455} alt="" />
         }
         {screenTablet &&
           <>
