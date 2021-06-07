@@ -45,13 +45,7 @@
         "name":
           "Why &amp; How",
         "description":
-          "Product specification is subject to change. We write down WHY the roles are using a click-in app and HOW they are going to fulfill their goals."
-      },
-      {
-        "name":
-          "Storybook",
-        "description":
-          "The categories and states of the UI components are documented in Storybook. Every &ldquo;story&rdquo; corresponds to the component’s initial state in Figma due to constant changes."
+          "Product specification is subject to change. We write down WHY the roles we defined are using a clock-in app and HOW they are going to fulfill their goals."
       }
     ]
   },
@@ -63,15 +57,9 @@
     [
       {
         "name":
-          "Premature Optimization",
+          "Limited Resources for a Side Project",
         "description":
-          "&ldquo;Premature optimization is the root of all evil&rdquo; happens more in Figma after using Storybook."
-      },
-      {
-        "name":
-          "Accessibility upon Project Start",
-        "description":
-          "Modern browsers value accessibility more than ever before. It is still at the stage of exploration as we are leveraging visual weights for websites in Mandarin."
+          "There are many tasks to  accomplish accoring to Roles &amp; Goals. We are moving towards a complete UI flow at the moment due to the scarce time &amp; resources of a side project."
       }
     ]
   }
