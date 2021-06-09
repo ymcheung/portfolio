@@ -72,21 +72,17 @@ const Iteration = styled('strong', {
   }
 });
 
-type howProps = {
-  [x: string]: any;
-  name: string;
-  description: string;
-};
-
-type layoutListProps = {
+interface itemProps {
   [x: string]: any;
   name: string;
 }
 
-type whatProps = {
-  [x: string]: any;
+interface howProps extends itemProps {
+  description: string;
+}
+
+interface whatProps extends itemProps {
   symbol: string;
-  name: string;
 }
 
 export default function Content() {
@@ -121,7 +117,7 @@ export default function Content() {
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('obstacle.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('obstacle.description')}} indent sectionend />
         <ContentList>
-          {t<string, layoutListProps>('obstacle.execuses', { returnObjects: true }).map(({ name }: layoutListProps, index: number) => (
+          {t<string, itemProps>('obstacle.execuses', { returnObjects: true }).map(({ name }: itemProps, index: number) => (
             <ContentListItem dangerouslySetInnerHTML={{__html: name}} key={`execuses-${index}`} square="true" />
           ))}
         </ContentList>
@@ -176,7 +172,7 @@ export default function Content() {
       <Section>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('measure.title')}} />
         <ContentList>
-          {t<string, layoutListProps>('measure.methods', { returnObjects: true }).map(({ name }: layoutListProps, index: number) => (
+          {t<string, itemProps>('measure.methods', { returnObjects: true }).map(({ name }: itemProps, index: number) => (
             <ContentListItem dangerouslySetInnerHTML={{__html: name}} key={`execuses-${index}`} square="true" />
           ))}
         </ContentList>
