@@ -4,15 +4,29 @@ import { useTheme } from 'next-themes';
 import { styled, keyframes } from '../stitches.config';
 import { AUTHOR, DESCRIPTION } from '../constant';
 
-import { Container } from '../components/layout';
+import { Container, ListItem } from '../components/layout';
 import { Heading } from '../components/headings';
 
+import IconTaiwan from '../elements/IconTaiwan';
+
 const Header = styled('header', {
-  minHeight: '375px',
   overflow: 'hidden',
   position: 'relative',
-  paddingTop: '102px',
-  borderBottom: '1px solid hsl($shade1200)'
+  marginBottom: '$12',
+  borderBottom: '1px solid hsl($shade1200)',
+
+  variants: {
+    responsive: {
+      mobile: {
+        minHeight: '375px',
+        paddingTop: '102px'
+      },
+      tablet: {
+        minHeight: '225px',
+        paddingTop: '48px'
+      }
+    }
+  }
 });
 
 const diagonTransition = keyframes({
@@ -42,9 +56,24 @@ const Background = styled('div', {
   }
 });
 
-const NameDescription = styled('span', {
+const DescriptionList = styled('ul', {
+  display: 'grid',
+  rowGap: '12px',
+  position: 'relative',
+  zIndex: 1,
+  margin: 0,
+  paddingLeft: '28px'
+});
+
+const DescriptionIcon = styled('span', {
+  display: 'inline-block',
+  width: '28px',
+  marginLeft: '-28px',
+  fontSize: '$18'
+});
+
+const DescriptionText = styled('span', {
   color: 'hsl($shade700)',
-  fontFamily: '$default',
   fontSize: '$18',
   fontStyle: 'italic'
 });
@@ -60,11 +89,20 @@ export default function NameHeader() {
   const scheme = theme === 'dark' ? 'dark' : 'light'; 
 
   return(
-    <Header>
+    <Header responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
       <Background scheme={scheme} />
       <Container responsive={{'@m992': 'max960', '@m1200': 'max1168'}}>
         <Heading as="h1" nametag="home">{AUTHOR}</Heading>
-        <NameDescription>{DESCRIPTION}</NameDescription>
+        <DescriptionList>
+          <ListItem nomark>
+            <DescriptionIcon>🤘</DescriptionIcon>
+            <DescriptionText>{DESCRIPTION}</DescriptionText>
+          </ListItem>
+          <ListItem nomark>
+            <DescriptionIcon><IconTaiwan /></DescriptionIcon>
+            <DescriptionText>Taiwanese</DescriptionText>
+          </ListItem>
+        </DescriptionList>
       </Container>
     </Header>
   )
