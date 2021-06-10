@@ -10,7 +10,7 @@ export const Heading = styled('h2', {
         marginBottom: 0,
         marginLeft: '-2px',
         color: 'hsl($shade0)',
-        fontSize: '2.8rem',
+        fontSize: '3.2rem',
         fontWeight: 800,
         fontStyle: 'italic'
       },

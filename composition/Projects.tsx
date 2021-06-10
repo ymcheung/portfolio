@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { Container } from '../components/layout';
 import { Heading, Verb } from '../components/headings';
-import { HomeItemsLayout, HomeItemLink, HomeItemContainer, HomeItemImage } from '../components/home/HomeItems';
+import { HomeItemsLayout, HomeItemLink, HomeItemContainer, HomeItemImage } from '../home/HomeItems';
 
 function Projects() {
   const [mounted, setMounted] = useState(false);
