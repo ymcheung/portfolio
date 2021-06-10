@@ -16,7 +16,6 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=home]': {
     minHeight: '100vh',
-    paddingTop: '$16',
     backgroundColor: 'hsl($shade1600)',
   }
 });
