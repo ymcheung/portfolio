@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState} from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
@@ -23,7 +23,7 @@ const pageBody = global({
   }
 });
 
-function ProjectPie() {
+export default function ProjectPie() {
   const pageInfo = {
     name: 'Explore UI of a Clock-In Web App',
     description: 'A side project exploring fluent UI design.',
@@ -32,8 +32,6 @@ function ProjectPie() {
   };
 
   const router = useRouter();
-  const articleRef = useRef<HTMLElement>(null);
-  // const [overlapped, setOverlapped] = useState(false);
 
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'pie');
@@ -78,5 +76,3 @@ export const getStaticProps = async ({ locale }) => ({
     ...await serverSideTranslations(locale, ['pie']),
   },
 });
-
-export default ProjectPie;
