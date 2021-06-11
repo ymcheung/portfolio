@@ -9,26 +9,6 @@ import { Heading } from '../components/headings';
 
 import IconTaiwan from '../elements/IconTaiwan';
 
-const Header = styled('header', {
-  overflow: 'hidden',
-  position: 'relative',
-  marginBottom: '$12',
-  borderBottom: '1px solid hsl($shade1200)',
-
-  variants: {
-    responsive: {
-      mobile: {
-        minHeight: '375px',
-        paddingTop: '102px'
-      },
-      tablet: {
-        minHeight: '225px',
-        paddingTop: '48px'
-      }
-    }
-  }
-});
-
 const diagonTransition = keyframes({
  '0%': {
     backgroundPosition: '0 0'
@@ -89,7 +69,7 @@ export default function NameHeader() {
   const scheme = theme === 'dark' ? 'dark' : 'light'; 
 
   return(
-    <Header responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+    <>
       <Background scheme={scheme} />
       <Container responsive={{'@m992': 'max960', '@m1200': 'max1168'}}>
         <Heading as="h1" nametag="home">{AUTHOR}</Heading>
@@ -104,6 +84,6 @@ export default function NameHeader() {
           </ListItem>
         </DescriptionList>
       </Container>
-    </Header>
+    </>
   )
 }

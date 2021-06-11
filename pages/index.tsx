@@ -3,6 +3,8 @@ import Head from 'next/head';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from '../constant';
+import { styled } from '../stitches.config';
+
 import HeadMeta from '../utils/HeadMeta';
 
 import { global } from '../stitches.config';
@@ -17,6 +19,26 @@ const pageBody = global({
   'body[data-body-style=home]': {
     minHeight: '100vh',
     backgroundColor: 'hsl($shade1600)',
+  }
+});
+
+const Header = styled('header', {
+  overflow: 'hidden',
+  position: 'relative',
+  marginBottom: '$12',
+  borderBottom: '1px solid hsl($shade1200)',
+
+  variants: {
+    responsive: {
+      mobile: {
+        minHeight: '375px',
+        paddingTop: '102px'
+      },
+      tablet: {
+        minHeight: '225px',
+        paddingTop: '48px'
+      }
+    }
   }
 });
 
@@ -81,7 +103,9 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,600;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet" />
       </Head>
       <HeadMeta />
-      <NameHeader />
+      <Header responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+        <NameHeader />
+      </Header>
       <Projects />
       <Activity />
       <ExternalLinks />
