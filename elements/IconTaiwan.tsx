@@ -7,7 +7,7 @@ const Icon = styled(Svg, {
 });
 
 const Island = styled('path', {
-  fill: 'hsl($shade300)'
+  fill: 'hsl($shade600)'
 });
 
 function IconTaiwan() {

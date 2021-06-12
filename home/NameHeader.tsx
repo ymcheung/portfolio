@@ -59,7 +59,7 @@ const DescriptionList = styled('ul', {
   variants: {
     responsive: {
       mobile: {
-        margin: '0 0 40px'
+        margin: '0 0 56px'
       },
       tablet: {
         margin: '0 0 16px'

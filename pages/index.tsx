@@ -23,7 +23,6 @@ const pageBody = global({
 });
 
 const Header = styled('header', {
-  overflow: 'hidden',
   position: 'relative',
   marginBottom: '$12',
   borderBottom: '1px solid hsl($shade1200)',
