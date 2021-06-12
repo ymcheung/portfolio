@@ -8,6 +8,11 @@ import { Container, ListItem } from '../components/layout';
 import { Heading } from '../components/headings';
 
 import IconTaiwan from '../elements/IconTaiwan';
+import IconFigma from '../elements/IconFigma';
+import IconCSS from '../elements/IconCSS';
+import IconReact from '../elements/IconReact';
+import IconA11y from '../elements/IconA11y';
+
 
 const diagonTransition = keyframes({
  '0%': {
@@ -25,6 +30,14 @@ const Background = styled('div', {
   animation: `${diagonTransition} 60s linear infinite`,
 
   variants: {
+    responsive: {
+      mobile: {
+        height: '300px'
+      },
+      tablet: {
+        height: '225px'
+      }
+    },
     scheme: {
       dark: {
         backgroundImage: `url('/home/grid_dark.svg')`
@@ -38,11 +51,21 @@ const Background = styled('div', {
 
 const DescriptionList = styled('ul', {
   display: 'grid',
-  rowGap: '12px',
+  rowGap: '$12',
   position: 'relative',
   zIndex: 1,
-  margin: 0,
-  paddingLeft: '28px'
+  paddingLeft: '28px',
+
+  variants: {
+    responsive: {
+      mobile: {
+        margin: '0 0 40px'
+      },
+      tablet: {
+        margin: '0 0 16px'
+      }
+    }
+  }
 });
 
 const DescriptionIcon = styled('span', {
@@ -58,6 +81,27 @@ const DescriptionText = styled('span', {
   fontStyle: 'italic'
 });
 
+const ToolsList = styled('ul', {
+  display: 'grid',
+  grid: 'auto / repeat(4, auto)',
+  columnGap: '32px',
+  position: 'relative',
+  zIndex: 1,
+  margin: 0,
+  padding: 0,
+
+  variants: {
+    responsive: {
+      mobile: {
+        justifyContent: 'center',
+      },
+      tablet: {
+        justifyContent: 'end',
+      }
+    }
+  }
+});
+
 export default function NameHeader() {
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
@@ -70,19 +114,33 @@ export default function NameHeader() {
 
   return(
     <>
-      <Background scheme={scheme} />
+      <Background responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} scheme={scheme} />
       <Container responsive={{'@m992': 'max960', '@m1200': 'max1168'}}>
         <Heading as="h1" nametag="home">{AUTHOR}</Heading>
-        <DescriptionList>
+        <DescriptionList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
           <ListItem nomark>
             <DescriptionIcon>🤘</DescriptionIcon>
             <DescriptionText>{DESCRIPTION}</DescriptionText>
           </ListItem>
           <ListItem nomark>
             <DescriptionIcon><IconTaiwan /></DescriptionIcon>
-            <DescriptionText>Taiwanese</DescriptionText>
+            <DescriptionText>Taiwan</DescriptionText>
           </ListItem>
         </DescriptionList>
+        <ToolsList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+          <ListItem nomark>
+            <IconFigma />
+          </ListItem>
+          <ListItem nomark>
+            <IconCSS />
+          </ListItem>
+          <ListItem nomark>
+            <IconReact />
+          </ListItem>
+          <ListItem nomark>
+            <IconA11y />
+          </ListItem>
+        </ToolsList>
       </Container>
     </>
   )

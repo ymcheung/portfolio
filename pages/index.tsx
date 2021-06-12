@@ -31,12 +31,11 @@ const Header = styled('header', {
   variants: {
     responsive: {
       mobile: {
-        minHeight: '375px',
-        paddingTop: '102px'
+        minHeight: '300px',
+        paddingTop: '48px'
       },
       tablet: {
-        minHeight: '225px',
-        paddingTop: '48px'
+        minHeight: '225px'
       }
     }
   }
