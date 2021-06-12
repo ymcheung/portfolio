@@ -3,29 +3,41 @@ import Head from 'next/head';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from '../constant';
+import { styled } from '../stitches.config';
+
 import HeadMeta from '../utils/HeadMeta';
 
-import { styled, global } from '../stitches.config';
+import { global } from '../stitches.config';
 
-import { Container } from '../components/layout';
-import { Heading } from '../components/headings';
-import Projects from '../composition/Projects';
-import Activity from '../composition/Activity';
-import ExternalLinks from '../composition/ExternalLinks';
+import NameHeader from '../home/NameHeader';
+import Projects from '../home/Projects';
+import Activity from '../home/Activity';
+import ExternalLinks from '../home/ExternalLinks';
 import Footer from '../components/Footer';
 
 const pageBody = global({
   'body[data-body-style=home]': {
     minHeight: '100vh',
-    paddingTop: '$16',
     backgroundColor: 'hsl($shade1600)',
   }
 });
 
-const NameDescription = styled('span', {
-  color: 'hsl($shade700)',
-  fontFamily: '$default',
-  fontSize: '$14'
+const Header = styled('header', {
+  position: 'relative',
+  marginBottom: '$12',
+  borderBottom: '1px solid hsl($shade1200)',
+
+  variants: {
+    responsive: {
+      mobile: {
+        minHeight: '300px',
+        paddingTop: '48px'
+      },
+      tablet: {
+        minHeight: '225px'
+      }
+    }
+  }
 });
 
 export default function Home() {
@@ -89,10 +101,9 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,600;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet" />
       </Head>
       <HeadMeta />
-      <Container as="header" responsive={{'@m992': 'max960', '@m1200': 'max1168'}} className={null} hassibling>
-        <Heading as="h1" nametag="home">{AUTHOR}</Heading>
-        <NameDescription>{DESCRIPTION}</NameDescription>
-      </Container>
+      <Header responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+        <NameHeader />
+      </Header>
       <Projects />
       <Activity />
       <ExternalLinks />

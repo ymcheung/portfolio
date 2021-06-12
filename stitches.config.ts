@@ -1,6 +1,6 @@
 import { createCss } from '@stitches/react'
 
-export const { css, styled, global, theme, getCssString } = createCss({
+export const { css, styled, global, theme, keyframes, getCssString } = createCss({
   theme: {
     colors: {
       laurel: '162,57%,62%',

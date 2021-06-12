@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Container } from '../components/layout';
 import { Heading, Verb } from '../components/headings';
-import { HomeItemsLayout, HomeItemLink, HomeItem, HomeItemDescription } from '../components/home/HomeItems';
+import { HomeItemsLayout, HomeItemLink, HomeItem, HomeItemDescription } from './HomeItems';
 import IconHyphen from '../elements/IconHyphen';
 
 function Activity() {
