@@ -12,7 +12,7 @@ function Portfolio({ Component, pageProps }) {
       attribute='class'
       defaultTheme='light'
       value={{
-        dark: dark.className,
+        dark: dark,
         light: 'light',
       }}
     >
