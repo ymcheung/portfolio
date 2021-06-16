@@ -23,14 +23,16 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          {
-            process.env.NODE_ENV === 'production' &&
-            <script async src="https://cdn.splitbee.io/sb.js" />
-          }
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&family=Overpass:ital,wght@0,300;0,400;0,600;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet" />
           <link rel="icon" href="/favicon/ym.ico" />
           <link rel="icon" href="/favicon/ym.svg" type="image/svg+xml" />
           <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
           <link rel="manifest" href="/favicon/manifest.webmanifest" />
+          {
+            process.env.NODE_ENV === 'production' &&
+            <script async src="https://cdn.splitbee.io/sb.js" />
+          }
         </Head>
         <body>
           <Main />
