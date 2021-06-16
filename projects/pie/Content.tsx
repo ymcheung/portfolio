@@ -68,7 +68,8 @@ export default function Content() {
       <Container as="section" responsive={{'@m768': 'max640'}}>
         <LangSwitch />
         <Section>
-          <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('brief.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('brief.description')}} indent sectionend />
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
