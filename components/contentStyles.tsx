@@ -28,8 +28,8 @@ export const ContentTitle = styled('h2', {
       default: {
         color: 'hsl($shade100)'
       },
-      gallery: {
-        color: 'hsl($galleryContentTitle)'
+      mono: {
+        color: 'hsl($monoContentTitle)'
       }
     },
     featurednumber: {
@@ -84,8 +84,8 @@ export const Paragraph = styled('p', {
       default: {
         color: 'hsl($shade600)'
       },
-      gallery: {
-        color: 'hsl($galleryContentParagraph)'
+      mono: {
+        color: 'hsl($monoContentParagraph)'
       }
     },
     indent: {

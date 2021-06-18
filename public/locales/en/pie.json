@@ -18,7 +18,7 @@
   "question":
   {
     "title":
-      "Questions",
+      "Question",
     "content":
       "How might we simplify the flows of the routine taks?"
   },
@@ -28,10 +28,16 @@
       "Flows",
     "inuse":
       "App In Use",
+    "mainmenu":
+      "Main Menu",
+    "clockinout":
+      "Clock-In/Out",
+    "screen":
+      "Screen",
     "description":
       "&rdquo;Main Menu&ldquo; is not required for completing routine tasks. This can be done with the Tab Bar at the bottom.",
     "another":
-      "There will be another &rdquo;Going Back and Forth&ldquo; if there is something else to do in the product in use."
+      "There will be another &rdquo;Going Back and Forth&ldquo; if a user has something else to do in the product in use."
   },
   "document":
   {
