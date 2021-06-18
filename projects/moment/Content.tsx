@@ -12,13 +12,23 @@ import LangSwitch from '../LangSwitch';
 import { ContentTitle, Section, Paragraph, ContentList, ContentListItem } from '../../components/contentStyles';
 
 const BubbleSearch = styled('div', {
-  maxWidth: 'fit-content',
   padding: '8px 12px',
   color: 'hsl($shade300)',
   fontSize: '$14',
   lineHeight: '24px',
   backgroundColor: 'hsl($searchBubble)',
-  borderRadius: '12px'
+  borderRadius: '12px',
+
+  variants: {
+    responsive: {
+      mobile: {
+        maxWidth: 'fit-content'
+      },
+      tablet: {
+        maxWidth: 'max-content'
+      }
+    }
+  } 
 });
 
 const IconListDescription = styled(Paragraph, {
@@ -107,7 +117,7 @@ export default function Content() {
               <div>
                 <IconSearch />
               </div>
-              <BubbleSearch dangerouslySetInnerHTML={{__html: keyword}} />
+              <BubbleSearch responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: keyword}} />
               <IconListDescription dangerouslySetInnerHTML={{__html: name}} sectionend="true" />
             </IconListItem>
           ))}
