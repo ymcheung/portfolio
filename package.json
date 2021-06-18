@@ -7,7 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@stitches/react": "^0.2.0",
+    "@stitches/react": "^0.2.2",
     "@types/underscore": "^1.11.2",
     "next": "^10.2.0",
     "next-i18next": "^8.2.0",
