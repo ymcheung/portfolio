@@ -29,17 +29,17 @@
         "slug":
           "storybook",
         "url":
-          "https://storybook.js.org/tutorials/intro-to-storybook/",
+          "https://storybook.js.org/tutorials/intro-to-storybook/react/zh-TW/get-started/",
         "name":
           "Intro to Storybook for React",
         "time": {
           "format":
-            "2021-04",
+            "2021-06",
           "full":
-            "April, 2021"
+            "June, 2021"
         },
         "description":
-          "The famous design system tool: Storybook‘s official tutorials. The translation is under community <a class=\"paragraph-link\" href=\"https://github.com/chromaui/learnstorybook.com/pull/441\" target=\"_blank\" rel=\"noopener\">proofreading</a>."
+          "The famous design system tool: Storybook&rsquo;s official tutorials."
       },
       {
         "slug":
