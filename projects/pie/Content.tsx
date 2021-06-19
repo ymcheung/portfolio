@@ -84,6 +84,13 @@ export default function Content() {
       <GalleryContainer project="pie">
         <Container as="section" responsive={{'@m768': 'max640'}}>
           <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.title')}} />
+          <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.description')}} />
+          <ContentTitle as="h3" purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockinout',
+            {clock: t('flows.clock'), inout: t('flows.inout')}
+          )}} />
+          <ContentTitle as="strong" purpose="graph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.inuse')}} />
+          <ContentTitle as="strong" purpose="graph" scheme="mono">Pie</ContentTitle>
+          <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.another')}} />
         </Container>
       </GalleryContainer>
       <Container as="section" responsive={{'@m768': 'max640'}}>

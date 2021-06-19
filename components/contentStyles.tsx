@@ -13,10 +13,14 @@ export const ContentTitle = styled('h2', {
         lineHeight: '24px'
       },
       paragraph: {
-        display: 'inline-block',
         margin: '0 0 $4',
         fontSize: '$16',
         lineHeight: '20px'
+      },
+      graph: {
+        margin: '0 0 $4',
+        fontSize: '$14',
+        lineHeight: '18px'
       },
       iconListItem: {
         margin: 0,
