@@ -29,17 +29,17 @@
         "slug":
           "storybook",
         "url":
-          "https://storybook.js.org/tutorials/intro-to-storybook/",
+          "https://storybook.js.org/tutorials/intro-to-storybook/react/zh-TW/get-started/",
         "name":
           "Storybook 入門：React 篇",
         "time": {
           "format":
-            "2021-04",
+            "2021-06",
           "full":
-            "2021 年 4 月"
+            "2021 年 6 月"
         },
         "description":
-          "知名設計系統工具：Storybook 的官方教學課程。目前翻譯正在<a class=\"paragraph-link\" href=\"https://github.com/chromaui/learnstorybook.com/pull/441\" target=\"_blank\" rel=\"noopener\">進行社群校稿</a>。"
+          "知名設計系統工具：Storybook 的官方教學課程。"
       },
       {
         "slug":
