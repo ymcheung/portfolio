@@ -32,16 +32,14 @@
       "Main Menu",
     "clock":
       "Clock",
-    "clocked":
-      "Clocked",
     "inout":
       "In&sol;Out",
     "clockinout":
     "{{clock}} {{inout}}",
     "clockedinout":
-    "{{clocked}} {{inout}}",
+    "{{clock}}ed {{inout}}",
     "screen":
-      "Screen",
+      "{{clock}} {{inout}} Screen",
     "description":
       "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. This can be done with the Tab Bar at the bottom.",
     "another":

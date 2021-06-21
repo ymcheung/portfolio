@@ -13,12 +13,13 @@ export const ContentTitle = styled('h2', {
         lineHeight: '24px'
       },
       paragraph: {
-        margin: '0 0 $4',
+        margin: '0 0 $8',
         fontSize: '$16',
         lineHeight: '20px'
       },
       graph: {
-        margin: '0 0 $4',
+        display: 'inline-block',
+        margin: '0 0 6px',
         fontSize: '$14',
         lineHeight: '18px'
       },
@@ -101,11 +102,6 @@ export const Paragraph = styled('p', {
       true: {
         margin: 0
       }
-    },
-    postmark: {
-      true: {
-        fontSize: '$14'
-      }
     }
   },
   defaultVariants: {
@@ -115,6 +111,32 @@ export const Paragraph = styled('p', {
   '& .paragraph-link': {
     color: 'hsl($shade300)'
   },
+});
+
+export const GraphCaption = styled('figcaption', {
+  fontFamily: '$default',
+  fontSize: '$14',
+  lineHeight: '18px',
+
+  variants: {
+    scheme: {
+      default: {
+        color: 'hsl($shade600)'
+      },
+      mono: {
+        color: 'hsl($monoContentParagraph)'
+      }
+    }
+  },
+  defaultVariants: {
+    scheme: 'default'
+  }
+});
+
+export const ParagraphPostmark = styled('span', {
+  display: 'inline-block',
+  fontFamily: '$default',
+  fontSize: '$14'
 });
 
 export const ContentList = styled('ul', {

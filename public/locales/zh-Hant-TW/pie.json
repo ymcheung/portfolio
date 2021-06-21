@@ -32,14 +32,14 @@
       "主選單",
     "clock":
       "上下班",
-    "clocked":
-      "完成",
     "inout":
       "打卡",
     "clockinout":
       "{{clock}}{{inout}}",
     "clockedinout":
-      "{{clocked}}{{inout}}",
+      "完成{{clock}}{{inout}}",
+    "screen":
+      "{{clock}}{{inout}}畫面",
     "description":
       "「主選單」並非完成例行事項的必備流程，以底部導覽選單簡化。",
     "another":

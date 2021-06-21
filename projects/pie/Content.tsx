@@ -4,14 +4,43 @@ import { styled } from '../../stitches.config';
 
 import LangSwitch from '../LangSwitch';
 
-import { Container, ArticleBody, GalleryContainer } from '../../components/layout';
-import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
+import { Container, ArticleBody, GalleryContainer, ListItem } from '../../components/layout';
+import { ContentTitle, Section, Paragraph, GraphCaption } from '../../components/contentStyles';
+
+const svgMainmenu = '/projects/pie/mainmenu.svg';
+const svgClockInScreen = '/projects/pie/clockin-screen.svg';
 
 type itemProps = {
   [x: string]: any;
   name: string;
   description: string;
 };
+
+const GraphGrid = styled('ul', {
+  display: 'grid',
+  overflowX: 'auto',
+  margin: '0 0 $4',
+  padding: '0 0 $12',
+
+  variants: {
+    inuse: {
+      threeSteps: {
+        grid: 'auto / repeat(3, 84px 32px)'
+      }
+    }
+  }
+});
+
+const GraphFigure = styled('figure', {
+  margin: 0,
+  paddiing: 0
+});
+
+const ImgInUse = styled('img', {
+  width: '64px',
+  height: '75px',
+  marginBottom: '$4'
+});
 
 // const Gallery = styled('ul', {
 //   display: 'grid',
@@ -89,6 +118,39 @@ export default function Content() {
             {clock: t('flows.clock'), inout: t('flows.inout')}
           )}} />
           <ContentTitle as="strong" purpose="graph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.inuse')}} />
+          <GraphGrid inuse="threeSteps">
+            <ListItem nomark>
+              <GraphFigure>
+                <ImgInUse src={svgMainmenu} alt="" />
+                <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.mainmenu')}} />
+              </GraphFigure>
+            </ListItem>
+            <ListItem nomark>
+              
+            </ListItem>
+            <ListItem nomark>
+              <GraphFigure>
+                <ImgInUse src={svgClockInScreen} alt="" />
+                <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
+                  {clock: t('flows.clock'), inout: t('flows.inout')}
+                )}} />
+              </GraphFigure>
+            </ListItem>
+            <ListItem nomark>
+              
+            </ListItem>
+            <ListItem nomark>
+              <GraphFigure>
+                <ImgInUse src={svgClockInScreen} alt="" />
+                <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockedinout',
+                  {clock: t('flows.clock'), inout: t('flows.inout')}
+                )}} />
+              </GraphFigure>
+            </ListItem>
+            <ListItem nomark>
+              
+            </ListItem>
+          </GraphGrid>
           <ContentTitle as="strong" purpose="graph" scheme="mono">Pie</ContentTitle>
           <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.another')}} />
         </Container>
@@ -98,7 +160,7 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('document.title')}} />
           {t<string, itemProps>('document.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
             <React.Fragment key={`doc-${index}`}>
-              <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: name}} />
+              <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: name}} />
               <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />
             </React.Fragment>
           ))}
@@ -107,7 +169,7 @@ export default function Content() {
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('note.title')}} />
         {t<string, itemProps>('note.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
           <React.Fragment key={`note-${index}`}>
-            <ContentTitle as="strong" purpose="paragraph" dangerouslySetInnerHTML={{__html: name}} />
+            <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: name}} />
             <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />
           </React.Fragment>
         ))}
