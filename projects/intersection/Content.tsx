@@ -36,7 +36,7 @@ const IconListDescription = styled(Paragraph, {
   gridArea: 'description'
 });
 
-const IconListTimestamp = styled(Paragraph, {
+const IconListTimestamp = styled(ParagraphPostmark, {
   gridArea: 'timestamp'
 });
 
@@ -86,7 +86,7 @@ export default function Content() {
                 <ContentTitle as="a" purpose="iconListItem" dangerouslySetInnerHTML={{__html: name}} data-splitbee-event={`Website Translation: ${name}`} target="_blank" rel="noopener" nounderline />
               </Link>
               <IconListDescription dangerouslySetInnerHTML={{__html: description}} sectionend="true" />
-              <ParagraphPostmark as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} />
+              <IconListTimestamp as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} />
             </IconListItem>
           ))}
         </IconList>
