@@ -8,10 +8,12 @@ import Image from 'next/image';
 const svgThenArrow = '/projects/pie/graph/thenArrow.svg';
 const graphInUseMainMenu = '/projects/pie/graph/mainmenu.svg';
 const graphInUseClockInScreen = '/projects/pie/graph/clockinScreen.svg';
+const graphInUseConfirmScreen = '/projects/pie/graph/confirmScreen.svg';
 
 const graphPieClockIn = '/projects/pie/graph/clockInNone.jpg';
 const graphPieClockedIn = '/projects/pie/graph/clockedIn.jpg';
-
+const graphPieConfirm = '/projects/pie/graph/confirm.jpg';
+const graphPieApplying = '/projects/pie/graph/applying.jpg';
 
 const GraphGrid = styled('ul', {
   display: 'grid',
@@ -187,7 +189,7 @@ export default function Graph() {
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
-              <ImgInUse src={graphInUseClockInScreen} alt="" />
+              <ImgInUse src={graphInUseConfirmScreen} alt="" />
               <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
                 {view: t('flows.confirmform')}
               )}} />
@@ -198,7 +200,7 @@ export default function Graph() {
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
-              <ImgInUse src={graphInUseClockInScreen} alt="" />
+              <ImgInUse src={graphInUseConfirmScreen} alt="" />
               <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.confirmform',
                 {context: 'done'}
               )}} />
@@ -231,7 +233,7 @@ export default function Graph() {
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
-              <ImgPie src={graphPieClockIn} width={128} height={221} alt="" />
+              <ImgPie src={graphPieConfirm} width={128} height={221} alt="" />
               <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
                 {view: t('flows.confirmform')}
               )}} />
@@ -242,7 +244,7 @@ export default function Graph() {
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
-              <ImgPie src={graphPieClockIn} width={128} height={221} alt="" />
+              <ImgPie src={graphPieApplying} width={128} height={221} alt="" />
               <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.confirmform',
                 {context: 'done'}
               )}} />

@@ -81,10 +81,18 @@ export const Section = styled('div', {
 export const Paragraph = styled('p', {
   margin: '0 0 $16',
   fontFamily: '$default',
-  fontSize: '$16',
-  lineHeight: '24px',
 
   variants: {
+    purpose: {
+      default: {
+        fontSize: '$16',
+        lineHeight: '24px',
+      },
+      question: {
+        fontSize: '$24',
+        lineHeight: '32px',
+      }
+    },
     scheme: {
       default: {
         color: 'hsl($shade600)'
@@ -98,6 +106,11 @@ export const Paragraph = styled('p', {
         textIndent: '36px'
       }
     },
+    italic: {
+      true: {
+        fontStyle: 'italic'
+      }
+    },
     sectionend: {
       true: {
         margin: 0
@@ -105,6 +118,7 @@ export const Paragraph = styled('p', {
     }
   },
   defaultVariants: {
+    purpose: 'default',
     scheme: 'default'
   },
 

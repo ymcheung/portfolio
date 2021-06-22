@@ -62,7 +62,9 @@ type itemProps = {
 // });
 
 export default function Content() {
-  const { t } = useTranslation('pie');
+  const { t, i18n } = useTranslation('pie');
+
+  const isItalic = i18n.language === 'en';
 
   return(
     <ArticleBody>
@@ -79,7 +81,7 @@ export default function Content() {
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('question.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('question.content')}} indent sectionend />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('question.content')}} purpose="question" italic={isItalic} indent sectionend />
         </Section>
       </Container>
       <Graph />
