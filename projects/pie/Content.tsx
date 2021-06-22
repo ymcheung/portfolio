@@ -7,8 +7,13 @@ import LangSwitch from '../LangSwitch';
 import { Container, ArticleBody, GalleryContainer, ListItem } from '../../components/layout';
 import { ContentTitle, Section, Paragraph, GraphCaption } from '../../components/contentStyles';
 
-const svgMainmenu = '/projects/pie/mainmenu.svg';
-const svgClockInScreen = '/projects/pie/clockin-screen.svg';
+import Image from 'next/image';
+const svgThenArrow = '/projects/pie/graph/thenArrow.svg';
+const graphInUseMainMenu = '/projects/pie/graph/mainmenu.svg';
+const graphInUseClockInScreen = '/projects/pie/graph/clockinScreen.svg';
+
+const graphPieClockIn = '/projects/pie/graph/clockInNone.jpg';
+const graphPieClockedIn = '/projects/pie/graph/clockedIn.jpg';
 
 type itemProps = {
   [x: string]: any;
@@ -24,8 +29,16 @@ const GraphGrid = styled('ul', {
 
   variants: {
     inuse: {
-      threeSteps: {
-        grid: 'auto / repeat(3, 84px 32px)'
+      en: {
+        grid: 'auto / auto-flow 84px 24px'
+      },
+      tw: {
+        grid: 'auto / auto-flow 80px 24px'
+      }
+    },
+    pie: {
+      true: {
+        grid: 'auto / auto-flow 144px 24px'
       }
     }
   }
@@ -40,6 +53,27 @@ const ImgInUse = styled('img', {
   width: '64px',
   height: '75px',
   marginBottom: '$4'
+});
+
+const ImgPie = styled(Image, {
+  marginBottom: '$4',
+  borderRadius: '12px'
+});
+
+const ImgThen = styled('img', {
+  width: '6px',
+  height: '10px',
+
+  variants: {
+    graph: {
+      inuse: {
+        marginTop: '32px'
+      },
+      pie: {
+        marginTop: '96px'
+      }
+    }
+  }
 });
 
 // const Gallery = styled('ul', {
@@ -90,7 +124,9 @@ const ImgInUse = styled('img', {
 // });
 
 export default function Content() {
-  const { t } = useTranslation('pie');
+  const { t, i18n } = useTranslation('pie');
+
+  const lang = i18n.language === 'en' ? 'en' : 'tw';
 
   return(
     <ArticleBody>
@@ -118,40 +154,61 @@ export default function Content() {
             {clock: t('flows.clock'), inout: t('flows.inout')}
           )}} />
           <ContentTitle as="strong" purpose="graph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.inuse')}} />
-          <GraphGrid inuse="threeSteps">
+          <GraphGrid inuse={lang}>
             <ListItem nomark>
               <GraphFigure>
-                <ImgInUse src={svgMainmenu} alt="" />
+                <ImgInUse src={graphInUseMainMenu} alt="" />
                 <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.mainmenu')}} />
               </GraphFigure>
             </ListItem>
             <ListItem nomark>
-              
+              <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
             </ListItem>
             <ListItem nomark>
               <GraphFigure>
-                <ImgInUse src={svgClockInScreen} alt="" />
+                <ImgInUse src={graphInUseClockInScreen} alt="" />
                 <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
                   {clock: t('flows.clock'), inout: t('flows.inout')}
                 )}} />
               </GraphFigure>
             </ListItem>
             <ListItem nomark>
-              
+              <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
             </ListItem>
             <ListItem nomark>
               <GraphFigure>
-                <ImgInUse src={svgClockInScreen} alt="" />
+                <ImgInUse src={graphInUseClockInScreen} alt="" />
                 <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockedinout',
                   {clock: t('flows.clock'), inout: t('flows.inout')}
                 )}} />
               </GraphFigure>
             </ListItem>
             <ListItem nomark>
-              
+
             </ListItem>
           </GraphGrid>
           <ContentTitle as="strong" purpose="graph" scheme="mono">Pie</ContentTitle>
+          <GraphGrid pie>
+            <ListItem nomark>
+              <GraphFigure>
+                <ImgPie src={graphPieClockIn} width={128} height={221} alt="" />
+                <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
+                  {clock: t('flows.clock'), inout: t('flows.inout')}
+                )}} />
+              </GraphFigure>
+            </ListItem>
+            <ListItem nomark>
+              <ImgThen src={svgThenArrow} graph="pie" aria-hidden="true" />
+            </ListItem>
+            <ListItem nomark>
+              <GraphFigure>
+                <ImgPie src={graphPieClockedIn} width={128} height={221} alt="" />
+                <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockedinout',
+                  {clock: t('flows.clock'), inout: t('flows.inout')}
+                )}} />
+              </GraphFigure>
+            </ListItem>
+          </GraphGrid>
           <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.another')}} />
         </Container>
       </GalleryContainer>

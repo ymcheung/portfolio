@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { styled } from '../../stitches.config';
 import { screenMobile, screenTablet } from '../../utils/screens';
@@ -31,10 +32,13 @@ const ScreenshotTablet = styled('img', {
 });
 
 export default function Cover() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {setMounted(true)}, []);
+
   return(
     <Wrap responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} project="pie">
       <Device responsive={{ '@initial': 'mobile' }} device={{ '@m768': 'mobileDual' }}>
-        {screenMobile &&
+        {mounted && screenMobile &&
           <ScreenshotMobile src="/projects/pie/cover-mobile.jpg" width={256} height={455} alt="Screenshot: Clock-In" />
         }
         {screenTablet &&
