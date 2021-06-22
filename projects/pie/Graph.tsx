@@ -6,9 +6,11 @@ import { ContentTitle, Paragraph, GraphCaption } from '../../components/contentS
 
 import Image from 'next/image';
 const svgThenArrow = '/projects/pie/graph/thenArrow.svg';
+const svgFinish = '/projects/pie/graph/finish.svg';
 const graphInUseMainMenu = '/projects/pie/graph/mainmenu.svg';
 const graphInUseClockInScreen = '/projects/pie/graph/clockinScreen.svg';
 const graphInUseConfirmScreen = '/projects/pie/graph/confirmScreen.svg';
+const graphInUseConfirmNone = '/projects/pie/graph/confirmNone.svg';
 
 const graphPieClockIn = '/projects/pie/graph/clockInNone.jpg';
 const graphPieClockedIn = '/projects/pie/graph/clockedIn.jpg';
@@ -62,11 +64,17 @@ const ImgPie = styled(Image, {
   borderRadius: '12px'
 });
 
-const ImgThen = styled('img', {
-  width: '6px',
-  height: '10px',
-
+const ImgIndicator = styled('img', {
   variants: {
+    purpose: {
+      then: {
+        width: '6px',
+        height: '16px'
+      },
+      finish: {
+        size: '16px'
+      }
+    },
     graph: {
       inuse: {
         marginTop: '32px'
@@ -98,7 +106,7 @@ export default function Graph() {
             </GraphFigure>
           </ListItem>
           <ListItem nomark>
-            <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
+            <ImgIndicator src={svgThenArrow} purpose="then" graph="inuse" aria-hidden="true" />
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
@@ -109,7 +117,7 @@ export default function Graph() {
             </GraphFigure>
           </ListItem>
           <ListItem nomark>
-            <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
+            <ImgIndicator src={svgThenArrow} purpose="then" graph="inuse" aria-hidden="true" />
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
@@ -118,6 +126,9 @@ export default function Graph() {
                 {context: 'done'}
               )}} />
             </GraphFigure>
+          </ListItem>
+          <ListItem nomark>
+            <ImgIndicator src={svgFinish} purpose="finish" graph="inuse" aria-hidden="true" />
           </ListItem>
         </GraphGrid>
         <ContentTitle as="strong" purpose="graph" scheme="mono">Pie</ContentTitle>
@@ -131,7 +142,7 @@ export default function Graph() {
             </GraphFigure>
           </ListItem>
           <ListItem nomark>
-            <ImgThen src={svgThenArrow} graph="pie" aria-hidden="true" />
+            <ImgIndicator src={svgThenArrow} purpose="then" graph="pie" aria-hidden="true" />
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
@@ -140,6 +151,9 @@ export default function Graph() {
                 {context: 'done'}
               )}} />
             </GraphFigure>
+          </ListItem>
+          <ListItem nomark>
+            <ImgIndicator src={svgFinish} purpose="finish" graph="pie" aria-hidden="true" />
           </ListItem>
         </GraphGrid>
         <ContentTitle as="h3" purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
@@ -154,7 +168,7 @@ export default function Graph() {
             </GraphFigure>
           </ListItem>
           <ListItem nomark>
-            <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
+            <ImgIndicator src={svgThenArrow} purpose="then" graph="inuse" aria-hidden="true" />
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
@@ -165,7 +179,7 @@ export default function Graph() {
             </GraphFigure>
           </ListItem>
           <ListItem nomark>
-            <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
+            <ImgIndicator src={svgThenArrow} purpose="then" graph="inuse" aria-hidden="true" />
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
@@ -176,7 +190,7 @@ export default function Graph() {
             </GraphFigure>
           </ListItem>
           <ListItem nomark>
-            <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
+            <ImgIndicator src={svgThenArrow} purpose="then" graph="inuse" aria-hidden="true" />
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
@@ -185,7 +199,7 @@ export default function Graph() {
             </GraphFigure>
           </ListItem>
           <ListItem nomark>
-            <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
+            <ImgIndicator src={svgThenArrow} purpose="then" graph="inuse" aria-hidden="true" />
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
@@ -196,15 +210,18 @@ export default function Graph() {
             </GraphFigure>
           </ListItem>
           <ListItem nomark>
-            <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
+            <ImgIndicator src={svgThenArrow} purpose="then" graph="inuse" aria-hidden="true" />
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
-              <ImgInUse src={graphInUseConfirmScreen} alt="" />
+              <ImgInUse src={graphInUseConfirmNone} alt="" />
               <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.confirmform',
                 {context: 'done'}
               )}} />
             </GraphFigure>
+          </ListItem>
+          <ListItem nomark>
+            <ImgIndicator src={svgFinish} purpose="finish" graph="inuse" aria-hidden="true" />
           </ListItem>
         </GraphGrid>
         <ContentTitle as="strong" purpose="graph" scheme="mono">Pie</ContentTitle>
@@ -218,7 +235,7 @@ export default function Graph() {
             </GraphFigure>
           </ListItem>
           <ListItem nomark>
-            <ImgThen src={svgThenArrow} graph="pie" aria-hidden="true" />
+            <ImgIndicator src={svgThenArrow} purpose="then" graph="pie" aria-hidden="true" />
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
@@ -229,7 +246,7 @@ export default function Graph() {
             </GraphFigure>
           </ListItem>
           <ListItem nomark>
-            <ImgThen src={svgThenArrow} graph="pie" aria-hidden="true" />
+            <ImgIndicator src={svgThenArrow} purpose="then" graph="pie" aria-hidden="true" />
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
@@ -240,7 +257,7 @@ export default function Graph() {
             </GraphFigure>
           </ListItem>
           <ListItem nomark>
-            <ImgThen src={svgThenArrow} graph="pie" aria-hidden="true" />
+            <ImgIndicator src={svgThenArrow} purpose="then" graph="pie" aria-hidden="true" />
           </ListItem>
           <ListItem nomark>
             <GraphFigure>
@@ -249,6 +266,9 @@ export default function Graph() {
                 {context: 'done'}
               )}} />
             </GraphFigure>
+          </ListItem>
+          <ListItem nomark>
+            <ImgIndicator src={svgFinish} purpose="finish" graph="pie" aria-hidden="true" />
           </ListItem>
         </GraphGrid>
       </Container>
