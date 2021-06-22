@@ -114,6 +114,7 @@ export const Paragraph = styled('p', {
 });
 
 export const GraphCaption = styled('figcaption', {
+  marginTop: '$4',
   fontFamily: '$default',
   fontSize: '$14',
   lineHeight: '18px',
