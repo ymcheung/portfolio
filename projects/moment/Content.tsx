@@ -105,7 +105,7 @@ export default function Content() {
       <LangSwitch />
       <Section>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('intro.title')}} />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('intro.description')}} indent sectionend />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('intro.description')}} purpose="question" italic={isItalic} indent sectionend />
       </Section>
       <Section>
         <Paragraph dangerouslySetInnerHTML={{__html: t('how.lead')}} sectionend />

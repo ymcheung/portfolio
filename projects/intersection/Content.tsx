@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
-import { Container, ListItem, IconList, IconListItem } from '../../components/layout';
+import { ListItem, IconList, IconListItem } from '../../components/layout';
 
 import LangSwitch from '../LangSwitch';
 
-import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
+import { ContentTitle, Section, Paragraph, ParagraphPostmark } from '../../components/contentStyles';
 
 const FeatureList = styled('ul', {
   display: 'grid',
@@ -36,7 +36,7 @@ const IconListDescription = styled(Paragraph, {
   gridArea: 'description'
 });
 
-const IconListTimestamp = styled(Paragraph, {
+const IconListTimestamp = styled(ParagraphPostmark, {
   gridArea: 'timestamp'
 });
 
@@ -86,7 +86,7 @@ export default function Content() {
                 <ContentTitle as="a" purpose="iconListItem" dangerouslySetInnerHTML={{__html: name}} data-splitbee-event={`Website Translation: ${name}`} target="_blank" rel="noopener" nounderline />
               </Link>
               <IconListDescription dangerouslySetInnerHTML={{__html: description}} sectionend="true" />
-              <IconListTimestamp as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} postmark="true" sectionend="true" />
+              <IconListTimestamp as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} />
             </IconListItem>
           ))}
         </IconList>

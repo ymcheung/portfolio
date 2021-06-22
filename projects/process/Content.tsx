@@ -5,7 +5,7 @@ import { ListItem, IconList, IconListItem } from '../../components/layout';
 
 import LangSwitch from '../LangSwitch';
 
-import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
+import { ContentTitle, Section, Paragraph, ParagraphPostmark } from '../../components/contentStyles';
 
 const FeatureList = styled('ul', {
   margin: 0,
@@ -72,12 +72,12 @@ export default function Content() {
         <FeatureList space={{ '@initial': 'mobile', '@m768': itemSpace }}>
           <FeatureItem nomark="true" responsive={{ '@m768': 'tablet' }}>
             <ContentTitle as="strong" featurednumber="large">
-              4.2
+              3.7
               <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
             </ContentTitle>
             <div>
               <Paragraph dangerouslySetInnerHTML={{__html: t('worth.position')}} />
-              <Paragraph as="div" postmark dangerouslySetInnerHTML={{__html: t('worth.asof')}} sectionend />
+              <ParagraphPostmark dangerouslySetInnerHTML={{__html: t('worth.asof')}} />
             </div>
           </FeatureItem>
         </FeatureList>
@@ -93,7 +93,7 @@ export default function Content() {
             <div><RetroIcon src="/projects/process/bubbleObstacle.svg" alt={t('retro.obstacle.alt')} /></div>
             <div>
               <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.obstacle.description')}} />
-              <Paragraph as="div" postmark dangerouslySetInnerHTML={{__html: t('retro.obstacle.by')}} sectionend />
+              <ParagraphPostmark dangerouslySetInnerHTML={{__html: t('retro.obstacle.by')}} />
             </div>
           </IconListItem>
         </IconList>

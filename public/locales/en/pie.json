@@ -1,33 +1,49 @@
 {
-  "intro":
-    "In general, applications for work should be productive because of their repetitive usage. I will explore fluent UI design and its feasibility with the clock-in project.",
+  "brief":
+  {
+    "title":
+      "Brief",
+    "description":
+      "Applications for work should be productive because of their repetitive usage. Compared to the product in use, the major flows of the clock-in app: Pie are going to be simpler."
+  },
   "why":
   {
     "title":
       "The Problem",
     "problem":
-      "The company I worked for was using an app with clock-in, leave statistics, and salary information features. One had to go back to the dashboard as he&sol;she switched between features in that clock-in app.",
+      "The company I worked for was using an app with clock-in, leave statistics, and salary information features. One had to go back to the &ldquo;Main Menu&rdquo; as he&sol;she switched between features in that clock-in app.",
     "opinion":
-      "In my opinion, a fluent UI flow is like climbing up or walking down the stairs to reach a goal. I decided to redesign the clock-in app since I would never know how the original app was created."
+      "In my opinion, a fluent UI flow is like climbing up or walking down the stairs to reach goals. The flow of the product in use could be simplified."
   },
-  "questions":
+  "question":
   {
     "title":
-      "Questions",
-    "flat":
-    {
-      "title":
-        "Flattened Structure",
-      "question":
-        "How might we increase productivity while some of performance would be sacrificed?"
-    },
-    "back":
-    {
-      "title":
-        "Avoid Pressing &ldquo;Back&rdquo;",
-      "question":
-        "How might we switch among screens smoothly without the need of going back to a &ldquo;main menu&rdquo;?"
-    }
+      "Question",
+    "content":
+      "How might we simplify the flows of the routine taks?"
+  },
+  "flows":
+  {
+    "title":
+      "Flows",
+    "inuse":
+      "App in Use",
+    "mainmenu":
+      "Main Menu",
+    "clockin":
+      "Clock In&sol;Out",
+    "clockin_done":
+      "Clocked In&sol;Out",
+    "clockin_withConfirm":
+      "{{clockin}} + {{confirmform}}",
+    "confirmform":
+      "Confirm Forms",
+    "confirmform_done":
+      "Finish Confirming",
+    "screen":
+      "{{view}} Screen",
+    "description":
+      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. There will be another &ldquo;going-back-and-forth&rdquo; if a user has something else to do in the product in use. The Tab Bar at screen bottom comes to the flow&rsquo;s rescue."
   },
   "document":
   {
@@ -39,7 +55,7 @@
         "name":
           "Onboarding",
         "description":
-          "We work as a remote team. The members get started with <a class=\"paragraph-link\" href=\"https://www.craft.do/s/WPp0S5oPecqEPc\" data-splitbee-event=\"Pie Document: Onboarding\" target=\"_blank\" rel=\"noopener\">Onboarding</a>."
+          "To work as a remote team, the members get started with <a class=\"paragraph-link\" href=\"https://www.craft.do/s/WPp0S5oPecqEPc\" data-splitbee-event=\"Pie Document: Onboarding\" target=\"_blank\" rel=\"noopener\">Onboarding</a>."
       },
       {
         "name":

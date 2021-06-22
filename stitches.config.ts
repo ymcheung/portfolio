@@ -51,8 +51,8 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
 
       themeNuomi: '$shade1600',
 
-      galleryContentTitle: '$shade1500',
-      galleryContentParagraph: '$shade1200',
+      monoContentTitle: '$shade1500',
+      monoContentParagraph: '$shade1200',
 
       themeMoment: '$shade1600',
       searchBubble: '$shade1500',
@@ -157,8 +157,8 @@ export const dark = theme({
 
     themeNuomi: '$nuomiBlack0',
 
-    galleryContentTitle: '$shade100',
-    galleryContentParagraph: '$shade600',
+    monoContentTitle: '$shade100',
+    monoContentParagraph: '$shade600',
 
     themeMoment: '$mtMidnight0',
     searchBubble: '$shade1400',

@@ -44,7 +44,7 @@ const GalleryItem = styled('li', {
   variants: {
     responsive: {
       tablet: {
-        marginBottom: '24px'
+        marginBottom: '$24'
       }
     },
 

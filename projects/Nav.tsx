@@ -10,9 +10,6 @@ const NavList = styled('ul', {
   grid: `"next" auto
          "prev" auto
          "home" auto / auto`,
-  rowGap: '$12',
-  position: 'relative',
-  zIndex: 2,
   margin: '0 -16px 16px',
   padding: '0 $16',
   backdropFilter: 'blur(12px)',
@@ -38,10 +35,12 @@ const NavItem = styled('li', {
         gridArea: 'home'
       },
       prev: {
-        gridArea: 'prev'
+        gridArea: 'prev',
+        marginBottom: '$12'
       },
       next: {
         gridArea: 'next',
+        marginBottom: '$12',
         textAlign: 'right'
       }
     }
