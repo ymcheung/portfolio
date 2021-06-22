@@ -30,20 +30,20 @@
       "現有產品",
     "mainmenu":
       "主選單",
-    "clock":
-      "上下班",
-    "inout":
-      "打卡",
-    "clockinout":
-      "{{clock}}{{inout}}",
-    "clockedinout":
-      "完成{{clock}}{{inout}}",
+    "clockin":
+      "上下班打卡",
+    "clockin_done":
+      "完成上下班打卡",
+    "clockin_withConfirm":
+    "{{clockin}} + {{confirmform}}",
+    "confirmform":
+      "確認表單",
+    "confirmform_done":
+      "完成確認表單",
     "screen":
-      "{{clock}}{{inout}}畫面",
+      "{{view}}畫面",
     "description":
-      "「主選單」並非完成例行事項的必備流程，以底部導覽選單簡化。",
-    "another":
-      "在現有的產品，如果還有其他事情要做的話，就要再一次「來回切換」。"
+      "「主選單」並非完成例行事項的必備流程，如果還有其他事情要做的話，就要再一次「來回切換」。以底部導覽選單即可簡化。"
   },
   "document":
   {

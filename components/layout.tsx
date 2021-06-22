@@ -36,7 +36,7 @@ export const Container = styled('div', {
 
 export const GalleryContainer = styled('section', {
   marginBottom: '$16',
-  padding: '$16 0',
+  padding: '$24 0 $8',
 
   variants: {
     project: {

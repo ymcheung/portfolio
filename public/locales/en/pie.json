@@ -30,20 +30,20 @@
       "App in Use",
     "mainmenu":
       "Main Menu",
-    "clock":
-      "Clock",
-    "inout":
-      "In&sol;Out",
-    "clockinout":
-    "{{clock}} {{inout}}",
-    "clockedinout":
-    "{{clock}}ed {{inout}}",
+    "clockin":
+      "Clock In&sol;Out",
+    "clockin_done":
+      "Clocked In&sol;Out",
+    "clockin_withConfirm":
+      "{{clockin}} + {{confirmform}}",
+    "confirmform":
+      "Confirm Forms",
+    "confirmform_done":
+      "Finish Confirming",
     "screen":
-      "{{clock}} {{inout}} Screen",
+      "{{view}} Screen",
     "description":
-      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. This can be done with the Tab Bar at the bottom.",
-    "another":
-      "There will be another &ldquo;going-back-and-forth&rdquo; if a user has something else to do in the product in use."
+      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. There will be another &ldquo;going-back-and-forth&rdquo; if a user has something else to do in the product in use. The Tab Bar at screen bottom comes to the flow&rsquo;s rescue."
   },
   "document":
   {
@@ -55,7 +55,7 @@
         "name":
           "Onboarding",
         "description":
-          "We work as a remote team. The members get started with <a class=\"paragraph-link\" href=\"https://www.craft.do/s/WPp0S5oPecqEPc\" data-splitbee-event=\"Pie Document: Onboarding\" target=\"_blank\" rel=\"noopener\">Onboarding</a>."
+          "To work as a remote team, the members get started with <a class=\"paragraph-link\" href=\"https://www.craft.do/s/WPp0S5oPecqEPc\" data-splitbee-event=\"Pie Document: Onboarding\" target=\"_blank\" rel=\"noopener\">Onboarding</a>."
       },
       {
         "name":

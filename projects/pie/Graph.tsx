@@ -16,21 +16,31 @@ const graphPieClockedIn = '/projects/pie/graph/clockedIn.jpg';
 const GraphGrid = styled('ul', {
   display: 'grid',
   overflowX: 'auto',
-  margin: '0 0 $4',
+  marginTop: 0,
   padding: '0 0 $12',
 
   variants: {
     inuse: {
       en: {
-        grid: 'auto / auto-flow 84px 24px'
+        grid: 'auto / auto-flow 84px 24px',
+        marginBottom: '$4',
       },
       tw: {
-        grid: 'auto / auto-flow 80px 24px'
+        grid: 'auto / auto-flow 80px 24px',
+        marginBottom: '$4'
       }
     },
     pie: {
       true: {
         grid: 'auto / auto-flow 144px 24px'
+      }
+    },
+    responsive: {
+      mobile: {
+        marginBottom: '$24'
+      },
+      desktop: {
+        marginRight: '-64px'
       }
     }
   }
@@ -76,9 +86,7 @@ export default function Graph() {
       <Container as="section" responsive={{'@m768': 'max640'}}>
         <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.title')}} />
         <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.description')}} />
-        <ContentTitle as="h3" purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockinout',
-          {clock: t('flows.clock'), inout: t('flows.inout')}
-        )}} />
+        <ContentTitle as="h3" purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin')}} />
         <ContentTitle as="strong" purpose="graph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.inuse')}} />
         <GraphGrid inuse={lang}>
           <ListItem nomark>
@@ -94,7 +102,7 @@ export default function Graph() {
             <GraphFigure>
               <ImgInUse src={graphInUseClockInScreen} alt="" />
               <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
-                {clock: t('flows.clock'), inout: t('flows.inout')}
+                {view: t('flows.clockin')}
               )}} />
             </GraphFigure>
           </ListItem>
@@ -104,22 +112,19 @@ export default function Graph() {
           <ListItem nomark>
             <GraphFigure>
               <ImgInUse src={graphInUseClockInScreen} alt="" />
-              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockedinout',
-                {clock: t('flows.clock'), inout: t('flows.inout')}
+              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
+                {context: 'done'}
               )}} />
             </GraphFigure>
           </ListItem>
-          <ListItem nomark>
-
-          </ListItem>
         </GraphGrid>
         <ContentTitle as="strong" purpose="graph" scheme="mono">Pie</ContentTitle>
-        <GraphGrid pie>
+        <GraphGrid pie responsive={{ '@initial': 'mobile' }}>
           <ListItem nomark>
             <GraphFigure>
               <ImgPie src={graphPieClockIn} width={128} height={221} alt="" />
               <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
-                {clock: t('flows.clock'), inout: t('flows.inout')}
+                {view: t('flows.clockin')}
               )}} />
             </GraphFigure>
           </ListItem>
@@ -129,13 +134,121 @@ export default function Graph() {
           <ListItem nomark>
             <GraphFigure>
               <ImgPie src={graphPieClockedIn} width={128} height={221} alt="" />
-              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockedinout',
-                {clock: t('flows.clock'), inout: t('flows.inout')}
+              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
+                {context: 'done'}
               )}} />
             </GraphFigure>
           </ListItem>
         </GraphGrid>
-        <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.another')}} />
+        <ContentTitle as="h3" purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
+          {context: 'withConfirm', clockin: t('flows.clockin'), confirmform: t('flows.confirmform')}
+        )}} />
+        <ContentTitle as="strong" purpose="graph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.inuse')}} />
+        <GraphGrid inuse={lang} responsive={{ '@m992': 'desktop' }}>
+          <ListItem nomark>
+            <GraphFigure>
+              <ImgInUse src={graphInUseMainMenu} alt="" />
+              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.mainmenu')}} />
+            </GraphFigure>
+          </ListItem>
+          <ListItem nomark>
+            <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
+          </ListItem>
+          <ListItem nomark>
+            <GraphFigure>
+              <ImgInUse src={graphInUseClockInScreen} alt="" />
+              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
+                {view: t('flows.clockin')}
+              )}} />
+            </GraphFigure>
+          </ListItem>
+          <ListItem nomark>
+            <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
+          </ListItem>
+          <ListItem nomark>
+            <GraphFigure>
+              <ImgInUse src={graphInUseClockInScreen} alt="" />
+              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
+                {context: 'done'}
+              )}} />
+            </GraphFigure>
+          </ListItem>
+          <ListItem nomark>
+            <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
+          </ListItem>
+          <ListItem nomark>
+            <GraphFigure>
+              <ImgInUse src={graphInUseMainMenu} alt="" />
+              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.mainmenu')}} />
+            </GraphFigure>
+          </ListItem>
+          <ListItem nomark>
+            <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
+          </ListItem>
+          <ListItem nomark>
+            <GraphFigure>
+              <ImgInUse src={graphInUseClockInScreen} alt="" />
+              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
+                {view: t('flows.confirmform')}
+              )}} />
+            </GraphFigure>
+          </ListItem>
+          <ListItem nomark>
+            <ImgThen src={svgThenArrow} graph="inuse" aria-hidden="true" />
+          </ListItem>
+          <ListItem nomark>
+            <GraphFigure>
+              <ImgInUse src={graphInUseClockInScreen} alt="" />
+              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.confirmform',
+                {context: 'done'}
+              )}} />
+            </GraphFigure>
+          </ListItem>
+        </GraphGrid>
+        <ContentTitle as="strong" purpose="graph" scheme="mono">Pie</ContentTitle>
+        <GraphGrid pie responsive={{ '@initial': 'mobile', '@m992': 'desktop' }}>
+          <ListItem nomark>
+            <GraphFigure>
+              <ImgPie src={graphPieClockIn} width={128} height={221} alt="" />
+              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
+                {view: t('flows.clockin')}
+              )}} />
+            </GraphFigure>
+          </ListItem>
+          <ListItem nomark>
+            <ImgThen src={svgThenArrow} graph="pie" aria-hidden="true" />
+          </ListItem>
+          <ListItem nomark>
+            <GraphFigure>
+              <ImgPie src={graphPieClockedIn} width={128} height={221} alt="" />
+              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
+                {context: 'done'}
+              )}} />
+            </GraphFigure>
+          </ListItem>
+          <ListItem nomark>
+            <ImgThen src={svgThenArrow} graph="pie" aria-hidden="true" />
+          </ListItem>
+          <ListItem nomark>
+            <GraphFigure>
+              <ImgPie src={graphPieClockIn} width={128} height={221} alt="" />
+              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
+                {view: t('flows.confirmform')}
+              )}} />
+            </GraphFigure>
+          </ListItem>
+          <ListItem nomark>
+            <ImgThen src={svgThenArrow} graph="pie" aria-hidden="true" />
+          </ListItem>
+          <ListItem nomark>
+            <GraphFigure>
+              <ImgPie src={graphPieClockIn} width={128} height={221} alt="" />
+              <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.confirmform',
+                {context: 'done'}
+              )}} />
+            </GraphFigure>
+          </ListItem>
+        </GraphGrid>
       </Container>
     </GalleryContainer>
   )
