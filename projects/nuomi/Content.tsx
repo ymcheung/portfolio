@@ -1,6 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
-import { Container, ArticleBody, GalleryContainer, IconList, IconListItem } from '../../components/layout';
+import { Container, ArticleBody, FullBlock, IconList, IconListItem } from '../../components/layout';
 
 import LangSwitch from '../LangSwitch';
 
@@ -33,9 +33,9 @@ export default function Content() {
           <Paragraph dangerouslySetInnerHTML={{__html: t('experience.featured')}} indent sectionend />
         </Section>
       </Container>
-      <GalleryContainer project="nuomi">
+      <FullBlock project="nuomi">
         <Gallery galleryItemAlt={galleryItemAlt} />
-      </GalleryContainer>
+      </FullBlock>
       <Container as="section" responsive={{'@m768': 'max640'}}>
         <Section>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retrospect.title')}} />
