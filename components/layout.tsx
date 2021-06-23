@@ -34,7 +34,7 @@ export const Container = styled('div', {
   }
 });
 
-export const GalleryContainer = styled('section', {
+export const FullBlock = styled('section', {
   marginBottom: '$16',
   padding: '$24 0 $8',
 

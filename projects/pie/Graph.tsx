@@ -1,7 +1,7 @@
 import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
 
-import { Container, GalleryContainer, ListItem } from '../../components/layout';
+import { Container, FullBlock, ListItem } from '../../components/layout';
 import { ContentTitle, Paragraph, GraphCaption } from '../../components/contentStyles';
 
 import Image from 'next/image';
@@ -92,7 +92,7 @@ export default function Graph() {
   const lang = i18n.language === 'en' ? 'en' : 'tw';
 
   return(
-    <GalleryContainer project="pie">
+    <FullBlock project="pie">
       <Container as="section" responsive={{'@m768': 'max640'}}>
         <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.title')}} />
         <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.description')}} />
@@ -272,6 +272,6 @@ export default function Graph() {
           </ListItem>
         </GraphGrid>
       </Container>
-    </GalleryContainer>
+    </FullBlock>
   )
 }
