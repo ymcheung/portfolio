@@ -150,6 +150,7 @@ export const GraphCaption = styled('figcaption', {
 
 export const ParagraphPostmark = styled('span', {
   display: 'inline-block',
+  color: 'hsl($shade600)',
   fontFamily: '$default',
   fontSize: '$14'
 });
