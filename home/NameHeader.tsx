@@ -32,10 +32,10 @@ const Background = styled('div', {
   variants: {
     responsive: {
       mobile: {
-        height: '300px'
+        height: '299px'
       },
       tablet: {
-        height: '225px'
+        height: '224px'
       }
     },
     scheme: {
