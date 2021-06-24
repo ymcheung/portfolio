@@ -37,7 +37,7 @@
     "clockin_withConfirm":
       "{{clockin}} + {{confirmform}}",
     "confirmform":
-      "Confirm Forms",
+      "Confirm Leave Forms",
     "confirmform_done":
       "Finish Confirming",
     "screen":
@@ -55,7 +55,7 @@
         "name":
           "Onboarding",
         "description":
-          "To work as a remote team, the members get started with <a class=\"paragraph-link\" href=\"https://www.craft.do/s/WPp0S5oPecqEPc\" data-splitbee-event=\"Pie Document: Onboarding\" target=\"_blank\" rel=\"noopener\">Onboarding</a>."
+          "To work as a remote team, the members who will join the project get started with <a class=\"paragraph-link\" href=\"https://www.craft.do/s/WPp0S5oPecqEPc\" data-splitbee-event=\"Pie Document: Onboarding\" target=\"_blank\" rel=\"noopener\">Onboarding</a>."
       },
       {
         "name":
@@ -75,7 +75,7 @@
         "name":
           "Limited Resources for a Side Project",
         "description":
-          "There are many tasks to  accomplish accoring to Roles &amp; Goals. We are moving towards a complete UI flow at the moment due to the scarce time &amp; resources of a side project."
+          "There are many tasks to accomplish accoring to Roles &amp; Goals. The project is moving towards a complete UI flow at the moment due to the scarce time &amp; resources."
       }
     ]
   }

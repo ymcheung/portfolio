@@ -37,9 +37,9 @@
     "clockin_withConfirm":
     "{{clockin}} + {{confirmform}}",
     "confirmform":
-      "確認表單",
+      "請假表單",
     "confirmform_done":
-      "完成確認表單",
+      "確認請假表單",
     "screen":
       "{{view}}畫面",
     "description":
@@ -55,7 +55,7 @@
         "name":
           "新手上路",
         "description":
-          "以遠距的方式進行，成員從這份<a class=\"paragraph-link\" href=\"https://www.craft.do/s/kRGlFyjpSWAKUh\" data-splitbee-event=\"Pie Document: 新手上路\" target=\"_blank\" rel=\"noopener\">新手上路文件</a>開始。"
+          "以遠距的方式進行，之後加入的成員可以從這份<a class=\"paragraph-link\" href=\"https://www.craft.do/s/kRGlFyjpSWAKUh\" data-splitbee-event=\"Pie Document: 新手上路\" target=\"_blank\" rel=\"noopener\">新手上路文件</a>開始。"
       },
       {
         "name":
