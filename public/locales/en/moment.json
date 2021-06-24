@@ -76,38 +76,39 @@
       }
     ]
   },
-  "asap":
+  "mvp":
   {
     "title":
       "Minimum Viable Product",
     "description":
       "Like many products, the website went public when it seemed working. It was primitive, but inviting search engines to know the content and having real visitors ASAP are more important.",
-    "affix":
-      "Iteration",
     "versions":
-    {
-      "first":
+    [
       {
         "position":
-          "<span class=\"number\">1</span>st {{affix}}",
+          "<span class=\"number\">1</span>st Iteration",
         "description":
-          "Put entire information architecture manually"
+          "Put all pages and layouts manually"
       },
-      "second":
       {
         "position":
-          "<span class=\"number\">2</span>nd {{affix}}",
+          "<span class=\"number\">2</span>nd Iteration",
         "description":
           "Create the templates for lists, artists, and songs"
       },
-      "third":
       {
         "position":
-          "<span class=\"number\">3</span>rd {{affix}}",
+          "<span class=\"number\">3</span>rd Iteration",
         "description":
           "Content Management: <a class=\"paragraph-link\" href=\"https://sanity.io\" target=\"_blank\" rel=\"noopener\">Sanity</a>"
+      },
+      {
+        "position":
+          "<span class=\"number\">4</span>th Iteration",
+        "description":
+          "Move media appearances above lyrics to differentiate this project from lyrics websites"
       }
-    }
+    ]
   },
   "expected":
   {
@@ -124,7 +125,7 @@
     [
       {
         "name":
-          "Gather the keywords which the visitors submitted"
+          "SEO Performance"
       },
       {
         "name":
@@ -138,13 +139,6 @@
       "Growth",
     "description":
       "It&rsquo;s expected that creators in love with 60&rsquo;s to 80&rsquo;s culture continue to deepen the meanings of these songs."
-  },
-  "nongoal":
-  {
-    "title":
-      "Non-Goal",
-    "description":
-      "Piracy"
   },
   "ending":
     "The side project is in active development. Try: What are the movies/dramas that <a class=\"paragraph-link\" href=\"https://moment.intersection.tw/songs/heroes\" target=\"_blank\" rel=\"noopener\">David Bowie&rsquo;s Heroes</a> features?"

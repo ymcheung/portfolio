@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTranslation } from 'next-i18next';
 
 import { styled } from '../../stitches.config';
@@ -10,6 +11,7 @@ import { ListItem, IconList, IconListItem } from '../../components/layout';
 import LangSwitch from '../LangSwitch';
 
 import { ContentTitle, Section, Paragraph, ContentList, ContentListItem } from '../../components/contentStyles';
+import { indexBy } from 'underscore';
 
 const BubbleSearch = styled('div', {
   padding: '8px 12px',
@@ -95,10 +97,23 @@ interface whatProps extends itemProps {
   symbol: string;
 }
 
+interface mvpProps {
+  [x: string]: any;
+  position: string;
+  description: string;
+}
+
 export default function Content() {
   const { t, i18n } = useTranslation('moment');
 
   const isItalic = i18n.language === 'en';
+
+  const IteractionIcons = [
+    <IconManually key="icon-0" />,
+    <IconTemplate key="icon-1" />,
+    <IconCMS key="icon-2" />,
+    <IconManually key="icon-3" />
+  ];
 
   return(
     <article>
@@ -149,30 +164,18 @@ export default function Content() {
         </WhatList>
       </Section>
       <Section>
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('asap.title')}} />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('asap.description')}} indent />
+        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('mvp.title')}} />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('mvp.description')}} indent />
         <IconList>
-          <IconListItem nomark="true">
-            <div>
-              <IconManually aria-hidden="true" />
-            </div>
-            <Iteration dangerouslySetInnerHTML={{__html: t('asap.versions.first.position', { prefix: t('asap.prefix'), affix: t('asap.affix')})} } isItalic={isItalic} />
-            <IconListDescription as="div" dangerouslySetInnerHTML={{__html: t('asap.versions.first.description')}} sectionend="true" />
-          </IconListItem>
-          <IconListItem nomark="true">
-            <div>
-              <IconTemplate aria-hidden="true" />
-            </div>
-            <Iteration dangerouslySetInnerHTML={{__html: t('asap.versions.second.position', {prefix: t('asap.prefix'), affix: t('asap.affix')})}} isItalic={isItalic} />
-            <IconListDescription as="div" dangerouslySetInnerHTML={{__html: t('asap.versions.second.description')}} sectionend="true" />
-          </IconListItem>
-          <IconListItem nomark="true">
-            <div>
-              <IconCMS aria-hidden="true" />
-            </div>
-            <Iteration dangerouslySetInnerHTML={{__html: t('asap.versions.third.position', {prefix: t('asap.prefix'), affix: t('asap.affix')})}} isItalic={isItalic} />
-            <IconListDescription as="div" dangerouslySetInnerHTML={{__html: t('asap.versions.third.description')}} sectionend="true" />
-          </IconListItem>
+          {t<string, mvpProps>('mvp.versions', { returnObjects: true }).map(({ position, description }: mvpProps, index: number) => (
+            <IconListItem nomark="true" key={`mvp-${index}`}>
+              <div>
+                {IteractionIcons[index]}
+              </div>
+              <Iteration dangerouslySetInnerHTML={{__html: position }} isItalic={isItalic} />
+              <IconListDescription as="div" dangerouslySetInnerHTML={{__html: description}} sectionend="true" />
+            </IconListItem>
+          ))}
         </IconList>
       </Section>
       <Section>
