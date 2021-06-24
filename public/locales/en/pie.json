@@ -25,7 +25,7 @@
   "flows":
   {
     "title":
-      "Flows",
+      "Flows Comparison",
     "inuse":
       "App in Use",
     "mainmenu":
@@ -43,7 +43,7 @@
     "screen":
       "{{view}} Screen",
     "description":
-      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. There will be another &ldquo;going-back-and-forth&rdquo; if a user has something else to do in the product in use. The Tab Bar at screen bottom comes to the flow&rsquo;s rescue."
+      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. There will be &ldquo;going-back-and-forths&rdquo; if a user has more than one thing to do in the product in use. The Tab Bar at screen bottom comes to the flow&rsquo;s rescue."
   },
   "document":
   {
