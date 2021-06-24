@@ -42,7 +42,7 @@ function LangSwitch() {
 
   return(
     <Link href={router.pathname} locale={router.locale === 'en' ? 'zh-Hant-TW' : 'en'} passHref>
-      <Button data-splitbee-event={`切換語言：${langName}`}>
+      <Button>
         <IconLangSwitch />
         <LangName>{langName}</LangName>
       </Button>
