@@ -39,7 +39,7 @@ const Footer = styled('rect', {
 
 export default function IconTemplate() {
   return(
-    <Icon viewBox="0 0 28 28">
+    <Icon viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
       <Document x="6" y="2" rx="2" />
       <Document x="3" y="5" rx="2" front />
       <Nav x="5" y="7" />

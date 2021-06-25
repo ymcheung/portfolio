@@ -21,7 +21,7 @@ const Arrow = styled('path', {
 
 export default function IconSwap() {
   return(
-    <Icon viewBox="0 0 28 28">
+    <Icon viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
       <Doc x="4" y="2" rx="2"/>
       <Block x="6" y="4" width="16" height="9"/>
       <Block x="6" y="15" width="16" height="9"/>
