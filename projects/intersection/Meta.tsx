@@ -11,7 +11,7 @@ export default function Meta() {
       <MetaItem>
         <MetaItemTitle project="intersection">Link</MetaItemTitle>
         <Link href="https://intersection.tw" passHref>
-          <MetaItemValue as="a" target="_blank" rel="noopener">Intersection</MetaItemValue>
+          <MetaItemValue as="a" data-splitbee-event="External Link: Intersection(Meta)" target="_blank" rel="noopener">Intersection</MetaItemValue>
         </Link>
       </MetaItem>
     </MetaList>

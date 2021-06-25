@@ -11,7 +11,7 @@ export default function Meta() {
       <MetaItem>
         <MetaItemTitle project="intersection">Link</MetaItemTitle>
         <Link href="http://thecosignstudio.github.io/process" passHref>
-          <MetaItemValue as="a" target="_blank" rel="noopener">專業人士的設計流程</MetaItemValue>
+          <MetaItemValue as="a" data-splitbee-event="External Link: Design Process(Meta)" target="_blank" rel="noopener">專業人士的設計流程</MetaItemValue>
         </Link>
       </MetaItem>
     </MetaList>
