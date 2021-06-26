@@ -30,7 +30,7 @@ export default function ProjectMoment() {
     name: 'Explore the moment when hearing a song in the movies/dramas',
     description: 'How might we display the moment when hearing the songs you like in the movies/dramas?',
     datePublished: '2020-08-29',
-    dateModified: '2021-05-20'
+    dateModified: '2021-06-26'
   }
 
   useEffect(() => {
