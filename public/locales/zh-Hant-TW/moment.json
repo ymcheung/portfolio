@@ -101,12 +101,6 @@
           "第 <span class=\"number\">3</span> 版",
         "description":
           "Headless 內容管理系統：<a class=\"paragraph-link\" href=\"https://sanity.io\" target=\"_blank\" rel=\"noopener\">Sanity</a>"
-      },
-      {
-        "position":
-          "第 <span class=\"number\">4</span> 版",
-        "description":
-          "為了跟歌詞網站進行區分，將歌曲出現在電視影劇的區塊移到歌詞之前。"
       }
     ]
   },

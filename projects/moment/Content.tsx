@@ -108,11 +108,10 @@ export default function Content() {
 
   const isItalic = i18n.language === 'en';
 
-  const IteractionIcons = [
+  const iterationIcons = [
     <IconManually key="icon-0" />,
     <IconTemplate key="icon-1" />,
-    <IconCMS key="icon-2" />,
-    <IconManually key="icon-3" />
+    <IconCMS key="icon-2" />
   ];
 
   return(
@@ -170,7 +169,7 @@ export default function Content() {
           {t<string, mvpProps>('mvp.versions', { returnObjects: true }).map(({ position, description }: mvpProps, index: number) => (
             <IconListItem nomark="true" key={`mvp-${index}`}>
               <div>
-                {IteractionIcons[index]}
+                {iterationIcons[index]}
               </div>
               <Iteration dangerouslySetInnerHTML={{__html: position }} isItalic={isItalic} />
               <IconListDescription as="div" dangerouslySetInnerHTML={{__html: description}} sectionend="true" />
