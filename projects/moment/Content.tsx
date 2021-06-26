@@ -194,11 +194,8 @@ export default function Content() {
         <Paragraph dangerouslySetInnerHTML={{__html: t('grow.description')}} indent />
       </Section>
       <Section>
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('nongoal.title')}} />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('nongoal.description')}} indent />
-      </Section>
-      <Section>
-        <Paragraph dangerouslySetInnerHTML={{__html: t('ending')}} indent />
+        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prompt.title')}} />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('prompt.description')}} indent />
       </Section>
     </article>
   );

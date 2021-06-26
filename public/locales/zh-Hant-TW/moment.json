@@ -100,7 +100,7 @@
         "position":
           "第 <span class=\"number\">3</span> 版",
         "description":
-          "Headless 內容管理系統：<a class=\"paragraph-link\" href=\"https://sanity.io\" target=\"_blank\" rel=\"noopener\">Sanity</a>"
+          "採用內容平台：<a class=\"paragraph-link\" href=\"https://sanity.io\" target=\"_blank\" rel=\"noopener\">Sanity</a>"
       }
     ]
   },
@@ -132,8 +132,13 @@
     "title":
       "成長方向",
     "description":
-      "預期同樣喜歡 60-80 年代流行文化的創作者持續增加每首歌的深度。"
+      "預期同樣喜歡 60-80 年代流行文化的創作者持續在作品裡致敬。"
   },
-  "ending":
-    "此閒暇專案仍在活躍開發，試試看：<a class=\"paragraph-link\" href=\"https://moment.intersection.tw/songs/heroes\" target=\"_blank\" rel=\"noopener\">David Bowie 的 Heroes</a> 出現在哪些電視影劇？"
+  "prompt":
+  {
+    "title":
+      "試試看",
+    "description":
+      "此閒暇專案仍在活躍開發，試試看：<a class=\"paragraph-link\" href=\"https://moment.intersection.tw/songs/heroes\" data-splitbee-event=\"Moment: Try Heroes\" target=\"_blank\" rel=\"noopener\">David Bowie 的 Heroes</a> 出現在哪些電視影劇？"
+  }
 }
