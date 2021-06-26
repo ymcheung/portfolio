@@ -37,7 +37,7 @@ const Footer = styled('rect', {
   fill: 'hsl($iterationIconChild)'
 });
 
-function IconTemplate() {
+export default function IconTemplate() {
   return(
     <Icon viewBox="0 0 28 28">
       <Document x="6" y="2" rx="2" />
@@ -48,5 +48,3 @@ function IconTemplate() {
     </Icon>
   );
 }
-
-export default IconTemplate;

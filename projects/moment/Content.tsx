@@ -6,12 +6,12 @@ import IconSearch from './IconSearch';
 import IconManually from './IconManually';
 import IconTemplate from './IconTemplate';
 import IconCMS from './IconCMS';
+import IconSwap from './IconSwap';
 import { ListItem, IconList, IconListItem } from '../../components/layout';
 
 import LangSwitch from '../LangSwitch';
 
 import { ContentTitle, Section, Paragraph, ContentList, ContentListItem } from '../../components/contentStyles';
-import { indexBy } from 'underscore';
 
 const BubbleSearch = styled('div', {
   padding: '8px 12px',
@@ -111,7 +111,8 @@ export default function Content() {
   const iterationIcons = [
     <IconManually key="icon-0" />,
     <IconTemplate key="icon-1" />,
-    <IconCMS key="icon-2" />
+    <IconCMS key="icon-2" />,
+    <IconSwap key="icon-3" />
   ];
 
   return(
