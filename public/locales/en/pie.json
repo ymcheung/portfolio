@@ -4,16 +4,14 @@
     "title":
       "Brief",
     "description":
-      "Applications for work should be productive because of their repetitive usage. Compared to the product in use, the major flows of the clock-in app: Pie are going to be simpler."
+      "Applications for work should be productive because of their repetitive usage. Compared to the product in use, the major flows of the clock-in app: Pie are going to be simpler. I do UI ideation of the side project on my own and have prepared an onboarding document for future members."
   },
   "why":
   {
     "title":
       "The Problem",
     "problem":
-      "The company I worked for was using an app with clock-in, leave statistics, and salary information features. One had to go back to the &ldquo;Main Menu&rdquo; as he&sol;she switched between features in that clock-in app.",
-    "opinion":
-      "In my opinion, a fluent UI flow is like climbing up or walking down the stairs to reach goals. The flow of the product in use could be simplified."
+      "The company I worked for was using an app with clock-in, leave statistics, and salary information features. One had to go back to the &ldquo;Main Menu&rdquo; as he&sol;she switched between features in the product in use. The flow could be simplified."
   },
   "question":
   {
