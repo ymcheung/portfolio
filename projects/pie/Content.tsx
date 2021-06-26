@@ -29,8 +29,7 @@ export default function Content() {
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('why.problem')}} indent />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('why.opinion')}} indent sectionend />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('why.problem')}} indent sectionend />
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('question.title')}} />
