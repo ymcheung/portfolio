@@ -8,21 +8,5 @@ module.exports = {
     }
 
     return config;
-  },
-  async rewrites() {
-    return [
-	    {
-	      source: "/bee.js",
-	      destination: "https://cdn.splitbee.io/sb.js",
-	    },
-	    {
-	      source: "/:slug",
-	      destination: `${process.env.NEXT_PUBLIC_HOSTNAME}/:slug`,
-	    },
-	    {
-	      source: "/",
-	      destination: "/",
-	    }
-	  ];
   }
 }
