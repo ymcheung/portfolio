@@ -28,7 +28,7 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
       mtMidnight700: '225,26%,56%',
       mtMidnight500: '225,26%,45%',
       mtMidnight200: '225,26%,18%',
-      mtMidnight100: 'hsl(225,26%,12%)',
+      mtMidnight100: '225,26%,12%',
       mtMidnight0: '225,26%,6%',
 
       nuomiBlack300: 'hsl(180,1%,20%)',
@@ -128,7 +128,9 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
   media: {
     m768: '(min-width: 768px)',
     m992: '(min-width: 992px)',
-    m1200: '(min-width: 1200px)'
+    m1200: '(min-width: 1200px)',
+
+    mHover: '(hover: hover) and (pointer: fine)'
   },
 })
 

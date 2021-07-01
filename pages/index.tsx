@@ -3,12 +3,10 @@ import Head from 'next/head';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from '../constant';
-import { styled } from '../stitches.config';
 
 import HeadMeta from '../utils/HeadMeta';
 
-import { global } from '../stitches.config';
-
+import { styled,  global } from '../stitches.config';
 import NameHeader from '../home/NameHeader';
 import Projects from '../home/Projects';
 import Activity from '../home/Activity';

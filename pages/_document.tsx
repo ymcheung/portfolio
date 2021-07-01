@@ -29,10 +29,7 @@ export default class Document extends NextDocument {
           <link rel="icon" href="/favicon/ym.svg" type="image/svg+xml" />
           <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
           <link rel="manifest" href="/favicon/manifest.webmanifest" />
-          {
-            process.env.NODE_ENV === 'production' &&
-            <script async src="https://cdn.splitbee.io/sb.js" />
-          }
+          <script async data-api="/" src="/bee.js" />
         </Head>
         <body>
           <Main />
