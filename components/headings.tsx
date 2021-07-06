@@ -27,7 +27,7 @@ export const Heading = styled('h2', {
     position: {
       homeSection: {
         margin: '0 0 $4',
-        color: 'hsl($laurel)',
+        color: 'hsl($homeSectionTitle)',
         fontSize: '$18',
         fontWeight: 800,
         fontStyle: 'italic',

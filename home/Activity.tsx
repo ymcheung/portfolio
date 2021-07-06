@@ -9,7 +9,7 @@ function Activity() {
     <Container responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} isgroupend>
       <Heading position="homeSection">Community Activity</Heading>
       <HomeItemsLayout as="ul" foractivity={{'@initial': 'mobile', '@m768': 'tablet'}}>
-        <HomeItem removeicon={{ '@m768': true }}>
+        <HomeItem removeicon={{ '@m768': true }} nomark>
           <IconHyphen showinmobile={{ '@m768': true }} />
           <Link href="/intersection" passHref>
             <HomeItemLink>
@@ -22,7 +22,7 @@ function Activity() {
             </HomeItemLink>
           </Link>
           </HomeItem>
-        <HomeItem removeicon={{ '@m768': true }}>
+        <HomeItem removeicon={{ '@m768': true }} nomark>
           <IconHyphen showinmobile={{ '@m768': true }} />
           <Link href="/translate-design-process" passHref>
             <HomeItemLink>

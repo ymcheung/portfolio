@@ -4,6 +4,8 @@ import { useTheme } from 'next-themes';
 import { Container } from '../components/layout';
 import { Heading, Verb } from '../components/headings';
 import { HomeItemsLayout, HomeItemLink, HomeItemContainer, HomeItemImage } from '../home/HomeItems';
+import IconPie from '../elements/IconPie';
+import IconMoment from '../elements/IconMoment';
 
 function Projects() {
   const [mounted, setMounted] = useState(false);
@@ -20,7 +22,7 @@ function Projects() {
         <Link href="/pie-clockin" passHref>
           <HomeItemLink forprojects>
             <HomeItemContainer>
-              <HomeItemImage src={`/home/shot/pie/${theme}.jpg`} width={288} height={288} alt="Preview Pie: A Clock-In Web App" />
+              <IconPie />
               <figcaption>
                 <Heading position="homeItemName">
                   <Verb item="pie">Redesign</Verb> UI of a Clock-In Web App
@@ -32,7 +34,7 @@ function Projects() {
         <Link href="/moment" passHref>
           <HomeItemLink forprojects>
             <HomeItemContainer>
-              <HomeItemImage src={`/home/shot/moment/${theme}.jpg`} width={288} height={288} alt="Preview The Moment: Hear a song in the movies/dramas" />
+              <IconMoment />
               <figcaption>
                 <Heading position="homeItemName">
                   <Verb item="moment">Explore</Verb> the moment when hearing a song in the movies/dramas

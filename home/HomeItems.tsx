@@ -1,5 +1,6 @@
 import { styled } from '../stitches.config';
 import Image from 'next/image';
+import { ListItem } from '../components/layout';
 
 export const HomeItemsLayout = styled('section', {
   display: 'grid',
@@ -9,12 +10,12 @@ export const HomeItemsLayout = styled('section', {
   variants: {
     forprojects: {
       mobile: {
-        minHeight: '366px',
-        grid: 'auto / auto-flow 304px',
-        columnGap: '$8',
-        marginBottom: '$4',
-        paddingX: '$8',
-        paddingBottom: '$8'
+        // minHeight: '366px',
+        // grid: 'auto / auto-flow 304px',
+        // columnGap: '$8',
+        // marginBottom: '$4',
+        // paddingX: '$8',
+        // paddingBottom: '$8'
       },
       tablet: {
         grid: 'auto / repeat(3, 1fr)'
@@ -35,7 +36,7 @@ export const HomeItemsLayout = styled('section', {
   }
 });
 
-export const HomeItem = styled('li', {
+export const HomeItem = styled(ListItem, {
   display: 'grid',
   grid: 'auto / 24px 1fr',
   alignItems: 'start',
