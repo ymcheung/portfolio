@@ -3,11 +3,9 @@ import Head from 'next/head';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from '../constant';
-import { styled } from '../stitches.config';
-
 import HeadMeta from '../utils/HeadMeta';
 
-import { global } from '../stitches.config';
+import { styled, global } from '../stitches.config';
 
 import NameHeader from '../home/NameHeader';
 import Projects from '../home/Projects';
@@ -25,7 +23,7 @@ const pageBody = global({
 const Header = styled('header', {
   position: 'relative',
   marginBottom: '$12',
-  borderBottom: '1px solid hsl($shade1200)',
+  borderBottom: '2px solid hsl($shade1400)',
 
   variants: {
     responsive: {

@@ -15,7 +15,7 @@ function Projects() {
 
   return(
     <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} hassibling>
-      <Heading position="homeSection">P<small>rojects</small></Heading>
+      <Heading position="homeSection">Side Projects</Heading>
       <HomeItemsLayout forprojects={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <Link href="/pie-clockin" passHref>
           <HomeItemLink forprojects>
@@ -23,7 +23,7 @@ function Projects() {
               <HomeItemImage src={`/home/shot/pie/${theme}.jpg`} width={288} height={288} alt="Preview Pie: A Clock-In Web App" />
               <figcaption>
                 <Heading position="homeItemName">
-                  <Verb item="pie">Explore</Verb> UI of a Clock-In Web App
+                  <Verb item="pie">Redesign</Verb> UI of a Clock-In Web App
                 </Heading>
               </figcaption>
             </HomeItemContainer>

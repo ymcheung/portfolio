@@ -31,7 +31,6 @@ export const Heading = styled('h2', {
         fontSize: '$18',
         fontWeight: 800,
         fontStyle: 'italic',
-        textTransform: 'uppercase',
         letterSpacing: '1px'
       },
       homeItemName: {

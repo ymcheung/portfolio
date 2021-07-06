@@ -7,7 +7,7 @@ import IconHyphen from '../elements/IconHyphen';
 function Activity() {
   return(
     <Container responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} isgroupend>
-      <Heading position="homeSection">C<small>ommunity</small> A<small>ctivity</small></Heading>
+      <Heading position="homeSection">Community Activity</Heading>
       <HomeItemsLayout as="ul" foractivity={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <HomeItem removeicon={{ '@m768': true }}>
           <IconHyphen showinmobile={{ '@m768': true }} />
