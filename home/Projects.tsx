@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
 import { Container, ListItem } from '../components/layout';
 import { Heading, Verb } from '../components/headings';
 import { HomeItemsLayout, HomeItemLink } from '../home/HomeItems';
@@ -8,13 +6,6 @@ import IconPie from '../elements/IconPie';
 import IconMoment from '../elements/IconMoment';
 
 function Projects() {
-  const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
-
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted) return null;
-
   return(
     <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} hassibling>
       <Heading position="homeSection">Side Projects</Heading>
