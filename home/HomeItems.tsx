@@ -1,31 +1,15 @@
 import { styled } from '../stitches.config';
-import Image from 'next/image';
+import { Verb } from '../components/headings';
 
-export const HomeItemsLayout = styled('section', {
+export const HomeItemsLayout = styled('ul', {
   display: 'grid',
-  overflowX: 'auto',
-  marginX: '-16px',
+  margin: '0 -16px',
+  paddingX: '$16',
 
   variants: {
-    forprojects: {
+    responsive: {
       mobile: {
-        minHeight: '366px',
-        grid: 'auto / auto-flow 304px',
-        columnGap: '$8',
-        marginBottom: '$4',
-        paddingX: '$8',
-        paddingBottom: '$8'
-      },
-      tablet: {
-        grid: 'auto / repeat(3, 1fr)'
-      }
-    },
-    foractivity: {
-      mobile: {
-        grid: 'auto / 100%',
-        rowGap: '$18',
-        marginY: 0,
-        paddingX: '$16',
+        rowGap: '$18'
       },
       tablet: {
         grid: 'auto / repeat(3, 1fr)',
@@ -35,43 +19,58 @@ export const HomeItemsLayout = styled('section', {
   }
 });
 
-export const HomeItem = styled('li', {
-  display: 'grid',
-  grid: 'auto / 24px 1fr',
-  alignItems: 'start',
-  columnGap: '$8',
-
-  variants: {
-    removeicon: {
-      true: {
-        grid: 'auto / 1fr'
-      }
-    }
-  }
-});
-
 export const HomeItemLink = styled('a', {
-  display: 'block',
+  display: 'grid',
   textDecoration: 'none',
 
   variants: {
-    forprojects: {
-      true: {
-        paddingX: '$8'
+    asproject: {
+      mobile: {
+        grid: 'auto / 52px 1fr',
+        alignItems: 'center',
+        columnGap: '$16'
+      },
+      tablet: {
+        grid: 'auto / 100%',
+        alignItems: 'unset',
+        rowGap: '$8',
+        columnGap: 'unset',
+      }
+    },
+    asactivity: {
+      mobile: {
+        grid: `"icon title" auto
+               ". description" auto / 24px 1fr`,
+        alignItems: 'start',
+        columnGap: '$8'
+      },
+      tablet: {
+        grid: `"title" auto
+               "description" auto / 100%`,
+        columnGap: 'unset'
+      }
+    },
+    hover: {
+      pie: {
+        '&:hover': {
+          [`& ${Verb}`]: {
+            color: 'hsl($pie700)'
+          }
+        }
+      },
+      moment: {
+        '&:hover': {
+          [`& ${Verb}`]: {
+            color: 'hsl($mtDawn)'
+          }
+        }
       }
     }
   }
 });
 
-export const HomeItemContainer = styled('figure', {
-  margin: 0
-});
-
-export const HomeItemImage = styled(Image, {
-  borderRadius: '16px'
-});
-
 export const HomeItemDescription = styled('span', {
+  gridArea: 'description',
   color: 'hsl($shade800)',
   fontFamily: '$default',
   fontSize: '1.4rem',

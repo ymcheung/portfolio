@@ -1,49 +1,47 @@
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
-import { Container } from '../components/layout';
+import { Container, ListItem } from '../components/layout';
 import { Heading, Verb } from '../components/headings';
-import { HomeItemsLayout, HomeItemLink, HomeItemContainer, HomeItemImage } from '../home/HomeItems';
+import { HomeItemsLayout, HomeItemLink } from '../home/HomeItems';
 
-function Projects() {
-  const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
+import IconPie from '../elements/IconPie';
+import IconMoment from '../elements/IconMoment';
+import VerbRedesign from '../elements/VerbRedesign';
+import VerbExplore from '../elements/VerbExplore';
 
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted) return null;
-
+export default function Projects() {
   return(
     <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} hassibling>
-      <Heading position="homeSection">P<small>rojects</small></Heading>
-      <HomeItemsLayout forprojects={{'@initial': 'mobile', '@m768': 'tablet'}}>
-        <Link href="/pie-clockin" passHref>
-          <HomeItemLink forprojects>
-            <HomeItemContainer>
-              <HomeItemImage src={`/home/shot/pie/${theme}.jpg`} width={288} height={288} alt="Preview Pie: A Clock-In Web App" />
-              <figcaption>
-                <Heading position="homeItemName">
-                  <Verb item="pie">Explore</Verb> UI of a Clock-In Web App
-                </Heading>
-              </figcaption>
-            </HomeItemContainer>
-          </HomeItemLink>
-        </Link>
-        <Link href="/moment" passHref>
-          <HomeItemLink forprojects>
-            <HomeItemContainer>
-              <HomeItemImage src={`/home/shot/moment/${theme}.jpg`} width={288} height={288} alt="Preview The Moment: Hear a song in the movies/dramas" />
-              <figcaption>
-                <Heading position="homeItemName">
-                  <Verb item="moment">Explore</Verb> the moment when hearing a song in the movies/dramas
-                </Heading>
-              </figcaption>
-            </HomeItemContainer>
-          </HomeItemLink>
-        </Link>
+      <Heading position="homeSection">Side Projects</Heading>
+      <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
+        <ListItem nomark>
+          <Link href="/pie-clockin" passHref>
+            <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet' }} hover={{ '@mHover': 'pie' }}>
+              <IconPie />
+              <Heading position="homeItemName">
+                <Verb>
+                  Redesign
+                  <VerbRedesign />
+                </Verb>
+                UI of a Clock-In App
+              </Heading>
+            </HomeItemLink>
+          </Link>
+        </ListItem>
+        <ListItem nomark>
+          <Link href="/moment" passHref>
+            <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet' }} hover={{ '@mHover': 'moment' }}>
+              <IconMoment />
+              <Heading position="homeItemName">
+                <Verb>
+                  Explore
+                  <VerbExplore />
+                </Verb>
+                the moment when hearing a song in the movies/dramas
+              </Heading>
+            </HomeItemLink>
+          </Link>
+        </ListItem>
       </HomeItemsLayout>
     </Container>
   );
 }
-
-export default Projects;

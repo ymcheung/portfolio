@@ -27,11 +27,10 @@ export const Heading = styled('h2', {
     position: {
       homeSection: {
         margin: '0 0 $4',
-        color: 'hsl($laurel)',
+        color: 'hsl($homeSectionTitle)',
         fontSize: '$18',
         fontWeight: 800,
         fontStyle: 'italic',
-        textTransform: 'uppercase',
         letterSpacing: '1px'
       },
       homeItemName: {
@@ -54,21 +53,7 @@ export const Heading = styled('h2', {
 
 export const Verb = styled('span', {
   display: 'inline-block',
-
-  variants: {
-    item: {
-      pie: {
-
-      },
-      moment: {
-
-      },
-      intersection: {
-
-      },
-      process: {
-
-      }
-    }
-  }
+  position: 'relative',
+  marginRight: '3px',
+  transition: 'color 0.15s ease-out'
 });

@@ -27,8 +27,9 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
       mtDawn: '16,68%,67%',
       mtMidnight700: '225,26%,56%',
       mtMidnight500: '225,26%,45%',
+      mtMidnight300: '225,26%,32%',
       mtMidnight200: '225,26%,18%',
-      mtMidnight100: 'hsl(225,26%,12%)',
+      mtMidnight100: '225,26%,12%',
       mtMidnight0: '225,26%,6%',
 
       nuomiBlack300: 'hsl(180,1%,20%)',
@@ -39,6 +40,13 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
 
       intersection1500: 'hsl(11,71%,61%)',
       intersection300: 'hsl(11,71%,12%)',
+
+      homeSectionTitle: '$shade800',
+
+      homeIconPieBackground: '$shade1500',
+      homeIconPieForeground: '$shade1000',
+      homeIconMtBackground: '$shade1500',
+      homeIconMtForeground: '$shade1000',
 
       activityHyphen: '$shade1200',
 
@@ -128,7 +136,8 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
   media: {
     m768: '(min-width: 768px)',
     m992: '(min-width: 992px)',
-    m1200: '(min-width: 1200px)'
+    m1200: '(min-width: 1200px)',
+    mHover: '(hover: hover) and (pointer: fine)'
   },
 })
 
@@ -145,6 +154,13 @@ export const dark = theme({
     shade1400: '162,2%,24%',
     shade1500: '162,2%,10%',
     shade1600: '162,2%, 6%',
+
+    homeSectionTitle: '$laurel',
+
+    homeIconPieBackground: '$pie700',
+    homeIconPieForeground: '$shade1500',
+    homeIconMtBackground: '$mtMidnight300',
+    homeIconMtForeground: '$mtDawn',
 
     activityHyphen: '$shade1000',
 
