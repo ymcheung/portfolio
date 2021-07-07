@@ -53,21 +53,6 @@ export const Heading = styled('h2', {
 
 export const Verb = styled('span', {
   display: 'inline-block',
-
-  variants: {
-    item: {
-      pie: {
-
-      },
-      moment: {
-
-      },
-      intersection: {
-
-      },
-      process: {
-
-      }
-    }
-  }
+  position: 'relative',
+  marginRight: '3px'
 });

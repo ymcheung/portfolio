@@ -2,10 +2,13 @@ import Link from 'next/link';
 import { Container, ListItem } from '../components/layout';
 import { Heading, Verb } from '../components/headings';
 import { HomeItemsLayout, HomeItemLink } from '../home/HomeItems';
+
 import IconPie from '../elements/IconPie';
 import IconMoment from '../elements/IconMoment';
+import VerbRedesign from '../elements/VerbRedesign';
+import VerbExplore from '../elements/VerbExplore';
 
-function Projects() {
+export default function Projects() {
   return(
     <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} hassibling>
       <Heading position="homeSection">Side Projects</Heading>
@@ -15,7 +18,11 @@ function Projects() {
             <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet' }}>
               <IconPie />
               <Heading position="homeItemName">
-                <Verb item="pie">Redesign</Verb> UI of a Clock-In App
+                <Verb>
+                  Redesign
+                  <VerbRedesign />
+                </Verb>
+                UI of a Clock-In App
               </Heading>
             </HomeItemLink>
           </Link>
@@ -25,7 +32,11 @@ function Projects() {
             <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet' }}>
               <IconMoment />
               <Heading position="homeItemName">
-                <Verb item="moment">Explore</Verb> the moment when hearing a song in the movies/dramas
+                <Verb>
+                  Explore
+                  <VerbExplore />
+                </Verb>
+                the moment when hearing a song in the movies/dramas
               </Heading>
             </HomeItemLink>
           </Link>
@@ -34,5 +45,3 @@ function Projects() {
     </Container>
   );
 }
-
-export default Projects;

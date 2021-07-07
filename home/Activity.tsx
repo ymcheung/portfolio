@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { Container, ListItem } from '../components/layout';
-import { Heading, Verb } from '../components/headings';
+import { Heading } from '../components/headings';
 import { HomeItemsLayout, HomeItemLink, HomeItemDescription } from './HomeItems';
 import IconHyphen from '../elements/IconHyphen';
 
-function Activity() {
+export default function Activity() {
   return(
     <Container responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} isgroupend>
       <Heading position="homeSection">Community Activity</Heading>
@@ -17,7 +17,7 @@ function Activity() {
                 Translate Articles and Websites
               </Heading>
               <HomeItemDescription>
-                <Verb>Explore</Verb> search engine optimization and internationalization by translations.
+                Explore search engine optimization and internationalization by translations.
               </HomeItemDescription>
             </HomeItemLink>
           </Link>
@@ -30,7 +30,7 @@ function Activity() {
                 Translate “Design Process for Pros”
               </Heading>
               <HomeItemDescription>
-                <Verb>Retrospect</Verb> an event gathing 20 designers to translate an e-book.
+                Retrospect an event gathing 20 designers to translate an e-book.
               </HomeItemDescription>
             </HomeItemLink>
           </Link>
@@ -39,5 +39,3 @@ function Activity() {
     </Container>
   );
 }
-
-export default Activity;
