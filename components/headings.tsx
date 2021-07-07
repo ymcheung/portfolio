@@ -54,5 +54,6 @@ export const Heading = styled('h2', {
 export const Verb = styled('span', {
   display: 'inline-block',
   position: 'relative',
-  marginRight: '3px'
+  marginRight: '3px',
+  transition: 'color 0.15s ease-out'
 });

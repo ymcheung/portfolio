@@ -15,7 +15,7 @@ export default function Projects() {
       <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <ListItem nomark>
           <Link href="/pie-clockin" passHref>
-            <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+            <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet' }} hover={{ '@mHover': 'pie' }}>
               <IconPie />
               <Heading position="homeItemName">
                 <Verb>
@@ -29,7 +29,7 @@ export default function Projects() {
         </ListItem>
         <ListItem nomark>
           <Link href="/moment" passHref>
-            <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+            <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet' }} hover={{ '@mHover': 'moment' }}>
               <IconMoment />
               <Heading position="homeItemName">
                 <Verb>

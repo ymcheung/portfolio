@@ -1,5 +1,5 @@
 import { styled } from '../stitches.config';
-import Image from 'next/image';
+import { Verb } from '../components/headings';
 
 export const HomeItemsLayout = styled('ul', {
   display: 'grid',
@@ -48,6 +48,22 @@ export const HomeItemLink = styled('a', {
         grid: `"title" auto
                "description" auto / 100%`,
         columnGap: 'unset'
+      }
+    },
+    hover: {
+      pie: {
+        '&:hover': {
+          [`& ${Verb}`]: {
+            color: 'hsl($pie700)'
+          }
+        }
+      },
+      moment: {
+        '&:hover': {
+          [`& ${Verb}`]: {
+            color: 'hsl($mtDawn)'
+          }
+        }
       }
     }
   }
