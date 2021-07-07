@@ -18,7 +18,7 @@ export const Container = styled('div', {
     },
     hassibling: {
       true: {
-        marginBottom: '$18'
+        marginBottom: '$24'
       }
     },
     isgroupend: {

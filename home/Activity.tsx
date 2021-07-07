@@ -1,18 +1,18 @@
 import Link from 'next/link';
-import { Container } from '../components/layout';
+import { Container, ListItem } from '../components/layout';
 import { Heading, Verb } from '../components/headings';
-import { HomeItemsLayout, HomeItemLink, HomeItem, HomeItemDescription } from './HomeItems';
+import { HomeItemsLayout, HomeItemLink, HomeItemDescription } from './HomeItems';
 import IconHyphen from '../elements/IconHyphen';
 
 function Activity() {
   return(
     <Container responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} isgroupend>
       <Heading position="homeSection">Community Activity</Heading>
-      <HomeItemsLayout as="ul" foractivity={{'@initial': 'mobile', '@m768': 'tablet'}}>
-        <HomeItem removeicon={{ '@m768': true }} nomark>
-          <IconHyphen showinmobile={{ '@m768': true }} />
+      <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
+        <ListItem nomark>
           <Link href="/intersection" passHref>
-            <HomeItemLink>
+            <HomeItemLink asactivity={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+              <IconHyphen hideintablet={{ '@m768': true }} />
               <Heading position="homeItemName">
                 Translate Articles and Websites
               </Heading>
@@ -21,11 +21,11 @@ function Activity() {
               </HomeItemDescription>
             </HomeItemLink>
           </Link>
-          </HomeItem>
-        <HomeItem removeicon={{ '@m768': true }} nomark>
-          <IconHyphen showinmobile={{ '@m768': true }} />
+          </ListItem>
+        <ListItem nomark>
           <Link href="/translate-design-process" passHref>
-            <HomeItemLink>
+            <HomeItemLink asactivity={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+              <IconHyphen hideintablet={{ '@m768': true }} />
               <Heading position="homeItemName">
                 Translate “Design Process for Pros”
               </Heading>
@@ -34,7 +34,7 @@ function Activity() {
               </HomeItemDescription>
             </HomeItemLink>
           </Link>
-        </HomeItem>
+        </ListItem>
       </HomeItemsLayout>
     </Container>
   );

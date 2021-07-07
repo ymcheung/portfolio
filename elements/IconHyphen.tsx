@@ -1,14 +1,14 @@
 import { styled } from '../stitches.config';
 import { Svg } from './Svg';
 interface IconProps {
-  readonly showinmobile: {};
+  readonly hideintablet: {};
 }
 
 const Icon = styled(Svg, {
   size: '$24',
 
   variants: {
-    showinmobile: {
+    hideintablet: {
       true: {
         display: 'none'
       }
@@ -21,12 +21,10 @@ const Path = styled('path', {
   strokeLinecap: 'round'
 });
 
-function IconHyphen({ showinmobile }: IconProps) {
+export default function IconHyphen({ hideintablet }: IconProps) {
   return(
-    <Icon viewBox="0 0 24 24" role="img" showinmobile={showinmobile} aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <Icon viewBox="0 0 24 24" role="img" hideintablet={hideintablet} aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <Path d="M1 12H23" />
     </Icon>
   );
 }
-
-export default IconHyphen;

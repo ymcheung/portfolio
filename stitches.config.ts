@@ -41,7 +41,7 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
       intersection1500: 'hsl(11,71%,61%)',
       intersection300: 'hsl(11,71%,12%)',
 
-      homeSectionTitle: '$shade300',
+      homeSectionTitle: '$shade800',
 
       homeIconPieBackground: '$shade1500',
       homeIconPieForeground: '$shade1000',
