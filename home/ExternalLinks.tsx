@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { styled } from '../stitches.config';
-import IconLinkedIn from '../elements/IconLinkedIn';
-import IconMedium from '../elements/IconMedium';
+import IconLinkedIn from '../home/IconLinkedIn';
+import IconMedium from '../home/IconMedium';
 import { Container } from '../components/layout';
 
 const IconLink = styled('a', {

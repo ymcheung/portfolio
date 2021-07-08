@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Container, ListItem } from '../components/layout';
 import { Heading } from '../components/headings';
 import { HomeItemsLayout, HomeItemLink, HomeItemDescription } from './HomeItems';
-import IconHyphen from '../elements/IconHyphen';
+import IconHyphen from '../home/IconHyphen';
 
 export default function Activity() {
   return(
