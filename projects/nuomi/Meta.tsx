@@ -2,7 +2,7 @@ import { MetaList, MetaItem, MetaItemTitle, MetaItemValue  } from "../meta";
 
 export default function Meta() {
   return(
-    <MetaList responsive={{ '@m768': 'half' }}>
+    <MetaList as="section" responsive={{ '@m768': 'half' }}>
       <MetaItem>
         <MetaItemTitle project="nuomi">Role</MetaItemTitle>
         <MetaItemValue>WordPress Theme Design &amp; Front-End</MetaItemValue>

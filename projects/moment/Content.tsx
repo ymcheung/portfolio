@@ -116,9 +116,9 @@ export default function Content() {
   ];
 
   return(
-    <article>
+    <>
       <LangSwitch />
-      <Section>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('intro.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('intro.description')}} purpose="question" italic={isItalic} indent sectionend />
       </Section>
@@ -198,6 +198,6 @@ export default function Content() {
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prompt.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('prompt.description')}} indent />
       </Section>
-    </article>
+    </>
   );
 }

@@ -8,7 +8,7 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container, ArticleBody } from '../components/layout';
+import { Container, FullLayout } from '../components/layout';
 import { Heading } from '../components/headings';
 import Meta from '../projects/moment/Meta';
 import Content from '../projects/moment/Content';
@@ -57,13 +57,13 @@ export default function ProjectMoment() {
         ogCover="/project/moment/og-cover.jpg"
         canonical={router.pathname}
       />
-      <ArticleBody>
-        <Container responsive={{'@m768': 'max640'}}>
+      <FullLayout as="main">
+        <Container as="article" responsive={{'@m768': 'max640'}}>
           <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />
           <Content />
         </Container>
-      </ArticleBody>
+      </FullLayout>
       <Nav
         hasNext="Nuomi&rsquo;s Portfolio"
         nextSlug="nuomi"

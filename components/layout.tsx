@@ -50,7 +50,7 @@ export const FullBlock = styled('section', {
   }
 });
 
-export const ArticleBody = styled('article', {
+export const FullLayout = styled('div', {
   marginBottom: '64px',
 });
 

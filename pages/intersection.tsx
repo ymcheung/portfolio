@@ -8,7 +8,7 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container, ArticleBody } from '../components/layout';
+import { Container, FullLayout } from '../components/layout';
 import { Heading } from '../components/headings';
 import Meta from '../projects/intersection/Meta';
 import Content from '../projects/intersection/Content';
@@ -56,13 +56,13 @@ export default function ProjectIntersection() {
         ogCover="/project/intersection/og-cover.jpg"
         canonical={router.pathname}
       />
-      <ArticleBody>
+      <FullLayout>
         <Container responsive={{'@m768': 'max640'}}>
           <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />
           <Content />
         </Container>
-      </ArticleBody>
+      </FullLayout>
       <Nav
         hasNext="Translating Design Process for Pros"
         nextSlug="translate-design-process"
