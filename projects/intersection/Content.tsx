@@ -58,12 +58,12 @@ export default function Content() {
   const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
 
   return(
-    <article>
+    <>
       <LangSwitch />
-      <Section>
+      <Section as="section">
         <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>
-      <Section>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('stat.title')}} />
         <FeatureList space={itemSpace}>
           <ListItem nomark>
@@ -76,7 +76,7 @@ export default function Content() {
           </ListItem>
         </FeatureList>
       </Section>
-      <Section>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('standalone.title')}} />
         <IconList>
           {t<string, websiteProps>('standalone.websites', { returnObjects: true }).map(({ slug, url, name, time, description }: websiteProps, index: number) => (
@@ -91,6 +91,6 @@ export default function Content() {
           ))}
         </IconList>
       </Section>
-    </article>
+    </>
   );
 }

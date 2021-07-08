@@ -93,7 +93,7 @@ export default function Graph() {
 
   return(
     <FullBlock project="pie">
-      <Container as="section" responsive={{'@m768': 'max640'}}>
+      <Container responsive={{'@m768': 'max640'}}>
         <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.title')}} />
         <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.description')}} />
         <ContentTitle as="h3" purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin')}} />

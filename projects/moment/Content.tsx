@@ -122,7 +122,7 @@ export default function Content() {
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('intro.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('intro.description')}} purpose="question" italic={isItalic} indent sectionend />
       </Section>
-      <Section>
+      <Section as="section">
         <Paragraph dangerouslySetInnerHTML={{__html: t('how.lead')}} sectionend />
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('how.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('how.description')}} indent />
@@ -138,7 +138,7 @@ export default function Content() {
           ))}
         </IconList>
       </Section>
-      <Section>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('obstacle.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('obstacle.description')}} indent sectionend />
         <ContentList>
@@ -148,7 +148,7 @@ export default function Content() {
         </ContentList>
         <Paragraph dangerouslySetInnerHTML={{__html: t('obstacle.conclusion')}} indent sectionend />
       </Section>
-      <Section>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('what.title')}} />
         <WhatList>
           {t<string, whatProps>('what.items', { returnObjects: true }).map(({ symbol, name }: whatProps, index: number) => (
@@ -163,7 +163,7 @@ export default function Content() {
           ))}
         </WhatList>
       </Section>
-      <Section>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('mvp.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('mvp.description')}} indent />
         <IconList>
@@ -178,11 +178,11 @@ export default function Content() {
           ))}
         </IconList>
       </Section>
-      <Section>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('expected.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('expected.description')}} indent />
       </Section>
-      <Section>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('measure.title')}} />
         <ContentList>
           {t<string, itemProps>('measure.methods', { returnObjects: true }).map(({ name }: itemProps, index: number) => (
@@ -190,11 +190,11 @@ export default function Content() {
           ))}
         </ContentList>
       </Section>
-      <Section>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('grow.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('grow.description')}} indent />
       </Section>
-      <Section>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prompt.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('prompt.description')}} indent />
       </Section>

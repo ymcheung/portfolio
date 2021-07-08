@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 
 import LangSwitch from '../LangSwitch';
 
-import { Container } from '../../components/layout';
+import { Container, FullLayout } from '../../components/layout';
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
 import Graph from './Graph';

@@ -58,7 +58,7 @@ export default function ProjectNuomi() {
       />
       <Cover />
       <FullLayout as="article">
-        <Container responsive={{'@m768': 'max640'}}>
+        <Container as="section" responsive={{'@m768': 'max640'}}>
           <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />
         </Container>
