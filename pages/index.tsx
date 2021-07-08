@@ -52,6 +52,8 @@ export default function Home() {
       '@type': 'WebPage',
       name: TITLE,
       description: DESCRIPTION,
+      datePublished: '2016-04-16',
+      dateModified: '2021-07-07',
       publisher: {
         '@type': 'ProfilePage',
         name: AUTHOR,
