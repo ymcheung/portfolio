@@ -26,20 +26,20 @@ const Song = styled(ListItem, {
         left: '208px'
       },
       tablet: {
-        top: '120px',
+        top: '132px',
         right: 0,
         left: 'unset'
       }
     },
     never: {
       tablet: {
-        top: '112px',
+        top: '124px',
         left: '36px'
       }
     },
     take: {
       tablet: {
-        top: '48px',
+        top: '64px',
         left: '280px'
       }
     },

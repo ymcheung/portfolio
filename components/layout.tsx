@@ -33,10 +33,10 @@ export const Container = styled('div', {
     },
     momentcover: {
       true: {
-        height: '200px',
+        height: '224px',
         position: 'relative',
         marginY: 0,
-        paddingTop: '$8'
+        paddingTop: '$24'
       }
     }
   }
