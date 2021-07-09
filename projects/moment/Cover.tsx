@@ -11,11 +11,6 @@ const Song = styled(ListItem, {
   position: 'absolute',
 
   variants: {
-    ithink: {
-      tablet: {
-
-      }
-    },
     under: {
       mobile: {
         top: '128px'
@@ -80,7 +75,7 @@ const SongTitle = styled('strong', {
 });
 
 const Sing = styled('div', {
-  color: 'hsl($shade1400)',
+  color: 'hsl($mtCoverSing)',
   fontFamily: '$inter',
   '&::before': {
     content: '🤘 '
@@ -154,6 +149,7 @@ const roll7and20 = keyframes({
 
 const HeardItem = styled(ListItem, {
   width: 'max-content',
+  color: 'hsl($mtCoverHeard)',
   fontFamily: '$inter',
 
   variants: {

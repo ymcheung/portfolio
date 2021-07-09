@@ -63,6 +63,8 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
       monoContentParagraph: '$shade1200',
 
       themeMoment: '$shade1600',
+      mtCoverSing: '$shade1200',
+      mtCoverHeard: '$shade1500',
       searchBubble: '$shade1500',
       iterationIconDoc: '$shade1200',
       iterationIconChild: '$shade1500',
@@ -178,6 +180,8 @@ export const dark = theme({
     monoContentParagraph: '$shade600',
 
     themeMoment: '$mtMidnight0',
+    mtCoverSing: '$shade600',
+    mtCoverHeard: '$shade100',
     searchBubble: '$shade1400',
     iterationIconDoc: '$shade1200',
     iterationIconChild: '$shade1400',
