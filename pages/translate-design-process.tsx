@@ -31,7 +31,7 @@ export default function ProjectProcess() {
     name: 'Translate “Design Process for Pros”',
     description: 'Retrospect an event gathing 20 designers to translate an e-book. Co-Operated with Cosign.',
     datePublished: '2020-08-29',
-    dateModified: '2021-07-07'
+    dateModified: '2021-07-09'
   }
 
   useEffect(() => {
