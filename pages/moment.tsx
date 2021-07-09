@@ -11,6 +11,7 @@ import { global } from '../stitches.config';
 import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
 import { Section } from '../components/contentStyles';
+import Cover from '../projects/moment/Cover';
 import Meta from '../projects/moment/Meta';
 import Content from '../projects/moment/Content';
 import Nav from '../projects/Nav';
@@ -19,7 +20,6 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=moment]': {
     minHeight: '100vh',
-    paddingTop: '$16',
     backgroundColor: 'hsl($themeMoment)'
   }
 });
@@ -58,6 +58,7 @@ export default function ProjectMoment() {
         ogCover="/project/moment/og-cover.jpg"
         canonical={router.pathname}
       />
+      <Cover />
       <Container as="article" responsive={{'@m768': 'max640'}}>
         <Section as="section">
           <Heading as="h1" position="itemName">{pageInfo.name}</Heading>

@@ -30,6 +30,14 @@ export const Container = styled('div', {
       true: {
         paddingBottom: '32px'
       }
+    },
+    momentcover: {
+      true: {
+        minHeight: '250px',
+        position: 'relative',
+        marginY: 0,
+        paddingTop: '$8'
+      }
     }
   }
 });

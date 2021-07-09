@@ -96,6 +96,7 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
     },
     fonts: {
       default: '\'Overpass\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', sans-serif',
+      inter: '\'Inter\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', sans-serif',
       slab: '\'Crete Round\', serif',
       mono: '\'Inconsolata\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', monospace'
     },
