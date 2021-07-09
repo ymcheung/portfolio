@@ -30,6 +30,14 @@ export const Container = styled('div', {
       true: {
         paddingBottom: '32px'
       }
+    },
+    momentcover: {
+      true: {
+        height: '224px',
+        position: 'relative',
+        marginY: 0,
+        paddingTop: '$24'
+      }
     }
   }
 });
@@ -50,7 +58,7 @@ export const FullBlock = styled('section', {
   }
 });
 
-export const ArticleBody = styled('article', {
+export const FullLayout = styled('div', {
   marginBottom: '64px',
 });
 

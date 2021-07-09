@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 
 import LangSwitch from '../LangSwitch';
 
-import { Container, ArticleBody } from '../../components/layout';
+import { Container, FullLayout } from '../../components/layout';
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
 import Graph from './Graph';
@@ -20,7 +20,7 @@ export default function Content() {
   const isItalic = i18n.language === 'en';
 
   return(
-    <ArticleBody>
+    <>
       <Container as="section" responsive={{'@m768': 'max640'}}>
         <LangSwitch />
         <Section>
@@ -57,6 +57,6 @@ export default function Content() {
         ))}
       </Section>
       </Container>
-    </ArticleBody>
+    </>
   );
 }

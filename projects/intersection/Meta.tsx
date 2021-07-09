@@ -3,7 +3,7 @@ import { MetaList, MetaItem, MetaItemTitle, MetaItemValue  } from "../meta";
 
 export default function Meta() {
   return(
-    <MetaList responsive={{ '@m768': 'half' }}>
+    <MetaList as="section" responsive={{ '@m768': 'half' }}>
       <MetaItem>
         <MetaItemTitle project="intersection">Role</MetaItemTitle>
         <MetaItemValue>Organizer &amp; Translator</MetaItemValue>

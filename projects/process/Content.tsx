@@ -62,17 +62,17 @@ export default function Content() {
   const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
 
   return(
-    <article>
+    <>
       <LangSwitch />
-      <Section>
+      <Section as="section">
         <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>
-      <Section>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('worth.title')}} />
         <FeatureList space={{ '@initial': 'mobile', '@m768': itemSpace }}>
           <FeatureItem nomark="true" responsive={{ '@m768': 'tablet' }}>
             <ContentTitle as="strong" featurednumber="large">
-              3.7
+              2.9
               <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
             </ContentTitle>
             <div>
@@ -82,7 +82,7 @@ export default function Content() {
           </FeatureItem>
         </FeatureList>
       </Section>
-      <Section>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retro.title')}} />
         <IconList>
           <IconListItem prefixwidth="48" purpose="noTitle">
@@ -98,6 +98,6 @@ export default function Content() {
           </IconListItem>
         </IconList>
       </Section>
-    </article>
+    </>
   );
 }

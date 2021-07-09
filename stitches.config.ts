@@ -63,6 +63,8 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
       monoContentParagraph: '$shade1200',
 
       themeMoment: '$shade1600',
+      mtCoverSing: '$shade1200',
+      mtCoverHeard: '$shade1500',
       searchBubble: '$shade1500',
       iterationIconDoc: '$shade1200',
       iterationIconChild: '$shade1500',
@@ -96,6 +98,7 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
     },
     fonts: {
       default: '\'Overpass\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', sans-serif',
+      inter: '\'Inter\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', sans-serif',
       slab: '\'Crete Round\', serif',
       mono: '\'Inconsolata\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', monospace'
     },
@@ -177,6 +180,8 @@ export const dark = theme({
     monoContentParagraph: '$shade600',
 
     themeMoment: '$mtMidnight0',
+    mtCoverSing: '$shade600',
+    mtCoverHeard: '$shade100',
     searchBubble: '$shade1400',
     iterationIconDoc: '$shade1200',
     iterationIconChild: '$shade1400',

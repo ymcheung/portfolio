@@ -9,6 +9,10 @@ export default function Meta() {
         <MetaItemValue>Organizer, UI Design, Web Front-End</MetaItemValue>
       </MetaItem>
       <MetaItem>
+        <MetaItemTitle project="moment">Team Size</MetaItemTitle>
+        <MetaItemValue>1 UI Design</MetaItemValue>
+      </MetaItem>
+      <MetaItem>
         <MetaItemTitle project="moment">Status</MetaItemTitle>
         <MetaItemValue>Content Platform Adoption</MetaItemValue>
       </MetaItem>

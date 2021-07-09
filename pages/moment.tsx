@@ -8,8 +8,10 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container, ArticleBody } from '../components/layout';
+import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
+import { Section } from '../components/contentStyles';
+import Cover from '../projects/moment/Cover';
 import Meta from '../projects/moment/Meta';
 import Content from '../projects/moment/Content';
 import Nav from '../projects/Nav';
@@ -18,7 +20,6 @@ import Footer from '../components/Footer';
 const pageBody = global({
   'body[data-body-style=moment]': {
     minHeight: '100vh',
-    paddingTop: '$16',
     backgroundColor: 'hsl($themeMoment)'
   }
 });
@@ -30,7 +31,7 @@ export default function ProjectMoment() {
     name: 'Explore the moment when hearing a song in the movies/dramas',
     description: 'How might we display the moment when hearing the songs you like in the movies/dramas?',
     datePublished: '2020-08-29',
-    dateModified: '2021-06-26'
+    dateModified: '2021-07-09'
   }
 
   useEffect(() => {
@@ -49,6 +50,7 @@ export default function ProjectMoment() {
     <>
       <Head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
       </Head>
       <HeadMeta
         title={pageInfo.name}
@@ -56,13 +58,14 @@ export default function ProjectMoment() {
         ogCover="/project/moment/og-cover.jpg"
         canonical={router.pathname}
       />
-      <ArticleBody>
-        <Container responsive={{'@m768': 'max640'}}>
+      <Cover />
+      <Container as="article" responsive={{'@m768': 'max640'}}>
+        <Section as="section">
           <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />
-          <Content />
-        </Container>
-      </ArticleBody>
+        </Section>
+        <Content />
+      </Container>
       <Nav
         hasNext="Nuomi&rsquo;s Portfolio"
         nextSlug="nuomi"

@@ -1,6 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import { styled } from '../../stitches.config';
-import { Container, ArticleBody, FullBlock, IconList, IconListItem } from '../../components/layout';
+import { Container, FullBlock, IconList, IconListItem } from '../../components/layout';
 
 import LangSwitch from '../LangSwitch';
 
@@ -25,7 +25,7 @@ export default function Content() {
   }
 
   return(
-    <ArticleBody>
+    <>
       <Container as="section" responsive={{'@m768': 'max640'}}>
         <LangSwitch />
         <Section>
@@ -59,6 +59,6 @@ export default function Content() {
         </IconList>
       </Section>
       </Container>
-    </ArticleBody>
+    </>
   );
 }

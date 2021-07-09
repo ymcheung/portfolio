@@ -17,13 +17,11 @@ const Glass = styled('circle', {
   strokeWidth: '2px'
 });
 
-function IconSearch() {
+export default function IconSearch() {
   return(
-    <Icon>
+    <Icon viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <Handle d="M17 18L21 22"/>
       <Glass cx="11" cy="11" r="8"/>
     </Icon>
   );
 };
-
-export default IconSearch;

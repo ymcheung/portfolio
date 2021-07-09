@@ -8,8 +8,9 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container, ArticleBody } from '../components/layout';
+import { Container } from '../components/layout';
 import { Heading } from '../components/headings';
+import { Section } from '../components/contentStyles';
 import Meta from '../projects/process/Meta';
 import Content from '../projects/process/Content';
 import Nav from '../projects/Nav';
@@ -30,7 +31,7 @@ export default function ProjectProcess() {
     name: 'Translate “Design Process for Pros”',
     description: 'Retrospect an event gathing 20 designers to translate an e-book. Co-Operated with Cosign.',
     datePublished: '2020-08-29',
-    dateModified: '2021-05-24'
+    dateModified: '2021-07-09'
   }
 
   useEffect(() => {
@@ -56,13 +57,13 @@ export default function ProjectProcess() {
         ogCover="/project/process/og-cover.jpg"
         canonical={router.pathname}
       />
-      <ArticleBody>
-        <Container responsive={{'@m768': 'max640'}}>
+      <Container as="article" responsive={{'@m768': 'max640'}}>
+        <Section as="section">
           <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />
-          <Content />
-        </Container>
-      </ArticleBody>
+        </Section>
+        <Content />
+      </Container>
       <Nav
         hasPrev="Intersection"
         prevSlug="intersection"
