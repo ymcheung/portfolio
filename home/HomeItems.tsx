@@ -71,8 +71,8 @@ export const HomeItemLink = styled('a', {
 
 export const HomeItemDescription = styled('span', {
   gridArea: 'description',
-  color: 'hsl($shade800)',
+  color: 'hsl($shade600)',
   fontFamily: '$default',
-  fontSize: '1.4rem',
+  fontSize: '$14',
   fontWeight: 400
 });
