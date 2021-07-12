@@ -40,7 +40,7 @@ const DescriptionIcon = styled('span', {
 });
 
 const DescriptionText = styled('span', {
-  color: 'hsl($shade700)',
+  color: 'hsl($shade600)',
   fontSize: '$18',
   fontStyle: 'italic'
 });
