@@ -72,7 +72,7 @@ export default function Content() {
         <FeatureList space={{ '@initial': 'mobile', '@m768': itemSpace }}>
           <FeatureItem nomark="true" responsive={{ '@m768': 'tablet' }}>
             <ContentTitle as="strong" featurednumber="large">
-              2.9
+              2.7
               <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
             </ContentTitle>
             <div>
@@ -82,7 +82,7 @@ export default function Content() {
           </FeatureItem>
         </FeatureList>
       </Section>
-      <Section as="section">
+      <Section as="section" isgroupend>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retro.title')}} />
         <IconList>
           <IconListItem prefixwidth="48" purpose="noTitle">

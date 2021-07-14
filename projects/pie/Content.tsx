@@ -33,11 +33,8 @@ export default function Content() {
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('question.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('question.content')}} purpose="question" italic={isItalic} indent sectionend />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('question.content')}} purpose="question" italic={isItalic} indent />
         </Section>
-      </Container>
-      <Graph />
-      <Container as="section" responsive={{'@m768': 'max640'}}>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('document.title')}} />
           {t<string, itemProps>('document.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
@@ -47,6 +44,9 @@ export default function Content() {
             </React.Fragment>
           ))}
         </Section>
+      </Container>
+      <Graph />
+      <Container as="section" responsive={{'@m768': 'max640'}}>
         <Section isgroupend>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('note.title')}} />
         {t<string, itemProps>('note.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
