@@ -76,7 +76,7 @@ export default function Content() {
           </ListItem>
         </FeatureList>
       </Section>
-      <Section as="section">
+      <Section as="section" isgroupend>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('standalone.title')}} />
         <IconList>
           {t<string, websiteProps>('standalone.websites', { returnObjects: true }).map(({ slug, url, name, time, description }: websiteProps, index: number) => (

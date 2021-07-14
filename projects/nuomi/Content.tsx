@@ -36,28 +36,28 @@ export default function Content() {
       <FullBlock project="nuomi">
         <Gallery galleryItemAlt={galleryItemAlt} />
       </FullBlock>
-      <Container as="section" responsive={{'@m768': 'max640'}}>
-        <Section>
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retrospect.title')}} />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('retrospect.description')}} indent />
-        <IconList>
-          <IconListItem nomark="true">
-            <div><IconLock /></div>
-            <ContentTitle as="h3" purpose="iconListItem" dangerouslySetInnerHTML={{__html: t('retrospect.https.title')}} />
-            <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.https.description')}} />
-          </IconListItem>
-          <IconListItem nomark="true">
-            <div><IconStructured /></div>
-            <ContentTitle as="h3" purpose="iconListItem" dangerouslySetInnerHTML={{__html: t('retrospect.structured.title')}} />
-            <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.structured.description')}} />
-          </IconListItem>
-          <IconListItem nomark="true">
-            <div><IconAccessibility /></div>
-            <ContentTitle as="h3" purpose="iconListItem" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.title')}} />
-            <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.description')}} />
-          </IconListItem>
-        </IconList>
-      </Section>
+      <Container as="section" responsive={{'@m768': 'max640'}} isgroupend>
+        <Section isgroupend>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retrospect.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('retrospect.description')}} indent />
+          <IconList>
+            <IconListItem nomark="true">
+              <div><IconLock /></div>
+              <ContentTitle as="h3" purpose="iconListItem" dangerouslySetInnerHTML={{__html: t('retrospect.https.title')}} />
+              <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.https.description')}} />
+            </IconListItem>
+            <IconListItem nomark="true">
+              <div><IconStructured /></div>
+              <ContentTitle as="h3" purpose="iconListItem" dangerouslySetInnerHTML={{__html: t('retrospect.structured.title')}} />
+              <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.structured.description')}} />
+            </IconListItem>
+            <IconListItem nomark="true">
+              <div><IconAccessibility /></div>
+              <ContentTitle as="h3" purpose="iconListItem" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.title')}} />
+              <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.description')}} />
+            </IconListItem>
+          </IconList>
+        </Section>
       </Container>
     </>
   );

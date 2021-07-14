@@ -25,7 +25,7 @@ const pageBody = global({
 
 export default function ProjectPie() {
   const pageInfo = {
-    name: 'Redesign UI of a Clock-In Web App',
+    name: 'Redesign UI of a Clock-In App',
     description: 'A side project exploring fluent UI design.',
     datePublished: '2020-08-29',
     dateModified: '2021-07-09'
