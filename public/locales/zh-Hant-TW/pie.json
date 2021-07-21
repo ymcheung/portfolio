@@ -29,9 +29,9 @@
     "mainmenu":
       "主選單",
     "clockin":
-      "上下班打卡",
+      "打卡",
     "clockin_done":
-      "完成上下班打卡",
+      "完成打卡",
     "clockin_withConfirm":
     "{{clockin}} + {{confirmform}}",
     "confirmform":
