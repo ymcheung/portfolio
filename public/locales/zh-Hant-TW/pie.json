@@ -20,6 +20,26 @@
     "content":
       "是否可以簡化例行工作所需的步驟？"
   },
+  "document":
+  {
+    "title":
+      "文件撰寫",
+    "items":
+    [
+      {
+        "name":
+          "新手上路",
+        "description":
+          "以遠距的方式進行，之後加入的成員可以從這份<a class=\"paragraph-link\" href=\"https://www.craft.do/s/kRGlFyjpSWAKUh\" data-splitbee-event=\"Pie Document: 新手上路\" target=\"_blank\" rel=\"noopener\">新手上路文件</a>開始。"
+      },
+      {
+        "name":
+          "動機與方法",
+        "description":
+          "產品規格非常容易變動，因此文件裡僅記錄角色<strong>為什麼</strong>使用上下班打卡 App，以及<strong>如何</strong>達成目標。"
+      }
+    ]
+  },
   "flows":
   {
     "title":
@@ -43,25 +63,10 @@
     "description":
       "「主選單」並非完成例行事項的必備流程，如果有超過一件事情要做的話，就得要不斷「來回切換」。以底部導覽選單即可簡化。"
   },
-  "document":
+  "gallery":
   {
     "title":
-      "文件撰寫",
-    "items":
-    [
-      {
-        "name":
-          "新手上路",
-        "description":
-          "以遠距的方式進行，之後加入的成員可以從這份<a class=\"paragraph-link\" href=\"https://www.craft.do/s/kRGlFyjpSWAKUh\" data-splitbee-event=\"Pie Document: 新手上路\" target=\"_blank\" rel=\"noopener\">新手上路文件</a>開始。"
-      },
-      {
-        "name":
-          "動機與方法",
-        "description":
-          "產品規格非常容易變動，因此文件裡僅記錄角色<strong>為什麼</strong>使用上下班打卡 App，以及<strong>如何</strong>達成目標。"
-      }
-    ]
+      "仔細看"
   },
   "note":
   {

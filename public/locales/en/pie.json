@@ -20,6 +20,26 @@
     "content":
       "How might we simplify the flows of the routine tasks?"
   },
+  "document":
+  {
+    "title":
+      "Documentation",
+    "items":
+    [
+      {
+        "name":
+          "Onboarding",
+        "description":
+          "To work as a remote team, the members who will join the project get started with <a class=\"paragraph-link\" href=\"https://www.craft.do/s/WPp0S5oPecqEPc\" data-splitbee-event=\"Pie Document: Onboarding\" target=\"_blank\" rel=\"noopener\">Onboarding</a>."
+      },
+      {
+        "name":
+          "Why &amp; How",
+        "description":
+          "Product specification is subject to change. We write down WHY the roles we defined are using a clock-in app and HOW they are going to fulfill their goals."
+      }
+    ]
+  },
   "flows":
   {
     "title":
@@ -43,25 +63,10 @@
     "description":
       "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. There will be &ldquo;going-back-and-forths&rdquo; if a user has more than one thing to do in the product in use. The Tab Bar at screen bottom comes to the flow&rsquo;s rescue."
   },
-  "document":
+  "gallery":
   {
     "title":
-      "Documentation",
-    "items":
-    [
-      {
-        "name":
-          "Onboarding",
-        "description":
-          "To work as a remote team, the members who will join the project get started with <a class=\"paragraph-link\" href=\"https://www.craft.do/s/WPp0S5oPecqEPc\" data-splitbee-event=\"Pie Document: Onboarding\" target=\"_blank\" rel=\"noopener\">Onboarding</a>."
-      },
-      {
-        "name":
-          "Why &amp; How",
-        "description":
-          "Product specification is subject to change. We write down WHY the roles we defined are using a clock-in app and HOW they are going to fulfill their goals."
-      }
-    ]
+      "Take a Closer Look"
   },
   "note":
   {
