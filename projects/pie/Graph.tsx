@@ -12,7 +12,7 @@ const graphInUseClockInScreen = '/projects/pie/graph/clockinScreen.svg';
 const graphInUseConfirmScreen = '/projects/pie/graph/confirmScreen.svg';
 const graphInUseConfirmNone = '/projects/pie/graph/confirmNone.svg';
 
-const graphPieClockIn = '/projects/pie/graph/clockInNone.webp';
+const graphPieClockIn = '/projects/pie/graph/clockingNone.webp';
 const graphPieClockedIn = '/projects/pie/graph/clockedIn.webp';
 const graphPieConfirm = '/projects/pie/graph/confirm.webp';
 const graphPieApplying = '/projects/pie/graph/applying.webp';

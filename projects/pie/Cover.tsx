@@ -43,8 +43,8 @@ export default function Cover() {
         }
         {screenTablet &&
           <>
-            <ScreenshotTablet src="/projects/pie/clockingNone.webp" placement="left" alt="Screenshot: Clock-In" />
-            <ScreenshotTablet src="/projects/pie/formsConfirmApply.webp" placement="right" alt="Screenshot: Received and Applying Forms" />
+            <ScreenshotTablet src="/projects/pie/clockingNone.jpg" placement="left" alt="Screenshot: Clock-In" />
+            <ScreenshotTablet src="/projects/pie/formsConfirmApply.jpg" placement="right" alt="Screenshot: Received and Applying Forms" />
           </>
         }
       </Device>

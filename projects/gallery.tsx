@@ -7,7 +7,7 @@ export const GalleryList = styled('ul', {
   gridAutoColumns: '288px',
   columnGap: '32px',
   overflowX: 'auto',
-  margin: '0 auto',
+  margin: '0 -$16',
   padding: '0 $16 $16',
 
   variants: {
