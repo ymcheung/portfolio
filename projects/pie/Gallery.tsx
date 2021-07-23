@@ -16,13 +16,13 @@ const PieGalleryList = styled(GalleryList, {
   variants: {
     grid: {
       tablet: {
-        grid: `"clocking ." 80px
+        grid: `"clocking ." 60px
                "clocking forms" auto
-               "stats forms" 80px
+               "stats forms" 60px
                "stats formsnew" auto
-               "settings formsnew" 80px
+               "settings formsnew" 60px
                "settings ." auto / 1fr 1fr`,
-        rowGap: '40px'
+        rowGap: '60px'
       }
     }
   }
@@ -53,7 +53,7 @@ const PieGalleryItem = styled(GalleryItem, {
 const PieScreenshotImg = styled(Image, {
   position: 'relative',
   zIndex: 1,
-  borderRadius: '12px'
+  borderRadius: '0 0 12px 12px'
 });
 
 export default function Gallery() {
@@ -79,6 +79,8 @@ export default function Gallery() {
           <PieScreenshotImg src={screenshotSettings} width={288} height={497} alt="" loading="lazy" />
         </PieGalleryItem>
       </PieGalleryList>
+      <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
+      <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.description')}} />
     </Container>
   )
 }

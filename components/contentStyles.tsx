@@ -125,6 +125,10 @@ export const Paragraph = styled('p', {
   '& .paragraph-link': {
     color: 'hsl($shade300)'
   },
+
+  '& .paragraph-mono-link': {
+    color: 'hsl($monoContentLink)'
+  }
 });
 
 export const GraphCaption = styled('figcaption', {
