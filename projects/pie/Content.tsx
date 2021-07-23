@@ -3,10 +3,11 @@ import { useTranslation } from 'next-i18next';
 
 import LangSwitch from '../LangSwitch';
 
-import { Container, FullLayout } from '../../components/layout';
+import { Container, FullBlock } from '../../components/layout';
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
 import Graph from './Graph';
+import Gallery from './Gallery';
 
 type itemProps = {
   [x: string]: any;
@@ -45,7 +46,10 @@ export default function Content() {
           ))}
         </Section>
       </Container>
-      <Graph />
+      <FullBlock project="pie">
+        <Graph />
+        <Gallery />
+      </FullBlock>
       <Container as="section" responsive={{'@m768': 'max640'}}>
         <Section isgroupend>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('note.title')}} />

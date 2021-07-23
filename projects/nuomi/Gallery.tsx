@@ -1,53 +1,25 @@
 import { styled } from '../../stitches.config';
+import { GalleryList, GalleryItem } from '../gallery';
 
 const screenshotCourse = '/projects/nuomi/course-mobile.jpg';
 const screenshotNuomiAll = '/projects/nuomi/nuomiall-mobile.jpg';
 const screenshotDetail = '/projects/nuomi/detail-mobile.jpg';
 
-const GalleryList = styled('ul', {
-  display: 'grid',
-  gridAutoFlow: 'column',
-  gridAutoColumns: '288px',
-  columnGap: '32px',
-  overflowX: 'auto',
-  margin: '0 auto',
-  padding: '0 $16 $16',
-
+const NuomiGalleryList = styled(GalleryList, {
   variants: {
-    responsive: {
+    grid: {
       tablet: {
-        maxWidth: '640px',
         grid: `"all ." 120px
                "all course" auto
                "detail course" 120px
-               "detail ." auto / 1fr 1fr`,
-        gridAutoFlow: 'row',
-        gridAutoColumns: 'unset'
+               "detail ." auto / 1fr 1fr`
       }
     }
   }
 });
 
-const GalleryItem = styled('li', {
-  position: 'relative',
-  margin: '0 -8px',
-  padding: '0 $8',
-  listStyle: 'none',
-
-  '&::before': { 
-    fullAbsolute: '',
-    zIndex: 0,
-    content: `''`,
-    backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade600, 0.5) 50%, transparent 92%)'
-  },
-
+const NuomiGalleryItem = styled(GalleryItem, {
   variants: {
-    responsive: {
-      tablet: {
-        marginBottom: '$24'
-      }
-    },
-
     item: {
       all: {
         gridArea: 'all'
@@ -78,20 +50,18 @@ type GalleryProps = {
   }
 }
 
-function Gallery({ galleryItemAlt }: GalleryProps) {
+export default function Gallery({ galleryItemAlt }: GalleryProps) {
   return(
-    <GalleryList responsive={{ '@m768': 'tablet' }}>
-      <GalleryItem item={{ '@m768': 'all' }} responsive={{ '@m768': 'tablet' }}>
+    <NuomiGalleryList responsive={{ '@m768': 'tablet' }} grid={{ '@m768': 'tablet' }}>
+      <NuomiGalleryItem item={{ '@m768': 'all' }} responsive={{ '@m768': 'tablet' }} nomark>
         <NuomiScreenshotImg src={screenshotNuomiAll} alt={galleryItemAlt.all} loading="lazy" />
-      </GalleryItem>
-      <GalleryItem item={{ '@m768': 'detail' }} responsive={{ '@m768': 'tablet' }}>
+      </NuomiGalleryItem>
+      <NuomiGalleryItem item={{ '@m768': 'detail' }} responsive={{ '@m768': 'tablet' }} nomark>
         <NuomiScreenshotImg src={screenshotDetail} alt={galleryItemAlt.detail} loading="lazy" />
-      </GalleryItem>
-      <GalleryItem item={{ '@m768': 'course' }} responsive={{ '@m768': 'tablet' }}>
+      </NuomiGalleryItem>
+      <NuomiGalleryItem item={{ '@m768': 'course' }} responsive={{ '@m768': 'tablet' }} nomark>
         <NuomiScreenshotImg src={screenshotCourse} alt={galleryItemAlt.course} loading="lazy" />
-      </GalleryItem>
-    </GalleryList>
+      </NuomiGalleryItem>
+    </NuomiGalleryList>
   );
 };
-
-export default Gallery;

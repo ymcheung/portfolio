@@ -59,7 +59,7 @@ export default function ProjectMoment() {
         canonical={router.pathname}
       />
       <Cover />
-      <Container as="article" responsive={{'@m768': 'max640'}}>
+      <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
         <Section as="section">
           <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />
@@ -70,7 +70,7 @@ export default function ProjectMoment() {
         hasNext="Nuomi&rsquo;s Portfolio"
         nextSlug="nuomi"
         nextBg="nuomi"
-        hasPrev="Pie: a Clock-In Web App"
+        hasPrev="Redesign a Clock-In App"
         prevSlug="pie-clockin"
         prevBg="pie"
       />

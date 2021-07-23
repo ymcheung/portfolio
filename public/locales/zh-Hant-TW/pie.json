@@ -20,29 +20,6 @@
     "content":
       "是否可以簡化例行工作所需的步驟？"
   },
-  "flows":
-  {
-    "title":
-      "使用流程比較",
-    "inuse":
-      "現有產品",
-    "mainmenu":
-      "主選單",
-    "clockin":
-      "上下班打卡",
-    "clockin_done":
-      "完成上下班打卡",
-    "clockin_withConfirm":
-    "{{clockin}} + {{confirmform}}",
-    "confirmform":
-      "請假表單",
-    "confirmform_done":
-      "確認請假表單",
-    "screen":
-      "{{view}}畫面",
-    "description":
-      "「主選單」並非完成例行事項的必備流程，如果有超過一件事情要做的話，就得要不斷「來回切換」。以底部導覽選單即可簡化。"
-  },
   "document":
   {
     "title":
@@ -62,6 +39,41 @@
           "產品規格非常容易變動，因此文件裡僅記錄角色<strong>為什麼</strong>使用上下班打卡 App，以及<strong>如何</strong>達成目標。"
       }
     ]
+  },
+  "flows":
+  {
+    "title":
+      "使用流程比較",
+    "inuse":
+      "現有產品",
+    "mainmenu":
+      "主選單",
+    "clockin":
+      "打卡",
+    "clockin_done":
+      "完成打卡",
+    "clockin_withConfirm":
+    "{{clockin}} + {{confirmform}}",
+    "confirmform":
+      "請假表單",
+    "confirmform_done":
+      "確認請假表單",
+    "screen":
+      "{{view}}畫面",
+    "description":
+      "「主選單」並非完成例行事項的必備流程，如果有超過一件事情要做的話，就得要不斷「來回切換」。以底部導覽選單即可簡化。"
+  },
+  "gallery":
+  {
+    "title":
+      "仔細看"
+  },
+  "prototype":
+  {
+    "title":
+      "試玩",
+    "description":
+      "為了測試流程的<a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie&rsquo;s Prototype Link\" target=\"_blank\" rel=\"noopener\">基本互動</a>。"
   },
   "note":
   {

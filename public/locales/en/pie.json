@@ -20,29 +20,6 @@
     "content":
       "How might we simplify the flows of the routine tasks?"
   },
-  "flows":
-  {
-    "title":
-      "Flows Comparison",
-    "inuse":
-      "App in Use",
-    "mainmenu":
-      "Main Menu",
-    "clockin":
-      "Clock In&sol;Out",
-    "clockin_done":
-      "Clocked In&sol;Out",
-    "clockin_withConfirm":
-      "{{clockin}} + {{confirmform}}",
-    "confirmform":
-      "Confirm Leave Forms",
-    "confirmform_done":
-      "Finish Confirming",
-    "screen":
-      "{{view}} Screen",
-    "description":
-      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. There will be &ldquo;going-back-and-forths&rdquo; if a user has more than one thing to do in the product in use. The Tab Bar at screen bottom comes to the flow&rsquo;s rescue."
-  },
   "document":
   {
     "title":
@@ -62,6 +39,41 @@
           "Product specification is subject to change. We write down WHY the roles we defined are using a clock-in app and HOW they are going to fulfill their goals."
       }
     ]
+  },
+  "flows":
+  {
+    "title":
+      "Flows Comparison",
+    "inuse":
+      "App in Use",
+    "mainmenu":
+      "Main Menu",
+    "clockin":
+      "Clock-In",
+    "clockin_done":
+      "Clocked-In",
+    "clockin_withConfirm":
+      "{{clockin}} + {{confirmform}}",
+    "confirmform":
+      "Confirm Leave Forms",
+    "confirmform_done":
+      "Confirmed",
+    "screen":
+      "{{view}} Screen",
+    "description":
+      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. There will be &ldquo;going-back-and-forths&rdquo; if a user has more than one thing to do in the product in use. The Tab Bar at screen bottom comes to the flow&rsquo;s rescue."
+  },
+  "gallery":
+  {
+    "title":
+      "Take a Closer Look"
+  },
+  "prototype":
+  {
+    "title":
+      "Give It a Try",
+    "description":
+      "<a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie&rsquo;s Prototype Link\" target=\"_blank\" rel=\"noopener\">A set of basic interactions</a> was made to test the flows."
   },
   "note":
   {
