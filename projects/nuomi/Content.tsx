@@ -34,7 +34,9 @@ export default function Content() {
         </Section>
       </Container>
       <FullBlock project="nuomi">
-        <Gallery galleryItemAlt={galleryItemAlt} />
+        <Container responsive={{'@m768': 'max640'}}>
+          <Gallery galleryItemAlt={galleryItemAlt} />
+        </Container>
       </FullBlock>
       <Container as="section" responsive={{'@m768': 'max640'}} isgroupend>
         <Section isgroupend>

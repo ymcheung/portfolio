@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { styled } from '../../stitches.config';
 import { GalleryList, GalleryItem } from '../gallery';
 
@@ -34,9 +35,7 @@ const NuomiGalleryItem = styled(GalleryItem, {
   }
 });
 
-const NuomiScreenshotImg = styled('img', {
-  maxWidth: '100%',
-  minHeight: '455px',
+const NuomiScreenshotImg = styled(Image, {
   position: 'relative',
   zIndex: 1,
   borderRadius: '0 0 12px 12px'
@@ -54,13 +53,34 @@ export default function Gallery({ galleryItemAlt }: GalleryProps) {
   return(
     <NuomiGalleryList responsive={{ '@m768': 'tablet' }} grid={{ '@m768': 'tablet' }}>
       <NuomiGalleryItem item={{ '@m768': 'all' }} responsive={{ '@m768': 'tablet' }} nomark>
-        <NuomiScreenshotImg src={screenshotNuomiAll} alt={galleryItemAlt.all} loading="lazy" />
+        <NuomiScreenshotImg src={screenshotNuomiAll} 
+            layout="responsive"
+            width={256}
+            height={455}
+            quality={92}
+            loading="lazy"
+            alt={galleryItemAlt.all}
+          />
       </NuomiGalleryItem>
       <NuomiGalleryItem item={{ '@m768': 'detail' }} responsive={{ '@m768': 'tablet' }} nomark>
-        <NuomiScreenshotImg src={screenshotDetail} alt={galleryItemAlt.detail} loading="lazy" />
+        <NuomiScreenshotImg src={screenshotDetail} 
+            layout="responsive"
+            width={256}
+            height={455}
+            quality={92}
+            loading="lazy"
+            alt={galleryItemAlt.detail}
+          />
       </NuomiGalleryItem>
       <NuomiGalleryItem item={{ '@m768': 'course' }} responsive={{ '@m768': 'tablet' }} nomark>
-        <NuomiScreenshotImg src={screenshotCourse} alt={galleryItemAlt.course} loading="lazy" />
+        <NuomiScreenshotImg src={screenshotCourse} 
+            layout="responsive"
+            width={256}
+            height={455}
+            quality={92}
+            loading="lazy"
+            alt={galleryItemAlt.course}
+          />
       </NuomiGalleryItem>
     </NuomiGalleryList>
   );

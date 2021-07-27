@@ -5,10 +5,11 @@ export const GalleryList = styled('ul', {
   display: 'grid',
   gridAutoFlow: 'column',
   gridAutoColumns: '288px',
-  columnGap: '32px',
+  columnGap: '24px',
   overflowX: 'auto',
-  margin: '0 -$16',
-  padding: '0 $16 $16',
+  margin: '0 -$8',
+  padding: '0 0 $16',
+  '--webkit-overflow-scrolling': 'touch',
 
   variants: {
     responsive: {
@@ -23,10 +24,10 @@ export const GalleryList = styled('ul', {
 
 export const GalleryItem = styled(ListItem, {
   position: 'relative',
-  margin: '0 -8px',
+  margin: 0,
   padding: '0 $8',
 
-  '&::before': { 
+  '&::before': {
     fullAbsolute: '',
     zIndex: 0,
     content: `''`,
