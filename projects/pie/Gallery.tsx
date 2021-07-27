@@ -64,19 +64,54 @@ export default function Gallery() {
       <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('gallery.title')}} />
       <PieGalleryList responsive={{ '@m768': 'tablet' }} grid={{ '@m768': 'tablet' }}>
         <PieGalleryItem item={{ '@m768': 'clocking' }} nomark>
-          <PieScreenshotImg src={screenshotClocking} width={288} height={497} alt="" loading="lazy" />
+          <PieScreenshotImg src={screenshotClocking}
+            layout="responsive"
+            width={256}
+            height={455}
+            alt=""
+            quality={92}
+            loading="lazy"
+          />
         </PieGalleryItem>
         <PieGalleryItem item={{ '@m768': 'forms' }} nomark>
-          <PieScreenshotImg src={screenshotForms} width={288} height={497} alt="" loading="lazy" />
+          <PieScreenshotImg src={screenshotForms}
+            layout="responsive"
+            width={256}
+            height={455}
+            alt=""
+            quality={92}
+            loading="lazy"
+          />
         </PieGalleryItem>
         <PieGalleryItem item={{ '@m768': 'stats' }} nomark>
-          <PieScreenshotImg src={screenshotStats} width={288} height={497} alt="" loading="lazy" />
+          <PieScreenshotImg src={screenshotStats}
+            layout="responsive"
+            width={256}
+            height={455}
+            alt=""
+            quality={92}
+            loading="lazy"
+          />
         </PieGalleryItem>
         <PieGalleryItem item={{ '@m768': 'formsnew' }} nomark>
-          <PieScreenshotImg src={screenshotFormsNew} width={288} height={497} alt="" loading="lazy" />
+          <PieScreenshotImg src={screenshotFormsNew}
+            layout="responsive"
+            width={256}
+            height={455}
+            alt=""
+            quality={92}
+            loading="lazy"
+          />
         </PieGalleryItem>
         <PieGalleryItem item={{ '@m768': 'settings' }} nomark>
-          <PieScreenshotImg src={screenshotSettings} width={288} height={497} alt="" loading="lazy" />
+          <PieScreenshotImg src={screenshotSettings}
+            layout="responsive"
+            width={256}
+            height={455}
+            alt=""
+            quality={92}
+            loading="lazy"
+          />
         </PieGalleryItem>
       </PieGalleryList>
       <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
