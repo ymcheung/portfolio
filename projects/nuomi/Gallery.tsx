@@ -35,7 +35,7 @@ const NuomiGalleryItem = styled(GalleryItem, {
 });
 
 const NuomiScreenshotImg = styled('img', {
-  maxWidth: '100%',
+  width: '256px',
   minHeight: '455px',
   position: 'relative',
   zIndex: 1,
