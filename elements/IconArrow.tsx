@@ -6,6 +6,9 @@ const Icon = styled(Svg, {
     wh: {
       sq18: {
         size: '$18'
+      },
+      sq20: {
+        size: '20px'
       }
     }
   }
@@ -65,7 +68,7 @@ type IconArrowProps = {
 const defaultProps = {
   wh: 'sq18',
   purpose: 'home',
-  background: 'dark',
+  background: 'generic',
   gotoText: 'Home'
 };
 
