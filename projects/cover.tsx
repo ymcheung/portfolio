@@ -63,8 +63,8 @@ export const Device = styled('figure', {
             linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.25) 50%, transparent 100%)` ,
           backgroundSize: '288px 456px',
           backgroundPosition: `
-            top 0 left 0,
-            top 24px right 0`
+            top 0 left 8px,
+            top 24px right 8px`
         }
       },
       tabletMacbook: {
