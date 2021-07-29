@@ -23,7 +23,7 @@ export default function Meta() {
       <MetaItem>
         <MetaItemTitle project="moment">Link</MetaItemTitle>
         <Link href="https://moment.intersection.tw" passHref>
-          <MetaItemValue as="a" data-splitbee-event="External Link: Moment" target="_blank" rel="noopener">The Moment</MetaItemValue>
+          <MetaItemValue as="a" data-splitbee-event="Moment: Meta Link" target="_blank" rel="noopener">The Moment</MetaItemValue>
         </Link>
       </MetaItem>
     </MetaList>
