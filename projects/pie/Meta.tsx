@@ -9,7 +9,7 @@ export default function Meta() {
       </MetaItem>
       <MetaItem>
         <MetaItemTitle project="pie">Status</MetaItemTitle>
-        <MetaItemValue>UI Design</MetaItemValue>
+        <MetaItemValue>UI Design in Progress</MetaItemValue>
       </MetaItem>
       <MetaItem>
         <MetaItemTitle project="pie">Languages</MetaItemTitle>

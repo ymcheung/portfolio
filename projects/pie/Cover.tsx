@@ -21,11 +21,11 @@ const ScreenshotTablet = styled('img', {
     placement: {
       left: {
         top: '$16',
-        left: '$8'
+        left: '$16'
       },
       right: {
         top: '40px',
-        right: '8px'
+        right: '$16'
       }
     }
   }
