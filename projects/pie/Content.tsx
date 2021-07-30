@@ -53,7 +53,7 @@ export default function Content() {
             <div>
               <IconPie />
             </div>
-            <Paragraph dangerouslySetInnerHTML={{__html: t('brief.pie')}} indent sectionend />
+            <Paragraph dangerouslySetInnerHTML={{__html: t('brief.pie')}} sectionend />
           </BriefPieLayout>
         </Section>
         <Section>
