@@ -71,7 +71,7 @@ export default function Content() {
             <Paragraph dangerouslySetInnerHTML={{__html: t('stat.count')}} sectionend />
           </ListItem>
           <ListItem nomark>
-            <ContentTitle featurednumber="normal">3,600+</ContentTitle>
+            <ContentTitle featurednumber="normal">3,500+</ContentTitle>
             <Paragraph dangerouslySetInnerHTML={{__html: t('stat.followers')}} sectionend />
           </ListItem>
         </FeatureList>
@@ -83,7 +83,7 @@ export default function Content() {
             <IconListItem nomark="true" purpose="timestamp" key={index}>
               <div><IconListImage src={`/projects/intersection/${slug}_24.jpg`} alt="" /></div>
               <Link href={url} passHref>
-                <ContentTitle as="a" purpose="iconListItem" dangerouslySetInnerHTML={{__html: name}} data-splitbee-event={`Website Translation: ${name}`} target="_blank" rel="noopener" nounderline />
+                <ContentTitle as="a" purpose="iconListItem" dangerouslySetInnerHTML={{__html: name}} data-splitbee-event={`Intersection: ${name} Translation Link`} target="_blank" rel="noopener" nounderline />
               </Link>
               <IconListDescription dangerouslySetInnerHTML={{__html: description}} sectionend="true" />
               <IconListTimestamp as="time" dateTime={time.format} dangerouslySetInnerHTML={{__html: time.full}} />
