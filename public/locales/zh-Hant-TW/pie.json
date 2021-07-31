@@ -4,7 +4,9 @@
     "title":
       "概要",
     "description":
-      "工作使用的應用程式，因為得經常反覆操作，而注重效率。比起現有的產品，這款重新設計的上下班打卡 App 將主要操作流程進行簡化，此閒暇專案現在由我 1 人進行 UI 構想，並且已準備好未來參與成員的新手上路文件。"
+      "工作使用的應用程式，因為得經常反覆操作，而注重效率。比起現有的產品，重新設計過的上下班打卡 App 將主要操作流程進行簡化，此閒暇專案現在由我 1 人進行 UI 構想，並且已準備好未來參與成員的新手上路文件。",
+    "pie":
+      "這款上下班打卡 App 取名為：Pie，靈感來自打卡範圍的圓形。<a class=\"paragraph-link\" href=\"https://fonts.google.com/specimen/Rubik\" target=\"_blank\" rel=\"noopener\">Rubik</a> 字型的圓角做為識別標誌非常吸睛；做為內文易於閱讀。"
   },
   "why":
   {
@@ -73,7 +75,7 @@
     "title":
       "試玩",
     "description":
-      "為了測試流程的<a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">基本互動</a>。"
+      "用來測試流程的<a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">基本互動</a>。"
   },
   "note":
   {

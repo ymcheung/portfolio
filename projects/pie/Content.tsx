@@ -1,13 +1,35 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 
+import { styled } from '../../stitches.config'; 
+
 import LangSwitch from '../LangSwitch';
+
+import IconPie from '../../elements/IconPie';
 
 import { Container, FullBlock } from '../../components/layout';
 import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
 
 import Graph from './Graph';
 import Gallery from './Gallery';
+
+const BriefPieLayout = styled('div', {
+  display: 'grid',
+
+  variants: {
+    responsive: {
+      mobile: {
+        grid: `52px
+               auto / 100%`,
+        rowGap: '$8'
+      },
+      tablet: {
+        grid: 'auto / 52px 1fr',
+        columnGap: '$16'
+      }
+    }
+  }
+});
 
 type itemProps = {
   [x: string]: any;
@@ -26,7 +48,13 @@ export default function Content() {
         <LangSwitch />
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('brief.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('brief.description')}} indent sectionend />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('brief.description')}} indent />
+          <BriefPieLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+            <div>
+              <IconPie />
+            </div>
+            <Paragraph dangerouslySetInnerHTML={{__html: t('brief.pie')}} sectionend />
+          </BriefPieLayout>
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
