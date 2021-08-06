@@ -23,19 +23,19 @@ const ToggleDark = styled('button', {
 function ToggleScheme() {
 
   const [mounted, setMounted] = useState(false);
-  const { setTheme, theme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
 
   const toggleTheme = () => {
-    const targetTheme = theme === 'light' ? 'dark' : 'light';
+    const targetTheme = resolvedTheme === 'light' ? 'dark' : 'light';
 
     setTheme(targetTheme);
   };
 
-  const isDarkTheme = theme === 'dark';
+  const isDarkTheme = resolvedTheme === 'dark';
   const toogleSchemeMessage = isDarkTheme ? '亮色' : '暗色';
 
   return(

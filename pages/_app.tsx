@@ -10,7 +10,7 @@ function Portfolio({ Component, pageProps }) {
   return (
     <ThemeProvider
       attribute='class'
-      defaultTheme='light'
+      enableColorScheme
       value={{
         dark: dark,
         light: 'light',
