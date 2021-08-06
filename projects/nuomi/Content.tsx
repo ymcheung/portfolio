@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next';
-import { styled } from '../../stitches.config';
+import { styled } from 'stitches.config';
 import { Container, FullBlock, IconList, IconListItem } from '../../components/layout';
 
 import LangSwitch from '../LangSwitch';

@@ -1,4 +1,4 @@
-import { styled } from '../stitches.config';
+import { styled } from 'stitches.config';
 import { Container } from './layout';
 import { Heading } from './headings';
 

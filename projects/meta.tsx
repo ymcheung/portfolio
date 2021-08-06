@@ -1,4 +1,4 @@
-import { styled } from '../stitches.config';
+import { styled } from 'stitches.config';
 
 export const MetaList = styled('ul', {
   display: 'grid',

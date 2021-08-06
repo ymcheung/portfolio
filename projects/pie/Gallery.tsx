@@ -1,6 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
-import { styled } from '../../stitches.config';
+import { styled } from 'stitches.config';
 
 import { Container } from '../../components/layout';
 import { ContentTitle, Paragraph } from '../../components/contentStyles';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 
-import { styled } from '../../stitches.config';
+import { styled } from 'stitches.config';
 import IconSearch from './IconSearch';
 import IconManually from './IconManually';
 import IconTemplate from './IconTemplate';

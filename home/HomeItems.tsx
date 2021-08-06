@@ -1,4 +1,4 @@
-import { styled } from '../stitches.config';
+import { styled } from 'stitches.config';
 import { Verb } from '../components/headings';
 
 export const HomeItemsLayout = styled('ul', {

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-import { styled } from '../stitches.config';
-import IconArrow from '../elements/IconArrow';
+import { styled } from 'stitches.config';
+import IconArrow from '@elements/IconArrow';
 
 import { Container } from '../components/layout';
 

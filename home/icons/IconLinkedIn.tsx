@@ -1,5 +1,5 @@
-import { styled } from '../stitches.config';
-import { Svg } from '../elements/Svg';
+import { styled } from 'stitches.config';
+import { Svg } from '@elements/Svg';
 
 const LinkedIn = styled(Svg, {
   size: '$48'

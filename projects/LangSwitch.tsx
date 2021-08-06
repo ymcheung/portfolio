@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import { styled } from '../stitches.config';
+import { styled } from 'stitches.config';
 
-import IconLangSwitch from '../elements/IconLangSwitch';
+import IconLangSwitch from '@elements/IconLangSwitch';
 
 const Button = styled('a', {
   display: 'inline-block',

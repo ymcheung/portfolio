@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
-import { styled } from '../stitches.config';
+import { styled } from 'stitches.config';
 import { AUTHOR, DESCRIPTION } from '../constant';
 
 import { Container, ListItem } from '../components/layout';
 import { Heading } from '../components/headings';
 
-import IconTaiwan from './IconTaiwan';
-import IconFigma from './IconFigma';
-import IconCSS from './IconCSS';
-import IconReact from './IconReact';
-import IconA11y from './IconA11y';
+import IconTaiwan from './icons/IconTaiwan';
+import IconFigma from './icons/IconFigma';
+import IconCSS from './icons/IconCSS';
+import IconReact from './icons/IconReact';
+import IconA11y from './icons/IconA11y';
 
 const DescriptionList = styled('ul', {
   display: 'grid',

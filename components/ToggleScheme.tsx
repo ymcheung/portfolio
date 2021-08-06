@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
-import { styled } from '../stitches.config';
+import { styled } from 'stitches.config';
 
-import IconDark from '../elements/IconDark';
-import IconLight from '../elements/IconLight';
+import IconDark from '@elements/IconDark';
+import IconLight from '@elements/IconLight';
 
 
 const ToggleDark = styled('button', {

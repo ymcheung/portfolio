@@ -1,4 +1,4 @@
-import { styled } from '../stitches.config';
+import { styled } from 'stitches.config';
 import { ListItem } from '../components/layout';
 
 export const GalleryList = styled('ul', {
