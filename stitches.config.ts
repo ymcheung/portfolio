@@ -169,7 +169,7 @@ export const dark = theme({
     activityHyphen: '$shade1000',
 
     footerSeparate: '$shade1200',
-    schemeIconDarkBg: '$shade300',
+    schemeIconDarkBg: '$shade1500',
     schemeIconLightBg: '$shade1400',
 
     backgroundPie: '$pie0',
