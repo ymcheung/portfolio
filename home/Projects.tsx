@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { Container, ListItem } from '../components/layout';
-import { Heading, Verb } from '../components/headings';
+import { Container, ListItem } from '@components/layout';
+import { Heading, Verb } from '@components/headings';
 import { HomeItemsLayout, HomeItemLink } from '../home/HomeItems';
 
 import IconPie from '../elements/IconPie';

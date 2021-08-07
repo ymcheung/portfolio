@@ -1,5 +1,5 @@
 import { styled } from 'stitches.config';
-import { Verb } from '../components/headings';
+import { Verb } from '@components/headings';
 
 export const HomeItemsLayout = styled('ul', {
   display: 'grid',

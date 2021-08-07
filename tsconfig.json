@@ -19,12 +19,9 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@homeIcons/*": [
-        "home/icons/*"
-      ],
-      "@elements/*": [
-        "elements/*"
-      ]
+      "@home/*": ["home/*"],
+      "@elements/*": ["elements/*"],
+      "@components/*": ["components/*"],
     }
   },
   "include": [

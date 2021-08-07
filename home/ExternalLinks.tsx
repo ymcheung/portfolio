@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { styled } from 'stitches.config';
-import IconLinkedIn from '@homeIcons/IconLinkedIn';
-import IconMedium from '@homeIcons/IconMedium';
-import IconLoveUI from '@homeIcons/IconLoveUI';
-import { Container } from '../components/layout';
+import IconLinkedIn from '@home/icons/IconLinkedIn';
+import IconMedium from '@home/icons/IconMedium';
+import IconLoveUI from '@home/icons/IconLoveUI';
+import { Container } from '@components/layout';
 
 const IconLink = styled('a', {
   display: 'inline-block',

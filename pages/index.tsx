@@ -11,7 +11,7 @@ import NameHeader from '../home/NameHeader';
 import Projects from '../home/Projects';
 import Activity from '../home/Activity';
 import ExternalLinks from '../home/ExternalLinks';
-import Footer from '../components/Footer';
+import Footer from '@components/Footer';
 
 const pageBody = global({
   'body[data-body-style=home]': {

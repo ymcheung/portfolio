@@ -8,14 +8,14 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container } from '../components/layout';
-import { Heading } from '../components/headings';
-import { Section } from '../components/contentStyles';
+import { Container } from '@components/layout';
+import { Heading } from '@components/headings';
+import { Section } from '@components/contentStyles';
 import Cover from '../projects/moment/Cover';
 import Meta from '../projects/moment/Meta';
 import Content from '../projects/moment/Content';
 import Nav from '../projects/Nav';
-import Footer from '../components/Footer';
+import Footer from '@components/Footer';
 
 const pageBody = global({
   'body[data-body-style=moment]': {
