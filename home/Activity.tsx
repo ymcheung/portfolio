@@ -7,7 +7,7 @@ import IconArrow from '@elements/IconArrow';
 
 export default function Activity() {
   return(
-    <Container responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} isgroupend>
+    <Container responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="isGroupEnd">
       <Heading position="homeSection">Community Activity</Heading>
       <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <ListItem nomark>

@@ -59,7 +59,7 @@ export default function ProjectMoment() {
         canonical={router.pathname}
       />
       <Cover />
-      <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+      <Container as="article" responsive={{'@m768': 'max640'}} space="isGroupEnd">
         <Section as="section">
           <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />

@@ -10,7 +10,7 @@ import VerbExplore from '../elements/VerbExplore';
 
 export default function Projects() {
   return(
-    <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} hassibling>
+    <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="hasSibling">
       <Heading position="homeSection">Side Projects</Heading>
       <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <ListItem nomark>

@@ -16,18 +16,17 @@ export const Container = styled('div', {
         maxWidth: '1168px'
       }
     },
-    hassibling: {
-      true: {
+    space: {
+      beforeDivide: {
+        marginBottom: '$8'
+      },
+      hasSibling: {
         marginBottom: '$24'
-      }
-    },
-    isgroupend: {
-      true: {
+      },
+      isGroupEnd: {
         marginBottom: '64px'
-      }
-    },
-    footerend: {
-      true: {
+      },
+      isFooterEnd: {
         paddingBottom: '32px'
       }
     },

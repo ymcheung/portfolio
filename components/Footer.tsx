@@ -40,7 +40,7 @@ function Footer({ responsive, inproject }: FooterProps) {
   const Year = new Date().getFullYear();
 
   return(
-    <Container as="footer" responsive={responsive} footerend>
+    <Container as="footer" responsive={responsive} space="isFooterEnd">
       <FooterLayout inproject={inproject}>
         <Separate />
         <Heading as="strong" nametag="footer">{AUTHOR}</Heading>
