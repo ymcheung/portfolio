@@ -3,12 +3,12 @@ import { useTranslation } from 'next-i18next';
 
 import { styled } from 'stitches.config'; 
 
-import LangSwitch from '../LangSwitch';
+import LangSwitch from '@projects/LangSwitch';
 
 import IconPie from '@elements/IconPie';
 
-import { Container, FullBlock } from '../../components/layout';
-import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
+import { Container, FullBlock } from '@components/layout';
+import { ContentTitle, Section, Paragraph } from '@components/contentStyles';
 
 import Graph from './Graph';
 import Gallery from './Gallery';

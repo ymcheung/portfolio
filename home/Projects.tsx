@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { Container, ListItem } from '@components/layout';
 import { Heading, Verb } from '@components/headings';
-import { HomeItemsLayout, HomeItemLink } from '../home/HomeItems';
+import { HomeItemsLayout, HomeItemLink } from '@home/HomeItems';
 
-import IconPie from '../elements/IconPie';
-import IconMoment from '../elements/IconMoment';
-import VerbRedesign from '../elements/VerbRedesign';
-import VerbExplore from '../elements/VerbExplore';
+import IconPie from '@elements/IconPie';
+import IconMoment from '@elements/IconMoment';
+import VerbRedesign from '@elements/VerbRedesign';
+import VerbExplore from '@elements/VerbExplore';
 
 export default function Projects() {
   return(

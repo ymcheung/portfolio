@@ -1,4 +1,4 @@
-import { MetaList, MetaItem, MetaItemTitle, MetaItemValue  } from "../meta";
+import { MetaList, MetaItem, MetaItemTitle, MetaItemValue  } from "@projects/meta";
 
 export default function Meta() {
   return(

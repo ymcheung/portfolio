@@ -2,7 +2,7 @@ import { styled } from 'stitches.config';
 import { Container } from './layout';
 import { Heading } from './headings';
 
-import { AUTHOR } from '../constant';
+import { AUTHOR } from 'constant';
 
 import ToggleScheme from './ToggleScheme';
 

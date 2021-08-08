@@ -22,6 +22,8 @@
       "@home/*": ["home/*"],
       "@elements/*": ["elements/*"],
       "@components/*": ["components/*"],
+      "@utils/*": ["utils/*"],
+      "@projects/*": ["projects/*"]
     }
   },
   "include": [

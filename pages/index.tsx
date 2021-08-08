@@ -2,15 +2,15 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { TITLE, AUTHOR, DESCRIPTION } from '../constant';
-import HeadMeta from '../utils/HeadMeta';
+import { TITLE, AUTHOR, DESCRIPTION } from 'constant';
+import HeadMeta from '@utils/HeadMeta';
 
 import { styled, global } from 'stitches.config';
 
-import NameHeader from '../home/NameHeader';
-import Projects from '../home/Projects';
-import Activity from '../home/Activity';
-import ExternalLinks from '../home/ExternalLinks';
+import NameHeader from '@home/NameHeader';
+import Projects from '@home/Projects';
+import Activity from '@home/Activity';
+import ExternalLinks from '@home/ExternalLinks';
 import Footer from '@components/Footer';
 
 const pageBody = global({
@@ -53,13 +53,14 @@ export default function Home() {
       name: TITLE,
       description: DESCRIPTION,
       datePublished: '2016-04-16',
-      dateModified: '2021-07-07',
+      dateModified: '2021-08-08',
       publisher: {
         '@type': 'ProfilePage',
         name: AUTHOR,
         sameAs: [
           'https://www.linkedin.com/in/ymcheungtw/',
-          'https://intersection.tw'
+          'https://intersection.tw',
+          'https://dev.ymcheung.tw'
         ]
       }
     },

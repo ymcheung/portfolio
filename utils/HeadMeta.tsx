@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import * as headMetaDefault from '../constant';
+import * as headMetaDefault from 'constant';
 
 type headMetaProps = {
   title: string;

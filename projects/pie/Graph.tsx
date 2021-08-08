@@ -1,8 +1,8 @@
 import { useTranslation } from 'next-i18next';
 import { styled } from 'stitches.config';
 
-import { Container, ListItem } from '../../components/layout';
-import { ContentTitle, Paragraph, GraphCaption } from '../../components/contentStyles';
+import { Container, ListItem } from '@components/layout';
+import { ContentTitle, Paragraph, GraphCaption } from '@components/contentStyles';
 
 import Image from 'next/image';
 const svgThenArrow = '/projects/pie/graph/thenArrow.svg';
