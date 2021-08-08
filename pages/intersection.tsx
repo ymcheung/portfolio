@@ -8,13 +8,13 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container, FullLayout } from '../components/layout';
-import { Heading } from '../components/headings';
-import { Section } from '../components/contentStyles';
+import { Container } from '@components/layout';
+import { Heading } from '@components/headings';
+import { Section } from '@components/contentStyles';
 import Meta from '../projects/intersection/Meta';
 import Content from '../projects/intersection/Content';
 import Nav from '../projects/Nav';
-import Footer from '../components/Footer';
+import Footer from '@components/Footer';
 
 const pageBody = global({
   'body[data-body-style=intersection]': {
@@ -57,7 +57,7 @@ export default function ProjectIntersection() {
         ogCover="/project/intersection/og-cover.jpg"
         canonical={router.pathname}
       />
-      <Container as="article" responsive={{'@m768': 'max640'}} isgroupend>
+      <Container as="article" responsive={{'@m768': 'max640'}} space="isGroupEnd">
         <Section as="section">
           <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
           <Meta />

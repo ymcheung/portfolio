@@ -8,13 +8,13 @@ import { webPage } from '../utils/schema/webPage';
 
 import { global } from '../stitches.config';
 
-import { Container, FullLayout } from '../components/layout';
-import { Heading } from '../components/headings';
+import { Container, FullLayout } from '@components/layout';
+import { Heading } from '@components/headings';
 import Cover from '../projects/pie/Cover';
 import Meta from '../projects/pie/Meta';
 import Content from '../projects/pie/Content';
 import Nav from '../projects/Nav';
-import Footer from '../components/Footer';
+import Footer from '@components/Footer';
 
 const pageBody = global({
   'body[data-body-style=pie]': {

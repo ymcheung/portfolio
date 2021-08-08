@@ -50,6 +50,7 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
 
       activityHyphen: '$shade1200',
 
+      homeLoveUIText: '$shade100',
       footerSeparate: '$shade1500',
       schemeIconDarkBg: '$shade1500',
       schemeIconLightBg: '$shade300',
@@ -168,6 +169,7 @@ export const dark = theme({
 
     activityHyphen: '$shade1000',
 
+    homeLoveUIText: '$shade1500',
     footerSeparate: '$shade1200',
     schemeIconDarkBg: '$shade1500',
     schemeIconLightBg: '$shade1400',

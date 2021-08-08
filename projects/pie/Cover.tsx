@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { styled } from '../../stitches.config';
+import { styled } from 'stitches.config';
 import { screenMobile, screenTablet } from '../../utils/screens';
 
 import { Wrap, Device } from '../cover';

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
-import { styled } from '../../stitches.config';
+import { styled } from 'stitches.config';
 import { ListItem, IconList, IconListItem } from '../../components/layout';
 
 import LangSwitch from '../LangSwitch';

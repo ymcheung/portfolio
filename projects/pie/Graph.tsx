@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next';
-import { styled } from '../../stitches.config';
+import { styled } from 'stitches.config';
 
 import { Container, ListItem } from '../../components/layout';
 import { ContentTitle, Paragraph, GraphCaption } from '../../components/contentStyles';
