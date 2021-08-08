@@ -53,13 +53,14 @@ export default function Home() {
       name: TITLE,
       description: DESCRIPTION,
       datePublished: '2016-04-16',
-      dateModified: '2021-07-07',
+      dateModified: '2021-08-08',
       publisher: {
         '@type': 'ProfilePage',
         name: AUTHOR,
         sameAs: [
           'https://www.linkedin.com/in/ymcheungtw/',
-          'https://intersection.tw'
+          'https://intersection.tw',
+          'https://dev.ymcheung.tw'
         ]
       }
     },
