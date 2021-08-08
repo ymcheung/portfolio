@@ -2,9 +2,9 @@ import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import { styled } from 'stitches.config';
 
-import { Container } from '../../components/layout';
-import { ContentTitle, Paragraph } from '../../components/contentStyles';
-import { GalleryList, GalleryItem } from '../gallery';
+import { Container } from '@components/layout';
+import { ContentTitle, Paragraph } from '@components/contentStyles';
+import { GalleryList, GalleryItem } from '@projects/gallery';
 
 const screenshotClocking = '/projects/pie/clockingNone.webp';
 const screenshotForms = '/projects/pie/formsConfirmApply.webp';

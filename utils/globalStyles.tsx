@@ -1,4 +1,4 @@
-import { global } from '../stitches.config';
+import { global } from 'stitches.config';
 
 export const globalStyles = global({
   html: {

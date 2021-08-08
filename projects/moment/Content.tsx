@@ -7,11 +7,11 @@ import IconManually from './IconManually';
 import IconTemplate from './IconTemplate';
 import IconCMS from './IconCMS';
 import IconSwap from './IconSwap';
-import { ListItem, IconList, IconListItem } from '../../components/layout';
+import { ListItem, IconList, IconListItem } from '@components/layout';
 
-import LangSwitch from '../LangSwitch';
+import LangSwitch from '@projects/LangSwitch';
 
-import { ContentTitle, Section, Paragraph, ContentList, ContentListItem } from '../../components/contentStyles';
+import { ContentTitle, Section, Paragraph, ContentList, ContentListItem } from '@components/contentStyles';
 
 const BubbleSearch = styled('div', {
   padding: '8px 12px',

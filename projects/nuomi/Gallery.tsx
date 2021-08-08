@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { styled } from 'stitches.config';
-import { GalleryList, GalleryItem } from '../gallery';
+import { GalleryList, GalleryItem } from '@projects/gallery';
 
 const screenshotCourse = '/projects/nuomi/course-mobile.jpg';
 const screenshotNuomiAll = '/projects/nuomi/nuomiall-mobile.jpg';

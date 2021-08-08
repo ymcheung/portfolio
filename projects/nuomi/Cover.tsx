@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { styled } from 'stitches.config';
-import { screenMobile, screenTablet } from '../../utils/screens';
+import { screenMobile, screenTablet } from '@utils/screens';
 
-import { Wrap, Device } from '../cover';
+import { Wrap, Device } from '@projects/cover';
 
 const Screenshot = styled(Image, {
   width: '100%',

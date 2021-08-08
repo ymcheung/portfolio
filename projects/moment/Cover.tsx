@@ -1,5 +1,5 @@
-import { styled, keyframes } from '../../stitches.config';
-import { Container, ListItem } from '../../components/layout';
+import { styled, keyframes } from 'stitches.config';
+import { Container, ListItem } from '@components/layout';
 
 const CoverFull = styled('header', {
   overflow: 'hidden',

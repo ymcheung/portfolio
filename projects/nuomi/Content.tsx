@@ -1,10 +1,10 @@
 import { useTranslation } from 'next-i18next';
 import { styled } from 'stitches.config';
-import { Container, FullBlock, IconList, IconListItem } from '../../components/layout';
+import { Container, FullBlock, IconList, IconListItem } from '@components/layout';
 
-import LangSwitch from '../LangSwitch';
+import LangSwitch from '@projects/LangSwitch';
 
-import { ContentTitle, Section, Paragraph } from '../../components/contentStyles';
+import { ContentTitle, Section, Paragraph } from '@components/contentStyles';
 import IconAccessibility from './IconAccessibility';
 import IconLock from './IconLock';
 import IconStructured from './IconStructured';

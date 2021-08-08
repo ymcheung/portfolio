@@ -1,11 +1,11 @@
 import { useTranslation } from 'next-i18next';
 import { styled } from 'stitches.config';
 
-import { ListItem, IconList, IconListItem } from '../../components/layout';
+import { ListItem, IconList, IconListItem } from '@components/layout';
 
-import LangSwitch from '../LangSwitch';
+import LangSwitch from '@projects/LangSwitch';
 
-import { ContentTitle, Section, Paragraph, ParagraphPostmark } from '../../components/contentStyles';
+import { ContentTitle, Section, Paragraph, ParagraphPostmark } from '@components/contentStyles';
 
 const FeatureList = styled('ul', {
   margin: 0,

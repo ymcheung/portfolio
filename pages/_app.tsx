@@ -2,7 +2,7 @@ import { ThemeProvider } from 'next-themes';
 import { dark } from 'stitches.config';
 
 import { appWithTranslation } from 'next-i18next';
-import { globalStyles } from '../utils/globalStyles';
+import { globalStyles } from '@utils/globalStyles';
 
 function Portfolio({ Component, pageProps }) {
   globalStyles();

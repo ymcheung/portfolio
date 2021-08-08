@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
 import { styled } from 'stitches.config';
-import { AUTHOR, DESCRIPTION } from '../constant';
+import { AUTHOR, DESCRIPTION } from 'constant';
 
 import { Container, ListItem } from '@components/layout';
 import { Heading } from '@components/headings';
