@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { styled } from 'stitches.config';
 import IconLinkedIn from '@home/icons/IconLinkedIn';
 import IconMedium from '@home/icons/IconMedium';
-import IconLoveUI from '@home/icons/IconLoveUI';
+import BannerLoveUI from '@home/icons/bannerLoveUI';
 import { Container } from '@components/layout';
 
 const IconLink = styled('a', {
@@ -30,7 +30,7 @@ function ExternalLinks() {
       </Link>
       <Link href="https://dev.ymcheung.tw" passHref>
         <IconLink data-splitbee-event="External Link: Love UI" target="_blank" rel="noopener">
-          <IconLoveUI />
+          <BannerLoveUI />
         </IconLink>
       </Link>
     </Container>
