@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'next-themes';
-import { dark } from '../stitches.config';
+import { dark } from 'stitches.config';
 
 import { appWithTranslation } from 'next-i18next';
 import { globalStyles } from '../utils/globalStyles';
