@@ -1,4 +1,45 @@
 {
-  "title":
-    "標題"
+  "project":
+  {
+    "title":
+      "閒暇專案",
+    "verb":
+    {
+      "redesign":
+        "重新設計",
+      "explore":
+        "探索",
+      "retrospect":
+        "回顧"
+    },
+    "pie":
+    {
+      "title":
+        "上下班打卡 App 的 UI"
+    },
+    "moment":
+    {
+      "title":
+        "在電視影劇裡聽到經典歌曲的那一刻"
+    }
+  },
+  "activity":
+  {
+    "title":
+      "社群活動",
+    "intersection":
+    {
+      "title":
+        "文章與網站翻譯",
+      "description":
+        "透過翻譯，${explore}搜尋引擎最佳化與多國語系。"
+    },
+    "process":
+    {
+      "title":
+        "翻譯「專業人士的設計流程」",
+      "description":
+        "${retrospect} 20 位設計師一起翻譯電子書的活動"
+    }
+  }
 }

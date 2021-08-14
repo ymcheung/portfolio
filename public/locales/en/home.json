@@ -1,4 +1,45 @@
 {
-  "title":
-    "Title"
+  "project":
+  {
+    "title":
+      "Side Projects",
+    "verb":
+    {
+      "redesign":
+        "Redesign",
+      "explore":
+        "Explore",
+      "retrospect":
+        "Retrospect"
+    },
+    "pie":
+    {
+      "title":
+        "UI of a Clock-In App"
+    },
+    "moment":
+    {
+      "title":
+        "the moment when hearing a song in the movies&sol;dramas"
+    }
+  },
+  "activity":
+  {
+    "title":
+      "Community Activity",
+    "intersection":
+    {
+      "title":
+        "Translate Articles and Websites",
+      "description":
+        "${explore} search engine optimization and internationalization by translations."
+    },
+    "process":
+    {
+      "title":
+        "Translate &ldquo;Design Process for Pros&rdquo;",
+      "description":
+        "${retrospect} an event gathing 20 designers to translate an e-book."
+    }
+  }
 }
