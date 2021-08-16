@@ -9,7 +9,7 @@ import IconCMS from './IconCMS';
 import IconSwap from './IconSwap';
 import { ListItem, IconList, IconListItem } from '@components/layout';
 
-import LangSwitch from '@projects/LangSwitch';
+import LangSwitch from '@components/LangSwitch';
 
 import { ContentTitle, Section, Paragraph, ContentList, ContentListItem } from '@components/contentStyles';
 
@@ -117,7 +117,7 @@ export default function Content() {
 
   return(
     <>
-      <LangSwitch />
+      <LangSwitch position="articleStart" />
       <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('intro.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('intro.description')}} purpose="question" italic={isItalic} indent sectionend />

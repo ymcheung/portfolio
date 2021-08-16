@@ -2,7 +2,7 @@ import { useTranslation } from 'next-i18next';
 import { styled } from 'stitches.config';
 import { Container, FullBlock, IconList, IconListItem } from '@components/layout';
 
-import LangSwitch from '@projects/LangSwitch';
+import LangSwitch from '@components/LangSwitch';
 
 import { ContentTitle, Section, Paragraph } from '@components/contentStyles';
 import IconAccessibility from './IconAccessibility';
@@ -27,7 +27,7 @@ export default function Content() {
   return(
     <>
       <Container as="section" responsive={{'@m768': 'max640'}}>
-        <LangSwitch />
+        <LangSwitch position="articleStart" />
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('experience.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('experience.featured')}} indent sectionend />

@@ -3,7 +3,7 @@ import { styled } from 'stitches.config';
 
 import { ListItem, IconList, IconListItem } from '@components/layout';
 
-import LangSwitch from '@projects/LangSwitch';
+import LangSwitch from '@components/LangSwitch';
 
 import { ContentTitle, Section, Paragraph, ParagraphPostmark } from '@components/contentStyles';
 
@@ -63,7 +63,7 @@ export default function Content() {
 
   return(
     <>
-      <LangSwitch />
+      <LangSwitch position="articleStart" />
       <Section as="section">
         <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>

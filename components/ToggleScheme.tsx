@@ -12,7 +12,7 @@ const ToggleDark = styled('button', {
   height: '48px',
   overflow: 'hidden',
   position: 'relative',
-  margin: '-32px 0 0 2px',
+  margin: '-32px $8 0 2px',
   padding: '14px 0 6px',
   backgroundColor: 'transparent',
   border: 0,
