@@ -10,11 +10,11 @@ import IconArrow from '@elements/IconArrow';
 export default function Activity() {
   const { t, i18n } = useTranslation('home');
 
-  const isItalic = i18n.language === 'en';
+  const isEng = i18n.language === 'en';
 
   return(
     <Container responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="isGroupEnd">
-      <Heading position="homeSection" isItalic={isItalic} dangerouslySetInnerHTML={{__html: t('activity.title')}} />
+      <Heading position="homeSection" isitalic={isEng} dangerouslySetInnerHTML={{__html: t('activity.title')}} />
       <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <ListItem nomark>
           <Link href="/intersection" passHref>

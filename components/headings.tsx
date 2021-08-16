@@ -33,11 +33,11 @@ export const Heading = styled('h2', {
         letterSpacing: '1px'
       },
       homeItemName: {
-        marginBottom: '$4',
+        display: 'inline-block',
+        marginBottom: 0,
         color: 'hsl($shade0)',
         fontSize: '$18',
         fontWeight: 600,
-        lineHeight: '24px'
       },
       itemName: {
         marginBottom: '$16',
@@ -47,7 +47,7 @@ export const Heading = styled('h2', {
         lineHeight: '32px'
       }
     },
-    isItalic: {
+    isitalic: {
       true: {
         fontStyle: 'italic'
       }
@@ -58,6 +58,14 @@ export const Heading = styled('h2', {
 export const Verb = styled('span', {
   display: 'inline-block',
   position: 'relative',
-  marginRight: '3px',
-  transition: 'color 0.15s ease-out'
+  lineHeight: '24px',
+  transition: 'color 0.15s ease-out',
+
+  variants: {
+    foreng: {
+      true: {
+        marginRight: '3px',
+      }
+    }
+  }
 });

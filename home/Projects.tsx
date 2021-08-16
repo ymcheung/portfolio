@@ -7,28 +7,28 @@ import { HomeItemsLayout, HomeItemLink } from '@home/HomeItems';
 
 import IconPie from '@elements/IconPie';
 import IconMoment from '@elements/IconMoment';
-import VerbRedesign from '@elements/VerbRedesign';
-import VerbExplore from '@elements/VerbExplore';
+import IconArrow from '@elements/IconArrow';
 
 export default function Projects() {
   const { t, i18n } = useTranslation('home');
 
-  const isItalic = i18n.language === 'en';
+  const isEng = i18n.language === 'en';
 
   return(
     <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="hasSibling">
-      <Heading position="homeSection" isItalic={isItalic} dangerouslySetInnerHTML={{__html: t('project.title')}} />
+      <Heading position="homeSection" isitalic={isEng} dangerouslySetInnerHTML={{__html: t('project.title')}} />
       <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <ListItem nomark>
           <Link href="/pie-clockin" passHref>
             <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet' }} hover={{ '@mHover': 'pie' }}>
               <IconPie />
               <Heading position="homeItemName">
-                <Verb>
-                  Redesign
-                  <VerbRedesign />
+                <Verb foreng={isEng}>
+                  {t('verb.redesign')}
                 </Verb>
-                UI of a Clock-In App
+                <span dangerouslySetInnerHTML={{__html: t('project.pie.title')}} />
+                &nbsp;
+                <IconArrow wh="sq20" purpose="next" background="generic" gotoText="Go" />
               </Heading>
             </HomeItemLink>
           </Link>
@@ -38,11 +38,12 @@ export default function Projects() {
             <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet' }} hover={{ '@mHover': 'moment' }}>
               <IconMoment />
               <Heading position="homeItemName">
-                <Verb>
-                  Explore
-                  <VerbExplore />
+                <Verb foreng={isEng}>
+                  {t('verb.explore')}
                 </Verb>
-                the moment when hearing a song in the movies/dramas
+                <span dangerouslySetInnerHTML={{__html: t('project.moment.title')}} />
+                &nbsp;
+                <IconArrow wh="sq20" purpose="next" background="generic" gotoText="Go" />
               </Heading>
             </HomeItemLink>
           </Link>

@@ -17,12 +17,12 @@
     "pie":
     {
       "title":
-        "上下班打卡 App 的 UI"
+        "{{redesign}}上下班打卡 App 的 UI"
     },
     "moment":
     {
       "title":
-        "在電視影劇裡聽到經典歌曲的那一刻"
+        "{{explore}}在電視影劇裡，聽到經典歌曲的那一刻"
     }
   },
   "activity":
