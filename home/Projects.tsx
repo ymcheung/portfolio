@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
+
 import { Container, ListItem } from '@components/layout';
 import { Heading, Verb } from '@components/headings';
 import { HomeItemsLayout, HomeItemLink } from '@home/HomeItems';
@@ -9,9 +11,13 @@ import VerbRedesign from '@elements/VerbRedesign';
 import VerbExplore from '@elements/VerbExplore';
 
 export default function Projects() {
+  const { t, i18n } = useTranslation('home');
+
+  const isItalic = i18n.language === 'en';
+
   return(
     <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="hasSibling">
-      <Heading position="homeSection">Side Projects</Heading>
+      <Heading position="homeSection" isItalic={isItalic} dangerouslySetInnerHTML={{__html: t('project.title')}} />
       <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <ListItem nomark>
           <Link href="/pie-clockin" passHref>

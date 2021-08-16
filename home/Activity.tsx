@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
+
 import { Container, ListItem } from '@components/layout';
 import { Heading } from '@components/headings';
 import { HomeItemsLayout, HomeItemLink, HomeItemDescription } from './HomeItems';
@@ -6,9 +8,13 @@ import IconHyphen from './icons/IconHyphen';
 import IconArrow from '@elements/IconArrow';
 
 export default function Activity() {
+  const { t, i18n } = useTranslation('home');
+
+  const isItalic = i18n.language === 'en';
+
   return(
     <Container responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="isGroupEnd">
-      <Heading position="homeSection">Community Activity</Heading>
+      <Heading position="homeSection" isItalic={isItalic} dangerouslySetInnerHTML={{__html: t('activity.title')}} />
       <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <ListItem nomark>
           <Link href="/intersection" passHref>
@@ -18,9 +24,7 @@ export default function Activity() {
                 Translate Articles and Websites&nbsp;
                 <IconArrow wh="sq20" purpose="next" background="generic" gotoText="Go" />
               </Heading>
-              <HomeItemDescription>
-                Explore search engine optimization and internationalization by translations.
-              </HomeItemDescription>
+              <HomeItemDescription dangerouslySetInnerHTML={{__html: t('activity.intersection.description', { explore: t('verb.explore') })}} />
             </HomeItemLink>
           </Link>
           </ListItem>
@@ -32,9 +36,7 @@ export default function Activity() {
                 Translate &ldquo;Design Process for Pros&rdquo;&nbsp;
                 <IconArrow wh="sq20" purpose="next" background="generic" gotoText="Go" />
               </Heading>
-              <HomeItemDescription>
-                Retrospect an event gathing 20 designers to translate an e-book.
-              </HomeItemDescription>
+              <HomeItemDescription dangerouslySetInnerHTML={{__html: t('activity.process.description', { retrospect: t('verb.retrospect') })}} />
             </HomeItemLink>
           </Link>
         </ListItem>

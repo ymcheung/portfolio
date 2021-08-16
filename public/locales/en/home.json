@@ -1,17 +1,19 @@
 {
+  "verb":
+  {
+    "redesign":
+      "Redesign",
+    "explore":
+      "Explore",
+    "retrospect":
+      "Retrospect",
+    "translate":
+      "Translate"
+  },
   "project":
   {
     "title":
       "Side Projects",
-    "verb":
-    {
-      "redesign":
-        "Redesign",
-      "explore":
-        "Explore",
-      "retrospect":
-        "Retrospect"
-    },
     "pie":
     {
       "title":
@@ -30,16 +32,16 @@
     "intersection":
     {
       "title":
-        "Translate Articles and Websites",
+        "{{verb.translate}} Articles and Websites",
       "description":
-        "${explore} search engine optimization and internationalization by translations."
+        "{{explore}} search engine optimization and internationalization by translations."
     },
     "process":
     {
       "title":
-        "Translate &ldquo;Design Process for Pros&rdquo;",
+        "{{verb.translate}} &ldquo;Design Process for Pros&rdquo;",
       "description":
-        "${retrospect} an event gathing 20 designers to translate an e-book."
+        "{{retrospect}} an event gathing 20 designers to translate an e-book."
     }
   }
 }

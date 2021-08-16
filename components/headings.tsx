@@ -30,7 +30,6 @@ export const Heading = styled('h2', {
         color: 'hsl($homeSectionTitle)',
         fontSize: '$18',
         fontWeight: 800,
-        fontStyle: 'italic',
         letterSpacing: '1px'
       },
       homeItemName: {
@@ -46,6 +45,11 @@ export const Heading = styled('h2', {
         fontSize: '$24',
         fontWeight: 600,
         lineHeight: '32px'
+      }
+    },
+    isItalic: {
+      true: {
+        fontStyle: 'italic'
       }
     }
   }
