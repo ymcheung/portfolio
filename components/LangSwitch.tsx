@@ -5,13 +5,25 @@ import { styled } from 'stitches.config';
 
 import IconLangSwitch from '@elements/IconLangSwitch';
 
-const Button = styled('a', {
+const Switch = styled('a', {
   display: 'inline-block',
-  margin: '0 0 12px -8px',
-  padding: '$8',
+  paddingX: '$8',
   background: 'hsl($shade1500)',
   borderRadius: '4px',
   transition: 'background-color $easeOut',
+
+  variants: {
+    position: {
+      articleStart: {
+        margin: '0 0 12px -8px',
+        paddingY: '$8'
+      },
+      footer: {
+        margin: '0 0 12px 0',
+        paddingY: '$4'
+      }
+    }
+  },
 
   '&:active, &:hover': {
     background: 'hsl($shade1400)',
@@ -34,7 +46,11 @@ const LangName = styled('span', {
   lineHeight: '20px'
 });
 
-function LangSwitch() {
+interface LangSwitchProps {
+  readonly position: {}
+}
+
+function LangSwitch({ position }: LangSwitchProps) {
   const router = useRouter();
   const { i18n } = useTranslation();
 
@@ -42,10 +58,10 @@ function LangSwitch() {
 
   return(
     <Link href={router.pathname} locale={router.locale === 'en' ? 'zh-Hant-TW' : 'en'} passHref>
-      <Button>
+      <Switch position={position}>
         <IconLangSwitch />
         <LangName>{langName}</LangName>
-      </Button>
+      </Switch>
     </Link>
   );
 }

@@ -5,6 +5,7 @@ import { Heading } from './headings';
 import { AUTHOR } from 'constant';
 
 import ToggleScheme from './ToggleScheme';
+import LangSwitch from '@components/LangSwitch';
 
 const Separate = styled('hr', {
   width: '120px',
@@ -46,6 +47,7 @@ function Footer({ responsive, inproject }: FooterProps) {
         <Heading as="strong" nametag="footer">{AUTHOR}</Heading>
         <NameTagDescription>Portfolio {Year}</NameTagDescription>
         <ToggleScheme />
+        <LangSwitch position="footer" />
       </FooterLayout>
     </Container>
   );

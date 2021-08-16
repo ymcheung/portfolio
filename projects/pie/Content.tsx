@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 
 import { styled } from 'stitches.config'; 
 
-import LangSwitch from '@projects/LangSwitch';
+import LangSwitch from '@components/LangSwitch';
 
 import IconPie from '@elements/IconPie';
 
@@ -45,7 +45,7 @@ export default function Content() {
   return(
     <>
       <Container as="section" responsive={{'@m768': 'max640'}}>
-        <LangSwitch />
+        <LangSwitch position="articleStart" />
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('brief.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('brief.description')}} indent />
