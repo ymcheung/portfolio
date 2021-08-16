@@ -32,14 +32,14 @@
     "intersection":
     {
       "title":
-        "{{verb.translate}} Articles and Websites",
+        "{{translate}} Articles and Websites",
       "description":
         "{{explore}} search engine optimization and internationalization by translations."
     },
     "process":
     {
       "title":
-        "{{verb.translate}} &ldquo;Design Process for Pros&rdquo;",
+        "{{translate}} “Design Process for Pros”",
       "description":
         "{{retrospect}} an event gathing 20 designers to translate an e-book."
     }

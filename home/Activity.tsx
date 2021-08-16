@@ -21,7 +21,8 @@ export default function Activity() {
             <HomeItemLink asactivity={{ '@initial': 'mobile', '@m768': 'tablet' }}>
               <IconHyphen hideintablet={{ '@m768': true }} />
               <Heading position="homeItemName">
-                Translate Articles and Websites&nbsp;
+                {t('activity.intersection.title', { translate: t('verb.translate')})}
+                &nbsp;
                 <IconArrow wh="sq20" purpose="next" background="generic" gotoText="Go" />
               </Heading>
               <HomeItemDescription dangerouslySetInnerHTML={{__html: t('activity.intersection.description', { explore: t('verb.explore') })}} />
@@ -33,7 +34,8 @@ export default function Activity() {
             <HomeItemLink asactivity={{ '@initial': 'mobile', '@m768': 'tablet' }}>
               <IconHyphen hideintablet={{ '@m768': true }} />
               <Heading position="homeItemName">
-                Translate &ldquo;Design Process for Pros&rdquo;&nbsp;
+                {t('activity.process.title', { translate: t('verb.translate')})}
+                &nbsp;
                 <IconArrow wh="sq20" purpose="next" background="generic" gotoText="Go" />
               </Heading>
               <HomeItemDescription dangerouslySetInnerHTML={{__html: t('activity.process.description', { retrospect: t('verb.retrospect') })}} />
