@@ -31,7 +31,7 @@ export default function ProjectIntersection() {
     name: 'Intersection: A Publication of Translating Articles & Websites',
     description: 'Explore SEO and internationalization by translations.',
     datePublished: '2020-08-29',
-    dateModified: '2021-08-16'
+    dateModified: '2021-08-20'
   }
 
   useEffect(() => {

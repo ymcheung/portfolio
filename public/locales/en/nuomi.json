@@ -19,11 +19,11 @@
     "title":
       "Retrospect",
     "description":
-      "The specification of websites has been elevated a lot since early 2017. In retrospect, these should be done to meet the minimum requirement:",
+      "The specification of websites has been elevated a lot since early 2017. In retrospect, these have been the minimum requirements:",
     "https":
     {
       "title": 
-        "Webiste is Secure",
+        "Website is Secure",
       "description": 
         "Google Chrome has been notifying visitors that a website is not safe without HTTPS since Oct. 2018."
     },
@@ -39,7 +39,7 @@
       "title": 
         "Accessibility",
       "description":
-        "There have been tools to summarize accessibility automatically. Besides, the developer tool on accessibility in Google Chrome has been much more comprehensive than that 2 years ago."
+        "There have been tools to check accessibility automatically. Besides, the developer tool on accessibility in Google Chrome has been much more comprehensive than that two years ago."
     }
   }
 }
