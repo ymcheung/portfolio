@@ -13,7 +13,7 @@
     "title":
       "How to Find the Website?",
     "description":
-      "Based on real data, many people submitted these words for lyrics in a search engine:",
+      "Based on actual data, many people submitted these words for lyrics in a search engine:",
     "hows":
     [
       {
@@ -40,15 +40,11 @@
     [
       {
         "name":
-          "In the pages of a movie or drama, only song names are mentioned. To find lyrics, one has to search further"
-      },
-      {
-        "name":
-          "Few content in Mandarin Chinese"
+          "In the pages of a movie or drama, only song names are mentioned."
       }
     ],
     "conclusion":
-      "Therefore, there is a gap between the moment you hear the song and finding out which song it is."
+      "Therefore, you are probably unsure if it is the song you heard in the movies&sol;drama."
   },
   "what":
   {
@@ -81,7 +77,7 @@
     "title":
       "Minimum Viable Product",
     "description":
-      "Like many products, the website went public when it seemed working. It was primitive, but inviting search engines to know the content and having real visitors ASAP are more important.",
+      "Like many products, the website went public when it seemed to work. It was primitive, but inviting search engines to know the content and having real visitors ASAP is more important.",
     "versions":
     [
       {

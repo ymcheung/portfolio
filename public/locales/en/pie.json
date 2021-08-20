@@ -4,7 +4,7 @@
     "title":
       "Brief",
     "description":
-      "Applications for work should be productive because of their repetitive usage. Compared to the product in use, the major flows of the redesigned clock-in app are going to be simpler. I did UI ideation of the side project on my own and prepared the onboarding document for future members.",
+      "Work applications should be productive because of their repetitive usage. Compared to the product in use, the major flows of the redesigned clock-in app will be simpler. I did UI ideation of the side project on my own and prepared the onboarding document for future members.",
     "pie":
       "The clock-in app is called Pie, inspired by the circular area available for clocking-in/out. The round-corner font &ldquo;<a class=\"paragraph-link\" href=\"https://fonts.google.com/specimen/Rubik\" target=\"_blank\" rel=\"noopener\">Rubik</a>&rdquo; is appealing as a logo and easy to read as content."
   },
@@ -13,7 +13,7 @@
     "title":
       "The Problem",
     "problem":
-      "The company I worked for was using an app with clock-in, leave statistics, and salary information features. One had to go back to the &ldquo;Main Menu&rdquo; as he&sol;she switched between features in the product in use. The flow could be simplified."
+      "The company I worked for used an app with clock-in, leave statistics, and salary information. One had to go back to the &ldquo;Main Menu&rdquo; as he&sol;she switched between features in the product in use. I wished the flow were more straightforward."
   },
   "question":
   {
@@ -38,7 +38,7 @@
         "name":
           "Why &amp; How",
         "description":
-          "Product specification is subject to change. We write down WHY the roles we defined are using a clock-in app and HOW they are going to fulfill their goals."
+          "Product specification is subject to change. We write down WHY the defined roles are using a clock-in app and HOW they will fulfill their goals."
       }
     ]
   },
@@ -63,7 +63,7 @@
     "screen":
       "{{view}} Screen",
     "description":
-      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. There will be &ldquo;going-back-and-forths&rdquo; if a user has more than one thing to do in the product in use. The Tab Bar at screen bottom comes to the flow&rsquo;s rescue."
+      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. Users will be going back and forth if they have more than one thing to do with the product in use. The Tab Bar at the screen bottom comes to the flow's rescue."
   },
   "gallery":
   {
@@ -75,7 +75,7 @@
     "title":
       "Give It a Try",
     "description":
-      "<a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">A set of basic interactions</a> was made to test the flows."
+      "You can test the flows with <a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">a set of basic interactions</a>."
   },
   "note":
   {
@@ -87,7 +87,7 @@
         "name":
           "Limited Resources for a Side Project",
         "description":
-          "There are many tasks to accomplish accoring to Roles &amp; Goals. The project is moving towards a complete UI flow at the moment due to the scarce time &amp; resources."
+          "There are many tasks to accomplish according to Roles &amp; Goals. The project is moving towards a complete UI flow at the moment due to the short of time &amp; resources."
       }
     ]
   }

@@ -30,7 +30,7 @@ export default function ProjectNuomi() {
     name: 'Retrospect Nuomi’s Portfolio',
     description: 'Nuomi’s Portfolio with hand-drawn VR experience',
     datePublished: '2020-08-29',
-    dateModified: '2021-05-20'
+    dateModified: '2021-08-20'
   }
 
   useEffect(() => {
