@@ -1,11 +1,13 @@
 import { styled } from 'stitches.config';
 
 export const Wrap = styled('header', {
+  position: 'relative',
+
   variants: {
     responsive: {
       mobile: {
         marginBottom: '$16',
-        paddingY: '$24'
+        padding: '$24 0 40px'
       },
       tablet: {
         top: 0

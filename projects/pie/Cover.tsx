@@ -5,6 +5,8 @@ import { screenMobile, screenTablet } from '@utils/screens';
 
 import { Wrap, Device } from '@projects/cover';
 
+import IconPie from '@elements/IconPie';
+
 const ScreenshotMobile = styled(Image, {
   position: 'relative',
   zIndex: 1,
