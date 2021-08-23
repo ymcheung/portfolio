@@ -63,7 +63,7 @@
     "screen":
       "{{view}} Screen",
     "description":
-      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. Users will be going back and forth if they have more than one thing to do with the product in use. The Tab Bar at the screen bottom comes to the flow's rescue."
+      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. Users who have more than one thing to do will be going back and forth between Main Menu and their goals. The Tab Bar at the screen bottom comes to the flow&rsquo;s rescue."
   },
   "gallery":
   {
@@ -75,7 +75,7 @@
     "title":
       "Give It a Try",
     "description":
-      "You can test the flows with <a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">a set of basic interactions</a>."
+      "Try the interactions of Pie with <a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">the prototype</a>."
   },
   "note":
   {

@@ -63,7 +63,7 @@
     "screen":
       "{{view}}畫面",
     "description":
-      "「主選單」並非完成例行事項的必備流程，如果有超過一件事情要做的話，就得要不斷「來回切換」。以底部導覽選單即可簡化。"
+      "「主選單」並非完成例行事項的必備流程。如果有超過一件事情要做的話，就得要在主選單與目的之間不斷「來回切換」。使用底部導覽選單 (Tab Bar) 就會有幫助。"
   },
   "gallery":
   {
@@ -75,7 +75,7 @@
     "title":
       "試玩",
     "description":
-      "用來測試流程的<a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">基本互動</a>。"
+      "試試看 Pie 的互動流程 <a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">Prototype</a>。"
   },
   "note":
   {
