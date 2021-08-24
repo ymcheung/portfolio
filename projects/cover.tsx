@@ -2,14 +2,10 @@ import { styled } from 'stitches.config';
 
 export const Wrap = styled('header', {
   position: 'relative',
+  marginBottom: '$16',
+  padding: '$24 0 40px',
 
   variants: {
-    responsive: {
-      mobile: {
-        marginBottom: '$16',
-        padding: '$24 0 40px'
-      }
-    },
     project: {
       pie: {
         backgroundColor: 'hsl($pie0)'
