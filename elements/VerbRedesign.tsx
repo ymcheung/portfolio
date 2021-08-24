@@ -19,7 +19,7 @@ const Line = styled('path', {
 
 export default function VerbRedesign() {
   return(
-    <Verb viewBox="0 0 76 4" xmlns="http://www.w3.org/2000/svg">
+    <Verb viewBox="0 0 76 4" role="img" xmlns="http://www.w3.org/2000/svg">
       <Line d="M2 2H74"/>
     </Verb>
   );

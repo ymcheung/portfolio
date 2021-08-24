@@ -13,7 +13,8 @@ const Background = styled('rect', {
 
 export default function IconIntersection() {
   return(
-    <Icon viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+    <Icon viewBox="0 0 96 96" role="img" xmlns="http://www.w3.org/2000/svg">
+      <title>Logo: Intersection</title>
       <Background x="0" y="0" />
       <path d="M17.9381 -9.55127L76.2455 48.7562L70.2281 54.7736L11.9206 -3.53385L17.9381 -9.55127Z" fill="white"/>
       <path opacity="0.36" d="M78.2274 -7.79651L84.2448 -1.77909L26.9838 55.4819L20.9664 49.4644L78.2274 -7.79651Z" fill="black"/>
