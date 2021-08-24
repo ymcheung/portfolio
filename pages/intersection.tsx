@@ -9,8 +9,11 @@ import { webPage } from '@utils/schema/webPage';
 import { global } from 'stitches.config';
 
 import { Container } from '@components/layout';
-import { Heading } from '@components/headings';
+import { HeadingLayout, Heading } from '@components/headings';
 import { Section } from '@components/contentStyles';
+
+import IconIntersection from '@elements/IconIntersection';
+
 import Meta from '@projects/intersection/Meta';
 import Content from '@projects/intersection/Content';
 import Nav from '@projects/Nav';
@@ -59,7 +62,14 @@ export default function ProjectIntersection() {
       />
       <Container as="article" responsive={{'@m768': 'max640'}} space="isGroupEnd">
         <Section as="section">
-          <Heading as="h1" position="itemName" ownmargin>{pageInfo.name}</Heading>
+          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconm={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+            <div>
+              <IconIntersection />
+            </div>
+            <Heading as="h1" position="itemName">
+              {pageInfo.name}
+            </Heading>
+          </HeadingLayout>
           <Meta />
         </Section>
         <Content />

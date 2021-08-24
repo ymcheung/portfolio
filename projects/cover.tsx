@@ -8,15 +8,6 @@ export const Wrap = styled('header', {
       mobile: {
         marginBottom: '$16',
         padding: '$24 0 40px'
-      },
-      tablet: {
-        top: 0
-      },
-      tabletMacbook: {
-        top: '72px'
-      },
-      desktopMacbook: {
-        top: '36px'
       }
     },
     project: {

@@ -7,14 +7,29 @@ export const HeadingLayout = styled('div', {
   variants: {
     responsive: {
       mobile: {
-        grid: `52px
-               auto / 100%`,
         rowGap: '$4'
       },
       tablet: {
-        grid: 'auto / 52px 1fr',
         columnGap: '$16',
         alignItems: 'center'
+      }
+    },
+    iconm: {
+      mobile: {
+        grid: `36px
+               auto / 100%`
+      },
+      tablet: {
+        grid: 'auto / 36px 1fr'
+      }
+    },
+    iconl: {
+      mobile: {
+        grid: `52px
+               auto / 100%`
+      },
+      tablet: {
+        grid: 'auto / 52px 1fr'
       }
     }
   }

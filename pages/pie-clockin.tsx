@@ -64,7 +64,7 @@ export default function ProjectPie() {
       <Cover />
       <FullLayout as="article">
         <Container as="section" responsive={{'@m768': 'max640'}}>
-          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
             <div>
               <IconPie />
             </div>

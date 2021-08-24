@@ -36,10 +36,10 @@ export const MetaItemTitle = styled('strong', {
         color: 'hsl($mtDawn)'
       },
       nuomi: {
-        color: '$nuomiGold1200'
+        color: 'hsl($nuomiGold1200)'
       },
       intersection: {
-        color: '$intersection1500'
+        color: 'hsl($intersection1500)'
       }
     }
   }

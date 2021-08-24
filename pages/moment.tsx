@@ -31,7 +31,7 @@ export default function ProjectMoment() {
   const router = useRouter();
 
   const pageInfo = {
-    name: 'Explore the moment when hearing a song in the movies/dramas',
+    name: 'Explore the Moment when Hearing a Song in the Movies/Dramas',
     description: 'How might we display the moment when hearing the songs you like in the movies/dramas?',
     datePublished: '2020-08-29',
     dateModified: '2021-08-23'
@@ -64,7 +64,7 @@ export default function ProjectMoment() {
       <Cover />
       <Container as="article" responsive={{'@m768': 'max640'}} space="isGroupEnd">
         <Section as="section">
-          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
             <div>
               <IconMoment />
             </div>
