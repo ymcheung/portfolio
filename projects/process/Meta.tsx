@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MetaList, MetaItem, MetaItemTitle, MetaItemValue  } from "@projects//meta";
+import { MetaList, MetaItem, MetaItemTitle, MetaItemValue  } from "@projects/meta";
 
 export default function Meta() {
   return(

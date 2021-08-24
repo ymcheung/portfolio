@@ -9,8 +9,11 @@ import { webPage } from '@utils/schema/webPage';
 import { global } from 'stitches.config';
 
 import { Container, FullLayout } from '@components/layout';
-import { Heading } from '@components/headings';
+import { HeadingLayout, Heading } from '@components/headings';
 import Cover from '@projects/pie/Cover';
+
+import IconPie from '@elements/IconPie';
+
 import Meta from '@projects/pie/Meta';
 import Content from '@projects/pie/Content';
 import Nav from '@projects/Nav';
@@ -22,6 +25,7 @@ const pageBody = global({
     backgroundColor: 'hsl($backgroundPie)'
   }
 });
+
 
 export default function ProjectPie() {
   const pageInfo = {
@@ -60,7 +64,14 @@ export default function ProjectPie() {
       <Cover />
       <FullLayout as="article">
         <Container as="section" responsive={{'@m768': 'max640'}}>
-          <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
+          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+            <div>
+              <IconPie />
+            </div>
+            <Heading as="h1" position="itemName">
+              {pageInfo.name}
+            </Heading>
+          </HeadingLayout>
           <Meta />
         </Container>
         <Content />

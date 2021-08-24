@@ -9,9 +9,12 @@ import { webPage } from '@utils/schema/webPage';
 import { global } from 'stitches.config';
 
 import { Container } from '@components/layout';
-import { Heading } from '@components/headings';
+import { HeadingLayout, Heading } from '@components/headings';
 import { Section } from '@components/contentStyles';
 import Cover from '@projects/moment/Cover';
+
+import IconMoment from '@elements/IconMoment';
+
 import Meta from '@projects/moment/Meta';
 import Content from '@projects/moment/Content';
 import Nav from '@projects/Nav';
@@ -28,10 +31,10 @@ export default function ProjectMoment() {
   const router = useRouter();
 
   const pageInfo = {
-    name: 'Explore the moment when hearing a song in the movies/dramas',
+    name: 'Explore the Moment when Hearing a Song in the Movies/Dramas',
     description: 'How might we display the moment when hearing the songs you like in the movies/dramas?',
     datePublished: '2020-08-29',
-    dateModified: '2021-08-20'
+    dateModified: '2021-08-23'
   }
 
   useEffect(() => {
@@ -61,7 +64,14 @@ export default function ProjectMoment() {
       <Cover />
       <Container as="article" responsive={{'@m768': 'max640'}} space="isGroupEnd">
         <Section as="section">
-          <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
+          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+            <div>
+              <IconMoment />
+            </div>
+            <Heading as="h1" position="itemName">
+              {pageInfo.name}
+            </Heading>
+          </HeadingLayout>
           <Meta />
         </Section>
         <Content />

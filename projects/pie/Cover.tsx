@@ -36,7 +36,7 @@ export default function Cover() {
   useEffect(() => {setMounted(true)}, []);
 
   return(
-    <Wrap responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} project="pie">
+    <Wrap project="pie">
       <Device responsive={{ '@initial': 'mobile' }} device={{ '@m768': 'mobileDual' }}>
         {mounted && screenMobile &&
           <ScreenshotMobile src="/projects/pie/clockingNone.webp" width={256} height={455} alt="Screenshot: Clock-In" />

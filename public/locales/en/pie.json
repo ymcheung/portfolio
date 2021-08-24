@@ -4,16 +4,14 @@
     "title":
       "Brief",
     "description":
-      "Work applications should be productive because of their repetitive usage. Compared to the product in use, the major flows of the redesigned clock-in app will be simpler. I did UI ideation of the side project on my own and prepared the onboarding document for future members.",
-    "pie":
-      "The clock-in app is called Pie, inspired by the circular area available for clocking-in/out. The round-corner font &ldquo;<a class=\"paragraph-link\" href=\"https://fonts.google.com/specimen/Rubik\" target=\"_blank\" rel=\"noopener\">Rubik</a>&rdquo; is appealing as a logo and easy to read as content."
+      "Work applications should be productive because of their repetitive usage. Compared to the inspiring product, the major flows of the redesigned clock-in app will be simpler. I did UI ideation of the side project on my own and prepared the onboarding document for future members."
   },
   "why":
   {
     "title":
       "The Problem",
     "problem":
-      "The company I worked for used an app with clock-in, leave statistics, and salary information. One had to go back to the &ldquo;Main Menu&rdquo; as he&sol;she switched between features in the product in use. I wished the flow were more straightforward."
+      "The company I worked for used an app with clock-in, leave statistics, and salary information. One had to go back to the &ldquo;Main Menu&rdquo; as there was another task to do. I wished the flows were more straightforward."
   },
   "question":
   {

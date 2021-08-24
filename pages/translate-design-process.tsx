@@ -29,7 +29,7 @@ export default function ProjectProcess() {
 
   const pageInfo = {
     name: 'Translate “Design Process for Pros”',
-    description: 'Retrospect an event gathing 20 designers to translate an e-book. Co-Operated with Cosign.',
+    description: 'Retrospect an event gathering 20 designers to translate an e-book. Co-Operated with Cosign.',
     datePublished: '2020-08-29',
     dateModified: '2021-08-20'
   }
@@ -59,7 +59,7 @@ export default function ProjectProcess() {
       />
       <Container as="article" responsive={{'@m768': 'max640'}} space="isGroupEnd">
         <Section as="section">
-          <Heading as="h1" position="itemName">{pageInfo.name}</Heading>
+          <Heading as="h1" position="itemName" ownmargin>{pageInfo.name}</Heading>
           <Meta />
         </Section>
         <Content />
