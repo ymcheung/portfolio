@@ -32,14 +32,14 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
       mtMidnight100: '225,26%,12%',
       mtMidnight0: '225,26%,6%',
 
-      nuomiBlack300: 'hsl(180,1%,20%)',
-      nuomiBlack100: 'hsl(180,1%,12%)',
-      nuomiBlack0: '180,1%,6%',
+      nuomiBlack300: '180,1%,20%',
+      nuomiBlack100: '180,1%,12%',
+      nuomiBlack0:   '180,1%,6%',
       nuomiGold1200: '32,55%,54%',
-      nuomiGold400: '32,55%,20%',
+      nuomiGold400:  '32,55%,20%',
 
       intersection1500: '11,71%,61%',
-      intersection300: 'hsl(11,71%,12%)',
+      intersection300: '11,71%,12%',
 
       homeSectionTitle: '$shade600',
 
