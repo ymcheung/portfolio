@@ -13,7 +13,7 @@ const Text = styled('path', {
   fill: 'hsl($shade1600)'
 });
 
-function IconLinkedIn() {
+export default function IconLinkedIn() {
   return(
     <LinkedIn viewBox="0 0 96 96" aria-labelledby="linkedInLink" xmlns="http://www.w3.org/2000/svg">
       <title id="linkedInLink">LinkedIn Profile</title>
@@ -23,5 +23,3 @@ function IconLinkedIn() {
     </LinkedIn>
   );
 }
-
-export default IconLinkedIn;

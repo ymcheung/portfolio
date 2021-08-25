@@ -45,10 +45,18 @@ export const MetaItemTitle = styled('strong', {
   }
 });
 
+export const MetaStatusList = styled('ul', {
+  display: 'grid',
+  columnGap: '$12',
+  margin: '0 0 $8',
+  padding: 0
+});
+
 export const MetaItemValue = styled('span', {
   display: 'inline-block',
   color: 'hsl($shade600)',
   fontFamily: '$mono',
   fontSize: '$14',
-  fontWeight: 500
+  fontWeight: 500,
+  lineHeight: '20px'
 });

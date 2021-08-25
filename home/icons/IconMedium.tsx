@@ -9,7 +9,7 @@ const Oval = styled('path', {
   fill: 'hsl($shade0)'
 });
 
-function IconMedium() {
+export default function IconMedium() {
   return(
     <Medium viewBox="0 0 96 96" aria-labelledby="MediumLink" xmlns="http://www.w3.org/2000/svg">
       <title id="MediumLink">Medium Publication</title>
@@ -19,5 +19,3 @@ function IconMedium() {
     </Medium>
   );
 }
-
-export default IconMedium;

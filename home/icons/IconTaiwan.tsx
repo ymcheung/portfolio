@@ -10,7 +10,7 @@ const Island = styled('path', {
   fill: 'hsl($shade600)'
 });
 
-function IconTaiwan() {
+export default function IconTaiwan() {
   return(
     <Icon viewBox="0 0 18 24" aria-labelledby="iconTaiwan" xmlns="http://www.w3.org/2000/svg">
       <title id="iconTaiwan">Located in Taiwan</title>
@@ -18,5 +18,3 @@ function IconTaiwan() {
     </Icon>
   );
 }
-
-export default IconTaiwan;

@@ -10,7 +10,7 @@ const Path = styled('path', {
   fill: 'hsl($shade300)'
 });
 
-export default function IconFigma() {
+export default function IconA11y() {
   return(
     <Icon viewBox="0 0 37 36" aria-labelledby="iconA11y" xmlns="http://www.w3.org/2000/svg">
       <title id="iconA11y">Accessibility in Practice</title>

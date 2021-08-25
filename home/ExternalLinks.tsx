@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { styled } from 'stitches.config';
 import IconLinkedIn from '@home/icons/IconLinkedIn';
 import IconMedium from '@home/icons/IconMedium';
-import BannerLoveUI from '@home/icons/bannerLoveUI';
+import BannerLoveUI from '@home/icons/BannerLoveUI';
 import { Container } from '@components/layout';
 
 const IconLink = styled('a', {
