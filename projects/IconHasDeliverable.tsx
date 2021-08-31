@@ -10,6 +10,9 @@ const Circle = styled('circle', {
     project: {
       pie: {
         fill: 'hsla($pie700, 0.5)'
+      },
+      moment: {
+        fill: 'hsla($mtDawn, 0.5)'
       }
     }
   }

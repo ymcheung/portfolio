@@ -3,34 +3,34 @@ import { MetaList, MetaItem, MetaItemTitle, MetaStatusList, MetaItemValue } from
 import IconHasDeliverable from '@projects/IconHasDeliverable';
 import IconNotReady from '@projects/IconNotReady';
 
-const statusItems = [
-  {
-    name: 'Document',
-    link: 'https://www.craft.do/s/WPp0S5oPecqEPc',
-    isReady: true,
-    sbevent: 'Pie/Meta: Onboarding Document Link'
-  },
-  {
-    name: 'UI',
-    isReady: true
-  },
-  {
-    name: 'Prototype',
-    link: 'https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1',
-    isReady: true,
-    sbevent: 'Pie/Meta: Prototype Link'
-  },
-  {
-    name: 'Front-End Code',
-    isReady: false
-  },
-  {
-    name: 'Landing Page',
-    isReady: false
-  }
-];
-
 export default function Meta() {
+  const statusItems = [
+    {
+      name: 'Document',
+      link: 'https://www.craft.do/s/WPp0S5oPecqEPc',
+      isReady: true,
+      sbevent: 'Pie/Meta: Onboarding Document Link'
+    },
+    {
+      name: 'UI',
+      isReady: true
+    },
+    {
+      name: 'Prototype',
+      link: 'https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1',
+      isReady: true,
+      sbevent: 'Pie/Meta: Prototype Link'
+    },
+    {
+      name: 'Front-End Code',
+      isReady: false
+    },
+    {
+      name: 'Landing Page',
+      isReady: false
+    }
+  ];
+
   return(
     <MetaList responsive={{ '@m768': 'half' }}>
       <MetaItem>
