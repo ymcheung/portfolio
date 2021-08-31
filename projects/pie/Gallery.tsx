@@ -60,7 +60,7 @@ export default function Gallery() {
   const { t } = useTranslation('pie');
 
   return(
-    <Container responsive={{'@m768': 'max640'}}>
+    <Container id="ui_permute" responsive={{'@m768': 'max640'}}>
       <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('gallery.title')}} />
       <PieGalleryList responsive={{ '@m768': 'tablet' }} grid={{ '@m768': 'tablet' }}>
         <PieGalleryItem item={{ '@m768': 'clocking' }} nomark>

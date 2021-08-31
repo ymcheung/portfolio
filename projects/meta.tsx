@@ -17,7 +17,15 @@ export const MetaList = styled('ul', {
 });
 
 export const MetaItem = styled('li', {
-  listStyle: 'none'
+  listStyle: 'none',
+
+  variants: {
+    itemspan: {
+      full: {
+        gridColumn: '1 / span 2'
+      }
+    }
+  }
 });
 
 export const MetaItemTitle = styled('strong', {
@@ -25,7 +33,7 @@ export const MetaItemTitle = styled('strong', {
   fontFamily: '$mono',
   fontSize: '$14',
   fontWeight: 500,
-  lineHeight: '20px',
+  lineHeight: 1,
 
   variants: {
     project: {
@@ -47,16 +55,26 @@ export const MetaItemTitle = styled('strong', {
 
 export const MetaStatusList = styled('ul', {
   display: 'grid',
+  grid: 'auto / repeat(2, 1fr)',
   columnGap: '$12',
   margin: '0 0 $8',
-  padding: 0
+  padding: 0,
+
+  variants: {
+    responsive: {
+      tablet: {
+        grid: 'auto / repeat(3, 1fr)'
+      }
+    }
+  }
 });
 
 export const MetaItemValue = styled('span', {
   display: 'inline-block',
+  marginBottom: '$8',
   color: 'hsl($shade600)',
   fontFamily: '$mono',
   fontSize: '$14',
   fontWeight: 500,
-  lineHeight: '20px'
+  lineHeight: '24px'
 });
