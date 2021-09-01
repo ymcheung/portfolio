@@ -3,7 +3,7 @@ import { styled } from 'stitches.config';
 export const Wrap = styled('header', {
   position: 'relative',
   marginBottom: '$16',
-  padding: '$24 0 40px',
+  padding: '$24 0',
 
   variants: {
     project: {

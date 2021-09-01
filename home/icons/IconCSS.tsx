@@ -10,7 +10,7 @@ const Path = styled('path', {
   fill: 'hsl($shade300)'
 });
 
-export default function IconLight() {
+export default function IconCSS() {
   return(
     <Icon viewBox="0 0 32 36" aria-labelledby="iconCSS" xmlns="http://www.w3.org/2000/svg">
       <title id="iconCSS">CSS & CSS-In-JS</title>

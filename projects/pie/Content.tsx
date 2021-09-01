@@ -26,7 +26,8 @@ export default function Content() {
         <LangSwitch position="articleStart" />
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('brief.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('brief.description')}} indent sectionend />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('brief.description')}} indent />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('brief.size')}} indent sectionend />
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
