@@ -31,7 +31,7 @@ export default function Meta() {
         <MetaItemTitle project="moment">Languages</MetaItemTitle>
         <MetaItemValue>Mostly English</MetaItemValue>
       </MetaItem>
-      <MetaItem itemspan="full">
+      <MetaItem itemspan={{ '@m768': 'full' }}>
         <MetaItemTitle project="moment">Status</MetaItemTitle>
         <MetaStatusList responsive={{ '@m768': 'tablet' }}>
           {

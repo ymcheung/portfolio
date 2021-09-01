@@ -43,7 +43,7 @@ export default function Meta() {
           正體中文, English
         </MetaItemValue>
       </MetaItem>
-      <MetaItem itemspan="full">
+      <MetaItem itemspan={{ '@m768': 'full' }}>
         <MetaItemTitle project="pie">Status</MetaItemTitle>
         <MetaStatusList responsive={{ '@m768': 'tablet' }}>
           {

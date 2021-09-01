@@ -2,6 +2,7 @@ import { styled } from 'stitches.config';
 
 export const MetaList = styled('ul', {
   display: 'grid',
+  grid: 'auto / 1fr',
   rowGap: '$12',
   margin: '0 0 64px',
   padding: 0,
