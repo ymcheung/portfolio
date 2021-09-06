@@ -6,7 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '@utils/HeadMeta';
 import { webPage } from '@utils/schema/webPage';
 
-import { global } from 'stitches.config';
+import { globalCss } from 'stitches.config';
 
 import { Container } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
@@ -19,7 +19,7 @@ import Content from '@projects/intersection/Content';
 import Nav from '@projects/Nav';
 import Footer from '@components/Footer';
 
-const pageBody = global({
+const pageBody = globalCss({
   'body[data-body-style=intersection]': {
     minHeight: '100vh',
     paddingTop: '$16',

@@ -6,7 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '@utils/HeadMeta';
 import { webPage } from '@utils/schema/webPage';
 
-import { global } from 'stitches.config';
+import { globalCss } from 'stitches.config';
 
 import { Container, FullLayout } from '@components/layout';
 import { Heading } from '@components/headings';
@@ -16,7 +16,7 @@ import Content from '@projects/nuomi/Content';
 import Nav from '@projects/Nav';
 import Footer from '@components/Footer';
 
-const pageBody = global({
+const pageBody = globalCss({
   'body[data-body-style=nuomi]': {
     minHeight: '100vh',
     backgroundColor: 'hsl($themeNuomi)'

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'next-i18next';
 
 import { styled } from 'stitches.config';
@@ -31,11 +30,6 @@ const BubbleSearch = styled('div', {
       }
     }
   } 
-});
-
-const IconListDescription = styled(Paragraph, {
-  gridArea: 'description',
-  paddingX: '$12' 
 });
 
 const WhatList = styled('ul', {
@@ -133,7 +127,7 @@ export default function Content() {
                 <IconSearch />
               </div>
               <BubbleSearch responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: keyword}} />
-              <IconListDescription dangerouslySetInnerHTML={{__html: name}} sectionend="true" />
+              <Paragraph dangerouslySetInnerHTML={{__html: name}} purpose="projectIconDescription" sectionend />
             </IconListItem>
           ))}
         </IconList>
@@ -168,12 +162,12 @@ export default function Content() {
         <Paragraph dangerouslySetInnerHTML={{__html: t('mvp.description')}} indent />
         <IconList>
           {t<string, mvpProps>('mvp.versions', { returnObjects: true }).map(({ position, description }: mvpProps, index: number) => (
-            <IconListItem nomark="true" key={`mvp-${index}`}>
+            <IconListItem nomark key={`mvp-${index}`}>
               <div>
                 {iterationIcons[index]}
               </div>
               <Iteration dangerouslySetInnerHTML={{__html: position }} isItalic={isItalic} />
-              <IconListDescription as="div" dangerouslySetInnerHTML={{__html: description}} sectionend="true" />
+              <Paragraph as="div" dangerouslySetInnerHTML={{__html: description}} purpose="projectIconDescription" sectionend />
             </IconListItem>
           ))}
         </IconList>

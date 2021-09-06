@@ -2,12 +2,12 @@ import { styled } from 'stitches.config';
 import { Svg } from './Svg';
 
 const Icon = styled(Svg, {
-  size: '36px',
+  size: '$36',
   borderRadius: '6px'
 });
 
 const Background = styled('rect', {
-  size: '96px',
+  size: '$96',
   fill: 'hsl($intersection1500)'
 });
 

@@ -60,10 +60,10 @@ const NavItemLink = styled('a', {
 interface NavProps {
   hasPrev?: string;
   prevSlug?: string;
-  prevBg?: string;
+  prevBg?: 'generic' | 'pie' | 'moment' | 'nuomi';
   hasNext?: string;
   nextSlug?: string;
-  nextBg?: string;
+  nextBg?: 'generic' | 'pie' | 'moment' | 'nuomi';
 }
 
 function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps) {

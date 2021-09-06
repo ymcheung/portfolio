@@ -2,7 +2,7 @@ import { styled } from 'stitches.config';
 import { Svg } from './Svg';
 
 const Dark = styled(Svg, {
-  size: '28px'
+  size: '$28'
 });
 
 

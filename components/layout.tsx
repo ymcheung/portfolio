@@ -1,7 +1,7 @@
 import { styled } from 'stitches.config';
 
 export const Container = styled('div', {
-  marginX: 'auto',
+  marginX: '$auto',
   paddingX: '$16',
 
   variants: {
@@ -34,7 +34,7 @@ export const Container = styled('div', {
       true: {
         height: '224px',
         position: 'relative',
-        marginY: 0,
+        marginY: '$0',
         paddingTop: '$24'
       }
     }

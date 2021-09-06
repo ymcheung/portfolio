@@ -8,7 +8,7 @@ const Icon = styled(Svg, {
         size: '$18'
       },
       sq20: {
-        size: '20px'
+        size: '$20'
       }
     }
   }
@@ -59,9 +59,9 @@ const Arrow = styled('path', {
 });
 
 type IconArrowProps = {
-  readonly wh: {};
-  readonly purpose: {};
-  readonly background: {};
+  readonly wh: 'sq18' | 'sq20';
+  readonly purpose: 'home' | 'external' | 'next' | 'internal' | 'prev';
+  readonly background: 'generic' | 'pie' | 'moment' | 'nuomi';
   readonly gotoText: string;
 } & typeof defaultProps;
 

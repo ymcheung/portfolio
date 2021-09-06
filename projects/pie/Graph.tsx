@@ -72,7 +72,7 @@ const ImgIndicator = styled('img', {
         height: '16px'
       },
       finish: {
-        size: '16px'
+        size: '$16'
       }
     },
     graph: {
