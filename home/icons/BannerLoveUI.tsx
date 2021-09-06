@@ -23,10 +23,10 @@ const Background = styled('rect', {
   variants: {
     sq: {
       60: {
-        size: '60px'
+        size: '$60'
       },
       80: {
-        size: '80px'
+        size: '$80'
       }
     },
     filling: {

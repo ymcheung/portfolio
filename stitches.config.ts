@@ -1,6 +1,7 @@
-import { createCss } from '@stitches/react'
+import type * as Stitches from '@stitches/react';
+import { createStitches } from '@stitches/react';
 
-export const { css, styled, global, theme, keyframes, getCssString } = createCss({
+export const { css, styled, globalCss, createTheme, keyframes, getCssText } = createStitches({
   theme: {
     colors: {
       laurel: '162,57%,62%',
@@ -77,6 +78,8 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
       navNuomiIconBg:   '$shade1500'
     },
     space: {
+      auto: 'auto',
+      0: '0',
       4: '4px',
       8: '8px',
       12: '12px',
@@ -86,9 +89,17 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
       24: '24px',
     },
     sizes: {
+      16: '16px',
       18: '18px',
+      20: '20px',
       24: '24px',
-      48: '48px'
+      28: '28px',
+      36: '36px',
+      48: '48px',
+      52: '52px',
+      60: '60px',
+      80: '80px',
+      96: '96px'
     },
     fontSizes: {
       14: '1.4rem',
@@ -110,27 +121,27 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
     }
   },
   utils: {
-    marginX: (config) => (value) => ({
+    marginX: (value: Stitches.ScaleValue<'space'>) => ({
       marginLeft: value,
       marginRight: value
     }),
-    marginY: (config) => (value) => ({
+    marginY: (value: Stitches.ScaleValue<'space'>) => ({
       marginTop: value,
       marginBottom: value
     }),
-    paddingX: (config) => (value) => ({
+    paddingX: (value: Stitches.ScaleValue<'space'>) => ({
       paddingLeft: value,
       paddingRight: value
     }),
-    paddingY: (config) => (value) => ({
+    paddingY: (value: Stitches.ScaleValue<'space'>) => ({
       paddingTop: value,
       paddingBottom: value
     }),
-    size: (config) => (value) => ({
+    size: (value: Stitches.ScaleValue<'sizes'>) => ({
       width: value,
       height: value
     }),
-    fullAbsolute: (config) => () => ({
+    fullAbsolute: () => ({
       position: 'absolute',
       top: 0,
       right: 0,
@@ -146,7 +157,7 @@ export const { css, styled, global, theme, keyframes, getCssString } = createCss
   },
 })
 
-export const dark = theme({
+export const dark = createTheme({
   colors: {
     shade0:    '162,2%,99%',
     shade100:  '162,2%,92%',

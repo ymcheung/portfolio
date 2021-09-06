@@ -2,7 +2,7 @@ import { styled } from 'stitches.config';
 import { Svg } from './Svg';
 
 const Icon = styled(Svg, {
-  size: '52px'
+  size: '$52'
 });
 
 const Background = styled('path', {

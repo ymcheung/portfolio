@@ -5,7 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from 'constant';
 import HeadMeta from '@utils/HeadMeta';
 
-import { styled, global } from 'stitches.config';
+import { styled, globalCss } from 'stitches.config';
 
 import NameHeader from '@home/NameHeader';
 import Projects from '@home/Projects';
@@ -13,7 +13,7 @@ import Activity from '@home/Activity';
 import ExternalLinks from '@home/ExternalLinks';
 import Footer from '@components/Footer';
 
-const pageBody = global({
+const pageBody = globalCss({
   'body[data-body-style=home]': {
     minHeight: '100vh',
     backgroundColor: 'hsl($shade1600)',
