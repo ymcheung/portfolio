@@ -6,6 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '@utils/HeadMeta';
 import { webPage } from '@utils/schema/webPage';
 
+import { TITLE_AFFIX } from 'constant';
 import { globalCss } from 'stitches.config';
 
 import { Container } from '@components/layout';
@@ -55,7 +56,7 @@ export default function ProjectIntersection() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       </Head>
       <HeadMeta
-        title={pageInfo.name}
+        title={`${pageInfo.name}${TITLE_AFFIX}`}
         description={pageInfo.description}
         ogCover="/project/intersection/og-cover.jpg"
         canonical={router.pathname}
