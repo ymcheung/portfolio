@@ -6,6 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '@utils/HeadMeta';
 import { webPage } from '@utils/schema/webPage';
 
+import { TITLE_AFFIX } from 'constant';
 import { globalCss } from 'stitches.config';
 
 import { Container } from '@components/layout';
@@ -56,7 +57,7 @@ export default function ProjectMoment() {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
       </Head>
       <HeadMeta
-        title={pageInfo.name}
+        title={`${pageInfo.name}${TITLE_AFFIX}`}
         description={pageInfo.description}
         ogCover="/project/moment/og-cover.jpg"
         canonical={router.pathname}
