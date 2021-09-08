@@ -10,7 +10,7 @@ export default function Meta() {
       </MetaItem>
       <MetaItem>
         <MetaItemTitle project="intersection">Link</MetaItemTitle>
-        <Link href="http://thecosignstudio.github.io/process" passHref>
+        <Link href="https://thecosignstudio.github.io/process" passHref>
           <MetaItemValue as="a" data-splitbee-event="Design Process: Meta Link" target="_blank" rel="noopener">專業人士的設計流程</MetaItemValue>
         </Link>
       </MetaItem>

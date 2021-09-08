@@ -36,10 +36,10 @@ function ToggleScheme() {
   };
 
   const isDarkTheme = resolvedTheme === 'dark';
-  const toogleSchemeMessage = isDarkTheme ? '亮色' : '暗色';
+  const toggleSchemeMessage = isDarkTheme ? '亮色' : '暗色';
 
   return(
-    <ToggleDark type="button" onClick={toggleTheme} aria-label={`切換 Scheme：${toogleSchemeMessage}`} data-splitbee-event="切換 Scheme">
+    <ToggleDark type="button" onClick={toggleTheme} aria-label={`切換 Scheme：${toggleSchemeMessage}`} data-splitbee-event="切換 Scheme">
       {!isDarkTheme &&
         <IconDark />
       }

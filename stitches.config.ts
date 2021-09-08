@@ -44,8 +44,8 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
 
       homeSectionTitle: '$shade600',
 
-      homeIconPieBackground: '$shade1500',
-      homeIconPieForeground: '$shade1000',
+      iconPieBackground: '$shade1500',
+      iconPieForeground: '$shade1000',
       homeIconMtBackground: '$shade1500',
       homeIconMtForeground: '$shade1000',
 
@@ -173,8 +173,8 @@ export const dark = createTheme({
 
     homeSectionTitle: '$laurel',
 
-    homeIconPieBackground: '$pie700',
-    homeIconPieForeground: '$shade1500',
+    iconPieBackground: '$pie700',
+    iconPieForeground: '$shade1500',
     homeIconMtBackground: '$mtMidnight300',
     homeIconMtForeground: '$mtDawn',
 
