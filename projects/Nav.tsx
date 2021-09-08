@@ -47,6 +47,8 @@ const NavItem = styled('li', {
   }
 });
 
+IconArrow.toString = () => '.iconArrow';
+
 const NavItemLink = styled('a', {
   display: 'inline-block',
   minWidth: '60px',
@@ -54,7 +56,39 @@ const NavItemLink = styled('a', {
   fontFamily: '$default',
   fontSize: '$14',
   lineHeight: '28px',
-  textDecoration: 'none'
+  textDecoration: 'none',
+
+  '&:hover': {
+    [`& ${IconArrow}`]: {
+      transition: 'transform 0.2s ease-out'
+    }
+  },
+
+  variants: {
+    purpose: {
+      prev: {
+        '&:hover': {
+          [`& ${IconArrow}`]: {
+            transform: 'translateX(-4px)',
+          }
+        }
+      },
+      next: {
+        '&:hover': {
+          [`& ${IconArrow}`]: {
+            transform: 'translateX(4px)',
+          }
+        }
+      },
+      home: {
+        '&:hover': {
+          [`& ${IconArrow}`]: {
+            transform: 'translate(-3px, -5px)',
+          }
+        }
+      }
+    }
+  }
 });
 
 interface NavProps {
@@ -73,7 +107,7 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps)
         {hasPrev &&
           <NavItem position="prev">
             <Link href={`/${prevSlug}`} passHref>
-              <NavItemLink>
+              <NavItemLink purpose={{ '@mHover': 'prev' }}>
                 <IconArrow purpose="prev" gotoText={hasPrev} background={prevBg} />&nbsp;
                 {hasPrev}
               </NavItemLink>
@@ -83,7 +117,7 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps)
         {hasNext &&
           <NavItem position="next">
             <Link href={`/${nextSlug}`} passHref>
-              <NavItemLink>
+              <NavItemLink purpose={{ '@mHover': 'next' }}>
                 {hasNext}
                 &nbsp;<IconArrow purpose="next" gotoText={hasNext} background={nextBg}  />
               </NavItemLink>
@@ -92,7 +126,7 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps)
         }
         <NavItem position="home">
           <Link href="/" passHref>
-            <NavItemLink>
+            <NavItemLink purpose={{ '@mHover': 'home' }}>
               <IconArrow background="generic" />&nbsp;
               Home
             </NavItemLink>
