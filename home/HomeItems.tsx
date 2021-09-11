@@ -1,5 +1,4 @@
 import { styled } from 'stitches.config';
-import { Verb } from '@components/headings';
 
 export const HomeItemsLayout = styled('ul', {
   display: 'grid',
@@ -9,7 +8,7 @@ export const HomeItemsLayout = styled('ul', {
   variants: {
     responsive: {
       mobile: {
-        rowGap: '$18'
+        rowGap: '14px'
       },
       tablet: {
         grid: 'auto / repeat(3, 1fr)',
@@ -28,7 +27,11 @@ export const HomeItemLink = styled('a', {
       mobile: {
         grid: 'auto / 52px 1fr',
         alignItems: 'center',
-        columnGap: '$16'
+        columnGap: '$16',
+        margin: '0 -10px',
+        padding: '10px',
+        backgroundColor: 'hsla($shade1500, 0.5)',
+        borderRadius: '12px'
       },
       tablet: {
         grid: 'auto / 100%',
@@ -48,22 +51,6 @@ export const HomeItemLink = styled('a', {
         grid: `"title" auto
                "description" auto / 100%`,
         columnGap: 'unset'
-      }
-    },
-    hover: {
-      pie: {
-        '&:hover': {
-          [`& ${Verb}`]: {
-            color: 'hsl($pie700)'
-          }
-        }
-      },
-      moment: {
-        '&:hover': {
-          [`& ${Verb}`]: {
-            color: 'hsl($mtDawn)'
-          }
-        }
       }
     }
   }

@@ -38,6 +38,7 @@ export const HeadingLayout = styled('div', {
 export const Heading = styled('h2', {
   marginTop: 0,
   fontFamily: '$default',
+  lineHeight: 'calc(0.5rem + 1em)',
 
   variants: {
     nametag: {
@@ -71,15 +72,14 @@ export const Heading = styled('h2', {
         display: 'inline-block',
         marginBottom: 0,
         color: 'hsl($shade0)',
-        fontSize: '$18',
+        fontSize: '$16',
         fontWeight: 600,
       },
       itemName: {
         marginBottom: 0,
         color: 'hsl($shade300)',
         fontSize: '$24',
-        fontWeight: 600,
-        lineHeight: '32px'
+        fontWeight: 600
       }
     },
     isitalic: {
@@ -90,21 +90,6 @@ export const Heading = styled('h2', {
     ownmargin: {
       true: {
         marginBottom: '$16'
-      }
-    }
-  }
-});
-
-export const Verb = styled('span', {
-  display: 'inline-block',
-  position: 'relative',
-  lineHeight: '24px',
-  transition: 'color 0.15s ease-out',
-
-  variants: {
-    foreng: {
-      true: {
-        marginRight: '3px',
       }
     }
   }
