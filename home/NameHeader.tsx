@@ -51,7 +51,7 @@ const ToolsList = styled('ul', {
   columnGap: '32px',
   position: 'relative',
   zIndex: 1,
-  margin: 0,
+  margin: '0 0 $12',
   padding: 0,
 
   variants: {

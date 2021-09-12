@@ -28,7 +28,7 @@ const Header = styled('header', {
   variants: {
     responsive: {
       mobile: {
-        minHeight: '300px',
+        minHeight: '272px',
         paddingTop: '48px'
       },
       tablet: {

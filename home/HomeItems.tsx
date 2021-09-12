@@ -12,7 +12,7 @@ export const HomeItemsLayout = styled('ul', {
       },
       tablet: {
         grid: 'auto / repeat(3, 1fr)',
-        columnGap: '$16',
+        columnGap: '32px',
       }
     }
   }
@@ -25,19 +25,14 @@ export const HomeItemLink = styled('a', {
   variants: {
     asproject: {
       mobile: {
-        grid: 'auto / 52px 1fr',
+        grid: `auto
+               auto / 52px 1fr`,
         alignItems: 'center',
-        columnGap: '$16',
+        gap: '$16',
         margin: '0 -10px',
         padding: '10px',
         backgroundColor: 'hsla($shade1500, 0.5)',
         borderRadius: '12px'
-      },
-      tablet: {
-        grid: 'auto / 100%',
-        alignItems: 'unset',
-        rowGap: '$8',
-        columnGap: 'unset',
       }
     },
     asactivity: {

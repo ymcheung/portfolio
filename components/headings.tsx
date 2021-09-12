@@ -45,7 +45,7 @@ export const Heading = styled('h2', {
       home: {
         position: 'relative',
         zIndex: 1,
-        marginBottom: 0,
+        marginBottom: '4px',
         marginLeft: '-2px',
         color: 'hsl($shade0)',
         fontSize: '3.2rem',
