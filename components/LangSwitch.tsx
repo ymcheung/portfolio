@@ -10,7 +10,6 @@ const Switch = styled('a', {
   paddingX: '$8',
   background: 'hsl($shade1500)',
   borderRadius: '4px',
-  transition: 'background-color $easeOut',
 
   variants: {
     position: {
@@ -22,16 +21,21 @@ const Switch = styled('a', {
         margin: '0 0 12px 0',
         paddingY: '$4'
       }
-    }
-  },
+    },
+    responsive: {
+      hover: {
+        transition: 'background-color $easeOut',
 
-  '&:active, &:hover': {
-    background: 'hsl($shade1400)',
-    transition: 'background-color $easeIn',
+        '&:active, &:hover': {
+          background: 'hsl($shade1400)',
+          transition: 'background-color $easeOut',
 
-    '& circle': {
-      fill: 'hsl($shade1200)',
-      transition: 'fill $easeIn'
+          '& circle': {
+            fill: 'hsl($shade1200)',
+            transition: 'fill $easeIn'
+          }
+        }
+      }
     }
   }
 });
@@ -58,7 +62,7 @@ function LangSwitch({ position }: LangSwitchProps) {
 
   return(
     <Link href={router.pathname} locale={router.locale === 'en' ? 'zh-Hant-TW' : 'en'} passHref>
-      <Switch position={position}>
+      <Switch position={position} responsive={{ '@mHover': 'hover' }}>
         <IconLangSwitch />
         <LangName>{langName}</LangName>
       </Switch>

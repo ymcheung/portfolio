@@ -116,8 +116,8 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       mono: '\'Inconsolata\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', monospace'
     },
     transitions: {
-      easeIn: '0.16s ease-in',
-      easeOut: '0.16s ease-out'
+      easeIn: '0.2s ease-in',
+      easeOut: '0.12s ease-out'
     }
   },
   utils: {

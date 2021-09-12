@@ -36,11 +36,11 @@ export const HomeItemLink = styled('a', {
         borderRadius: '12px'
       },
       hover: {
-        transition: 'border-color 0.2s ease-in',
+        transition: 'border-color $easeIn',
 
         '&:hover': {
           borderColor: 'hsl($shade1400)',
-          transition: 'border-color 0.2s ease-out'
+          transition: 'border-color $easeOut'
         }
       }
     },
