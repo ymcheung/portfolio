@@ -36,7 +36,7 @@ const IconItem = styled(ListItem, {
         minWidth: '$24',
         color: 'hsl($shade800)',
         fontFamily: 'sans-serif',
-        fontSize: '$16',
+        fontSize: '$14',
         lineHeight: '24px',
         textAlign: 'center'
       }
@@ -62,7 +62,7 @@ export default function Projects() {
       <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <ListItem nomark>
           <Link href="/pie-clockin" passHref>
-            <HomeItemLink asproject={{ '@initial': 'mobile' }}>
+            <HomeItemLink asproject={{ '@initial': 'mobile', '@mHover': 'hover' }}>
               <IconPie />
               <Heading position="homeItemName" dangerouslySetInnerHTML={{__html: t('project.pie.title', { redesign: t('verb.redesign') })}} />
               <IconsList>
@@ -76,7 +76,7 @@ export default function Projects() {
         </ListItem>
         <ListItem nomark>
           <Link href="/moment" passHref>
-            <HomeItemLink asproject={{ '@initial': 'mobile' }}>
+            <HomeItemLink asproject={{ '@initial': 'mobile', '@mHover': 'hover' }}>
               <IconMoment />
               <Heading position="homeItemName" dangerouslySetInnerHTML={{__html: t('project.moment.title', { explore: t('verb.explore') })}} />
               <IconsList>

@@ -22,13 +22,12 @@ const pageBody = globalCss({
 
 const Header = styled('header', {
   position: 'relative',
-  marginBottom: '$12',
+  marginBottom: '32px',
   borderBottom: '2px solid hsl($shade1400)',
 
   variants: {
     responsive: {
       mobile: {
-        minHeight: '272px',
         paddingTop: '48px'
       },
       tablet: {

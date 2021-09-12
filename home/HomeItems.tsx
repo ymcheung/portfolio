@@ -28,11 +28,20 @@ export const HomeItemLink = styled('a', {
         grid: `auto
                auto / 52px 1fr`,
         alignItems: 'center',
-        gap: '$16',
+        gap: '$16 $8',
         margin: '0 -10px',
-        padding: '10px',
+        padding: '8px',
         backgroundColor: 'hsla($shade1500, 0.5)',
+        border: '2px solid transparent',
         borderRadius: '12px'
+      },
+      hover: {
+        transition: 'border-color 0.2s ease-in',
+
+        '&:hover': {
+          borderColor: 'hsl($shade1400)',
+          transition: 'border-color 0.2s ease-out'
+        }
       }
     },
     asactivity: {

@@ -15,7 +15,7 @@ import IconA11y from './icons/IconA11y';
 
 const DescriptionList = styled('ul', {
   display: 'grid',
-  rowGap: '$12',
+  rowGap: '$8',
   position: 'relative',
   zIndex: 1,
   paddingLeft: '28px',
@@ -36,12 +36,13 @@ const DescriptionIcon = styled('span', {
   display: 'inline-block',
   width: '28px',
   marginLeft: '-28px',
-  fontSize: '$18'
+  fontSize: '$18',
+  lineHeight: '21px'
 });
 
 const DescriptionText = styled('span', {
   color: 'hsl($shade600)',
-  fontSize: '$18',
+  fontSize: '$16',
   fontStyle: 'italic'
 });
 

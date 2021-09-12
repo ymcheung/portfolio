@@ -21,7 +21,7 @@ export const Container = styled('div', {
         marginBottom: '$8'
       },
       hasSibling: {
-        marginBottom: '$24'
+        marginBottom: '48px'
       },
       isGroupEnd: {
         marginBottom: '64px'
