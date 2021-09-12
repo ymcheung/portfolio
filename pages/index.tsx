@@ -22,13 +22,12 @@ const pageBody = globalCss({
 
 const Header = styled('header', {
   position: 'relative',
-  marginBottom: '$12',
+  marginBottom: '32px',
   borderBottom: '2px solid hsl($shade1400)',
 
   variants: {
     responsive: {
       mobile: {
-        minHeight: '300px',
         paddingTop: '48px'
       },
       tablet: {
@@ -53,7 +52,7 @@ export default function Home() {
       name: TITLE,
       description: DESCRIPTION,
       datePublished: '2016-04-16',
-      dateModified: '2021-08-20',
+      dateModified: '2021-09-11',
       publisher: {
         '@type': 'ProfilePage',
         name: AUTHOR,

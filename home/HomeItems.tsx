@@ -1,5 +1,4 @@
 import { styled } from 'stitches.config';
-import { Verb } from '@components/headings';
 
 export const HomeItemsLayout = styled('ul', {
   display: 'grid',
@@ -9,11 +8,11 @@ export const HomeItemsLayout = styled('ul', {
   variants: {
     responsive: {
       mobile: {
-        rowGap: '$18'
+        rowGap: '14px'
       },
       tablet: {
         grid: 'auto / repeat(3, 1fr)',
-        columnGap: '$16',
+        columnGap: '32px',
       }
     }
   }
@@ -26,15 +25,23 @@ export const HomeItemLink = styled('a', {
   variants: {
     asproject: {
       mobile: {
-        grid: 'auto / 52px 1fr',
+        grid: `auto
+               auto / 52px 1fr`,
         alignItems: 'center',
-        columnGap: '$16'
+        gap: '$16 $8',
+        margin: '0 -10px',
+        padding: '8px',
+        backgroundColor: 'hsla($shade1500, 0.5)',
+        border: '2px solid transparent',
+        borderRadius: '12px'
       },
-      tablet: {
-        grid: 'auto / 100%',
-        alignItems: 'unset',
-        rowGap: '$8',
-        columnGap: 'unset',
+      hover: {
+        transition: 'border-color $easeIn',
+
+        '&:hover': {
+          borderColor: 'hsl($shade1400)',
+          transition: 'border-color $easeOut'
+        }
       }
     },
     asactivity: {
@@ -48,22 +55,6 @@ export const HomeItemLink = styled('a', {
         grid: `"title" auto
                "description" auto / 100%`,
         columnGap: 'unset'
-      }
-    },
-    hover: {
-      pie: {
-        '&:hover': {
-          [`& ${Verb}`]: {
-            color: 'hsl($pie700)'
-          }
-        }
-      },
-      moment: {
-        '&:hover': {
-          [`& ${Verb}`]: {
-            color: 'hsl($mtDawn)'
-          }
-        }
       }
     }
   }

@@ -44,10 +44,10 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
 
       homeSectionTitle: '$shade600',
 
-      iconPieBackground: '$shade1500',
-      iconPieForeground: '$shade1000',
-      homeIconMtBackground: '$shade1500',
-      homeIconMtForeground: '$shade1000',
+      iconPieBackground: '$shade800',
+      iconPieForeground: '$shade1600',
+      iconMtBackground: '$shade800',
+      iconMtForeground: '$shade1600',
 
       activityHyphen: '$shade1200',
 
@@ -116,8 +116,8 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       mono: '\'Inconsolata\', -apple-system, BlinkMacSystemFont, \'Segoe UI\', monospace'
     },
     transitions: {
-      easeIn: '0.16s ease-in',
-      easeOut: '0.16s ease-out'
+      easeIn: '0.2s ease-in',
+      easeOut: '0.12s ease-out'
     }
   },
   utils: {
@@ -175,8 +175,8 @@ export const dark = createTheme({
 
     iconPieBackground: '$pie700',
     iconPieForeground: '$shade1500',
-    homeIconMtBackground: '$mtMidnight300',
-    homeIconMtForeground: '$mtDawn',
+    iconMtBackground: '$mtMidnight300',
+    iconMtForeground: '$mtDawn',
 
     activityHyphen: '$shade1000',
 

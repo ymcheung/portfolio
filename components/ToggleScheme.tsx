@@ -21,7 +21,6 @@ const ToggleDark = styled('button', {
 });
 
 function ToggleScheme() {
-
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
