@@ -35,6 +35,7 @@ export default function Activity() {
               <IconHyphen hideintablet={{ '@m768': true }} />
               <Heading position="homeItemName">
                 {t('activity.process.title', { translate: t('verb.translate')})}
+                &nbsp;
                 <IconArrow wh="sq20" purpose="next" background="generic" gotoText="Go" />
               </Heading>
               <HomeItemDescription dangerouslySetInnerHTML={{__html: t('activity.process.description', { retrospect: t('verb.retrospect') })}} />
