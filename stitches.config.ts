@@ -153,7 +153,8 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
     m768: '(min-width: 768px)',
     m992: '(min-width: 992px)',
     m1200: '(min-width: 1200px)',
-    mHover: '(hover: hover) and (pointer: fine)'
+    mHover: '(hover: hover) and (pointer: fine)',
+    mReduced: '(prefers-reduced-motion)'
   },
 })
 

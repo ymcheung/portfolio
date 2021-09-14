@@ -17,7 +17,7 @@ const DescriptionList = styled('ul', {
   display: 'grid',
   rowGap: '$8',
   position: 'relative',
-  zIndex: 1,
+  zIndex: 2,
   paddingLeft: '28px',
 
   variants: {
@@ -51,7 +51,7 @@ const ToolsList = styled('ul', {
   grid: 'auto / repeat(4, auto)',
   columnGap: '32px',
   position: 'relative',
-  zIndex: 1,
+  zIndex: 2,
   margin: '0 0 $12',
   padding: 0,
 

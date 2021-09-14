@@ -5,7 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from 'constant';
 import HeadMeta from '@utils/HeadMeta';
 
-import { styled, globalCss } from 'stitches.config';
+import { styled, globalCss, keyframes } from 'stitches.config';
 
 import NameHeader from '@home/NameHeader';
 import Projects from '@home/Projects';
@@ -32,6 +32,58 @@ const Header = styled('header', {
       },
       tablet: {
         minHeight: '225px'
+      }
+    }
+  }
+});
+
+const floatingCans = keyframes({
+  '0%': { backgroundPositionY: '0' },
+  '100%': { backgroundPositionY: '-360px' },
+});
+
+const Cans = styled('div', {
+  height: '140px',
+  position: 'absolute',
+  right: 0,
+  bottom: 0,
+  left: 0,
+  zIndex: 1,
+  background: 'url(/home/cans.svg) 0 0 / 120px 120px transparent',
+  animation: `${floatingCans} 36s linear infinite`,
+
+  '&::after': {
+    height: '140px',
+    content: '',
+    position: 'absolute',
+    right: 0,
+    bottom: 0,
+    left: 0,
+    zIndex: 0,
+    backgroundImage: `linear-gradient(
+      to top,
+      hsla($shade1600, 0) 0%,
+      hsla($shade1600, 0.013) 8.1%,
+      hsla($shade1600, 0.049) 15.5%,
+      hsla($shade1600, 0.104) 22.5%,
+      hsla($shade1600, 0.175) 29%,
+      hsla($shade1600, 0.259) 35.3%,
+      hsla($shade1600, 0.352) 41.2%,
+      hsla($shade1600, 0.45) 47.1%,
+      hsla($shade1600, 0.55) 52.9%,
+      hsla($shade1600, 0.648) 58.8%,
+      hsla($shade1600, 0.741) 64.7%,
+      hsla($shade1600, 0.825) 71%,
+      hsla($shade1600, 0.896) 77.5%,
+      hsla($shade1600, 0.951) 84.5%,
+      hsla($shade1600, 0.987) 91.9%,
+      hsl($shade1600) 100%)`
+  },
+
+  variants: {
+    animation: {
+      reduced: {
+        animation: 'none'
       }
     }
   }
@@ -101,6 +153,7 @@ export default function Home() {
       <HeadMeta />
       <Header responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
         <NameHeader />
+        <Cans animation={{ '@mReduced': 'reduced' }} />
       </Header>
       <Projects />
       <Activity />
