@@ -29,7 +29,7 @@ function ExternalLinks() {
         </IconLink>
       </Link>
       <Link href="https://dev.ymcheung.tw" passHref>
-        <IconLink data-splitbee-event="External Link: Love UI" target="_blank" rel="noopener">
+        <IconLink data-splitbee-event="External Link: 喜歡的 UI 就要親手做出來" target="_blank" rel="noopener">
           <BannerLoveUI />
         </IconLink>
       </Link>

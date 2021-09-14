@@ -2,7 +2,8 @@ import { styled } from 'stitches.config';
 import { Svg } from './Svg';
 
 const Icon = styled(Svg, {
-  size: '$52'
+  size: '$52',
+  marginLeft: '-2px'
 });
 
 const Background = styled('circle', {
