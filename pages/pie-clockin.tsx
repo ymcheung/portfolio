@@ -33,7 +33,7 @@ export default function ProjectPie() {
     name: 'Redesign UI of a Clock-In App',
     description: 'A side project exploring fluent UI design.',
     datePublished: '2020-08-29',
-    dateModified: '2021-08-23'
+    dateModified: '2021-09-18'
   };
 
   const router = useRouter();
