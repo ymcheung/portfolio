@@ -56,6 +56,13 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       schemeIconDarkBg: '$shade1500',
       schemeIconLightBg: '$shade300',
 
+      mockupDesktopScreenMono: '$shade100',
+      mockupDesktopScreenBorderMono: '$shade600',
+      mockupDesktopKeyboardSideMono: '$shade300',
+      mockupDesktopConcaveDuo: '$shade1200',
+      mockupDesktopConcaveMono: '$shade100',
+      mockupDesktopBrowserTabMono: '$shade300',
+
       backgroundPie: '$shade1600',
       metaTitlePie: '$pie400',
 
@@ -185,6 +192,13 @@ export const dark = createTheme({
     footerSeparate: '$shade1200',
     schemeIconDarkBg: '$shade1500',
     schemeIconLightBg: '$shade1400',
+
+    mockupDesktopScreenMono: '$shade1500',
+    mockupDesktopScreenBorderMono: '$shade1200',
+    mockupDesktopKeyboardSideMono: '$shade1400',
+    mockupDesktopConcaveDuo: '$shade1500',
+    mockupDesktopConcaveMono: '$shade1500',
+    mockupDesktopBrowserTabMono: '$shade1400',
 
     backgroundPie: '$pie0',
     metaTitlePie: '$pie800',
