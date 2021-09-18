@@ -40,10 +40,12 @@ export const Device = styled('figure', {
         }
       },
       tablet: {
-        width: 'auto'
+        width: 'auto',
+        minHeight: 'unset',
+        textAlign: 'center'
       }
     },
-    type: {
+    model: {
       mobileDual: {
         width: '640px',
         height: '524px',
@@ -61,6 +63,7 @@ export const Device = styled('figure', {
       },
       tabletMacbook: {
         '&::before': {
+          content: 'unset',
           backgroundImage: 'none'
         }
       }

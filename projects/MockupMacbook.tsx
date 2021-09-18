@@ -3,8 +3,18 @@ import { styled } from 'stitches.config';
 import { Svg } from '@elements/Svg';
 
 const Mockup = styled(Svg, {
-  width: '752px',
-  height: '410px'
+  variants: {
+    responsive: {
+      tablet: {
+        width: '720px',
+        height: '393px'
+      },
+      desktop: {
+        width: '1000px',
+        height: '546px'
+      }
+    }
+  }
 });
 
 const Part = styled('path', {
@@ -34,7 +44,7 @@ const Part = styled('path', {
         fill: 'hsl($mockupDesktopConcaveDuo)'
       },
       mono: {
-        fill: 'hsl($mockupDesktopConcaveMono)'
+        fill: 'hsla($mockupDesktopConcaveMono, 0.5)'
       }
     },
     browsertab: {
@@ -56,12 +66,13 @@ const Image = styled('image', {
 interface MockupProps {
   readonly image: string;
   readonly theme: 'duo' | 'mono';
+  readonly description: string;
 }
 
-export default function MockupMacbook({ image, theme} : MockupProps ) {
+export default function MockupMacbook({ image, theme, description } : MockupProps ) {
   return(
-    <Mockup viewBox="0 0 1000 546" xmlns="http://www.w3.org/2000/svg">
-      <title>MacBook Mockup</title>
+    <Mockup viewBox="0 0 1000 546" responsive={{ '@m768': 'tablet', '@m1200': 'desktop' }} xmlns="http://www.w3.org/2000/svg">
+      <title>{description}</title>
       <Part screen={theme} d="m78 8.75759v510.48441c0 3.737 3.0275 6.758 6.7677 6.758h838.4643c3.741 0 6.768-3.023 6.768-6.758v-510.48441c0-3.73685-3.028-6.75759-6.768-6.75759h-838.4643c-3.7409 0-6.7677 3.02302-6.7677 6.75759z"/>
       <Part keyboardside={theme} d="m4 534v-14c0-2.523 1.50908-4 4-4h984c2.488 0 4 1.47 4 4v14c0 12 0 12-32 12h-928c-32 0-32 0-32-12z"/>
       <Part concave={theme} d="m426 516h148c0 14-17.077 14-18.215 14-33.187 0-67.238 0-111.57 0-1.138 0-18.215 0-18.215-14z"/>

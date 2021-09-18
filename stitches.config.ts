@@ -193,7 +193,7 @@ export const dark = createTheme({
     schemeIconDarkBg: '$shade1500',
     schemeIconLightBg: '$shade1400',
 
-    mockupDesktopScreenMono: '$shade1500',
+    mockupDesktopScreenMono: '$shade1600',
     mockupDesktopScreenBorderMono: '$shade1200',
     mockupDesktopKeyboardSideMono: '$shade1400',
     mockupDesktopConcaveDuo: '$shade1500',
