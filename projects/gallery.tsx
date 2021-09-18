@@ -31,7 +31,7 @@ export const GalleryItem = styled(ListItem, {
     fullAbsolute: '',
     zIndex: 0,
     content: `''`,
-    backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade600, 0.5) 50%, transparent 92%)'
+    backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.25) 50%, transparent 92%)'
   },
 
   variants: {
