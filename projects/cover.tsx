@@ -23,7 +23,7 @@ export const Device = styled('figure', {
   
   '&::before': {
     zIndex: 0,
-    content: `''`,
+    content: '',
     backgroundRepeat: 'no-repeat'
   },
 
@@ -38,9 +38,14 @@ export const Device = styled('figure', {
           fullAbsolute: '',
           backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.25) 50%, transparent 92%)'
         }
+      },
+      tablet: {
+        width: 'auto',
+        minHeight: 'unset',
+        textAlign: 'center'
       }
     },
-    device: {
+    model: {
       mobileDual: {
         width: '640px',
         height: '524px',
@@ -57,19 +62,10 @@ export const Device = styled('figure', {
         }
       },
       tabletMacbook: {
-        width: '720px',
-        height: '394px',
-        padding: '43px 72px 0',
-        backgroundSize: 'cover',
-
         '&::before': {
-          backgroundImage: `url('/projects/mockupMacbook.svg')`,
+          content: 'unset',
+          backgroundImage: 'none'
         }
-      },
-      desktopMacbook: {
-        width: '960px',
-        height: '524px',
-        padding: '55px 92px 0'
       }
     }
   }

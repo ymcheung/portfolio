@@ -43,20 +43,20 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retrospect.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('retrospect.description')}} indent />
           <IconList>
-            <IconListItem nomark="true">
+            <IconListItem nomark>
               <div><IconLock /></div>
               <ContentTitle as="h3" purpose="iconListItem" dangerouslySetInnerHTML={{__html: t('retrospect.https.title')}} />
-              <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.https.description')}} />
+              <IconListDescription sectionend dangerouslySetInnerHTML={{__html: t('retrospect.https.description')}} />
             </IconListItem>
-            <IconListItem nomark="true">
+            <IconListItem nomark>
               <div><IconStructured /></div>
               <ContentTitle as="h3" purpose="iconListItem" dangerouslySetInnerHTML={{__html: t('retrospect.structured.title')}} />
-              <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.structured.description')}} />
+              <IconListDescription sectionend dangerouslySetInnerHTML={{__html: t('retrospect.structured.description')}} />
             </IconListItem>
-            <IconListItem nomark="true">
+            <IconListItem nomark>
               <div><IconAccessibility /></div>
               <ContentTitle as="h3" purpose="iconListItem" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.title')}} />
-              <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.description')}} />
+              <IconListDescription sectionend dangerouslySetInnerHTML={{__html: t('retrospect.accessibility.description')}} />
             </IconListItem>
           </IconList>
         </Section>

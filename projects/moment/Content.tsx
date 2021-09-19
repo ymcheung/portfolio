@@ -122,7 +122,7 @@ export default function Content() {
         <Paragraph dangerouslySetInnerHTML={{__html: t('how.description')}} indent />
         <IconList>
           {t<string, howProps>('how.hows', { returnObjects: true }).map(({ keyword, name }: howProps, index: number) => (
-            <IconListItem nomark="true" vertical="middle" key={`how-${index}`}>
+            <IconListItem nomark vertical="middle" key={`how-${index}`}>
               <div>
                 <IconSearch />
               </div>
@@ -137,7 +137,7 @@ export default function Content() {
         <Paragraph dangerouslySetInnerHTML={{__html: t('obstacle.description')}} indent sectionend />
         <ContentList>
           {t<string, itemProps>('obstacle.execuses', { returnObjects: true }).map(({ name }: itemProps, index: number) => (
-            <ContentListItem dangerouslySetInnerHTML={{__html: name}} key={`execuses-${index}`} square="true" />
+            <ContentListItem dangerouslySetInnerHTML={{__html: name}} key={`execuses-${index}`} square />
           ))}
         </ContentList>
         <Paragraph dangerouslySetInnerHTML={{__html: t('obstacle.conclusion')}} indent sectionend />
@@ -180,7 +180,7 @@ export default function Content() {
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('measure.title')}} />
         <ContentList>
           {t<string, itemProps>('measure.methods', { returnObjects: true }).map(({ name }: itemProps, index: number) => (
-            <ContentListItem dangerouslySetInnerHTML={{__html: name}} key={`execuses-${index}`} square="true" />
+            <ContentListItem dangerouslySetInnerHTML={{__html: name}} key={`execuses-${index}`} square />
           ))}
         </ContentList>
       </Section>

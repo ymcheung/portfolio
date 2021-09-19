@@ -3,6 +3,7 @@ import { styled } from 'stitches.config';
 import { screenMobile, screenTablet } from '@utils/screens';
 
 import { Wrap, Device } from '@projects/cover';
+import MockupMacbook from '@projects/MockupMacbook';
 
 const Screenshot = styled(Image, {
   width: '100%',
@@ -21,12 +22,12 @@ const Screenshot = styled(Image, {
 export default function Cover() {
   return(
     <Wrap project="nuomi">
-      <Device responsive={{ '@initial': 'mobile' }} device={{ '@m768': 'tabletMacbook', '@m992': 'desktopMacbook' }}>
+      <Device responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} model={{ '@m768': 'tabletMacbook' }}>
         {screenMobile &&
           <Screenshot src="/projects/nuomi/cover-mobile.jpg" width={272} height={484} responsive="mobile" alt="Mobile Landing Page of Nuomi’s Portfolio" />
         }
         {screenTablet &&
-          <Screenshot src="/projects/nuomi/cover-desktop.jpg" width={1080} height={574} alt="Desktop Landing Page of Nuomi’s Portfolio" />
+          <MockupMacbook image="/projects/nuomi/cover-desktop.jpg" theme="mono" description="Desktop Landing Page of Nuomi’s Portfolio" />
         }
       </Device>
     </Wrap>

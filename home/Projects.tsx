@@ -54,7 +54,7 @@ export default function Projects() {
   const isEng = i18n.language === 'en';
 
   const { resolvedTheme } = useTheme();
-  const isLightTheme = resolvedTheme !== 'dark';
+  let isLightTheme = resolvedTheme !== 'dark';
 
   return(
     <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="hasSibling">

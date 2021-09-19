@@ -70,9 +70,9 @@ export default function Content() {
       <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('worth.title')}} />
         <FeatureList space={{ '@initial': 'mobile', '@m768': itemSpace }}>
-          <FeatureItem nomark="true" responsive={{ '@m768': 'tablet' }}>
+          <FeatureItem nomark responsive={{ '@m768': 'tablet' }}>
             <ContentTitle as="strong" featurednumber="large">
-              1.8
+              2.2
               <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
             </ContentTitle>
             <div>
@@ -87,12 +87,12 @@ export default function Content() {
         <IconList>
           <IconListItem prefixwidth="48" purpose="noTitle">
             <div><RetroIcon src="/projects/process/bubbleGit.svg" alt={t('retro.knowledge.alt')} /></div>
-            <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.knowledge.description')}} />
+            <IconListDescription sectionend dangerouslySetInnerHTML={{__html: t('retro.knowledge.description')}} />
           </IconListItem>
           <IconListItem prefixwidth="48" purpose="noTitle">
             <div><RetroIcon src="/projects/process/bubbleObstacle.svg" alt={t('retro.obstacle.alt')} /></div>
             <div>
-              <IconListDescription sectionend="true" dangerouslySetInnerHTML={{__html: t('retro.obstacle.description')}} />
+              <IconListDescription sectionend dangerouslySetInnerHTML={{__html: t('retro.obstacle.description')}} />
               <ParagraphPostmark dangerouslySetInnerHTML={{__html: t('retro.obstacle.by')}} />
             </div>
           </IconListItem>
