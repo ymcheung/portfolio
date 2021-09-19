@@ -41,7 +41,7 @@ const Part = styled('path', {
     },
     concave: {
       duo: {
-        fill: 'hsl($mockupDesktopConcaveDuo)'
+        fill: 'hsla($mockupDesktopConcaveDuo, 0.5)'
       },
       mono: {
         fill: 'hsla($mockupDesktopConcaveMono, 0.5)'

@@ -59,7 +59,7 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       mockupDesktopScreenMono: '$shade100',
       mockupDesktopScreenBorderMono: '$shade600',
       mockupDesktopKeyboardSideMono: '$shade300',
-      mockupDesktopConcaveDuo: '$shade1200',
+      mockupDesktopConcaveDuo: '$shade1000',
       mockupDesktopConcaveMono: '$shade100',
       mockupDesktopBrowserTabMono: '$shade300',
 
