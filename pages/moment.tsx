@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { useTranslation } from 'next-i18next';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '@utils/HeadMeta';
@@ -29,14 +30,16 @@ const pageBody = globalCss({
 });
 
 export default function ProjectMoment() {
-  const router = useRouter();
+  const { t } = useTranslation('home');
 
   const pageInfo = {
-    name: 'Explore the Moment when Hearing a Song in the Movies/Dramas',
-    description: 'How might we display the moment when hearing the songs you like in the movies/dramas?',
+    name: t('home:project.moment.title', { explore: t('home:verb.explore') }),
+    description: t('home:project.moment.description'),
     datePublished: '2020-08-29',
-    dateModified: '2021-08-23'
+    dateModified: '2021-09-23'
   }
+
+  const router = useRouter();
 
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'moment');
@@ -92,6 +95,6 @@ export default function ProjectMoment() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['moment']),
+    ...await serverSideTranslations(locale, ['moment', 'home']),
   },
 });

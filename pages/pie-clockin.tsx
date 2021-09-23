@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { useTranslation } from 'next-i18next';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '@utils/HeadMeta';
@@ -27,16 +28,17 @@ const pageBody = globalCss({
   }
 });
 
-
 export default function ProjectPie() {
-  const pageInfo = {
-    name: 'Redesign UI of a Clock-In App',
-    description: 'A side project exploring fluent UI design.',
-    datePublished: '2020-08-29',
-    dateModified: '2021-09-18'
-  };
-
   const router = useRouter();
+
+  const { t } = useTranslation('home');
+
+  const pageInfo = {
+    name: t('home:project.pie.title', { redesign: t('home:verb.redesign') }),
+    description: t('home:project.pie.description'),
+    datePublished: '2020-08-29',
+    dateModified: '2021-09-23'
+  };
 
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'pie');
@@ -85,6 +87,6 @@ export default function ProjectPie() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['pie']),
+    ...await serverSideTranslations(locale, ['pie', 'home']),
   },
 });

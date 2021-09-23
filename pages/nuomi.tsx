@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { useTranslation } from 'next-i18next';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '@utils/HeadMeta';
@@ -26,11 +27,13 @@ const pageBody = globalCss({
 export default function ProjectNuomi() {
   const router = useRouter();
 
+  const { t } = useTranslation('home');
+
   const pageInfo = {
-    name: 'Retrospect Nuomi’s Portfolio',
-    description: 'Nuomi’s Portfolio with hand-drawn VR experience',
+    name: t('home:project.nuomi.title', { retrospect: t('home:verb.retrospect') }),
+    description: t('home:project.nuomi.description'),
     datePublished: '2020-08-29',
-    dateModified: '2021-08-20'
+    dateModified: '2021-09-23'
   }
 
   useEffect(() => {
@@ -79,6 +82,6 @@ export default function ProjectNuomi() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['nuomi']),
+    ...await serverSideTranslations(locale, ['nuomi', 'home']),
   },
 });
