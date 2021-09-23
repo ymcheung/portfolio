@@ -17,12 +17,23 @@
     "pie":
     {
       "title":
-        "{{redesign}} UI of a Clock-In App"
+        "{{redesign}} UI of a Clock-In App",
+      "description":
+        "A side project simplifying a lengthy UI flow."
     },
     "moment":
     {
       "title":
-        "{{explore}} the Moment when Hearing a Song in the Movies&sol;Dramas"
+        "{{explore}} the Moment when Hearing a Song in the Movies&sol;Dramas",
+      "description":
+        "How might we display the moment when hearing the songs you like in the movies/dramas?"
+    },
+    "nuomi":
+    {
+      "title":
+        "{{retrospect}} Nuomi’s Portfolio",
+      "description":
+        "Nuomi’s portfolio with hand-drawn VR experience."
     }
   },
   "activity":
@@ -33,6 +44,8 @@
     {
       "title":
         "{{translate}} Articles and Websites",
+      "fullTitle":
+        "Intersection: A Publication of Translating Articles & Websites",
       "description":
         "{{explore}} search engine optimization and internationalization by translations."
     },

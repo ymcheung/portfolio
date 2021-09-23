@@ -17,12 +17,23 @@
     "pie":
     {
       "title":
-        "{{redesign}}上下班打卡 App 的 UI"
+        "{{redesign}}上下班打卡 App 的 UI",
+      "description":
+        "簡化冗長 UI 流程的閒暇專案。"
     },
     "moment":
     {
       "title":
-        "{{explore}}在電視影劇裡，聽到經典歌曲的時刻"
+        "{{explore}}在電視影劇裡，聽到經典歌曲的時刻",
+      "description":
+        "是否有可能呈現「在電視影劇裡聽到喜歡歌曲」的時刻？"
+    },
+    "nuomi":
+    {
+      "title":
+        "{{retrospect}} Nuomi 作品集設計",
+      "description":
+        "Nuomi 的手繪 VR 體驗作品集。"
     }
   },
   "activity":
@@ -33,6 +44,8 @@
     {
       "title":
         "文章與網站{{translate}}",
+      "fullTitle":
+        "Intersection: 專注在文章與網站翻譯的刊物",
       "description":
         "透過翻譯，{{explore}}搜尋引擎最佳化與多國語系。"
     },
