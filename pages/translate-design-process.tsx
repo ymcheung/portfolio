@@ -59,7 +59,7 @@ export default function ProjectProcess() {
       <HeadMeta
         title={`${pageInfo.name}${TITLE_AFFIX}`}
         description={pageInfo.description}
-        ogCover="/project/process/og-cover.jpg"
+        ogCover="/projects/process/og-cover.jpg"
         canonical={router.pathname}
       />
       <Cover />

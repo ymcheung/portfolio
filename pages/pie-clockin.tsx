@@ -61,7 +61,7 @@ export default function ProjectPie() {
       <HeadMeta
         title={`${pageInfo.name}${TITLE_AFFIX}`}
         description={pageInfo.description}
-        ogCover="/project/pie/og-cover.jpg"
+        ogCover="/projects/pie/og-cover.jpg"
         canonical={router.pathname}
       />
       <Cover />

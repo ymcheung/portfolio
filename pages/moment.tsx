@@ -62,7 +62,7 @@ export default function ProjectMoment() {
       <HeadMeta
         title={`${pageInfo.name}${TITLE_AFFIX}`}
         description={pageInfo.description}
-        ogCover="/project/moment/og-cover.jpg"
+        ogCover="/projects/moment/og-cover.jpg"
         canonical={router.pathname}
       />
       <Cover />
