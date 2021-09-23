@@ -30,6 +30,8 @@ const pageBody = globalCss({
 });
 
 export default function ProjectMoment() {
+  const router = useRouter();
+
   const { t } = useTranslation('home');
 
   const pageInfo = {
@@ -38,8 +40,6 @@ export default function ProjectMoment() {
     datePublished: '2020-08-29',
     dateModified: '2021-09-23'
   }
-
-  const router = useRouter();
 
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'moment');

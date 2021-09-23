@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { useTranslation } from 'next-i18next';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '@utils/HeadMeta';
@@ -31,11 +32,13 @@ const pageBody = globalCss({
 export default function ProjectIntersection() {
   const router = useRouter();
 
+  const { t } = useTranslation('home');
+
   const pageInfo = {
-    name: 'Intersection: A Publication of Translating Articles & Websites',
-    description: 'Explore SEO and internationalization by translations.',
+    name: t('home:activity.intersection.fullTitle'),
+    description: t('home:activity.intersection.description', { explore: t('home:verb.explore') }),
     datePublished: '2020-08-29',
-    dateModified: '2021-08-23'
+    dateModified: '2021-09-23'
   }
 
   useEffect(() => {
@@ -90,6 +93,6 @@ export default function ProjectIntersection() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['intersection']),
+    ...await serverSideTranslations(locale, ['intersection', 'home']),
   },
 });

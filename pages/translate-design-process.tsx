@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { useTranslation } from 'next-i18next';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HeadMeta from '@utils/HeadMeta';
@@ -29,11 +30,13 @@ const pageBody = globalCss({
 export default function ProjectProcess() {
   const router = useRouter();
 
+  const { t } = useTranslation('home');
+
   const pageInfo = {
-    name: 'Translate “Design Process for Pros”',
-    description: 'Retrospect an event gathering 20 designers to translate an e-book. Co-Operated with Cosign.',
+    name: t('home:activity.process.title', { translate: t('home:verb.translate') }),
+    description: t('home:activity.process.description', { retrospect: t('home:verb.retrospect') }),
     datePublished: '2020-08-29',
-    dateModified: '2021-08-20'
+    dateModified: '2021-09-23'
   }
 
   useEffect(() => {
@@ -79,6 +82,6 @@ export default function ProjectProcess() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['process']),
+    ...await serverSideTranslations(locale, ['process', 'home']),
   },
 });
