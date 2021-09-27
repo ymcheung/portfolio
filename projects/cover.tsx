@@ -31,7 +31,7 @@ export const Device = styled('figure', {
     responsive: {
       mobile: {
         width: '272px',
-        minHeight: '455px',
+        minHeight: '554px',
         padding: '0 $8',
 
         '&::before': {
@@ -48,17 +48,18 @@ export const Device = styled('figure', {
     model: {
       mobileDual: {
         width: '640px',
-        height: '524px',
+        minHeight: 'unset',
+        height: '640px',
         padding: 0,
 
         '&::before': {
           backgroundImage: `
             linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.25) 50%, transparent 100%),
             linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.25) 50%, transparent 100%)` ,
-          backgroundSize: '288px 456px',
+          backgroundSize: '288px 500px',
           backgroundPosition: `
             top 0 left 8px,
-            top 24px right 8px`
+            top 48px right 8px`
         }
       },
       tabletMacbook: {

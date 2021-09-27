@@ -39,12 +39,12 @@ export default function Cover() {
     <Wrap project="pie">
       <Device responsive={{ '@initial': 'mobile' }} model={{ '@m768': 'mobileDual' }}>
         {mounted && screenMobile &&
-          <ScreenshotMobile src="/projects/pie/clockingNone.webp" width={256} height={455} alt="Screenshot: Clock-In" />
+          <ScreenshotMobile src="/projects/pie/cover/clockIn.webp" width={256} height={554} alt="Screenshot: Clock-In" />
         }
         {screenTablet &&
           <>
-            <ScreenshotTablet src="/projects/pie/clockingNone.jpg" placement="left" alt="Screenshot: Clock-In" />
-            <ScreenshotTablet src="/projects/pie/formsConfirmApply.jpg" placement="right" alt="Screenshot: Received and Applying Forms" />
+            <ScreenshotTablet src="/projects/pie/cover/clockIn.jpg" placement="left" alt="Screenshot: Clock-In" />
+            <ScreenshotTablet src="/projects/pie/cover/formsIndex.jpg" placement="right" alt="Screenshot: Received and Applying Forms" />
           </>
         }
       </Device>
