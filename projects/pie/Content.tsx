@@ -29,9 +29,10 @@ export default function Content() {
           <Paragraph dangerouslySetInnerHTML={{__html: t('brief.description')}} indent />
           <Paragraph dangerouslySetInnerHTML={{__html: t('brief.size')}} indent sectionend />
         </Section>
-        <Section>
+        <Section isgroupend>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('why.problem')}} indent sectionend />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('why.problem')}} indent />
+          <Graph />
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('question.title')}} />
@@ -48,7 +49,6 @@ export default function Content() {
         </Section>
       </Container>
       <FullBlock project="pie">
-        <Graph />
         <Gallery />
       </FullBlock>
       <Container as="section" responsive={{'@m768': 'max640'}}>
