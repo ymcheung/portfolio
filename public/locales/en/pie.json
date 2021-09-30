@@ -13,19 +13,19 @@
     "title":
       "The Problem",
     "problem":
-      "The company I worked for used an app with clock-in, leave statistics, and salary information. One had to go back to the &ldquo;Main Menu&rdquo; as there was another task to do. I wished the flows were more straightforward."
+      "The company I worked for used an app with clock-in, leave forms, and salary information. One had to go back to the &ldquo;Main Menu&rdquo; as there was another task to do. I wished the flows were more straightforward."
   },
   "question":
   {
     "title":
       "Question",
     "content":
-      "How might we simplify the flows of the routine tasks?"
+      "How might we simplify the flows of the routine tasks in a clock-in app?"
   },
-  "document":
+  "implement":
   {
     "title":
-      "Documentation",
+      "Implementation",
     "items":
     [
       {
@@ -44,10 +44,6 @@
   },
   "flows":
   {
-    "title":
-      "Flows Comparison",
-    "inuse":
-      "App in Use",
     "mainmenu":
       "Main Menu",
     "clockin":
@@ -61,9 +57,7 @@
     "confirmform_done":
       "Confirmed",
     "screen":
-      "{{view}} Screen",
-    "description":
-      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. Users who have more than one thing to do will be going back and forth between Main Menu and their goals. The Tab Bar at the screen bottom comes to the flow&rsquo;s rescue."
+      "{{view}} Screen"
   },
   "gallery":
   {

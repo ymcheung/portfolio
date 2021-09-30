@@ -39,8 +39,8 @@ export default function Content() {
           <Paragraph dangerouslySetInnerHTML={{__html: t('question.content')}} purpose="question" italic={isItalic} indent />
         </Section>
         <Section>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('document.title')}} />
-          {t<string, itemProps>('document.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('implement.title')}} />
+          {t<string, itemProps>('implement.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
             <React.Fragment key={`doc-${index}`}>
               <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: name}} />
               <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />

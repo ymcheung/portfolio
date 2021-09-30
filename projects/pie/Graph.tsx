@@ -7,6 +7,9 @@ import { ContentTitle, GraphCaption } from '@components/contentStyles';
 import IconArrowThen from '@projects/pie/IconArrowThen';
 import IconFinish from '@projects/pie/IconFinish';
 
+import IconMainMenu from '@projects/pie/inUse/IconMainMenu';
+import IconFunctions from '@projects/pie/inUse/IconFunctions';
+
 const graphInUseMainMenu = '/projects/pie/graph/mainmenu.svg';
 const graphInUseClockInScreen = '/projects/pie/graph/clockinScreen.svg';
 const graphInUseConfirmScreen = '/projects/pie/graph/confirmScreen.svg';
@@ -64,7 +67,7 @@ export default function Graph() {
       <GraphGrid inuse={lang} floor="first">
         <ListItem nomark>
           <GraphFigure>
-            <ImgInUse src={graphInUseMainMenu} alt="" />
+            <IconMainMenu />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.mainmenu')}} />
           </GraphFigure>
         </ListItem>
@@ -73,7 +76,7 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <ImgInUse src={graphInUseClockInScreen} alt="" />
+            <IconFunctions confirmItem="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.screen',
               {view: t('flows.clockin')}
             )}} />
@@ -84,7 +87,7 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <ImgInUse src={graphInUseClockInScreen} alt="" />
+            <IconFunctions confirmItem="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.clockin',
               {context: 'done'}
             )}} />
@@ -100,7 +103,7 @@ export default function Graph() {
       <GraphGrid inuse={lang} floor="ground" responsive={{ '@m992': 'desktop' }}>
         <ListItem nomark>
           <GraphFigure>
-            <ImgInUse src={graphInUseMainMenu} alt="" />
+            <IconMainMenu />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.mainmenu')}} />
           </GraphFigure>
         </ListItem>
@@ -109,9 +112,9 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <ImgInUse src={graphInUseClockInScreen} alt="" />
+            <IconFunctions confirmItem="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.screen',
-              {view: t('flows.clockin')}
+              { view: t('flows.clockin') }
             )}} />
           </GraphFigure>
         </ListItem>
@@ -120,9 +123,9 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <ImgInUse src={graphInUseClockInScreen} alt="" />
+            <IconFunctions confirmItem="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.clockin',
-              {context: 'done'}
+              { context: 'done' }
             )}} />
           </GraphFigure>
         </ListItem>
@@ -131,7 +134,7 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <ImgInUse src={graphInUseMainMenu} alt="" />
+            <IconMainMenu />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.mainmenu')}} />
           </GraphFigure>
         </ListItem>
@@ -140,9 +143,9 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <ImgInUse src={graphInUseConfirmScreen} alt="" />
+          <IconFunctions showClockInCta="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.screen',
-              {view: t('flows.confirmform')}
+              { view: t('flows.confirmform') }
             )}} />
           </GraphFigure>
         </ListItem>
@@ -151,9 +154,9 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <ImgInUse src={graphInUseConfirmNone} alt="" />
+          <IconFunctions showClockInCta="none" confirmItem="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.confirmform',
-              {context: 'done'}
+              { context: 'done' }
             )}} />
           </GraphFigure>
         </ListItem>
