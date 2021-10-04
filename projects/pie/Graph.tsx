@@ -10,16 +10,10 @@ import IconFinish from '@projects/pie/IconFinish';
 import IconMainMenu from '@projects/pie/inUse/IconMainMenu';
 import IconFunctions from '@projects/pie/inUse/IconFunctions';
 
-const graphInUseMainMenu = '/projects/pie/graph/mainmenu.svg';
-const graphInUseClockInScreen = '/projects/pie/graph/clockinScreen.svg';
-const graphInUseConfirmScreen = '/projects/pie/graph/confirmScreen.svg';
-const graphInUseConfirmNone = '/projects/pie/graph/confirmNone.svg';
-
 const GraphGrid = styled('ul', {
   display: 'grid',
   overflowX: 'auto',
   marginTop: 0,
-  padding: '0 0 $12',
 
   variants: {
     inuse: {
@@ -39,8 +33,12 @@ const GraphGrid = styled('ul', {
       }
     },
     responsive: {
+      mobile: {
+        padding: '0 0 $12'
+      },
       desktop: {
-        marginRight: '-64px'
+        marginRight: '-64px',
+        padding: 0
       }
     }
   }
@@ -51,11 +49,6 @@ const GraphFigure = styled('figure', {
   padding: 0
 });
 
-const ImgInUse = styled('img', {
-  width: '64px',
-  height: '75px',
-});
-
 export default function Graph() {
   const { t, i18n } = useTranslation('pie');
 
@@ -64,7 +57,7 @@ export default function Graph() {
   return(
     <>
       <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('flows.clockin')}} />
-      <GraphGrid inuse={lang} floor="first">
+      <GraphGrid inuse={lang} floor="first" responsive={{ '@initial': 'mobile' }}>
         <ListItem nomark>
           <GraphFigure>
             <IconMainMenu />
@@ -100,7 +93,7 @@ export default function Graph() {
       <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('flows.clockin',
         {context: 'withConfirm', clockin: t('flows.clockin'), confirmform: t('flows.confirmform')}
       )}} />
-      <GraphGrid inuse={lang} floor="ground" responsive={{ '@m992': 'desktop' }}>
+      <GraphGrid inuse={lang} floor="ground" responsive={{ '@initial': 'mobile', '@m992': 'desktop' }}>
         <ListItem nomark>
           <GraphFigure>
             <IconMainMenu />

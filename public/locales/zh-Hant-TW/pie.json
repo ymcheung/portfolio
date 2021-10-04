@@ -22,6 +22,13 @@
     "content":
       "是否可以簡化上下班打卡例行工作所需的步驟？"
   },
+  "rescue":
+  {
+    "title":
+      "以 Tab Bar 解決重複步驟",
+    "description":
+      "擺在螢幕底部的 Tab Bar，是相當常見的操作方法，省下「回主選單」的步驟。"
+  },
   "implement":
   {
     "title":
@@ -33,12 +40,6 @@
           "新手上路",
         "description":
           "以遠距的方式進行，之後加入的成員可以從這份<a class=\"paragraph-link\" href=\"https://www.craft.do/s/kRGlFyjpSWAKUh\" data-splitbee-event=\"Pie: Onboarding Document Link\" target=\"_blank\" rel=\"noopener\">新手上路文件</a>開始。"
-      },
-      {
-        "name":
-          "動機與方法",
-        "description":
-          "產品規格非常容易變動，因此文件裡僅記錄角色<strong>為什麼</strong>使用上下班打卡 App，以及<strong>如何</strong>達成目標。"
       }
     ]
   },
@@ -62,7 +63,15 @@
   "gallery":
   {
     "title":
-      "仔細看"
+      "仔細看",
+    "clockin":
+      "上下班打卡",
+    "forms":
+      "請假表單",
+    "stats":
+      "假勤統計",
+    "salary":
+      "薪資"
   },
   "prototype":
   {

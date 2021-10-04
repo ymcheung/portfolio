@@ -2,7 +2,6 @@ import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import { styled } from 'stitches.config';
 
-import { Container } from '@components/layout';
 import { ContentTitle, Paragraph } from '@components/contentStyles';
 import { GalleryList, GalleryItem } from '@projects/gallery';
 
@@ -60,8 +59,9 @@ export default function Gallery() {
   const { t } = useTranslation('pie');
 
   return(
-    <Container id="ui_permute" responsive={{'@m768': 'max640'}}>
+    <>
       <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('gallery.title')}} />
+      <ContentTitle purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('gallery.clockin')}} />
       <PieGalleryList responsive={{ '@m768': 'tablet' }} grid={{ '@m768': 'tablet' }}>
         <PieGalleryItem item={{ '@m768': 'clocking' }} nomark>
           <PieScreenshotImg src={screenshotClocking}
@@ -116,6 +116,6 @@ export default function Gallery() {
       </PieGalleryList>
       <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
       <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.description')}} />
-    </Container>
+    </>
   )
 }

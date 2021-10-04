@@ -9,7 +9,9 @@ const Icon = styled(Svg, {
 const Path = styled('path', {
   fill: 'none',
   stroke: 'hsl($shade800)',
-  strokeWidth: '2px'
+  strokeWidth: '2px',
+  strokeLinecap: 'round',
+  strokeLinejoin: 'round'
 });
 
 export default function IconFinish() {
