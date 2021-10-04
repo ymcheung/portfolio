@@ -31,7 +31,6 @@ export const Device = styled('figure', {
     responsive: {
       mobile: {
         width: '272px',
-        minHeight: '554px',
         padding: '0 $8',
 
         '&::before': {
@@ -43,6 +42,14 @@ export const Device = styled('figure', {
         width: 'auto',
         minHeight: 'unset',
         textAlign: 'center'
+      }
+    },
+    vpheight: {
+      iphone8: {
+        minHeight: '455px'
+      },
+      iphone13: {
+        minHeight: '554px'
       }
     },
     model: {

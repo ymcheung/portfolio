@@ -39,7 +39,7 @@ export default function Content() {
           <Paragraph dangerouslySetInnerHTML={{__html: t('brief.description')}} indent />
           <Paragraph dangerouslySetInnerHTML={{__html: t('brief.size')}} indent sectionend />
         </Section>
-        <Section isgroupend>
+        <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('why.problem')}} indent />
           <Graph />
