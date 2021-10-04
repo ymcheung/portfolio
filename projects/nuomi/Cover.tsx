@@ -22,7 +22,7 @@ const Screenshot = styled(Image, {
 export default function Cover() {
   return(
     <Wrap project="nuomi">
-      <Device responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} model={{ '@m768': 'tabletMacbook' }}>
+      <Device responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} vpheight="iphone8" model={{ '@m768': 'tabletMacbook' }}>
         {screenMobile &&
           <Screenshot src="/projects/nuomi/cover-mobile.jpg" width={272} height={484} responsive="mobile" alt="Mobile Landing Page of Nuomi’s Portfolio" />
         }

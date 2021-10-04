@@ -19,7 +19,7 @@ export default function Cover() {
 
   return(
     <Wrap>
-      <Device responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} model={{ '@m768': 'tabletMacbook' }}>
+      <Device responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} vpheight="iphone8" model={{ '@m768': 'tabletMacbook' }}>
         {screenMobile && isDarkTheme &&
           <Screenshot src="/projects/process/coverMobileDark.webp" width={272} height={484} alt="Mobile Landing Page of Design Process for Pros Translation" />
         }

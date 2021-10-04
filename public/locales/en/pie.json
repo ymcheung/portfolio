@@ -13,41 +13,40 @@
     "title":
       "The Problem",
     "problem":
-      "The company I worked for used an app with clock-in, leave statistics, and salary information. One had to go back to the &ldquo;Main Menu&rdquo; as there was another task to do. I wished the flows were more straightforward."
+      "The company I worked for used an app with clock-in, leave forms, and salary information. One had to go back to the &ldquo;Main Menu&rdquo; as there was another task to do. I wished the flows were more straightforward."
   },
   "question":
   {
     "title":
       "Question",
     "content":
-      "How might we simplify the flows of the routine tasks?"
+      "How might we simplify the flows of the routine tasks in a clock-in app?"
   },
-  "document":
+  "rescue":
   {
     "title":
-      "Documentation",
+      "Tab Bar to the Rescue",
+    "description":
+      "A tab bar at the screen bottom is a popular UI pattern. It skips the &ldquo;Going Back to Main Menu&rdquo; step.",
+    "image":
+      "The tab bar contains four features: Clockings, Forms, Stats, and Salary."
+  },
+  "implement":
+  {
+    "title":
+      "Implementation",
     "items":
     [
       {
         "name":
           "Onboarding",
         "description":
-          "To work as a remote team, the members who will join the project get started with <a class=\"paragraph-link\" href=\"https://www.craft.do/s/WPp0S5oPecqEPc\" data-splitbee-event=\"Pie: Onboarding Document Link\" target=\"_blank\" rel=\"noopener\">Onboarding</a>."
-      },
-      {
-        "name":
-          "Why &amp; How",
-        "description":
-          "Product specification is subject to change. We write down WHY the defined roles are using a clock-in app and HOW they will fulfill their goals."
+          "To work as a remote team, the members who will join the project get started with <a class=\"paragraph-link\" href=\"https://www.craft.do/s/WPp0S5oPecqEPc\" data-splitbee-event=\"Pie: Onboarding Document Link\" target=\"_blank\" rel=\"noopener\">onboarding</a>."
       }
     ]
   },
   "flows":
   {
-    "title":
-      "Flows Comparison",
-    "inuse":
-      "App in Use",
     "mainmenu":
       "Main Menu",
     "clockin":
@@ -61,14 +60,20 @@
     "confirmform_done":
       "Confirmed",
     "screen":
-      "{{view}} Screen",
-    "description":
-      "&ldquo;Main Menu&rdquo; is not required for completing routine tasks. Users who have more than one thing to do will be going back and forth between Main Menu and their goals. The Tab Bar at the screen bottom comes to the flow&rsquo;s rescue."
+      "{{view}} Screen"
   },
   "gallery":
   {
     "title":
-      "Take a Closer Look"
+      "Take a Closer Look",
+    "clockin":
+      "Clock-In&sol;Out",
+    "forms":
+      "Forms",
+    "stats":
+      "Stats",
+    "salary":
+      "Salary"
   },
   "prototype":
   {

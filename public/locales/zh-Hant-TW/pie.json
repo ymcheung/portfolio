@@ -13,19 +13,28 @@
     "title":
       "問題",
     "problem":
-      "先前任職的公司正在使用一款結合上下班打卡、假勤統計與薪資計算的產品。一旦有 1 件以上事情要做，就得要回到「主選單」，希望操作流程可以簡化。"
+      "先前任職的公司正在使用一款結合上下班打卡、請假表單與薪資計算的產品。一旦有 1 件以上事情要做，就得要回到「主選單」，希望操作流程可以簡化。"
   },
   "question":
   {
     "title":
       "設計假設",
     "content":
-      "是否可以簡化例行工作所需的步驟？"
+      "是否可以簡化上下班打卡例行工作所需的步驟？"
   },
-  "document":
+  "rescue":
   {
     "title":
-      "文件撰寫",
+      "以 Tab Bar 解決重複步驟",
+    "description":
+      "擺在螢幕底部的 Tab Bar，是相當常見的操作方法，省下「回主選單」的步驟。",
+    "image":
+      "Tab Bar 包含 4 項功能：上下班打卡、請假表單、假勤統計與薪資。"
+  },
+  "implement":
+  {
+    "title":
+      "實做",
     "items":
     [
       {
@@ -33,21 +42,11 @@
           "新手上路",
         "description":
           "以遠距的方式進行，之後加入的成員可以從這份<a class=\"paragraph-link\" href=\"https://www.craft.do/s/kRGlFyjpSWAKUh\" data-splitbee-event=\"Pie: Onboarding Document Link\" target=\"_blank\" rel=\"noopener\">新手上路文件</a>開始。"
-      },
-      {
-        "name":
-          "動機與方法",
-        "description":
-          "產品規格非常容易變動，因此文件裡僅記錄角色<strong>為什麼</strong>使用上下班打卡 App，以及<strong>如何</strong>達成目標。"
       }
     ]
   },
   "flows":
   {
-    "title":
-      "使用流程比較",
-    "inuse":
-      "現有產品",
     "mainmenu":
       "主選單",
     "clockin":
@@ -55,20 +54,26 @@
     "clockin_done":
       "完成打卡",
     "clockin_withConfirm":
-    "{{clockin}} + {{confirmform}}",
+    "{{clockin}}，接著查看{{confirmform}}",
     "confirmform":
       "請假表單",
     "confirmform_done":
       "確認請假表單",
     "screen":
-      "{{view}}畫面",
-    "description":
-      "「主選單」並非完成例行事項的必備流程。如果有超過一件事情要做的話，就得要在主選單與目的之間不斷「來回切換」。使用底部導覽選單 (Tab Bar) 就會有幫助。"
+      "{{view}}畫面"
   },
   "gallery":
   {
     "title":
-      "仔細看"
+      "仔細看",
+    "clockin":
+      "上下班打卡",
+    "forms":
+      "請假表單",
+    "stats":
+      "假勤統計",
+    "salary":
+      "薪資"
   },
   "prototype":
   {

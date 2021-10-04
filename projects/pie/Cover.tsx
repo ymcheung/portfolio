@@ -37,7 +37,7 @@ export default function Cover() {
 
   return(
     <Wrap project="pie">
-      <Device responsive={{ '@initial': 'mobile' }} model={{ '@m768': 'mobileDual' }}>
+      <Device responsive={{ '@initial': 'mobile' }} vpheight="iphone13" model={{ '@m768': 'mobileDual' }}>
         {mounted && screenMobile &&
           <ScreenshotMobile src="/projects/pie/cover/clockIn.webp" width={256} height={554} alt="Screenshot: Clock-In" />
         }
