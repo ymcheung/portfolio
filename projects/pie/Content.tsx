@@ -54,7 +54,7 @@ export default function Content() {
           <Section>
             <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('rescue.title')}} />
             <Paragraph scheme="mono" dangerouslySetInnerHTML={{__html: t('rescue.description')}} indent />
-            <TabBarRescue src={tabBarDark.src} alt="" />
+            <TabBarRescue src={tabBarDark.src} alt={t('rescue.image')} />
           </Section>
           <Gallery />
         </Container>

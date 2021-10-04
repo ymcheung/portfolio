@@ -37,7 +37,7 @@ export default function ProjectPie() {
     name: t('home:project.pie.title', { redesign: t('home:verb.redesign') }),
     description: t('home:project.pie.description'),
     datePublished: '2020-08-29',
-    dateModified: '2021-09-28'
+    dateModified: '2021-10-04'
   };
 
   useEffect(() => {

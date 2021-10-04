@@ -27,7 +27,9 @@
     "title":
       "Tab Bar to the Rescue",
     "description":
-      "A tab bar at the screen bottom is a popular UI pattern. It skips the &ldquo;Going Back to Main Menu&rdquo; step."
+      "A tab bar at the screen bottom is a popular UI pattern. It skips the &ldquo;Going Back to Main Menu&rdquo; step.",
+    "image":
+      "The tab bar contains four features: Clockings, Forms, Stats, and Salary."
   },
   "implement":
   {

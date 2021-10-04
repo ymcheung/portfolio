@@ -61,7 +61,6 @@ export default function Gallery() {
   return(
     <>
       <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('gallery.title')}} />
-      <ContentTitle purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('gallery.clockin')}} />
       <PieGalleryList responsive={{ '@m768': 'tablet' }} grid={{ '@m768': 'tablet' }}>
         <PieGalleryItem item={{ '@m768': 'clocking' }} nomark>
           <PieScreenshotImg src={screenshotClocking}
