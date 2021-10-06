@@ -60,7 +60,7 @@ export default function Graph() {
       <GraphGrid inuse={lang} floor="first" responsive={{ '@initial': 'mobile' }}>
         <ListItem nomark>
           <GraphFigure>
-            <IconMainMenu />
+            <IconMainMenu indicateForms="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.mainmenu')}} />
           </GraphFigure>
         </ListItem>
@@ -69,7 +69,7 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <IconFunctions confirmItem="none" />
+            <IconFunctions confirmItem="none" indicateGoingBack="none" indicateConfirm="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.screen',
               {view: t('flows.clockin')}
             )}} />
@@ -80,7 +80,7 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <IconFunctions confirmItem="none" />
+            <IconFunctions confirmItem="none" indicateGoingBack="none" indicateClockIn="none" indicateConfirm="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.clockin',
               {context: 'done'}
             )}} />
@@ -96,7 +96,7 @@ export default function Graph() {
       <GraphGrid inuse={lang} floor="ground" responsive={{ '@initial': 'mobile', '@m992': 'desktop' }}>
         <ListItem nomark>
           <GraphFigure>
-            <IconMainMenu />
+            <IconMainMenu indicateForms="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.mainmenu')}} />
           </GraphFigure>
         </ListItem>
@@ -105,7 +105,7 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <IconFunctions confirmItem="none" />
+            <IconFunctions confirmItem="none"  indicateGoingBack="none" indicateConfirm="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.screen',
               { view: t('flows.clockin') }
             )}} />
@@ -116,7 +116,7 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <IconFunctions confirmItem="none" />
+            <IconFunctions confirmItem="none" indicateClockIn="none" indicateConfirm="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.clockin',
               { context: 'done' }
             )}} />
@@ -127,7 +127,7 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <IconMainMenu />
+            <IconMainMenu indicateClockIn="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.mainmenu')}} />
           </GraphFigure>
         </ListItem>
@@ -136,7 +136,7 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-          <IconFunctions showClockInCta="none" />
+          <IconFunctions clockInCta="none" indicateGoingBack="none" indicateClockIn="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.screen',
               { view: t('flows.confirmform') }
             )}} />
@@ -147,7 +147,7 @@ export default function Graph() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-          <IconFunctions showClockInCta="none" confirmItem="none" />
+          <IconFunctions clockInCta="none" confirmItem="none" indicateGoingBack="none" indicateConfirm="none" indicateClockIn="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.confirmform',
               { context: 'done' }
             )}} />

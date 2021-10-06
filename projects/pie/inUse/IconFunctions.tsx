@@ -1,5 +1,6 @@
 import { styled } from 'stitches.config';
 import { Svg } from '@elements/Svg';
+import { Indicator } from './indicator';
 
 const Icon = styled(Svg, {
   width: '64px',
@@ -42,18 +43,24 @@ const Arrow = styled('path', {
 });
 
 interface IconProps {
-  readonly showClockInCta?: {};
+  readonly clockInCta?: {};
   readonly confirmItem?: {};
+  readonly indicateGoingBack?: {};
+  readonly indicateClockIn?: {};
+  readonly indicateConfirm?: {};
 }
 
-export default function IconFunctions({ showClockInCta, confirmItem }: IconProps) {
+export default function IconFunctions({ clockInCta, confirmItem, indicateGoingBack, indicateClockIn, indicateConfirm }: IconProps) {
   return(
     <Icon viewBox="0 0 64 75" xmlns="http://www.w3.org/2000/svg">
-      <title>Layout of Clock-In Screen</title>
+      <title>Layout of Clock-In and Forms Screens</title>
       <Rect purpose="doc" rx="8"/>
       <Arrow d="m8 7-4 4 4 4"/>
-      <Rect purpose="clockInCta" display={showClockInCta} x="4" y="59" rx="2"/>
+      <Rect purpose="clockInCta" display={clockInCta} x="4" y="59" rx="2"/>
       <Rect purpose="confirmItem" display={confirmItem} x="4" y="20" rx="2"/>
+      <Indicator display={indicateGoingBack} animation={{ '@mReduced': 'reduced' }} cx="8" cy="10" r="4"/>
+      <Indicator display={indicateConfirm} animation={{ '@mReduced': 'reduced' }} cx="32" cy="30" r="4"/>
+      <Indicator display={indicateClockIn} animation={{ '@mReduced': 'reduced' }} cx="32" cy="65" r="4"/>
     </Icon>
   );
 }
