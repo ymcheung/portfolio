@@ -58,7 +58,7 @@ export default function IconFunctions({ clockInCta, confirmItem, indicateGoingBa
       <Arrow d="m8 7-4 4 4 4"/>
       <Rect purpose="clockInCta" display={clockInCta} x="4" y="59" rx="2"/>
       <Rect purpose="confirmItem" display={confirmItem} x="4" y="20" rx="2"/>
-      <Indicator display={indicateGoingBack} animation={{ '@mReduced': 'reduced' }} cx="8" cy="10" r="4"/>
+      <Indicator display={indicateGoingBack} animation={{ '@mReduced': 'reduced' }} cx="6" cy="11" r="4"/>
       <Indicator display={indicateConfirm} animation={{ '@mReduced': 'reduced' }} cx="32" cy="30" r="4"/>
       <Indicator display={indicateClockIn} animation={{ '@mReduced': 'reduced' }} cx="32" cy="65" r="4"/>
     </Icon>

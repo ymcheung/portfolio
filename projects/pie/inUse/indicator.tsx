@@ -1,13 +1,21 @@
 import { styled, keyframes } from 'stitches.config';
 
 const scaleUp = keyframes({
-  '0%': { opacity: 0.75 },
-  '100%': { opacity: 0.5 }
+  '0%': {
+    opacity: 0.8,
+    transform: 'scale(1)'
+  },
+  '100%': {
+    opacity: 0.48,
+    transform: 'scale(1.2)'
+  }
 });
 
 export const Indicator = styled('circle', {
   fill: 'hsl($pie700)',
-  animation: `${scaleUp} 10s alternate ease-in-out infinite`,
+  transformBox: 'fill-box',
+  transformOrigin: 'center',
+  animation: `${scaleUp} 5s alternate ease-in-out infinite`,
 
   variants: {
     display: {
