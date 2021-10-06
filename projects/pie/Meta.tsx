@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { MetaList, MetaItem, MetaItemTitle, MetaStatusList, MetaItemValue } from "@projects/meta";
+
 import IconHasDeliverable from '@projects/IconHasDeliverable';
 import IconNotReady from '@projects/IconNotReady';
 
