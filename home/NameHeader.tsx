@@ -52,16 +52,17 @@ const ToolsList = styled('ul', {
   columnGap: '32px',
   position: 'relative',
   zIndex: 2,
-  margin: '0 0 $12',
   padding: 0,
 
   variants: {
     responsive: {
       mobile: {
         justifyContent: 'center',
+        margin: '0 0 $12',
       },
       tablet: {
         justifyContent: 'end',
+        margin: 0,
       }
     }
   }

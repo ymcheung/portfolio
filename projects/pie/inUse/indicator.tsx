@@ -15,7 +15,7 @@ export const Indicator = styled('circle', {
   fill: 'hsl($pie700)',
   transformBox: 'fill-box',
   transformOrigin: 'center',
-  animation: `${scaleUp} 5s alternate ease-in-out infinite`,
+  animation: `${scaleUp} 2s alternate ease-in-out infinite`,
 
   variants: {
     display: {
