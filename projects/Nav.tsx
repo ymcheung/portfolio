@@ -59,7 +59,8 @@ const NavItemLink = styled('a', {
   textDecoration: 'none',
 
   [`& ${IconArrow}`]: {
-    transition: 'transform 0.2s $easeOut'
+    transition: 'transform 0.2s $easeOut',
+    willChange: 'transform',
   },
 
   '&:hover': {

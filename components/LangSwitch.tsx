@@ -8,8 +8,9 @@ import IconLangSwitch from '@elements/IconLangSwitch';
 const Switch = styled('a', {
   display: 'inline-block',
   paddingX: '$8',
-  background: 'hsl($shade1500)',
+  backgroundColor: 'hsl($shade1500)',
   borderRadius: '4px',
+  willChange: 'background-color',
 
   variants: {
     position: {
@@ -27,7 +28,7 @@ const Switch = styled('a', {
         transition: 'background-color $easeOut',
 
         '&:active, &:hover': {
-          background: 'hsl($shade1400)',
+          backgroundColor: 'hsl($shade1400)',
           transition: 'background-color $easeOut',
 
           '& circle': {

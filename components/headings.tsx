@@ -44,7 +44,7 @@ export const Heading = styled('h2', {
     nametag: {
       home: {
         position: 'relative',
-        zIndex: 1,
+        zIndex: 2,
         marginBottom: '4px',
         marginLeft: '-2px',
         color: 'hsl($shade0)',
