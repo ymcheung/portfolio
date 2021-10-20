@@ -2,10 +2,6 @@ import { useTranslation } from 'next-i18next';
 
 import { styled } from 'stitches.config';
 import IconSearch from './IconSearch';
-import IconManually from './IconManually';
-import IconTemplate from './IconTemplate';
-import IconCMS from './IconCMS';
-import IconSwap from './IconSwap';
 import { ListItem, IconList, IconListItem } from '@components/layout';
 
 import LangSwitch from '@components/LangSwitch';
@@ -58,26 +54,6 @@ const WhatFigcaption = styled('div', {
   lineHeight: '20px'
 });
 
-const Iteration = styled('strong', {
-  margin: 0,
-  padding: '0 $12',
-  color: 'hsl($shade100)',
-  fontSize: '$16',
-
-  variants: {
-    isItalic: {
-      true: {
-        fontStyle: 'italic'
-      }
-    }
-  },
-
-  '& .number': {
-    fontSize: '$24',
-    lineHeight: '24px'
-  }
-});
-
 interface itemProps {
   [x: string]: any;
   name: string;
@@ -91,23 +67,10 @@ interface whatProps extends itemProps {
   symbol: string;
 }
 
-interface mvpProps {
-  [x: string]: any;
-  position: string;
-  description: string;
-}
-
 export default function Content() {
   const { t, i18n } = useTranslation('moment');
 
   const isItalic = i18n.language === 'en';
-
-  const iterationIcons = [
-    <IconManually key="icon-0" />,
-    <IconTemplate key="icon-1" />,
-    <IconCMS key="icon-2" />,
-    <IconSwap key="icon-3" />
-  ];
 
   return(
     <>
@@ -160,17 +123,6 @@ export default function Content() {
       <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('mvp.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('mvp.description')}} indent />
-        <IconList>
-          {t<string, mvpProps>('mvp.versions', { returnObjects: true }).map(({ position, description }: mvpProps, index: number) => (
-            <IconListItem nomark key={`mvp-${index}`}>
-              <div>
-                {iterationIcons[index]}
-              </div>
-              <Iteration dangerouslySetInnerHTML={{__html: position }} isItalic={isItalic} />
-              <Paragraph as="div" dangerouslySetInnerHTML={{__html: description}} purpose="projectIconDescription" sectionend />
-            </IconListItem>
-          ))}
-        </IconList>
       </Section>
       <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('expected.title')}} />
