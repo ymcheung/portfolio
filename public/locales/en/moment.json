@@ -6,43 +6,12 @@
     "description":
       "How might we display the moment when hearing the songs you like in the movies/dramas?"
   },
-  "how":
-  {
-    "lead":
-      "Let&rsquo;s go through this question:",
-    "title":
-      "How to Find the Website?",
-    "description":
-      "Based on actual data, many people submitted these words for lyrics in a search engine:",
-    "hows":
-    [
-      {
-        "keyword":
-          "lawrence of arabia british beatlemania",
-        "name":
-          "Search a sentence of a song."
-      },
-      {
-        "keyword":
-          "the umbrella academy i think we re alone now",
-        "name":
-          "Search the names of a movie or drama with the sentence they heard."
-      }
-    ]
-  },
   "obstacle":
   {
     "title":
       "Current Search Process &amp; Obstacles",
     "description":
-      "IMDB is the first stop to find out data of movies/dramas. However, it is hard to find by the lyrics because:",
-    "execuses":
-    [
-      {
-        "name":
-          "In the pages of a movie or drama, only song names are mentioned."
-      }
-    ],
+      "IMDB is the first stop to find out data of movies/dramas. However, it is hard to find by the lyrics because only song names are mentioned in the pages of a movie or drama.",
     "conclusion":
       "Therefore, you are probably unsure if it is the song you heard in the movies&sol;drama."
   },
@@ -50,6 +19,8 @@
   {
     "title":
       "What&rsquo;s in the Website?",
+    "description":
+      "Like many products, the website went public when it seemed to work. It was primitive, but inviting search engines to know the content and having real visitors ASAP are more important.",
     "items":
     [
       {
@@ -72,56 +43,18 @@
       }
     ]
   },
-  "mvp":
+  "gather":
   {
     "title":
-      "Minimum Viable Product",
+      "Data Gathering",
     "description":
-      "Like many products, the website went public when it seemed to work. It was primitive, but inviting search engines to know the content and having real visitors ASAP is more important.",
-    "versions":
-    [
-      {
-        "position":
-          "<span class=\"number\">1</span>st Iteration",
-        "description":
-          "Put all pages and layouts manually"
-      },
-      {
-        "position":
-          "<span class=\"number\">2</span>nd Iteration",
-        "description":
-          "Create the templates for lists, artists, and songs"
-      },
-      {
-        "position":
-          "<span class=\"number\">3</span>rd Iteration",
-        "description":
-          "Adopt content platform: <a class=\"paragraph-link\" href=\"https://sanity.io\" target=\"_blank\" rel=\"noopener\">Sanity</a>"
-      }
-    ]
-  },
-  "expected":
-  {
-    "title":
-      "Expected Outcome",
-    "description":
-      "Visitors find the songs and feel good with the &ldquo;moments.&rdquo;"
-  },
-  "measure":
-  {
-    "title":
-      "Measure",
-    "methods":
-    [
-      {
-        "name":
-          "SEO Performance"
-      },
-      {
-        "name":
-          "Feedback"
-      }
-    ]
+      "Based on actual data, many people submitted the keywords in the search engine:",
+    "byLyric":
+      "Search the Lyric of a Song",
+    "byLyricWithName":
+      "Search the Names of a Movie or Drama with the Lyric They Heard",
+    "question":
+      "Have you ever searched the keywords mentioned above?"
   },
   "grow":
   {
@@ -135,6 +68,6 @@
     "title":
       "Give It a Try",
     "description":
-      "The side project is in active development. Try: What are the movies/dramas that <a class=\"paragraph-link\" href=\"https://moment.intersection.tw/songs/heroes\" data-splitbee-event=\"Moment: Try Heroes Link\" target=\"_blank\" rel=\"noopener\">David Bowie&rsquo;s Heroes</a> features?"
+      "What are the movies/dramas that <a class=\"paragraph-link\" href=\"https://moment.intersection.tw/songs/heroes\" data-splitbee-event=\"Moment: Try Heroes Link\" target=\"_blank\" rel=\"noopener\">David Bowie&rsquo;s Heroes</a> features?"
   }
 }

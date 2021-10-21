@@ -92,11 +92,6 @@ export const Paragraph = styled('p', {
         fontSize: '$24',
         lineHeight: '32px',
       },
-      projectIconDescription: {
-        gridArea: 'description',
-        fontSize: '$16',
-        paddingX: '$12'
-      }
     },
     scheme: {
       default: {
