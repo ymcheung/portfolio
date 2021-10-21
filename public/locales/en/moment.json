@@ -20,7 +20,7 @@
     "title":
       "What&rsquo;s in the Website?",
     "description":
-      "Like many products, the website went public when it seemed to work. It was primitive, but inviting search engines to know the content and having real visitors ASAP is more important.",
+      "Like many products, the website went public when it seemed to work. It was primitive, but inviting search engines to know the content and having real visitors ASAP are more important.",
     "items":
     [
       {
@@ -52,7 +52,9 @@
     "byLyric":
       "Search the Lyric of a Song",
     "byLyricWithName":
-      "Search the Names of a Movie or Drama with the Lyric They Heard"
+      "Search the Names of a Movie or Drama with the Lyric They Heard",
+    "question":
+      "Have you ever searched the keywords mentioned above?"
   },
   "grow":
   {

@@ -120,12 +120,13 @@ export default function Content() {
           ))}
         </Paragraph>
         <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('gather.byLyricWithName')}} />
-        <Paragraph as="div" sectionend>
+        <Paragraph as="div">
           {
             keywordLyricWithMovie.map((keyword, index) => (
               <BubbleSearch responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: keyword}} key={`keywordlyricwithname-${index}`} />
           ))}
         </Paragraph>
+        <Paragraph dangerouslySetInnerHTML={{__html: t('gather.question')}} indent sectionend />
       </Section>
       <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('grow.title')}} />
