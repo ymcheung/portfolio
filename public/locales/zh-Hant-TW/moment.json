@@ -6,43 +6,12 @@
     "description":
       "是否有可能呈現「在電視影劇裡聽到喜歡歌曲」的時刻？"
   },
-  "how":
-  {
-    "lead":
-      "進一步構想：",
-    "title":
-      "會如何找到此網站？",
-    "description":
-      "根據實際資料，人們在搜尋引擎輸入的歌詞關鍵字有：",
-    "hows":
-    [
-      {
-        "keyword":
-          "lawrence of arabia british beatlemania",
-        "name":
-          "搜尋歌詞片段。"
-      },
-      {
-        "keyword":
-          "the umbrella academy i think we re alone now",
-        "name":
-          "搜尋電視影劇名稱加上聽到的歌詞片段。"
-      }
-    ]
-  },
   "obstacle":
   {
     "title":
       "現有方式與阻礙",
     "description":
-      "IMDB 是電視影劇資料的首選。然而，很難根據歌詞找到，因為：",
-    "execuses":
-    [
-      {
-        "name":
-          "在電影、電視劇、歌手、樂團的頁面不會附上歌詞。"
-      }
-    ],
+      "IMDB 是電視影劇資料的首選。然而，很難根據歌詞找到，因為在電影、電視劇、歌手、樂團的頁面不會附上歌詞。",
     "conclusion":
       "因此，可能還是無法肯定那就是在電影、電視劇裡聽到的歌。"
   },
@@ -50,6 +19,8 @@
   {
     "title":
       "網站內容",
+    "description":
+      "就像許多產品，核心概念成形就公開。即使非常陽春，還是先讓 Google 收錄內容與網址，接著再不斷修正。",
     "items":
     [
       {
@@ -72,56 +43,16 @@
       }
     ]
   },
-  "mvp":
+  "gather":
   {
     "title":
-      "最小可行性產品",
+      "採集資料",
     "description":
-      "就像許多產品，核心概念成形就公開。即使非常陽春，還是先讓 Google 收錄內容與網址，接著再不斷修正。",
-    "versions":
-    [
-      {
-        "position":
-          "第 <span class=\"number\">1</span> 版",
-        "description":
-          "所有版型與頁面都是手動拼湊"
-      },
-      {
-        "position":
-          "第 <span class=\"number\">2</span> 版",
-        "description":
-          "做好清單、演唱與歌曲的版型"
-      },
-      {
-        "position":
-          "第 <span class=\"number\">3</span> 版",
-        "description":
-          "採用內容平台：<a class=\"paragraph-link\" href=\"https://sanity.io\" target=\"_blank\" rel=\"noopener\">Sanity</a>"
-      }
-    ]
-  },
-  "expected":
-  {
-    "title":
-      "預期成果",
-    "description":
-      "訪客找到「那一刻」的歌曲而感覺良好。"
-  },
-  "measure":
-  {
-    "title":
-      "觀測",
-    "methods":
-    [
-      {
-        "name":
-          "搜尋引擎最佳化表現"
-      },
-      {
-        "name":
-          "意見回饋"
-      }
-    ]
+      "根據實際資料，人們在搜尋引擎輸入的相關字詞有：",
+    "byLyric":
+      "搜尋歌詞片段",
+    "byLyricWithName":
+      "搜尋電視影劇名稱加上聽到的歌詞片段"
   },
   "grow":
   {
@@ -135,6 +66,6 @@
     "title":
       "試試看",
     "description":
-      "此閒暇專案仍在活躍開發，試試看：<a class=\"paragraph-link\" href=\"https://moment.intersection.tw/songs/heroes\" data-splitbee-event=\"Moment: Try Heroes Link\" target=\"_blank\" rel=\"noopener\">David Bowie 的 Heroes</a> 出現在哪些電視影劇？"
+      "<a class=\"paragraph-link\" href=\"https://moment.intersection.tw/songs/heroes\" data-splitbee-event=\"Moment: Try Heroes Link\" target=\"_blank\" rel=\"noopener\">David Bowie 的 Heroes</a> 出現在哪些電視影劇？"
   }
 }

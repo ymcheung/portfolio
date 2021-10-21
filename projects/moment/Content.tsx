@@ -1,14 +1,15 @@
 import { useTranslation } from 'next-i18next';
 
 import { styled } from 'stitches.config';
-import IconSearch from './IconSearch';
-import { ListItem, IconList, IconListItem } from '@components/layout';
+import { ListItem } from '@components/layout';
 
 import LangSwitch from '@components/LangSwitch';
 
-import { ContentTitle, Section, Paragraph, ContentList, ContentListItem } from '@components/contentStyles';
+import { ContentTitle, Section, Paragraph } from '@components/contentStyles';
 
-const BubbleSearch = styled('div', {
+const BubbleSearch = styled('span', {
+  display: 'inline-block',
+  margin: '0 8px 8px 0',
   padding: '8px 12px',
   color: 'hsl($shade300)',
   fontSize: '$14',
@@ -59,10 +60,6 @@ interface itemProps {
   name: string;
 }
 
-interface howProps extends itemProps {
-  description: string;
-}
-
 interface whatProps extends itemProps {
   symbol: string;
 }
@@ -72,6 +69,18 @@ export default function Content() {
 
   const isItalic = i18n.language === 'en';
 
+  const keywordLyric = [
+    'we can be heroes just for one day',
+    'lawrence of arabia british beatlemania',
+    '200 degrees that&apos;s why they call me mr fahrenheit'
+  ];
+
+  const keywordLyricWithMovie = [
+    'the umbrella academy i think we re alone now',
+    'sing movie under pressure',
+    'jojo walk like an egyptian'
+  ];
+
   return(
     <>
       <LangSwitch position="articleStart" />
@@ -80,33 +89,13 @@ export default function Content() {
         <Paragraph dangerouslySetInnerHTML={{__html: t('intro.description')}} purpose="question" italic={isItalic} indent sectionend />
       </Section>
       <Section as="section">
-        <Paragraph dangerouslySetInnerHTML={{__html: t('how.lead')}} sectionend />
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('how.title')}} />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('how.description')}} indent />
-        <IconList>
-          {t<string, howProps>('how.hows', { returnObjects: true }).map(({ keyword, name }: howProps, index: number) => (
-            <IconListItem nomark vertical="middle" key={`how-${index}`}>
-              <div>
-                <IconSearch />
-              </div>
-              <BubbleSearch responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: keyword}} />
-              <Paragraph dangerouslySetInnerHTML={{__html: name}} purpose="projectIconDescription" sectionend />
-            </IconListItem>
-          ))}
-        </IconList>
-      </Section>
-      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('obstacle.title')}} />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('obstacle.description')}} indent sectionend />
-        <ContentList>
-          {t<string, itemProps>('obstacle.execuses', { returnObjects: true }).map(({ name }: itemProps, index: number) => (
-            <ContentListItem dangerouslySetInnerHTML={{__html: name}} key={`execuses-${index}`} square />
-          ))}
-        </ContentList>
+        <Paragraph dangerouslySetInnerHTML={{__html: t('obstacle.description')}} indent />
         <Paragraph dangerouslySetInnerHTML={{__html: t('obstacle.conclusion')}} indent sectionend />
       </Section>
       <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('what.title')}} />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('what.description')}} indent />
         <WhatList>
           {t<string, whatProps>('what.items', { returnObjects: true }).map(({ symbol, name }: whatProps, index: number) => (
             <ListItem nomark key={`what-${index}`}>
@@ -121,20 +110,22 @@ export default function Content() {
         </WhatList>
       </Section>
       <Section as="section">
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('mvp.title')}} />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('mvp.description')}} indent />
-      </Section>
-      <Section as="section">
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('expected.title')}} />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('expected.description')}} indent />
-      </Section>
-      <Section as="section">
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('measure.title')}} />
-        <ContentList>
-          {t<string, itemProps>('measure.methods', { returnObjects: true }).map(({ name }: itemProps, index: number) => (
-            <ContentListItem dangerouslySetInnerHTML={{__html: name}} key={`execuses-${index}`} square />
+        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('gather.title')}} />
+        <Paragraph dangerouslySetInnerHTML={{__html: t('gather.description')}} indent />
+        <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('gather.byLyric')}} />
+        <Paragraph as="div">
+          {
+            keywordLyric.map((keyword, index) => (
+              <BubbleSearch responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: keyword}} key={`keywordlyric-${index}`} />
           ))}
-        </ContentList>
+        </Paragraph>
+        <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('gather.byLyricWithName')}} />
+        <Paragraph as="div" sectionend>
+          {
+            keywordLyricWithMovie.map((keyword, index) => (
+              <BubbleSearch responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: keyword}} key={`keywordlyricwithname-${index}`} />
+          ))}
+        </Paragraph>
       </Section>
       <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('grow.title')}} />
