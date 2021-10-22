@@ -4,7 +4,7 @@
     "title":
       "問題",
     "description":
-      "是否有可能呈現「在電視影劇裡聽到喜歡歌曲」的時刻？"
+      "是否有可能更便利地找到「在電視影劇裡聽到喜歡歌曲」？"
   },
   "obstacle":
   {
@@ -20,7 +20,7 @@
     "title":
       "網站內容",
     "description":
-      "就像許多產品，核心概念成形就公開。即使非常陽春，還是先讓 Google 收錄內容與網址，接著再不斷修正。",
+      "此構想以 60-80 年代的英語經典歌曲開始。就像許多產品，核心概念成形就公開。即使非常陽春，還是先讓 Google 收錄內容與網址，獲得真實訪客，接著再不斷修正。",
     "items":
     [
       {
@@ -33,7 +33,7 @@
         "symbol":
           "♪",
         "name":
-          "歌曲 & 歌詞"
+          "60-80 年代歌曲 &amp; 歌詞"
       },
       {
         "symbol":
@@ -68,6 +68,6 @@
     "title":
       "試試看",
     "description":
-      "<a class=\"paragraph-link\" href=\"https://moment.intersection.tw/songs/heroes\" data-splitbee-event=\"Moment: Try Heroes Link\" target=\"_blank\" rel=\"noopener\">David Bowie 的 Heroes</a> 出現在哪些電視影劇？"
+      "在<a class=\"paragraph-link\" href=\"https://moment.intersection.tw\" data-splitbee-event=\"Moment: Try Link\" target=\"_blank\" rel=\"noopener\">網站上</a>選一首喜歡的歌，發掘那首歌出現在哪些電視影劇。"
   }
 }

@@ -10,7 +10,7 @@ export default function Meta() {
       isReady: true
     },
     {
-      name: 'Website',
+      name: 'Link',
       link: 'https://moment.intersection.tw',
       isReady: true,
       sbevent: 'Moment/Meta: Website Link'
