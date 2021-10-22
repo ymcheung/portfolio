@@ -11,16 +11,16 @@
     "title":
       "Current Search Process &amp; Obstacles",
     "description":
-      "We often use the apps like Soundhound or Shazam to find out the songs upon hearing them. However, we still have to memorize the lyrics and submit them to the search engine most of the time. IMDB is the first stop to look up the detail of movies/dramas. It is hard to find by the lyrics because only song names are mentioned in the pages of a movie or drama.",
+      "We often use the apps like SoundHound or Shazam to find out the songs upon hearing them. However, we still have to memorize the lyrics and submit them to the search engine most of the time.",
     "conclusion":
-      "Therefore, you are probably unsure if it is the song you heard in the movies&sol;drama."
+      "IMDB is the first stop to look up the detail of movies/dramas, but it is hard to find by the lyrics because only song names are mentioned in the pages of a movie or drama. Therefore, you are probably unsure if it is the song you heard in the movies&sol;drama."
   },
   "what":
   {
     "title":
       "What&rsquo;s on the Website?",
     "description":
-      "The idea got started with classic 60-80s songs. Like many products, the website went public when it seemed to work. It was primitive, but inviting search engines to know the content and having real visitors as soon as possible are more important.",
+      "The idea got started with classic 60-80s songs. I built the website to collect how people submitted the keywords. Like many products, the website went public when it seemed to work. It was primitive, but inviting search engines to know the content and having real visitors as soon as possible are more important.",
     "items":
     [
       {
