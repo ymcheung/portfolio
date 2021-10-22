@@ -4,14 +4,14 @@
     "title":
       "Question",
     "description":
-      "How might we increase the convenience of finding out the songs they heard in the movies&sol;dramas?"
+      "How might we increase the convenience of finding out the songs we heard in the movies&sol;dramas?"
   },
   "obstacle":
   {
     "title":
       "Current Search Process &amp; Obstacles",
     "description":
-      "IMDB is the first stop to find out data of movies/dramas. However, it is hard to find by the lyrics because only song names are mentioned in the pages of a movie or drama.",
+      "We often use the apps like Soundhound or Shazam to find out the songs upon hearing them. However, we still have to memorize the lyrics and submit them to the search engine most of the time. IMDB is the first stop to look up the detail of movies/dramas. It is hard to find by the lyrics because only song names are mentioned in the pages of a movie or drama.",
     "conclusion":
       "Therefore, you are probably unsure if it is the song you heard in the movies&sol;drama."
   },
