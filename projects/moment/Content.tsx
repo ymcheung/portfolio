@@ -103,7 +103,7 @@ export default function Content() {
                 <WhatFigureCover>
                   {symbol}
                 </WhatFigureCover>
-                <WhatFigcaption>{name}</WhatFigcaption>
+                <WhatFigcaption dangerouslySetInnerHTML={{__html: name}} />
               </WhatFigure>
             </ListItem>
           ))}

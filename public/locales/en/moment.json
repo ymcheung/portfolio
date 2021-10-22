@@ -4,7 +4,7 @@
     "title":
       "Question",
     "description":
-      "How might we display the moment when hearing the songs you like in the movies/dramas?"
+      "How might we increase the convenience of finding out the songs they heard in the movies&sol;dramas?"
   },
   "obstacle":
   {
@@ -18,9 +18,9 @@
   "what":
   {
     "title":
-      "What&rsquo;s in the Website?",
+      "What&rsquo;s on the Website?",
     "description":
-      "Like many products, the website went public when it seemed to work. It was primitive, but inviting search engines to know the content and having real visitors ASAP are more important.",
+      "The idea got started with classic 60-80s songs. Like many products, the website went public when it seemed to work. It was primitive, but inviting search engines to know the content and having real visitors as soon as possible are more important.",
     "items":
     [
       {
@@ -33,7 +33,7 @@
         "symbol":
           "♪",
         "name":
-          "Songs & Lyrics"
+          "60-80s Songs &amp; Lyrics"
       },
       {
         "symbol":
@@ -68,6 +68,6 @@
     "title":
       "Give It a Try",
     "description":
-      "What are the movies/dramas that <a class=\"paragraph-link\" href=\"https://moment.intersection.tw/songs/heroes\" data-splitbee-event=\"Moment: Try Heroes Link\" target=\"_blank\" rel=\"noopener\">David Bowie&rsquo;s Heroes</a> features?"
+      "Please select a song you like on <a class=\"paragraph-link\" href=\"https://moment.intersection.tw\" data-splitbee-event=\"Moment: Try Link\" target=\"_blank\" rel=\"noopener\">the website</a> and find out what movies/dramas it features."
   }
 }
