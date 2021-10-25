@@ -41,7 +41,7 @@ export default function Meta() {
       <MetaItem>
         <MetaItemTitle project="pie">Languages</MetaItemTitle>
         <MetaItemValue>
-          正體中文, English
+          English, 正體中文
         </MetaItemValue>
       </MetaItem>
       <MetaItem itemspan={{ '@m768': 'full' }}>
