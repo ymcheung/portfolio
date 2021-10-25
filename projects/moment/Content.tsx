@@ -128,11 +128,7 @@ export default function Content() {
         </Paragraph>
         <Paragraph dangerouslySetInnerHTML={{__html: t('gather.question')}} indent sectionend />
       </Section>
-      <Section as="section">
-        <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('grow.title')}} />
-        <Paragraph dangerouslySetInnerHTML={{__html: t('grow.description')}} indent />
-      </Section>
-      <Section as="section">
+      <Section as="section" isgroupend>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prompt.title')}} />
         <Paragraph dangerouslySetInnerHTML={{__html: t('prompt.description')}} indent />
       </Section>

@@ -60,23 +60,9 @@ export default function Content() {
         </Container>
       </FullBlock>
       <Container as="section" responsive={{'@m768': 'max640'}}>
-        <Section>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('implement.title')}} />
-          {t<string, itemProps>('implement.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
-            <React.Fragment key={`doc-${index}`}>
-              <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: name}} />
-              <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />
-            </React.Fragment>
-          ))}
-        </Section>
         <Section isgroupend>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('note.title')}} />
-          {t<string, itemProps>('note.items', { returnObjects: true }).map(({ name, description }: itemProps, index: number) => (
-            <React.Fragment key={`note-${index}`}>
-              <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: name}} />
-              <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />
-            </React.Fragment>
-          ))}
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('document.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('document.description')}} indent />
         </Section>
       </Container>
     </>

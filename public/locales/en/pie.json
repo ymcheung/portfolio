@@ -31,20 +31,6 @@
     "image":
       "The tab bar contains four features: Clockings, Forms, Stats, and Salary."
   },
-  "implement":
-  {
-    "title":
-      "Implementation",
-    "items":
-    [
-      {
-        "name":
-          "Onboarding",
-        "description":
-          "To work as a remote team, the members who will join the project get started with <a class=\"paragraph-link\" href=\"https://www.craft.do/s/WPp0S5oPecqEPc\" data-splitbee-event=\"Pie: Onboarding Document Link\" target=\"_blank\" rel=\"noopener\">onboarding</a>."
-      }
-    ]
-  },
   "flows":
   {
     "mainmenu":
@@ -80,20 +66,13 @@
     "title":
       "Give It a Try",
     "description":
-      "Try the interactions of Pie with <a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">the prototype</a>."
+      "In <a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">the prototype</a>, please imagine that you are approaching your company’s physical office in the morning and ready to clock in."
   },
-  "note":
+  "document":
   {
     "title":
-      "Notable Discussions",
-    "items":
-    [
-      {
-        "name":
-          "Limited Resources for a Side Project",
-        "description":
-          "There are many tasks to accomplish according to Roles &amp; Goals. The project is moving towards a complete UI flow at the moment due to the short of time &amp; resources."
-      }
-    ]
+      "Document",
+    "description":
+      "This is an on-going side project. Please check <a class=\"paragraph-link\" href=\"https://www.craft.do/s/WPp0S5oPecqEPc\" data-splitbee-event=\"Pie: Onboarding Document Link\" target=\"_blank\" rel=\"noopener\">the document</a> for design principles, user journey mapping, and more."
   }
 }
