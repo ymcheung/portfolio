@@ -11,16 +11,16 @@
     "title":
       "Current Search Process &amp; Obstacles",
     "description":
-      "We often use the apps like SoundHound or Shazam to find out the songs upon hearing them. However, we still have to memorize the lyrics and submit them to the search engine most of the time.",
+      "We often use the apps like SoundHound or Shazam to find out the songs upon hearing them. However, we still have to memorize the lyrics and submit them to the search engine most of the time. For example, you <strong>went to the movies</strong>.",
     "conclusion":
-      "IMDB is the first stop to look up the detail of movies/dramas, but it is hard to find by the lyrics because only song names are mentioned in the pages of a movie or drama. Therefore, you are probably unsure if it is the song you heard in the movies&sol;drama."
+      "Talking of the detail of movies/dramas, IMDB is the first stop. But it is hard to find by the lyrics because only song names are mentioned. Therefore, you are probably unsure if it is the song you heard in the movies&sol;drama."
   },
   "what":
   {
     "title":
-      "What&rsquo;s on the Website?",
+      "Idea",
     "description":
-      "The idea got started with classic 60-80s songs. I built the website to collect how people submitted the keywords. Like many products, the website went public when it seemed to work. It was primitive, but inviting search engines to know the content and having real visitors as soon as possible are more important.",
+      "The idea gets started with classic 60-80s songs. I built the website to collect how people submitted the keywords. It contains:",
     "items":
     [
       {
@@ -46,7 +46,7 @@
   "gather":
   {
     "title":
-      "Data Gathering",
+      "Data",
     "description":
       "Based on actual data, many people submitted the keywords in the search engine:",
     "byLyric":
@@ -55,13 +55,6 @@
       "Search the Names of a Movie or Drama with the Lyric They Heard",
     "question":
       "Have you ever searched the keywords mentioned above?"
-  },
-  "grow":
-  {
-    "title":
-      "Growth",
-    "description":
-      "It&rsquo;s expected that more creators in love with 60&rsquo;s to 80&rsquo;s culture will feature these songs in their works."
   },
   "prompt":
   {

@@ -6,7 +6,11 @@ import IconNotReady from '@projects/IconNotReady';
 export default function Meta() {
   const statusItems = [
     {
-      name: 'UI',
+      name: 'User Research',
+      isReady: true
+    },
+    {
+      name: 'UI Design',
       isReady: true
     },
     {
@@ -21,15 +25,15 @@ export default function Meta() {
     <MetaList responsive={{ '@m768': 'half' }}>
       <MetaItem>
         <MetaItemTitle project="moment">Role</MetaItemTitle>
-        <MetaItemValue>Organizer, UI Design, Web Front-End</MetaItemValue>
+        <MetaItemValue>User Research, UI Design, Web Front-End</MetaItemValue>
       </MetaItem>
       <MetaItem>
         <MetaItemTitle project="moment">Team Size</MetaItemTitle>
-        <MetaItemValue>1 UI Design</MetaItemValue>
+        <MetaItemValue>1</MetaItemValue>
       </MetaItem>
       <MetaItem>
         <MetaItemTitle project="moment">Languages</MetaItemTitle>
-        <MetaItemValue>Mostly English</MetaItemValue>
+        <MetaItemValue>English &amp; 正體中文</MetaItemValue>
       </MetaItem>
       <MetaItem itemspan={{ '@m768': 'full' }}>
         <MetaItemTitle project="moment">Status</MetaItemTitle>

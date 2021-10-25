@@ -31,20 +31,6 @@
     "image":
       "Tab Bar 包含 4 項功能：上下班打卡、請假表單、假勤統計與薪資。"
   },
-  "implement":
-  {
-    "title":
-      "實做",
-    "items":
-    [
-      {
-        "name":
-          "新手上路",
-        "description":
-          "以遠距的方式進行，之後加入的成員可以從這份<a class=\"paragraph-link\" href=\"https://www.craft.do/s/kRGlFyjpSWAKUh\" data-splitbee-event=\"Pie: Onboarding Document Link\" target=\"_blank\" rel=\"noopener\">新手上路文件</a>開始。"
-      }
-    ]
-  },
   "flows":
   {
     "mainmenu":
@@ -80,20 +66,13 @@
     "title":
       "試玩",
     "description":
-      "試試看 Pie 的互動流程 <a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">Prototype</a>。"
+      "在<a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">這份 Prototype</a> 裡，請想像早上的時候，你&sol;妳已經在公司的實體辦公室附近，準備好要打卡了。"
   },
-  "note":
+  "document":
   {
     "title":
-      "值得進一步討論",
-    "items":
-    [
-      {
-        "name":
-          "閒暇專案的資源有限",
-        "description":
-          "根據角色與目標，已列出非常多事項可以做。然而，閒暇專案的時間與資源有限，因此現在的目標是完成 UI 流程。"
-      }
-    ]
+      "文件記錄",
+    "description":
+      "這是持續進行中的閒暇專案。有關設計原則、使用者旅程⋯等，請看<a class=\"paragraph-link\" href=\"https://www.craft.do/s/kRGlFyjpSWAKUh\" data-splitbee-event=\"Pie: Onboarding Document Link\" target=\"_blank\" rel=\"noopener\">文件記錄</a>。"
   }
 }
