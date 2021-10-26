@@ -13,7 +13,7 @@
     "description":
       "We often use the apps like SoundHound or Shazam to find out the songs upon hearing them. However, we still have to memorize the lyrics and submit them to the search engine most of the time. For example, you <strong>went to the movies</strong>.",
     "conclusion":
-      "Talking of the detail of movies/dramas, IMDB is the first stop. But it is hard to find by the lyrics because only song names are mentioned. Therefore, you are probably unsure if it is the song you heard in the movies&sol;drama."
+      "Talking of the detail of movies&sol;dramas, IMDB is the first stop. But it is hard to find by the lyrics because only song names are mentioned. Therefore, you are probably unsure if it is the song you heard in the movies&sol;dramas."
   },
   "what":
   {
@@ -27,7 +27,7 @@
         "symbol":
           "🤘",
         "name":
-          "Singers/Bands"
+          "Singers&sol;Bands"
       },
       {
         "symbol":
@@ -39,7 +39,7 @@
         "symbol":
           "🎬 📺 ▶️",
         "name":
-          "Movies/Dramas Appearances"
+          "Movie&sol;Drama Appearances"
       }
     ]
   },
@@ -52,7 +52,7 @@
     "byLyric":
       "Search the Lyric of a Song",
     "byLyricWithName":
-      "Search the Names of a Movie or Drama with the Lyric They Heard",
+      "Search Movie&sol;Drama Names with the Lyric They Heard",
     "question":
       "Have you ever searched the keywords mentioned above?"
   },
@@ -61,6 +61,6 @@
     "title":
       "Give It a Try",
     "description":
-      "Please select a song you like on <a class=\"paragraph-link\" href=\"https://moment.intersection.tw\" data-splitbee-event=\"Moment: Try Link\" target=\"_blank\" rel=\"noopener\">the website</a> and find out what movies/dramas it features."
+      "Please select a song you like on <a class=\"paragraph-link\" href=\"https://moment.intersection.tw\" data-splitbee-event=\"Moment: Try Link\" target=\"_blank\" rel=\"noopener\">the website</a> and find out what movies&sol;dramas it features."
   }
 }

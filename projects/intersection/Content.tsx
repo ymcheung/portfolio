@@ -71,7 +71,7 @@ export default function Content() {
             <Paragraph dangerouslySetInnerHTML={{__html: t('stat.count')}} sectionend />
           </ListItem>
           <ListItem nomark>
-            <ContentTitle featurednumber="normal">3,500+</ContentTitle>
+            <ContentTitle featurednumber="normal">3,600+</ContentTitle>
             <Paragraph dangerouslySetInnerHTML={{__html: t('stat.followers')}} sectionend />
           </ListItem>
         </FeatureList>

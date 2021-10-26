@@ -38,7 +38,6 @@ export const HeadingLayout = styled('div', {
 export const Heading = styled('h2', {
   marginTop: 0,
   fontFamily: '$default',
-  lineHeight: 'calc(0.5rem + 1em)',
 
   variants: {
     nametag: {
@@ -74,12 +73,14 @@ export const Heading = styled('h2', {
         color: 'hsl($shade0)',
         fontSize: '$16',
         fontWeight: 600,
+        lineHeight: '24px'
       },
       itemName: {
         marginBottom: 0,
         color: 'hsl($shade300)',
         fontSize: '$24',
-        fontWeight: 600
+        fontWeight: 600,
+        lineHeight: '32px'
       }
     },
     isitalic: {

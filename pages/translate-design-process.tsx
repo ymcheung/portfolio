@@ -36,7 +36,7 @@ export default function ProjectProcess() {
     name: t('home:activity.process.title', { translate: t('home:verb.translate') }),
     description: t('home:activity.process.description', { retrospect: t('home:verb.retrospect') }),
     datePublished: '2020-08-29',
-    dateModified: '2021-09-23'
+    dateModified: '2021-10-26'
   }
 
   useEffect(() => {
