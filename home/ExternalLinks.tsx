@@ -33,7 +33,7 @@ export default function ExternalLinks() {
         </IconLink>
       </Link>
       <Link href="https://github.com/ymcheung" passHref>
-        <IconLink data-splitbee-event="External Link: Github" target="_blank" rel="noopener">
+        <IconLink data-splitbee-event="External Link: GitHub" target="_blank" rel="noopener">
           <IconGithub />
         </IconLink>
       </Link>
