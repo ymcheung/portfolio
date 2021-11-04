@@ -50,6 +50,9 @@ export const FullBlock = styled('section', {
       pie: {
         backgroundColor: 'hsl($pie0)'
       },
+      moment: {
+        backgroundColor: 'hsl($mtMidnight100)'
+      },
       nuomi: {
         backgroundColor: 'hsl($nuomiBlack0)'
       }

@@ -5,12 +5,6 @@ import { styled } from 'stitches.config';
 import { ContentTitle, Paragraph } from '@components/contentStyles';
 import { GalleryList, GalleryItem } from '@projects/gallery';
 
-const screenshotClocking = '/projects/pie/clockingNone.webp';
-const screenshotForms = '/projects/pie/formsConfirmApply.webp';
-const screenshotStats = '/projects/pie/statsAnnualThisYear.webp';
-const screenshotFormsNew = '/projects/pie/formsNew.webp';
-const screenshotSettings = '/projects/pie/preference.webp';
-
 const PieGalleryList = styled(GalleryList, {
   variants: {
     grid: {
@@ -57,6 +51,12 @@ const PieScreenshotImg = styled(Image, {
 
 export default function Gallery() {
   const { t } = useTranslation('pie');
+
+  const screenshotClocking = '/projects/pie/clockingNone.webp';
+  const screenshotForms = '/projects/pie/formsConfirmApply.webp';
+  const screenshotStats = '/projects/pie/statsAnnualThisYear.webp';
+  const screenshotFormsNew = '/projects/pie/formsNew.webp';
+  const screenshotSettings = '/projects/pie/preference.webp';
 
   return(
     <>

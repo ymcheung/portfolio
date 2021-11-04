@@ -20,7 +20,7 @@
     "title":
       "Idea",
     "description":
-      "The idea gets started with classic 60-80s songs. I built the website to collect how people submitted the keywords. It contains:",
+      "The idea gets started with classic 60-80s songs, which are my favorite. I built the website to collect how people submitted the keywords. It contains:",
     "items":
     [
       {
@@ -31,15 +31,15 @@
       },
       {
         "symbol":
-          "♪",
-        "name":
-          "60-80s Songs &amp; Lyrics"
-      },
-      {
-        "symbol":
           "🎬 📺 ▶️",
         "name":
           "Movie&sol;Drama Appearances"
+      },
+      {
+        "symbol":
+          "♪",
+        "name":
+          "Lyrics"
       }
     ]
   },
