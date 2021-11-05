@@ -53,9 +53,13 @@
   "gather":
   {
     "title":
-      "Data",
+      "Stats",
+    "count":
+      "Search Result Appearances",
+    "asof":
+      "&ast; As of November 2021",
     "description":
-      "Based on actual data, many people submitted the keywords in the search engine:",
+      "Based on the 6,800+ appearances, many people submitted the keywords in the search engine:",
     "byLyric":
       "Search the Lyric of a Song",
     "byLyricWithName":

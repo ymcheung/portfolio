@@ -8,7 +8,8 @@ import { Container, FullBlock, ListItem } from '@components/layout';
 
 import LangSwitch from '@components/LangSwitch';
 
-import { ContentTitle, Section, Paragraph } from '@components/contentStyles';
+import { ContentTitle, Section, Paragraph, ParagraphPostmark } from '@components/contentStyles';
+import { FeatureList, FeaturedNumberMark } from '@projects/featured';
 
 const BubbleSearch = styled('span', {
   display: 'inline-block',
@@ -76,6 +77,7 @@ export default function Content() {
   const { t, i18n } = useTranslation('moment');
 
   const isItalic = i18n.language === 'en';
+  const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
 
   const screenshotMobile = '/projects/moment/mobile.webp';
   const screenshotDesktop = '/projects/moment/desktop.webp';
@@ -139,6 +141,17 @@ export default function Content() {
       <Container as="section" responsive={{'@m768': 'max640'}} space="isGroupEnd">
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('gather.title')}} />
+          <FeatureList space={itemSpace}>
+            <ListItem nomark>
+              <ContentTitle as="strong" featurednumber="normal">
+                6,800+
+                <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
+              </ContentTitle>
+              <Paragraph dangerouslySetInnerHTML={{__html: t('gather.count')}} purpose="suffix" sectionend />
+            </ListItem>
+          </FeatureList>
+        </Section>
+        <Section>
           <Paragraph dangerouslySetInnerHTML={{__html: t('gather.description')}} indent />
           <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('gather.byLyric')}} />
           <Paragraph as="div">
@@ -154,16 +167,19 @@ export default function Content() {
                 <BubbleSearch responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: keyword}} key={`keywordlyricwithname-${index}`} />
             ))}
           </Paragraph>
-          <Paragraph dangerouslySetInnerHTML={{__html: t('gather.question')}} indent sectionend />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('gather.question')}} indent />
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('learned.title')}} />
           <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('learned.fairuse.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('learned.fairuse.description')}} indent />
         </Section>
-        <Section isgroupend>
+        <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prompt.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('prompt.description')}} indent />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('prompt.description')}} indent sectionend />
+        </Section>
+        <Section isgroupend>
+          <ParagraphPostmark dangerouslySetInnerHTML={{__html: t('gather.asof')}} />
         </Section>
       </Container>
     </>
