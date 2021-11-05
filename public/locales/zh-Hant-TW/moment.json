@@ -41,7 +41,14 @@
         "name":
           "歌詞"
       }
-    ]
+    ],
+    "screenshot":
+    {
+      "mobile":
+        "Stayin&rsquo; Alive 在手機上的截圖",
+      "tablet":
+        "Stayin&rsquo; Alive 在平板和桌機上的截圖"
+    }
   },
   "gather":
   {
@@ -55,6 +62,18 @@
       "搜尋電視影劇名稱加上聽到的歌詞片段",
     "question":
       "也有像這樣搜尋過關鍵字嗎？"
+  },
+  "learned":
+  {
+    "title":
+      "做了才知道的事情",
+    "fairuse":
+    {
+      "title":
+        "合理使用專輯封面",
+      "description":
+       "在製作網站版面的時候，不確定是否可以未經許可就使用專輯封面。雖然專輯受到著作權保護，只用低解析度圖片在許多國家屬於合理使用範圍。"
+    }
   },
   "prompt":
   {

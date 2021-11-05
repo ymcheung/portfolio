@@ -127,10 +127,10 @@ export default function Content() {
           <Section isgroupend>
             <WhatScreenshot>
               {screenMobile &&
-                <Image src={screenshotMobile} width={300} height={500} quality={100} alt="" />
+                <Image src={screenshotMobile} width={300} height={500} quality={100} alt={t('what.screenshot.mobile')} />
               }
               {screenTablet &&
-                <Image src={screenshotDesktop} width={640} height={480} quality={100} alt="" />
+                <Image src={screenshotDesktop} width={640} height={480} quality={100} alt={t('what.screenshot.tablet')} />
               }
             </WhatScreenshot>
           </Section>
@@ -155,6 +155,11 @@ export default function Content() {
             ))}
           </Paragraph>
           <Paragraph dangerouslySetInnerHTML={{__html: t('gather.question')}} indent sectionend />
+        </Section>
+        <Section>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('learned.title')}} />
+          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('learned.fairuse.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('learned.fairuse.description')}} indent />
         </Section>
         <Section isgroupend>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prompt.title')}} />
