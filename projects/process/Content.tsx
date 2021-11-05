@@ -6,6 +6,7 @@ import { ListItem, IconList, IconListItem } from '@components/layout';
 import LangSwitch from '@components/LangSwitch';
 
 import { ContentTitle, Section, Paragraph, ParagraphPostmark } from '@components/contentStyles';
+import { FeaturedNumberMark } from '@projects/featured';
 
 const FeatureList = styled('ul', {
   margin: 0,
@@ -39,14 +40,6 @@ const FeatureItem = styled(ListItem, {
   }
 });
 
-const FeaturedNumberMark = styled('sup', {
-  fontFamily: 'inherit',
-  color: 'hsl($shade1200)',
-  fontSize: '$18',
-  fontStyle: 'normal',
-  fontWeight: 400
-});
-
 const RetroIcon = styled('img', {
   width: '36px',
   height: '30px'
@@ -77,12 +70,11 @@ export default function Content() {
             </ContentTitle>
             <div>
               <Paragraph dangerouslySetInnerHTML={{__html: t('worth.position')}} />
-              <ParagraphPostmark dangerouslySetInnerHTML={{__html: t('worth.asof')}} />
             </div>
           </FeatureItem>
         </FeatureList>
       </Section>
-      <Section as="section" isgroupend>
+      <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retro.title')}} />
         <IconList>
           <IconListItem prefixwidth="48" purpose="noTitle">
@@ -97,6 +89,9 @@ export default function Content() {
             </div>
           </IconListItem>
         </IconList>
+      </Section>
+      <Section as="section" isgroupend>
+        <ParagraphPostmark dangerouslySetInnerHTML={{__html: t('worth.asof')}} />
       </Section>
     </>
   );

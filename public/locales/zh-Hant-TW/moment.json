@@ -41,20 +41,43 @@
         "name":
           "歌詞"
       }
-    ]
+    ],
+    "screenshot":
+    {
+      "mobile":
+        "Stayin&rsquo; Alive 在手機上的截圖",
+      "tablet":
+        "Stayin&rsquo; Alive 在平板和桌機上的截圖"
+    }
   },
   "gather":
   {
     "title":
-      "獲得資料",
+      "累積資料",
+    "count":
+      "搜尋結果出現次數",
+    "asof":
+      "&ast; 2021 年 11 月採計",
     "description":
-      "根據實際資料，人們在搜尋引擎輸入的相關字詞有：",
+      "根據這 6,800 筆搜尋資料，人們在搜尋引擎輸入的相關字詞有：",
     "byLyric":
       "搜尋歌詞片段",
     "byLyricWithName":
       "搜尋電視影劇名稱加上聽到的歌詞片段",
     "question":
       "也有像這樣搜尋過關鍵字嗎？"
+  },
+  "learned":
+  {
+    "title":
+      "做了才知道的事情",
+    "fairuse":
+    {
+      "title":
+        "合理使用專輯封面",
+      "description":
+       "在製作網站版面的時候，不確定是否可以未經許可就使用專輯封面。雖然專輯受到著作權保護，只用低解析度圖片在許多國家屬於合理使用範圍。"
+    }
   },
   "prompt":
   {

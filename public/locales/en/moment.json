@@ -41,20 +41,43 @@
         "name":
           "Lyrics"
       }
-    ]
+    ],
+    "screenshot":
+    {
+      "mobile":
+        "Screenshot of Stayin’ Alive in Mobile Devices",
+      "tablet":
+        "Screenshot of Stayin’ Alive in Tablet and Desktop Devices"
+    }
   },
   "gather":
   {
     "title":
-      "Data",
+      "Stats",
+    "count":
+      "Search Result Appearances",
+    "asof":
+      "&ast; As of November 2021",
     "description":
-      "Based on actual data, many people submitted the keywords in the search engine:",
+      "Based on the 6,800+ appearances, many people submitted the keywords in the search engine:",
     "byLyric":
       "Search the Lyric of a Song",
     "byLyricWithName":
       "Search Movie&sol;Drama Names with the Lyric They Heard",
     "question":
       "Have you ever searched the keywords mentioned above?"
+  },
+  "learned":
+  {
+    "title":
+      "What I Have Learned",
+    "fairuse":
+    {
+      "title":
+        "Fair Use of the Album Covers",
+      "description":
+        "I was not sure if I could use the album covers without permission when building the website layout. They are subject to copyright, but fair use laws in many countries cover the use of low-resolution ones."
+    }
   },
   "prompt":
   {

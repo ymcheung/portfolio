@@ -92,6 +92,10 @@ export const Paragraph = styled('p', {
         fontSize: '$24',
         lineHeight: '32px',
       },
+      suffix: {
+        fontSize: '$14',
+        lineHeight: '16px'
+      }
     },
     scheme: {
       default: {

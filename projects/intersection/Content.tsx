@@ -6,24 +6,7 @@ import { ListItem, IconList, IconListItem } from '@components/layout';
 import LangSwitch from '@components/LangSwitch';
 
 import { ContentTitle, Section, Paragraph, ParagraphPostmark } from '@components/contentStyles';
-
-const FeatureList = styled('ul', {
-  display: 'grid',
-  grid: 'auto / repeat(auto-fill, minmax(48px, 140px))',
-  margin: 0,
-  padding: 0,
-
-  variants: {
-    space: {
-      normal: {
-        columnGap: '32px'
-      },
-      wide: {
-        columnGap: '48px'
-      }
-    }
-  }
-});
+import { FeatureList } from '@projects/featured';
 
 const IconListImage = styled('img', {
   size: '$24',
@@ -68,11 +51,11 @@ export default function Content() {
         <FeatureList space={itemSpace}>
           <ListItem nomark>
             <ContentTitle featurednumber="normal">40+</ContentTitle>
-            <Paragraph dangerouslySetInnerHTML={{__html: t('stat.count')}} sectionend />
+            <Paragraph dangerouslySetInnerHTML={{__html: t('stat.count')}} purpose="suffix" sectionend />
           </ListItem>
           <ListItem nomark>
             <ContentTitle featurednumber="normal">3,600+</ContentTitle>
-            <Paragraph dangerouslySetInnerHTML={{__html: t('stat.followers')}} sectionend />
+            <Paragraph dangerouslySetInnerHTML={{__html: t('stat.followers')}} purpose="suffix" sectionend />
           </ListItem>
         </FeatureList>
       </Section>
