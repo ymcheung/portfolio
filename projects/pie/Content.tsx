@@ -1,5 +1,3 @@
-import React from 'react';
-import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { styled } from 'stitches.config';
 
@@ -18,12 +16,6 @@ const TabBarRescue = styled('img', {
   minWidth: '288px',
   maxWidth: '395px'
 });
-
-type itemProps = {
-  [x: string]: any;
-  name: string;
-  description: string;
-};
 
 export default function Content() {
   const { t, i18n } = useTranslation('pie');

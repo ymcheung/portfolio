@@ -38,7 +38,7 @@ export default function ProjectMoment() {
     name: t('home:project.moment.title', { explore: t('home:verb.explore') }),
     description: t('home:project.moment.description'),
     datePublished: '2020-08-29',
-    dateModified: '2021-10-25'
+    dateModified: '2021-11-05'
   }
 
   useEffect(() => {
@@ -66,7 +66,7 @@ export default function ProjectMoment() {
         canonical={router.pathname}
       />
       <Cover />
-      <Container as="article" responsive={{'@m768': 'max640'}} space="isGroupEnd">
+      <Container as="article" responsive={{'@m768': 'max640'}}>
         <Section as="section">
           <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
             <div>
@@ -78,8 +78,8 @@ export default function ProjectMoment() {
           </HeadingLayout>
           <Meta />
         </Section>
-        <Content />
       </Container>
+      <Content />
       <Nav
         hasNext="Nuomi&rsquo;s Portfolio"
         nextSlug="nuomi"
