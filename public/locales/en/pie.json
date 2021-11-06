@@ -26,10 +26,21 @@
   {
     "title":
       "Redesign the Navigation",
+    "questions":
+    {
+      "whereAmI":
+        "Where am I?",
+      "whereElse":
+        "Where else can I go?",
+      "whatThere":
+        "What will I find when I get there?"
+    },
     "description":
-      "Tab Bar (Bottom Navigation) fulfills &ldquo;Where am I?&rdquo;, &ldquo;Where else can I go?&rdquo;, and &ldquo;What will I find when I get there?&rdquo; requirements&ast; for the navigation design. The Main Menu design, on the other hand, allows us to go back.",
+      "Tab Bar (Bottom Navigation) fulfills &ldquo;{{amI}}&rdquo;, &ldquo;{{else}}&rdquo;, and &ldquo;{{there}}&rdquo; requirements&ast; for the navigation design. The Main Menu design, on the other hand, allows us to go back.",
     "image":
-      "The tab bar contains four features: Clockings, Forms, Stats, and Salary."
+      "The tab bar contains four features: Clockings, Forms, Stats, and Salary.",
+    "postmark":
+      "&ast; Source: &ldquo;Tab Bars are the new Hamburger Menus&rdquo; by Fabian Sebastian"
   },
   "flows":
   {

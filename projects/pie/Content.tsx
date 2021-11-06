@@ -4,7 +4,7 @@ import { styled } from 'stitches.config';
 import LangSwitch from '@components/LangSwitch';
 
 import { Container, FullBlock } from '@components/layout';
-import { ContentTitle, Section, Paragraph } from '@components/contentStyles';
+import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 
 import Graph from './Graph';
 import Gallery from './Gallery';
@@ -45,16 +45,24 @@ export default function Content() {
         <Container responsive={{'@m768': 'max640'}}>
           <Section>
             <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.title')}} />
-            <Paragraph scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.description')}} indent />
+            <Paragraph scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.description', {
+                amI: t('nav.questions.whereAmI'),
+                else: t('nav.questions.whereElse'),
+                there: t('nav.questions.whatThere')
+            })}} indent />
             <TabBarRescue src={tabBarDark.src} alt={t('nav.image')} />
           </Section>
           <Gallery />
         </Container>
       </FullBlock>
       <Container as="section" responsive={{'@m768': 'max640'}}>
-        <Section isgroupend>
+        <Section has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('document.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('document.description')}} indent />
+        </Section>
+        <Section isgroupend>
+          <PostMarksHr />
+          <ParagraphPostmark dangerouslySetInnerHTML={{__html: t('nav.postmark')}} />
         </Section>
       </Container>
     </>
