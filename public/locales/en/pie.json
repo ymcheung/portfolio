@@ -22,12 +22,12 @@
     "content":
       "How might we simplify the flows of the routine tasks in a clock-in app?"
   },
-  "rescue":
+  "nav":
   {
     "title":
-      "Tab Bar to the Rescue",
+      "Redesign the Navigation",
     "description":
-      "A tab bar at the screen bottom is a popular UI pattern. It skips the &ldquo;Going Back to Main Menu&rdquo; step.",
+      "Tab Bar (Bottom Navigation) fulfills &ldquo;Where am I?&rdquo;, &ldquo;Where else can I go?&rdquo;, and &ldquo;What will I find when I get there?&rdquo; requirements&ast; for the navigation design. The Main Menu design, on the other hand, allows us to go back.",
     "image":
       "The tab bar contains four features: Clockings, Forms, Stats, and Salary."
   },

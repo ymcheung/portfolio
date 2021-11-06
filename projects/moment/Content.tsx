@@ -8,7 +8,7 @@ import { Container, FullBlock, ListItem } from '@components/layout';
 
 import LangSwitch from '@components/LangSwitch';
 
-import { ContentTitle, Section, Paragraph, ParagraphPostmark } from '@components/contentStyles';
+import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 import { FeatureList, FeaturedNumberMark } from '@projects/featured';
 
 const BubbleSearch = styled('span', {
@@ -174,11 +174,12 @@ export default function Content() {
           <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('learned.fairuse.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('learned.fairuse.description')}} indent />
         </Section>
-        <Section>
+        <Section has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prompt.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('prompt.description')}} indent sectionend />
         </Section>
         <Section isgroupend>
+          <PostMarksHr />
           <ParagraphPostmark dangerouslySetInnerHTML={{__html: t('gather.asof')}} />
         </Section>
       </Container>

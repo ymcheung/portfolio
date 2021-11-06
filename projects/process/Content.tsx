@@ -5,7 +5,7 @@ import { ListItem, IconList, IconListItem } from '@components/layout';
 
 import LangSwitch from '@components/LangSwitch';
 
-import { ContentTitle, Section, Paragraph, ParagraphPostmark } from '@components/contentStyles';
+import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 import { FeaturedNumberMark } from '@projects/featured';
 
 const FeatureList = styled('ul', {
@@ -74,7 +74,7 @@ export default function Content() {
           </FeatureItem>
         </FeatureList>
       </Section>
-      <Section as="section">
+      <Section as="section" has="postmarks">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retro.title')}} />
         <IconList>
           <IconListItem prefixwidth="48" purpose="noTitle">
@@ -91,6 +91,7 @@ export default function Content() {
         </IconList>
       </Section>
       <Section as="section" isgroupend>
+        <PostMarksHr />
         <ParagraphPostmark dangerouslySetInnerHTML={{__html: t('worth.asof')}} />
       </Section>
     </>

@@ -44,9 +44,9 @@ export default function Content() {
       <FullBlock project="pie">
         <Container responsive={{'@m768': 'max640'}}>
           <Section>
-            <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('rescue.title')}} />
-            <Paragraph scheme="mono" dangerouslySetInnerHTML={{__html: t('rescue.description')}} indent />
-            <TabBarRescue src={tabBarDark.src} alt={t('rescue.image')} />
+            <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.title')}} />
+            <Paragraph scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.description')}} indent />
+            <TabBarRescue src={tabBarDark.src} alt={t('nav.image')} />
           </Section>
           <Gallery />
         </Container>

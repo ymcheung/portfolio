@@ -189,7 +189,7 @@ export const dark = createTheme({
     activityHyphen: '$shade1000',
 
     homeLoveUIText: '$shade1500',
-    footerSeparate: '$shade1200',
+    footerSeparate: '$shade1400',
     schemeIconDarkBg: '$shade1500',
     schemeIconLightBg: '$shade1400',
 
