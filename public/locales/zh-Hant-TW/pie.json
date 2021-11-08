@@ -22,34 +22,6 @@
     "content":
       "是否可以簡化上下班打卡例行工作所需的步驟？"
   },
-  "nav":
-  {
-    "title":
-      "重新設計導覽模式",
-    "mainMenu":
-      "主選單",
-    "primary":
-      "主要事項",
-    "goBack":
-      "回去",
-    "last":
-      "上一個畫面",
-    "questions":
-    {
-      "whereAmI":
-        "現在在哪？",
-      "whereElse":
-        "還可以去哪裡？",
-      "whatThere":
-        "到那邊會有什麼？"
-    },
-    "description":
-      "Tab Bar (Bottom Navigation) 滿足「{{amI}}」、「{{else}}」以及「{{there}}」的導覽設計*，而主選單的設計只能回到上一頁。",
-    "image":
-      "Tab Bar 包含 4 項功能：上下班打卡、請假表單、假勤統計與薪資。",
-    "postmark":
-      "&ast; 來源：Tab Bars are the new Hamburger Menus，作者：Fabian Sebastian。"
-  },
   "flows":
   {
     "mainmenu":
@@ -67,10 +39,40 @@
     "screen":
       "{{view}}畫面"
   },
+  "nav":
+  {
+    "title":
+      "重新設計導覽模式",
+    "mainMenu":
+      "主選單",
+    "primary":
+      "主要事項",
+    "goBack":
+      "回上一個畫面",
+    "last":
+      "上一個畫面",
+    "questions":
+    {
+      "whereAmI":
+        "現在在哪？",
+      "whereElse":
+        "還可以去哪裡？",
+      "whatThere":
+        "到那邊會有什麼？"
+    },
+    "description":
+      "Tab Bar (Bottom Navigation) 滿足「{{amI}}」、「{{else}}」以及「{{there}}」的導覽設計*，而主選單的設計只能回到上一頁。",
+    "postmark":
+      "&ast; 來源：Tab Bars are the new Hamburger Menus，作者：Fabian Sebastian。"
+  },
   "gallery":
   {
     "title":
       "仔細看",
+    "tabBar":
+      "Tab Bar 包含 4 項功能：上下班打卡、請假表單、假勤統計與薪資。",
+    "selected":
+      "部份截圖",
     "clockin":
       "上下班打卡",
     "forms":

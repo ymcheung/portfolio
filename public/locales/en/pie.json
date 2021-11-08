@@ -22,6 +22,23 @@
     "content":
       "How might we simplify the flows of the routine tasks in a clock-in app?"
   },
+  "flows":
+  {
+    "mainmenu":
+      "Main Menu",
+    "clockin":
+      "Clock-In",
+    "clockin_done":
+      "Clocked-In",
+    "clockin_withConfirm":
+      "{{clockin}} + {{confirmform}}",
+    "confirmform":
+      "Confirm Leave Forms",
+    "confirmform_done":
+      "Confirmed",
+    "screen":
+      "{{view}} Screen"
+  },
   "nav":
   {
     "title":
@@ -45,32 +62,17 @@
     },
     "description":
       "Tab Bar (Bottom Navigation) fulfills &ldquo;{{amI}}&rdquo;, &ldquo;{{else}}&rdquo;, and &ldquo;{{there}}&rdquo; requirements&ast; for the navigation design. The Main Menu design, on the other hand, allows us to go back.",
-    "image":
-      "The tab bar contains four features: Clockings, Forms, Stats, and Salary.",
     "postmark":
       "&ast; Source: &ldquo;Tab Bars are the new Hamburger Menus&rdquo; by Fabian Sebastian"
-  },
-  "flows":
-  {
-    "mainmenu":
-      "Main Menu",
-    "clockin":
-      "Clock-In",
-    "clockin_done":
-      "Clocked-In",
-    "clockin_withConfirm":
-      "{{clockin}} + {{confirmform}}",
-    "confirmform":
-      "Confirm Leave Forms",
-    "confirmform_done":
-      "Confirmed",
-    "screen":
-      "{{view}} Screen"
   },
   "gallery":
   {
     "title":
       "Take a Closer Look",
+    "tabBar":
+      "The tab bar contains four features: Clockings, Forms, Stats, and Salary.",
+    "selected":
+      "Selected Screenshots",
     "clockin":
       "Clock-In&sol;Out",
     "forms":

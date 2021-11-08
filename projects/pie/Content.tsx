@@ -12,14 +12,6 @@ import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from
 import Graph from './Graph';
 import Gallery from './Gallery';
 
-import tabBarDark from '/public/projects/pie/tabBarDark.jpg';
-
-const TabBarRescue = styled('img', {
-  width: '100%',
-  minWidth: '288px',
-  maxWidth: '395px'
-});
-
 const CompareTable = styled('table', {
   tableLayout: 'fixed',
   overflowX: 'auto',
@@ -135,7 +127,6 @@ export default function Content() {
                 else: t('nav.questions.whereElse'),
                 there: t('nav.questions.whatThere')
             })}} indent />
-            <TabBarRescue src={tabBarDark.src} alt={t('nav.image')} />
           </Section>
           <Section>
             <CompareTable responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
