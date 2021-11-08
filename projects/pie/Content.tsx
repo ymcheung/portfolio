@@ -4,6 +4,7 @@ import { styled } from 'stitches.config';
 import LangSwitch from '@components/LangSwitch';
 
 import IconCheck from './IconCheck';
+import IconHyphen from '@home/icons/IconHyphen';
 
 import { Container, FullBlock } from '@components/layout';
 import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
@@ -30,32 +31,40 @@ const CompareTable = styled('table', {
         width: '100%'
       },
       tablet: {
-        maxWidth: '520px'
+        width: '560px'
       }
     }
   }
 });
 
 const CompareRow = styled('tr', {
-  whiteSpace: 'nowrap'
-  // variants: {
-  //   position: {
-  //     thead: {
-
-  //     },
-  //     tbody: {
-        
-  //     }
-  //   }
-  // }
+  background: `linear-gradient(
+    to left,
+    hsl($monoContentGradient) 0%,
+    hsla($monoContentGradient, 0.987) 8.1%,
+    hsla($monoContentGradient, 0.951) 15.5%,
+    hsla($monoContentGradient, 0.896) 22.5%,
+    hsla($monoContentGradient, 0.825) 29%,
+    hsla($monoContentGradient, 0.741) 35.3%,
+    hsla($monoContentGradient, 0.648) 41.2%,
+    hsla($monoContentGradient, 0.55) 47.1%,
+    hsla($monoContentGradient, 0.45) 52.9%,
+    hsla($monoContentGradient, 0.352) 58.8%,
+    hsla($monoContentGradient, 0.259) 64.7%,
+    hsla($monoContentGradient, 0.175) 71%,
+    hsla($monoContentGradient, 0.104) 77.5%,
+    hsla($monoContentGradient, 0.049) 84.5%,
+    hsla($monoContentGradient, 0.013) 91.9%,
+    hsla($monoContentGradient, 0) 100%
+  )`
 });
 
 const CompareCell = styled('td', {
-  paddingTop: '$4',
-  paddingBottom: '$12',
-  paddingLeft: 0,
+  paddingTop: '$8',
+  paddingBottom: '$8',
   fontFamily: '$default',
   lineHeight: '20px',
+  verticalAlign: 'center',
 
   variants: {
     purpose: {
@@ -72,7 +81,8 @@ const CompareCell = styled('td', {
     question: {
       mobile: {
         width: '144px',
-        paddingRight: '$16',
+        paddingRight: '$8',
+        paddingLeft: 0,
         fontWeight: 400
       },
       tablet: {
@@ -82,7 +92,11 @@ const CompareCell = styled('td', {
     answer: {
       mobile: {
         width: '100px',
-        paddingRight: '$16'
+        paddingRight: 0,
+        paddingLeft: '$8'
+      },
+      tablet: {
+        width: '132px'
       }
     }
   }
@@ -125,25 +139,25 @@ export default function Content() {
           </Section>
           <Section>
             <CompareTable responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
-              <tr>
+              <CompareRow>
                 <CompareCell as="th" purpose="title" question={{'@initial': 'mobile', '@m768': 'tablet'}} />
-                <CompareCell as="th" purpose="title" answer={{'@initial': 'mobile'}}>Tab Bar</CompareCell>
-                <CompareCell as="th" purpose="title" answer={{'@initial': 'mobile'}} dangerouslySetInnerHTML={{__html: t('nav.mainMenu')}} />
-              </tr>
+                <CompareCell as="th" purpose="title" answer={{'@initial': 'mobile', '@m768': 'tablet'}}>Tab Bar</CompareCell>
+                <CompareCell as="th" purpose="title" answer={{'@initial': 'mobile', '@m768': 'tablet'}} dangerouslySetInnerHTML={{__html: t('nav.mainMenu')}} />
+              </CompareRow>
               <tr>
                 <CompareCell as="th" purpose="title" question={{'@initial': 'mobile', '@m768': 'tablet'}} dangerouslySetInnerHTML={{__html: t('nav.questions.whereAmI')}} />
-                <CompareCell purpose="description"><IconCheck purpose="yes" /></CompareCell>
-                <CompareCell purpose="description"><IconCheck purpose="yes" /></CompareCell>
+                <CompareCell answer={{'@initial': 'mobile', '@m768': 'tablet'}} purpose="description"><IconCheck purpose="yes" /></CompareCell>
+                <CompareCell answer={{'@initial': 'mobile', '@m768': 'tablet'}} purpose="description"><IconCheck purpose="yes" /></CompareCell>
               </tr>
               <tr>
                 <CompareCell as="th" purpose="title" question={{'@initial': 'mobile', '@m768': 'tablet'}} dangerouslySetInnerHTML={{__html: t('nav.questions.whereElse')}} />
-                <CompareCell purpose="description"><IconCheck purpose="yes" />{t('nav.primary')}</CompareCell>
-                <CompareCell purpose="description">{t('nav.goBack', { mainMenu: t('nav.mainMenu') })}</CompareCell>
+                <CompareCell answer={{'@initial': 'mobile', '@m768': 'tablet'}} purpose="description"><IconCheck purpose="yes" />{t('nav.primary')}</CompareCell>
+                <CompareCell answer={{'@initial': 'mobile', '@m768': 'tablet'}} purpose="description"><IconHyphen purpose="yes" />{t('nav.goBack')}</CompareCell>
               </tr>
               <tr>
                 <CompareCell as="th" purpose="title" question={{'@initial': 'mobile', '@m768': 'tablet'}} dangerouslySetInnerHTML={{__html: t('nav.questions.whatThere')}} />
-                <CompareCell purpose="description"><IconCheck purpose="yes" /></CompareCell>
-                <CompareCell purpose="description">{t('nav.mainMenu')}</CompareCell>
+                <CompareCell answer={{'@initial': 'mobile', '@m768': 'tablet'}} purpose="description"><IconCheck purpose="yes" /></CompareCell>
+                <CompareCell answer={{'@initial': 'mobile', '@m768': 'tablet'}} purpose="description">{t('nav.last')}</CompareCell>
               </tr>
             </CompareTable>
           </Section>

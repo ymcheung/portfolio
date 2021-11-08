@@ -31,7 +31,9 @@
     "primary":
       "主要事項",
     "goBack":
-      "回{{mainMenu}}",
+      "回去",
+    "last":
+      "上一個畫面",
     "questions":
     {
       "whereAmI":

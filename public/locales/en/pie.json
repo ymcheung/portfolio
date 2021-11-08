@@ -31,7 +31,9 @@
     "primary":
       "Primary Tasks",
     "goBack":
-      "Go Back to {{mainMenu}}",
+      "Go Back",
+    "last":
+      "Last Screen",
     "questions":
     {
       "whereAmI":
