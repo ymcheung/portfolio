@@ -5,7 +5,7 @@ import { ListItem } from '@components/layout';
 import { ContentTitle, GraphCaption } from '@components/contentStyles';
 
 import IconArrowThen from '@projects/pie/IconArrowThen';
-import IconFinish from '@projects/pie/IconFinish';
+import IconCheck from '@projects/pie/IconCheck';
 
 import IconMainMenu from '@projects/pie/inUse/IconMainMenu';
 import IconFunctions from '@projects/pie/inUse/IconFunctions';
@@ -87,7 +87,7 @@ export default function Graph() {
           </GraphFigure>
         </ListItem>
         <ListItem nomark>
-          <IconFinish />
+          <IconCheck purpose="finish" />
         </ListItem>
       </GraphGrid>
       <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('flows.clockin',
@@ -154,7 +154,7 @@ export default function Graph() {
           </GraphFigure>
         </ListItem>
         <ListItem nomark>
-          <IconFinish />
+          <IconCheck purpose="finish" />
         </ListItem>
       </GraphGrid>
     </>

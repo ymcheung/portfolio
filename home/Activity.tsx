@@ -19,7 +19,7 @@ export default function Activity() {
         <ListItem nomark>
           <Link href="/intersection" passHref>
             <HomeItemLink asactivity={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-              <IconHyphen hideintablet={{ '@m768': true }} />
+              <IconHyphen purpose="activity" hideintablet={{ '@m768': true }} />
               <Heading position="homeItemName">
                 {t('activity.intersection.title', { translate: t('verb.translate')})}
                 &nbsp;
@@ -32,7 +32,7 @@ export default function Activity() {
         <ListItem nomark>
           <Link href="/translate-design-process" passHref>
             <HomeItemLink asactivity={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-              <IconHyphen hideintablet={{ '@m768': true }} />
+              <IconHyphen purpose="activity" hideintablet={{ '@m768': true }} />
               <Heading position="homeItemName">
                 {t('activity.process.title', { translate: t('verb.translate')})}
                 &nbsp;

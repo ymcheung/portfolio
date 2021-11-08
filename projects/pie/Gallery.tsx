@@ -2,8 +2,17 @@ import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import { styled } from 'stitches.config';
 
-import { ContentTitle, Paragraph } from '@components/contentStyles';
+import { Section, ContentTitle, Paragraph } from '@components/contentStyles';
 import { GalleryList, GalleryItem } from '@projects/gallery';
+
+import tabBarDark from '/public/projects/pie/tabBarDark.jpg';
+
+const TabBarRescue = styled('img', {
+  width: '100%',
+  minWidth: '288px',
+  maxWidth: '395px',
+  marginBottom: '$16'
+});
 
 const PieGalleryList = styled(GalleryList, {
   variants: {
@@ -60,61 +69,68 @@ export default function Gallery() {
 
   return(
     <>
-      <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('gallery.title')}} />
-      <PieGalleryList responsive={{ '@m768': 'tablet' }} grid={{ '@m768': 'tablet' }}>
-        <PieGalleryItem item={{ '@m768': 'clocking' }} nomark>
-          <PieScreenshotImg src={screenshotClocking}
-            layout="responsive"
-            width={256}
-            height={455}
-            alt=""
-            quality={92}
-            loading="lazy"
-          />
-        </PieGalleryItem>
-        <PieGalleryItem item={{ '@m768': 'forms' }} nomark>
-          <PieScreenshotImg src={screenshotForms}
-            layout="responsive"
-            width={256}
-            height={455}
-            alt=""
-            quality={92}
-            loading="lazy"
-          />
-        </PieGalleryItem>
-        <PieGalleryItem item={{ '@m768': 'stats' }} nomark>
-          <PieScreenshotImg src={screenshotStats}
-            layout="responsive"
-            width={256}
-            height={455}
-            alt=""
-            quality={92}
-            loading="lazy"
-          />
-        </PieGalleryItem>
-        <PieGalleryItem item={{ '@m768': 'formsnew' }} nomark>
-          <PieScreenshotImg src={screenshotFormsNew}
-            layout="responsive"
-            width={256}
-            height={455}
-            alt=""
-            quality={92}
-            loading="lazy"
-          />
-        </PieGalleryItem>
-        <PieGalleryItem item={{ '@m768': 'settings' }} nomark>
-          <PieScreenshotImg src={screenshotSettings}
-            layout="responsive"
-            width={256}
-            height={455}
-            alt=""
-            quality={92}
-            loading="lazy"
-          />
-        </PieGalleryItem>
-      </PieGalleryList>
-      <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
-      <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.description')}} />
+      <Section>
+        <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('gallery.title')}} />
+        <ContentTitle purpose="paragraph" scheme="mono">Tab Bar</ContentTitle>
+        <TabBarRescue src={tabBarDark.src} loading="lazy" alt={t('gallery.tabBar')} />
+        <ContentTitle purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('gallery.selected')}} />
+        <PieGalleryList responsive={{ '@m768': 'tablet' }} grid={{ '@m768': 'tablet' }}>
+          <PieGalleryItem item={{ '@m768': 'clocking' }} nomark>
+            <PieScreenshotImg src={screenshotClocking}
+              layout="responsive"
+              width={256}
+              height={455}
+              alt=""
+              quality={92}
+              loading="lazy"
+            />
+          </PieGalleryItem>
+          <PieGalleryItem item={{ '@m768': 'forms' }} nomark>
+            <PieScreenshotImg src={screenshotForms}
+              layout="responsive"
+              width={256}
+              height={455}
+              alt=""
+              quality={92}
+              loading="lazy"
+            />
+          </PieGalleryItem>
+          <PieGalleryItem item={{ '@m768': 'stats' }} nomark>
+            <PieScreenshotImg src={screenshotStats}
+              layout="responsive"
+              width={256}
+              height={455}
+              alt=""
+              quality={92}
+              loading="lazy"
+            />
+          </PieGalleryItem>
+          <PieGalleryItem item={{ '@m768': 'formsnew' }} nomark>
+            <PieScreenshotImg src={screenshotFormsNew}
+              layout="responsive"
+              width={256}
+              height={455}
+              alt=""
+              quality={92}
+              loading="lazy"
+            />
+          </PieGalleryItem>
+          <PieGalleryItem item={{ '@m768': 'settings' }} nomark>
+            <PieScreenshotImg src={screenshotSettings}
+              layout="responsive"
+              width={256}
+              height={455}
+              alt=""
+              quality={92}
+              loading="lazy"
+            />
+          </PieGalleryItem>
+        </PieGalleryList>
+      </Section>
+      <Section>
+        <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
+        <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.description')}} />
+      </Section>
     </>
   )
 }

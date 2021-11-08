@@ -22,15 +22,6 @@
     "content":
       "How might we simplify the flows of the routine tasks in a clock-in app?"
   },
-  "rescue":
-  {
-    "title":
-      "Tab Bar to the Rescue",
-    "description":
-      "A tab bar at the screen bottom is a popular UI pattern. It skips the &ldquo;Going Back to Main Menu&rdquo; step.",
-    "image":
-      "The tab bar contains four features: Clockings, Forms, Stats, and Salary."
-  },
   "flows":
   {
     "mainmenu":
@@ -48,10 +39,40 @@
     "screen":
       "{{view}} Screen"
   },
+  "nav":
+  {
+    "title":
+      "Redesign the Navigation",
+    "mainMenu":
+      "Main Menu",
+    "primary":
+      "Primary Tasks",
+    "goBack":
+      "Go Back",
+    "last":
+      "Last Screen",
+    "questions":
+    {
+      "whereAmI":
+        "Where am I?",
+      "whereElse":
+        "Where else can I go?",
+      "whatThere":
+        "What will I find when I get there?"
+    },
+    "description":
+      "Tab Bar (Bottom Navigation) fulfills &ldquo;{{amI}}&rdquo;, &ldquo;{{else}}&rdquo;, and &ldquo;{{there}}&rdquo; requirements&ast; for the navigation design. The Main Menu design, on the other hand, allows us to go back.",
+    "postmark":
+      "&ast; Source: &ldquo;Tab Bars are the new Hamburger Menus&rdquo; by Fabian Sebastian"
+  },
   "gallery":
   {
     "title":
       "Take a Closer Look",
+    "tabBar":
+      "The tab bar contains four features: Clockings, Forms, Stats, and Salary.",
+    "selected":
+      "Selected Screenshots",
     "clockin":
       "Clock-In&sol;Out",
     "forms":

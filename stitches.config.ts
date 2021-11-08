@@ -69,6 +69,7 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       themeNuomi: '$shade1600',
 
       monoContentTitle: '$shade1500',
+      monoContentGradient: '$shade100',
       monoContentParagraph: '$shade1200',
       monoContentLink: '$shade1200',
 
@@ -189,7 +190,7 @@ export const dark = createTheme({
     activityHyphen: '$shade1000',
 
     homeLoveUIText: '$shade1500',
-    footerSeparate: '$shade1200',
+    footerSeparate: '$shade1400',
     schemeIconDarkBg: '$shade1500',
     schemeIconLightBg: '$shade1400',
 
@@ -206,6 +207,7 @@ export const dark = createTheme({
     themeNuomi: '$nuomiBlack0',
 
     monoContentTitle: '$shade100',
+    monoContentGradient: '$shade1500',
     monoContentParagraph: '$shade600',
     monoContentLink: '$shade600',
 

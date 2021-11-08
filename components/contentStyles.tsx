@@ -67,14 +67,23 @@ export const ContentTitle = styled('h2', {
 });
 
 export const Section = styled('div', {
-  marginBottom: '$24',
-
   variants: {
+    has: {
+      siblings: {
+        marginBottom: '$24'
+      },
+      postmarks: {
+        marginBottom: '48px'
+      }
+    },
     isgroupend: {
       true: {
-        margin: 0
+        marginBottom: 0
       }
     }
+  },
+  defaultVariants: {
+    has: 'siblings'
   }
 });
 
@@ -151,6 +160,14 @@ export const GraphCaption = styled('figcaption', {
   defaultVariants: {
     scheme: 'default'
   }
+});
+
+export const PostMarksHr = styled('hr', {
+  margin: '0 auto $8 0',
+  border: 0,
+  borderBottomColor: 'hsl($shade1400)',
+  borderBottomWidth: '1px',
+  borderBottomStyle: 'solid'
 });
 
 export const ParagraphPostmark = styled('span', {
