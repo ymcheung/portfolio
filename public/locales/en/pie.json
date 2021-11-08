@@ -26,6 +26,12 @@
   {
     "title":
       "Redesign the Navigation",
+    "mainMenu":
+      "Main Menu",
+    "primary":
+      "Primary Tasks",
+    "goBack":
+      "Go Back to {{mainMenu}}",
     "questions":
     {
       "whereAmI":

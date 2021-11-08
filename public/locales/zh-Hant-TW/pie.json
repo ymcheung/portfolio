@@ -26,6 +26,12 @@
   {
     "title":
       "重新設計導覽模式",
+    "mainMenu":
+      "主選單",
+    "primary":
+      "主要事項",
+    "goBack":
+      "回{{mainMenu}}",
     "questions":
     {
       "whereAmI":
