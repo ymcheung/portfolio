@@ -7,7 +7,7 @@ import { AUTHOR, DESCRIPTION } from 'constant';
 import { Container, ListItem } from '@components/layout';
 import { Heading } from '@components/headings';
 
-import IconTaiwan from './icons/IconTaiwan';
+import IconLangSwitch from '@elements/IconLangSwitch';
 import IconFigma from './icons/IconFigma';
 import IconCSS from './icons/IconCSS';
 import IconReact from './icons/IconReact';
@@ -87,8 +87,8 @@ export default function NameHeader() {
           <DescriptionText>{DESCRIPTION}</DescriptionText>
         </ListItem>
         <ListItem nomark>
-          <DescriptionIcon><IconTaiwan /></DescriptionIcon>
-          <DescriptionText>Taiwan</DescriptionText>
+          <DescriptionIcon><IconLangSwitch /></DescriptionIcon>
+          <DescriptionText>Translate Articles and Websites</DescriptionText>
         </ListItem>
       </DescriptionList>
       <ToolsList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
