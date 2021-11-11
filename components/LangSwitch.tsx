@@ -15,11 +15,11 @@ const Switch = styled('a', {
   variants: {
     position: {
       articleStart: {
-        margin: '0 0 12px -8px',
+        margin: '0 0 $12 -8px',
         paddingY: '$8'
       },
       footer: {
-        margin: '0 0 12px 0',
+        margin: '$4 0 10px',
         paddingY: '$4'
       }
     },

@@ -2,7 +2,8 @@ import { styled } from 'stitches.config';
 import { Svg } from '@elements/Svg';
 
 const Icon = styled(Svg, {
-  size: '$24'
+  size: '$20',
+  marginRight: '$4'
 });
 
 const Handle = styled('path', {

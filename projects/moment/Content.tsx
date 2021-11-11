@@ -11,6 +11,8 @@ import LangSwitch from '@components/LangSwitch';
 import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 import { FeatureList, FeaturedNumberMark } from '@projects/featured';
 
+import IconSearch from './IconSearch';
+
 const BubbleSearch = styled('span', {
   display: 'inline-block',
   margin: '0 8px 8px 0',
@@ -153,14 +155,20 @@ export default function Content() {
         </Section>
         <Section>
           <Paragraph dangerouslySetInnerHTML={{__html: t('gather.description')}} indent />
-          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('gather.byLyric')}} />
+          <ContentTitle purpose="paragraph">
+            <IconSearch />
+            {t('gather.byLyric')}
+          </ContentTitle>
           <Paragraph as="div">
             {
               keywordLyric.map((keyword, index) => (
                 <BubbleSearch responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: keyword}} key={`keywordlyric-${index}`} />
             ))}
           </Paragraph>
-          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('gather.byLyricWithName')}} />
+          <ContentTitle purpose="paragraph">
+            <IconSearch />
+            {t('gather.byLyricWithName')}
+          </ContentTitle>
           <Paragraph as="div">
             {
               keywordLyricWithMovie.map((keyword, index) => (
@@ -170,13 +178,13 @@ export default function Content() {
           <Paragraph dangerouslySetInnerHTML={{__html: t('gather.question')}} indent />
         </Section>
         <Section>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prompt.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('prompt.description')}} indent sectionend />
+        </Section>
+        <Section has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('learned.title')}} />
           <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('learned.fairuse.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('learned.fairuse.description')}} indent />
-        </Section>
-        <Section has="postmarks">
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prompt.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('prompt.description')}} indent sectionend />
         </Section>
         <Section isgroupend>
           <PostMarksHr />
