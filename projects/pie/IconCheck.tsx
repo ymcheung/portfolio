@@ -10,7 +10,8 @@ const Icon = styled(Svg, {
       },
       yes: {
         display: 'block',
-        size: '$20'
+        size: '$20',
+        marginY: '$4'
       }
     }
   }

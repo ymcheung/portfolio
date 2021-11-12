@@ -88,6 +88,7 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
     space: {
       auto: 'auto',
       0: '0',
+      2: '2px',
       4: '4px',
       8: '8px',
       12: '12px',
