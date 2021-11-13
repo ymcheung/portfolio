@@ -15,7 +15,8 @@ const Icon = styled(Svg, {
       yes: {
         display: 'block',
         width: '$16',
-        height: '$20'
+        height: '$20',
+        marginY: '$4'
       }
     },
     hideintablet: {

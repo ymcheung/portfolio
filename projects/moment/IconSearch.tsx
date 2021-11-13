@@ -2,7 +2,8 @@ import { styled } from 'stitches.config';
 import { Svg } from '@elements/Svg';
 
 const Icon = styled(Svg, {
-  size: '$24'
+  size: '$20',
+  marginRight: '$4'
 });
 
 const Handle = styled('path', {
@@ -19,7 +20,7 @@ const Glass = styled('circle', {
 
 export default function IconSearch() {
   return(
-    <Icon viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <Icon vertical="sub" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <Handle d="M17 18L21 22"/>
       <Glass cx="11" cy="11" r="8"/>
     </Icon>

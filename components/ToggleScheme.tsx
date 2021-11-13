@@ -13,10 +13,10 @@ const ToggleDark = styled('button', {
   overflow: 'hidden',
   position: 'relative',
   margin: '-32px $8 0 2px',
-  padding: '14px 0 6px',
+  padding: '$20 0 0',
   backgroundColor: 'transparent',
   border: 0,
-  verticalAlign: 'sub',
+  verticalAlign: 'bottom',
   cursor: 'pointer'
 });
 

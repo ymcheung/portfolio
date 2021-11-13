@@ -58,7 +58,7 @@ const ToolsList = styled('ul', {
     responsive: {
       mobile: {
         justifyContent: 'center',
-        margin: '0 0 $12',
+        margin: '0 0 $4',
       },
       tablet: {
         justifyContent: 'end',

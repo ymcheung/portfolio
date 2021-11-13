@@ -113,8 +113,8 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps)
           <NavItem position="prev">
             <Link href={`/${prevSlug}`} passHref>
               <NavItemLink purpose={{ '@mHover': 'prev' }}>
-                <IconArrow purpose="prev" gotoText={hasPrev} background={prevBg} />&nbsp;
-                {hasPrev}
+                <IconArrow purpose="prev" gotoText={hasPrev} background={prevBg} />
+                &nbsp;{hasPrev}
               </NavItemLink>
             </Link>
           </NavItem>
@@ -123,8 +123,8 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps)
           <NavItem position="next">
             <Link href={`/${nextSlug}`} passHref>
               <NavItemLink purpose={{ '@mHover': 'next' }}>
-                {hasNext}
-                &nbsp;<IconArrow purpose="next" gotoText={hasNext} background={nextBg}  />
+                {hasNext}&nbsp;
+                <IconArrow purpose="next" gotoText={hasNext} background={nextBg}  />
               </NavItemLink>
             </Link>
           </NavItem>
@@ -132,8 +132,8 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps)
         <NavItem position="home">
           <Link href="/" passHref>
             <NavItemLink purpose={{ '@mHover': 'home' }}>
-              <IconArrow background="generic" />&nbsp;
-              Home
+              <IconArrow background="generic" />
+              &nbsp;Home
             </NavItemLink>
           </Link>
         </NavItem>
