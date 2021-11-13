@@ -8,6 +8,7 @@ import IconLangSwitch from '@elements/IconLangSwitch';
 const Switch = styled('a', {
   display: 'inline-block',
   paddingX: '$8',
+  verticalAlign: 'bottom',
   backgroundColor: 'hsl($shade1500)',
   borderRadius: '4px',
   willChange: 'background-color',
@@ -19,7 +20,7 @@ const Switch = styled('a', {
         paddingY: '$8'
       },
       footer: {
-        margin: '$4 0 10px',
+        margin: 0,
         paddingY: '$4'
       }
     },
@@ -44,11 +45,11 @@ const Switch = styled('a', {
 const LangName = styled('span', {
   display: 'inline-block',
   paddingLeft: '4px',
-  verticalAlign: 'bottom',
+  verticalAlign: 'sub',
   color: 'hsl($shade600)',
   fontFamily: '$default',
   fontSize: '$14',
-  lineHeight: '20px'
+  lineHeight: 1
 });
 
 interface LangSwitchProps {
