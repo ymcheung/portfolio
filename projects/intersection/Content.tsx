@@ -24,7 +24,6 @@ const IconListTimestamp = styled(ParagraphPostmark, {
 });
 
 type websiteProps = {
-  [x: string]: any;
   slug: string;
   url: string;
   name: string;
@@ -62,7 +61,7 @@ export default function Content() {
       <Section as="section" isgroupend>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('standalone.title')}} />
         <IconList>
-          {t<string, websiteProps>('standalone.websites', { returnObjects: true }).map(({ slug, url, name, time, description }: websiteProps, index: number) => (
+          {t<string, websiteProps[]>('standalone.websites', { returnObjects: true }).map(({ slug, url, name, time, description }: websiteProps, index: number) => (
             <IconListItem nomark purpose="timestamp" key={index}>
               <div><IconListImage src={`/projects/intersection/${slug}_24.jpg`} alt="" /></div>
               <Link href={url} passHref>
