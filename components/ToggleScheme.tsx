@@ -20,7 +20,7 @@ const ToggleDark = styled('button', {
   cursor: 'pointer'
 });
 
-function ToggleScheme() {
+export default function ToggleScheme() {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
@@ -48,5 +48,3 @@ function ToggleScheme() {
     </ToggleDark>
   )
 }
-
-export default ToggleScheme;

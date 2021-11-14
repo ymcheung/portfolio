@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
+import { useTheme } from 'next-themes';
+import splitbee from '@splitbee/web';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TITLE, AUTHOR, DESCRIPTION } from 'constant';
@@ -91,8 +93,14 @@ const Cans = styled('div', {
 });
 
 export default function Home() {
+  const { resolvedTheme } = useTheme();
+
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'home');
+
+    splitbee.track('Scheme', {
+      scheme: resolvedTheme
+    });
   });
 
   pageBody();
