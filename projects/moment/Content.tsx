@@ -66,11 +66,11 @@ const WhatScreenshot = styled('figure', {
   textAlign: 'center'
 });
 
-interface itemProps {
+interface ItemProps {
   name: string;
 }
 
-interface whatProps extends itemProps {
+interface WhatProps extends ItemProps {
   symbol: string;
 }
 
@@ -112,7 +112,7 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('what.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('what.description')}} indent />
           <WhatList>
-            {t<string, whatProps[]>('what.items', { returnObjects: true }).map(({ symbol, name }: whatProps, index: number) => (
+            {t<string, WhatProps[]>('what.items', { returnObjects: true }).map(({ symbol, name }, index: number) => (
               <ListItem nomark key={`what-${index}`}>
                 <WhatFigure>
                   <WhatFigureCover>
