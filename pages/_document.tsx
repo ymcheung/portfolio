@@ -31,7 +31,7 @@ export default class Document extends NextDocument {
           <link rel="manifest" href="/favicon/manifest.webmanifest" />
           {
             process.env.NODE_ENV === 'production' &&
-            <script async src="https://cdn.splitbee.io/sb.js" />
+            <script data-respect-dnt async src="https://cdn.splitbee.io/sb.js" />
           }
         </Head>
         <body>
