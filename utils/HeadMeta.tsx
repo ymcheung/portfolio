@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import * as headMetaDefault from 'constant';
 
-type headMetaProps = {
+type HeadMetaProps = {
   title: string;
   description: string;
   canonical: string;
@@ -15,7 +15,7 @@ const defaultProps = {
   ogCover: '/home/og-cover.jpg'
 };
 
-function HeadMeta({ title, description, canonical, ogCover }: headMetaProps) {
+function HeadMeta({ title, description, canonical, ogCover }: HeadMetaProps) {
   return (
     <Head>
       <title>{title}</title>
