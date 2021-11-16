@@ -20,11 +20,16 @@ const Switch = styled('a', {
         paddingY: '$8'
       },
       footer: {
-        margin: 0,
         paddingY: '$4'
       }
     },
     responsive: {
+      mobile: {
+        marginBottom: '$8'
+      },
+      tablet: {
+        marginBottom: 0
+      },
       hover: {
         transition: 'background-color $easeOut',
 
@@ -64,7 +69,7 @@ function LangSwitch({ position }: LangSwitchProps) {
 
   return(
     <Link href={router.pathname} locale={router.locale === 'en' ? 'zh-Hant-TW' : 'en'} passHref>
-      <Switch position={position} responsive={{ '@mHover': 'hover' }}>
+      <Switch position={position} responsive={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }}>
         <IconLangSwitch />
         <LangName>{langName}</LangName>
       </Switch>

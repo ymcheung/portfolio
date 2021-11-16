@@ -57,7 +57,7 @@ export default function Projects() {
   let isLightTheme = resolvedTheme !== 'dark';
 
   return(
-    <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="hasSibling">
+    <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="homeSection">
       <Heading position="homeSection" isitalic={isEng} dangerouslySetInnerHTML={{__html: t('project.title')}} />
       <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <ListItem nomark>
