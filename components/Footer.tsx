@@ -9,7 +9,7 @@ import LangSwitch from '@components/LangSwitch';
 
 const Separate = styled('hr', {
   width: '120px',
-  margin: '0 auto $8 0',
+  margin: '0 auto $16 0',
   border: 0,
   borderBottomColor: 'hsl($footerSeparate)',
   borderBottomWidth: '1px',
@@ -26,6 +26,18 @@ const FooterLayout = styled('div', {
   }
 });
 
+const PrefGroup = styled('div', {
+  variants: {
+    responsive: {
+      tablet: {
+        display: 'inline-block',
+        marginTop: '-$24',
+        verticalAlign: 'bottom'
+      }
+    }
+  }
+});
+
 const NameTagDescription = styled('span', {
   color: 'hsl($shade600)',
   fontFamily: '$default',
@@ -37,7 +49,7 @@ interface FooterProps {
   readonly inproject?: {};
 }
 
-function Footer({ responsive, inproject }: FooterProps) {
+export default function Footer({ responsive, inproject }: FooterProps) {
   const Year = new Date().getFullYear();
 
   return(
@@ -46,11 +58,11 @@ function Footer({ responsive, inproject }: FooterProps) {
         <Separate />
         <Heading as="strong" nametag="footer">{AUTHOR}</Heading>
         <NameTagDescription>Portfolio {Year}</NameTagDescription>
-        <ToggleScheme />
-        <LangSwitch position="footer" />
+        <PrefGroup responsive={{ '@m768': 'tablet' }}>
+          <ToggleScheme />
+          <LangSwitch position="footer" />
+        </PrefGroup>
       </FooterLayout>
     </Container>
   );
 }
-
-export default Footer;

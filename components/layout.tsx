@@ -20,11 +20,14 @@ export const Container = styled('div', {
       beforeDivide: {
         marginBottom: '$8'
       },
-      hasSibling: {
+      homeSection: {
         marginBottom: '48px'
       },
       isGroupEnd: {
         marginBottom: '64px'
+      },
+      isNavEnd: {
+        marginBottom: '$24'
       },
       isFooterEnd: {
         paddingBottom: '32px'
