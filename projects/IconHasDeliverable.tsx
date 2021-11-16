@@ -24,7 +24,7 @@ interface IconProps {
 
 export default function IconHasDeliverable({ project }: IconProps) {
   return(
-    <Icon viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <Icon vertical="sub" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <title>Deliverables are Ready</title>
       <Circle cx="6" cy="13" r="6" project={project} />
     </Icon>
