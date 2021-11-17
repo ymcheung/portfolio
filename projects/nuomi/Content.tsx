@@ -27,7 +27,7 @@ export default function Content() {
   return(
     <>
       <Container as="section" responsive={{'@m768': 'max640'}}>
-        <LangSwitch position="articleStart" />
+        <LangSwitch position="articleStart" responsive={{ '@mHover': 'hover' }} />
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('experience.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('experience.featured')}} indent sectionend />

@@ -30,7 +30,7 @@ export const HomeItemLink = styled('a', {
         alignItems: 'center',
         gap: '$16 $8',
         margin: '0 -10px',
-        padding: '8px',
+        padding: '$8',
         backgroundColor: 'hsla($shade1500, 0.5)',
         border: '2px solid transparent',
         borderRadius: '12px'
