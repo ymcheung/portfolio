@@ -16,7 +16,7 @@ const Switch = styled('a', {
   variants: {
     position: {
       articleStart: {
-        margin: '0 0 $12 -8px',
+        margin: '0 0 $12 -$8',
         paddingY: '$8'
       },
       footer: {
@@ -59,9 +59,10 @@ const LangName = styled('span', {
 
 interface LangSwitchProps {
   readonly position: {}
+  readonly responsive: {}
 }
 
-function LangSwitch({ position }: LangSwitchProps) {
+function LangSwitch({ position, responsive }: LangSwitchProps) {
   const router = useRouter();
   const { i18n } = useTranslation();
 
@@ -69,7 +70,7 @@ function LangSwitch({ position }: LangSwitchProps) {
 
   return(
     <Link href={router.pathname} locale={router.locale === 'en' ? 'zh-Hant-TW' : 'en'} passHref>
-      <Switch position={position} responsive={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }}>
+      <Switch position={position} responsive={responsive}>
         <IconLangSwitch />
         <LangName>{langName}</LangName>
       </Switch>

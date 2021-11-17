@@ -60,7 +60,7 @@ export default function Footer({ responsive, inproject }: FooterProps) {
         <NameTagDescription>Portfolio {Year}</NameTagDescription>
         <PrefGroup responsive={{ '@m768': 'tablet' }}>
           <ToggleScheme />
-          <LangSwitch position="footer" />
+          <LangSwitch position="footer" responsive={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }} />
         </PrefGroup>
       </FooterLayout>
     </Container>

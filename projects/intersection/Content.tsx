@@ -41,7 +41,7 @@ export default function Content() {
 
   return(
     <>
-      <LangSwitch position="articleStart" />
+      <LangSwitch position="articleStart" responsive={{ '@mHover': 'hover' }} />
       <Section as="section">
         <Paragraph dangerouslySetInnerHTML={{__html: t('intro')}} indent sectionend />
       </Section>
