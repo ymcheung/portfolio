@@ -11,7 +11,7 @@ import IllustrateClockings from './redesigned/IllustrateClockings';
 import IllustrateForms from './redesigned/IllustrateForms';
 
 export default function GraphRedesigned() {
-  const { t, i18n } = useTranslation('pie');
+  const { t } = useTranslation('pie');
 
   return(
     <>
@@ -20,7 +20,7 @@ export default function GraphRedesigned() {
         <ListItem nomark>
           <GraphFigure>
             <IllustrateClockings />
-            <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.screen',
+            <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
               { view: t('flows.clockin') }
             )}} />
           </GraphFigure>
@@ -31,7 +31,7 @@ export default function GraphRedesigned() {
         <ListItem nomark>
           <GraphFigure>
             <IllustrateClockings />
-            <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.clockin',
+            <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
               {context: 'done'}
             )}} />
           </GraphFigure>
@@ -46,8 +46,8 @@ export default function GraphRedesigned() {
       <GraphGrid redesigned floor="ground" responsive={{ '@initial': 'mobile', '@m992': 'desktop' }}>
         <ListItem nomark>
           <GraphFigure>
-            <IllustrateForms />
-            <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.screen',
+            <IllustrateClockings />
+            <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
               { view: t('flows.clockin') }
             )}} />
           </GraphFigure>
@@ -57,8 +57,8 @@ export default function GraphRedesigned() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <IllustrateForms />
-            <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.clockin',
+            <IllustrateClockings />
+            <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
               { context: 'done' }
             )}} />
           </GraphFigure>
@@ -69,7 +69,7 @@ export default function GraphRedesigned() {
         <ListItem nomark>
           <GraphFigure>
           <IllustrateForms />
-            <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.screen',
+            <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
               { view: t('flows.confirmform') }
             )}} />
           </GraphFigure>
@@ -80,7 +80,7 @@ export default function GraphRedesigned() {
         <ListItem nomark>
           <GraphFigure>
           <IllustrateForms />
-            <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.confirmform',
+            <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.confirmform',
               { context: 'done' }
             )}} />
           </GraphFigure>

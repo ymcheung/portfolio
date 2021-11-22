@@ -1,36 +1,10 @@
 import { styled } from 'stitches.config';
 
 export const Bar = styled('path', {
-  variants: {
-    scheme: {
-      default: {
-        fill: 'hsl($pie700)'
-      },
-      mono: {
-
-      }
-    }
-  },
-  defaultVariants: {
-    scheme: 'default'
-  }
+  fill: 'hsla($monoGraphTabBar, 0.5)'
 });
 
 export const TabIcon = styled('rect', {
   size: '$12',
-  borderRadius: '2px',
-
-  variants: {
-    scheme: {
-      default: {
-        fill: 'hsl($pie700)'
-      },
-      mono: {
-
-      }
-    }
-  },
-  defaultVariants: {
-    scheme: 'default'
-  }
+  fill: 'hsl($monoGraphComponent)'
 });
