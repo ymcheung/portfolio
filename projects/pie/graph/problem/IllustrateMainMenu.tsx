@@ -1,6 +1,6 @@
 import { styled } from 'stitches.config';
 import { Svg } from '@elements/Svg';
-import { Indicator } from '../indicator';
+import { Indicator } from '@projects/pie/indicator';
 
 const Icon = styled(Svg, {
   width: '64px',

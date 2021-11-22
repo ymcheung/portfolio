@@ -1,5 +1,4 @@
 import { useTranslation } from 'next-i18next';
-import { styled } from 'stitches.config';
 
 import { ListItem } from '@components/layout';
 import { ContentTitle, GraphCaption } from '@components/contentStyles';
@@ -7,47 +6,9 @@ import { ContentTitle, GraphCaption } from '@components/contentStyles';
 import IconArrowThen from '@projects/pie/IconArrowThen';
 import IconCheck from '@projects/pie/IconCheck';
 
+import { GraphGrid, GraphFigure } from './grid';
 import IllustrateMainMenu from '@projects/pie/graph/problem/IllustrateMainMenu';
 import IllustrateFunctions from '@projects/pie/graph/problem/IllustrateFunctions';
-
-const GraphGrid = styled('ul', {
-  display: 'grid',
-  overflowX: 'auto',
-  marginTop: 0,
-
-  variants: {
-    inuse: {
-      en: {
-        grid: 'auto / auto-flow 84px 24px'
-      },
-      tw: {
-        grid: 'auto / auto-flow 80px 24px'
-      }
-    },
-    floor: {
-      first: {
-        marginBottom: '$16'
-      },
-      ground: {
-        marginBottom: 0
-      }
-    },
-    responsive: {
-      mobile: {
-        padding: '0 0 $12'
-      },
-      desktop: {
-        marginRight: '-64px',
-        padding: 0
-      }
-    }
-  }
-});
-
-const GraphFigure = styled('figure', {
-  margin: 0,
-  padding: 0
-});
 
 export default function GraphProblem() {
   const { t, i18n } = useTranslation('pie');
@@ -65,18 +26,18 @@ export default function GraphProblem() {
           </GraphFigure>
         </ListItem>
         <ListItem nomark>
-          <IconArrowThen />
+          <IconArrowThen asfinish="problem" />
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
             <IllustrateFunctions confirmItem="none" indicateGoingBack="none" indicateConfirm="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.screen',
-              {view: t('flows.clockin')}
+              { view: t('flows.clockin') }
             )}} />
           </GraphFigure>
         </ListItem>
         <ListItem nomark>
-          <IconArrowThen />
+          <IconArrowThen asfinish="problem" />
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
@@ -87,11 +48,11 @@ export default function GraphProblem() {
           </GraphFigure>
         </ListItem>
         <ListItem nomark>
-          <IconCheck purpose="finish" />
+          <IconCheck purpose="finish" asfinish="problem" />
         </ListItem>
       </GraphGrid>
       <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('flows.clockin',
-        {context: 'withConfirm', clockin: t('flows.clockin'), confirmform: t('flows.confirmform')}
+        { context: 'withConfirm', clockin: t('flows.clockin'), confirmform: t('flows.confirmform') }
       )}} />
       <GraphGrid inuse={lang} floor="ground" responsive={{ '@initial': 'mobile', '@m992': 'desktop' }}>
         <ListItem nomark>
@@ -101,7 +62,7 @@ export default function GraphProblem() {
           </GraphFigure>
         </ListItem>
         <ListItem nomark>
-          <IconArrowThen />
+          <IconArrowThen asfinish="problem" />
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
@@ -112,7 +73,7 @@ export default function GraphProblem() {
           </GraphFigure>
         </ListItem>
         <ListItem nomark>
-          <IconArrowThen />
+          <IconArrowThen asfinish="problem" />
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
@@ -123,7 +84,7 @@ export default function GraphProblem() {
           </GraphFigure>
         </ListItem>
         <ListItem nomark>
-          <IconArrowThen />
+          <IconArrowThen asfinish="problem" />
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
@@ -132,7 +93,7 @@ export default function GraphProblem() {
           </GraphFigure>
         </ListItem>
         <ListItem nomark>
-          <IconArrowThen />
+          <IconArrowThen asfinish="problem" />
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
@@ -143,7 +104,7 @@ export default function GraphProblem() {
           </GraphFigure>
         </ListItem>
         <ListItem nomark>
-          <IconArrowThen />
+          <IconArrowThen asfinish="problem" />
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
@@ -154,7 +115,7 @@ export default function GraphProblem() {
           </GraphFigure>
         </ListItem>
         <ListItem nomark>
-          <IconCheck purpose="finish" />
+          <IconCheck purpose="finish" asfinish="problem" />
         </ListItem>
       </GraphGrid>
     </>

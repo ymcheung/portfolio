@@ -6,12 +6,19 @@ const Icon = styled(Svg, {
     purpose: {
       finish: {
         size: '$16',
-        marginTop: '32px',
       },
       yes: {
         display: 'block',
         size: '$20',
         marginY: '$4'
+      }
+    },
+    asfinish: {
+      problem: {
+        marginTop: '32px'
+      },
+      redesigned: {
+        marginTop: '92px'
       }
     }
   }
@@ -27,11 +34,12 @@ const Path = styled('path', {
 
 interface IconProps {
   readonly purpose: {};
+  readonly asfinish?: {};
 }
 
-export default function IconCheck({ purpose }: IconProps) {
+export default function IconCheck({ purpose, asfinish }: IconProps) {
   return(
-    <Icon viewBox="0 0 16 16" purpose={purpose} xmlns="http://www.w3.org/2000/svg">
+    <Icon viewBox="0 0 16 16" purpose={purpose} asfinish={asfinish} xmlns="http://www.w3.org/2000/svg">
       <title>done</title>
       <Path d="m3 8 3 4.5 6-7.5"/>
     </Icon>
