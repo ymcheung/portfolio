@@ -1,6 +1,6 @@
 import { styled } from 'stitches.config';
 import { Svg } from '@elements/Svg';
-import { Indicator } from './indicator';
+import { Indicator } from '../indicator';
 
 const Icon = styled(Svg, {
   width: '64px',
@@ -34,7 +34,7 @@ interface IconProps {
   readonly indicateForms?: {};
 }
 
-export default function IconMainMenu({ indicateClockIn, indicateForms }: IconProps) {
+export default function IllustrateMainMenu({ indicateClockIn, indicateForms }: IconProps) {
   return(
     <Icon viewBox="0 0 64 75" xmlns="http://www.w3.org/2000/svg">
       <title>Layout of Main Menu</title>

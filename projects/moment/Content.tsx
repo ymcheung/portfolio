@@ -181,7 +181,7 @@ export default function Content() {
           </Section>
         </Container>
       </FullBlock>
-      <Container as="section" responsive={{'@m768': 'max640'}} space="isGroupEnd">
+      <Container as="section" responsive={{'@m768': 'max640'}} space="isGroundFloor">
         <Section has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('learned.title')}} />
           <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('learned.fairuse.title')}} />

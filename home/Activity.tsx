@@ -13,7 +13,7 @@ export default function Activity() {
   const isEng = i18n.language === 'en';
 
   return(
-    <Container responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="isGroupEnd">
+    <Container responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="isGroundFloor">
       <Heading position="homeSection" isitalic={isEng} dangerouslySetInnerHTML={{__html: t('activity.title')}} />
       <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <ListItem nomark>

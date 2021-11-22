@@ -63,7 +63,7 @@ export default function ProjectProcess() {
         canonical={router.pathname}
       />
       <Cover />
-      <Container as="article" responsive={{'@m768': 'max640'}} space="isGroupEnd">
+      <Container as="article" responsive={{'@m768': 'max640'}} space="isGroundFloor">
         <Section as="section">
           <Heading as="h1" position="itemName" ownmargin>{pageInfo.name}</Heading>
           <Meta />

@@ -38,7 +38,7 @@ export default function Content() {
           <Gallery galleryItemAlt={galleryItemAlt} />
         </Container>
       </FullBlock>
-      <Container as="section" responsive={{'@m768': 'max640'}} space="isGroupEnd">
+      <Container as="section" responsive={{'@m768': 'max640'}} space="isGroundFloor">
         <Section isgroupend>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('retrospect.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('retrospect.description')}} indent />

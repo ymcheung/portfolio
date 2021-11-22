@@ -98,6 +98,7 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       24: '24px',
     },
     sizes: {
+      12: '12px',
       16: '16px',
       18: '18px',
       20: '20px',
