@@ -30,8 +30,10 @@
       "打卡",
     "clockin_done":
       "完成打卡",
+    "clockin_title":
+      "進行{{clockin}}",
     "clockin_withConfirm":
-    "{{clockin}}，接著查看{{confirmform}}",
+      "進行{{clockin}}，接著查看{{confirmform}}",
     "confirmform":
       "請假表單",
     "confirmform_done":

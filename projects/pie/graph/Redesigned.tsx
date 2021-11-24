@@ -15,11 +15,11 @@ export default function GraphRedesigned() {
 
   return(
     <>
-      <ContentTitle as="h3" purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin')}} />
+      <ContentTitle as="h3" purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin', { context: 'title', clockin: t('flows.clockin')})}} />
       <GraphGrid redesigned floor="first" responsive={{ '@initial': 'mobile' }}>
         <ListItem nomark>
           <GraphFigure>
-            <IllustrateClockings />
+            <IllustrateClockings clockout="none" />
             <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
               { view: t('flows.clockin') }
             )}} />
@@ -30,7 +30,7 @@ export default function GraphRedesigned() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <IllustrateClockings />
+            <IllustrateClockings clockin="none" />
             <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
               {context: 'done'}
             )}} />
@@ -46,7 +46,7 @@ export default function GraphRedesigned() {
       <GraphGrid redesigned floor="ground" responsive={{ '@initial': 'mobile', '@m992': 'desktop' }}>
         <ListItem nomark>
           <GraphFigure>
-            <IllustrateClockings />
+            <IllustrateClockings clockout="none" />
             <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
               { view: t('flows.clockin') }
             )}} />
@@ -57,7 +57,7 @@ export default function GraphRedesigned() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <IllustrateClockings />
+            <IllustrateClockings clockin="none" />
             <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
               { context: 'done' }
             )}} />
@@ -68,7 +68,7 @@ export default function GraphRedesigned() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-          <IllustrateForms />
+          <IllustrateForms empty="none" />
             <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
               { view: t('flows.confirmform') }
             )}} />
@@ -79,7 +79,7 @@ export default function GraphRedesigned() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-          <IllustrateForms />
+          <IllustrateForms confirms="none" />
             <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.confirmform',
               { context: 'done' }
             )}} />

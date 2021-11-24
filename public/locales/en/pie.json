@@ -30,8 +30,10 @@
       "Clock-In",
     "clockin_done":
       "Clocked-In",
+    "clockin_title":
+      "To {{clockin}}",
     "clockin_withConfirm":
-      "{{clockin}} + {{confirmform}}",
+      "To {{clockin}} + {{confirmform}}",
     "confirmform":
       "Confirm Leave Forms",
     "confirmform_done":

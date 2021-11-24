@@ -17,7 +17,7 @@ export default function GraphProblem() {
 
   return(
     <>
-      <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('flows.clockin')}} />
+      <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('flows.clockin', { context: 'title', clockin: t('flows.clockin')})}} />
       <GraphGrid inuse={lang} floor="first" responsive={{ '@initial': 'mobile' }}>
         <ListItem nomark>
           <GraphFigure>
