@@ -32,10 +32,12 @@ const ClockingIcon = styled('path', {
 
 interface IllustrateProps {
   readonly clockin?: {}; 
-  readonly clockout?: {}; 
+  readonly clockout?: {};
+  readonly indicateClockin?: {};
+  readonly indicateToForms?: {};
 }
 
-export default function IllustrateClockings({ clockin, clockout}: IllustrateProps) {
+export default function IllustrateClockings({ clockin, clockout, indicateClockin, indicateToForms }: IllustrateProps) {
   return(
     <Icon viewBox="0 0 108 192" xmlns="http://www.w3.org/2000/svg">
       <Device rx="8" />
@@ -49,6 +51,8 @@ export default function IllustrateClockings({ clockin, clockout}: IllustrateProp
       <TabIcon x="37" y="172" rx="2" />
       <TabIcon x="59" y="172" rx="2" />
       <TabIcon x="81" y="172" rx="2" />
+      <Indicator display={indicateClockin} animation={{ '@mReduced': 'reduced' }} cx="54" cy="140" r="4"/>
+      <Indicator display={indicateToForms} animation={{ '@mReduced': 'reduced' }} cx="43" cy="180" r="4"/>
     </Icon>
   );
 }

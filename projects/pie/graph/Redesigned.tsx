@@ -19,7 +19,7 @@ export default function GraphRedesigned() {
       <GraphGrid redesigned floor="first" responsive={{ '@initial': 'mobile' }}>
         <ListItem nomark>
           <GraphFigure>
-            <IllustrateClockings clockout="none" />
+            <IllustrateClockings clockout="none" indicateToForms="none" />
             <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
               { view: t('flows.clockin') }
             )}} />
@@ -30,9 +30,9 @@ export default function GraphRedesigned() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <IllustrateClockings clockin="none" />
+            <IllustrateClockings clockin="none" indicateClockin="none" indicateToForms="none" />
             <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
-              {context: 'done'}
+              { context: 'done' }
             )}} />
           </GraphFigure>
         </ListItem>
@@ -46,7 +46,7 @@ export default function GraphRedesigned() {
       <GraphGrid redesigned floor="ground" responsive={{ '@initial': 'mobile', '@m992': 'desktop' }}>
         <ListItem nomark>
           <GraphFigure>
-            <IllustrateClockings clockout="none" />
+            <IllustrateClockings clockout="none" indicateToForms="none" />
             <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
               { view: t('flows.clockin') }
             )}} />
@@ -57,7 +57,7 @@ export default function GraphRedesigned() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-            <IllustrateClockings clockin="none" />
+            <IllustrateClockings clockin="none" indicateClockin="none" />
             <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
               { context: 'done' }
             )}} />
@@ -79,7 +79,7 @@ export default function GraphRedesigned() {
         </ListItem>
         <ListItem nomark>
           <GraphFigure>
-          <IllustrateForms confirms="none" />
+          <IllustrateForms confirms="none" indicateConfirm="none" />
             <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.confirmform',
               { context: 'done' }
             )}} />

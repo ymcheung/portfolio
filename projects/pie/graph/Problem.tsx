@@ -17,7 +17,9 @@ export default function GraphProblem() {
 
   return(
     <>
-      <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('flows.clockin', { context: 'title', clockin: t('flows.clockin')})}} />
+      <ContentTitle as="h3" purpose="paragraph" dangerouslySetInnerHTML={{__html: t('flows.clockin',
+        { context: 'title', clockin: t('flows.clockin') }
+      )}} />
       <GraphGrid inuse={lang} floor="first" responsive={{ '@initial': 'mobile' }}>
         <ListItem nomark>
           <GraphFigure>
@@ -43,7 +45,7 @@ export default function GraphProblem() {
           <GraphFigure>
             <IllustrateFunctions confirmItem="none" indicateGoingBack="none" indicateClockIn="none" indicateConfirm="none" />
             <GraphCaption dangerouslySetInnerHTML={{__html: t('flows.clockin',
-              {context: 'done'}
+              { context: 'done' }
             )}} />
           </GraphFigure>
         </ListItem>
