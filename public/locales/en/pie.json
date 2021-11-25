@@ -27,11 +27,17 @@
     "mainmenu":
       "Main Menu",
     "clockin":
-      "Clock-In",
+      "Clock-in",
     "clockin_done":
-      "Clocked-In",
+      "Clocked-in",
+    "clockin_title":
+      "To {{clockin}}",
     "clockin_withConfirm":
-      "{{clockin}} + {{confirmform}}",
+      "To {{clockin}} + {{confirmform}}",
+    "clockin_titleWithTabBar":
+      "{{title}} with Tab Bar",
+    "forms":
+      "Forms",
     "confirmform":
       "Confirm Leave Forms",
     "confirmform_done":

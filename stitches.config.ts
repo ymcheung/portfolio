@@ -72,13 +72,15 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       monoContentGradient: '$shade100',
       monoContentParagraph: '$shade1200',
       monoContentLink: '$shade1200',
+      monoGraphDevice: '$shade300',
+      monoGraphTabBar: '$shade600',
+      monoGraphComponent: '$shade700',
+      monoGraphIcon: '$shade300',
 
       themeMoment: '$shade1600',
       mtCoverSing: '$shade1200',
       mtCoverHeard: '$shade1500',
       searchBubble: '$shade1500',
-      iterationIconDoc: '$shade1200',
-      iterationIconChild: '$shade1500',
 
       navGenericIconBg: '$shade1500',
       navPieIconBg:     '$shade1500',
@@ -98,6 +100,7 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       24: '24px',
     },
     sizes: {
+      12: '12px',
       16: '16px',
       18: '18px',
       20: '20px',
@@ -211,13 +214,15 @@ export const dark = createTheme({
     monoContentGradient: '$shade1500',
     monoContentParagraph: '$shade600',
     monoContentLink: '$shade600',
+    monoGraphDevice: '$shade1400',
+    monoGraphTabBar: '$shade1200',
+    monoGraphComponent: '$shade1000',
+    monoGraphIcon: '$shade1400',
 
     themeMoment: '$mtMidnight0',
     mtCoverSing: '$shade600',
     mtCoverHeard: '$shade100',
     searchBubble: '$shade1400',
-    iterationIconDoc: '$shade1200',
-    iterationIconChild: '$shade1400',
 
     navGenericIconBg: '$shade1400',
     navPieIconBg:     '$pie100',

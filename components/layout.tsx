@@ -23,7 +23,7 @@ export const Container = styled('div', {
       homeSection: {
         marginBottom: '48px'
       },
-      isGroupEnd: {
+      isGroundFloor: {
         marginBottom: '64px'
       },
       isNavEnd: {

@@ -154,6 +154,9 @@ export const GraphCaption = styled('figcaption', {
     scheme: {
       default: {
         color: 'hsl($shade600)'
+      },
+      mono: {
+        color: 'hsl($monoContentParagraph)'
       }
     }
   },

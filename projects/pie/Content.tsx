@@ -9,7 +9,8 @@ import IconHyphen from '@home/icons/IconHyphen';
 import { Container, FullBlock } from '@components/layout';
 import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 
-import Graph from './Graph';
+import GraphProblem from './graph/Problem';
+import GraphRedesigned from './graph/Redesigned';
 import Gallery from './Gallery';
 
 const CompareTable = styled('table', {
@@ -111,7 +112,7 @@ export default function Content() {
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('why.problem')}} indent />
-          <Graph />
+          <GraphProblem />
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('question.title')}} />
@@ -155,6 +156,9 @@ export default function Content() {
                 </tr>
               </tbody>
             </CompareTable>
+          </Section>
+          <Section>
+            <GraphRedesigned />
           </Section>
           <Gallery />
         </Container>

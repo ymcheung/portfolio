@@ -125,27 +125,13 @@ export default function Content() {
           </WhatList>
         </Section>
       </Container>
-      <FullBlock project="moment">
-        <Container responsive={{'@m768': 'max640'}}>
-          <Section isgroupend>
-            <WhatScreenshot>
-              {screenMobile &&
-                <Image src={screenshotMobile} width={300} height={500} quality={100} alt={t('what.screenshot.mobile')} />
-              }
-              {screenTablet &&
-                <Image src={screenshotDesktop} width={640} height={480} quality={100} alt={t('what.screenshot.tablet')} />
-              }
-            </WhatScreenshot>
-          </Section>
-        </Container>
-      </FullBlock>
-      <Container as="section" responsive={{'@m768': 'max640'}} space="isGroupEnd">
+      <Container as="section" responsive={{'@m768': 'max640'}}>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('gather.title')}} />
           <FeatureList space={itemSpace}>
             <ListItem nomark>
               <ContentTitle as="strong" featurednumber="normal">
-                6,800+
+                7,000+
                 <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
               </ContentTitle>
               <Paragraph dangerouslySetInnerHTML={{__html: t('gather.count')}} purpose="suffix" sectionend />
@@ -180,6 +166,22 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prompt.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('prompt.description')}} indent sectionend />
         </Section>
+      </Container>
+      <FullBlock project="moment">
+        <Container responsive={{'@m768': 'max640'}}>
+          <Section isgroupend>
+            <WhatScreenshot>
+              {screenMobile &&
+                <Image src={screenshotMobile} width={300} height={500} quality={100} alt={t('what.screenshot.mobile')} />
+              }
+              {screenTablet &&
+                <Image src={screenshotDesktop} width={640} height={480} quality={100} alt={t('what.screenshot.tablet')} />
+              }
+            </WhatScreenshot>
+          </Section>
+        </Container>
+      </FullBlock>
+      <Container as="section" responsive={{'@m768': 'max640'}} space="isGroundFloor">
         <Section has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('learned.title')}} />
           <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('learned.fairuse.title')}} />
