@@ -34,6 +34,8 @@
       "進行{{clockin}}",
     "clockin_withConfirm":
       "進行{{clockin}}，接著查看{{confirmform}}",
+    "clockin_titleWithTabBar":
+      "以 Tab Bar {{title}}",
     "forms":
       "表單",
     "confirmform":

@@ -27,13 +27,15 @@
     "mainmenu":
       "Main Menu",
     "clockin":
-      "Clock-In",
+      "Clock-in",
     "clockin_done":
-      "Clocked-In",
+      "Clocked-in",
     "clockin_title":
       "To {{clockin}}",
     "clockin_withConfirm":
       "To {{clockin}} + {{confirmform}}",
+    "clockin_titleWithTabBar":
+      "{{title}} with Tab Bar",
     "forms":
       "Forms",
     "confirmform":

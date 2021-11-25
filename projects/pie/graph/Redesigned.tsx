@@ -15,7 +15,11 @@ export default function GraphRedesigned() {
 
   return(
     <>
-      <ContentTitle as="h3" purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin', { context: 'title', clockin: t('flows.clockin')})}} />
+      <ContentTitle as="h3" purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
+        { context: 'titleWithTabBar', title: t('flows.clockin',
+          { context: 'title', clockin: t('flows.clockin') }
+        )}
+      )}} />
       <GraphGrid redesigned floor="first" responsive={{ '@initial': 'mobile' }}>
         <ListItem nomark>
           <GraphFigure>
@@ -41,7 +45,9 @@ export default function GraphRedesigned() {
         </ListItem>
       </GraphGrid>
       <ContentTitle as="h3" purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
-        {context: 'withConfirm', clockin: t('flows.clockin'), confirmform: t('flows.confirmform')}
+        { context: 'titleWithTabBar', title: t('flows.clockin',
+          { context: 'withConfirm', clockin: t('flows.clockin'), confirmform: t('flows.confirmform') }
+        )}
       )}} />
       <GraphGrid redesigned floor="ground" responsive={{ '@initial': 'mobile', '@m992': 'desktop' }}>
         <ListItem nomark>
