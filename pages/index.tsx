@@ -98,9 +98,11 @@ export default function Home() {
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'home');
 
-    splitbee.track('Scheme', {
-      scheme: resolvedTheme
-    });
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      splitbee.track('Scheme', {
+        scheme: 'Dark'
+      });
+    }
   });
 
   pageBody();
