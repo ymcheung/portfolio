@@ -34,6 +34,8 @@
       "進行{{clockin}}",
     "clockin_withConfirm":
       "進行{{clockin}}，接著查看{{confirmform}}",
+    "forms":
+      "表單",
     "confirmform":
       "請假表單",
     "confirmform_done":

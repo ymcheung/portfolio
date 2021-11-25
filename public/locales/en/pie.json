@@ -34,6 +34,8 @@
       "To {{clockin}}",
     "clockin_withConfirm":
       "To {{clockin}} + {{confirmform}}",
+    "forms":
+      "Forms",
     "confirmform":
       "Confirm Leave Forms",
     "confirmform_done":

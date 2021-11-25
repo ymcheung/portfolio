@@ -70,7 +70,7 @@ export default function GraphRedesigned() {
           <GraphFigure>
           <IllustrateForms empty="none" />
             <GraphCaption scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.screen',
-              { view: t('flows.confirmform') }
+              { view: t('flows.forms') }
             )}} />
           </GraphFigure>
         </ListItem>
