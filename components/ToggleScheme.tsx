@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
+import { useThrottledCallback } from 'use-debounce';
+
 import { styled } from 'stitches.config';
 
 import IconDark from '@elements/IconDark';
@@ -37,19 +39,23 @@ export default function ToggleScheme() {
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null;
-
   const toggleTheme = () => {
     const targetTheme = resolvedTheme === 'light' ? 'dark' : 'light';
 
     setTheme(targetTheme);
   };
 
+  const throttleToggleScheme = useThrottledCallback(toggleTheme, 3000, {
+    trailing: false
+  });
+
+  if (!mounted) return null;
+
   const isDarkTheme = resolvedTheme === 'dark';
   const toggleSchemeMessage = isDarkTheme ? '亮色' : '暗色';
 
   return(
-    <ToggleDark type="button" onClick={toggleTheme} responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} aria-label={`切換 Scheme：${toggleSchemeMessage}`} data-splitbee-event="切換 Scheme">
+    <ToggleDark type="button" onClick={throttleToggleScheme} responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} aria-label={`切換 Scheme：${toggleSchemeMessage}`} data-splitbee-event="切換 Scheme">
       {!isDarkTheme &&
         <IconDark />
       }
