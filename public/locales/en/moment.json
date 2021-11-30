@@ -67,6 +67,13 @@
     "question":
       "Have you ever searched the keywords mentioned above?"
   },
+  "prompt":
+  {
+    "title":
+      "Give It a Try",
+    "description":
+      "Please select a song you like on <a class=\"paragraph-link\" href=\"https://moment.intersection.tw\" data-splitbee-event=\"Moment: Try Link\" target=\"_blank\" rel=\"noopener\">the website</a> and find out what movies/dramas it features."
+  },
   "learned":
   {
     "title":
@@ -76,14 +83,7 @@
       "title":
         "Fair Use of the Album Covers",
       "description":
-        "I was not sure if I could use the album covers without permission when building the website layout. They are subject to copyright, but fair use laws in many countries cover the use of low-resolution ones."
+        "It&rsquo;s common sense that album covers are subject to copyright, but fair use laws in many countries cover the use of low-resolution ones."
     }
-  },
-  "prompt":
-  {
-    "title":
-      "Give It a Try",
-    "description":
-      "Please select a song you like on <a class=\"paragraph-link\" href=\"https://moment.intersection.tw\" data-splitbee-event=\"Moment: Try Link\" target=\"_blank\" rel=\"noopener\">the website</a> and find out what movies/dramas it features."
   }
 }

@@ -67,6 +67,13 @@
     "question":
       "也有像這樣搜尋過關鍵字嗎？"
   },
+  "prompt":
+  {
+    "title":
+      "試試看",
+    "description":
+      "在<a class=\"paragraph-link\" href=\"https://moment.intersection.tw\" data-splitbee-event=\"Moment: Try Link\" target=\"_blank\" rel=\"noopener\">網站上</a>選一首喜歡的歌，發掘那首歌出現在哪些電視影劇。"
+  },
   "learned":
   {
     "title":
@@ -76,14 +83,7 @@
       "title":
         "合理使用專輯封面",
       "description":
-        "在製作網站版面的時候，不確定是否可以未經許可就使用專輯封面。雖然專輯受到智慧財產權保護，只用低解析度圖片在許多國家屬於合理使用範圍。"
+        "專輯封面受到智慧財產權保護是理所當然的事，只用低解析度圖片在許多國家屬於合理使用範圍。"
     }
-  },
-  "prompt":
-  {
-    "title":
-      "試試看",
-    "description":
-      "在<a class=\"paragraph-link\" href=\"https://moment.intersection.tw\" data-splitbee-event=\"Moment: Try Link\" target=\"_blank\" rel=\"noopener\">網站上</a>選一首喜歡的歌，發掘那首歌出現在哪些電視影劇。"
   }
 }
