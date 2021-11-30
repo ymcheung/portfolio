@@ -78,7 +78,7 @@ export default function Projects() {
           <Link href="/moment" passHref>
             <HomeItemLink asproject={{ '@initial': 'mobile', '@mHover': 'hover' }}>
               <IconMoment />
-              <Heading position="homeItemName" dangerouslySetInnerHTML={{__html: t('project.moment.title', { explore: t('verb.explore') })}} />
+              <Heading position="homeItemName" dangerouslySetInnerHTML={{__html: t('project.moment.title')}} />
               <IconsList>
                 <IconItem project="moment" mono={isLightTheme} nomark>🤘</IconItem>
                 <IconItem project="moment" mono={isLightTheme} nomark>♪</IconItem>
