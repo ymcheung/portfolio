@@ -62,6 +62,7 @@ export const Heading = styled('h2', {
     },
     position: {
       homeManifesto: {
+        maxWidth: '600px',
         position: 'relative',
         zIndex: 2,
         margin: '0 0 $12',

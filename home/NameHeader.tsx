@@ -23,11 +23,11 @@ const ToolsList = styled('ul', {
     responsive: {
       mobile: {
         justifyContent: 'center',
-        margin: '0 0 $4',
+        margin: '0 0 $4'
       },
       tablet: {
         justifyContent: 'end',
-        margin: 0,
+        margin: 0
       }
     }
   }
