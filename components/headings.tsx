@@ -42,12 +42,13 @@ export const Heading = styled('h2', {
   variants: {
     nametag: {
       home: {
+        display: 'inline-block',
         position: 'relative',
         zIndex: 2,
-        marginBottom: '4px',
+        marginBottom: '32px',
         marginLeft: '-2px',
         color: 'hsl($shade0)',
-        fontSize: '3.2rem',
+        fontSize: '2rem',
         fontWeight: 800,
         fontStyle: 'italic'
       },
@@ -60,6 +61,15 @@ export const Heading = styled('h2', {
       }
     },
     position: {
+      homeManifesto: {
+        position: 'relative',
+        zIndex: 2,
+        margin: '0 0 $12',
+        color: 'hsl($shade600)',
+        fontSize: '2.8rem',
+        fontWeight: 400,
+        fontStyle: 'italic'
+      },
       homeSection: {
         margin: '0 0 $12',
         color: 'hsl($homeSectionTitle)',

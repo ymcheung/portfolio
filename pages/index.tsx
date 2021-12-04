@@ -122,7 +122,7 @@ export default function Home() {
         sameAs: [
           'https://www.linkedin.com/in/ymcheungtw/',
           'https://intersection.tw',
-          'https://dev.ymcheung.tw'
+          'https://github.com/ymcheung'
         ]
       }
     },
