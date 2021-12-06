@@ -38,6 +38,9 @@ export const MetaItemTitle = styled('strong', {
 
   variants: {
     project: {
+      carrier: {
+        color: 'hsl($carrierNeon)'
+      },
       pie: {
         color: 'hsl($metaTitlePie)'
       },

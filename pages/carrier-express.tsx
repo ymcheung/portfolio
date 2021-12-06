@@ -14,34 +14,32 @@ import { Container, FullLayout } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
 import Cover from '@projects/pie/Cover';
 
-import IconPie from '@elements/IconPie';
-
-import Meta from '@projects/pie/Meta';
-import Content from '@projects/pie/Content';
+import Meta from '@projects/carrier/Meta';
+import Content from '@projects/carrier/Content';
 import Nav from '@projects/Nav';
 import Footer from '@components/Footer';
 
 const pageBody = globalCss({
-  'body[data-body-style=pie]': {
+  'body[data-body-style=carrier]': {
     minHeight: '100vh',
     backgroundColor: 'hsl($backgroundPie)'
   }
 });
 
-export default function ProjectPie() {
+export default function ProjectCarrier() {
   const router = useRouter();
 
   const { t } = useTranslation('home');
 
   const pageInfo = {
-    name: t('home:project.pie.title', { redesign: t('home:verb.redesign') }),
-    description: t('home:project.pie.description'),
-    datePublished: '2020-08-29',
-    dateModified: '2021-11-25'
+    name: t('home:project.carrier.title'),
+    description: t('home:project.carrier.description'),
+    datePublished: '2020-12-09',
+    dateModified: '2021-12-09'
   };
 
   useEffect(() => {
-    document.body.setAttribute('data-body-style', 'pie');
+    document.body.setAttribute('data-body-style', 'carrier');
   }, []);
 
   pageBody();
@@ -67,10 +65,7 @@ export default function ProjectPie() {
       <Cover />
       <FullLayout as="article">
         <Container as="section" responsive={{'@m768': 'max640'}}>
-          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-            <div>
-              <IconPie />
-            </div>
+          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
             <Heading as="h1" position="itemName">
               {pageInfo.name}
             </Heading>
@@ -80,12 +75,9 @@ export default function ProjectPie() {
         <Content />
       </FullLayout>
       <Nav
-        hasPrev="Carrier Express"
-        prevSlug="carrier-express"
-        prevBg="generic"
-        hasNext="The Moment"
-        nextSlug="moment"
-        nextBg="moment"
+        hasNext="Redesign a Clock-In App"
+        nextSlug="pie-clockin"
+        nextBg="pie"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>
@@ -94,6 +86,6 @@ export default function ProjectPie() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['pie', 'home']),
+    ...await serverSideTranslations(locale, ['carrier', 'home']),
   },
 });

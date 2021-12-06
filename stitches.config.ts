@@ -19,6 +19,8 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       shade100:  '162,2%,10%',
       shade0:    '162,2%, 6%',
 
+      carrierNeon: '236,92%,64%',
+
       pie800: '240,62%,72%',
       pie700: '240,62%,64%',
       pie400: '240,62%,52%',

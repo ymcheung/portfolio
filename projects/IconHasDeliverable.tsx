@@ -8,6 +8,9 @@ const Icon = styled(Svg, {
 const Circle = styled('circle', {
   variants: {
     project: {
+      carrier: {
+        fill: 'hsla($carrierNeon, 0.5)'
+      },
       pie: {
         fill: 'hsla($pie700, 0.5)'
       },
