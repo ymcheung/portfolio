@@ -24,7 +24,7 @@ import Footer from '@components/Footer';
 const pageBody = globalCss({
   'body[data-body-style=pie]': {
     minHeight: '100vh',
-    backgroundColor: 'hsl($backgroundPie)'
+    backgroundColor: 'hsl($themePie)'
   }
 });
 

@@ -12,7 +12,9 @@ import { globalCss } from 'stitches.config';
 
 import { Container, FullLayout } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
-import Cover from '@projects/pie/Cover';
+import Cover from '@projects/carrier/Cover';
+
+import IconCarrier from '@elements/IconCarrier';
 
 import Meta from '@projects/carrier/Meta';
 import Content from '@projects/carrier/Content';
@@ -22,7 +24,7 @@ import Footer from '@components/Footer';
 const pageBody = globalCss({
   'body[data-body-style=carrier]': {
     minHeight: '100vh',
-    backgroundColor: 'hsl($backgroundPie)'
+    backgroundColor: 'hsl($shade1600)'
   }
 });
 
@@ -59,13 +61,16 @@ export default function ProjectCarrier() {
       <HeadMeta
         title={`${pageInfo.name}${TITLE_AFFIX}`}
         description={pageInfo.description}
-        ogCover="/projects/pie/og-cover.jpg"
+        ogCover="/projects/carrier/og-cover.jpg"
         canonical={router.pathname}
       />
       <Cover />
       <FullLayout as="article">
         <Container as="section" responsive={{'@m768': 'max640'}}>
-          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+            <div>
+              <IconCarrier />
+            </div>
             <Heading as="h1" position="itemName">
               {pageInfo.name}
             </Heading>

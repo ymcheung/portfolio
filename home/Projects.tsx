@@ -8,6 +8,8 @@ import { Container, ListItem } from '@components/layout';
 import { Heading } from '@components/headings';
 import { HomeItemsLayout, HomeItemLink } from '@home/HomeItems';
 
+import IconCarrier from '@elements/IconCarrier';
+
 import IconPie from '@elements/IconPie';
 import IconClocking from '@projects/pie/IconClocking';
 import IconForms from '@projects/pie/IconForms';
@@ -60,6 +62,14 @@ export default function Projects() {
     <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="homeSection">
       <Heading position="homeSection" isitalic={isEng} dangerouslySetInnerHTML={{__html: t('project.title')}} />
       <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
+        <ListItem nomark>
+          <Link href="/carrier-express" passHref>
+            <HomeItemLink asproject={{ '@initial': 'mobile', '@mHover': 'hover' }}>
+              <IconCarrier />
+              <Heading position="homeItemName" dangerouslySetInnerHTML={{__html: t('project.carrier.title')}} />
+            </HomeItemLink>
+          </Link>
+        </ListItem>
         <ListItem nomark>
           <Link href="/pie-clockin" passHref>
             <HomeItemLink asproject={{ '@initial': 'mobile', '@mHover': 'hover' }}>

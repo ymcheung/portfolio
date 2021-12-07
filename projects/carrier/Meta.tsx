@@ -37,7 +37,7 @@ export default function Meta() {
     <MetaList responsive={{ '@m768': 'half' }}>
       <MetaItem>
         <MetaItemTitle project="carrier">Role</MetaItemTitle>
-        <MetaItemValue>User Research, UI Design</MetaItemValue>
+        <MetaItemValue>User Research, UI Design, Web Front-End</MetaItemValue>
       </MetaItem>
       <MetaItem>
         <MetaItemTitle project="carrier">Languages</MetaItemTitle>

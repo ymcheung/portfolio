@@ -46,6 +46,9 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
 
       homeSectionTitle: '$shade600',
 
+      iconCarrierBackground: '$shade800',
+      iconCarrierForeground: '$shade1600',
+
       iconPieBackground: '$shade800',
       iconPieForeground: '$shade1600',
       iconMtBackground: '$shade800',
@@ -65,7 +68,7 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       mockupDesktopConcaveMono: '$shade100',
       mockupDesktopBrowserTabMono: '$shade300',
 
-      backgroundPie: '$shade1600',
+      themePie: '$shade1600',
       metaTitlePie: '$pie400',
 
       themeNuomi: '$shade1600',
@@ -188,6 +191,9 @@ export const dark = createTheme({
 
     homeSectionTitle: '$laurel',
 
+    iconCarrierBackground: '$carrierNeon',
+    iconCarrierForeground: '$shade1600',
+
     iconPieBackground: '$pie700',
     iconPieForeground: '$shade1500',
     iconMtBackground: '$mtMidnight300',
@@ -207,7 +213,7 @@ export const dark = createTheme({
     mockupDesktopConcaveMono: '$shade1500',
     mockupDesktopBrowserTabMono: '$shade1400',
 
-    backgroundPie: '$pie0',
+    themePie: '$pie0',
     metaTitlePie: '$pie800',
 
     themeNuomi: '$nuomiBlack0',
