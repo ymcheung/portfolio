@@ -2,15 +2,56 @@
   "brief":
   {
     "title":
-      "",
+      "Brief",
     "description":
-      ""
+      "The vets always suggest that pet owners take their furry friends to health checks once or twice a year. However, it is easy to forget the time, and they may also ignore this because they look healthy and energetic."
+  },
+  "stats":
+  {
+    "title":
+      "Stats",
+    "description":
+      "I wanted to know how pet owners reminded themselves to take their furry friends to the vet for health checks and started a questionnaire.",
+    "respond":
+    {
+      "affix":
+        "Respondents",
+      "findings":
+      [
+        {
+          "count":
+            14,
+          "affix":
+            "pet owners didn’t take their furry friends to health checks periodically."
+        },
+        {
+          "count":
+            24,
+          "affix":
+            "pet owners are interested in the service about health check for their furry friends."
+        }
+      ]
+    }
   },
   "question":
   {
     "title":
       "Question",
     "content":
-      "How Might We Help Pet Owners Take Their Dogs/Cats to Health Checks Periodically?"
+      "How might we encourage pet owners to take their furry friends to health checks periodically?"
+  },
+  "idea":
+  {
+    "title":
+      "Idea",
+    "description":
+      "There have been a lot of calendar and reminder apps, and pet owners probably don’t need another one. What kind of notifications which most people don’t expect to ignore? Billing notifications are one of them."
+  },
+  "next":
+  {
+    "title":
+      "The Next Step",
+    "description":
+      "I am setting up a preview landing page and collecting search terms from it. The visitors can leave their emails if the concept interests them. "
   }
 }

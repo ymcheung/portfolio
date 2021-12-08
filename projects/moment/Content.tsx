@@ -128,13 +128,13 @@ export default function Content() {
       <Container as="section" responsive={{'@m768': 'max640'}}>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('gather.title')}} />
-          <FeatureList space={itemSpace}>
+          <FeatureList space={itemSpace} siblings="sectionEnd">
             <ListItem nomark>
               <ContentTitle as="strong" featurednumber="normal">
                 7,000+
                 <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
               </ContentTitle>
-              <Paragraph dangerouslySetInnerHTML={{__html: t('gather.count')}} purpose="suffix" sectionend />
+              <Paragraph dangerouslySetInnerHTML={{__html: t('gather.count')}} purpose="affix" sectionend />
             </ListItem>
           </FeatureList>
         </Section>

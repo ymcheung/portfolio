@@ -68,6 +68,8 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       mockupDesktopConcaveMono: '$shade100',
       mockupDesktopBrowserTabMono: '$shade300',
 
+      themeCarrier: '$shade1600',
+
       themePie: '$shade1600',
       metaTitlePie: '$pie400',
 
@@ -212,6 +214,8 @@ export const dark = createTheme({
     mockupDesktopConcaveDuo: '$shade1500',
     mockupDesktopConcaveMono: '$shade1500',
     mockupDesktopBrowserTabMono: '$shade1400',
+
+    themeCarrier: '$shade0',
 
     themePie: '$pie0',
     metaTitlePie: '$pie800',
