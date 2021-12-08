@@ -39,12 +39,12 @@ export default function Cover() {
     <Wrap project="carrier">
       <Device responsive={{ '@initial': 'mobile' }} vpheight="iphone13" model={{ '@m768': 'mobileDual' }}>
         {mounted && screenMobile &&
-          <ScreenshotMobile src="/projects/carrier/cover/tasks.webp" width={256} height={554} quality={95} alt="Screenshot: Clock-In" />
+          <ScreenshotMobile src="/projects/carrier/cover/tasks.webp" width={256} height={554} quality={95} alt="Screenshot: Upcoming Health Checks" />
         }
         {screenTablet &&
           <>
-            <ScreenshotTablet src="/projects/carrier/cover/tasks.jpg" placement="left" alt="Screenshot: Clock-In" />
-            <ScreenshotTablet src="/projects/carrier/cover/furbuddiesShow.jpg" placement="right" alt="Screenshot: Received and Applying Forms" />
+            <ScreenshotTablet src="/projects/carrier/cover/tasks.jpg" placement="left" alt="Screenshot: Upcoming Health Checks" />
+            <ScreenshotTablet src="/projects/carrier/cover/furbuddiesShow.jpg" placement="right" alt="Screenshot: View the details of Eleven" />
           </>
         }
       </Device>
