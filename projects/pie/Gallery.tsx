@@ -81,7 +81,7 @@ export default function Gallery() {
               width={256}
               height={455}
               alt=""
-              quality={92}
+              quality={100}
               loading="lazy"
             />
           </PieGalleryItem>
@@ -91,7 +91,7 @@ export default function Gallery() {
               width={256}
               height={455}
               alt=""
-              quality={92}
+              quality={100}
               loading="lazy"
             />
           </PieGalleryItem>
@@ -101,7 +101,7 @@ export default function Gallery() {
               width={256}
               height={455}
               alt=""
-              quality={92}
+              quality={100}
               loading="lazy"
             />
           </PieGalleryItem>
@@ -111,7 +111,7 @@ export default function Gallery() {
               width={256}
               height={455}
               alt=""
-              quality={92}
+              quality={100}
               loading="lazy"
             />
           </PieGalleryItem>
@@ -121,7 +121,7 @@ export default function Gallery() {
               width={256}
               height={455}
               alt=""
-              quality={92}
+              quality={100}
               loading="lazy"
             />
           </PieGalleryItem>

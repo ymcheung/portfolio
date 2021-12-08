@@ -23,7 +23,7 @@ const IconListTimestamp = styled(ParagraphPostmark, {
   gridArea: 'timestamp'
 });
 
-type WebsiteProps = {
+interface WebsiteProps {
   slug: string;
   url: string;
   name: string;
@@ -47,14 +47,14 @@ export default function Content() {
       </Section>
       <Section as="section">
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('stat.title')}} />
-        <FeatureList space={itemSpace}>
+        <FeatureList space={itemSpace} siblings="sectionEnd">
           <ListItem nomark>
             <ContentTitle featurednumber="normal">40+</ContentTitle>
-            <Paragraph dangerouslySetInnerHTML={{__html: t('stat.count')}} purpose="suffix" sectionend />
+            <Paragraph dangerouslySetInnerHTML={{__html: t('stat.count')}} purpose="affix" sectionend />
           </ListItem>
           <ListItem nomark>
             <ContentTitle featurednumber="normal">3,600+</ContentTitle>
-            <Paragraph dangerouslySetInnerHTML={{__html: t('stat.followers')}} purpose="suffix" sectionend />
+            <Paragraph dangerouslySetInnerHTML={{__html: t('stat.followers')}} purpose="affix" sectionend />
           </ListItem>
         </FeatureList>
       </Section>

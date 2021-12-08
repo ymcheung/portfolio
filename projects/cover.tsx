@@ -7,6 +7,9 @@ export const Wrap = styled('header', {
 
   variants: {
     project: {
+      carrier: {
+        backgroundColor: 'hsl($themeCarrier)'
+      },
       pie: {
         backgroundColor: 'hsl($pie0)'
       },
@@ -35,7 +38,7 @@ export const Device = styled('figure', {
 
         '&::before': {
           fullAbsolute: '',
-          backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.25) 50%, transparent 92%)'
+          backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.16) 50%, transparent 92%)'
         }
       },
       tablet: {
@@ -61,8 +64,8 @@ export const Device = styled('figure', {
 
         '&::before': {
           backgroundImage: `
-            linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.25) 50%, transparent 100%),
-            linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.25) 50%, transparent 100%)` ,
+            linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.16) 72%, transparent 92%),
+            linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.16) 72%, transparent 92%)`,
           backgroundSize: '288px 500px',
           backgroundPosition: `
             top 0 left 8px,

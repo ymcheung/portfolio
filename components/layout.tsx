@@ -50,6 +50,9 @@ export const FullBlock = styled('section', {
 
   variants: {
     project: {
+      carrier: {
+        backgroundColor: 'hsl($themeCarrier)'
+      },
       pie: {
         backgroundColor: 'hsl($pie0)'
       },
@@ -98,6 +101,9 @@ export const IconListItem = styled(ListItem, {
 
   variants: {
     prefixwidth: {
+      24: {
+        gridTemplateColumns: '24px 1fr'
+      },
       32: {
         gridTemplateColumns: '32px 1fr'
       },

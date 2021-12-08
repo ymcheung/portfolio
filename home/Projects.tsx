@@ -8,6 +8,10 @@ import { Container, ListItem } from '@components/layout';
 import { Heading } from '@components/headings';
 import { HomeItemsLayout, HomeItemLink } from '@home/HomeItems';
 
+import IconCarrier from '@elements/IconCarrier';
+import IconTasks from '@projects/carrier/IconTasks';
+import IconVet from '@projects/carrier/IconVet';
+
 import IconPie from '@elements/IconPie';
 import IconClocking from '@projects/pie/IconClocking';
 import IconForms from '@projects/pie/IconForms';
@@ -29,9 +33,6 @@ const IconItem = styled(ListItem, {
 
   variants: {
     project: {
-      pie: {
-        fontSize: 0
-      },
       moment: {
         minWidth: '$24',
         color: 'hsl($shade800)',
@@ -41,11 +42,16 @@ const IconItem = styled(ListItem, {
         textAlign: 'center'
       }
     },
+    space:  {
+      zero: {
+        fontSize: 0
+      }
+    },
     mono: {
       true: {
         filter: 'grayscale(100%)'
       }
-    }
+    },
   }
 });
 
@@ -61,15 +67,27 @@ export default function Projects() {
       <Heading position="homeSection" isitalic={isEng} dangerouslySetInnerHTML={{__html: t('project.title')}} />
       <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
         <ListItem nomark>
+          <Link href="/carrier-express" passHref>
+            <HomeItemLink asproject={{ '@initial': 'mobile', '@mHover': 'hover' }}>
+              <IconCarrier />
+              <Heading position="homeItemName" dangerouslySetInnerHTML={{__html: t('project.carrier.title')}} />
+              <IconsList>
+                <IconItem space="zero" nomark><IconTasks /></IconItem>
+                <IconItem space="zero" nomark><IconVet /></IconItem>
+              </IconsList>
+            </HomeItemLink>
+          </Link>
+        </ListItem>
+        <ListItem nomark>
           <Link href="/pie-clockin" passHref>
             <HomeItemLink asproject={{ '@initial': 'mobile', '@mHover': 'hover' }}>
               <IconPie />
               <Heading position="homeItemName" dangerouslySetInnerHTML={{__html: t('project.pie.title', { redesign: t('verb.redesign') })}} />
               <IconsList>
-                <IconItem project="pie" nomark><IconClocking /></IconItem>
-                <IconItem project="pie" nomark><IconForms /></IconItem>
-                <IconItem project="pie" nomark><IconSalary /></IconItem>
-                <IconItem project="pie" nomark><IconStats /></IconItem>
+                <IconItem space="zero" nomark><IconClocking /></IconItem>
+                <IconItem space="zero" nomark><IconForms /></IconItem>
+                <IconItem space="zero" nomark><IconSalary /></IconItem>
+                <IconItem space="zero" nomark><IconStats /></IconItem>
               </IconsList>
             </HomeItemLink>
           </Link>

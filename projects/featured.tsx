@@ -3,7 +3,6 @@ import { styled } from 'stitches.config';
 export const FeatureList = styled('ul', {
   display: 'grid',
   grid: 'auto / repeat(auto-fill, minmax(120px, 180px))',
-  margin: 0,
   padding: 0,
 
   variants: {
@@ -13,6 +12,14 @@ export const FeatureList = styled('ul', {
       },
       wide: {
         gap: '16px 32px'
+      }
+    },
+    siblings: {
+      hasSiblings: {
+        margin: '0 0 $12'
+      },
+      sectionEnd: {
+        margin: 0
       }
     }
   }
