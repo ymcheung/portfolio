@@ -45,7 +45,7 @@
     "title":
       "構想",
     "description":
-      "日曆與提醒 App 早已經到處都是，飼主們應該不需要另外一個。什麼是大多數人都不會忽略的提醒？就是扣款通知。"
+      "日曆與提醒 App 早已經到處都是，飼主們應該不需要另外一個。什麼是大多數人不會忽略的提醒？就是扣款通知。"
   },
   "next":
   {
@@ -53,5 +53,10 @@
       "下一步",
     "description":
       "設立預覽登陸頁面，用來搜集搜尋關鍵字。如果訪客對這概念有興趣，可以留下電子郵件。"
+  },
+  "postmark":
+  {
+    "description":
+      "<a class=\"paragraph-link\" href=\"https://thenounproject.com/icon/cat-3037142\" target=\"_blank\" rel=\"noopener\">貓圖示</a>是 The Noun Project 上，<a class=\"paragraph-link\" href=\"https://thenounproject.com/coquet_adrien\" target=\"_blank\" rel=\"noopener\">Adrien Coquet</a> 的作品。"
   }
 }

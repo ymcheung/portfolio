@@ -177,7 +177,11 @@ export const ParagraphPostmark = styled('span', {
   display: 'inline-block',
   color: 'hsl($shade600)',
   fontFamily: '$default',
-  fontSize: '$14'
+  fontSize: '$14',
+
+  '& .paragraph-link': {
+    color: 'hsl($shade300)'
+  }
 });
 
 export const ContentList = styled('ul', {

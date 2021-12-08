@@ -56,9 +56,13 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('idea.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('idea.description')}} indent />
         </Section>
-        <Section>
+        <Section has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('next.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('next.description')}} indent />
+        </Section>
+        <Section isgroupend>
+          <PostMarksHr />
+          <ParagraphPostmark dangerouslySetInnerHTML={{__html: t('postmark.description')}} />
         </Section>
       </Container>
     </>
