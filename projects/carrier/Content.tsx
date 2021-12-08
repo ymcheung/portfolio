@@ -1,5 +1,4 @@
 import { useTranslation } from 'next-i18next';
-import { styled } from 'stitches.config';
 
 import LangSwitch from '@components/LangSwitch';
 
@@ -9,7 +8,7 @@ import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from
 import { ListItem, IconList, IconListItem } from '@components/layout';
 import { FeatureList } from '@projects/featured';
 
-
+import Gallery from './Gallery';
 
 interface statsProps {
   count: number;
@@ -52,10 +51,19 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('question.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('question.content')}} purpose="question" italic={isItalic} indent />
         </Section>
-        <Section>
+        <Section isgroupend>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('idea.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('idea.description')}} indent />
         </Section>
+      </Container>
+      <FullBlock project="carrier">
+        <Container responsive={{'@m768': 'max640'}}>
+          <Section>
+            <Gallery />
+          </Section>
+        </Container>
+      </FullBlock>
+      <Container as="section" responsive={{'@m768': 'max640'}}>
         <Section has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('next.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('next.description')}} indent />

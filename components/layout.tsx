@@ -50,6 +50,9 @@ export const FullBlock = styled('section', {
 
   variants: {
     project: {
+      carrier: {
+        backgroundColor: 'hsl($themeCarrier)'
+      },
       pie: {
         backgroundColor: 'hsl($pie0)'
       },
