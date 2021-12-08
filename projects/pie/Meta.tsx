@@ -14,7 +14,7 @@ export default function Meta() {
     },
     {
       name: 'UI',
-      link: false,
+      link: '',
       isReady: true
     },
     {
@@ -25,12 +25,12 @@ export default function Meta() {
     },
     {
       name: 'Web App',
-      link: false,
+      link: '',
       isReady: false
     },
     {
       name: 'Landing Page',
-      link: false,
+      link: '',
       isReady: false
     }
   ];

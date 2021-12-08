@@ -8,27 +8,27 @@ export default function Meta() {
   const statusItems = [
     {
       name: 'Document',
-      link: false,
+      link: '',
       isReady: false
     },
     {
       name: 'UI',
-      link: false,
+      link: '',
       isReady: true
     },
     {
       name: 'Prototype',
-      link: false,
+      link: '',
       isReady: false
     },
     {
       name: 'Web App',
-      link: false,
+      link: '',
       isReady: false
     },
     {
       name: 'Landing Page',
-      link: false,
+      link: '',
       isReady: false
     }
   ];
