@@ -44,8 +44,8 @@ const PieScreenshotImg = styled(Image, {
 });
 
 export default function Gallery() {
-  const screenshotDelayedDetail = '/projects/carrier/gallery/delayedDetail.webp';
-  const screenshotFurryIndex = '/projects/carrier/gallery/furryIndex.webp';
+  const screenshotDelayedDetail = '/projects/carrier/gallery/homeShowDelayed.webp';
+  const screenshotFurryShow = '/projects/carrier/gallery/furryShowOnTime.webp';
   const screenshotReserve = '/projects/carrier/gallery/reserve.webp';
   const screenshotSettings = '/projects/carrier/gallery/settings.webp';
 
@@ -57,17 +57,17 @@ export default function Gallery() {
           width={256}
           height={554}
           alt=""
-          quality={92}
+          quality={100}
           loading="lazy"
         />
       </CarrierGalleryItem>
       <CarrierGalleryItem item={{ '@m768': 'furry' }} nomark>
-        <PieScreenshotImg src={screenshotFurryIndex}
+        <PieScreenshotImg src={screenshotFurryShow}
           layout="responsive"
           width={256}
           height={554}
           alt=""
-          quality={92}
+          quality={100}
           loading="lazy"
         />
       </CarrierGalleryItem>
@@ -77,7 +77,7 @@ export default function Gallery() {
           width={256}
           height={554}
           alt=""
-          quality={92}
+          quality={100}
           loading="lazy"
         />
       </CarrierGalleryItem>
@@ -87,7 +87,7 @@ export default function Gallery() {
           width={256}
           height={554}
           alt=""
-          quality={92}
+          quality={100}
           loading="lazy"
         />
       </CarrierGalleryItem>

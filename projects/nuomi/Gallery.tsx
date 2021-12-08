@@ -57,7 +57,7 @@ export default function Gallery({ galleryItemAlt }: GalleryProps) {
             layout="responsive"
             width={256}
             height={455}
-            quality={92}
+            quality={100}
             loading="lazy"
             alt={galleryItemAlt.all}
           />
@@ -67,7 +67,7 @@ export default function Gallery({ galleryItemAlt }: GalleryProps) {
             layout="responsive"
             width={256}
             height={455}
-            quality={92}
+            quality={100}
             loading="lazy"
             alt={galleryItemAlt.detail}
           />
@@ -77,7 +77,7 @@ export default function Gallery({ galleryItemAlt }: GalleryProps) {
             layout="responsive"
             width={256}
             height={455}
-            quality={92}
+            quality={100}
             loading="lazy"
             alt={galleryItemAlt.course}
           />
