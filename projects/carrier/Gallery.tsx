@@ -9,9 +9,7 @@ const CarrierGalleryList = styled(GalleryList, {
       tablet: {
         grid: `"delayed ." 60px
                "delayed furry" auto
-               "reserve furry" 60px
-               "reserve settings" auto
-               ". settings" 60px / 1fr 1fr`,
+               ". furry" 60px / 1fr 1fr`,
         rowGap: '60px'
       }
     }
@@ -46,8 +44,6 @@ const PieScreenshotImg = styled(Image, {
 export default function Gallery() {
   const screenshotDelayedDetail = '/projects/carrier/gallery/homeShowDelayed.webp';
   const screenshotFurryShow = '/projects/carrier/gallery/furryShowOnTime.webp';
-  const screenshotReserve = '/projects/carrier/gallery/reserve.webp';
-  const screenshotSettings = '/projects/carrier/gallery/settings.webp';
 
   return(
     <CarrierGalleryList responsive={{ '@m768': 'tablet' }} grid={{ '@m768': 'tablet' }}>
@@ -63,26 +59,6 @@ export default function Gallery() {
       </CarrierGalleryItem>
       <CarrierGalleryItem item={{ '@m768': 'furry' }} nomark>
         <PieScreenshotImg src={screenshotFurryShow}
-          layout="responsive"
-          width={256}
-          height={554}
-          alt=""
-          quality={100}
-          loading="lazy"
-        />
-      </CarrierGalleryItem>
-      <CarrierGalleryItem item={{ '@m768': 'reserve' }} nomark>
-        <PieScreenshotImg src={screenshotReserve}
-          layout="responsive"
-          width={256}
-          height={554}
-          alt=""
-          quality={100}
-          loading="lazy"
-        />
-      </CarrierGalleryItem>
-      <CarrierGalleryItem item={{ '@m768': 'settings' }} nomark>
-        <PieScreenshotImg src={screenshotSettings}
           layout="responsive"
           width={256}
           height={554}
