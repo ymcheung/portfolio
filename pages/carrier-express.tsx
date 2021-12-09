@@ -37,7 +37,7 @@ export default function ProjectCarrier() {
     name: t('home:project.carrier.title'),
     description: t('home:project.carrier.description'),
     datePublished: '2020-12-09',
-    dateModified: '2021-12-09'
+    dateModified: '2021-12-10'
   };
 
   useEffect(() => {

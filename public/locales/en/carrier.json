@@ -51,14 +51,23 @@
     "title":
       "Idea",
     "description":
-      "There have been a lot of calendar and reminder apps, and pet owners probably don’t need another one. What kind of notifications which most people don’t expect to ignore? Billing notifications are one of them."
+    [
+      {
+        "paragraph":
+          "There have been a lot of calendar and reminder apps, and pet owners probably don’t need another one. What kind of notifications which most people don’t expect to ignore? Billing notifications are one of them."
+      },
+      {
+        "paragraph":
+          "Since it has been charging the pet owners, they can reserve health checks anytime."
+      }
+    ]
   },
-  "next":
+  "status":
   {
     "title":
-      "The Next Step",
+      "Project Status",
     "description":
-      "I am setting up a preview landing page and collecting search terms from it. The visitors can leave their emails if the concept interests them. "
+      "The questionnaire is still open. Meanwhile, I set up a preview landing page and collect search terms on the health checks of dogs and cats. The visitors can leave their emails if the concept interests them."
   },
   "postmark":
   {

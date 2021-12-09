@@ -15,6 +15,10 @@ interface statsProps {
   affix: string;
 }
 
+interface statusProps {
+  paragraph: string;
+}
+
 export default function Content() {
   const { t, i18n } = useTranslation('carrier');
 
@@ -53,14 +57,16 @@ export default function Content() {
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('idea.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('idea.description')}} indent />
+          {t<string, statusProps[]>('idea.description', { returnObjects: true }).map(({ paragraph }, index: number) => (
+              <Paragraph dangerouslySetInnerHTML={{__html: paragraph}} key={`idea-description-${index}`} indent />
+            ))}
         </Section>
         <Section>
           <Gallery />
         </Section>
         <Section has="postmarks">
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('next.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('next.description')}} indent />
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('status.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('status.description')}} indent />
         </Section>
         <Section isgroupend>
           <PostMarksHr />
