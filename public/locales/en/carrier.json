@@ -11,24 +11,24 @@
     "title":
       "Stats",
     "description":
-      "I wanted to know how pet owners reminded themselves to take their furry friends to the vet for health checks and started a questionnaire.",
+      "I wanted to know how pet owners reminded themselves to take their furry friends to the vet for health checks and started a questionnaire from November 2021.",
     "respond":
     {
       "affix":
-        "Respondents",
+        "Pet Owners",
       "findings":
       [
         {
           "count":
             14,
           "affix":
-            "pet owners didn’t take their furry friends to health checks periodically."
+            "of them didn’t take their furry friends to health checks periodically."
         },
         {
           "count":
             24,
           "affix":
-            "pet owners are interested in the service about health check for their furry friends."
+            "of them are interested in the service about health check for their furry friends."
         }
       ]
     }
