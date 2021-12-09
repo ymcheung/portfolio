@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { styled } from 'stitches.config';
 import IconLinkedIn from '@home/icons/IconLinkedIn';
 import IconGithub from '@home/icons/IconGithub';
-import IconMedium from '@home/icons/IconMedium';
+// import IconMedium from '@home/icons/IconMedium';
 // import BannerLoveUI from '@home/icons/BannerLoveUI';
 import { Container } from '@components/layout';
 
@@ -25,11 +25,6 @@ export default function ExternalLinks() {
       <Link href="https://www.linkedin.com/in/ymcheungtw" passHref>
         <IconLink data-splitbee-event="External Link: LinkedIn" target="_blank" rel="noopener">
           <IconLinkedIn />
-        </IconLink>
-      </Link>
-      <Link href="https://intersection.tw" passHref>
-        <IconLink data-splitbee-event="External Link: Intersection" target="_blank" rel="noopener">
-          <IconMedium />
         </IconLink>
       </Link>
       <Link href="https://github.com/ymcheung" passHref>
