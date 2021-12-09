@@ -8,8 +8,8 @@ const CarrierGalleryList = styled(GalleryList, {
     grid: {
       tablet: {
         grid: `"delayed ." 60px
-               "delayed settings" auto
-               ". settings" 60px / 1fr 1fr`,
+               "delayed reserve" auto
+               ". reserve" 60px / 1fr 1fr`,
         rowGap: '60px'
       }
     }
@@ -38,12 +38,12 @@ const CarrierGalleryItem = styled(GalleryItem, {
 const PieScreenshotImg = styled(Image, {
   position: 'relative',
   zIndex: 1,
-  borderRadius: '0 0 12px 12px'
+  borderRadius: '12px'
 });
 
 export default function Gallery() {
   const screenshotDelayedDetail = '/projects/carrier/gallery/homeShowDelayed.webp';
-  const screenshotSettings = '/projects/carrier/gallery/settings.webp';
+  const screenshotReserve = '/projects/carrier/gallery/reserve.webp';
 
   return(
     <CarrierGalleryList responsive={{ '@m768': 'tablet' }} grid={{ '@m768': 'tablet' }}>
@@ -57,8 +57,8 @@ export default function Gallery() {
           loading="lazy"
         />
       </CarrierGalleryItem>
-      <CarrierGalleryItem item={{ '@m768': 'settings' }} nomark>
-        <PieScreenshotImg src={screenshotSettings}
+      <CarrierGalleryItem item={{ '@m768': 'reserve' }} nomark>
+        <PieScreenshotImg src={screenshotReserve}
           layout="responsive"
           width={256}
           height={554}

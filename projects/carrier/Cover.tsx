@@ -36,7 +36,7 @@ export default function Cover() {
   useEffect(() => {setMounted(true)}, []);
 
   return(
-    <Wrap project="carrier">
+    <Wrap>
       <Device responsive={{ '@initial': 'mobile' }} vpheight="iphone13" model={{ '@m768': 'mobileDual' }}>
         {mounted && screenMobile &&
           <ScreenshotMobile src="/projects/carrier/gallery/homeIndex.webp" width={256} height={554} quality={100} alt="Screenshot: Upcoming Health Checks" />

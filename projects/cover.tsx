@@ -7,9 +7,6 @@ export const Wrap = styled('header', {
 
   variants: {
     project: {
-      carrier: {
-        backgroundColor: 'hsl($themeCarrier)'
-      },
       pie: {
         backgroundColor: 'hsl($pie0)'
       },

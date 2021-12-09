@@ -51,19 +51,13 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('question.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('question.content')}} purpose="question" italic={isItalic} indent />
         </Section>
-        <Section isgroupend>
+        <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('idea.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('idea.description')}} indent />
         </Section>
-      </Container>
-      <FullBlock project="carrier">
-        <Container responsive={{'@m768': 'max640'}}>
-          <Section>
-            <Gallery />
-          </Section>
-        </Container>
-      </FullBlock>
-      <Container as="section" responsive={{'@m768': 'max640'}}>
+        <Section>
+          <Gallery />
+        </Section>
         <Section has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('next.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('next.description')}} indent />
