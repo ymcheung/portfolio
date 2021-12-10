@@ -7,11 +7,11 @@ const Icon = styled(Svg, {
 });
 
 const Background = styled('circle', {
-  fill: 'hsl($iconMtBackground)'
+  fill: 'hsl($mtMidnight300)'
 });
 
 const Note = styled('path', {
-  fill: 'hsl($iconMtForeground)'
+  fill: 'hsl($mtDawn)'
 });
 
 export default function IconMoment() {

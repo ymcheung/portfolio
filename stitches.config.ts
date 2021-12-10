@@ -46,13 +46,7 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
 
       homeSectionTitle: '$shade600',
 
-      iconCarrierBackground: '$shade800',
-      iconCarrierForeground: '$shade1600',
-
-      iconPieBackground: '$shade800',
-      iconPieForeground: '$shade1600',
-      iconMtBackground: '$shade800',
-      iconMtForeground: '$shade1600',
+      projectIconForeground: '$shade100',
 
       activityHyphen: '$shade1200',
 
@@ -193,13 +187,7 @@ export const dark = createTheme({
 
     homeSectionTitle: '$laurel',
 
-    iconCarrierBackground: '$carrierNeon',
-    iconCarrierForeground: '$shade1600',
-
-    iconPieBackground: '$pie700',
-    iconPieForeground: '$shade1500',
-    iconMtBackground: '$mtMidnight300',
-    iconMtForeground: '$mtDawn',
+    projectIconForeground: '$shade1500',
 
     activityHyphen: '$shade1000',
 

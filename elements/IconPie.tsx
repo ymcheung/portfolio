@@ -7,11 +7,11 @@ const Icon = styled(Svg, {
 });
 
 const Background = styled('path', {
-  fill: 'hsl($iconPieBackground)'
+  fill: 'hsl($pie700)'
 });
 
 const Letter = styled('path', {
-  fill: 'hsl($iconPieForeground)'
+  fill: 'hsl($proejctIconForeground)'
 });
 
 export default function IconPie() {

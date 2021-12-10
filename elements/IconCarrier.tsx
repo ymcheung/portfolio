@@ -7,11 +7,11 @@ const Icon = styled(Svg, {
 });
 
 const Background = styled('path', {
-  fill: 'hsl($iconCarrierBackground)'
+  fill: 'hsl($carrierNeon)'
 });
 
 const Carrier = styled('path', {
-  fill: 'hsl($iconCarrierForeground)'
+  fill: 'hsl($shade1500)'
 });
 
 export default function IconCarrier() {
