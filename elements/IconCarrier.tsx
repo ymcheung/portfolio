@@ -11,7 +11,7 @@ const Background = styled('path', {
 });
 
 const Carrier = styled('path', {
-  fill: 'hsl($shade1500)'
+  fill: 'hsl($shade1600)'
 });
 
 export default function IconCarrier() {
