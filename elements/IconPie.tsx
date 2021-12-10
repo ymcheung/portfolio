@@ -11,7 +11,7 @@ const Background = styled('path', {
 });
 
 const Letter = styled('path', {
-  fill: 'hsl($proejctIconForeground)'
+  fill: 'hsl($shade1600)'
 });
 
 export default function IconPie() {

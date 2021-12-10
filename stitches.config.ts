@@ -46,8 +46,6 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
 
       homeSectionTitle: '$shade600',
 
-      projectIconForeground: '$shade100',
-
       activityHyphen: '$shade1200',
 
       homeLoveUIText: '$shade100',
@@ -186,8 +184,6 @@ export const dark = createTheme({
     shade1600: '162,2%, 6%',
 
     homeSectionTitle: '$laurel',
-
-    projectIconForeground: '$shade1500',
 
     activityHyphen: '$shade1000',
 
