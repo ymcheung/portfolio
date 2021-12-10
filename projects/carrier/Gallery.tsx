@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { styled } from 'stitches.config';
 
@@ -42,8 +43,11 @@ const PieScreenshotImg = styled(Image, {
 });
 
 export default function Gallery() {
-  const screenshotDelayedDetail = '/projects/carrier/gallery/homeShowDelayed.webp';
-  const screenshotAppoint = '/projects/carrier/gallery/appoint.webp';
+  const router = useRouter();
+  const ImageLang = router.locale === 'en' ? 'en' : 'tw';
+
+  const screenshotDelayedDetail = `/projects/carrier/gallery/${ImageLang}/homeShowDelayed.webp`;
+  const screenshotAppoint = `/projects/carrier/gallery/${ImageLang}/appoint.webp`;
 
   return(
     <CarrierGalleryList responsive={{ '@m768': 'tablet' }} grid={{ '@m768': 'tablet' }}>
