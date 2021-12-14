@@ -6,6 +6,13 @@
     "description":
       "The vets always suggest that pet owners take their furry friends to health checks once or twice a year. However, it is easy to forget the time, and they may also ignore this because they look healthy and energetic."
   },
+  "question":
+  {
+    "title":
+      "Question",
+    "content":
+      "How might we encourage pet owners to take their furry friends to health checks periodically?"
+  },
   "stats":
   {
     "title":
@@ -38,13 +45,6 @@
         }
       ]
     }
-  },
-  "question":
-  {
-    "title":
-      "Question",
-    "content":
-      "How might we encourage pet owners to take their furry friends to health checks periodically?"
   },
   "idea":
   {

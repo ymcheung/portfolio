@@ -34,6 +34,10 @@ export default function Content() {
           <Paragraph dangerouslySetInnerHTML={{__html: t('intro.description')}} indent />
         </Section>
         <Section>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('question.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('question.content')}} purpose="question" italic={isItalic} indent />
+        </Section>
+        <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('stats.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('stats.description')}} indent />
           <FeatureList space={itemSpace} siblings="hasSiblings">
@@ -50,10 +54,6 @@ export default function Content() {
               </IconListItem>
             ))}
           </IconList>
-        </Section>
-        <Section>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('question.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('question.content')}} purpose="question" italic={isItalic} indent />
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('idea.title')}} />
