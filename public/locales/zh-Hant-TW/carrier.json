@@ -46,6 +46,36 @@
       ]
     }
   },
+  "who":
+  {
+    "title":
+      "誰要用這款服務？",
+      "alt":
+        "敏安和她的兩隻貓，Seven 與 Eleven。",
+    "description":
+      "敏安從大學開始養了兩隻貓，叫做 Seven 和 Eleven。不論參加考試還是面試，都陪在她身旁。現在一隻 10 歲，一隻 9 歲。",
+    "understanding":
+    {
+      "title":
+        "基本認知",
+      "description":
+        "因為醫生的建議，她知道每年要帶高齡貓去健康檢查兩次。"
+    },
+    "negligence":
+    {
+      "title":
+        "疏忽",
+      "description":
+       "敏安在學生時期沒有帶 Seven 和 Eleven 去健康檢查的預算。他們也都看起來很健康有活力，因此就沒有這樣做。"
+    },
+    "incentive":
+    {
+      "title":
+        "外部刺激",
+      "description":
+        "Seven 今年開始生病了，敏安已經帶她去動物醫院好幾次，並且想起醫生的建議。她的新年願望之一是要定期帶他們去健康檢查。"
+    }
+  },
   "idea":
   {
     "title":

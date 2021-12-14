@@ -1,8 +1,9 @@
+import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 
 import LangSwitch from '@components/LangSwitch';
 
-import { Container, FullBlock } from '@components/layout';
+import { Container } from '@components/layout';
 import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 
 import { ListItem, IconList, IconListItem } from '@components/layout';
@@ -15,7 +16,7 @@ interface statsProps {
   affix: string;
 }
 
-interface statusProps {
+interface ParagraphProps {
   paragraph: string;
 }
 
@@ -56,8 +57,19 @@ export default function Content() {
           </IconList>
         </Section>
         <Section>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('who.title')}} />
+          <Image src="/projects/carrier/min-an.svg" width={192} height={160} alt={t('who.alt')} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('who.description')}} indent />
+          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('who.understanding.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('who.understanding.description')}} indent />
+          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('who.negligence.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('who.negligence.description')}} indent />
+          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('who.incentive.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('who.incentive.description')}} indent />
+        </Section>
+        <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('idea.title')}} />
-          {t<string, statusProps[]>('idea.description', { returnObjects: true }).map(({ paragraph }, index: number) => (
+          {t<string, ParagraphProps[]>('idea.description', { returnObjects: true }).map(({ paragraph }, index: number) => (
               <Paragraph dangerouslySetInnerHTML={{__html: paragraph}} key={`idea-description-${index}`} indent />
             ))}
         </Section>
