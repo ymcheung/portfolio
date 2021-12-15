@@ -49,7 +49,7 @@
   "who":
   {
     "title":
-      "Who May Use This Service?",
+      "Who May Use the Service?",
     "alt":
       "Min-An and her two cats, Seven and Eleven.",
     "description":
@@ -66,7 +66,7 @@
       "title":
         "Negligence",
       "description":
-        "Min-An didn't have the budget for taking Seven and Eleven to health checks when she was a student. They still look healthy and energetic when 7-year-old and above. Therefore, she didn't do so."
+        "Min-An didn’t have the budget for taking Seven and Eleven to health checks when she was a student. They still look healthy and energetic when 7-year-old and above. Therefore, she didn’t do so."
     },
     "incentive":
     {
@@ -76,19 +76,19 @@
         "Seven started to be sick this year. Min-An took her to the animal hospital many times and recalled what the vets suggested. One of her new year resolutions is to take them to health checks periodically."
     }
   },
-  "idea":
+  "why":
   {
     "title":
-      "Idea",
-    "description":
+      "Why Does She Use the Service?",
+    "descriptions":
     [
       {
         "paragraph":
-          "There have been a lot of calendar and reminder apps, and pet owners probably don’t need another one. What kind of notifications which most people don’t expect to ignore? Billing notifications are one of them."
+          "There have been a lot of calendar and reminder apps, and Min-An doesn’t need another one. What kind of notifications which she doesn’t expect to ignore? Billing notifications are one of them. Carrier Express charges her periodically, and she will get receipt emails."
       },
       {
         "paragraph":
-          "Since it has been charging the pet owners, they can make a health check appointment anytime."
+          "Since the service has been charging her, she can reserve health checks anytime. It’s her commitment to Seven and Eleven’s health as a responsible pet owner."
       }
     ]
   },
