@@ -68,10 +68,10 @@ export default function Content() {
           <Paragraph dangerouslySetInnerHTML={{__html: t('who.incentive.description')}} indent />
         </Section>
         <Section>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('idea.title')}} />
-          {t<string, ParagraphProps[]>('idea.description', { returnObjects: true }).map(({ paragraph }, index: number) => (
-              <Paragraph dangerouslySetInnerHTML={{__html: paragraph}} key={`idea-description-${index}`} indent />
-            ))}
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
+          {t<string, ParagraphProps[]>('why.descriptions', { returnObjects: true }).map(({ paragraph }, index: number) => (
+            <Paragraph dangerouslySetInnerHTML={{__html: paragraph}} key={`why-description-${index}`} indent />
+          ))}
         </Section>
         <Section>
           <Gallery />
