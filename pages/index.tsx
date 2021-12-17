@@ -14,6 +14,7 @@ import Projects from '@home/Projects';
 import Activity from '@home/Activity';
 import ExternalLinks from '@home/ExternalLinks';
 import Footer from '@components/Footer';
+import { GetStaticProps } from 'next';
 
 const pageBody = globalCss({
   'body[data-body-style=home]': {
@@ -178,7 +179,7 @@ export default function Home() {
   )
 }
 
-export const getStaticProps = async ({ locale }) => ({
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
     ...await serverSideTranslations(locale, ['home']),
   },
