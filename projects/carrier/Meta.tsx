@@ -1,4 +1,4 @@
-// import Link from 'next/link';
+import Link from 'next/link';
 import { MetaList, MetaItem, MetaItemTitle, MetaStatusList, MetaItemValue } from "@projects/meta";
 
 import IconHasDeliverable from '@projects/IconHasDeliverable';
@@ -8,28 +8,33 @@ export default function Meta() {
   const statusItems = [
     {
       name: 'Document',
-      link: '',
-      isReady: false
+      link: 'https://www.craft.do/s/ID02aukYb1wMuR',
+      isReady: true,
+      sbevent: 'Carrier/Meta: Document Link'
     },
     {
       name: 'UI',
       link: '',
-      isReady: true
+      isReady: true,
+      sbevent: ''
     },
     {
       name: 'Prototype',
       link: '',
-      isReady: false
+      isReady: false,
+      sbevent: ''
     },
     {
       name: 'Web App',
       link: '',
-      isReady: false
+      isReady: false,
+      sbevent: ''
     },
     {
       name: 'Landing Page',
       link: '',
-      isReady: false
+      isReady: false,
+      sbevent: ''
     }
   ];
 
@@ -49,7 +54,7 @@ export default function Meta() {
         <MetaItemTitle project="carrier">Status</MetaItemTitle>
         <MetaStatusList responsive={{ '@m768': 'tablet' }}>
           {
-            statusItems.map(({ name, isReady, link }, index) => 
+            statusItems.map(({ name, isReady, link, sbevent }, index) =>
               <MetaItem key={`statusItems-${index}`}>
                 {
                   isReady &&
@@ -58,6 +63,12 @@ export default function Meta() {
                 {
                   !isReady &&
                   <IconNotReady />
+                }
+                {
+                  link &&
+                  <Link href={link} passHref>
+                    <MetaItemValue as="a" data-splitbee-event={sbevent} target="_blank" rel="noopener">{name}</MetaItemValue>
+                  </Link>
                 }
                 {
                   !link &&
