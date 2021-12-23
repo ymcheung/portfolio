@@ -10,7 +10,7 @@ export default function Meta() {
       name: 'Document',
       link: 'https://www.craft.do/s/ID02aukYb1wMuR',
       isReady: true,
-      sbevent: 'Carrier/Meta: Document Link'
+      sbevent: 'Document Link'
     },
     {
       name: 'UI',
@@ -32,9 +32,9 @@ export default function Meta() {
     },
     {
       name: 'Landing Page',
-      link: '',
-      isReady: false,
-      sbevent: ''
+      link: 'https://carrier.express',
+      isReady: true,
+      sbevent: 'Landing Page Link'
     }
   ];
 
@@ -67,7 +67,7 @@ export default function Meta() {
                 {
                   link &&
                   <Link href={link} passHref>
-                    <MetaItemValue as="a" data-splitbee-event={sbevent} target="_blank" rel="noopener">{name}</MetaItemValue>
+                    <MetaItemValue as="a" data-splitbee-event={`Carrier/Meta: ${sbevent}`} target="_blank" rel="noopener">{name}</MetaItemValue>
                   </Link>
                 }
                 {
