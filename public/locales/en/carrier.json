@@ -97,7 +97,7 @@
     "title":
       "Project Status",
     "description":
-      "The questionnaire is still open. Meanwhile, I set up a preview landing page and collect search terms on the health checks of dogs and cats. The visitors can leave their emails if the concept interests them."
+      "The questionnaire is still open. Meanwhile, I set up a <a class=\"paragraph-link\" href=\"https://carrier.express/en\" target=\"_blank\" rel=\"noopener\">preview landing page</a> and collect search terms on the health checks of dogs and cats. The visitors can leave their emails if the concept interests them."
   },
   "postmark":
   {
