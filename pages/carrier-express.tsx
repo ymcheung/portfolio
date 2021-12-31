@@ -91,6 +91,6 @@ export default function ProjectCarrier() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['carrier', 'home']),
+    ...await serverSideTranslations(locale, ['carrier', 'home', 'meta']),
   },
 });

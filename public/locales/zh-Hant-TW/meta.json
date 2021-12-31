@@ -1,0 +1,40 @@
+{
+  "role":
+  {
+    "title":
+      "我的角色",
+    "research":
+      "使用者研究",
+    "ui":
+      "UI 設計",
+    "fe":
+      "網頁前端",
+    "org":
+      "主辦",
+    "translate":
+      "翻譯",
+    "combined":
+    {
+      "all":
+        "{{research}}、{{ui}}、{{fe}}",
+      "intersection":
+        "{{org}}與{{translate}}",
+      "process":
+        "{{org}}與{{fe}}"
+    }
+  },
+  "lang":
+  {
+    "title":
+      "語言"
+  },
+  "status":
+  {
+    "title":
+      "專案現況",
+    "doc":
+      "文件",
+    "landing":
+      "登陸頁面"
+  }
+}

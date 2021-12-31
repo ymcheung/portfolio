@@ -1,0 +1,40 @@
+{
+  "role":
+  {
+    "title":
+      "Role",
+    "research":
+      "User Research",
+    "ui":
+      "UI Design",
+    "fe":
+      "Web Front-End",
+    "org":
+      "Organizer",
+    "translate":
+      "Translator",
+    "combined":
+    {
+      "all":
+        "{{research}}, {{ui}}, {{fe}}",
+      "intersection":
+        "{{org}} and {{translate}}",
+      "process":
+        "{{org}} and {{fe}}"
+    }
+  },
+  "lang":
+  {
+    "title":
+      "Languages"
+  },
+  "status":
+  {
+    "title":
+      "Status",
+    "doc":
+      "Document",
+    "landing":
+      "Landing Page"
+  }
+}

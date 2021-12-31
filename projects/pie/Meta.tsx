@@ -24,11 +24,6 @@ export default function Meta() {
       sbevent: 'Pie/Meta: Prototype Link'
     },
     {
-      name: 'Web App',
-      link: '',
-      isReady: false
-    },
-    {
       name: 'Landing Page',
       link: '',
       isReady: false
@@ -51,7 +46,7 @@ export default function Meta() {
         <MetaItemTitle project="pie">Status</MetaItemTitle>
         <MetaStatusList responsive={{ '@m768': 'tablet' }}>
           {
-            statusItems.map(({ name, link, isReady, sbevent }, index) => 
+            statusItems.map(({ name, link, isReady, sbevent }, index) =>
               <MetaItem key={`statusItems-${index}`}>
                 {
                   isReady &&
