@@ -3,15 +3,16 @@ module.exports = {
     defaultNS: 'home',
     ns: [
       'home',
+      'meta',
       'carrier',
       'pie',
       'moment',
       'nuomi',
       'intersection',
-      'process',
+      'process'
     ],
     defaultLocale: 'en',
     locales: ['en', 'zh-Hant-TW'],
-    localeDetection: false,
-  },
+    localeDetection: false
+  }
 };
