@@ -37,7 +37,7 @@ export default function ProjectCarrier() {
     name: t('home:project.carrier.title'),
     description: t('home:project.carrier.description'),
     datePublished: '2020-12-09',
-    dateModified: '2021-12-22'
+    dateModified: '2022-01-01'
   };
 
   useEffect(() => {
@@ -91,6 +91,6 @@ export default function ProjectCarrier() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['carrier', 'home']),
+    ...await serverSideTranslations(locale, ['carrier', 'home', 'meta']),
   },
 });

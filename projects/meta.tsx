@@ -31,6 +31,7 @@ export const MetaItem = styled('li', {
 
 export const MetaItemTitle = styled('strong', {
   display: 'block',
+  marginBottom: '$4',
   fontFamily: '$mono',
   fontSize: '$14',
   fontWeight: 500,
@@ -79,6 +80,6 @@ export const MetaItemValue = styled('span', {
   color: 'hsl($shade600)',
   fontFamily: '$mono',
   fontSize: '$14',
-  fontWeight: 500,
+  fontWeight: 400,
   lineHeight: '24px'
 });

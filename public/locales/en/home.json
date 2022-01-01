@@ -2,13 +2,13 @@
   "verb":
   {
     "redesign":
-      "Redesign",
+      "Redesigning",
     "explore":
-      "Explore",
+      "Exploring",
     "retrospect":
-      "Retrospect",
+      "Retrospecting",
     "translate":
-      "Translate"
+      "Translating"
   },
   "project":
   {
@@ -17,7 +17,7 @@
     "carrier":
     {
       "title":
-        "“Carrier Express” Reminds You to Take Your Furry Friends to Health Checks",
+        "Reminding You to Take Your Furry Friends to Health Checks",
       "description":
         "Take your fur buddies to health checks periodically with the way you can’t ignore."
     },

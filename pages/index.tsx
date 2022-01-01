@@ -113,7 +113,7 @@ export default function Home() {
       name: TITLE,
       description: DESCRIPTION,
       datePublished: '2016-04-16',
-      dateModified: '2021-12-10',
+      dateModified: '2022-01-01',
       publisher: {
         '@type': 'ProfilePage',
         name: AUTHOR,

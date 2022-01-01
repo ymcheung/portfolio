@@ -37,7 +37,7 @@ export default function ProjectPie() {
     name: t('home:project.pie.title', { redesign: t('home:verb.redesign') }),
     description: t('home:project.pie.description'),
     datePublished: '2020-08-29',
-    dateModified: '2021-11-25'
+    dateModified: '2022-01-01'
   };
 
   useEffect(() => {
@@ -94,6 +94,6 @@ export default function ProjectPie() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['pie', 'home']),
+    ...await serverSideTranslations(locale, ['pie', 'home', 'meta']),
   },
 });
