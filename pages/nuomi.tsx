@@ -33,7 +33,7 @@ export default function ProjectNuomi() {
     name: t('home:project.nuomi.title', { retrospect: t('home:verb.retrospect') }),
     description: t('home:project.nuomi.description'),
     datePublished: '2020-08-29',
-    dateModified: '2021-09-23'
+    dateModified: '2022-01-01'
   }
 
   useEffect(() => {
