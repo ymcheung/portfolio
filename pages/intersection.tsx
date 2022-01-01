@@ -93,6 +93,6 @@ export default function ProjectIntersection() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['intersection', 'home']),
+    ...await serverSideTranslations(locale, ['intersection', 'home', 'meta']),
   },
 });

@@ -95,6 +95,6 @@ export default function ProjectMoment() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['moment', 'home']),
+    ...await serverSideTranslations(locale, ['moment', 'home', 'meta']),
   },
 });

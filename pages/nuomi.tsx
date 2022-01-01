@@ -82,6 +82,6 @@ export default function ProjectNuomi() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['nuomi', 'home']),
+    ...await serverSideTranslations(locale, ['nuomi', 'home', 'meta']),
   },
 });

@@ -39,9 +39,12 @@ export default function Meta() {
     <MetaList responsive={{ '@m768': 'half' }}>
       <MetaItem>
         <MetaItemTitle project="carrier">{t('role.title')}</MetaItemTitle>
-        <MetaItemValue>{t('role.combined.all',
-          { research: t('role.research'), ui: t('role.ui'), fe: t('role.fe') }
-        )}</MetaItemValue>
+        <MetaItemValue>
+        {
+          t('role.combined.all',
+            { research: t('role.research'), ui: t('role.ui'), fe: t('role.fe') })
+        }
+        </MetaItemValue>
       </MetaItem>
       <MetaItem>
         <MetaItemTitle project="carrier">{t('lang.title')}</MetaItemTitle>
@@ -52,32 +55,32 @@ export default function Meta() {
       <MetaItem itemspan={{ '@m768': 'full' }}>
         <MetaItemTitle project="carrier">{t('status.title')}</MetaItemTitle>
         <MetaStatusList responsive={{ '@m768': 'tablet' }}>
-          {
-            statusItems.map(({ name, isReady, link, sbevent }, index) =>
-              <MetaItem key={`statusItems-${index}`}>
-                {
-                  isReady &&
-                  <IconHasDeliverable project="carrier" />
-                }
-                {
-                  !isReady &&
-                  <IconNotReady />
-                }
-                {
-                  link &&
-                  <Link href={link} passHref>
-                    <MetaItemValue as="a" data-splitbee-event={`Carrier/Meta: ${sbevent}`} target="_blank" rel="noopener">{name}</MetaItemValue>
-                  </Link>
-                }
-                {
-                  !link &&
-                  <MetaItemValue>
-                    {name}
-                  </MetaItemValue>
-                }
-              </MetaItem>
-            )
-          }
+        {
+          statusItems.map(({ name, isReady, link, sbevent }, index) =>
+            <MetaItem key={`statusItems-${index}`}>
+            {
+              isReady &&
+              <IconHasDeliverable project="carrier" />
+            }
+            {
+              !isReady &&
+              <IconNotReady />
+            }
+            {
+              link &&
+              <Link href={link} passHref>
+                <MetaItemValue as="a" data-splitbee-event={`Carrier/Meta: ${sbevent}`} target="_blank" rel="noopener">{name}</MetaItemValue>
+              </Link>
+            }
+            {
+              !link &&
+              <MetaItemValue>
+                {name}
+              </MetaItemValue>
+            }
+            </MetaItem>
+          )
+        }
         </MetaStatusList>
       </MetaItem>
     </MetaList>

@@ -82,6 +82,6 @@ export default function ProjectProcess() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['process', 'home']),
+    ...await serverSideTranslations(locale, ['process', 'home', 'meta']),
   },
 });

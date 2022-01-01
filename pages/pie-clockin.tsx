@@ -94,6 +94,6 @@ export default function ProjectPie() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['pie', 'home']),
+    ...await serverSideTranslations(locale, ['pie', 'home', 'meta']),
   },
 });
