@@ -56,7 +56,7 @@ export default function ProjectNuomi() {
       <HeadMeta
         title={pageInfo.name}
         description={pageInfo.description}
-        ogCover="/projects/nuomi/og-cover.jpg"
+        ogCover="/projects/nuomi/ogCover.jpg"
         canonical={router.pathname}
       />
       <Cover />
