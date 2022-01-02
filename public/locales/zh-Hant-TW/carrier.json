@@ -80,6 +80,8 @@
   {
     "title":
       "為什麼她要用這款服務？",
+    "coverAlt":
+      "Google 日曆、iOS 日曆、Fantastical、Things、Spark 等。選擇非常多。",
     "descriptions":
     [
       {
@@ -92,12 +94,31 @@
       }
     ]
   },
-  "status":
+  "mvp":
   {
     "title":
-      "專案現況",
-    "description":
-      "<a class=\"paragraph-link\" href=\"https://airtable.com/shryvuKIJKkMtG93Y\" target=\"_blank\" rel=\"noopener\">問卷調查</a>現在仍開放中。同時間，先設立<a class=\"paragraph-link\" href=\"https://carrier.express\" target=\"_blank\" rel=\"noopener\">預覽登陸頁面</a>，用來搜集貓、狗健康檢查的關鍵字。如果訪客對這概念有興趣，可以留下電子郵件。"
+      "從最小可行性產品開始",
+    "paragraphs":
+    [
+      {
+        "title":
+          "給貓飼主使用",
+        "description":
+          "在台灣，有貓家庭的數量大幅成長；而且，帶貓和狗去健康檢查的頻率是一樣的。"
+      },
+      {
+        "title":
+          "只有一間動物醫院",
+        "description":
+          "根據調查，大多數的飼主都有最習慣的動物醫院。"
+      },
+      {
+        "title":
+          "只有信用卡支付",
+        "description":
+          "信用卡的定期支付已經非常成熟。"
+      }
+    ]
   },
   "postmark":
   {

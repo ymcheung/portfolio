@@ -12,7 +12,7 @@ const defaultProps = {
   title: headMetaDefault.TITLE,
   description: headMetaDefault.DESCRIPTION,
   canonical: '',
-  ogCover: '/home/og-cover.jpg'
+  ogCover: '/home/ogCover.jpg'
 };
 
 function HeadMeta({ title, description, canonical, ogCover }: HeadMetaProps) {

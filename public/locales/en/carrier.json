@@ -80,6 +80,8 @@
   {
     "title":
       "Why Does She Use the Service?",
+    "coverAlt":
+      "Google Calendar, iOS Calendar, Fantastical, Things, Spark, and more. She has so many choices.",
     "descriptions":
     [
       {
@@ -92,12 +94,31 @@
       }
     ]
   },
-  "status":
+  "mvp":
   {
     "title":
-      "Project Status",
-    "description":
-      "The questionnaire is still open. Meanwhile, I set up a <a class=\"paragraph-link\" href=\"https://carrier.express/en\" target=\"_blank\" rel=\"noopener\">preview landing page</a> and collect search terms on the health checks of dogs and cats. The visitors can leave their emails if the concept interests them."
+      "Get Started with a Minimum Viable Product",
+    "paragraphs":
+    [
+      {
+        "title":
+          "For Cat Owners",
+        "description":
+          "The families with cats are growing rapidly in Taiwan. The frequency which bringing cats and dogs to health checks is the same."
+      },
+      {
+        "title":
+          "One Animal Hospital",
+        "description":
+          "According to the survey, most pet owners have their favorite animal hospital."
+      },
+      {
+        "title":
+          "Payment by Credit Card",
+        "description":
+          "Recurring payment by credit card is mature. "
+      }
+    ]
   },
   "postmark":
   {

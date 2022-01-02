@@ -61,7 +61,7 @@ export default function ProjectIntersection() {
       <HeadMeta
         title={`${pageInfo.name}${TITLE_AFFIX}`}
         description={pageInfo.description}
-        ogCover="/projects/intersection/og-cover.jpg"
+        ogCover="/projects/intersection/ogCover.jpg"
         canonical={router.pathname}
       />
       <Container as="article" responsive={{'@m768': 'max640'}} space="isGroundFloor">
