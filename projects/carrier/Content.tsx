@@ -9,6 +9,8 @@ import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from
 import { ListItem, IconList, IconListItem } from '@components/layout';
 import { FeatureList } from '@projects/featured';
 
+import productivity from '/public/projects/carrier/productivity.webp';
+
 import Gallery from './Gallery';
 
 interface statsProps {
@@ -16,8 +18,13 @@ interface statsProps {
   affix: string;
 }
 
-interface ParagraphProps {
+interface DescriptionProps {
   paragraph: string;
+}
+
+interface ParagraphProps {
+  title: string;
+  description: string;
 }
 
 export default function Content() {
@@ -58,7 +65,7 @@ export default function Content() {
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('who.title')}} />
-          <Image src="/projects/carrier/min-an.svg" width={192} height={160} alt={t('who.alt')} />
+          <Image src="/projects/carrier/minAn.svg" width={192} height={160} alt={t('who.alt')} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('who.description')}} indent />
           <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('who.understanding.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('who.understanding.description')}} indent />
@@ -69,16 +76,22 @@ export default function Content() {
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
-          {t<string, ParagraphProps[]>('why.descriptions', { returnObjects: true }).map(({ paragraph }, index: number) => (
+          <Image src={productivity} layout="responsive" quality={92} alt={t('why.coverAlt')} />
+          {t<string, DescriptionProps[]>('why.descriptions', { returnObjects: true }).map(({ paragraph }, index: number) => (
             <Paragraph dangerouslySetInnerHTML={{__html: paragraph}} key={`why-description-${index}`} indent />
           ))}
         </Section>
         <Section>
-          <Gallery />
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('mvp.title')}} />
+          {t<string, ParagraphProps[]>('mvp.paragraphs', { returnObjects: true }).map(({ title, description }, index: number) => (
+            <>
+              <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: title}} />
+              <Paragraph dangerouslySetInnerHTML={{__html: description}} key={`mvp-description-${index}`} indent />
+            </>
+          ))}
         </Section>
         <Section has="postmarks">
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('status.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('status.description')}} indent />
+          <Gallery />
         </Section>
         <Section isgroupend>
           <PostMarksHr />
