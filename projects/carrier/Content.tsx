@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 
@@ -84,10 +85,10 @@ export default function Content() {
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('mvp.title')}} />
           {t<string, ParagraphProps[]>('mvp.paragraphs', { returnObjects: true }).map(({ title, description }, index: number) => (
-            <>
+            <Fragment key={`mvp-description-${index}`}>
               <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: title}} />
-              <Paragraph dangerouslySetInnerHTML={{__html: description}} key={`mvp-description-${index}`} indent />
-            </>
+              <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />
+            </Fragment>
           ))}
         </Section>
         <Section has="postmarks">
