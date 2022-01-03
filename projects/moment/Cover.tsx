@@ -1,9 +1,8 @@
 import { styled, keyframes } from 'stitches.config';
 import { Container, ListItem } from '@components/layout';
 
-const CoverFull = styled('header', {
+const CoverFull = styled('div', {
   overflow: 'hidden',
-  marginBottom: '$16',
   backgroundColor: 'hsl($mtMidnight100)'
 });
 
