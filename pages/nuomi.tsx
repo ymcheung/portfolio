@@ -9,8 +9,8 @@ import { webPage } from '@utils/schema/webPage';
 
 import { globalCss } from 'stitches.config';
 
-import { Container, FullLayout } from '@components/layout';
-import { Heading } from '@components/headings';
+import { Container, FullBlock } from '@components/layout';
+import { HeadingLayout, Heading } from '@components/headings';
 import Cover from '@projects/nuomi/Cover';
 import Meta from '@projects/nuomi/Meta';
 import Content from '@projects/nuomi/Content';
@@ -59,14 +59,16 @@ export default function ProjectNuomi() {
         ogCover="/projects/nuomi/ogCover.jpg"
         canonical={router.pathname}
       />
+      <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+        <Heading as="span" position="itemName">{pageInfo.name}</Heading>
+      </HeadingLayout>
       <Cover />
-      <FullLayout as="article">
+      <FullBlock as="article">
         <Container as="section" responsive={{'@m768': 'max640'}}>
-          <Heading as="h1" position="itemName" ownmargin>{pageInfo.name}</Heading>
           <Meta />
         </Container>
         <Content />
-      </FullLayout>
+      </FullBlock>
       <Nav
         hasNext="Intersection"
         nextSlug="intersection"

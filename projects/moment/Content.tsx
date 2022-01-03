@@ -32,7 +32,7 @@ const BubbleSearch = styled('span', {
         maxWidth: 'max-content'
       }
     }
-  } 
+  }
 });
 
 const WhatList = styled('ul', {

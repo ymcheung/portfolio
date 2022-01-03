@@ -45,9 +45,6 @@ export const Container = styled('div', {
 });
 
 export const FullBlock = styled('section', {
-  marginBottom: '$16',
-  padding: '$24 0 $8',
-
   variants: {
     project: {
       carrier: {
@@ -62,12 +59,21 @@ export const FullBlock = styled('section', {
       nuomi: {
         backgroundColor: 'hsl($nuomiBlack0)'
       }
+    },
+    context: {
+      cover: {
+        marginBottom: '$24',
+        paddingTop: '$16'
+      },
+      layout: {
+        marginBottom: '64px',
+      },
+      section: {
+        marginBottom: '$16',
+        paddingY: '$16'
+      }
     }
   }
-});
-
-export const FullLayout = styled('div', {
-  marginBottom: '64px',
 });
 
 export const ListItem = styled('li', {

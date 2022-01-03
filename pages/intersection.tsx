@@ -64,16 +64,16 @@ export default function ProjectIntersection() {
         ogCover="/projects/intersection/ogCover.jpg"
         canonical={router.pathname}
       />
+      <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconm={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+        <span>
+          <IconIntersection />
+        </span>
+        <Heading as="span" position="itemName">
+          {pageInfo.name}
+        </Heading>
+      </HeadingLayout>
       <Container as="article" responsive={{'@m768': 'max640'}} space="isGroundFloor">
         <Section as="section">
-          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconm={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-            <div>
-              <IconIntersection />
-            </div>
-            <Heading as="h1" position="itemName">
-              {pageInfo.name}
-            </Heading>
-          </HeadingLayout>
           <Meta />
         </Section>
         <Content />

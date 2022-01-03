@@ -127,9 +127,9 @@ export default function Gallery() {
           </PieGalleryItem>
         </PieGalleryList>
       </Section>
-      <Section>
+      <Section isgroupend>
         <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
-        <Paragraph indent scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.description')}} />
+        <Paragraph indent scheme="mono" sectionend dangerouslySetInnerHTML={{__html: t('prototype.description')}} />
       </Section>
     </>
   )

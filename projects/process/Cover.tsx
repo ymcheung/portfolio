@@ -4,7 +4,7 @@ import { screenMobile, screenTablet } from '@utils/screens';
 
 import { useTheme } from 'next-themes';
 
-import { Wrap, Device } from '@projects/cover';
+import { Device } from '@projects/cover';
 import MockupMacbook from '@projects/MockupMacbook';
 
 const Screenshot = styled(Image, {
@@ -18,18 +18,16 @@ export default function Cover() {
   let isDarkTheme = resolvedTheme === 'dark';
 
   return(
-    <Wrap>
-      <Device responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} vpheight="iphone8" model={{ '@m768': 'tabletMacbook' }}>
-        {screenMobile && isDarkTheme &&
-          <Screenshot src="/projects/process/coverMobileDark.webp" width={272} height={484} alt="Mobile Landing Page of Design Process for Pros Translation" />
-        }
-        {screenMobile && !isDarkTheme &&
-          <Screenshot src="/projects/process/coverMobileLight.webp" width={272} height={484} alt="Mobile Landing Page of Design Process for Pros Translation" />
-        }
-        {screenTablet &&
-          <MockupMacbook image="/projects/process/coverDesktop.jpg" theme="duo" description="Desktop Landing Page of Design Process for Pros Translation" />
-        }
-      </Device>
-    </Wrap>
+    <Device responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} vpheight="iphone8" model={{ '@m768': 'tabletMacbook' }}>
+      {screenMobile && isDarkTheme &&
+        <Screenshot src="/projects/process/coverMobileDark.webp" width={272} height={484} alt="Mobile Landing Page of Design Process for Pros Translation" />
+      }
+      {screenMobile && !isDarkTheme &&
+        <Screenshot src="/projects/process/coverMobileLight.webp" width={272} height={484} alt="Mobile Landing Page of Design Process for Pros Translation" />
+      }
+      {screenTablet &&
+        <MockupMacbook image="/projects/process/coverDesktop.jpg" theme="duo" description="Desktop Landing Page of Design Process for Pros Translation" />
+      }
+    </Device>
   )
 }

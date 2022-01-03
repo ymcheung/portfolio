@@ -65,17 +65,17 @@ export default function ProjectMoment() {
         ogCover="/projects/moment/ogCover.jpg"
         canonical={router.pathname}
       />
+      <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+        <span>
+          <IconMoment />
+        </span>
+        <Heading as="span" position="itemName">
+          {pageInfo.name}
+        </Heading>
+      </HeadingLayout>
       <Cover />
       <Container as="article" responsive={{'@m768': 'max640'}}>
         <Section as="section">
-          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-            <div>
-              <IconMoment />
-            </div>
-            <Heading as="h1" position="itemName">
-              {pageInfo.name}
-            </Heading>
-          </HeadingLayout>
           <Meta />
         </Section>
       </Container>

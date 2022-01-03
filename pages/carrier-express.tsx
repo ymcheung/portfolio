@@ -10,7 +10,7 @@ import { webPage } from '@utils/schema/webPage';
 import { TITLE_AFFIX } from 'constant';
 import { globalCss } from 'stitches.config';
 
-import { Container, FullLayout } from '@components/layout';
+import { Container, FullBlock } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
 import Cover from '@projects/carrier/Cover';
 
@@ -64,21 +64,23 @@ export default function ProjectCarrier() {
         ogCover="/projects/carrier/ogCover.jpg"
         canonical={router.pathname}
       />
-      <Cover />
-      <FullLayout as="article">
+      <FullBlock as="header" context="cover">
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+          <span>
+            <IconCarrier />
+          </span>
+          <Heading as="span" position="itemName">
+            {pageInfo.name}
+          </Heading>
+        </HeadingLayout>
+        <Cover />
+      </FullBlock>
+      <FullBlock as="article">
         <Container as="section" responsive={{'@m768': 'max640'}}>
-          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-            <div>
-              <IconCarrier />
-            </div>
-            <Heading as="h1" position="itemName">
-              {pageInfo.name}
-            </Heading>
-          </HeadingLayout>
           <Meta />
         </Container>
         <Content />
-      </FullLayout>
+      </FullBlock>
       <Nav
         hasNext="Redesign a Clock-In App"
         nextSlug="pie-clockin"

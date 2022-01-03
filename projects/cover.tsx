@@ -1,26 +1,9 @@
 import { styled } from 'stitches.config';
 
-export const Wrap = styled('header', {
-  position: 'relative',
-  marginBottom: '$16',
-  padding: '$24 0',
-
-  variants: {
-    project: {
-      pie: {
-        backgroundColor: 'hsl($pie0)'
-      },
-      nuomi: {
-        backgroundColor: 'hsl($nuomiBlack0)'
-      }
-    }
-  }
-});
-
 export const Device = styled('figure', {
   position: 'relative',
   margin: '0 auto',
-  
+
   '&::before': {
     zIndex: 0,
     content: '',
