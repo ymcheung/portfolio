@@ -33,7 +33,7 @@ export default function Content() {
           <Paragraph dangerouslySetInnerHTML={{__html: t('experience.featured')}} indent sectionend />
         </Section>
       </Container>
-      <FullBlock project="nuomi">
+      <FullBlock project="nuomi" context="section">
         <Container responsive={{'@m768': 'max640'}}>
           <Gallery galleryItemAlt={galleryItemAlt} />
         </Container>

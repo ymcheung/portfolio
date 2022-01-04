@@ -10,7 +10,7 @@ import { webPage } from '@utils/schema/webPage';
 import { TITLE_AFFIX } from 'constant';
 import { globalCss } from 'stitches.config';
 
-import { Container } from '@components/layout';
+import { Container, FullBlock } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
 import { Section } from '@components/contentStyles';
 
@@ -24,7 +24,6 @@ import Footer from '@components/Footer';
 const pageBody = globalCss({
   'body[data-body-style=intersection]': {
     minHeight: '100vh',
-    paddingTop: '$16',
     backgroundColor: 'hsl($shade1600)'
   }
 });
@@ -38,7 +37,7 @@ export default function ProjectIntersection() {
     name: t('home:activity.intersection.fullTitle'),
     description: t('home:activity.intersection.description', { explore: t('home:verb.explore') }),
     datePublished: '2020-08-29',
-    dateModified: '2022-01-01'
+    dateModified: '2022-01-04'
   }
 
   useEffect(() => {
@@ -64,14 +63,16 @@ export default function ProjectIntersection() {
         ogCover="/projects/intersection/ogCover.jpg"
         canonical={router.pathname}
       />
-      <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconm={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-        <span>
-          <IconIntersection />
-        </span>
-        <Heading as="span" position="itemName">
-          {pageInfo.name}
-        </Heading>
-      </HeadingLayout>
+      <FullBlock as="header" context="cover">
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="none" iconm={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+          <span>
+            <IconIntersection />
+          </span>
+          <Heading as="span" position="itemName">
+            {pageInfo.name}
+          </Heading>
+        </HeadingLayout>
+      </FullBlock>
       <Container as="article" responsive={{'@m768': 'max640'}} space="isGroundFloor">
         <Section as="section">
           <Meta />

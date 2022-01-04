@@ -37,7 +37,7 @@ export default function ProjectCarrier() {
     name: t('home:project.carrier.title'),
     description: t('home:project.carrier.description'),
     datePublished: '2020-12-09',
-    dateModified: '2022-01-02'
+    dateModified: '2022-01-04'
   };
 
   useEffect(() => {
@@ -65,7 +65,7 @@ export default function ProjectCarrier() {
         canonical={router.pathname}
       />
       <FullBlock as="header" context="cover">
-        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
           <span>
             <IconCarrier />
           </span>
@@ -75,7 +75,7 @@ export default function ProjectCarrier() {
         </HeadingLayout>
         <Cover />
       </FullBlock>
-      <FullBlock as="article">
+      <FullBlock as="article" context="layout">
         <Container as="section" responsive={{'@m768': 'max640'}}>
           <Meta />
         </Container>

@@ -63,7 +63,9 @@ export const FullBlock = styled('section', {
     context: {
       cover: {
         marginBottom: '$24',
-        paddingTop: '$16'
+        paddingTop: '$24',
+        paddingX: '$8',
+        paddingBottom: '$16'
       },
       layout: {
         marginBottom: '64px',

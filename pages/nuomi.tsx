@@ -33,7 +33,7 @@ export default function ProjectNuomi() {
     name: t('home:project.nuomi.title', { retrospect: t('home:verb.retrospect') }),
     description: t('home:project.nuomi.description'),
     datePublished: '2020-08-29',
-    dateModified: '2022-01-01'
+    dateModified: '2022-01-04'
   }
 
   useEffect(() => {
@@ -59,11 +59,15 @@ export default function ProjectNuomi() {
         ogCover="/projects/nuomi/ogCover.jpg"
         canonical={router.pathname}
       />
-      <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-        <Heading as="span" position="itemName">{pageInfo.name}</Heading>
-      </HeadingLayout>
-      <Cover />
-      <FullBlock as="article">
+      <FullBlock as="header" project="nuomi" context="cover">
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover">
+          <Heading as="span" position="itemName" scheme="monoBlack">
+            {pageInfo.name}
+          </Heading>
+        </HeadingLayout>
+        <Cover />
+      </FullBlock>
+      <FullBlock as="article" context="layout">
         <Container as="section" responsive={{'@m768': 'max640'}}>
           <Meta />
         </Container>

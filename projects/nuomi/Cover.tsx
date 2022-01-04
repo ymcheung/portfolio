@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { styled } from 'stitches.config';
-import { screenMobile, screenTablet } from '@utils/screens';
 
 import { Device } from '@projects/cover';
 import MockupMacbook from '@projects/MockupMacbook';
+import screenshotMobile from '/public/projects/nuomi/coverMobile.jpg';
 
 const Screenshot = styled(Image, {
   width: '100%',
@@ -21,13 +21,13 @@ const Screenshot = styled(Image, {
 
 export default function Cover() {
   return(
-    <Device responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} vpheight="iphone8" model={{ '@m768': 'tabletMacbook' }}>
-      {screenMobile &&
-        <Screenshot src="/projects/nuomi/cover-mobile.jpg" width={272} height={484} responsive="mobile" alt="Mobile Landing Page of Nuomi’s Portfolio" />
-      }
-      {screenTablet &&
+    <>
+      <Device display={{ '@m768': 'none' }} responsive="mobile">
+        <Screenshot src={screenshotMobile} layout="responsive" responsive="mobile" alt="Mobile Landing Page of Nuomi’s Portfolio" />
+      </Device>
+      <Device display={{ '@initial': 'none', '@m768': 'block' }} responsive="tablet" model="tabletMacbook">
         <MockupMacbook image="/projects/nuomi/cover-desktop.jpg" theme="mono" description="Desktop Landing Page of Nuomi’s Portfolio" />
-      }
-    </Device>
+      </Device>
+    </>
   )
 }

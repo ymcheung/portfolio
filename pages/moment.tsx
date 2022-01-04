@@ -38,7 +38,7 @@ export default function ProjectMoment() {
     name: t('home:project.moment.title', { explore: t('home:verb.explore') }),
     description: t('home:project.moment.description'),
     datePublished: '2020-08-29',
-    dateModified: '2022-01-01'
+    dateModified: '2022-01-04'
   }
 
   useEffect(() => {
@@ -66,7 +66,7 @@ export default function ProjectMoment() {
         canonical={router.pathname}
       />
       <FullBlock as="header" project="moment" context="cover">
-        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
           <span>
             <IconMoment />
           </span>

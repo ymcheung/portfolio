@@ -2,18 +2,27 @@ import { styled } from 'stitches.config';
 
 export const HeadingLayout = styled('div', {
   display: 'grid',
-  margin: '0 auto $16',
-  paddingX: '$16',
+  margin: '0 auto $24',
 
   variants: {
     responsive: {
       mobile: {
-        rowGap: '$4'
+        rowGap: '$4',
+        paddingX: '$8'
       },
       tablet: {
         maxWidth: '640px',
         columnGap: '$16',
+        paddingX: '$16',
         alignItems: 'center'
+      }
+    },
+    sibling: {
+      cover: {
+        margin: '0 auto $24'
+      },
+      none: {
+        margin: '0 auto'
       }
     },
     iconm: {

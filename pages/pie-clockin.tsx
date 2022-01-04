@@ -37,7 +37,7 @@ export default function ProjectPie() {
     name: t('home:project.pie.title', { redesign: t('home:verb.redesign') }),
     description: t('home:project.pie.description'),
     datePublished: '2020-08-29',
-    dateModified: '2022-01-01'
+    dateModified: '2022-01-04'
   };
 
   useEffect(() => {
@@ -65,7 +65,7 @@ export default function ProjectPie() {
         canonical={router.pathname}
       />
       <FullBlock as="header" project="pie" context="cover">
-        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
           <span>
             <IconPie />
           </span>
