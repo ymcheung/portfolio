@@ -62,7 +62,7 @@ const CompareCell = styled('td', {
   variants: {
     purpose: {
       title: {
-        color: 'hsl($monoContentTitle)',
+        color: 'hsl($monoTitleLight)',
         fontSize: '$16',
         textAlign: 'left'
       },
@@ -119,7 +119,7 @@ export default function Content() {
           <Paragraph dangerouslySetInnerHTML={{__html: t('question.content')}} purpose="question" italic={isItalic} indent />
         </Section>
       </Container>
-      <FullBlock project="pie">
+      <FullBlock project="pie" context="section">
         <Container responsive={{'@m768': 'max640'}}>
           <Section>
             <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.title')}} />

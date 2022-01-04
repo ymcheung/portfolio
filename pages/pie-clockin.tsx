@@ -10,7 +10,7 @@ import { webPage } from '@utils/schema/webPage';
 import { TITLE_AFFIX } from 'constant';
 import { globalCss } from 'stitches.config';
 
-import { Container, FullLayout } from '@components/layout';
+import { Container, FullBlock } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
 import Cover from '@projects/pie/Cover';
 
@@ -37,7 +37,7 @@ export default function ProjectPie() {
     name: t('home:project.pie.title', { redesign: t('home:verb.redesign') }),
     description: t('home:project.pie.description'),
     datePublished: '2020-08-29',
-    dateModified: '2022-01-01'
+    dateModified: '2022-01-04'
   };
 
   useEffect(() => {
@@ -64,21 +64,23 @@ export default function ProjectPie() {
         ogCover="/projects/pie/ogCover.jpg"
         canonical={router.pathname}
       />
-      <Cover />
-      <FullLayout as="article">
+      <FullBlock as="header" project="pie" context="cover">
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+          <span>
+            <IconPie />
+          </span>
+          <Heading as="span" position="itemName" scheme="monoBlack">
+            {pageInfo.name}
+          </Heading>
+        </HeadingLayout>
+        <Cover />
+      </FullBlock>
+      <FullBlock as="article" context="layout">
         <Container as="section" responsive={{'@m768': 'max640'}}>
-          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-            <div>
-              <IconPie />
-            </div>
-            <Heading as="h1" position="itemName">
-              {pageInfo.name}
-            </Heading>
-          </HeadingLayout>
           <Meta />
         </Container>
         <Content />
-      </FullLayout>
+      </FullBlock>
       <Nav
         hasPrev="Carrier Express"
         prevSlug="carrier-express"

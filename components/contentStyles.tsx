@@ -34,7 +34,7 @@ export const ContentTitle = styled('h2', {
         color: 'hsl($shade100)'
       },
       mono: {
-        color: 'hsl($monoContentTitle)'
+        color: 'hsl($monoTitleLight)'
       }
     },
     featurednumber: {

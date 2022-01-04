@@ -10,8 +10,8 @@ import { webPage } from '@utils/schema/webPage';
 import { TITLE_AFFIX } from 'constant';
 import { globalCss } from 'stitches.config';
 
-import { Container } from '@components/layout';
-import { Heading } from '@components/headings';
+import { Container, FullBlock } from '@components/layout';
+import { Heading, HeadingLayout } from '@components/headings';
 import { Section } from '@components/contentStyles';
 import Cover from '@projects/process/Cover';
 import Meta from '@projects/process/Meta';
@@ -22,7 +22,6 @@ import Footer from '@components/Footer';
 const pageBody = globalCss({
   'body[data-body-style=intersection]': {
     minHeight: '100vh',
-    paddingTop: '$16',
     backgroundColor: 'hsl($shade1600)'
   }
 });
@@ -36,7 +35,7 @@ export default function ProjectProcess() {
     name: t('home:activity.process.title', { translate: t('home:verb.translate') }),
     description: t('home:activity.process.description', { retrospect: t('home:verb.retrospect') }),
     datePublished: '2020-08-29',
-    dateModified: '2022-01-01'
+    dateModified: '2022-01-04'
   }
 
   useEffect(() => {
@@ -62,10 +61,17 @@ export default function ProjectProcess() {
         ogCover="/projects/process/ogCover.jpg"
         canonical={router.pathname}
       />
-      <Cover />
+
+      <FullBlock as="header" context="cover">
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover">
+          <Heading as="span" position="itemName">
+            {pageInfo.name}
+          </Heading>
+        </HeadingLayout>
+        <Cover />
+      </FullBlock>
       <Container as="article" responsive={{'@m768': 'max640'}} space="isGroundFloor">
         <Section as="section">
-          <Heading as="h1" position="itemName" ownmargin>{pageInfo.name}</Heading>
           <Meta />
         </Section>
         <Content />

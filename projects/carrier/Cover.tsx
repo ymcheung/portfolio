@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { styled } from 'stitches.config';
-import { screenMobile, screenTablet } from '@utils/screens';
 
-import { Wrap, Device } from '@projects/cover';
+import { Device } from '@projects/cover';
+import homeIndexEn from '/public/projects/carrier/gallery/en/homeIndex.webp';
+import homeIndexTw from '/public/projects/carrier/gallery/tw/homeIndex.webp';
 
 const ScreenshotMobile = styled(Image, {
   position: 'relative',
@@ -33,26 +33,20 @@ const ScreenshotTablet = styled('img', {
 });
 
 export default function Cover() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {setMounted(true)}, []);
-
   const router = useRouter();
 
-  const ImageLang = router.locale === 'en' ? 'en' : 'tw';
+  const homeIndex = router.locale === 'en' ? homeIndexEn : homeIndexTw;
+  const imgLocale = router.locale === 'en' ? 'en' : 'tw';
 
   return(
-    <Wrap>
-      <Device responsive={{ '@initial': 'mobile' }} vpheight="iphone13" model={{ '@m768': 'mobileDual' }}>
-        {mounted && screenMobile &&
-          <ScreenshotMobile src={`/projects/carrier/gallery/${ImageLang}/homeIndex.webp`} width={256} height={554} quality={100} alt="Screenshot: Upcoming Health Checks" />
-        }
-        {screenTablet &&
-          <>
-            <ScreenshotTablet src={`/projects/carrier/gallery/${ImageLang}/homeIndex.jpg`} placement="left" alt="Screenshot: Upcoming Health Checks" />
-            <ScreenshotTablet src={`/projects/carrier/gallery/${ImageLang}/furryShowOnTime.jpg`} placement="right" alt="Screenshot: View the details of Seven" />
-          </>
-        }
+    <>
+      <Device display={{ '@m768': 'none' }} responsive="mobile">
+        <ScreenshotMobile src={homeIndex} layout="responsive" quality={100} alt="Screenshot: Upcoming Health Checks" />
       </Device>
-    </Wrap>
+      <Device display={{ '@initial': 'none', '@m768': 'block' }} responsive="tablet" model="mobileDual">
+        <ScreenshotTablet src={`/projects/carrier/gallery/${imgLocale}/homeIndex.jpg`} placement="left" alt="Screenshot: Upcoming Health Checks" loading="lazy" />
+        <ScreenshotTablet src={`/projects/carrier/gallery/${imgLocale}/furryShowOnTime.jpg`} placement="right" alt="Screenshot: View the details of Seven" loading="lazy" />
+      </Device>
+    </>
   )
 }

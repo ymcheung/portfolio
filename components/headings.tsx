@@ -2,16 +2,27 @@ import { styled } from 'stitches.config';
 
 export const HeadingLayout = styled('div', {
   display: 'grid',
-  marginBottom: '$16',
+  margin: '0 auto $24',
 
   variants: {
     responsive: {
       mobile: {
-        rowGap: '$4'
+        rowGap: '$4',
+        paddingX: '$8'
       },
       tablet: {
+        maxWidth: '640px',
         columnGap: '$16',
+        paddingX: '$16',
         alignItems: 'center'
+      }
+    },
+    sibling: {
+      cover: {
+        margin: '0 auto $24'
+      },
+      none: {
+        margin: '0 auto'
       }
     },
     iconm: {
@@ -88,21 +99,26 @@ export const Heading = styled('h2', {
       },
       itemName: {
         marginBottom: 0,
-        color: 'hsl($shade300)',
         fontSize: '$24',
         fontWeight: 600,
         lineHeight: '32px'
+      }
+    },
+    scheme: {
+      default: {
+        color: 'hsl($shade300)'
+      },
+      monoBlack: {
+        color: 'hsl($monoTitleLight)'
       }
     },
     isitalic: {
       true: {
         fontStyle: 'italic'
       }
-    },
-    ownmargin: {
-      true: {
-        marginBottom: '$16'
-      }
     }
+  },
+  defaultVariants: {
+    scheme: 'default'
   }
 });

@@ -10,7 +10,7 @@ import { webPage } from '@utils/schema/webPage';
 import { TITLE_AFFIX } from 'constant';
 import { globalCss } from 'stitches.config';
 
-import { Container } from '@components/layout';
+import { Container, FullBlock } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
 import { Section } from '@components/contentStyles';
 import Cover from '@projects/moment/Cover';
@@ -38,7 +38,7 @@ export default function ProjectMoment() {
     name: t('home:project.moment.title', { explore: t('home:verb.explore') }),
     description: t('home:project.moment.description'),
     datePublished: '2020-08-29',
-    dateModified: '2022-01-01'
+    dateModified: '2022-01-04'
   }
 
   useEffect(() => {
@@ -65,17 +65,19 @@ export default function ProjectMoment() {
         ogCover="/projects/moment/ogCover.jpg"
         canonical={router.pathname}
       />
-      <Cover />
+      <FullBlock as="header" project="moment" context="cover">
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+          <span>
+            <IconMoment />
+          </span>
+          <Heading as="span" position="itemName" scheme="monoBlack">
+            {pageInfo.name}
+          </Heading>
+        </HeadingLayout>
+        <Cover />
+      </FullBlock>
       <Container as="article" responsive={{'@m768': 'max640'}}>
         <Section as="section">
-          <HeadingLayout responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-            <div>
-              <IconMoment />
-            </div>
-            <Heading as="h1" position="itemName">
-              {pageInfo.name}
-            </Heading>
-          </HeadingLayout>
           <Meta />
         </Section>
       </Container>

@@ -1,61 +1,39 @@
 import { styled } from 'stitches.config';
 
-export const Wrap = styled('header', {
-  position: 'relative',
-  marginBottom: '$16',
-  padding: '$24 0',
-
-  variants: {
-    project: {
-      pie: {
-        backgroundColor: 'hsl($pie0)'
-      },
-      nuomi: {
-        backgroundColor: 'hsl($nuomiBlack0)'
-      }
-    }
-  }
-});
-
 export const Device = styled('figure', {
   position: 'relative',
   margin: '0 auto',
-  
+
   '&::before': {
+    fullAbsolute: '',
     zIndex: 0,
     content: '',
+    backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.16) 50%, transparent 92%)',
     backgroundRepeat: 'no-repeat'
   },
 
   variants: {
-    responsive: {
-      mobile: {
-        width: '272px',
-        padding: '0 $8',
-
-        '&::before': {
-          fullAbsolute: '',
-          backgroundImage: 'linear-gradient(to bottom, transparent 0%, hsla($shade800, 0.16) 50%, transparent 92%)'
-        }
+    display: {
+      none: {
+        display: 'none'
       },
-      tablet: {
-        width: 'auto',
-        minHeight: 'unset',
-        textAlign: 'center'
+      block: {
+        display: 'block'
       }
     },
-    vpheight: {
-      iphone8: {
-        minHeight: '455px'
+    responsive: {
+      mobile: {
+        maxWidth: '414px',
+        padding: '0 $8',
       },
-      iphone13: {
-        minHeight: '554px'
+      tablet: {
+        maxWidth: 'none',
+        marginX: '$auto'
       }
     },
     model: {
       mobileDual: {
         width: '640px',
-        minHeight: 'unset',
         height: '640px',
         padding: 0,
 
@@ -70,6 +48,8 @@ export const Device = styled('figure', {
         }
       },
       tabletMacbook: {
+        textAlign: 'center',
+
         '&::before': {
           content: 'unset',
           backgroundImage: 'none'
