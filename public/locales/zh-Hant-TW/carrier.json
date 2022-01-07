@@ -120,6 +120,18 @@
       }
     ]
   },
+  "prototype":
+  {
+    "title":
+      "模擬互動",
+    "appoint":
+    {
+      "title":
+        "進行預約",
+      "alt":
+        "敏安為 Eleven 預約健康檢查。"
+    }
+  },
   "postmark":
   {
     "description":

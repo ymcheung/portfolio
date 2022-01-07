@@ -120,6 +120,18 @@
       }
     ]
   },
+  "prototype":
+  {
+    "title":
+      "Prototype",
+    "appoint":
+    {
+      "title":
+        "Make an Appointment",
+      "alt":
+        "Min-An makes an appointment for Eleven."
+    }
+  },
   "postmark":
   {
     "description":
