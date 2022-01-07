@@ -38,7 +38,10 @@ const PrototypeList = styled('ul', {
 
 const PrototypeLink = styled('a', {
   display: 'block',
-  position: 'relative'
+  position: 'relative',
+  padding: '$16',
+  backgroundColor: 'hsl($shade1500)',
+  borderRadius: '24px'
 });
 
 const PrototypeAppointCover = styled('figure', {
@@ -135,7 +138,7 @@ export default function Content() {
             <ListItem nomark>
               <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
               <Link href="https://www.figma.com/proto/L60FGYm0zgyJNTPHF64lEn/carrier-express?page-id=247%3A286&node-id=551%3A1280&viewport=295%2C48%2C0.63&scaling=scale-down&starting-point-node-id=551%3A1280&show-proto-sidebar=1" passHref>
-                <PrototypeLink>
+                <PrototypeLink target="_blank" rel="noopener">
                   <PrototypeAppointCover>
                     <PrototypeAppointCoverImg src={prototypeAppointPreview} layout="responsive" alt={t('prototype.appoint.alt')} />
                   </PrototypeAppointCover>

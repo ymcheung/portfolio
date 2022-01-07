@@ -15,7 +15,7 @@ const Icon = styled(Svg, {
       prototype: {
         position: 'absolute',
         top: '$12',
-        right: '$16'
+        right: '$12'
       }
     }
   }
