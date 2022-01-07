@@ -1,6 +1,9 @@
 import { Fragment } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
+
+import { styled } from 'stitches.config';
 
 import LangSwitch from '@components/LangSwitch';
 
@@ -10,9 +13,42 @@ import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from
 import { ListItem, IconList, IconListItem } from '@components/layout';
 import { FeatureList } from '@projects/featured';
 
+import IconArrow from '@elements/IconArrow';
 import productivity from '/public/projects/carrier/productivity.webp';
+import prototypeAppointPreviewEn from '/public/projects/carrier/prototype/en/appointment.webp';
+import prototypeAppointPreviewTw from '/public/projects/carrier/prototype/tw/appointment.webp';
 
-import Gallery from './Gallery';
+// import Gallery from './Gallery';
+
+const PrototypeList = styled('ul', {
+  margin: 0,
+  padding: '0 0 $12',
+
+  variants: {
+    responsive: {
+      tablet: {
+        display: 'grid',
+        grid: 'auto / auto-flow minmax(280px, 50%) 1fr',
+        columnGap: '$16',
+        overflowY: 'auto'
+      }
+    }
+  }
+});
+
+const PrototypeLink = styled('a', {
+  display: 'block',
+  position: 'relative'
+});
+
+const PrototypeAppointCover = styled('figure', {
+  margin: 0,
+  padding: 0
+});
+
+const PrototypeAppointCoverImg = styled(Image, {
+  borderRadius: '16px'
+});
 
 interface statsProps {
   count: number;
@@ -33,6 +69,8 @@ export default function Content() {
 
   const isItalic = i18n.language === 'en';
   const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
+
+  const prototypeAppointPreview = i18n.language === 'en' ? prototypeAppointPreviewEn : prototypeAppointPreviewTw;
 
   return(
     <>
@@ -91,8 +129,21 @@ export default function Content() {
             </Fragment>
           ))}
         </Section>
-        <Section has="postmarks">
-          <Gallery />
+        <Section id="sectionPrototype" has="postmarks">
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
+          <PrototypeList responsive={{ '@m768': 'tablet' }}>
+            <ListItem nomark>
+              <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
+              <Link href="https://www.figma.com/proto/L60FGYm0zgyJNTPHF64lEn/carrier-express?page-id=247%3A286&node-id=551%3A1280&viewport=295%2C48%2C0.63&scaling=scale-down&starting-point-node-id=551%3A1280&show-proto-sidebar=1" passHref>
+                <PrototypeLink>
+                  <PrototypeAppointCover>
+                    <PrototypeAppointCoverImg src={prototypeAppointPreview} layout="responsive" alt={t('prototype.appoint.alt')} />
+                  </PrototypeAppointCover>
+                  <IconArrow position="prototype" purpose="external" background="carrierPrototype" gotoText={t('prototype.appoint.title')} />
+                </PrototypeLink>
+              </Link>
+            </ListItem>
+          </PrototypeList>
         </Section>
         <Section isgroupend>
           <PostMarksHr />

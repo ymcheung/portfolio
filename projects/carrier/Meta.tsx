@@ -13,24 +13,28 @@ export default function Meta() {
       name: t('status.doc'),
       link: i18n.language === 'en' ? 'https://www.craft.do/s/ID02aukYb1wMuR' : 'https://www.craft.do/s/te59NNr9aafSzq',
       isReady: true,
+      newTab: true,
       sbevent: 'Document Link'
     },
     {
       name: 'UI',
       link: '',
       isReady: true,
+      newTab: true,
       sbevent: ''
     },
     {
       name: 'Prototype',
-      link: '',
-      isReady: false,
-      sbevent: ''
+      link: '#sectionPrototype',
+      isReady: true,
+      newTab: false,
+      sbevent: 'Jump to Prototype'
     },
     {
       name: t('status.landing'),
       link: 'https://carrier.express',
       isReady: true,
+      newTab: true,
       sbevent: 'Landing Page Link'
     }
   ];
@@ -56,7 +60,7 @@ export default function Meta() {
         <MetaItemTitle project="carrier">{t('status.title')}</MetaItemTitle>
         <MetaStatusList responsive={{ '@m768': 'tablet' }}>
         {
-          statusItems.map(({ name, isReady, link, sbevent }, index) =>
+          statusItems.map(({ name, link, isReady, newTab,  sbevent }, index) =>
             <MetaItem key={`statusItems-${index}`}>
             {
               isReady &&
@@ -67,9 +71,15 @@ export default function Meta() {
               <IconNotReady />
             }
             {
-              link &&
+              link && newTab &&
               <Link href={link} passHref>
                 <MetaItemValue as="a" data-splitbee-event={`Carrier/Meta: ${sbevent}`} target="_blank" rel="noopener">{name}</MetaItemValue>
+              </Link>
+            }
+            {
+              link && !newTab &&
+              <Link href={link} passHref>
+                <MetaItemValue as="a" data-splitbee-event={`Carrier/Meta: ${sbevent}`}>{name}</MetaItemValue>
               </Link>
             }
             {

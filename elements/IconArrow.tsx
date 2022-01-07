@@ -10,6 +10,13 @@ const Icon = styled(Svg, {
       sq20: {
         size: '$20'
       }
+    },
+    position: {
+      prototype: {
+        position: 'absolute',
+        top: '$12',
+        right: '$16'
+      }
     }
   }
 });
@@ -19,6 +26,9 @@ const Circle = styled('circle', {
     background: {
       generic: {
         fill: 'hsl($navGenericIconBg)'
+      },
+      carrierPrototype: {
+        fill: 'hsl($shade1400)'
       },
       pie: {
         fill: 'hsl($navPieIconBg)'
@@ -60,8 +70,9 @@ const Arrow = styled('path', {
 
 type IconArrowProps = {
   readonly wh: 'sq18' | 'sq20';
+  readonly position?: 'prototype';
   readonly purpose: 'home' | 'external' | 'next' | 'internal' | 'prev';
-  readonly background: 'generic' | 'pie' | 'moment' | 'nuomi';
+  readonly background: 'generic' | 'carrierPrototype' | 'pie' | 'moment' | 'nuomi';
   readonly gotoText: string;
 } & typeof defaultProps;
 
@@ -72,9 +83,9 @@ const defaultProps = {
   gotoText: 'Home'
 };
 
-function IconArrow({ wh, purpose, background, gotoText }: IconArrowProps) {
+export default function IconArrow({ wh, position, purpose, background, gotoText }: IconArrowProps) {
   return(
-    <Icon className="iconArrow" wh={wh} viewBox="0 0 18 18" role="img" vertical="sub" xmlns="http://www.w3.org/2000/svg">
+    <Icon className="iconArrow" wh={wh} position={position} viewBox="0 0 18 18" role="img" vertical="sub" xmlns="http://www.w3.org/2000/svg">
       <title>{`Go to: ${gotoText}`}</title>
       <Circle cx="9" cy="9" r="9" background={background} />
       <Arrow purpose={purpose} d="M8.64645 2.64645C8.84171 2.45118 9.15829 2.45118 9.35355 2.64645L12.3536 5.64645C12.5488 5.84171 12.5488 6.15829 12.3536 6.35355C12.1583 6.54882 11.8417 6.54882 11.6464 6.35355L9.5 4.20711V15C9.5 15.2761 9.27614 15.5 9 15.5C8.72386 15.5 8.5 15.2761 8.5 15V4.20711L6.35355 6.35355C6.15829 6.54882 5.84171 6.54882 5.64645 6.35355C5.45118 6.15829 5.45118 5.84171 5.64645 5.64645L8.64645 2.64645Z" fillRule="evenodd" />
@@ -83,4 +94,3 @@ function IconArrow({ wh, purpose, background, gotoText }: IconArrowProps) {
 }
 
 IconArrow.defaultProps = defaultProps;
-export default IconArrow;
