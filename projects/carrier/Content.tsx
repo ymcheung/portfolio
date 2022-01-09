@@ -14,11 +14,30 @@ import { ListItem, IconList, IconListItem } from '@components/layout';
 import { FeatureList } from '@projects/featured';
 
 import IconArrow from '@elements/IconArrow';
-import productivity from '/public/projects/carrier/productivity.webp';
+import productivity from '/public/projects/carrier/why/productivity.webp';
+import whyMailPreviewEn from '/public/projects/carrier/why/en/mailPreview.webp';
+import whyMailPreviewTw from '/public/projects/carrier/why/tw/mailPreview.webp';
 import prototypeAppointPreviewEn from '/public/projects/carrier/prototype/en/appointment.webp';
 import prototypeAppointPreviewTw from '/public/projects/carrier/prototype/tw/appointment.webp';
 
 // import Gallery from './Gallery';
+
+const ParagraphImageContainer = styled('figure', {
+  marginBottom: '$12',
+  padding: 0,
+
+  variants: {
+    responsive: {
+      mobile: {
+        marginX: '$auto',
+        maxWidth: '360px'
+      },
+      tablet: {
+        marginX: '$0'
+      }
+    }
+  }
+});
 
 const PrototypeList = styled('ul', {
   margin: 0,
@@ -58,10 +77,6 @@ interface statsProps {
   affix: string;
 }
 
-interface DescriptionProps {
-  paragraph: string;
-}
-
 interface ParagraphProps {
   title: string;
   description: string;
@@ -72,6 +87,8 @@ export default function Content() {
 
   const isItalic = i18n.language === 'en';
   const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
+
+  const whyMailPreview = i18n.language === 'en' ? whyMailPreviewEn : whyMailPreviewTw;
 
   const prototypeAppointPreview = i18n.language === 'en' ? prototypeAppointPreviewEn : prototypeAppointPreviewTw;
 
@@ -119,9 +136,11 @@ export default function Content() {
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('why.title')}} />
           <Image src={productivity} layout="responsive" quality={92} alt={t('why.coverAlt')} />
-          {t<string, DescriptionProps[]>('why.descriptions', { returnObjects: true }).map(({ paragraph }, index: number) => (
-            <Paragraph dangerouslySetInnerHTML={{__html: paragraph}} key={`why-description-${index}`} indent />
-          ))}
+          <Paragraph dangerouslySetInnerHTML={{__html: t('why.description.1st')}} indent />
+          <ParagraphImageContainer responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+            <Image src={whyMailPreview} layout="responsive" quality={92} alt={t('why.coverAlt')} />
+          </ParagraphImageContainer>
+          <Paragraph dangerouslySetInnerHTML={{__html: t('why.description.2nd')}} indent />
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('mvp.title')}} />
@@ -137,6 +156,7 @@ export default function Content() {
           <PrototypeList responsive={{ '@m768': 'tablet' }}>
             <ListItem nomark>
               <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
+              <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.appoint.description')}} />
               <Link href="https://www.figma.com/proto/L60FGYm0zgyJNTPHF64lEn/carrier-express?page-id=247%3A286&node-id=551%3A1280&viewport=295%2C48%2C0.63&scaling=scale-down&starting-point-node-id=551%3A1280&show-proto-sidebar=1" passHref>
                 <PrototypeLink target="_blank" rel="noopener">
                   <PrototypeAppointCover>
