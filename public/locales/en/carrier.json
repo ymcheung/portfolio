@@ -87,7 +87,7 @@
       "1st":
         "There have been a lot of calendar and reminder apps, and Min-An doesn’t need another one. What kind of notifications which she doesn’t expect to ignore? Billing notifications are one of them. Carrier Express charges her periodically, and she will get receipt emails.",
       "2nd":
-        "Since the service has been charging her, she can reserve health checks anytime. It’s her commitment to Seven and Eleven’s health as a responsible pet owner."
+        "Making an appointment is available one week before the scheduled payment. It’s her commitment to Seven and Eleven’s health as a responsible pet owner."
     }
   },
   "mvp":
@@ -127,7 +127,7 @@
       "alt":
         "Min-An makes an appointment for Eleven.",
       "description":
-        "Making an appointment is available one week before the scheduled payment."
+        "Min-An makes an appointment for Eleven on Carrier Express."
     }
   },
   "postmark":
