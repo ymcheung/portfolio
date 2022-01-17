@@ -109,7 +109,7 @@ export default function Content() {
           <Paragraph dangerouslySetInnerHTML={{__html: t('stats.description')}} indent />
           <FeatureList space={itemSpace} siblings="hasSiblings">
             <ListItem nomark>
-              <ContentTitle featurednumber="normal">60</ContentTitle>
+              <ContentTitle featurednumber="normal">61</ContentTitle>
               <Paragraph dangerouslySetInnerHTML={{__html: t('stats.respond.affix')}} purpose="affix" sectionend />
             </ListItem>
           </FeatureList>

@@ -10,6 +10,16 @@
     "translate":
       "Translating"
   },
+  "fulltime":
+  {
+    "title":
+      "@iCook.tw",
+    "abtest":
+    {
+      "title":
+        "Optimize Recipes Recommendation by A/B Tests"
+    }
+  },
   "project":
   {
     "title":

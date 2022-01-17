@@ -10,6 +10,16 @@
     "translate":
       "翻譯"
   },
+  "fulltime":
+  {
+    "title":
+      "@愛料理",
+    "abtest":
+    {
+      "title":
+        "以 A/B 測試將推薦食譜最佳化"
+    }
+  },
   "project":
   {
     "title":
