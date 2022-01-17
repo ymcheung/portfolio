@@ -82,6 +82,9 @@ export default function ProjectCarrier() {
         <Content />
       </FullBlock>
       <Nav
+        hasPrev="A/B Tests @iCook.tw"
+        prevSlug="icook/a-b-test"
+        prevBg="generic"
         hasNext="Redesign a Clock-In App"
         nextSlug="pie-clockin"
         nextBg="pie"

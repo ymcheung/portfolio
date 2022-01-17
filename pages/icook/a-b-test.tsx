@@ -12,8 +12,12 @@ import { TITLE_AFFIX } from 'constant';
 
 import { globalCss } from 'stitches.config';
 
+import IconAbTest from '@elements/IconAbTest';
 import { Container, FullBlock } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
+import Meta from '@projects/icook/abtest/Meta'
+import Nav from '@projects/Nav';
+import Footer from '@components/Footer';
 
 const pageBody = globalCss({
   'body[data-body-style=icook-abtest]': {
@@ -61,14 +65,25 @@ export default function FulltimeABTest() {
       <FullBlock as="header" context="cover">
         <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
           <span>
-            {/* <IconCarrier /> */}
+            <IconAbTest />
           </span>
           <Heading as="span" position="itemName">
             {pageInfo.name}
           </Heading>
         </HeadingLayout>
-        {/* <Cover /> */}
       </FullBlock>
+      <FullBlock as="article" context="layout">
+        <Container as="section" responsive={{'@m768': 'max640'}}>
+          <Meta />
+        </Container>
+        {/* <Content /> */}
+      </FullBlock>
+      <Nav
+        hasNext="Carrier Express"
+        nextSlug="carrier-express"
+        nextBg="generic"
+      />
+      <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>
   );
 }
