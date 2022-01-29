@@ -41,8 +41,8 @@ export default function FulltimeABTest() {
   const pageInfo = {
     name: t('home:fulltime.abtest.title'),
     description: t('home:fulltime.abtest.description'),
-    datePublished: '2020-12-09',
-    dateModified: '2022-01-04'
+    datePublished: '2022-01-29',
+    dateModified: '2022-01-29'
   };
 
   const schema = {
@@ -60,7 +60,7 @@ export default function FulltimeABTest() {
       <HeadMeta
         title={`${pageInfo.name}${TITLE_AFFIX}`}
         description={pageInfo.description}
-        ogCover="/projects/carrier/ogCover.jpg"
+        ogCover="/projects/icook/ogCover.jpg"
         canonical={router.pathname}
       />
       <FullBlock as="header" context="cover">
