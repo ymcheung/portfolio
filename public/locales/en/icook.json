@@ -27,14 +27,14 @@
       "title":
         "Current Strategy",
       "description":
-        "iCook picked 3 recipes from the same context or category for every recipe."
+        "iCook picked 3 recipes from the same context or category for every recipe. For example, the dishes from 🍶izakayas or 🍻stir-fries restaurants."
     },
     "outcome":
     {
       "title":
         "The Outcome",
       "description":
-        "The total clicks for the same dish are up to 3 times as many as those with the same context."
+        "The total clicks for <strong>the same dish</strong> are up to 3 times as many as those with <strong>the same context</strong>."
     },
     "groups":
     {
@@ -66,7 +66,7 @@
       "title":
         "Digging Into it",
       "description":
-        "The visitors wanted to know what the essential steps and ingredients were. Therefore, the same dish by different authors triggered them to click."
+        "The visitors confirmed the repeated steps and ingredients from many authors were essential. Therefore, the same dish by different authors triggered them to click."
     },
     "impact":
     {

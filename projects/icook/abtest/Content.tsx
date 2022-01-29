@@ -17,7 +17,6 @@ import IconBounce from '@elements/IconBounce';
 const TestGroupList = styled('ul', {
   display: 'grid',
   alignItems: 'center',
-  columnGap: '$16',
   overflowX: 'auto',
   margin: 0,
   padding: '0 0 $8',
@@ -25,43 +24,25 @@ const TestGroupList = styled('ul', {
   variants: {
     responsive: {
       mobile: {
-        grid: 'auto / 256px 36px 256px'
+        grid: 'auto / 256px 36px 256px',
+        columnGap: '$16'
       },
       tablet: {
-        grid: 'auto / 1fr 36px 1fr'
+        grid: 'auto / 1fr max-content 1fr',
+        columnGap: '32px'
       }
     }
   }
 });
 
-const ParagraphImageContainer = styled('figure', {
-  marginBottom: '$12',
-  padding: 0,
-
-  variants: {
-    responsive: {
-      mobile: {
-        marginX: '$auto',
-        maxWidth: '360px'
-      },
-      tablet: {
-        marginX: '$0'
-      }
-    }
-  }
-});
-
-const PrototypeList = styled('ul', {
-  margin: 0,
-  padding: '0 0 $12',
+const TestGroupsOr = styled(ListItem, {
+  textAlign: 'center',
 
   variants: {
     responsive: {
       tablet: {
-        display: 'grid',
-        grid: 'auto / auto-flow minmax(280px, 50%) 1fr',
-        columnGap: '$16',
-        overflowY: 'auto'
+        alignSelf: 'center',
+        marginRight: '$16'
       }
     }
   }
@@ -162,9 +143,9 @@ export default function Content() {
               <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('abtest.groups.control.title')}} />
               <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.groups.control.description')}} sectionend />
             </ListItem>
-            <ListItem nomark>
+            <TestGroupsOr responsive={{ '@m768': 'tablet' }} nomark>
               <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.groups.or')}} sectionend />
-            </ListItem>
+            </TestGroupsOr>
             <ListItem nomark>
               <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('abtest.groups.experiment.title')}} />
               <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.groups.experiment.description')}} sectionend />
@@ -173,7 +154,7 @@ export default function Content() {
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.outcome.title')}} />
-          <ExperimentOutcome>≈300%</ExperimentOutcome>
+          <ExperimentOutcome>200% ~ 300%</ExperimentOutcome>
           <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.outcome.description')}} indent />
           <ExampleCover space="noWrap">
             <ExampleCoverImg src={wineBoiledClamsRecommend} responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} layout="responsive" alt={t('abtest.groups.cover')} />

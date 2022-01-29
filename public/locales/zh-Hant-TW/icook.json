@@ -27,7 +27,7 @@
       "title":
         "原有情況",
       "description":
-        "從相同的情境或分類裡，推薦 3 篇食譜。"
+        "從相同的情境或分類裡，推薦 3 篇食譜。例如：🍶居酒屋或🍻熱炒店。"
     },
     "groups":
     {
@@ -36,7 +36,7 @@
       "cover":
         "5分鐘酒蒸蛤蜊食譜",
       "description":
-        "訪客看過「<a class=\"paragraph-link\" href=\"https://icook.tw/recipes/101777\" target\"_blank\" rel=\"noopener\">5 分鐘酒蒸蛤蠣</a>」食譜後，接著想要：",
+        "訪客看過「<a class=\"paragraph-link\" href=\"https://icook.tw/recipes/101777\" target\"_blank\" rel=\"noopener\">5 分鐘酒蒸蛤蠣</a>」食譜後，想要繼續看的種類是：",
       "or":
         "還是",
       "control":
@@ -44,29 +44,29 @@
         "title":
           "找情境？",
         "description":
-          "看🍶居酒屋或🍻熱炒店料理的食譜？"
+          "🍶居酒屋或🍻熱炒店料理的食譜？"
       },
       "experiment":
       {
         "title":
           "找類似的料理？",
         "description":
-          "看更多「酒蒸蛤蠣」食譜？"
+          "更多「酒蒸蛤蠣」食譜？"
       }
     },
     "outcome":
     {
       "title":
-        "成果",
+        "實驗結果",
       "description":
-        "推薦「類似食譜」的點擊數是「情境」的 2 - 3 倍。"
+        "看到「<strong>類似食譜</strong>」的點擊數是「<strong>情境</strong>」的 2 - 3 倍。"
     },
     "dig":
     {
       "title":
         "深入瞭解",
       "description":
-        "尋找食譜的訪客，想知道必備步驟和食材。因此，不同作者撰寫的相同料理會讓人繼續點擊。"
+        "如果很多人都這樣做，那就是食譜必備的步驟和食材。因此，不同作者撰寫的相同料理會讓人繼續點擊。"
     },
     "impact":
     {
