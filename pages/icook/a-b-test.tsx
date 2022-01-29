@@ -16,6 +16,7 @@ import IconAbTest from '@elements/IconAbTest';
 import { Container, FullBlock } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
 import Meta from '@projects/icook/abtest/Meta'
+import Content from '@projects/icook/abtest/Content';
 import Nav from '@projects/Nav';
 import Footer from '@components/Footer';
 
@@ -76,7 +77,7 @@ export default function FulltimeABTest() {
         <Container as="section" responsive={{'@m768': 'max640'}}>
           <Meta />
         </Container>
-        {/* <Content /> */}
+        <Content />
       </FullBlock>
       <Nav
         hasNext="Carrier Express"
@@ -90,7 +91,7 @@ export default function FulltimeABTest() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['icook-abtest', 'home', 'meta']),
+    ...await serverSideTranslations(locale, ['icook', 'home', 'meta']),
   },
 });
 
