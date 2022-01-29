@@ -12,18 +12,19 @@ const pages = fs.readdirSync(pagesPath);
     <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${pages
-        .filter(page => {
-          return page.indexOf("_") === -1
+        .filter((page) => {
+          return page.indexOf('_') === -1;
+        })
+        .filter((page) => {
+          return page.replace('.tsx', '') !== 'icook';
         })
         .map((page) => {
-          const path = page
-            .replace('.tsx', '');
+          const path = page.replace('.tsx', '');
           const route = path === 'index' ? '' : path;
           return `
             <url>
               <loc>${`https://ymcheung.tw/${route}`}</loc>
-            </url>`
-          ;
+            </url>`;
         })
         .join('')}
     </urlset>

@@ -56,6 +56,7 @@ export default function FulltimeABTest() {
     <>
       <Head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <meta name="robots" content="noindex" />
       </Head>
       <HeadMeta
         title={`${pageInfo.name}${TITLE_AFFIX}`}
