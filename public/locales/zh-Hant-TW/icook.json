@@ -27,7 +27,7 @@
       "title":
         "原有情況",
       "description":
-        "從相同的情境或分類裡，推薦 3 篇食譜。例如：🍶居酒屋或🍻熱炒店。"
+        "從相同的情境或分類裡，推薦 3 篇食譜。例如：宵夜或海鮮。"
     },
     "groups":
     {
@@ -36,7 +36,7 @@
       "cover":
         "5分鐘酒蒸蛤蜊食譜",
       "description":
-        "訪客看過「<a class=\"paragraph-link\" href=\"https://icook.tw/recipes/101777\" target\"_blank\" rel=\"noopener\">5 分鐘酒蒸蛤蠣</a>」食譜後，想要繼續看的種類是：",
+        "訪客看過「<a class=\"paragraph-link\" href=\"https://icook.tw/recipes/101777\" target=\"_blank\" rel=\"noopener\">5 分鐘酒蒸蛤蠣</a>」食譜後，想要繼續看的種類是：",
       "or":
         "還是",
       "control":
