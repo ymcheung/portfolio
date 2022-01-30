@@ -129,7 +129,7 @@ export default function Content() {
           <FeatureList space={itemSpace} siblings="sectionEnd">
             <ListItem nomark>
               <ContentTitle as="strong" featurednumber="normal">
-                7,000+
+                8,000+
                 <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
               </ContentTitle>
               <Paragraph dangerouslySetInnerHTML={{__html: t('gather.count')}} purpose="affix" sectionend />

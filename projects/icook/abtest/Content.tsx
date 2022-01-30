@@ -105,7 +105,6 @@ export default function Content() {
   const { t, i18n } = useTranslation('icook');
 
   const isItalic = i18n.language === 'en';
-  const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
 
   return(
     <>
@@ -154,7 +153,7 @@ export default function Content() {
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.outcome.title')}} />
-          <ExperimentOutcome>200% ~ 300%</ExperimentOutcome>
+          <ExperimentOutcome>+100% ~ 200%</ExperimentOutcome>
           <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.outcome.description')}} indent />
           <ExampleCover space="noWrap">
             <ExampleCoverImg src={wineBoiledClamsRecommend} responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} layout="responsive" alt={t('abtest.groups.cover')} />
