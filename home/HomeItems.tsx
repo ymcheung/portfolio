@@ -23,6 +23,26 @@ export const HomeItemLink = styled('a', {
   textDecoration: 'none',
 
   variants: {
+    asfulltime: {
+      mobile: {
+        grid: `auto / 52px 1fr`,
+        alignItems: 'center',
+        columnGap: '$8',
+        margin: '0 -10px',
+        padding: '$8',
+        backgroundColor: 'hsla($shade1500, 0.5)',
+        border: '2px solid transparent',
+        borderRadius: '12px'
+      },
+      hover: {
+        transition: 'border-color $easeIn',
+
+        '&:hover': {
+          borderColor: 'hsl($shade1400)',
+          transition: 'border-color $easeOut'
+        }
+      }
+    },
     asproject: {
       mobile: {
         grid: `auto

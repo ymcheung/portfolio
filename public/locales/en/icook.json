@@ -1,0 +1,79 @@
+{
+  "abtest":
+  {
+    "intro":
+    {
+      "title":
+        "Intro",
+      "description":
+        "At iCook, everyone’s questions to the products had the chance to challenge current designs or content by A/B tests."
+    },
+    "problem":
+    {
+      "title":
+        "The Problem",
+      "description":
+        "Most of the visitors from search engines reached only 1 recipe in iCook and left."
+    },
+    "question":
+    {
+      "title":
+        "Question",
+      "description":
+        "How Might We Recommend the Recipes which the Visitors Want to Read Further?"
+    },
+    "current":
+    {
+      "title":
+        "Current Strategy",
+      "description":
+        "iCook picked 3 recipes from the same context or category for every recipe. For example, the dishes for late-night supper or seafood."
+    },
+    "outcome":
+    {
+      "title":
+        "The Outcome",
+      "description":
+        "The total clicks for <strong>the same dish</strong> are up to 3 times as many as those with <strong>the same context</strong>."
+    },
+    "groups":
+    {
+      "title":
+        "Test Groups",
+      "description":
+        "What kind of recipes did the visitors reaching “<a class=\"paragraph-link\" href=\"https://icook.tw/recipes/101777\" target=\"_blank\" rel=\"noopener\">Wine-boiled Clams within 5 Minutes</a>” want to browse next?",
+      "or":
+        "or",
+      "cover":
+        "Recipe: Wine-boiled Clams within 5 Minutes",
+      "control":
+      {
+        "title":
+          "Same Context",
+        "description":
+          "The recipes of the dishes from 🍶izakayas or 🍻stir-fries restaurants"
+      },
+      "experiment":
+      {
+        "title":
+          "Similar Dishes",
+        "description":
+          "More recipes for “Wine-boiled clams.”"
+      }
+    },
+    "dig":
+    {
+      "title":
+        "Digging Into it",
+      "description":
+        "The visitors confirmed the repeated steps and ingredients from many authors were essential. Therefore, the same dish by different authors triggered them to click."
+    },
+    "impact":
+    {
+      "title":
+        "Impact",
+      "description":
+        "The data engineer developed an algorithm based on recipe names and instructions."
+    }
+  }
+}

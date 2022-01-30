@@ -9,6 +9,7 @@ import HeadMeta from '@utils/HeadMeta';
 import { styled, globalCss, keyframes } from 'stitches.config';
 
 import NameHeader from '@home/NameHeader';
+import Fulltime from '@home/Fulltime';
 import Projects from '@home/Projects';
 import Activity from '@home/Activity';
 import ExternalLinks from '@home/ExternalLinks';
@@ -168,6 +169,7 @@ export default function Home() {
         <NameHeader />
         <Cans animation={{ '@mReduced': 'reduced' }} />
       </Header>
+      <Fulltime />
       <Projects />
       <Activity />
       <ExternalLinks />

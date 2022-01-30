@@ -17,6 +17,8 @@
     {
       "all":
         "{{research}}, {{ui}}, {{fe}}",
+      "abtest":
+        "{{ui}}, {{fe}}",
       "intersection":
         "{{org}} and {{translate}}",
       "process":
@@ -28,6 +30,13 @@
     "title":
       "Languages"
   },
+  "team":
+  {
+    "title":
+      "Team Members",
+    "abtest":
+      "2 Product Designers and 1 Data Engineer"
+  },
   "link":
   {
     "title":
@@ -37,6 +46,13 @@
   {
     "title":
       "Date"
+  },
+  "time":
+  {
+    "title":
+      "Time Span",
+    "abtest":
+      "2 - 4 Weeks"
   },
   "status":
   {

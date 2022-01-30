@@ -1,50 +1,49 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { useTranslation } from 'next-i18next';
 
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import HeadMeta from '@utils/HeadMeta';
 import { webPage } from '@utils/schema/webPage';
 
 import { TITLE_AFFIX } from 'constant';
+
 import { globalCss } from 'stitches.config';
 
+import IconAbTest from '@elements/IconAbTest';
 import { Container, FullBlock } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
-import Cover from '@projects/carrier/Cover';
-
-import IconCarrier from '@elements/IconCarrier';
-
-import Meta from '@projects/carrier/Meta';
-import Content from '@projects/carrier/Content';
+import Meta from '@projects/icook/abtest/Meta'
+import Content from '@projects/icook/abtest/Content';
 import Nav from '@projects/Nav';
 import Footer from '@components/Footer';
 
 const pageBody = globalCss({
-  'body[data-body-style=carrier]': {
+  'body[data-body-style=icook-abtest]': {
     minHeight: '100vh',
     backgroundColor: 'hsl($shade1600)'
   }
 });
 
-export default function ProjectCarrier() {
+export default function FulltimeABTest() {
   const router = useRouter();
 
   const { t } = useTranslation('home');
 
-  const pageInfo = {
-    name: t('home:project.carrier.title'),
-    description: t('home:project.carrier.description'),
-    datePublished: '2021-12-09',
-    dateModified: '2022-01-04'
-  };
-
   useEffect(() => {
-    document.body.setAttribute('data-body-style', 'carrier');
+    document.body.setAttribute('data-body-style', 'icook-abtest');
   }, []);
 
   pageBody();
+
+  const pageInfo = {
+    name: t('home:fulltime.abtest.title'),
+    description: t('home:fulltime.abtest.description'),
+    datePublished: '2022-01-29',
+    dateModified: '2022-01-29'
+  };
 
   const schema = {
     '@context': 'https://schema.org',
@@ -57,23 +56,23 @@ export default function ProjectCarrier() {
     <>
       <Head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <meta name="robots" content="noindex" />
       </Head>
       <HeadMeta
         title={`${pageInfo.name}${TITLE_AFFIX}`}
         description={pageInfo.description}
-        ogCover="/projects/carrier/ogCover.jpg"
+        ogCover="/projects/icook/ogCover.jpg"
         canonical={router.pathname}
       />
       <FullBlock as="header" context="cover">
         <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
           <span>
-            <IconCarrier />
+            <IconAbTest />
           </span>
           <Heading as="span" position="itemName">
             {pageInfo.name}
           </Heading>
         </HeadingLayout>
-        <Cover />
       </FullBlock>
       <FullBlock as="article" context="layout">
         <Container as="section" responsive={{'@m768': 'max640'}}>
@@ -82,12 +81,9 @@ export default function ProjectCarrier() {
         <Content />
       </FullBlock>
       <Nav
-        hasPrev="A/B Tests @iCook.tw"
-        prevSlug="icook/a-b-test"
-        prevBg="generic"
-        hasNext="Redesign a Clock-In App"
-        nextSlug="pie-clockin"
-        nextBg="pie"
+        hasNext="Carrier Express"
+        nextSlug="carrier-express"
+        nextBg="generic"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>
@@ -96,6 +92,7 @@ export default function ProjectCarrier() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['carrier', 'home', 'meta']),
+    ...await serverSideTranslations(locale, ['icook', 'home', 'meta']),
   },
 });
+

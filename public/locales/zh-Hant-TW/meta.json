@@ -17,6 +17,8 @@
     {
       "all":
         "{{research}}、{{ui}}、{{fe}}",
+      "abtest":
+        "{{ui}}與{{fe}}",
       "intersection":
         "{{org}}與{{translate}}",
       "process":
@@ -28,6 +30,13 @@
     "title":
       "語言"
   },
+  "team":
+  {
+    "title":
+      "成員",
+    "abtest":
+      "2 位產品設計師與 1 位資料工程師"
+  },
   "link":
   {
     "title":
@@ -37,6 +46,13 @@
   {
     "title":
       "時間"
+  },
+  "time":
+  {
+    "title":
+      "時間",
+    "abtest":
+      "2 - 4 週"
   },
   "status":
   {

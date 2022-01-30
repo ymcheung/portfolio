@@ -39,6 +39,9 @@ export const MetaItemTitle = styled('strong', {
 
   variants: {
     project: {
+      abtest: {
+        color: '#f04646'
+      },
       carrier: {
         color: 'hsl($carrierNeon)'
       },
