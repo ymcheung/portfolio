@@ -40,7 +40,7 @@ const Background = styled('rect', {
   }
 });
 
-export default function BannerLoveUI() {
+export default function BannerBuildUI() {
   return(
     <Banner viewBox="0 0 500 125" aria-labelledby="bannerLoveUI" xmlns="http://www.w3.org/2000/svg">
       <title id="bannerLoveUI">喜歡的 UI 就要親手做出來</title>
