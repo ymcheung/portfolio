@@ -31,7 +31,7 @@ const pageBody = globalCss({
 export default function ProjectPie() {
   const router = useRouter();
 
-  const { t } = useTranslation('home');
+  const { t } = useTranslation(['home', 'nav']);
 
   const pageInfo = {
     name: t('home:project.pie.title', { redesign: t('home:verb.redesign') }),
@@ -82,10 +82,10 @@ export default function ProjectPie() {
         <Content />
       </FullBlock>
       <Nav
-        hasPrev="Carrier Express"
+        hasPrev={t('nav:carrier')}
         prevSlug="carrier-express"
         prevBg="generic"
-        hasNext="The Moment"
+        hasNext={t('nav:moment')}
         nextSlug="moment"
         nextBg="moment"
       />
@@ -96,6 +96,6 @@ export default function ProjectPie() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['pie', 'home', 'meta']),
+    ...await serverSideTranslations(locale, ['pie', 'home', 'meta', 'nav']),
   },
 });

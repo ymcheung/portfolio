@@ -4,6 +4,7 @@ module.exports = {
     ns: [
       'home',
       'meta',
+      'nav',
       'icook',
       'carrier',
       'pie',

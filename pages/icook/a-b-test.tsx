@@ -30,7 +30,7 @@ const pageBody = globalCss({
 export default function FulltimeABTest() {
   const router = useRouter();
 
-  const { t } = useTranslation('home');
+  const { t } = useTranslation(['home', 'nav']);
 
   useEffect(() => {
     document.body.setAttribute('data-body-style', 'icook-abtest');
@@ -81,7 +81,7 @@ export default function FulltimeABTest() {
         <Content />
       </FullBlock>
       <Nav
-        hasNext="Carrier Express"
+        hasNext={t('nav:carrier')}
         nextSlug="carrier-express"
         nextBg="generic"
       />
@@ -92,7 +92,7 @@ export default function FulltimeABTest() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['icook', 'home', 'meta']),
+    ...await serverSideTranslations(locale, ['icook', 'home', 'meta', 'nav']),
   },
 });
 

@@ -31,7 +31,7 @@ const pageBody = globalCss({
 export default function ProjectCarrier() {
   const router = useRouter();
 
-  const { t } = useTranslation('home');
+  const { t } = useTranslation(['home', 'nav']);
 
   const pageInfo = {
     name: t('home:project.carrier.title'),
@@ -82,10 +82,10 @@ export default function ProjectCarrier() {
         <Content />
       </FullBlock>
       <Nav
-        hasPrev="A/B Tests @iCook.tw"
+        hasPrev={t('nav:abtest')}
         prevSlug="icook/a-b-test"
         prevBg="generic"
-        hasNext="Redesign a Clock-In App"
+        hasNext={t('nav:pie')}
         nextSlug="pie-clockin"
         nextBg="pie"
       />
@@ -96,6 +96,6 @@ export default function ProjectCarrier() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['carrier', 'home', 'meta']),
+    ...await serverSideTranslations(locale, ['carrier', 'home', 'meta', 'nav']),
   },
 });

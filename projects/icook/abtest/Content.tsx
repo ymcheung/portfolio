@@ -129,7 +129,6 @@ export default function Content() {
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.groups.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.groups.description')}} indent />
           <Link href="https://icook.tw/recipes/101777" passHref>
             <ExampleCoverLink target="_blank" rel="noopener">
               <ExampleCover space="withWrap">
@@ -137,6 +136,7 @@ export default function Content() {
               </ExampleCover>
             </ExampleCoverLink>
           </Link>
+          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.groups.description')}} indent />
           <TestGroupList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
             <ListItem nomark>
               <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('abtest.groups.control.title')}} />
