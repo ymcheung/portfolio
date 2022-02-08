@@ -29,7 +29,7 @@ const pageBody = globalCss({
 export default function ProjectProcess() {
   const router = useRouter();
 
-  const { t } = useTranslation('home');
+  const { t } = useTranslation(['home', 'nav']);
 
   const pageInfo = {
     name: t('home:activity.process.title', { translate: t('home:verb.translate') }),
@@ -77,7 +77,7 @@ export default function ProjectProcess() {
         <Content />
       </Container>
       <Nav
-        hasPrev="Intersection"
+        hasPrev={t('nav:intersection')}
         prevSlug="intersection"
         prevBg="generic"
       />
@@ -88,6 +88,6 @@ export default function ProjectProcess() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['process', 'home', 'meta']),
+    ...await serverSideTranslations(locale, ['process', 'home', 'meta', 'nav']),
   },
 });

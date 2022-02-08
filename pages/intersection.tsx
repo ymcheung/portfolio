@@ -31,7 +31,7 @@ const pageBody = globalCss({
 export default function ProjectIntersection() {
   const router = useRouter();
 
-  const { t } = useTranslation('home');
+  const { t } = useTranslation(['home', 'nav']);
 
   const pageInfo = {
     name: t('home:activity.intersection.fullTitle'),
@@ -80,10 +80,10 @@ export default function ProjectIntersection() {
         <Content />
       </Container>
       <Nav
-        hasNext="Translate “Design Process for Pros”"
+        hasNext={t('nav:process')}
         nextSlug="translate-design-process"
         nextBg="generic"
-        hasPrev="Nuomi’s Portfolio"
+        hasPrev={t('nav:nuomi')}
         prevSlug="nuomi"
         prevBg="nuomi"
       />
@@ -94,6 +94,6 @@ export default function ProjectIntersection() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['intersection', 'home', 'meta']),
+    ...await serverSideTranslations(locale, ['intersection', 'home', 'meta', 'nav']),
   },
 });

@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { useTranslation } from 'next-i18next';
+
 import { styled } from 'stitches.config';
 import IconArrow from '@elements/IconArrow';
 
@@ -105,7 +107,10 @@ interface NavProps {
   nextBg?: 'generic' | 'pie' | 'moment' | 'nuomi';
 }
 
-function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps) {
+export default function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps) {
+
+  const { t } = useTranslation('nav');
+
   return(
     <Container as="nav" responsive={{'@m768': 'max640'}} space="isNavEnd">
       <NavList responsive={{'@m992': 'desktop'}}>
@@ -133,7 +138,7 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps)
           <Link href="/" passHref>
             <NavItemLink purpose={{ '@mHover': 'home' }}>
               <IconArrow background="generic" />
-              &nbsp;Home
+              &nbsp;{t('home')}
             </NavItemLink>
           </Link>
         </NavItem>
@@ -141,5 +146,3 @@ function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps)
     </Container>
   );
 }
-
-export default Nav;

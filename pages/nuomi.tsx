@@ -27,7 +27,7 @@ const pageBody = globalCss({
 export default function ProjectNuomi() {
   const router = useRouter();
 
-  const { t } = useTranslation('home');
+  const { t } = useTranslation(['home', 'nav']);
 
   const pageInfo = {
     name: t('home:project.nuomi.title', { retrospect: t('home:verb.retrospect') }),
@@ -74,10 +74,10 @@ export default function ProjectNuomi() {
         <Content />
       </FullBlock>
       <Nav
-        hasNext="Intersection"
+        hasNext={t('nav:intersection')}
         nextSlug="intersection"
         nextBg="generic"
-        hasPrev="The Moment"
+        hasPrev={t('nav:moment')}
         prevSlug="moment"
         prevBg="moment"
       />
@@ -88,6 +88,6 @@ export default function ProjectNuomi() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['nuomi', 'home', 'meta']),
+    ...await serverSideTranslations(locale, ['nuomi', 'home', 'meta', 'nav']),
   },
 });

@@ -32,7 +32,7 @@ const pageBody = globalCss({
 export default function ProjectMoment() {
   const router = useRouter();
 
-  const { t } = useTranslation('home');
+  const { t } = useTranslation(['home', 'nav']);
 
   const pageInfo = {
     name: t('home:project.moment.title', { explore: t('home:verb.explore') }),
@@ -83,10 +83,10 @@ export default function ProjectMoment() {
       </Container>
       <Content />
       <Nav
-        hasNext="Nuomi&rsquo;s Portfolio"
+        hasNext={t('nav:nuomi')}
         nextSlug="nuomi"
         nextBg="nuomi"
-        hasPrev="Redesign a Clock-In App"
+        hasPrev={t('nav:pie')}
         prevSlug="pie-clockin"
         prevBg="pie"
       />
@@ -97,6 +97,6 @@ export default function ProjectMoment() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['moment', 'home', 'meta']),
+    ...await serverSideTranslations(locale, ['moment', 'home', 'meta', 'nav']),
   },
 });
