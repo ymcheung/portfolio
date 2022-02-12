@@ -13,6 +13,11 @@ import { FeatureList, FeaturedNumberMark } from '@projects/featured';
 
 import IconSearch from './IconSearch';
 
+import screenshotMobileEn from '@public/projects/moment/mobile/en.webp';
+import screenshotMobileTw from '@public/projects/moment/mobile/tw.webp';
+import screenshotDesktopEn from '@public/projects/moment/desktop/en.webp';
+import screenshotDesktopTw from '@public/projects/moment/desktop/tw.webp';
+
 const BubbleSearch = styled('span', {
   display: 'inline-block',
   margin: '0 8px 8px 0',
@@ -80,8 +85,8 @@ export default function Content() {
   const isItalic = i18n.language === 'en';
   const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
 
-  const screenshotMobile = '/projects/moment/mobile.webp';
-  const screenshotDesktop = '/projects/moment/desktop.webp';
+  const screenshotMobile = i18n.language === 'en' ? screenshotMobileEn : screenshotMobileTw;
+  const screenshotDesktop = i18n.language === 'en' ? screenshotDesktopEn : screenshotDesktopTw ;
 
   const keywordLyric = [
     'we can be heroes just for one day',

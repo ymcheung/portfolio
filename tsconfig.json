@@ -23,7 +23,8 @@
       "@elements/*": ["elements/*"],
       "@components/*": ["components/*"],
       "@utils/*": ["utils/*"],
-      "@projects/*": ["projects/*"]
+      "@projects/*": ["projects/*"],
+      "@public/*": ["public/*"]
     }
   },
   "include": [

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { styled } from 'stitches.config';
 
 import { Device } from '@projects/cover';
-import clockIn from '/public/projects/pie/cover/clockIn.webp';
+import clockIn from '@public/projects/pie/cover/clockIn.webp';
 
 const ScreenshotMobile = styled(Image, {
   position: 'relative',

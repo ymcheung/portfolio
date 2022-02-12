@@ -3,7 +3,7 @@ import { styled } from 'stitches.config';
 
 import { Device } from '@projects/cover';
 import MockupMacbook from '@projects/MockupMacbook';
-import screenshotMobile from '/public/projects/nuomi/coverMobile.jpg';
+import screenshotMobile from '@public/projects/nuomi/coverMobile.jpg';
 
 const Screenshot = styled(Image, {
   width: '100%',

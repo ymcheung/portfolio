@@ -79,6 +79,19 @@ export default function Projects() {
           </Link>
         </ListItem>
         <ListItem nomark>
+          <Link href="/moment" passHref>
+            <HomeItemLink asproject={{ '@initial': 'mobile', '@mHover': 'hover' }}>
+              <IconMoment />
+              <Heading position="homeItemName" dangerouslySetInnerHTML={{__html: t('project.moment.title')}} />
+              <IconsList>
+                <IconItem project="moment" mono={isLightTheme} nomark>🤘</IconItem>
+                <IconItem project="moment" mono={isLightTheme} nomark>♪</IconItem>
+                <IconItem project="moment" mono={isLightTheme} nomark>&nbsp;&nbsp;🎬&nbsp;&nbsp;📺&nbsp;&nbsp;▶️&nbsp;&nbsp;</IconItem>
+              </IconsList>
+            </HomeItemLink>
+          </Link>
+        </ListItem>
+        <ListItem nomark>
           <Link href="/pie-clockin" passHref>
             <HomeItemLink asproject={{ '@initial': 'mobile', '@mHover': 'hover' }}>
               <IconPie />
@@ -88,19 +101,6 @@ export default function Projects() {
                 <IconItem space="zero" nomark><IconForms /></IconItem>
                 <IconItem space="zero" nomark><IconSalary /></IconItem>
                 <IconItem space="zero" nomark><IconStats /></IconItem>
-              </IconsList>
-            </HomeItemLink>
-          </Link>
-        </ListItem>
-        <ListItem nomark>
-          <Link href="/moment" passHref>
-            <HomeItemLink asproject={{ '@initial': 'mobile', '@mHover': 'hover' }}>
-              <IconMoment />
-              <Heading position="homeItemName" dangerouslySetInnerHTML={{__html: t('project.moment.title')}} />
-              <IconsList>
-                <IconItem project="moment" mono={isLightTheme} nomark>🤘</IconItem>
-                <IconItem project="moment" mono={isLightTheme} nomark>♪</IconItem>
-                <IconItem project="moment" mono={isLightTheme} nomark>&nbsp;&nbsp;🎬&nbsp;&nbsp;📺&nbsp;&nbsp;▶️&nbsp;&nbsp;</IconItem>
               </IconsList>
             </HomeItemLink>
           </Link>

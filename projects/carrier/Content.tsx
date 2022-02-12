@@ -14,11 +14,11 @@ import { ListItem, IconList, IconListItem } from '@components/layout';
 import { FeatureList } from '@projects/featured';
 
 import IconArrow from '@elements/IconArrow';
-import productivity from '/public/projects/carrier/why/productivity.webp';
-import whyMailPreviewEn from '/public/projects/carrier/why/en/mailPreview.webp';
-import whyMailPreviewTw from '/public/projects/carrier/why/tw/mailPreview.webp';
-import prototypeAppointPreviewEn from '/public/projects/carrier/prototype/en/appointment.webp';
-import prototypeAppointPreviewTw from '/public/projects/carrier/prototype/tw/appointment.webp';
+import productivity from '@public/projects/carrier/why/productivity.webp';
+import whyMailPreviewEn from '@public/projects/carrier/why/en/mailPreview.webp';
+import whyMailPreviewTw from '@public/projects/carrier/why/tw/mailPreview.webp';
+import prototypeAppointPreviewEn from '@public/projects/carrier/prototype/en/appointment.webp';
+import prototypeAppointPreviewTw from '@public/projects/carrier/prototype/tw/appointment.webp';
 
 // import Gallery from './Gallery';
 

@@ -17,8 +17,34 @@
     "websites":
     [
       {
-        "slug":
-          "storybook",
+        "url":
+          "https://cal.com",
+        "name":
+          "Cal.com",
+        "time": {
+          "format":
+            "2022-02",
+          "full":
+            "February, 2022"
+        },
+        "description":
+          "Cal.com is an open-source scheduling infrastructure, and it reached #1 on Product Hunt when released in April 2021."
+      },
+      {
+        "url":
+          "https://stateofcss.com",
+        "name":
+          "State of CSS",
+        "time": {
+          "format":
+            "2021-12",
+          "full":
+            "December, 2021"
+        },
+        "description":
+          "The survey has asked developers how they used CSS and their opinion since 2019. I cooperated with <a class=\"paragraph-link\" href=\"https://github.com/mingjunlu\" target=\"_blank\" rel=\"noopener\">&commat;mingjunlu</a> to get the translation done in the 2020 edition."
+      },
+      {
         "url":
           "https://storybook.js.org/tutorials/intro-to-storybook/react/zh-TW/get-started/",
         "name":
@@ -33,24 +59,6 @@
           "The famous design system tool: Storybook&rsquo;s official tutorials."
       },
       {
-        "slug":
-          "statecss",
-        "url":
-          "https://stateofcss.com",
-        "name":
-          "State of CSS",
-        "time": {
-          "format":
-            "2020-12",
-          "full":
-            "December, 2020"
-        },
-        "description":
-          "The State of CSS, whose most of the respondents were web front-end professionals, received more than 10,000 responses in 2019 and 2020. I cooperated with <a class=\"paragraph-link\" href=\"https://github.com/mingjunlu\" target=\"_blank\" rel=\"noopener\">&commat;mingjunlu</a> to get the translation done."
-      },
-      {
-        "slug":
-          "inclusive",
         "url":
           "https://inclusivedesignprinciples.intersection.tw",
         "name":
@@ -65,8 +73,6 @@
           "Written by accessibility experts, the principles are about designing for the needs of people with permanent, temporary, situational, or changing disabilities — all of us really."
       },
       {
-        "slug":
-          "process",
         "url":
           "https://thecosignstudio.github.io/process",
         "name":

@@ -17,8 +17,34 @@
     "websites":
     [
       {
-        "slug":
-          "storybook",
+        "url":
+          "https://cal.com",
+        "name":
+          "Cal.com",
+        "time": {
+          "format":
+            "2022-02",
+          "full":
+            "2022 年 2 月"
+        },
+        "description":
+          "Cal.com 是開源的線上預約基礎架構，2021 年 4 月推出時，隨即登上 Product Hunt 當月 #1。"
+      },
+      {
+        "url":
+          "https://stateofcss.com",
+        "name":
+          "CSS 現況調查 2021",
+        "time": {
+          "format":
+            "2021-12",
+          "full":
+            "2021 年 12 月"
+        },
+        "description":
+          "自 2019 年起，每年針對開發者調查 CSS 使用現況與看法。在 2020 年版是與 <a class=\"paragraph-link\" href=\"https://github.com/mingjunlu\" target=\"_blank\" rel=\"noopener\">&commat;mingjunlu</a> 合作完成。"
+      },
+      {
         "url":
           "https://storybook.js.org/tutorials/intro-to-storybook/react/zh-TW/get-started/",
         "name":
@@ -33,24 +59,6 @@
           "知名設計系統工具：Storybook 的官方教學課程。"
       },
       {
-        "slug":
-          "statecss",
-        "url":
-          "https://stateofcss.com",
-        "name":
-          "CSS 現況調查",
-        "time": {
-          "format":
-            "2020-12",
-          "full":
-            "2020 年 12 月"
-        },
-        "description":
-          "2019 與 2020 年的 CSS 現況調查皆收到超過 1 萬份回饋，參與答題者主要來自網頁前端領域。此翻譯與 <a class=\"paragraph-link\" href=\"https://github.com/mingjunlu\" target=\"_blank\" rel=\"noopener\">&commat;mingjunlu</a> 合作完成。"
-      },
-      {
-        "slug":
-          "inclusive",
         "url":
           "https://inclusivedesignprinciples.intersection.tw",
         "name":
@@ -65,8 +73,6 @@
           "無障礙設計專家整理出為有協助需求的人，包含永久、暫時、在某些情況和漸漸不便（其實就是我們所有人）的設計。"
       },
       {
-        "slug":
-          "process",
         "url":
           "https://thecosignstudio.github.io/process",
         "name":
