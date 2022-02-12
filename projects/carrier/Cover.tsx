@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { styled } from 'stitches.config';
 
 import { Device } from '@projects/cover';
-import homeIndexEn from '/public/projects/carrier/gallery/en/homeIndex.webp';
-import homeIndexTw from '/public/projects/carrier/gallery/tw/homeIndex.webp';
+import homeIndexEn from '@public/projects/carrier/gallery/en/homeIndex.webp';
+import homeIndexTw from '@public/projects/carrier/gallery/tw/homeIndex.webp';
 
 const ScreenshotMobile = styled(Image, {
   position: 'relative',

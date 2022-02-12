@@ -5,7 +5,7 @@ import { styled } from 'stitches.config';
 import { Section, ContentTitle, Paragraph } from '@components/contentStyles';
 import { GalleryList, GalleryItem } from '@projects/gallery';
 
-import tabBarDark from '/public/projects/pie/tabBarDark.jpg';
+import tabBarDark from '@public/projects/pie/tabBarDark.jpg';
 
 const TabBarRescue = styled('img', {
   width: '100%',

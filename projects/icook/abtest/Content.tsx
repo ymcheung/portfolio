@@ -7,11 +7,11 @@ import { styled } from 'stitches.config';
 import LangSwitch from '@components/LangSwitch';
 
 import { Container } from '@components/layout';
-import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
+import { ContentTitle, Section, Paragraph } from '@components/contentStyles';
 
 import { ListItem } from '@components/layout';
-import wineBoiledClamsCover from '/public/projects/icook/wineBoiledClamsCover.webp';
-import wineBoiledClamsRecommend from '/public/projects/icook/wineBoiledClamsRecommend.webp';
+import wineBoiledClamsCover from '@public/projects/icook/wineBoiledClamsCover.webp';
+import wineBoiledClamsRecommend from '@public/projects/icook/wineBoiledClamsRecommend.webp';
 import IconBounce from '@elements/IconBounce';
 
 const TestGroupList = styled('ul', {

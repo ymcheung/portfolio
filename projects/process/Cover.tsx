@@ -5,8 +5,8 @@ import { useTheme } from 'next-themes';
 import { Device } from '@projects/cover';
 
 import MockupMacbook from '@projects/MockupMacbook';
-import mobileDark from '/public/projects/process/coverMobileDark.webp';
-import mobileLight from '/public/projects/process/coverMobileLight.webp';
+import mobileDark from '@public/projects/process/coverMobileDark.webp';
+import mobileLight from '@public/projects/process/coverMobileLight.webp';
 
 const Screenshot = styled(Image, {
   width: '100%',
