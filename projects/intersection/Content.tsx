@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { styled } from 'stitches.config';
 import { ListItem, IconList, IconListItem } from '@components/layout';
@@ -8,7 +9,13 @@ import LangSwitch from '@components/LangSwitch';
 import { ContentTitle, Section, Paragraph, ParagraphPostmark } from '@components/contentStyles';
 import { FeatureList } from '@projects/featured';
 
-const IconListImage = styled('img', {
+import IconCalcom from '@public/projects/intersection/calcom.webp';
+import IconStateCss from '@public/projects/intersection/statecss.webp';
+import IconStorybook from '@public/projects/intersection/storybook.webp';
+import IconInclusive from '@public/projects/intersection/inclusive.webp';
+import IconProcess from '@public/projects/intersection/process.webp';
+
+const IconListImage = styled(Image, {
   size: '$24',
   overflow: 'hidden',
   verticalAlign: 'middle',
@@ -24,7 +31,6 @@ const IconListTimestamp = styled(ParagraphPostmark, {
 });
 
 interface WebsiteProps {
-  slug: string;
   url: string;
   name: string;
   time: {
@@ -38,6 +44,14 @@ export default function Content() {
   const { t, i18n } = useTranslation('intersection');
 
   const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
+
+  const websiteIcons = [
+    IconCalcom,
+    IconStateCss,
+    IconStorybook,
+    IconInclusive,
+    IconProcess
+  ];
 
   return(
     <>
@@ -61,9 +75,10 @@ export default function Content() {
       <Section as="section" isgroupend>
         <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('standalone.title')}} />
         <IconList>
-          {t<string, WebsiteProps[]>('standalone.websites', { returnObjects: true }).map(({ slug, url, name, time, description }, index: number) => (
+          {t<string, WebsiteProps[]>('standalone.websites',
+            { returnObjects: true }).map(({ url, name, time, description }, index: number) => (
             <IconListItem nomark purpose="timestamp" key={index}>
-              <div><IconListImage src={`/projects/intersection/${slug}_24.jpg`} alt="" /></div>
+              <div><IconListImage src={websiteIcons[index]} alt="" width={24} height={24} /></div>
               <Link href={url} passHref>
                 <ContentTitle as="a" purpose="iconListItem" dangerouslySetInnerHTML={{__html: name}} data-splitbee-event={`Intersection: ${name} Translation Link`} target="_blank" rel="noopener" nounderline />
               </Link>
