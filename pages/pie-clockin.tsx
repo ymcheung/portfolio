@@ -82,12 +82,12 @@ export default function ProjectPie() {
         <Content />
       </FullBlock>
       <Nav
-        hasPrev={t('nav:carrier')}
-        prevSlug="carrier-express"
-        prevBg="generic"
-        hasNext={t('nav:moment')}
-        nextSlug="moment"
-        nextBg="moment"
+        hasPrev={t('nav:moment')}
+        prevSlug="moment"
+        prevBg="moment"
+        hasNext={t('nav:nuomi')}
+        nextSlug="nuomi"
+        nextBg="nuomi"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>
