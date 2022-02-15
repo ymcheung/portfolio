@@ -83,12 +83,12 @@ export default function ProjectMoment() {
       </Container>
       <Content />
       <Nav
-        hasNext={t('nav:nuomi')}
-        nextSlug="nuomi"
-        nextBg="nuomi"
-        hasPrev={t('nav:pie')}
-        prevSlug="pie-clockin"
-        prevBg="pie"
+        hasNext={t('nav:pie')}
+        nextSlug="pie-clockin"
+        nextBg="pie"
+        hasPrev={t('nav:carrier')}
+        prevSlug="carrier-express"
+        prevBg="generic"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>

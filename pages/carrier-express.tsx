@@ -85,9 +85,9 @@ export default function ProjectCarrier() {
         hasPrev={t('nav:abtest')}
         prevSlug="icook/a-b-test"
         prevBg="generic"
-        hasNext={t('nav:pie')}
-        nextSlug="pie-clockin"
-        nextBg="pie"
+        hasNext={t('nav:moment')}
+        nextSlug="moment"
+        nextBg="moment"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>
