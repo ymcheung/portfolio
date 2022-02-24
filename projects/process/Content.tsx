@@ -65,7 +65,7 @@ export default function Content() {
         <FeatureList space={{ '@initial': 'mobile', '@m768': itemSpace }}>
           <FeatureItem nomark responsive={{ '@m768': 'tablet' }}>
             <ContentTitle as="strong" featurednumber="large">
-              3.8
+              3.2
               <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
             </ContentTitle>
             <div>
