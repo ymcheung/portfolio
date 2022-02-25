@@ -11,7 +11,7 @@ export default function Meta() {
   const statusItems = [
     {
       name: t('status.doc'),
-      link: i18n.language === 'en' ? 'https://www.craft.do/s/ID02aukYb1wMuR' : 'https://www.craft.do/s/te59NNr9aafSzq',
+      link: i18n.language === 'en' ? 'https://www.craft.do/s/WPp0S5oPecqEPc' : 'https://www.craft.do/s/kRGlFyjpSWAKUh',
       isReady: true,
       sbevent: 'Pie/Meta: Onboarding Document Link'
     },
