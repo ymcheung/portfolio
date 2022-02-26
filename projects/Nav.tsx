@@ -94,6 +94,14 @@ const NavItemLink = styled('a', {
           }
         }
       }
+    },
+    responsive: {
+      prev: {
+        transform: 'translateX(-22px)'
+      },
+      next: {
+        transform: 'translateX(22px)'
+      }
     }
   }
 });
@@ -117,7 +125,7 @@ export default function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, next
         {hasPrev &&
           <NavItem position="prev">
             <Link href={`/${prevSlug}`} passHref>
-              <NavItemLink purpose={{ '@mHover': 'prev' }}>
+              <NavItemLink purpose={{ '@mHover': 'prev' }} responsive={{ '@m768': 'prev' }}>
                 <IconArrow purpose="prev" gotoText={hasPrev} background={prevBg} />
                 &nbsp;{hasPrev}
               </NavItemLink>
@@ -127,7 +135,7 @@ export default function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, next
         {hasNext &&
           <NavItem position="next">
             <Link href={`/${nextSlug}`} passHref>
-              <NavItemLink purpose={{ '@mHover': 'next' }}>
+              <NavItemLink purpose={{ '@mHover': 'next' }} responsive={{ '@m768': 'next' }}>
                 {hasNext}&nbsp;
                 <IconArrow purpose="next" gotoText={hasNext} background={nextBg}  />
               </NavItemLink>
