@@ -83,9 +83,9 @@ export default function ProjectIntersection() {
         hasNext={t('nav:process')}
         nextSlug="translate-design-process"
         nextBg="generic"
-        hasPrev={t('nav:nuomi')}
-        prevSlug="nuomi"
-        prevBg="nuomi"
+        hasPrev={t('nav:pie')}
+        prevSlug="pie-clockin"
+        prevBg="pie"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
     </>

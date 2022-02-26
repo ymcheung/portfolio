@@ -55,9 +55,6 @@ export const FullBlock = styled('section', {
       },
       moment: {
         backgroundColor: 'hsl($mtMidnight100)'
-      },
-      nuomi: {
-        backgroundColor: 'hsl($nuomiBlack0)'
       }
     },
     context: {

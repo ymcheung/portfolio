@@ -35,12 +35,6 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       mtMidnight100: '225,26%,12%',
       mtMidnight0: '225,26%,6%',
 
-      nuomiBlack300: '180,1%,20%',
-      nuomiBlack100: '180,1%,12%',
-      nuomiBlack0:   '180,1%,6%',
-      nuomiGold1200: '32,55%,54%',
-      nuomiGold400:  '32,55%,20%',
-
       intersection1500: '11,71%,61%',
       intersection300: '11,71%,12%',
 
@@ -65,8 +59,6 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       themePie: '$shade1600',
       metaTitlePie: '$pie400',
 
-      themeNuomi: '$shade1600',
-
       monoTitleLight: '$shade1500',
       monoContentGradient: '$shade100',
       monoContentParagraph: '$shade1200',
@@ -83,8 +75,7 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
 
       navGenericIconBg: '$shade1500',
       navPieIconBg:     '$shade1500',
-      navMomentIconBg:  '$shade1500',
-      navNuomiIconBg:   '$shade1500'
+      navMomentIconBg:  '$shade1500'
     },
     space: {
       auto: 'auto',
@@ -204,8 +195,6 @@ export const dark = createTheme({
     themePie: '$pie0',
     metaTitlePie: '$pie800',
 
-    themeNuomi: '$nuomiBlack0',
-
     monoTitleLight: '$shade100',
     monoContentGradient: '$shade1500',
     monoContentParagraph: '$shade600',
@@ -222,7 +211,6 @@ export const dark = createTheme({
 
     navGenericIconBg: '$shade1400',
     navPieIconBg:     '$pie100',
-    navMomentIconBg:  '$mtMidnight200',
-    navNuomiIconBg:  '$nuomiGold400'
+    navMomentIconBg:  '$mtMidnight200'
   }
 });

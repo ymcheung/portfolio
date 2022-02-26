@@ -51,9 +51,6 @@ export const MetaItemTitle = styled('strong', {
       moment: {
         color: 'hsl($mtDawn)'
       },
-      nuomi: {
-        color: 'hsl($nuomiGold1200)'
-      },
       intersection: {
         color: 'hsl($intersection1500)'
       }

@@ -101,10 +101,10 @@ const NavItemLink = styled('a', {
 interface NavProps {
   hasPrev?: string;
   prevSlug?: string;
-  prevBg?: 'generic' | 'pie' | 'moment' | 'nuomi';
+  prevBg?: 'generic' | 'pie' | 'moment';
   hasNext?: string;
   nextSlug?: string;
-  nextBg?: 'generic' | 'pie' | 'moment' | 'nuomi';
+  nextBg?: 'generic' | 'pie' | 'moment';
 }
 
 export default function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, nextBg }: NavProps) {
