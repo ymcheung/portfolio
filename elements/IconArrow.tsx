@@ -35,9 +35,6 @@ const Circle = styled('circle', {
       },
       moment: {
         fill: 'hsl($navMomentIconBg)'
-      },
-      nuomi: {
-        fill: 'hsl($navNuomiIconBg)'
       }
     }
   }
@@ -72,7 +69,7 @@ type IconArrowProps = {
   readonly wh: 'sq18' | 'sq20';
   readonly position?: 'prototype';
   readonly purpose: 'home' | 'external' | 'next' | 'internal' | 'prev';
-  readonly background: 'generic' | 'carrierPrototype' | 'pie' | 'moment' | 'nuomi';
+  readonly background: 'generic' | 'carrierPrototype' | 'pie' | 'moment';
   readonly gotoText: string;
 } & typeof defaultProps;
 

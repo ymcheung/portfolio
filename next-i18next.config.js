@@ -9,7 +9,6 @@ module.exports = {
       'carrier',
       'pie',
       'moment',
-      'nuomi',
       'intersection',
       'process'
     ],
