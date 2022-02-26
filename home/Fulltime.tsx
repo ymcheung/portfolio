@@ -14,7 +14,7 @@ export default function Fulltime() {
   return(
     <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="homeSection">
       <Heading position="homeSection" isitalic={isEng} dangerouslySetInnerHTML={{__html: t('fulltime.title')}} />
-      <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
+      <HomeItemsLayout tri={{ '@m768': 'tablet'}}>
         <ListItem nomark>
           <Link href="/icook/a-b-test" passHref>
             <HomeItemLink asfulltime={{ '@initial': 'mobile', '@mHover': 'hover' }}>

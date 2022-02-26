@@ -26,6 +26,13 @@
   {
     "title":
       "Side Projects",
+    "type":
+    {
+      "app":
+        "App Design",
+      "web":
+        "Web Design"
+    },
     "carrier":
     {
       "title":

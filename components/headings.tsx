@@ -90,7 +90,6 @@ export const Heading = styled('h2', {
         letterSpacing: '1px'
       },
       homeItemName: {
-        display: 'inline-block',
         marginBottom: 0,
         color: 'hsl($shade0)',
         fontSize: '$16',
