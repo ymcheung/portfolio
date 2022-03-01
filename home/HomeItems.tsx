@@ -34,9 +34,10 @@ export const HomeItemLink = styled('a', {
         columnGap: '$8',
         margin: '0 -10px',
         padding: '$8',
-        backgroundColor: 'hsla($shade1500, 0.5)',
+        backgroundColor: 'hsl($shade1500)',
         border: '2px solid transparent',
-        borderRadius: '12px'
+        borderRadius: '12px',
+        boxSizing: 'content-box'
       },
       hover: {
         transition: 'border-color $easeIn',
@@ -49,13 +50,17 @@ export const HomeItemLink = styled('a', {
     },
     asproject: {
       mobile: {
-        display: 'block',
+        display: 'grid',
         margin: '0 -10px',
         padding: '$8',
         position: 'relative',
-        backgroundColor: 'hsla($shade1500, 0.5)',
+        backgroundColor: 'hsl($shade1500)',
         border: '2px solid transparent',
         borderRadius: '12px'
+      },
+      tablet: {
+        grid: `"screen type" 24px
+               "screen name" auto / minmax(296px, 1fr) 2fr`
       },
       hover: {
         transition: 'border-color $easeIn',
@@ -84,21 +89,15 @@ export const HomeItemLink = styled('a', {
 });
 
 export const HomeItemType = styled('span', {
-  display: 'inline-block',
   marginBottom: '$4',
+  color: 'hsl($shade800)',
   fontSize: '$14',
   lineHeight: '18px',
 
   variants: {
-    project: {
-      carrier: {
-        color: 'hsl($carrierNeon)'
-      },
-      moment: {
-        color: 'hsl($mtDawn)'
-      },
-      pie: {
-        color: 'hsl($pie400)'
+    responsive: {
+      tablet: {
+        gridArea: 'type'
       }
     }
   }

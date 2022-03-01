@@ -8,7 +8,7 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       sun: '50,50%,70%',
 
       shade1600: '162,2%,99%',
-      shade1500: '162,2%,92%',
+      shade1500: '162,2%,96%',
       shade1400: '162,2%,84%',
       shade1200: '162,2%,72%',
       shade1000: '162,2%,64%',

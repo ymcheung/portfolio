@@ -103,6 +103,11 @@ export const Heading = styled('h2', {
         lineHeight: '32px'
       }
     },
+    homeitem: {
+      tablet: {
+        gridArea: 'name'
+      }
+    },
     scheme: {
       default: {
         color: 'hsl($shade300)'
