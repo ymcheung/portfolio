@@ -53,6 +53,7 @@ const ProjectScreen = styled('figure', {
 
 const ProjectScreenImg = styled('img', {
   maxWidth: '100%',
+  minHeight: '240px',
   borderRadius: '12px',
 
   variants: {
