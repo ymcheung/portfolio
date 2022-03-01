@@ -26,6 +26,13 @@
   {
     "title":
       "閒暇專案",
+    "type":
+    {
+      "app":
+        "App 設計",
+      "web":
+        "Web 設計"
+    },
     "carrier":
     {
       "title":

@@ -15,7 +15,7 @@ export default function Activity() {
   return(
     <Container responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="isGroundFloor">
       <Heading position="homeSection" isitalic={isEng} dangerouslySetInnerHTML={{__html: t('activity.title')}} />
-      <HomeItemsLayout responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
+      <HomeItemsLayout tri={{ '@m768': 'tablet'}}>
         <ListItem nomark>
           <Link href="/intersection" passHref>
             <HomeItemLink asactivity={{ '@initial': 'mobile', '@m768': 'tablet' }}>

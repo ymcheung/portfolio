@@ -2,37 +2,42 @@ import { styled } from 'stitches.config';
 
 export const HomeItemsLayout = styled('ul', {
   display: 'grid',
+  rowGap: '14px',
   margin: '0 -16px',
   paddingX: '$16',
 
   variants: {
-    responsive: {
-      mobile: {
-        rowGap: '14px'
-      },
+    duo: {
+      tablet: {
+        grid: 'auto / repeat(2, 1fr)',
+        columnGap: '32px'
+      }
+    },
+    tri: {
       tablet: {
         grid: 'auto / repeat(3, 1fr)',
-        columnGap: '32px',
+        columnGap: '32px'
       }
     }
   }
 });
 
 export const HomeItemLink = styled('a', {
-  display: 'grid',
   textDecoration: 'none',
 
   variants: {
     asfulltime: {
       mobile: {
+        display: 'grid',
         grid: `auto / 52px 1fr`,
         alignItems: 'center',
         columnGap: '$8',
         margin: '0 -10px',
         padding: '$8',
-        backgroundColor: 'hsla($shade1500, 0.5)',
+        backgroundColor: 'hsl($shade1500)',
         border: '2px solid transparent',
-        borderRadius: '12px'
+        borderRadius: '12px',
+        boxSizing: 'content-box'
       },
       hover: {
         transition: 'border-color $easeIn',
@@ -45,15 +50,17 @@ export const HomeItemLink = styled('a', {
     },
     asproject: {
       mobile: {
-        grid: `auto
-               auto / 52px 1fr`,
-        alignItems: 'center',
-        gap: '$16 $8',
+        display: 'grid',
         margin: '0 -10px',
         padding: '$8',
-        backgroundColor: 'hsla($shade1500, 0.5)',
+        position: 'relative',
+        backgroundColor: 'hsl($shade1500)',
         border: '2px solid transparent',
         borderRadius: '12px'
+      },
+      tablet: {
+        grid: `"screen type" 24px
+               "screen name" auto / minmax(296px, 1fr) 2fr`
       },
       hover: {
         transition: 'border-color $easeIn',
@@ -66,6 +73,7 @@ export const HomeItemLink = styled('a', {
     },
     asactivity: {
       mobile: {
+        display: 'grid',
         grid: `"icon title" auto
                ". description" auto / 24px 1fr`,
         alignItems: 'start',
@@ -75,6 +83,21 @@ export const HomeItemLink = styled('a', {
         grid: `"title" auto
                "description" auto / 100%`,
         columnGap: 'unset'
+      }
+    }
+  }
+});
+
+export const HomeItemType = styled('span', {
+  marginBottom: '$4',
+  color: 'hsl($shade800)',
+  fontSize: '$14',
+  lineHeight: '18px',
+
+  variants: {
+    responsive: {
+      tablet: {
+        gridArea: 'type'
       }
     }
   }

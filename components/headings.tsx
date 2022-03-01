@@ -90,7 +90,6 @@ export const Heading = styled('h2', {
         letterSpacing: '1px'
       },
       homeItemName: {
-        display: 'inline-block',
         marginBottom: 0,
         color: 'hsl($shade0)',
         fontSize: '$16',
@@ -102,6 +101,11 @@ export const Heading = styled('h2', {
         fontSize: '$24',
         fontWeight: 600,
         lineHeight: '32px'
+      }
+    },
+    homeitem: {
+      tablet: {
+        gridArea: 'name'
       }
     },
     scheme: {
