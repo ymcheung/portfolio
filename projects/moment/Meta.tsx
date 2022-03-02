@@ -9,14 +9,6 @@ export default function Meta() {
 
   const statusItems = [
     {
-      name: t('role.research'),
-      isReady: true
-    },
-    {
-      name: t('role.ui'),
-      isReady: true
-    },
-    {
       name: t('link.title'),
       link: 'https://moment.intersection.tw',
       isReady: true,

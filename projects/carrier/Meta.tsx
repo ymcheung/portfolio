@@ -17,13 +17,6 @@ export default function Meta() {
       sbevent: 'Document Link'
     },
     {
-      name: 'UI',
-      link: '',
-      isReady: true,
-      newTab: true,
-      sbevent: ''
-    },
-    {
       name: 'Prototype',
       link: '#sectionPrototype',
       isReady: true,

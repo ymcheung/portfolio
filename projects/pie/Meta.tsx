@@ -16,20 +16,10 @@ export default function Meta() {
       sbevent: 'Pie/Meta: Onboarding Document Link'
     },
     {
-      name: 'UI',
-      link: '',
-      isReady: true
-    },
-    {
       name: 'Prototype',
       link: 'https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1',
       isReady: true,
       sbevent: 'Pie/Meta: Prototype Link'
-    },
-    {
-      name: t('status.landing'),
-      link: '',
-      isReady: false
     }
   ];
 
