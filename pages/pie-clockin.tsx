@@ -65,10 +65,7 @@ export default function ProjectPie() {
         canonical={router.pathname}
       />
       <FullBlock as="header" project="pie" context="cover">
-        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-          <span>
-            <IconPie />
-          </span>
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover">
           <Heading as="span" position="itemName" scheme="monoBlack">
             {pageInfo.name}
           </Heading>

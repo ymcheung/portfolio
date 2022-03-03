@@ -33,15 +33,6 @@ export const HeadingLayout = styled('div', {
       tablet: {
         grid: 'auto / 36px 1fr'
       }
-    },
-    iconl: {
-      mobile: {
-        grid: `52px
-               auto / 100%`
-      },
-      tablet: {
-        grid: 'auto / 52px 1fr'
-      }
     }
   }
 });

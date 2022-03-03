@@ -65,10 +65,7 @@ export default function ProjectCarrier() {
         canonical={router.pathname}
       />
       <FullBlock as="header" context="cover">
-        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-          <span>
-            <IconCarrier />
-          </span>
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover">
           <Heading as="span" position="itemName">
             {pageInfo.name}
           </Heading>
