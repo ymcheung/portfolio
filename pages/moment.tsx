@@ -66,10 +66,7 @@ export default function ProjectMoment() {
         canonical={router.pathname}
       />
       <FullBlock as="header" project="moment" context="cover">
-        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-          <span>
-            <IconMoment />
-          </span>
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover">
           <Heading as="span" position="itemName" scheme="monoBlack">
             {pageInfo.name}
           </Heading>

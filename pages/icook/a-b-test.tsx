@@ -65,7 +65,7 @@ export default function FulltimeABTest() {
         canonical={router.pathname}
       />
       <FullBlock as="header" context="cover">
-        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconl={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconm={{ '@initial': 'mobile', '@m768': 'tablet' }}>
           <span>
             <IconAbTest />
           </span>
