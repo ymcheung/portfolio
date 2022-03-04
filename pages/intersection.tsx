@@ -16,6 +16,7 @@ import { Section } from '@components/contentStyles';
 
 import IconIntersection from '@elements/IconIntersection';
 
+import FloatingNav from '@components/FloatingNav';
 import Meta from '@projects/intersection/Meta';
 import Content from '@projects/intersection/Content';
 import Nav from '@projects/Nav';
@@ -63,6 +64,7 @@ export default function ProjectIntersection() {
         ogCover="/projects/intersection/ogCover.jpg"
         canonical={router.pathname}
       />
+      <FloatingNav />
       <FullBlock as="header" context="cover">
         <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="none" iconm={{ '@initial': 'mobile', '@m768': 'tablet' }}>
           <span>

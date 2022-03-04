@@ -10,8 +10,7 @@ import { Container } from '@components/layout';
 const NavList = styled('ul', {
   display: 'grid',
   grid: `"next" auto
-         "prev" auto
-         "home" auto / auto`,
+         "prev" auto / auto`,
   margin: '0 -16px',
   padding: '0 $16',
   backdropFilter: 'blur(12px)',
@@ -19,9 +18,9 @@ const NavList = styled('ul', {
   variants: {
     responsive: {
       desktop: {
-        grid: '"home prev next" auto / 120px 1fr 1fr',
+        grid: '"prev next" auto / 1fr 1fr',
         rowGap: 'unset',
-        margin: '0 0 0 -120px',
+        margin: 0,
         padding: 0
       }
     }
@@ -33,9 +32,6 @@ const NavItem = styled('li', {
 
   variants: {
     position: {
-      home: {
-        gridArea: 'home'
-      },
       prev: {
         gridArea: 'prev',
         marginBottom: '$12'
@@ -51,7 +47,7 @@ const NavItem = styled('li', {
 
 IconArrow.toString = () => '.iconArrow';
 
-const NavItemLink = styled('a', {
+export const NavItemLink = styled('a', {
   display: 'inline-block',
   minWidth: '60px',
   color: 'hsl($shade300)',
@@ -142,14 +138,6 @@ export default function Nav({ hasPrev, prevSlug, prevBg, hasNext, nextSlug, next
             </Link>
           </NavItem>
         }
-        <NavItem position="home">
-          <Link href="/" passHref>
-            <NavItemLink purpose={{ '@mHover': 'home' }}>
-              <IconArrow background="generic" />
-              &nbsp;{t('home')}
-            </NavItemLink>
-          </Link>
-        </NavItem>
       </NavList>
     </Container>
   );

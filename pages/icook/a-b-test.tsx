@@ -15,6 +15,8 @@ import { globalCss } from 'stitches.config';
 import IconAbTest from '@elements/IconAbTest';
 import { Container, FullBlock } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
+
+import FloatingNav from '@components/FloatingNav';
 import Meta from '@projects/icook/abtest/Meta'
 import Content from '@projects/icook/abtest/Content';
 import Nav from '@projects/Nav';
@@ -64,6 +66,7 @@ export default function FulltimeABTest() {
         ogCover="/projects/icook/ogCover.jpg"
         canonical={router.pathname}
       />
+      <FloatingNav />
       <FullBlock as="header" context="cover">
         <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconm={{ '@initial': 'mobile', '@m768': 'tablet' }}>
           <span>

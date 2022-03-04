@@ -14,8 +14,7 @@ import { Container, FullBlock } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
 import Cover from '@projects/carrier/Cover';
 
-import IconCarrier from '@elements/IconCarrier';
-
+import FloatingNav from '@components/FloatingNav';
 import Meta from '@projects/carrier/Meta';
 import Content from '@projects/carrier/Content';
 import Nav from '@projects/Nav';
@@ -64,6 +63,7 @@ export default function ProjectCarrier() {
         ogCover="/projects/carrier/ogCover.jpg"
         canonical={router.pathname}
       />
+      <FloatingNav />
       <FullBlock as="header" context="cover">
         <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover">
           <Heading as="span" position="itemName">

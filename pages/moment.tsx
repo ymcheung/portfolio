@@ -15,8 +15,7 @@ import { HeadingLayout, Heading } from '@components/headings';
 import { Section } from '@components/contentStyles';
 import Cover from '@projects/moment/Cover';
 
-import IconMoment from '@elements/IconMoment';
-
+import FloatingNav from '@components/FloatingNav';
 import Meta from '@projects/moment/Meta';
 import Content from '@projects/moment/Content';
 import Nav from '@projects/Nav';
@@ -65,6 +64,7 @@ export default function ProjectMoment() {
         ogCover="/projects/moment/ogCover.jpg"
         canonical={router.pathname}
       />
+      <FloatingNav />
       <FullBlock as="header" project="moment" context="cover">
         <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover">
           <Heading as="span" position="itemName" scheme="monoBlack">

@@ -14,6 +14,8 @@ import { Container, FullBlock } from '@components/layout';
 import { Heading, HeadingLayout } from '@components/headings';
 import { Section } from '@components/contentStyles';
 import Cover from '@projects/process/Cover';
+
+import FloatingNav from '@components/FloatingNav';
 import Meta from '@projects/process/Meta';
 import Content from '@projects/process/Content';
 import Nav from '@projects/Nav';
@@ -61,7 +63,7 @@ export default function ProjectProcess() {
         ogCover="/projects/process/ogCover.jpg"
         canonical={router.pathname}
       />
-
+      <FloatingNav />
       <FullBlock as="header" context="cover">
         <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover">
           <Heading as="span" position="itemName">
