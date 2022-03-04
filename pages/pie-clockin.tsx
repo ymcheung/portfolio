@@ -14,8 +14,7 @@ import { Container, FullBlock } from '@components/layout';
 import { HeadingLayout, Heading } from '@components/headings';
 import Cover from '@projects/pie/Cover';
 
-import IconPie from '@elements/IconPie';
-
+import FloatingNav from '@components/FloatingNav';
 import Meta from '@projects/pie/Meta';
 import Content from '@projects/pie/Content';
 import Nav from '@projects/Nav';
@@ -64,6 +63,7 @@ export default function ProjectPie() {
         ogCover="/projects/pie/ogCover.jpg"
         canonical={router.pathname}
       />
+      <FloatingNav />
       <FullBlock as="header" project="pie" context="cover">
         <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover">
           <Heading as="span" position="itemName" scheme="monoBlack">
