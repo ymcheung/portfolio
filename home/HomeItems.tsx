@@ -51,6 +51,7 @@ export const HomeItemLink = styled('a', {
     asproject: {
       mobile: {
         display: 'grid',
+        overflow: 'hidden',
         margin: '0 -10px',
         padding: '$8',
         position: 'relative',
@@ -60,7 +61,8 @@ export const HomeItemLink = styled('a', {
       },
       tablet: {
         grid: `"screen type" 24px
-               "screen name" auto / minmax(296px, 1fr) 2fr`
+               "screen name" auto / minmax(296px, 1fr) 2fr`,
+        padding: '$8 $8 0'
       },
       hover: {
         transition: 'border-color $easeIn',
