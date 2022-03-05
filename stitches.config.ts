@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import { createStitches } from '@stitches/react';
 
-export const { css, styled, globalCss, createTheme, keyframes, getCssText } = createStitches({
+export const { css, styled, globalCss, createTheme, theme, keyframes, getCssText } = createStitches({
   theme: {
     colors: {
       laurel: '162,57%,62%',
@@ -158,7 +158,7 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
   },
 })
 
-export const dark = createTheme({
+export const darkTheme = createTheme({
   colors: {
     shade0:    '162,2%,99%',
     shade100:  '162,2%,92%',

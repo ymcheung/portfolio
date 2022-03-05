@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'next-themes';
-import { dark } from 'stitches.config';
+import { theme, darkTheme } from 'stitches.config';
 import splitbee from '@splitbee/web';
 
 import { appWithTranslation } from 'next-i18next';
@@ -11,11 +11,13 @@ function Portfolio({ Component, pageProps }) {
 
   return (
     <ThemeProvider
-      attribute='class'
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
       enableColorScheme
       value={{
-        dark: dark,
         light: 'light',
+        dark: darkTheme
       }}
     >
       <Component {...pageProps} />
