@@ -38,8 +38,6 @@ export const { css, styled, globalCss, createTheme, keyframes, getCssText } = cr
       intersection1500: '11,71%,61%',
       intersection300: '11,71%,12%',
 
-      homeSectionTitle: '$shade600',
-
       activityHyphen: '$shade1200',
 
       homeLoveUIText: '$shade100',
@@ -173,8 +171,6 @@ export const dark = createTheme({
     shade1400: '162,2%,24%',
     shade1500: '162,2%,10%',
     shade1600: '162,2%, 6%',
-
-    homeSectionTitle: '$laurel',
 
     activityHyphen: '$shade1000',
 
