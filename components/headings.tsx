@@ -75,7 +75,7 @@ export const Heading = styled('h2', {
       },
       homeSection: {
         margin: '0 0 $12',
-        color: 'hsl($shade600)',
+        color: 'hsl($shade700)',
         fontSize: '$18',
         fontWeight: 800,
         letterSpacing: '1px'
@@ -112,8 +112,5 @@ export const Heading = styled('h2', {
         fontStyle: 'italic'
       }
     }
-  },
-  defaultVariants: {
-    scheme: 'default'
   }
 });
