@@ -66,6 +66,14 @@ export const ContentTitle = styled('h2', {
   }
 });
 
+export const ContentTitlePrefix = styled('span', {
+  display: 'inline-block',
+  marginBottom: '$4',
+  color: 'hsl($shade600)',
+  fontFamily: '$default',
+  fontSize: '$16'
+});
+
 export const Section = styled('div', {
   variants: {
     has: {
@@ -185,6 +193,8 @@ export const ParagraphPostmark = styled('span', {
 });
 
 export const ContentList = styled('ul', {
+  display: 'grid',
+  rowGap: '$8',
   margin: '0 0 $12',
   padding: '0 0 0 $18'
 });
