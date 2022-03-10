@@ -73,21 +73,21 @@
     [
       {
         "title":
+          "資訊架構與網頁價值",
+        "description":
+          "資訊架構會影響網頁的價值。如果資料太少，搜尋引擎會標示為不收錄。"
+      },
+      {
+        "title":
           "合理使用專輯封面",
         "description":
           "專輯封面受到智慧財產權保護是理所當然的事。使用低解析度圖片，在許多國家屬於合理使用範圍。"
       },
       {
         "title":
-          "資訊架構與網頁價值",
-        "description":
-          "資訊架構會影響網頁的價值。如果資料太少，Google 搜尋引擎會標示為不收錄。"
-      },
-      {
-        "title":
           "前端技術備忘",
         "description":
-          "「<a class=\"paragraph-link\" href=\"https://build.intersection.tw/moment-with-astro\" target=\"_blank\" rel=\"noopener\">使用 Astro 打造速度飛快的靜態網站</a>」是製作這個專案的網頁前端筆記。"
+          "在「<a class=\"paragraph-link\" href=\"https://build.intersection.tw/moment-with-astro\" target=\"_blank\" rel=\"noopener\">使用 Astro 打造速度飛快的靜態網站</a>」記錄這個專案的網頁前端筆記。"
       }
     ]
   }
