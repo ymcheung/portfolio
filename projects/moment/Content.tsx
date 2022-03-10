@@ -41,7 +41,7 @@ const BubbleSearch = styled('span', {
 });
 
 const WhatScreenshot = styled('figure', {
-  margin: 0,
+  margin: '0 -$16',
   textAlign: 'center'
 });
 
@@ -112,7 +112,7 @@ export default function Content() {
         <Container responsive={{'@m768': 'max640'}}>
           <WhatScreenshot>
             {screenMobile &&
-              <Image src={screenshotMobile} width={300} height={500} quality={100} alt={t('what.screenshot.mobile')} />
+              <Image src={screenshotMobile} layout="responsive" quality={100} alt={t('what.screenshot.mobile')} />
             }
             {screenTablet &&
               <Image src={screenshotDesktop} width={640} height={480} quality={100} alt={t('what.screenshot.tablet')} />

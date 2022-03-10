@@ -20,9 +20,9 @@
     "iteration":
     {
       "first":
-        "🤔 1st Iteration",
+        "🤔 1<sup>st</sup> Iteration",
       "second":
-        "✅ 2nd Iteration"
+        "↪️ 2<sup>nd</sup> Iteration"
     },
     "byMedia":
     {
@@ -45,7 +45,7 @@
       "title":
         "List the Movies or Drama which Used the Song",
       "description":
-        "This followed how users searched a song: the name, the artist, the lyric, and the movie/drama names."
+        "This time, I turned to how users searched a song: the name, the artist, the lyric, and the movie/drama names."
     }
   },
   "gather":
@@ -87,7 +87,7 @@
         "title":
           "Front-End Development Notes",
         "description":
-          "I wrote an article on the web front-end framework for the project at <a class=\"paragraph-link\" href=\"https://build.intersection.tw/moment-with-astro\" target=\"_blank\" rel=\"noopener\">使用 Astro 打造速度飛快的靜態網站</a> (Mandarin)."
+          "I wrote an article on the web front-end framework for the project at <a class=\"paragraph-link\" href=\"https://build.intersection.tw/moment-with-astro\" target=\"_blank\" rel=\"noopener\">使用 Astro 打造速度飛快的靜態網站</a> (中文)."
       }
     ]
   }
