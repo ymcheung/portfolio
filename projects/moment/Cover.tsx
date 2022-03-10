@@ -3,7 +3,7 @@ import { Container, ListItem } from '@components/layout';
 
 const CoverFull = styled('div', {
   overflow: 'hidden',
-  backgroundColor: 'hsl($mtMidnight100)'
+  backgroundColor: 'hsl($mtMidnight0)'
 });
 
 const Song = styled(ListItem, {

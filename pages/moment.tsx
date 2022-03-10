@@ -37,7 +37,7 @@ export default function ProjectMoment() {
     name: t('home:project.moment.title', { explore: t('home:verb.explore') }),
     description: t('home:project.moment.description'),
     datePublished: '2020-08-29',
-    dateModified: '2022-02-12'
+    dateModified: '2022-03-11'
   }
 
   useEffect(() => {

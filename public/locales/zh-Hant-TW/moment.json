@@ -1,89 +1,94 @@
 {
   "intro":
   {
+    "description":
+      "我們常用 SoundHound 或 Shazam 來找當下聽到的歌曲。只是，大多還是得要記下歌詞片段，在搜尋引擎裡尋找。例如：📽 <strong>看電影</strong>的時候。",
+    "if":
+      "如果只要搜尋電影、電視劇的名稱，即可找到使用歌曲的名稱、演唱者與歌詞，就不用分心記下歌詞了。"
+  },
+  "question":
+  {
     "title":
       "問題",
     "description":
-      "是否有可能讓「在電視影劇裡聽到喜歡歌曲」更便利地找到？"
+      "是否有可能搜尋電影、電視劇名稱，就可以找到聽到的歌曲資訊？"
   },
-  "obstacle":
-  {
-    "title":
-      "現有方式與阻礙",
-    "description":
-      "我們常用 SoundHound 或 Shazam 來找當下聽到的歌曲。只是，大多還是得要記下歌詞片段，在搜尋引擎裡尋找。例如：📽 <strong>看電影</strong>的時候。",
-    "conclusion":
-      "提到電視影劇的詳細資料，IMDB 是首選，卻很難根據歌詞找到，因為只會列出歌曲名稱。因此，可能還是無法肯定，那就是在電視影劇裡聽到的歌。"
-  },
-  "what":
+  "idea":
   {
     "title":
       "構想",
-    "description":
-      "一開始，從我最喜愛的 60-80 年代英語經典歌曲製作網站來搜集關鍵字，內容包含：",
-    "items":
-    [
-      {
-        "symbol":
-          "🤘",
-        "name":
-          "歌手/樂團"
-      },
-      {
-        "symbol":
-          "🎬 📺 ▶️",
-        "name":
-          "出現的電影/電視劇"
-      },
-      {
-        "symbol":
-          "♪",
-        "name":
-          "歌詞"
-      }
-    ],
-    "screenshot":
+    "iteration":
     {
-      "mobile":
-        "Stayin&rsquo; Alive 在手機上的截圖",
-      "tablet":
-        "Stayin&rsquo; Alive 在平板和桌機上的截圖"
+      "first":
+        "🤔 第 1 次嘗試",
+      "second":
+        "↪️ 第 2 次嘗試"
+    },
+    "byMedia":
+    {
+      "title":
+        "以電影、電視劇名稱列出使用的歌曲",
+      "items":
+      [
+        {
+          "description":
+            "使用者也可能是尋找院線電影或影音串流服務。"
+        },
+        {
+          "description":
+            "現有的資料以電影、電視劇來分，會切得太細。"
+        }
+      ]
+    },
+    "bySong":
+    {
+      "title":
+        "以歌曲列出電影、電視劇",
+      "description":
+        "這次，改為按照使用者搜尋歌曲的方法設計內容：歌名、演唱者、歌詞與電影、電視劇。"
     }
   },
   "gather":
   {
     "title":
       "累積資料",
-    "count":
-      "搜尋結果出現次數",
-    "asof":
-      "&ast; 2022 年 1 月採計",
     "description":
-      "根據這 8,000 多筆搜尋資料，人們在搜尋引擎輸入的相關字詞有：",
+      "使用者搜尋以下關鍵字的時候，找到這個網站：",
     "byLyric":
-      "搜尋歌詞片段",
+      "歌詞片段",
     "byLyricWithName":
-      "搜尋電視影劇名稱加上聽到的歌詞片段",
-    "question":
-      "也有像這樣搜尋過關鍵字嗎？"
-  },
-  "prompt":
-  {
-    "title":
-      "試試看",
-    "description":
-      "在<a class=\"paragraph-link\" href=\"https://moment.intersection.tw\" data-splitbee-event=\"Moment: Try Link\" target=\"_blank\" rel=\"noopener\">網站上</a>選一首喜歡的歌，發掘那首歌出現在哪些電視影劇。"
+      "電影、電視劇名稱 + 歌名",
+    "byName":
+      "歌曲名稱",
+    "total":
+      "目前，已經累積超過 8,000 次搜尋*。",
+    "asof":
+      "&ast; 2022 年 1 月採計"
   },
   "learned":
   {
     "title":
       "做了才知道的事情",
-    "fairuse":
-    {
-      "title":
-        "合理使用專輯封面",
-      "description":
-        "專輯封面受到智慧財產權保護是理所當然的事，只用低解析度圖片在許多國家屬於合理使用範圍。"
-    }
+    "items":
+    [
+      {
+        "title":
+          "資訊架構與網頁價值",
+        "description":
+          "資訊架構會影響網頁的價值。如果資料太少，搜尋引擎會標示為不收錄。"
+      },
+      {
+        "title":
+          "合理使用專輯封面",
+        "description":
+          "專輯封面受到智慧財產權保護是理所當然的事。使用低解析度圖片，在許多國家屬於合理使用範圍。"
+      },
+      {
+        "title":
+          "前端技術備忘",
+        "description":
+          "在「<a class=\"paragraph-link\" href=\"https://build.intersection.tw/moment-with-astro\" target=\"_blank\" rel=\"noopener\">使用 Astro 打造速度飛快的靜態網站</a>」記錄這個專案的網頁前端筆記。"
+      }
+    ]
   }
 }

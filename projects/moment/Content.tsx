@@ -1,15 +1,15 @@
+import { Fragment } from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 
 import { screenMobile, screenTablet } from '@utils/screens';
 import { styled } from 'stitches.config';
 
-import { Container, FullBlock, ListItem } from '@components/layout';
+import { Container, FullBlock } from '@components/layout';
 
 import LangSwitch from '@components/LangSwitch';
 
-import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
-import { FeatureList, FeaturedNumberMark } from '@projects/featured';
+import { ContentTitle, ContentTitlePrefix, Section, Paragraph, ContentList, ContentListItem, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 
 import IconSearch from './IconSearch';
 
@@ -40,50 +40,24 @@ const BubbleSearch = styled('span', {
   }
 });
 
-const WhatList = styled('ul', {
- display: 'grid',
- grid: 'auto / repeat(3, 1fr)',
- columnGap: '12px',
- margin: 0,
- padding: 0
-});
-
-const WhatFigure = styled('figure', {
-  margin: 0,
-  textAlign: 'center'
-});
-
-const WhatFigureCover = styled('div', {
-  color: 'hsl($shade100)',
-  fontSize: '$24',
-  lineHeight: '48px'
-});
-
-const WhatFigcaption = styled('div', {
-  color: 'hsl($shade600)',
-  fontFamily: '$default',
-  fontSize: '$16',
-  lineHeight: '20px'
-});
-
 const WhatScreenshot = styled('figure', {
-  margin: 0,
+  margin: '0 -$16',
   textAlign: 'center'
 });
 
-interface ItemProps {
-  name: string;
+interface DescriptionProps {
+  description: string;
 }
 
-interface WhatProps extends ItemProps {
-  symbol: string;
+interface LearnedProps {
+  title: string;
+  description: string;
 }
 
 export default function Content() {
   const { t, i18n } = useTranslation('moment');
 
   const isItalic = i18n.language === 'en';
-  const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
 
   const screenshotMobile = i18n.language === 'en' ? screenshotMobileEn : screenshotMobileTw;
   const screenshotDesktop = i18n.language === 'en' ? screenshotDesktopEn : screenshotDesktopTw ;
@@ -100,49 +74,58 @@ export default function Content() {
     'jojo walk like an egyptian'
   ];
 
+  const keywordSongName = [
+    'never gonna give you up',
+    'uptown girl',
+    'take on me'
+  ];
+
   return(
     <>
       <Container as="section" responsive={{'@m768': 'max640'}}>
         <LangSwitch position="articleStart" responsive={{ '@mHover': 'hover' }} />
         <Section>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('intro.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('intro.description')}} purpose="question" italic={isItalic} indent sectionend />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('intro.description')}} indent />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('intro.if')}} indent sectionend />
         </Section>
         <Section>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('obstacle.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('obstacle.description')}} indent />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('obstacle.conclusion')}} indent sectionend />
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('question.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('question.description')}} purpose="question" italic={isItalic} indent sectionend />
         </Section>
         <Section>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('what.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('what.description')}} indent />
-          <WhatList>
-            {t<string, WhatProps[]>('what.items', { returnObjects: true }).map(({ symbol, name }, index: number) => (
-              <ListItem nomark key={`what-${index}`}>
-                <WhatFigure>
-                  <WhatFigureCover>
-                    {symbol}
-                  </WhatFigureCover>
-                  <WhatFigcaption dangerouslySetInnerHTML={{__html: name}} />
-                </WhatFigure>
-              </ListItem>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('idea.title')}} />
+          <ContentTitlePrefix dangerouslySetInnerHTML={{__html: t('idea.iteration.first')}} />
+          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('idea.byMedia.title')}} />
+          <ContentList>
+          {t<string, DescriptionProps[]>('idea.byMedia.items', { returnObjects: true }).map(({ description }, index: number) => (
+              <ContentListItem dangerouslySetInnerHTML={{__html: description}} square key={`byMedia-${index}`} />
             ))}
-          </WhatList>
+          </ContentList>
+          <ContentTitlePrefix dangerouslySetInnerHTML={{__html: t('idea.iteration.second')}} />
+          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('idea.bySong.title')}} />
+          <ContentList>
+            <ContentListItem dangerouslySetInnerHTML={{__html: t('idea.bySong.description')}} square />
+          </ContentList>
         </Section>
+      </Container>
+      <FullBlock project="moment" context="section">
+        <Container responsive={{'@m768': 'max640'}}>
+          <WhatScreenshot>
+            {screenMobile &&
+              <Image src={screenshotMobile} layout="responsive" quality={100} alt={t('what.screenshot.mobile')} />
+            }
+            {screenTablet &&
+              <Image src={screenshotDesktop} width={640} height={480} quality={100} alt={t('what.screenshot.tablet')} />
+            }
+          </WhatScreenshot>
+        </Container>
+      </FullBlock>
+      <Container as="section" responsive={{'@m768': 'max640'}} space="isGroundFloor">
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('gather.title')}} />
-          <FeatureList space={itemSpace} siblings="sectionEnd">
-            <ListItem nomark>
-              <ContentTitle as="strong" featurednumber="normal">
-                8,000+
-                <FeaturedNumberMark>&nbsp;*</FeaturedNumberMark>
-              </ContentTitle>
-              <Paragraph dangerouslySetInnerHTML={{__html: t('gather.count')}} purpose="affix" sectionend />
-            </ListItem>
-          </FeatureList>
+          <Paragraph dangerouslySetInnerHTML={{__html: t('gather.description')}} indent />
         </Section>
         <Section>
-          <Paragraph dangerouslySetInnerHTML={{__html: t('gather.description')}} indent />
           <ContentTitle purpose="paragraph">
             <IconSearch />
             {t('gather.byLyric')}
@@ -163,30 +146,26 @@ export default function Content() {
                 <BubbleSearch responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: keyword}} key={`keywordlyricwithname-${index}`} />
             ))}
           </Paragraph>
-          <Paragraph dangerouslySetInnerHTML={{__html: t('gather.question')}} indent />
+          <ContentTitle purpose="paragraph">
+            <IconSearch />
+            {t('gather.byName')}
+          </ContentTitle>
+          <Paragraph as="div">
+            {
+              keywordSongName.map((keyword, index) => (
+                <BubbleSearch responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: keyword}} key={`keywordsongname-${index}`} />
+            ))}
+          </Paragraph>
+          <Paragraph dangerouslySetInnerHTML={{__html: t('gather.total')}} indent />
         </Section>
-        <Section>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prompt.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('prompt.description')}} indent sectionend />
-        </Section>
-      </Container>
-      <FullBlock project="moment" context="section">
-        <Container responsive={{'@m768': 'max640'}}>
-          <WhatScreenshot>
-            {screenMobile &&
-              <Image src={screenshotMobile} width={300} height={500} quality={100} alt={t('what.screenshot.mobile')} />
-            }
-            {screenTablet &&
-              <Image src={screenshotDesktop} width={640} height={480} quality={100} alt={t('what.screenshot.tablet')} />
-            }
-          </WhatScreenshot>
-        </Container>
-      </FullBlock>
-      <Container as="section" responsive={{'@m768': 'max640'}} space="isGroundFloor">
         <Section has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('learned.title')}} />
-          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('learned.fairuse.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('learned.fairuse.description')}} indent />
+          {t<string, LearnedProps[]>('learned.items', { returnObjects: true }).map(({ title, description }, index: number) => (
+            <Fragment key={`learned-${index}`}>
+              <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: title}} />
+              <Paragraph dangerouslySetInnerHTML={{__html: description}} indent />
+            </Fragment>
+          ))}
         </Section>
         <Section isgroupend>
           <PostMarksHr />

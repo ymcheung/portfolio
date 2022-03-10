@@ -54,7 +54,7 @@ export const FullBlock = styled('section', {
         backgroundColor: 'hsl($pie0)'
       },
       moment: {
-        backgroundColor: 'hsl($mtMidnight100)'
+        backgroundColor: 'hsl($mtMidnight0)'
       }
     },
     context: {

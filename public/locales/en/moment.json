@@ -1,89 +1,94 @@
 {
   "intro":
   {
+    "description":
+      "We often use the apps like SoundHound or Shazam to find out the songs upon hearing them. However, we still have to memorize the lyrics and submit them to the search engine most of the time. For example, we <strong>went to 📽 the movies</strong>.",
+    "if":
+      "If we could get to know the song names by searching the movies/dramas, we wouldn’t need to memorize the lyrics when watching them."
+  },
+  "question":
+  {
     "title":
       "Question",
     "description":
-      "How might we increase the convenience of finding out the songs we heard in the movies/dramas?"
+      "How Might We Find Movie/Drama Names and Get to Know the Songs You Heard in Them?"
   },
-  "obstacle":
+  "idea":
   {
     "title":
-      "Current Search Process &amp; Obstacles",
-    "description":
-      "We often use the apps like SoundHound or Shazam to find out the songs upon hearing them. However, we still have to memorize the lyrics and submit them to the search engine most of the time. For example, we <strong>went to 📽 the movies</strong>.",
-    "conclusion":
-      "Talking of the detail of movies/dramas, IMDB is the first stop. But it is hard to find by the lyrics because only song names are mentioned. Therefore, you are probably unsure if it is the song you heard in the movies/dramas."
-  },
-  "what":
-  {
-    "title":
-      "Idea",
-    "description":
-      "The idea gets started with classic 60-80s songs, which are my favorite. I built the website to collect how people submitted the keywords. It contains:",
-    "items":
-    [
-      {
-        "symbol":
-          "🤘",
-        "name":
-          "Singers/Bands"
-      },
-      {
-        "symbol":
-          "🎬 📺 ▶️",
-        "name":
-          "Movie/Drama Appearances"
-      },
-      {
-        "symbol":
-          "♪",
-        "name":
-          "Lyrics"
-      }
-    ],
-    "screenshot":
+      "Ideas",
+    "iteration":
     {
-      "mobile":
-        "Screenshot of Stayin’ Alive in Mobile Devices",
-      "tablet":
-        "Screenshot of Stayin’ Alive in Tablet and Desktop Devices"
+      "first":
+        "🤔 1<sup>st</sup> Iteration",
+      "second":
+        "↪️ 2<sup>nd</sup> Iteration"
+    },
+    "byMedia":
+    {
+      "title":
+        "List the Songs in a Movie or Drama",
+      "items":
+      [
+        {
+          "description":
+            "Users might want to find the movies in theaters or streaming services."
+        },
+        {
+          "description":
+            "There will be little data per movie or drama."
+        }
+      ]
+    },
+    "bySong":
+    {
+      "title":
+        "List the Movies or Drama which Used the Song",
+      "description":
+        "This time, I turned to how users searched a song: the name, the artist, the lyric, and the movie/drama names."
     }
   },
   "gather":
   {
     "title":
       "Stats",
-    "count":
-      "Search Result Appearances",
-    "asof":
-      "&ast; As of January 2022",
     "description":
-      "Based on the 8,000+ appearances, many people submitted the keywords in the search engine:",
+      "Users reached the website by the following keywords:",
     "byLyric":
-      "Search the Lyric of a Song",
+      "A Song’s Lyric",
     "byLyricWithName":
-      "Search Movie/Drama Names with the Lyric They Heard",
-    "question":
-      "Have you ever searched the keywords mentioned above?"
-  },
-  "prompt":
-  {
-    "title":
-      "Give It a Try",
-    "description":
-      "Please select a song you like on <a class=\"paragraph-link\" href=\"https://moment.intersection.tw\" data-splitbee-event=\"Moment: Try Link\" target=\"_blank\" rel=\"noopener\">the website</a> and find out what movies/dramas it features."
+      "A Movie or Drama’s Name with a Song’s Name",
+    "byName":
+      "A Song’s Name",
+    "total":
+      "There have been 8,000+ search result appearances*.",
+    "asof":
+      "&ast; As of January 2022"
   },
   "learned":
   {
     "title":
       "What I Have Learned",
-    "fairuse":
-    {
-      "title":
-        "Fair Use of the Album Covers",
-      "description":
-        "It&rsquo;s common sense that album covers are subject to copyright, but fair use laws in many countries cover the use of low-resolution ones."
-    }
+    "items":
+    [
+      {
+        "title":
+          "Information Architecture & Web Page Value",
+        "description":
+          "Information architecture affects web page value because search engines label those with few contents as Excluded."
+      },
+      {
+        "title":
+          "Fair Use of the Album Covers",
+        "description":
+          "It’s common sense that album covers are subject to copyright, but fair use laws in many countries cover the use of low-resolution ones."
+      },
+      {
+        "title":
+          "Front-End Development Notes",
+        "description":
+          "I wrote an article on the web front-end framework for the project at <a class=\"paragraph-link\" href=\"https://build.intersection.tw/moment-with-astro\" target=\"_blank\" rel=\"noopener\">使用 Astro 打造速度飛快的靜態網站</a> (中文)."
+      }
+    ]
   }
 }
