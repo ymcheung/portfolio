@@ -92,24 +92,24 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('question.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('question.description')}} purpose="question" italic={isItalic} indent sectionend />
         </Section>
-        <Section>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('idea.title')}} />
-          <ContentTitlePrefix dangerouslySetInnerHTML={{__html: t('idea.iteration.first')}} />
-          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('idea.byMedia.title')}} />
-          <ContentList>
-          {t<string, DescriptionProps[]>('idea.byMedia.items', { returnObjects: true }).map(({ description }, index: number) => (
-              <ContentListItem dangerouslySetInnerHTML={{__html: description}} square key={`byMedia-${index}`} />
-            ))}
-          </ContentList>
-          <ContentTitlePrefix dangerouslySetInnerHTML={{__html: t('idea.iteration.second')}} />
-          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('idea.bySong.title')}} />
-          <ContentList>
-            <ContentListItem dangerouslySetInnerHTML={{__html: t('idea.bySong.description')}} square />
-          </ContentList>
-        </Section>
       </Container>
       <FullBlock project="moment" context="section">
         <Container responsive={{'@m768': 'max640'}}>
+          <Section>
+            <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('idea.title')}} />
+            <ContentTitlePrefix dangerouslySetInnerHTML={{__html: t('idea.iteration.first')}} />
+            <ContentTitle purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('idea.byMedia.title')}} />
+            <ContentList>
+            {t<string, DescriptionProps[]>('idea.byMedia.items', { returnObjects: true }).map(({ description }, index: number) => (
+                <ContentListItem dangerouslySetInnerHTML={{__html: description}} square key={`byMedia-${index}`} />
+              ))}
+            </ContentList>
+            <ContentTitlePrefix dangerouslySetInnerHTML={{__html: t('idea.iteration.second')}} />
+            <ContentTitle purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('idea.bySong.title')}} />
+            <ContentList>
+              <ContentListItem dangerouslySetInnerHTML={{__html: t('idea.bySong.description')}} square />
+            </ContentList>
+          </Section>
           <WhatScreenshot>
             {screenMobile &&
               <Image src={screenshotMobile} layout="responsive" quality={100} alt={t('what.screenshot.mobile')} />

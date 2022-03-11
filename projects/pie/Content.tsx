@@ -11,6 +11,7 @@ import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from
 
 import GraphProblem from './graph/Problem';
 import GraphRedesigned from './graph/Redesigned';
+
 import Gallery from './Gallery';
 
 const CompareTable = styled('table', {
