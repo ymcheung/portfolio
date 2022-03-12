@@ -1,8 +1,7 @@
 import { Fragment } from 'react';
-import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
-import { screenMobile, screenTablet } from '@utils/screens';
 import { styled } from 'stitches.config';
 
 import { Container, FullBlock } from '@components/layout';
@@ -12,11 +11,6 @@ import LangSwitch from '@components/LangSwitch';
 import { ContentTitle, ContentTitlePrefix, Section, Paragraph, ContentList, ContentListItem, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 
 import IconSearch from './IconSearch';
-
-import screenshotMobileEn from '@public/projects/moment/mobile/en.webp';
-import screenshotMobileTw from '@public/projects/moment/mobile/tw.webp';
-import screenshotDesktopEn from '@public/projects/moment/desktop/en.webp';
-import screenshotDesktopTw from '@public/projects/moment/desktop/tw.webp';
 
 const BubbleSearch = styled('span', {
   display: 'inline-block',
@@ -40,9 +34,32 @@ const BubbleSearch = styled('span', {
   }
 });
 
-const WhatScreenshot = styled('figure', {
+const IterationScreenshot = styled('figure', {
   margin: '0 -$16',
   textAlign: 'center'
+});
+
+const IterationScreenshotImg = styled('img', {
+  maxWidth: '100%',
+
+  variants: {
+    responsive: {
+      none: {
+        display: 'none'
+      },
+      show: {
+        display: 'inline-block'
+      }
+    },
+    screenshot: {
+      mobile: {
+        minHeight: '500px'
+      },
+      tablet: {
+        minHeight: '480px'
+      }
+    }
+  }
 });
 
 interface DescriptionProps {
@@ -55,12 +72,10 @@ interface LearnedProps {
 }
 
 export default function Content() {
-  const { t, i18n } = useTranslation('moment');
+  const router = useRouter();
+  const { t } = useTranslation('moment');
 
-  const isItalic = i18n.language === 'en';
-
-  const screenshotMobile = i18n.language === 'en' ? screenshotMobileEn : screenshotMobileTw;
-  const screenshotDesktop = i18n.language === 'en' ? screenshotDesktopEn : screenshotDesktopTw ;
+  const lang = router.locale === 'en' ? 'en' : 'tw';
 
   const keywordLyric = [
     'we can be heroes just for one day',
@@ -90,34 +105,30 @@ export default function Content() {
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('question.title')}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('question.description')}} purpose="question" italic={isItalic} indent sectionend />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('question.description')}} purpose="question" italic={router.locale === 'en'} indent sectionend />
         </Section>
       </Container>
       <FullBlock project="moment" context="section">
         <Container responsive={{'@m768': 'max640'}}>
           <Section>
             <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('idea.title')}} />
-            <ContentTitlePrefix dangerouslySetInnerHTML={{__html: t('idea.iteration.first')}} />
+            <ContentTitlePrefix scheme="mono" dangerouslySetInnerHTML={{__html: t('idea.iteration.first')}} />
             <ContentTitle purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('idea.byMedia.title')}} />
             <ContentList>
             {t<string, DescriptionProps[]>('idea.byMedia.items', { returnObjects: true }).map(({ description }, index: number) => (
-                <ContentListItem dangerouslySetInnerHTML={{__html: description}} square key={`byMedia-${index}`} />
+                <ContentListItem dangerouslySetInnerHTML={{__html: description}} scheme="mono" square key={`byMedia-${index}`} />
               ))}
             </ContentList>
-            <ContentTitlePrefix dangerouslySetInnerHTML={{__html: t('idea.iteration.second')}} />
+            <ContentTitlePrefix scheme="mono" dangerouslySetInnerHTML={{__html: t('idea.iteration.second')}} />
             <ContentTitle purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('idea.bySong.title')}} />
             <ContentList>
-              <ContentListItem dangerouslySetInnerHTML={{__html: t('idea.bySong.description')}} square />
+              <ContentListItem dangerouslySetInnerHTML={{__html: t('idea.bySong.description')}} scheme="mono" square />
             </ContentList>
           </Section>
-          <WhatScreenshot>
-            {screenMobile &&
-              <Image src={screenshotMobile} layout="responsive" quality={100} alt={t('what.screenshot.mobile')} />
-            }
-            {screenTablet &&
-              <Image src={screenshotDesktop} width={640} height={480} quality={100} alt={t('what.screenshot.tablet')} />
-            }
-          </WhatScreenshot>
+          <IterationScreenshot>
+            <IterationScreenshotImg src={`/projects/moment/mobile/${lang}.webp`} screenshot="mobile" responsive={{ '@m768': 'none' }} loading="lazy" alt={t('what.screenshot.mobile')} />
+            <IterationScreenshotImg src={`/projects/moment/desktop/${lang}.webp`} screenshot="tablet" responsive={{ '@initial': 'none', '@m768': 'show' }} loading="lazy" alt={t('what.screenshot.tablet')} />
+          </IterationScreenshot>
         </Container>
       </FullBlock>
       <Container as="section" responsive={{'@m768': 'max640'}} space="isGroundFloor">
