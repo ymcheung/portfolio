@@ -175,8 +175,10 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
           <CabinList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
             <ListItem nomark>
-              <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
-              <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.description')}} />
+              <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('flows.clockin',
+                { context: 'withConfirm', clockin: t('flows.clockin'), confirmform: t('flows.confirmform') }
+              )}} />
+              <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.clockInAndConfirm.description')}} />
                 <Link href="https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?node-id=1099%3A1135&viewport=295%2C48%2C0.4&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1" passHref>
                   <PrototypeLink nth={{ '@m768': 'odd' }} target="_blank" rel="noopener">
                     <PrototypeItemCover>
