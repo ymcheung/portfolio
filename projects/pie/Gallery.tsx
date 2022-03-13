@@ -7,9 +7,6 @@ import { GalleryList, GalleryItem } from '@projects/gallery';
 
 import tabBarDark from '@public/projects/pie/tabBarDark.jpg';
 
-import { ListItem } from '@components/layout';
-import { PrototypeList, PrototypeLink, PrototypeItemCover, PrototypeItemCoverImg } from '@components/prototypeList';
-
 const TabBarRescue = styled('img', {
   width: '100%',
   minWidth: '288px',
@@ -129,23 +126,6 @@ export default function Gallery() {
             />
           </PieGalleryItem>
         </PieGalleryList>
-      </Section>
-      <Section isgroupend>
-        <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
-        <PrototypeList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-          <ListItem nomark>
-            <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
-            <Paragraph scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.description')}} />
-              {/* <Link href="https://www.figma.com/proto/L60FGYm0zgyJNTPHF64lEn/carrier-express?page-id=247%3A286&node-id=551%3A1280&viewport=295%2C48%2C0.63&scaling=scale-down&starting-point-node-id=551%3A1280&show-proto-sidebar=1" passHref>
-                <PrototypeLink nth={{ '@m768': 'odd' }} target="_blank" rel="noopener">
-                  <PrototypeItemCover>
-                    <PrototypeItemCoverImg src={prototypeAppointPreview} layout="responsive" alt={t('prototype.appoint.alt')} />
-                  </PrototypeItemCover>
-                  <IconArrow position="prototype" purpose="external" background="carrierPrototype" gotoText={t('prototype.appoint.title')} />
-                </PrototypeLink>
-              </Link> */}
-          </ListItem>
-        </PrototypeList>
       </Section>
     </>
   )

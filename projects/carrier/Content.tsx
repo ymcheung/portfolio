@@ -12,7 +12,7 @@ import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from
 
 import { ListItem, IconList, IconListItem } from '@components/layout';
 import { FeatureList } from '@projects/featured';
-import { PrototypeList, PrototypeLink, PrototypeItemCover, PrototypeItemCoverImg } from '@components/prototypeList';
+import { CabinList, PrototypeLink, PrototypeItemCover, PrototypeItemCoverImg } from '@components/cabinList';
 
 import IconArrow from '@elements/IconArrow';
 import productivity from '@public/projects/carrier/why/productivity.webp';
@@ -121,7 +121,7 @@ export default function Content() {
         </Section>
         <Section id="sectionPrototype" has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
-          <PrototypeList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+          <CabinList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
             <ListItem nomark>
               <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
               <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.appoint.description')}} />
@@ -134,7 +134,7 @@ export default function Content() {
                 </PrototypeLink>
               </Link>
             </ListItem>
-          </PrototypeList>
+          </CabinList>
         </Section>
         <Section isgroupend>
           <PostMarksHr />

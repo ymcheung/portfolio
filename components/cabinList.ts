@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import { styled } from 'stitches.config';
 
-export const PrototypeList = styled('ul', {
+export const CabinList = styled('ul', {
+  display: 'grid',
   margin: 0,
   padding: '0 0 $12',
 
   variants: {
     responsive: {
       mobile: {
-        display: 'grid',
         grid: 'auto / auto-flow minmax(280px, 50%)',
         columnGap: '$16',
         overflowY: 'auto'
