@@ -13,8 +13,8 @@ const Navigation = styled('nav', {
   right: 0,
   left: 0,
   zIndex: 2,
-  backgroundColor: 'hsla($shade1600, 0.75)',
-  backdropFilter: 'blur(8px)',
+  backgroundColor: 'hsla($shade1600, 0.84)',
+  backdropFilter: 'blur(4px)',
   transition: 'top 0.6s ease-in-out',
 
   variants: {

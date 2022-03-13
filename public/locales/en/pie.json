@@ -92,8 +92,11 @@
   {
     "title":
       "Give It a Try",
-    "description":
-      "In <a class=\"paragraph-mono-link\" href=\"https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1\" data-splitbee-event=\"Pie: Prototype Link\" target=\"_blank\" rel=\"noopener\">the prototype</a>, please imagine that you are approaching your company’s physical office in the morning and ready to clock in."
+    "clockInAndConfirm":
+    {
+      "description":
+        "You are approaching your company’s physical office on a working day and ready to clock in. You open the app and find your colleague’s leave form is waiting for your confirmation."
+    }
   },
   "document":
   {

@@ -12,6 +12,7 @@ import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from
 
 import { ListItem, IconList, IconListItem } from '@components/layout';
 import { FeatureList } from '@projects/featured';
+import { CabinList, PrototypeLink, PrototypeItemCover, PrototypeItemCoverImg } from '@components/cabinList';
 
 import IconArrow from '@elements/IconArrow';
 import productivity from '@public/projects/carrier/why/productivity.webp';
@@ -37,39 +38,6 @@ const ParagraphImageContainer = styled('figure', {
       }
     }
   }
-});
-
-const PrototypeList = styled('ul', {
-  margin: 0,
-  padding: '0 0 $12',
-
-  variants: {
-    responsive: {
-      tablet: {
-        display: 'grid',
-        grid: 'auto / auto-flow minmax(280px, 50%) 1fr',
-        columnGap: '$16',
-        overflowY: 'auto'
-      }
-    }
-  }
-});
-
-const PrototypeLink = styled('a', {
-  display: 'block',
-  position: 'relative',
-  padding: '$16',
-  backgroundColor: 'hsl($shade1500)',
-  borderRadius: '24px'
-});
-
-const PrototypeAppointCover = styled('figure', {
-  margin: 0,
-  padding: 0
-});
-
-const PrototypeAppointCoverImg = styled(Image, {
-  borderRadius: '16px'
 });
 
 interface statsProps {
@@ -153,20 +121,20 @@ export default function Content() {
         </Section>
         <Section id="sectionPrototype" has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
-          <PrototypeList responsive={{ '@m768': 'tablet' }}>
+          <CabinList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
             <ListItem nomark>
               <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
               <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.appoint.description')}} />
               <Link href="https://www.figma.com/proto/L60FGYm0zgyJNTPHF64lEn/carrier-express?page-id=247%3A286&node-id=551%3A1280&viewport=295%2C48%2C0.63&scaling=scale-down&starting-point-node-id=551%3A1280&show-proto-sidebar=1" passHref>
-                <PrototypeLink target="_blank" rel="noopener">
-                  <PrototypeAppointCover>
-                    <PrototypeAppointCoverImg src={prototypeAppointPreview} layout="responsive" alt={t('prototype.appoint.alt')} />
-                  </PrototypeAppointCover>
+                <PrototypeLink nth={{ '@m768': 'odd' }} target="_blank" rel="noopener">
+                  <PrototypeItemCover>
+                    <PrototypeItemCoverImg src={prototypeAppointPreview} layout="responsive" alt={t('prototype.appoint.alt')} />
+                  </PrototypeItemCover>
                   <IconArrow position="prototype" purpose="external" background="carrierPrototype" gotoText={t('prototype.appoint.title')} />
                 </PrototypeLink>
               </Link>
             </ListItem>
-          </PrototypeList>
+          </CabinList>
         </Section>
         <Section isgroupend>
           <PostMarksHr />

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { styled } from 'stitches.config';
 
@@ -11,7 +12,13 @@ import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from
 
 import GraphProblem from './graph/Problem';
 import GraphRedesigned from './graph/Redesigned';
+
 import Gallery from './Gallery';
+
+import { ListItem } from '@components/layout';
+import { CabinList, PrototypeLink, PrototypeItemCover, PrototypeItemCoverImg } from '@components/cabinList';
+import prototypeClockIn from '@public/projects/pie/prototype/clockin.webp';
+import IconArrow from '@elements/IconArrow';
 
 const CompareTable = styled('table', {
   tableLayout: 'fixed',
@@ -164,6 +171,25 @@ export default function Content() {
         </Container>
       </FullBlock>
       <Container as="section" responsive={{'@m768': 'max640'}}>
+        <Section>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
+          <CabinList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+            <ListItem nomark>
+              <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('flows.clockin',
+                { context: 'withConfirm', clockin: t('flows.clockin'), confirmform: t('flows.confirmform') }
+              )}} />
+              <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.clockInAndConfirm.description')}} />
+                <Link href="https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?node-id=1099%3A1135&viewport=295%2C48%2C0.4&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1" passHref>
+                  <PrototypeLink nth={{ '@m768': 'odd' }} target="_blank" rel="noopener">
+                    <PrototypeItemCover>
+                      <PrototypeItemCoverImg src={prototypeClockIn} layout="responsive" alt={t('prototype.appoint.alt')} />
+                    </PrototypeItemCover>
+                    <IconArrow position="prototype" purpose="external" background="carrierPrototype" gotoText={t('prototype.appoint.title')} />
+                  </PrototypeLink>
+                </Link>
+            </ListItem>
+          </CabinList>
+        </Section>
         <Section has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('document.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('document.description')}} indent />

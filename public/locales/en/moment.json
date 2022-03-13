@@ -22,7 +22,30 @@
       "first":
         "🤔 1<sup>st</sup> Iteration",
       "second":
-        "↪️ 2<sup>nd</sup> Iteration"
+        "↪️ 2<sup>nd</sup> Iteration",
+      "media":
+      {
+        "lala":
+          "La La Land",
+        "ready":
+          "Ready Player One",
+        "lightyear":
+          "Lightyear Trailer",
+        "zero":
+          "Troop Zero",
+        "martian":
+          "The Martian",
+        "crown":
+          "The Crown Season 3",
+        "simpson":
+          "The Simpsons Season 26",
+        "bee":
+          "Bumblebee",
+        "click":
+          "Click",
+        "glee":
+          "Glee Season 4"
+      }
     },
     "byMedia":
     {
@@ -45,7 +68,9 @@
       "title":
         "List the Movies or Drama which Used the Song",
       "description":
-        "This time, I turned to how users searched a song: the name, the artist, the lyric, and the movie/drama names."
+        "This time, I turned to how users searched a song: the name, the artist, the lyric, and the movie/drama names.",
+      "then":
+        "What’s different from lyric websites is that movie/drama names take priority:"
     }
   },
   "gather":

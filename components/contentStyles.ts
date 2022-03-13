@@ -69,9 +69,16 @@ export const ContentTitle = styled('h2', {
 export const ContentTitlePrefix = styled('span', {
   display: 'inline-block',
   marginBottom: '$4',
-  color: 'hsl($shade600)',
   fontFamily: '$default',
-  fontSize: '$16'
+  fontSize: '$16',
+
+  variants: {
+    scheme: {
+      mono: {
+        color: 'hsl($monoContentParagraph)'
+      }
+    }
+  }
 });
 
 export const Section = styled('div', {
@@ -200,8 +207,15 @@ export const ContentList = styled('ul', {
 });
 
 export const ContentListItem = styled(ListItem, {
-  color: 'hsl($shade600)',
   fontFamily: '$default',
   fontSize: '$16',
-  lineHeight: '24px'
+  lineHeight: '24px',
+
+  variants: {
+    scheme: {
+      mono: {
+        color: 'hsl($monoContentParagraph)'
+      }
+    }
+  }
 });

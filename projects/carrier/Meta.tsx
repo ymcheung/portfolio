@@ -22,13 +22,6 @@ export default function Meta() {
       isReady: true,
       newTab: false,
       sbevent: 'Jump to Prototype'
-    },
-    {
-      name: t('status.landing'),
-      link: 'https://carrier.express',
-      isReady: true,
-      newTab: true,
-      sbevent: 'Landing Page Link'
     }
   ];
 
