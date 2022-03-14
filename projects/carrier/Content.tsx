@@ -121,10 +121,10 @@ export default function Content() {
         </Section>
         <Section id="sectionPrototype" has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
+          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.appoint.description')}} />
           <CabinList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
             <ListItem nomark>
-              <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
-              <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.appoint.description')}} />
               <Link href="https://www.figma.com/proto/L60FGYm0zgyJNTPHF64lEn/carrier-express?page-id=247%3A286&node-id=551%3A1280&viewport=295%2C48%2C0.63&scaling=scale-down&starting-point-node-id=551%3A1280&show-proto-sidebar=1" passHref>
                 <PrototypeLink nth={{ '@m768': 'odd' }} target="_blank" rel="noopener">
                   <PrototypeItemCover>
