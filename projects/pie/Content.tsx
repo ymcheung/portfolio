@@ -56,7 +56,7 @@ const CompareRow = styled('tr', {
     hsla($monoContentGradient, 0.049) 84.5%,
     hsla($monoContentGradient, 0.013) 91.9%,
     hsla($monoContentGradient, 0) 100%
-  )`
+  ) center left / 100% 100% no-repeat`
 });
 
 const CompareCell = styled('td', {

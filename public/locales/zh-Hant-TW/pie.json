@@ -68,6 +68,8 @@
     },
     "description":
       "Tab Bar (Bottom Navigation) 滿足「{{amI}}」、「{{else}}」以及「{{there}}」的導覽設計*，而主選單的設計只能回到上一頁。",
+    "convenience":
+      "Tab Bar 帶來的方便性，是在進行多項任務時：",
     "postmark":
       "&ast; 來源：Tab Bars are the new Hamburger Menus，作者：Fabian Sebastian。"
   },

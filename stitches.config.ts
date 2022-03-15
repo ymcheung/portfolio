@@ -150,9 +150,9 @@ export const { css, styled, globalCss, createTheme, theme, keyframes, getCssText
     })
   },
   media: {
-    m768: '(min-width: 768px)',
-    m992: '(min-width: 992px)',
-    m1200: '(min-width: 1200px)',
+    m768: 'screen and (min-width: 768px)',
+    m992: 'screen and (min-width: 992px)',
+    m1200: 'screen and (min-width: 1200px)',
     mHover: '(hover: hover) and (pointer: fine)',
     mReduced: '(prefers-reduced-motion)'
   },

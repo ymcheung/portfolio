@@ -68,6 +68,8 @@
     },
     "description":
       "Tab Bar (Bottom Navigation) fulfills &ldquo;{{amI}}&rdquo;, &ldquo;{{else}}&rdquo;, and &ldquo;{{there}}&rdquo; requirements&ast; for the navigation design. The Main Menu design, on the other hand, allows us to go back.",
+    "convenience":
+      "The tab bar brings forth convenience when there are multiple tasks:",
     "postmark":
       "&ast; Source: &ldquo;Tab Bars are the new Hamburger Menus&rdquo; by Fabian Sebastian"
   },
