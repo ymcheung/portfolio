@@ -90,6 +90,13 @@
         "Making an appointment is available one week before the scheduled payment. It’s her commitment to Seven and Eleven’s health as a responsible pet owner."
     }
   },
+  "flow":
+  {
+    "title":
+      "What Are the Steps Before She Makes an Appointment?",
+    "alt":
+      "Onboarding flow of Carrier Express"
+  },
   "mvp":
   {
     "title":

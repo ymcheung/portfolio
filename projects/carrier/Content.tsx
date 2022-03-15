@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
@@ -18,10 +19,10 @@ import IconArrow from '@elements/IconArrow';
 import productivity from '@public/projects/carrier/why/productivity.webp';
 import whyMailPreviewEn from '@public/projects/carrier/why/en/mailPreview.webp';
 import whyMailPreviewTw from '@public/projects/carrier/why/tw/mailPreview.webp';
+import flowEn from '@public/projects/carrier/flow/en.webp';
+import flowTw from '@public/projects/carrier/flow/tw.webp';
 import prototypeAppointPreviewEn from '@public/projects/carrier/prototype/en/appointment.webp';
 import prototypeAppointPreviewTw from '@public/projects/carrier/prototype/tw/appointment.webp';
-
-// import Gallery from './Gallery';
 
 const ParagraphImageContainer = styled('figure', {
   marginBottom: '$12',
@@ -35,6 +36,17 @@ const ParagraphImageContainer = styled('figure', {
       },
       tablet: {
         marginX: '$0'
+      }
+    },
+   flow: {
+      mobile: {
+        marginRight: 0,
+        marginLeft: 0,
+        overflowX: 'scroll'
+      },
+      desktop: {
+        marginRight: '-120px',
+        marginLeft: '-120px',
       }
     }
   }
@@ -51,6 +63,7 @@ interface ParagraphProps {
 }
 
 export default function Content() {
+  const router = useRouter();
   const { t, i18n } = useTranslation('carrier');
 
   const isItalic = i18n.language === 'en';
@@ -109,6 +122,12 @@ export default function Content() {
             <Image src={whyMailPreview} layout="responsive" quality={92} alt={t('why.coverAlt')} />
           </ParagraphImageContainer>
           <Paragraph dangerouslySetInnerHTML={{__html: t('why.description.2nd')}} indent />
+        </Section>
+        <Section>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('flow.title')}} />
+          <ParagraphImageContainer flow={{ '@initial': 'mobile', '@m992': 'desktop' }}>
+            <Image src={router.locale === 'en' ? flowEn : flowTw} width={1434} height={410} layout="fixed" alt={t('flow.alt')} />
+          </ParagraphImageContainer>
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('mvp.title')}} />
