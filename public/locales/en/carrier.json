@@ -4,21 +4,21 @@
     "title":
       "Intro",
     "description":
-      "The vets always suggest that pet owners take their furry friends to health checks once or twice a year. However, it is easy to forget the time, and they may also ignore this because they look healthy and energetic."
+      "The vets always suggest that pet owners take their cats/dogs to health checks once or twice a year. However, it is easy to forget the time, and they may also ignore this because they look healthy and energetic."
   },
   "question":
   {
     "title":
       "Question",
     "content":
-      "How might we encourage pet owners to take their furry friends to health checks periodically?"
+      "How might we encourage pet owners to take their cats/dogs to health checks periodically?"
   },
   "stats":
   {
     "title":
       "Stats",
     "description":
-      "I wanted to know how pet owners reminded themselves to take their furry friends to the vet for health checks and started a questionnaire from November 2021.",
+      "I wanted to know how pet owners reminded themselves to take their cats/dogs to the vet for health checks and started a questionnaire from November 2021.",
     "respond":
     {
       "affix":
@@ -29,19 +29,19 @@
           "count":
             43,
           "affix":
-            "of them took their furry friends to health checks within a week after seeing the reminder."
+            "of them took their cats/dogs to health checks within a week after seeing the reminder."
         },
         {
           "count":
             15,
           "affix":
-            "of them didn’t take their furry friends to health checks periodically."
+            "of them didn’t take their cats/dogs to health checks periodically."
         },
         {
           "count":
             24,
           "affix":
-            "of them are interested in the service about health check for their furry friends."
+            "of them are interested in the service about health check for their cats/dogs."
         }
       ]
     }
