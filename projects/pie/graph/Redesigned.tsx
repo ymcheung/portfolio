@@ -19,7 +19,7 @@ export default function GraphRedesigned() {
         )}
       )}} />
       <Paragraph scheme="mono" indent dangerouslySetInnerHTML={{__html: t('nav.convenience')}} />
-      <Video controls controlsList="nodownload nofullscreen" muted disablePictureInPicture responsive={{ '@initial': 'mobile', '@m786': 'tablet' }}>
+      <Video controls controlsList="nodownload nofullscreen" muted disablePictureInPicture>
         <source src="/projects/pie/graph/clockinWithConfirm.webm" type="video/webm" />
         <source src="/projects/pie/graph/clockinWithConfirm.mp4" type="video/mp4" />
       </Video>
