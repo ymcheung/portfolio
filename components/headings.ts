@@ -89,6 +89,7 @@ export const Heading = styled('h2', {
       },
       itemName: {
         marginBottom: 0,
+        color: 'hsl($shade0)',
         fontSize: '$24',
         fontWeight: 600,
         lineHeight: '32px'
