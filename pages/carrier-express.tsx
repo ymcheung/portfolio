@@ -79,9 +79,6 @@ export default function ProjectCarrier() {
         <Content />
       </FullBlock>
       <Nav
-        hasPrev={t('nav:abtest')}
-        prevSlug="icook/a-b-test"
-        prevBg="generic"
         hasNext={t('nav:moment')}
         nextSlug="moment"
         nextBg="moment"
