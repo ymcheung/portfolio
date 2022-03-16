@@ -114,13 +114,14 @@ export default function Home() {
       name: TITLE,
       description: DESCRIPTION,
       datePublished: '2016-04-16',
-      dateModified: '2022-03-01',
+      dateModified: '2022-03-16',
       publisher: {
         '@type': 'ProfilePage',
         name: AUTHOR,
         sameAs: [
           'https://www.linkedin.com/in/ymcheungtw/',
-          'https://github.com/ymcheung'
+          'https://github.com/ymcheung',
+          'https://build.intersection.tw'
         ]
       }
     },
@@ -169,8 +170,8 @@ export default function Home() {
         <NameHeader />
         <Cans animation={{ '@mReduced': 'reduced' }} />
       </Header>
-      <Fulltime />
       <Projects />
+      <Fulltime />
       <Activity />
       <ExternalLinks />
       <Footer responsive={{'@m992': 'max960', '@m1200': 'max1168'}} />
