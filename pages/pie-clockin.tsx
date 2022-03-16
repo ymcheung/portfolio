@@ -36,7 +36,7 @@ export default function ProjectPie() {
     name: t('home:project.pie.title', { redesign: t('home:verb.redesign') }),
     description: t('home:project.pie.description'),
     datePublished: '2020-08-29',
-    dateModified: '2022-01-04'
+    dateModified: '2022-03-15'
   };
 
   useEffect(() => {
@@ -82,8 +82,8 @@ export default function ProjectPie() {
         hasPrev={t('nav:moment')}
         prevSlug="moment"
         prevBg="moment"
-        hasNext={t('nav:intersection')}
-        nextSlug="intersection"
+        hasNext={t('nav:abtest')}
+        nextSlug="icook/a-b-test"
         nextBg="generic"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />

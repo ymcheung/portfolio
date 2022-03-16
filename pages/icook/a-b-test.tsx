@@ -84,8 +84,11 @@ export default function FulltimeABTest() {
         <Content />
       </FullBlock>
       <Nav
-        hasNext={t('nav:carrier')}
-        nextSlug="carrier-express"
+        hasPrev={t('nav:pie')}
+        prevSlug="pie-clockin"
+        prevBg="pie"
+        hasNext={t('nav:intersection')}
+        nextSlug="intersection"
         nextBg="generic"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />
