@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 
@@ -13,9 +12,8 @@ import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from
 
 import { ListItem, IconList, IconListItem } from '@components/layout';
 import { FeatureList } from '@projects/featured';
-import { CabinList, PrototypeLink, PrototypeItemCover, PrototypeItemCoverImg } from '@components/cabinList';
+import { PrototypeIframe } from '@elements/prototypeIframe';
 
-import IconArrow from '@elements/IconArrow';
 import productivity from '@public/projects/carrier/why/productivity.webp';
 import whyMailPreviewEn from '@public/projects/carrier/why/en/mailPreview.webp';
 import whyMailPreviewTw from '@public/projects/carrier/why/tw/mailPreview.webp';
@@ -142,18 +140,7 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
           <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.appoint.description')}} />
-          <CabinList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-            <ListItem nomark>
-              <Link href="https://www.figma.com/proto/L60FGYm0zgyJNTPHF64lEn/carrier-express?page-id=247%3A286&node-id=551%3A1280&viewport=295%2C48%2C0.63&scaling=scale-down&starting-point-node-id=551%3A1280&show-proto-sidebar=1" passHref>
-                <PrototypeLink nth={{ '@m768': 'odd' }} target="_blank" rel="noopener">
-                  <PrototypeItemCover>
-                    <PrototypeItemCoverImg src={prototypeAppointPreview} layout="responsive" alt={t('prototype.appoint.alt')} />
-                  </PrototypeItemCover>
-                  <IconArrow position="prototype" purpose="external" background="carrierPrototype" gotoText={t('prototype.appoint.title')} />
-                </PrototypeLink>
-              </Link>
-            </ListItem>
-          </CabinList>
+          <PrototypeIframe src="https://www.figma.com/embed?embed_host=ymcheung&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FL60FGYm0zgyJNTPHF64lEn%2Fcarrier-express%3Fpage-id%3D247%253A286%26node-id%3D551%253A1280%26viewport%3D295%252C48%252C0.27%26scaling%3Dscale-down%26starting-point-node-id%3D551%253A1280%26show-proto-sidebar%3D1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} allowFullScreen loading="lazy" />
         </Section>
         <Section isgroupend>
           <PostMarksHr />
