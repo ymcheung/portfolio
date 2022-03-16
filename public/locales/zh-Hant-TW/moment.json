@@ -110,9 +110,9 @@
       },
       {
         "title":
-          "前端技術備忘",
+          "前端技術",
         "description":
-          "在「<a class=\"paragraph-link\" href=\"https://build.intersection.tw/moment-with-astro\" target=\"_blank\" rel=\"noopener\">使用 Astro 打造速度飛快的靜態網站</a>」記錄這個專案的網頁前端筆記。"
+          "在「<a class=\"paragraph-link\" href=\"https://build.intersection.tw/moment-with-astro\" target=\"_blank\" rel=\"noopener\">使用 Astro 打造速度飛快的靜態網站</a>」記錄這個專案在製作網頁前端時，遇到的問題與解決方法。"
       }
     ]
   }
