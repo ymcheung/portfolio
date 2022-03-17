@@ -22,8 +22,7 @@ const PieGalleryList = styled(GalleryList, {
                "clocking forms" auto
                "stats forms" 60px
                "stats formsnew" auto
-               "settings formsnew" 60px
-               "settings ." auto / 1fr 1fr`,
+               ". formsnew" 60px / 1fr 1fr`,
         rowGap: '60px'
       }
     }
@@ -44,9 +43,6 @@ const PieGalleryItem = styled(GalleryItem, {
       },
       formsnew: {
         gridArea: 'formsnew'
-      },
-      settings: {
-        gridArea: 'settings'
       }
     }
   }
@@ -63,9 +59,8 @@ export default function Gallery() {
 
   const screenshotClocking = '/projects/pie/clockingNone.webp';
   const screenshotForms = '/projects/pie/formsConfirmApply.webp';
-  const screenshotStats = '/projects/pie/statsAnnualThisYear.webp';
+  const screenshotStats = '/projects/pie/statsHistory.webp';
   const screenshotFormsNew = '/projects/pie/formsNew.webp';
-  const screenshotSettings = '/projects/pie/preference.webp';
 
   return(
     <>
@@ -107,16 +102,6 @@ export default function Gallery() {
           </PieGalleryItem>
           <PieGalleryItem item={{ '@m768': 'formsnew' }} nomark>
             <PieScreenshotImg src={screenshotFormsNew}
-              layout="responsive"
-              width={256}
-              height={455}
-              alt=""
-              quality={100}
-              loading="lazy"
-            />
-          </PieGalleryItem>
-          <PieGalleryItem item={{ '@m768': 'settings' }} nomark>
-            <PieScreenshotImg src={screenshotSettings}
               layout="responsive"
               width={256}
               height={455}

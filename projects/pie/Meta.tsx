@@ -13,13 +13,15 @@ export default function Meta() {
       name: t('status.doc'),
       link: i18n.language === 'en' ? 'https://www.craft.do/s/WPp0S5oPecqEPc' : 'https://www.craft.do/s/kRGlFyjpSWAKUh',
       isReady: true,
+      newTab: true,
       sbevent: 'Pie/Meta: Onboarding Document Link'
     },
     {
       name: 'Prototype',
-      link: 'https://www.figma.com/proto/eYB3QoL6f97bLBgZ5oJEbM/pie-en?page-id=1099%3A1135&node-id=1099%3A1140&viewport=258%2C235%2C0.17815665900707245&scaling=scale-down&starting-point-node-id=1099%3A1140&show-proto-sidebar=1',
+      link: '#sectionPrototype',
       isReady: true,
-      sbevent: 'Pie/Meta: Prototype Link'
+      newTab: false,
+      sbevent: 'Jump to Prototype'
     }
   ];
 
@@ -39,7 +41,7 @@ export default function Meta() {
         <MetaItemTitle project="pie">{t('status.title')}</MetaItemTitle>
         <MetaStatusList responsive={{ '@m768': 'tablet' }}>
           {
-            statusItems.map(({ name, link, isReady, sbevent }, index) =>
+            statusItems.map(({ name, link, isReady, newTab, sbevent }, index) =>
               <MetaItem key={`statusItems-${index}`}>
                 {
                   isReady &&
@@ -50,9 +52,15 @@ export default function Meta() {
                   <IconNotReady />
                 }
                 {
-                  link &&
+                  link && newTab &&
                   <Link href={link} passHref>
-                    <MetaItemValue as="a" data-splitbee-event={sbevent} target="_blank" rel="noopener">{name}</MetaItemValue>
+                    <MetaItemValue as="a" data-splitbee-event={`Pie/Meta: ${sbevent}`} target="_blank" rel="noopener">{name}</MetaItemValue>
+                  </Link>
+                }
+                {
+                  link && !newTab &&
+                  <Link href={link} passHref>
+                    <MetaItemValue as="a" data-splitbee-event={`Pie/Meta: ${sbevent}`}>{name}</MetaItemValue>
                   </Link>
                 }
                 {

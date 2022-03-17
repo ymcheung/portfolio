@@ -14,8 +14,6 @@ import GraphRedesigned from './graph/Redesigned';
 
 import Gallery from './Gallery';
 
-import { PrototypeIframe } from '@elements/prototypeIframe';
-
 const CompareTable = styled('table', {
   tableLayout: 'fixed',
   overflowX: 'auto',
@@ -132,7 +130,7 @@ export default function Content() {
                 there: t('nav.questions.whatThere')
             })}} indent />
           </Section>
-          <Section>
+          <Section id="sectionPrototype">
             <CompareTable responsive={{'@initial': 'mobile', '@m768': 'tablet'}}>
               <thead>
                 <CompareRow>
@@ -167,14 +165,6 @@ export default function Content() {
         </Container>
       </FullBlock>
       <Container as="section" responsive={{'@m768': 'max640'}}>
-        <Section>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
-          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('flows.clockin',
-            { context: 'withConfirm', clockin: t('flows.clockin'), confirmform: t('flows.confirmform') }
-          )}} />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.clockInAndConfirm.description')}} />
-          <PrototypeIframe src="https://www.figma.com/embed?embed_host=ymcheung&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FeYB3QoL6f97bLBgZ5oJEbM%2Fpie-en%3Fpage-id%3D1099%253A1135%26node-id%3D1099%253A1140%26viewport%3D295%252C48%252C0.32%26scaling%3Dscale-down%26starting-point-node-id%3D1099%253A1140%26show-proto-sidebar%3D1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} allowFullScreen loading="lazy" />
-        </Section>
         <Section has="postmarks">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('document.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('document.description')}} indent />

@@ -1,28 +1,17 @@
 import { useTranslation } from 'next-i18next';
-import { styled } from '@stitches/react';
 import { ContentTitle, Paragraph } from '@components/contentStyles';
-
-const Video = styled('video', {
-  display: 'block',
-  maxWidth: '288px',
-  minHeight: '512px'
-});
+import { PrototypeIframe } from '@elements/prototypeIframe';
 
 export default function GraphRedesigned() {
   const { t } = useTranslation('pie');
 
   return(
     <>
-      <ContentTitle as="h3" purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
-        { context: 'titleWithTabBar', title: t('flows.clockin',
-          { context: 'withConfirm', clockin: t('flows.clockin'), confirmform: t('flows.confirmform') }
-        )}
+      <ContentTitle purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('flows.clockin',
+        { context: 'withConfirm', clockin: t('flows.clockin'), confirmform: t('flows.confirmform') }
       )}} />
-      <Paragraph scheme="mono" indent dangerouslySetInnerHTML={{__html: t('nav.convenience')}} />
-      <Video controls controlsList="nodownload nofullscreen" muted disablePictureInPicture>
-        <source src="/projects/pie/graph/clockinWithConfirm.webm" type="video/webm" />
-        <source src="/projects/pie/graph/clockinWithConfirm.mp4" type="video/mp4" />
-      </Video>
+      <Paragraph  scheme="mono" dangerouslySetInnerHTML={{__html: t('prototype.clockInAndConfirm.description')}} />
+      <PrototypeIframe src="https://www.figma.com/embed?embed_host=ymcheung&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FeYB3QoL6f97bLBgZ5oJEbM%2Fpie-en%3Fpage-id%3D1099%253A1135%26node-id%3D1099%253A1140%26viewport%3D295%252C48%252C0.32%26scaling%3Dscale-down%26starting-point-node-id%3D1099%253A1140%26show-proto-sidebar%3D1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} allowFullScreen loading="lazy" />
     </>
   )
 }
