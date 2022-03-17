@@ -46,7 +46,7 @@ export default function Meta() {
         <MetaItemTitle project="carrier">{t('status.title')}</MetaItemTitle>
         <MetaStatusList responsive={{ '@m768': 'tablet' }}>
         {
-          statusItems.map(({ name, link, isReady, newTab,  sbevent }, index) =>
+          statusItems.map(({ name, link, isReady, newTab, sbevent }, index) =>
             <MetaItem key={`statusItems-${index}`}>
             {
               isReady &&
