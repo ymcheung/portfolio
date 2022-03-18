@@ -92,12 +92,10 @@
   },
   "prototype":
   {
-    "title":
-      "Give It a Try",
     "clockInAndConfirm":
     {
       "description":
-        "You are approaching your company’s physical office on a working day and ready to clock in. You open the app and find your colleague’s leave form is waiting for your confirmation."
+        "Please give it a try by the following prototype: You are approaching your company’s physical office on a working day and ready to clock in. You open the app and find your colleague’s leave form is waiting for your confirmation."
     }
   },
   "document":
