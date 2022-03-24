@@ -31,7 +31,7 @@
       "title":
         "A/B Testing Recipes Recommendation",
       "description":
-        "“Recipes Recommendation” displayed the content that visitors wanted to read more about the recipe. I put different data sets into the UI component I have built, and we could start an A/B test."
+        "We designed “Recipes Recommendation” to assume the content that visitors wanted to read more about the recipe. I put different data sets into the UI component I have built, and we could start an A/B test."
     },
     "problemProduct":
     {
