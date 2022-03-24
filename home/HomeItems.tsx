@@ -84,7 +84,18 @@ export const HomeItemLink = styled('a', {
       tablet: {
         grid: `"title" auto
                "description" auto / 100%`,
-        columnGap: 'unset'
+        columnGap: 'unset',
+        margin: '-$12',
+        padding: '$12'
+      },
+      hover: {
+        backgroundColor: 'hsl($shade1600)',
+        borderRadius: '12px',
+        transition: 'box-shadow 0.15s ease-out',
+
+        '&:hover': {
+          transition: 'box-shadow 0.15s ease-in'
+        }
       }
     }
   }
