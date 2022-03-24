@@ -44,7 +44,7 @@ export default function FulltimeABTest() {
     name: t('home:fulltime.abtest.title'),
     description: t('home:fulltime.abtest.description'),
     datePublished: '2022-01-29',
-    dateModified: '2022-01-29'
+    dateModified: '2022-03-25'
   };
 
   const schema = {

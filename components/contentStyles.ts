@@ -139,6 +139,11 @@ export const Paragraph = styled('p', {
         fontStyle: 'italic'
       }
     },
+    following: {
+      true: {
+        marginBottom: '$8'
+      }
+    },
     sectionend: {
       true: {
         margin: 0
@@ -213,9 +218,15 @@ export const ContentListItem = styled(ListItem, {
 
   variants: {
     scheme: {
+      default: {
+        color: 'hsl($shade600)'
+      },
       mono: {
         color: 'hsl($monoContentParagraph)'
       }
     }
+  },
+  defaultVariants: {
+    scheme: 'default'
   }
 });
