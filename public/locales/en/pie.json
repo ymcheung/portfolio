@@ -49,6 +49,32 @@
   {
     "title":
       "Redesign the Navigation",
+    "iteration":
+    {
+      "first":
+        "🤔 1<sup>st</sup> Iteration",
+      "second":
+        "↪️ 2<sup>nd</sup> Iteration"
+    },
+    "byDashboard":
+    {
+      "title":
+        "All-in-one Dashboard",
+      "description":
+        "I put clocking and form tasks in one place like an all-in-one dashboard. There’s no need to switch between the tasks.",
+      "feedback":
+      {
+        "title":
+          "Feedback",
+        "description":
+          "&ldquo;It’s great to see the major tasks in one dashboard. However, they are overcrowded on mobile devices.&rdquo;"
+      }
+    },
+    "byTab":
+    {
+      "description":
+        "Tab Bar (Bottom Navigation) fulfills &ldquo;{{amI}}&rdquo;, &ldquo;{{else}}&rdquo;, and &ldquo;{{there}}&rdquo; requirements&ast; for the navigation design. The Main Menu design, on the other hand, allows us to go back."
+    },
     "mainMenu":
       "Main Menu",
     "primary":
@@ -66,10 +92,6 @@
       "whatThere":
         "What will I find when I get there?"
     },
-    "description":
-      "Tab Bar (Bottom Navigation) fulfills &ldquo;{{amI}}&rdquo;, &ldquo;{{else}}&rdquo;, and &ldquo;{{there}}&rdquo; requirements&ast; for the navigation design. The Main Menu design, on the other hand, allows us to go back.",
-    "convenience":
-      "The tab bar brings forth convenience when there are multiple tasks:",
     "postmark":
       "&ast; Source: &ldquo;Tab Bars are the new Hamburger Menus&rdquo; by Fabian Sebastian"
   },
@@ -79,8 +101,6 @@
       "Take a Closer Look",
     "tabBar":
       "The tab bar contains four features: Clockings, Forms, Stats, and Salary.",
-    "selected":
-      "Selected Screenshots",
     "clockin":
       "Clock-In/Out",
     "forms":
