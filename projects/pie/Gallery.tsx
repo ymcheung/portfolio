@@ -2,17 +2,8 @@ import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import { styled } from 'stitches.config';
 
-import { Section, ContentTitle, Paragraph } from '@components/contentStyles';
+import { Section, ContentTitle } from '@components/contentStyles';
 import { GalleryList, GalleryItem } from '@projects/gallery';
-
-import tabBarDark from '@public/projects/pie/tabBarDark.jpg';
-
-const TabBarRescue = styled('img', {
-  width: '100%',
-  minWidth: '288px',
-  maxWidth: '395px',
-  marginBottom: '$16'
-});
 
 const PieGalleryList = styled(GalleryList, {
   variants: {
@@ -66,9 +57,6 @@ export default function Gallery() {
     <>
       <Section>
         <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('gallery.title')}} />
-        <ContentTitle purpose="paragraph" scheme="mono">Tab Bar</ContentTitle>
-        <TabBarRescue src={tabBarDark.src} loading="lazy" alt={t('gallery.tabBar')} />
-        <ContentTitle purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('gallery.selected')}} />
         <PieGalleryList responsive={{ '@m768': 'tablet' }} grid={{ '@m768': 'tablet' }}>
           <PieGalleryItem item={{ '@m768': 'clocking' }} nomark>
             <PieScreenshotImg src={screenshotClocking}

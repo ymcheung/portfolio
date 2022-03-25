@@ -6,9 +6,34 @@
       "title":
         "Intro",
       "description":
-        "iCook is the largest recipe community in Taiwan. At iCook, everyone’s questions to the products had the chance to challenge current designs or content by A/B tests."
+        "iCook is the largest recipe community in Taiwan. At iCook, everyone’s questions to the product had the chance to challenge current designs or content by A/B tests. It results from working closely with front-end and back-end developers to redesign UI components."
     },
-    "problem":
+    "problemTechnical":
+    {
+      "title":
+        "The Technical Problem",
+      "description":
+        "iCook started as a desktop-only website and hit product-market fit. There were a lot of workarounds to be mobile-friendly, and updating a piece of the interfaces had the chance to break something. The product and marketing team often proposed UI experiments as the concept of design systems went popular. However, the difficulties of replacing some parts of a webpage limited the ideas."
+    },
+    "prerequisite":
+    {
+      "title":
+        "Prerequisites for Building UI Components",
+      "description":
+        "Knowing developer’s workflows and tools was essential for untying the workarounds.",
+      "htmlcss":
+        "Organized naming convention in CSS enabled the appearance of UI components to be independent.",
+      "git":
+        "I accessed the codebase and used Git workflows in GitHub like the developers."
+    },
+    "abtesting":
+    {
+      "title":
+        "A/B Testing Recipes Recommendation",
+      "description":
+        "We designed “Recipes Recommendation” to assume the content that visitors wanted to read more about the recipe. I put different data sets into the UI component I have built, and we could start an A/B test."
+    },
+    "problemProduct":
     {
       "title":
         "The Problem",
@@ -74,6 +99,32 @@
         "Impact",
       "description":
         "The data engineer developed an algorithm based on recipe names and instructions."
+    },
+    "learned":
+    {
+      "title":
+        "What I Have Learned",
+      "data":
+      {
+        "title":
+          "Required and Optional Data, and Their Types",
+        "description":
+          "Well-documented UI components indicate the following data situations:",
+        "items":
+        {
+          "first":
+            "Required or optional",
+          "second":
+            "Text, number, or true/false, etc."
+        }
+      },
+      "tag":
+      {
+        "title":
+          "The Rules of Release Tags",
+        "description":
+          "“<a class=\"paragraph-link\" href=\"https://semver.org\" target=\"_blank\" rel=\"noopener\">Semantic Versioning</a>” in software development is the communication bridge among developers. It is easy to know why the update existed and what to be careful of."
+      }
     }
   }
 }

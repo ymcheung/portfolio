@@ -7,7 +7,7 @@ import { styled } from 'stitches.config';
 import LangSwitch from '@components/LangSwitch';
 
 import { Container } from '@components/layout';
-import { ContentTitle, Section, Paragraph } from '@components/contentStyles';
+import { ContentTitle, Section, Paragraph, ContentList, ContentListItem } from '@components/contentStyles';
 
 import { ListItem } from '@components/layout';
 import wineBoiledClamsCover from '@public/projects/icook/wineBoiledClamsCover.webp';
@@ -91,16 +91,6 @@ const ExperimentOutcome = styled('figure', {
   fontStyle: 'italic'
 });
 
-interface statsProps {
-  count: number;
-  affix: string;
-}
-
-interface ParagraphProps {
-  title: string;
-  description: string;
-}
-
 export default function Content() {
   const { t, i18n } = useTranslation('icook');
 
@@ -115,9 +105,25 @@ export default function Content() {
           <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.intro.description')}} indent />
         </Section>
         <Section>
-          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.problem.title')}} />
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.problemTechnical.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.problemTechnical.description')}} indent />
+        </Section>
+        <Section>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.prerequisite.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.prerequisite.description')}} indent />
+          <ContentTitle purpose="paragraph">HTML/CSS</ContentTitle>
+          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.prerequisite.htmlcss')}} indent />
+          <ContentTitle purpose="paragraph">Git/GitHub</ContentTitle>
+          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.prerequisite.git')}} indent />
+        </Section>
+        <Section>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.abtesting.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.abtesting.description')}} indent />
+        </Section>
+        <Section>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.problemProduct.title')}} />
           <IconBounce />
-          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.problem.description')}} indent />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.problemProduct.description')}} indent />
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.question.title')}} />
@@ -163,9 +169,20 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.dig.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.dig.description')}} indent />
         </Section>
-        <Section isgroupend>
+        <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.impact.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.impact.description')}} indent />
+        </Section>
+        <Section isgroupend>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.learned.title')}} />
+          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('abtest.learned.data.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.learned.data.description')}} indent following />
+          <ContentList>
+            <ContentListItem square dangerouslySetInnerHTML={{__html: t('abtest.learned.data.items.first')}} />
+            <ContentListItem square dangerouslySetInnerHTML={{__html: t('abtest.learned.data.items.second')}} />
+          </ContentList>
+          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('abtest.learned.tag.title')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.learned.tag.description')}} indent />
         </Section>
       </Container>
     </>

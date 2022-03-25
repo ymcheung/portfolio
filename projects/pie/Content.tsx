@@ -7,12 +7,20 @@ import IconCheck from './IconCheck';
 import IconHyphen from '@home/icons/IconHyphen';
 
 import { Container, FullBlock } from '@components/layout';
-import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
+import { ContentTitle, ContentTitlePrefix, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 
 import GraphProblem from './graph/Problem';
 import GraphRedesigned from './graph/Redesigned';
 
+import tabBarDark from '@public/projects/pie/tabBarDark.jpg';
 import Gallery from './Gallery';
+
+const TabBarRescue = styled('img', {
+  width: '100%',
+  minWidth: '288px',
+  maxWidth: '395px',
+  marginBottom: '$16'
+});
 
 const CompareTable = styled('table', {
   tableLayout: 'fixed',
@@ -124,7 +132,15 @@ export default function Content() {
         <Container responsive={{'@m768': 'max640'}}>
           <Section>
             <ContentTitle purpose="section" scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.title')}} />
-            <Paragraph scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.description', {
+            <ContentTitlePrefix scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.iteration.first')}} />
+            <ContentTitle purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.byDashboard.title')}} />
+            <Paragraph scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.byDashboard.description', )}} indent />
+            <ContentTitle purpose="paragraph" scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.byDashboard.feedback.title')}} />
+            <Paragraph dangerouslySetInnerHTML={{__html: t('nav.byDashboard.feedback.description')}} purpose="question" italic={isItalic} indent scheme="mono" />
+            <ContentTitlePrefix scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.iteration.second')}} />
+            <ContentTitle purpose="paragraph" scheme="mono">Tab Bar</ContentTitle>
+            <TabBarRescue src={tabBarDark.src} loading="lazy" alt={t('gallery.tabBar')} />
+            <Paragraph scheme="mono" dangerouslySetInnerHTML={{__html: t('nav.byTab.description', {
                 amI: t('nav.questions.whereAmI'),
                 else: t('nav.questions.whereElse'),
                 there: t('nav.questions.whatThere')
