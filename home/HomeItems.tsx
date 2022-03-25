@@ -85,8 +85,8 @@ export const HomeItemLink = styled('a', {
         grid: `"title" auto
                "description" auto / 100%`,
         columnGap: 'unset',
-        margin: '-$12',
-        padding: '$12'
+        margin: '-$8',
+        padding: '$8'
       },
       hover: {
         backgroundColor: 'hsl($shade1600)',
@@ -94,6 +94,12 @@ export const HomeItemLink = styled('a', {
         transition: 'box-shadow 0.15s ease-out',
 
         '&:hover': {
+          boxShadow: `0 0.1px 2.2px hsla($colors$shade0, 0.014),
+                      0 0.3px 5.3px hsla($colors$shade0, 0.02),
+                      0 0.5px 10px hsla($colors$shade0, 0.025),
+                      0 0.9px 17.9px hsla($colors$shade0, 0.03),
+                      0 1.7px 33.4px hsla($colors$shade0, 0.036),
+                      0 4px 80px hsla($colors$shade0, 0.05)`,
           transition: 'box-shadow 0.15s ease-in'
         }
       }
