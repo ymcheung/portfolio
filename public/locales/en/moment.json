@@ -20,9 +20,11 @@
     "iteration":
     {
       "first":
-        "🤔 1<sup>st</sup> Iteration",
+        "🤔 Initial Idea",
       "second":
-        "↪️ 2<sup>nd</sup> Iteration",
+        "↪️ 1<sup>st</sup> Iteration",
+      "artist":
+        "Artist: {{name}}",
       "media":
       {
         "lala":
@@ -55,7 +57,7 @@
       [
         {
           "description":
-            "Users might want to find the movies in theaters or streaming services."
+            "Visitors might want to find the movies in theaters or streaming services."
         },
         {
           "description":
@@ -68,9 +70,9 @@
       "title":
         "List the Movies or Drama which Used the Song",
       "description":
-        "This time, I turned to how users searched a song: the name, the artist, the lyric, and the movie/drama names.",
+        "I turned to introduce a song with its name, artist, lyric, and the movies/dramas heard.",
       "then":
-        "What’s different from lyric websites is that movie/drama names take priority:"
+        "Visitors reached the website by a song’s name, its artist and lyric, and movie/drama names."
     }
   },
   "gather":
@@ -78,7 +80,7 @@
     "title":
       "Stats",
     "description":
-      "Users reached the website by the following keywords:",
+      "The songs started to appear in search results and gain clicks. The keywords are:",
     "byLyric":
       "A Song’s Lyric",
     "byLyricWithName":

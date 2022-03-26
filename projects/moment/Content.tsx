@@ -177,6 +177,7 @@ export default function Content() {
               <ListItem nomark>
                 <IterationMappingList>
                   <IterationMappingTitle>Starman</IterationMappingTitle>
+                  <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.artist', { name: 'David Bowie' })}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.lightyear')}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.zero')}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.martian')}} />
@@ -186,7 +187,7 @@ export default function Content() {
               </ListItem>
               <ListItem nomark>
                 <IterationMappingList>
-                  <IterationMappingTitle>Everybody Wants to Rule the World</IterationMappingTitle>
+                  <IterationMappingTitle>Everybody Wants to Rule the World</IterationMappingTitle><IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.artist', { name: 'Tears For Fears' })}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.bee')}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.ready')}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.click')}} />
