@@ -25,6 +25,8 @@
         "↪️ 1<sup>st</sup> Iteration",
       "artist":
         "Artist: {{name}}",
+      "lyric":
+        "Lyric",
       "media":
       {
         "lala":
@@ -72,7 +74,7 @@
       "description":
         "I turned to introduce a song with its name, artist, lyric, and the movies/dramas heard.",
       "then":
-        "Visitors reached the website by a song’s name, its artist and lyric, and movie/drama names."
+        "Visitors reached the website by searching a song’s name, its artist and lyric, and movie/drama names."
     }
   },
   "gather":

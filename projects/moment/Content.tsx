@@ -56,7 +56,18 @@ const IterationMappingItems = styled('dd', {
   margin: 0,
   padding: '$8 $12',
   color: 'hsl($monoContentParagraph)',
-  fontSize: '$14'
+  fontSize: '$14',
+
+  variants: {
+    divide: {
+      top: {
+        borderTop: '2px solid hsl($monoGraphDevice)'
+      },
+      bottom: {
+        borderBottom: '2px solid hsl($monoGraphDevice)'
+      }
+    }
+  }
 });
 
 const IterationScreenshot = styled('figure', {
@@ -177,21 +188,24 @@ export default function Content() {
               <ListItem nomark>
                 <IterationMappingList>
                   <IterationMappingTitle>Starman</IterationMappingTitle>
-                  <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.artist', { name: 'David Bowie' })}} />
+                  <IterationMappingItems divide="bottom" dangerouslySetInnerHTML={{__html: t('idea.iteration.artist', { name: 'David Bowie' })}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.lightyear')}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.zero')}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.martian')}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.crown')}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.simpson')}} />
+                  <IterationMappingItems divide="top" dangerouslySetInnerHTML={{__html: t('idea.iteration.lyric')}} />
                 </IterationMappingList>
               </ListItem>
               <ListItem nomark>
                 <IterationMappingList>
-                  <IterationMappingTitle>Everybody Wants to Rule the World</IterationMappingTitle><IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.artist', { name: 'Tears For Fears' })}} />
+                  <IterationMappingTitle>Everybody Wants to Rule the World</IterationMappingTitle>
+                  <IterationMappingItems divide="bottom" dangerouslySetInnerHTML={{__html: t('idea.iteration.artist', { name: 'Tears For Fears' })}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.bee')}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.ready')}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.click')}} />
                   <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.glee')}} />
+                  <IterationMappingItems divide="top" dangerouslySetInnerHTML={{__html: t('idea.iteration.lyric')}} />
                 </IterationMappingList>
               </ListItem>
             </CabinList>
