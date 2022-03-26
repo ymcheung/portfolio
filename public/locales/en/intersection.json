@@ -25,14 +25,14 @@
           "format":
             "2022-02",
           "full":
-            "February, 2022"
+            "From January, 2022"
         },
         "description":
           "Cal.com is an open-source scheduling infrastructure, and it reached #1 on Product Hunt when released in April 2021."
       },
       {
         "url":
-          "https://stateofcss.com",
+          "https://2021.stateofcss.com",
         "name":
           "State of CSS",
         "time": {
