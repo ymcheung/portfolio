@@ -18,13 +18,23 @@
     "prerequisite":
     {
       "title":
-        "Prerequisites for Building UI Components",
+        "What I Have Prepared for Building UI Components",
       "description":
         "Knowing developers’ workflows and tools was essential for untying the workarounds.",
-      "htmlcss":
-        "Organized naming convention in CSS enabled the appearance of UI components to be independent.",
+      "development":
+      {
+        "title":
+          "Web Development",
+        "description":
+          "Organized naming convention in CSS enabled the appearance of UI components to be independent. Updating the names which JavaScript used was also a must."
+      },
       "git":
-        "I accessed the codebase and used Git workflows in GitHub like the developers."
+      {
+        "title":
+          "Git &amp; GitHub",
+        "description":
+          "I accessed the codebase and used Git workflows in GitHub like the developers."
+      }
     },
     "abtesting":
     {

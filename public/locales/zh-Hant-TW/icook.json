@@ -18,13 +18,23 @@
     "prerequisite":
     {
       "title":
-        "製作 UI 元件要學的",
+        "為了製作 UI 元件的準備",
       "description":
         "想把打結的過渡方法解開，就要知道工程師的方法與工具。",
-      "htmlcss":
-        "CSS 使用有規律的命名原則，讓 UI 元件外觀是各自獨立的。",
+      "development":
+      {
+        "title":
+          "網頁開發",
+        "description":
+          "CSS 以有規律的命名原則，讓 UI 元件外觀是各自獨立的。在 JavaScript 用到的名稱也要調整。"
+      },
       "git":
-        "就跟工程師一樣，在 GitHub 使用 Git 流程存取程式碼。"
+      {
+        "title":
+          "Git 與 GitHub",
+        "description":
+          "就跟工程師一樣，在 GitHub 使用 Git 流程存取程式碼。"
+      }
     },
     "abtesting":
     {

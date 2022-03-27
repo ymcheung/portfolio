@@ -111,10 +111,10 @@ export default function Content() {
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.prerequisite.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.prerequisite.description')}} indent />
-          <ContentTitle purpose="paragraph">HTML/CSS</ContentTitle>
-          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.prerequisite.htmlcss')}} indent />
-          <ContentTitle purpose="paragraph">Git/GitHub</ContentTitle>
-          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.prerequisite.git')}} indent />
+          <ContentTitle dangerouslySetInnerHTML={{__html: t('abtest.prerequisite.development.title')}} purpose="paragraph" />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.prerequisite.development.description')}} indent />
+          <ContentTitle dangerouslySetInnerHTML={{__html: t('abtest.prerequisite.git.title')}} purpose="paragraph" />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('abtest.prerequisite.git.description')}} indent />
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('abtest.abtesting.title')}} />
