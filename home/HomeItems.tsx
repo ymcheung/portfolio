@@ -26,29 +26,7 @@ export const HomeItemLink = styled('a', {
   textDecoration: 'none',
 
   variants: {
-    asfulltime: {
-      mobile: {
-        display: 'grid',
-        grid: `auto / 52px 1fr`,
-        alignItems: 'center',
-        columnGap: '$8',
-        margin: '0 -10px',
-        padding: '$8',
-        backgroundColor: 'hsl($shade1500)',
-        border: '2px solid transparent',
-        borderRadius: '12px',
-        boxSizing: 'content-box'
-      },
-      hover: {
-        transition: 'border-color $easeIn',
-
-        '&:hover': {
-          borderColor: 'hsl($shade1400)',
-          transition: 'border-color $easeOut'
-        }
-      }
-    },
-    asproject: {
+    asmajor: {
       mobile: {
         display: 'grid',
         overflow: 'hidden',
@@ -73,7 +51,7 @@ export const HomeItemLink = styled('a', {
         }
       }
     },
-    asactivity: {
+    asminor: {
       mobile: {
         display: 'grid',
         grid: `"icon title" auto

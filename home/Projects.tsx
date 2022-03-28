@@ -85,7 +85,7 @@ export default function Projects() {
       <HomeItemsLayout duo={{ '@m768': 'tablet' }}>
         <ListItem nomark>
           <Link href="/carrier-express" passHref>
-            <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }}>
+            <HomeItemLink asmajor={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }}>
               <ProjectScreen responsive={{ '@m768': 'tablet' }}>
                 <ProjectScreenImg scheme={screenScheme} src={`/home/screen/carrier/${screenLang}/${screenScheme}.webp`} alt="" loading="lazy" />
               </ProjectScreen>
@@ -96,7 +96,7 @@ export default function Projects() {
         </ListItem>
         <ListItem nomark>
           <Link href="/moment" passHref>
-            <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }}>
+            <HomeItemLink asmajor={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }}>
               <ProjectScreen responsive={{ '@m768': 'tablet' }}>
                 <ProjectScreenImg scheme={screenScheme} src={`/home/screen/moment/${screenLang}/${screenScheme}.webp`} alt="" loading="lazy" />
               </ProjectScreen>
@@ -107,7 +107,7 @@ export default function Projects() {
         </ListItem>
         <ListItem nomark>
           <Link href="/pie-clockin" passHref>
-            <HomeItemLink asproject={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }}>
+            <HomeItemLink asmajor={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }}>
               <ProjectScreen responsive={{ '@m768': 'tablet' }}>
                 <ProjectScreenImg scheme={screenScheme} src={`/home/screen/pie/en/${screenScheme}.webp`} alt="" loading="lazy" />
               </ProjectScreen>
