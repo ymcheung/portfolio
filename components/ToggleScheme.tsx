@@ -45,7 +45,7 @@ export default function ToggleScheme() {
     setTheme(targetTheme);
   };
 
-  const throttleToggleScheme = useThrottledCallback(toggleTheme, 1500, {
+  const throttleToggleScheme = useThrottledCallback(toggleTheme, 1000, {
     trailing: false
   });
 

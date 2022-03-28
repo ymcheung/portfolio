@@ -68,10 +68,7 @@ export default function FulltimeABTest() {
       />
       <FloatingNav />
       <FullBlock as="header" context="cover">
-        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover" iconm={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-          <span>
-            <IconAbTest />
-          </span>
+        <HeadingLayout as="h1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} sibling="cover">
           <Heading as="span" position="itemName">
             {pageInfo.name}
           </Heading>

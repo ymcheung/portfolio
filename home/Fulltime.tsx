@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
-import { styled } from 'stitches.config';
-import IconAbTest from '@elements/IconAbTest';
 import { Container, ListItem } from '@components/layout';
 import { Heading } from '@components/headings';
 import { HomeItemsLayout, HomeItemLink } from '@home/HomeItems';
+import IconHyphen from './icons/IconHyphen';
+import IconArrow from '@elements/IconArrow';
 
 export default function Fulltime() {
   const { t, i18n } = useTranslation('home');
@@ -17,9 +17,13 @@ export default function Fulltime() {
       <HomeItemsLayout tri={{ '@m768': 'tablet'}}>
         <ListItem nomark>
           <Link href="/icook/a-b-test" passHref>
-            <HomeItemLink asfulltime={{ '@initial': 'mobile', '@mHover': 'hover' }}>
-              <IconAbTest />
-              <Heading position="homeItemName" dangerouslySetInnerHTML={{__html: t('fulltime.abtest.title')}} />
+            <HomeItemLink asminor={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }}>
+              <IconHyphen purpose="activity" hideintablet={{ '@m768': true }} />
+              <Heading position="homeItemName">
+                {t('fulltime.abtest.title')}
+                &nbsp;
+                <IconArrow wh="sq20" purpose="next" background="generic" gotoText="Go" />
+              </Heading>
             </HomeItemLink>
           </Link>
         </ListItem>
