@@ -124,7 +124,8 @@ export const IconListItem = styled(ListItem, {
       },
       noTitle: {
         gridTemplateRows: 'auto',
-        gridTemplateAreas: `"prefix description"`
+        gridTemplateAreas: `"prefix description"`,
+        columnGap: '$2'
       },
       timestamp: {
         gridTemplateRows: 'auto auto auto',

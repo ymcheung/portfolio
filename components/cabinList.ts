@@ -3,8 +3,8 @@ import { styled } from 'stitches.config';
 
 export const CabinList = styled('ul', {
   display: 'grid',
-  margin: 0,
-  padding: '0 0 $12',
+  margin: '0 0 $4',
+  padding: '0 0 $16',
 
   variants: {
     responsive: {

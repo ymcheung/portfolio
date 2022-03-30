@@ -16,7 +16,7 @@ export const HomeItemsLayout = styled('ul', {
     tri: {
       tablet: {
         grid: 'auto / repeat(3, 1fr)',
-        columnGap: '32px'
+        columnGap: '48px'
       }
     }
   }
@@ -63,8 +63,8 @@ export const HomeItemLink = styled('a', {
         grid: `"title" auto
                "description" auto / 100%`,
         columnGap: 'unset',
-        margin: '-$8',
-        padding: '$8'
+        margin: '-$8 -$8 -$8 -$12',
+        padding: '$8 $8 $8 $12'
       },
       hover: {
         backgroundColor: 'hsl($shade1600)',
@@ -102,6 +102,7 @@ export const HomeItemType = styled('span', {
 
 export const HomeItemDescription = styled('span', {
   gridArea: 'description',
+  paddingTop: '$4',
   color: 'hsl($shade600)',
   fontFamily: '$default',
   fontSize: '$14',
