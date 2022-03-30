@@ -7,7 +7,7 @@ import { styled } from 'stitches.config';
 
 import LangSwitch from '@components/LangSwitch';
 
-import { Container } from '@components/layout';
+import { FullBlock, Container } from '@components/layout';
 import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 
 import { ListItem, IconList, IconListItem } from '@components/layout';
@@ -19,8 +19,8 @@ import whyMailPreviewEn from '@public/projects/carrier/why/en/mailPreview.webp';
 import whyMailPreviewTw from '@public/projects/carrier/why/tw/mailPreview.webp';
 import flowEn from '@public/projects/carrier/flow/en.webp';
 import flowTw from '@public/projects/carrier/flow/tw.webp';
-import prototypeAppointPreviewEn from '@public/projects/carrier/prototype/en/appointment.webp';
-import prototypeAppointPreviewTw from '@public/projects/carrier/prototype/tw/appointment.webp';
+import screenDesktopEn from '@public/projects/carrier/gallery/en/new.webp';
+import screenDesktopTw from '@public/projects/carrier/gallery/tw/new.webp';
 
 const ParagraphImageContainer = styled('figure', {
   marginBottom: '$12',
@@ -46,6 +46,18 @@ const ParagraphImageContainer = styled('figure', {
         marginRight: '-120px',
         marginLeft: '-120px',
       }
+    },
+   screendesktop: {
+      mobile: {
+        marginRight: 0,
+        marginLeft: 0,
+        overflowX: 'scroll'
+      },
+      desktop: {
+        marginRight: '-120px',
+        marginLeft: '-120px',
+        overflowX: 'hidden'
+      }
     }
   }
 });
@@ -68,8 +80,6 @@ export default function Content() {
   const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
 
   const whyMailPreview = i18n.language === 'en' ? whyMailPreviewEn : whyMailPreviewTw;
-
-  const prototypeAppointPreview = i18n.language === 'en' ? prototypeAppointPreviewEn : prototypeAppointPreviewTw;
 
   return(
     <>
@@ -136,12 +146,28 @@ export default function Content() {
             </Fragment>
           ))}
         </Section>
-        <Section id="sectionPrototype" has="postmarks">
+        <Section id="sectionPrototype">
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
           <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.appoint.description')}} indent />
           <PrototypeIframe src="https://www.figma.com/embed?embed_host=ymcheung&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FL60FGYm0zgyJNTPHF64lEn%2Fcarrier-express%3Fpage-id%3D247%253A286%26node-id%3D551%253A1280%26viewport%3D295%252C48%252C0.27%26scaling%3Dscale-down%26starting-point-node-id%3D551%253A1280%26show-proto-sidebar%3D1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} allowFullScreen loading="lazy" />
         </Section>
+        <Section isgroupend>
+          <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('screenshot.title')}} />
+          <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('screenshot.subtitle')}} />
+          <Paragraph dangerouslySetInnerHTML={{__html: t('screenshot.description')}} indent />
+        </Section>
+      </Container>
+      <FullBlock project="carrier" context="section">
+        <Container responsive={{'@m768': 'max640'}}>
+          <Section>
+            <ParagraphImageContainer screendesktop={{ '@initial': 'mobile', '@m992': 'desktop' }}>
+              <Image src={router.locale === 'en' ? screenDesktopEn : screenDesktopTw} width={848} height={640} layout="fixed" alt={t('screenshot.alt')} />
+            </ParagraphImageContainer>
+          </Section>
+        </Container>
+      </FullBlock>
+      <Container as="section" responsive={{'@m768': 'max640'}}>
         <Section isgroupend>
           <PostMarksHr />
           <ParagraphPostmark dangerouslySetInnerHTML={{__html: t('postmark.description')}} />

@@ -137,6 +137,17 @@
         "敏安在 Carrier Express 網站，為 Eleven 預約健康檢查。"
     }
   },
+  "screenshot":
+  {
+    "title":
+      "仔細看",
+    "subtitle":
+      "在 iPad 或電腦上會是怎麼樣？",
+    "description":
+      "敏安也可以使用電腦進行預約：",
+    "alt":
+      "敏安在筆記型電腦上進行預約。"
+  },
   "postmark":
   {
     "description":

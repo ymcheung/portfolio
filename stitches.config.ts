@@ -20,6 +20,7 @@ export const { css, styled, globalCss, createTheme, theme, keyframes, getCssText
       shade0:    '162,2%, 6%',
 
       carrierNeon: '236,92%,64%',
+      carrier90: '210,13%,94%',
 
       pie800: '240,62%,72%',
       pie700: '240,62%,64%',
@@ -52,7 +53,7 @@ export const { css, styled, globalCss, createTheme, theme, keyframes, getCssText
       mockupDesktopConcaveMono: '$shade100',
       mockupDesktopBrowserTabMono: '$shade300',
 
-      themeCarrier: '$shade1600',
+      themeCarrier: '$carrier90',
 
       themePie: '$shade1600',
       metaTitlePie: '$pie400',
@@ -186,7 +187,7 @@ export const darkTheme = createTheme({
     mockupDesktopConcaveMono: '$shade1500',
     mockupDesktopBrowserTabMono: '$shade1400',
 
-    themeCarrier: '$shade0',
+    themeCarrier: '$carrier90',
 
     themePie: '$pie0',
     metaTitlePie: '$pie800',
