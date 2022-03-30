@@ -56,7 +56,7 @@ export default function Cover() {
       </Device>
       <Device display={{ '@initial': 'none', '@m768': 'block' }} responsive="tablet" model="mobileDual">
         <ScreenshotTablet src={`/projects/carrier/gallery/${imgLocale}/homeIndex${imgAffix}.jpg`} placement="left" alt="Screenshot: Upcoming Health Checks" loading="lazy" />
-        <ScreenshotTablet src={`/projects/carrier/gallery/${imgLocale}/furryShowOnTime${imgAffix}.jpg`} placement="right" alt="Screenshot: View the details of Seven" loading="lazy" />
+        <ScreenshotTablet src={`/projects/carrier/gallery/${imgLocale}/furryShowDelayed${imgAffix}.jpg`} placement="right" alt="Screenshot: View the details of Seven" loading="lazy" />
       </Device>
     </>
   )
