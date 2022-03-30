@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 
 import { Container, ListItem } from '@components/layout';
 import { Heading } from '@components/headings';
-import { HomeItemsLayout, HomeItemLink } from '@home/HomeItems';
+import { HomeItemsLayout, HomeItemLink, HomeItemDescription } from '@home/HomeItems';
 import IconHyphen from './icons/IconHyphen';
 import IconArrow from '@elements/IconArrow';
 
@@ -24,6 +24,7 @@ export default function Fulltime() {
                 &nbsp;
                 <IconArrow wh="sq20" purpose="next" background="generic" gotoText="Go" />
               </Heading>
+              <HomeItemDescription dangerouslySetInnerHTML={{__html: t('fulltime.abtest.description', { explore: t('verb.explore') })}} />
             </HomeItemLink>
           </Link>
         </ListItem>

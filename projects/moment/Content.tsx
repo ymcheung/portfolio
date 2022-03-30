@@ -47,7 +47,8 @@ const IterationMappingList = styled('dl', {
 const IterationMappingTitle = styled('dt', {
   padding: '$8 $12',
   color: 'hsl($monoTitleLight)',
-  fontSize: '$18',
+  fontSize: '$16',
+  lineHeight: '16px',
   backgroundColor: 'hsl($monoGraphDevice)'
 });
 
