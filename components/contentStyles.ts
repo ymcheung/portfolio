@@ -8,14 +8,14 @@ export const ContentTitle = styled('h2', {
   variants: {
     purpose: {
       section: {
-        margin: '0 0 $12',
+        margin: '0 0 $16',
         fontSize: '$20',
         lineHeight: '24px'
       },
       paragraph: {
-        margin: '0 0 $8',
-        fontSize: '$16',
-        lineHeight: '20px'
+        margin: '0 0 $16',
+        fontSize: '$18',
+        lineHeight: '24px'
       },
       graph: {
         display: 'inline-block',
@@ -25,8 +25,8 @@ export const ContentTitle = styled('h2', {
       },
       iconListItem: {
         margin: 0,
-        fontSize: '$16',
-        lineHeight: '24px'
+        fontSize: '$18',
+        lineHeight: '28px'
       },
     },
     scheme: {
@@ -85,7 +85,7 @@ export const Section = styled('div', {
   variants: {
     has: {
       siblings: {
-        marginBottom: '$24'
+        marginBottom: '32px'
       },
       postmarks: {
         marginBottom: '48px'
@@ -109,16 +109,16 @@ export const Paragraph = styled('p', {
   variants: {
     purpose: {
       default: {
-        fontSize: '$16',
-        lineHeight: '24px',
+        fontSize: '$18',
+        lineHeight: '28px',
       },
       question: {
         fontSize: '$24',
-        lineHeight: '32px',
+        lineHeight: '36px',
       },
       affix: {
-        fontSize: '$14',
-        lineHeight: '16px'
+        fontSize: '$16',
+        lineHeight: '20px'
       }
     },
     scheme: {
@@ -213,8 +213,8 @@ export const ContentList = styled('ul', {
 
 export const ContentListItem = styled(ListItem, {
   fontFamily: '$default',
-  fontSize: '$16',
-  lineHeight: '24px',
+  fontSize: '$18',
+  lineHeight: '28px',
 
   variants: {
     scheme: {
