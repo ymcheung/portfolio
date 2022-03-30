@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import { useRouter } from 'next/router';
+import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 
@@ -76,6 +77,8 @@ interface ParagraphProps {
 export default function Content() {
   const router = useRouter();
   const { t, i18n } = useTranslation('carrier');
+
+  const { resolvedTheme } = useTheme();
 
   const isItalic = i18n.language === 'en';
   const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
@@ -161,7 +164,7 @@ export default function Content() {
       </Container>
       <FullBlock project="carrier" context="section">
         <ParagraphImageContainer screendesktop={{ '@initial': 'mobile', '@m992': 'desktop' }}>
-          <ParagraphImageScreenDesktop src={`/projects/carrier/gallery/${router.locale === 'en' ? 'en' : 'tw'}/new.webp`} loading="lazy" alt={t('screenshot.alt')} />
+          <ParagraphImageScreenDesktop src={`/projects/carrier/gallery/${router.locale === 'en' ? 'en' : 'tw'}/new${resolvedTheme === 'dark' ? 'Dark' : 'Light'}.webp`} loading="lazy" alt={t('screenshot.alt')} />
         </ParagraphImageContainer>
       </FullBlock>
       <Container as="section" responsive={{'@m768': 'max640'}}>
