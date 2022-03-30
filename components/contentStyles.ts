@@ -13,7 +13,7 @@ export const ContentTitle = styled('h2', {
         lineHeight: '24px'
       },
       paragraph: {
-        margin: '0 0 $16',
+        margin: '0 0 $8',
         fontSize: '$18',
         lineHeight: '24px'
       },

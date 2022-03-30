@@ -126,7 +126,7 @@
   "prototype":
   {
     "title":
-      "Prototype",
+      "Give It a Try",
     "appoint":
     {
       "title":
@@ -136,6 +136,17 @@
       "description":
         "Min-An makes an appointment for Eleven on Carrier Express."
     }
+  },
+  "screenshot":
+  {
+    "title":
+      "Take a Closer Look",
+    "subtitle":
+      "What does the service look like on an iPad or laptop?",
+    "description":
+      "Alternatively, Min-An could make appointments on her laptop.",
+    "alt":
+      "Min-An makes an appointment at her laptop."
   },
   "postmark":
   {
