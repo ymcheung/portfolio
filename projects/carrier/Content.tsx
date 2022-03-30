@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import { useRouter } from 'next/router';
+import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 
@@ -19,8 +20,6 @@ import whyMailPreviewEn from '@public/projects/carrier/why/en/mailPreview.webp';
 import whyMailPreviewTw from '@public/projects/carrier/why/tw/mailPreview.webp';
 import flowEn from '@public/projects/carrier/flow/en.webp';
 import flowTw from '@public/projects/carrier/flow/tw.webp';
-import screenDesktopEn from '@public/projects/carrier/gallery/en/new.webp';
-import screenDesktopTw from '@public/projects/carrier/gallery/tw/new.webp';
 
 const ParagraphImageContainer = styled('figure', {
   marginBottom: '$12',
@@ -47,19 +46,22 @@ const ParagraphImageContainer = styled('figure', {
         marginLeft: '-120px',
       }
     },
-   screendesktop: {
+    screendesktop: {
       mobile: {
         marginRight: 0,
         marginLeft: 0,
         overflowX: 'scroll'
       },
       desktop: {
-        marginRight: '-120px',
-        marginLeft: '-120px',
-        overflowX: 'hidden'
+        overflowX: 'hidden',
+        textAlign: 'center'
       }
     }
   }
+});
+
+const ParagraphImageScreenDesktop = styled('img', {
+  maxWidth: '1080px'
 });
 
 interface statsProps {
@@ -75,6 +77,8 @@ interface ParagraphProps {
 export default function Content() {
   const router = useRouter();
   const { t, i18n } = useTranslation('carrier');
+
+  const { resolvedTheme } = useTheme();
 
   const isItalic = i18n.language === 'en';
   const itemSpace = i18n.language === 'en' ? 'normal' : 'wide';
@@ -159,13 +163,9 @@ export default function Content() {
         </Section>
       </Container>
       <FullBlock project="carrier" context="section">
-        <Container responsive={{'@m768': 'max640'}}>
-          <Section>
-            <ParagraphImageContainer screendesktop={{ '@initial': 'mobile', '@m992': 'desktop' }}>
-              <Image src={router.locale === 'en' ? screenDesktopEn : screenDesktopTw} width={848} height={640} layout="fixed" alt={t('screenshot.alt')} />
-            </ParagraphImageContainer>
-          </Section>
-        </Container>
+        <ParagraphImageContainer screendesktop={{ '@initial': 'mobile', '@m992': 'desktop' }}>
+          <ParagraphImageScreenDesktop src={`/projects/carrier/gallery/${router.locale === 'en' ? 'en' : 'tw'}/new${resolvedTheme === 'dark' ? 'Dark' : 'Light'}.webp`} loading="lazy" alt={t('screenshot.alt')} />
+        </ParagraphImageContainer>
       </FullBlock>
       <Container as="section" responsive={{'@m768': 'max640'}}>
         <Section isgroupend>

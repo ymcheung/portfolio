@@ -132,9 +132,9 @@
       "title":
         "Make an Appointment",
       "alt":
-        "Min-An makes an appointment for Eleven.",
+        "Min-An makes an appointment for Eleven on her iPhone.",
       "description":
-        "Min-An makes an appointment for Eleven on Carrier Express."
+        "Min-An makes an appointment for Eleven."
     }
   },
   "screenshot":
@@ -146,7 +146,7 @@
     "description":
       "Alternatively, Min-An could make appointments on her laptop.",
     "alt":
-      "Min-An makes an appointment at her laptop."
+      "Min-An makes an appointment on her laptop."
   },
   "postmark":
   {
