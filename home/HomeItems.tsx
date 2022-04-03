@@ -39,8 +39,11 @@ export const HomeItemLink = styled('a', {
       },
       tablet: {
         grid: `"screen type" 24px
-               "screen name" auto / minmax(296px, 1fr) 2fr`,
+               "screen name" auto / minmax(180px, 1fr) 2fr`,
         padding: '$8 $8 0'
+      },
+      desktop: {
+        gridTemplateColumns: 'minmax(296px, 1fr) 2fr'
       },
       hover: {
         transition: 'border-color $easeIn',

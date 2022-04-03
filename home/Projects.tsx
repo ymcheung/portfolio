@@ -6,7 +6,7 @@ import { useTheme } from 'next-themes';
 
 import { styled } from 'stitches.config';
 
-import { Container, ListItem } from '@components/layout';
+import { ListItem } from '@components/layout';
 import { Heading } from '@components/headings';
 import { HomeItemsLayout, HomeItemLink, HomeItemType } from '@home/HomeItems';
 
@@ -17,7 +17,11 @@ const ProjectScreen = styled('figure', {
 
   variants: {
     responsive: {
+      mobile: {
+        minHeight:'276px'
+      },
       tablet: {
+        minHeight:'140px',
         gridArea: 'screen',
         padding: '0 $16 0 0',
       }
@@ -54,7 +58,6 @@ const ProjectScreen = styled('figure', {
 
 const ProjectScreenImg = styled('img', {
   maxWidth: '100%',
-  minHeight: '240px',
   borderRadius: '0 12px 0 0',
 
   variants: {
@@ -86,13 +89,13 @@ export default function Projects() {
   const screenScheme = resolvedTheme === 'light' ? 'light' : 'dark';
 
   return(
-    <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="homeSection">
+    <>
       <Heading position="homeSection" isitalic={router.locale === 'en'} dangerouslySetInnerHTML={{__html: t('project.title')}} />
       <HomeItemsLayout duo={{ '@m768': 'tablet' }}>
         <ListItem nomark>
           <Link href="/carrier-express" passHref>
-            <HomeItemLink asmajor={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }}>
-              <ProjectScreen responsive={{ '@m768': 'tablet' }}>
+            <HomeItemLink asmajor={{ '@initial': 'mobile', '@m768': 'tablet', '@m992': 'desktop', '@mHover': 'hover' }}>
+              <ProjectScreen responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
                 <ProjectScreenImg scheme={screenScheme} src={`/home/screen/carrier/${screenLang}/${screenScheme}.webp`} alt="" loading="lazy" />
               </ProjectScreen>
               <HomeItemType responsive={{ '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: t('project.type.app')}} />
@@ -102,8 +105,8 @@ export default function Projects() {
         </ListItem>
         <ListItem nomark>
           <Link href="/moment" passHref>
-            <HomeItemLink asmajor={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }}>
-              <ProjectScreen responsive={{ '@m768': 'tablet' }}>
+            <HomeItemLink asmajor={{ '@initial': 'mobile', '@m768': 'tablet', '@m992': 'desktop', '@mHover': 'hover' }}>
+              <ProjectScreen responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
                 <ProjectScreenImg scheme={screenScheme} src={`/home/screen/moment/${screenLang}/${screenScheme}.webp`} alt="" loading="lazy" />
               </ProjectScreen>
               <HomeItemType  responsive={{ '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: t('project.type.web')}} />
@@ -113,8 +116,8 @@ export default function Projects() {
         </ListItem>
         <ListItem nomark>
           <Link href="/pie-clockin" passHref>
-            <HomeItemLink asmajor={{ '@initial': 'mobile', '@m768': 'tablet', '@mHover': 'hover' }}>
-              <ProjectScreen responsive={{ '@m768': 'tablet' }}>
+            <HomeItemLink asmajor={{ '@initial': 'mobile', '@m768': 'tablet', '@m992': 'desktop', '@mHover': 'hover' }}>
+              <ProjectScreen responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
                 <ProjectScreenImg scheme={screenScheme} src={`/home/screen/pie/en/${screenScheme}.webp`} alt="" loading="lazy" />
               </ProjectScreen>
               <HomeItemType  responsive={{ '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: t('project.type.app')}} />
@@ -123,6 +126,6 @@ export default function Projects() {
           </Link>
         </ListItem>
       </HomeItemsLayout>
-    </Container>
+    </>
   );
 }

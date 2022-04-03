@@ -16,6 +16,14 @@ export const Container = styled('div', {
         maxWidth: '1168px'
       }
     },
+    forprojects: {
+      mobile: {
+        minHeight: '1128px'
+      },
+      tablet: {
+        minHeight: '552px'
+      }
+    },
     space: {
       beforeDivide: {
         marginBottom: '$8'
