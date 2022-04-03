@@ -8,6 +8,7 @@ import HeadMeta from '@utils/HeadMeta';
 
 import { styled, globalCss, keyframes } from 'stitches.config';
 
+import { Container } from '@components/layout';
 import NameHeader from '@home/NameHeader';
 import Fulltime from '@home/Fulltime';
 import Projects from '@home/Projects';
@@ -170,7 +171,9 @@ export default function Home() {
         <NameHeader />
         <Cans animation={{ '@mReduced': 'reduced' }} />
       </Header>
-      <Projects />
+      <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} forprojects={{ '@initial': 'mobile', '@m768': 'tablet' }} space="homeSection">
+        <Projects />
+      </Container>
       <Fulltime />
       <Activity />
       <ExternalLinks />

@@ -6,7 +6,7 @@ import { useTheme } from 'next-themes';
 
 import { styled } from 'stitches.config';
 
-import { Container, ListItem } from '@components/layout';
+import { ListItem } from '@components/layout';
 import { Heading } from '@components/headings';
 import { HomeItemsLayout, HomeItemLink, HomeItemType } from '@home/HomeItems';
 
@@ -86,7 +86,7 @@ export default function Projects() {
   const screenScheme = resolvedTheme === 'light' ? 'light' : 'dark';
 
   return(
-    <Container as="main" responsive={{ '@m992': 'max960', '@m1200': 'max1168' }} space="homeSection">
+    <>
       <Heading position="homeSection" isitalic={router.locale === 'en'} dangerouslySetInnerHTML={{__html: t('project.title')}} />
       <HomeItemsLayout duo={{ '@m768': 'tablet' }}>
         <ListItem nomark>
@@ -123,6 +123,6 @@ export default function Projects() {
           </Link>
         </ListItem>
       </HomeItemsLayout>
-    </Container>
+    </>
   );
 }
