@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
@@ -72,9 +73,14 @@ const ProjectScreenImg = styled('img', {
 });
 
 export default function Projects() {
+  const [ mounted, setMounted ] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   const { t } = useTranslation('home');
   const router = useRouter();
   const { resolvedTheme } = useTheme();
+
+  if (!mounted) return null;
 
   const screenLang = router.locale === 'en' ? 'en' : 'tw';
   const screenScheme = resolvedTheme === 'light' ? 'light' : 'dark';

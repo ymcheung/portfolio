@@ -12,7 +12,6 @@ export const globalStyles = globalCss({
 
   body: {
     margin: 0,
-    transition: 'background-color 0.1s ease-in',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale'
   }
