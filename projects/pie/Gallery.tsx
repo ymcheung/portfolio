@@ -48,10 +48,10 @@ const PieScreenshotImg = styled(Image, {
 export default function Gallery() {
   const { t } = useTranslation('pie');
 
-  const screenshotClocking = '/projects/pie/clockingNone.webp';
-  const screenshotForms = '/projects/pie/formsConfirmApply.webp';
-  const screenshotStats = '/projects/pie/statsHistory.webp';
-  const screenshotFormsNew = '/projects/pie/formsNew.webp';
+  const screenshotClocking = '/projects/pie/gallery/clockingNone.webp';
+  const screenshotForms = '/projects/pie/gallery/formsConfirmApply.webp';
+  const screenshotStats = '/projects/pie/gallery/statsHistory.webp';
+  const screenshotFormsNew = '/projects/pie/gallery/formsNew.webp';
 
   return(
     <>
