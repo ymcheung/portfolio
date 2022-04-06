@@ -164,7 +164,7 @@ export default function Content() {
       </Container>
       <FullBlock project="carrier" context="section">
         <ParagraphImageContainer screendesktop={{ '@initial': 'mobile', '@m992': 'desktop' }}>
-          <ParagraphImageScreenDesktop src={`/projects/carrier/gallery/${router.locale === 'en' ? 'en' : 'tw'}/new${resolvedTheme === 'dark' ? 'Dark' : 'Light'}.webp`} loading="lazy" alt={t('screenshot.alt')} />
+          <ParagraphImageScreenDesktop src={`/projects/carrier/gallery/${router.locale === 'en' ? 'en' : 'tw'}/newDesktop${resolvedTheme === 'dark' ? 'Dark' : 'Light'}.webp`} loading="lazy" alt={t('screenshot.alt')} />
         </ParagraphImageContainer>
       </FullBlock>
       <Container as="section" responsive={{'@m768': 'max640'}}>
