@@ -58,6 +58,7 @@ const ProjectScreen = styled('figure', {
 
 const ProjectScreenImg = styled('img', {
   maxWidth: '100%',
+  aspectRatio: '75 / 64',
   borderRadius: '0 12px 0 0',
 
   variants: {
