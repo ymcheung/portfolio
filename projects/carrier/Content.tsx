@@ -154,7 +154,7 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
           <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.appoint.description')}} indent />
-          <PrototypeIframe src="https://www.figma.com/embed?embed_host=ymcheung&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FL60FGYm0zgyJNTPHF64lEn%2Fcarrier-express%3Fpage-id%3D247%253A286%26node-id%3D551%253A1280%26viewport%3D295%252C48%252C0.27%26scaling%3Dscale-down%26starting-point-node-id%3D551%253A1280%26show-proto-sidebar%3D1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} allowFullScreen loading="lazy" />
+          <PrototypeIframe src="https://www.figma.com/embed?embed_host=ymcheung&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FL60FGYm0zgyJNTPHF64lEn%2Fcarrier-express%3Fpage-id%3D247%253A286%26node-id%3D551%253A1021%26viewport%3D241%252C48%252C0.46%26scaling%3Dscale-down%26starting-point-node-id%3D551%253A1021%26show-proto-sidebar%3D1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} allowFullScreen loading="lazy" />
         </Section>
         <Section isgroupend>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('screenshot.title')}} />
