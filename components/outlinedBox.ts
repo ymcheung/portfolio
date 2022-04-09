@@ -1,43 +1,50 @@
-import { styled, css } from 'stitches.config';
+import { css } from 'stitches.config';
 
-export const OutlinedBox = css({
+export const outlinedBox = css({
   margin: '0 0 $8',
   padding: 0,
   fontFamily: '$default',
-  border: '2px solid hsl($monoGraphDevice)',
+  borderWidth: '2px',
+  borderStyle: 'solid',
   borderRadius: '8px',
 
   variants: {
     purpose: {
+      lyric: {
+        borderColor: 'hsl($monoGraphDevice)'
+      },
       stats: {
         display: 'grid',
-        grid: `"total child" auto
-               ". child" auto / 96px 1fr`
+        grid: `auto / 112px 1fr`,
+        borderColor: 'hsl($shade1400)'
       }
     }
   }
 });
 
-export const OutlinedBoxTitle = css({
-  color: 'hsl($monoTitleLight)',
-  backgroundColor: 'hsl($monoGraphDevice)',
-
+export const outlinedBoxTitle = css({
   variants: {
     purpose: {
       lyric: {
         padding: '$8 $12',
+        color: 'hsl($monoTitleLight)',
         fontSize: '$16',
         lineHeight: '16px',
+        backgroundColor: 'hsl($monoGraphDevice)'
+      },
+      stats: {
+        padding: '$16 $8',
+        color: 'hsl($shade600)',
+        backgroundColor: 'hsl($shade1400)'
       }
     }
   }
 });
 
 
-export const OutlinedBoxItem = css({
+export const outlinedBoxItem = css({
   margin: 0,
   padding: '$12',
-  color: 'hsl($monoContentParagraph)',
   fontSize: '$16',
   lineHeight: '16px',
 
@@ -48,6 +55,15 @@ export const OutlinedBoxItem = css({
       },
       bottom: {
         borderBottom: '2px solid hsl($monoGraphDevice)'
+      }
+    },
+    purpose: {
+      lyric: {
+        color: 'hsl($monoContentParagraph)'
+      },
+      stats: {
+        padding: '$16 $8 $12',
+        color: 'hsl($shade600)'
       }
     }
   }
