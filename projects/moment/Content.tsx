@@ -11,6 +11,7 @@ import LangSwitch from '@components/LangSwitch';
 
 import { ContentTitle, ContentTitlePrefix, Section, Paragraph, ContentList, ContentListItem, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 import { CabinList } from '@components/cabinList';
+import { outlinedBox, outlinedBoxTitle, outlinedBoxItem } from '@components/outlinedBox';
 
 import IconSearch from './IconSearch';
 
@@ -31,42 +32,6 @@ const BubbleSearch = styled('span', {
       },
       tablet: {
         maxWidth: 'max-content'
-      }
-    }
-  }
-});
-
-const IterationMappingList = styled('dl', {
-  margin: '0 0 $8',
-  padding: 0,
-  fontFamily: '$default',
-  border: '2px solid hsl($monoGraphDevice)',
-  borderRadius: '8px'
-});
-
-const IterationMappingTitle = styled('dt', {
-  padding: '$8 $12',
-  color: 'hsl($monoTitleLight)',
-  fontSize: '$16',
-  lineHeight: '16px',
-  backgroundColor: 'hsl($monoGraphDevice)'
-});
-
-
-const IterationMappingItems = styled('dd', {
-  margin: 0,
-  padding: '$12',
-  color: 'hsl($monoContentParagraph)',
-  fontSize: '$16',
-  lineHeight: '16px',
-
-  variants: {
-    divide: {
-      top: {
-        borderTop: '2px solid hsl($monoGraphDevice)'
-      },
-      bottom: {
-        borderBottom: '2px solid hsl($monoGraphDevice)'
       }
     }
   }
@@ -167,20 +132,20 @@ export default function Content() {
             </ContentList>
             <CabinList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
               <ListItem nomark>
-                <IterationMappingList>
-                  <IterationMappingTitle dangerouslySetInnerHTML={{__html: t('idea.iteration.media.lala')}} />
-                  <IterationMappingItems>I Ran (So Far Away)</IterationMappingItems>
-                  <IterationMappingItems>Take on Me</IterationMappingItems>
-                </IterationMappingList>
+                <dl className={outlinedBox({ purpose: 'lyric' })}>
+                  <dt className={outlinedBoxTitle({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.lala')}} />
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })}>I Ran (So Far Away)</dd>
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })}>Take on Me</dd>
+                </dl>
               </ListItem>
               <ListItem nomark>
-                <IterationMappingList>
-                  <IterationMappingTitle dangerouslySetInnerHTML={{__html: t('idea.iteration.media.ready')}} />
-                  <IterationMappingItems>Jump</IterationMappingItems>
-                  <IterationMappingItems>Take on Me</IterationMappingItems>
-                  <IterationMappingItems>Stayin’ Alive</IterationMappingItems>
-                  <IterationMappingItems>Everybody Wants to Rule the World</IterationMappingItems>
-                </IterationMappingList>
+                <dl className={outlinedBox({ purpose: 'lyric' })}>
+                  <dt className={outlinedBoxTitle({ purpose: 'lyric'})} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.ready')}} />
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })}>Jump</dd>
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })}>Take on Me</dd>
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })}>Stayin’ Alive</dd>
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })}>Everybody Wants to Rule the World</dd>
+                </dl>
               </ListItem>
             </CabinList>
             <ContentTitlePrefix scheme="mono" dangerouslySetInnerHTML={{__html: t('idea.iteration.second')}} />
@@ -188,27 +153,27 @@ export default function Content() {
             <Paragraph dangerouslySetInnerHTML={{__html: t('idea.bySong.description')}} indent scheme="mono" />
             <CabinList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
               <ListItem nomark>
-                <IterationMappingList>
-                  <IterationMappingTitle>Starman</IterationMappingTitle>
-                  <IterationMappingItems divide="bottom" dangerouslySetInnerHTML={{__html: t('idea.iteration.artist', { name: 'David Bowie' })}} />
-                  <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.lightyear')}} />
-                  <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.zero')}} />
-                  <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.martian')}} />
-                  <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.crown')}} />
-                  <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.simpson')}} />
-                  <IterationMappingItems divide="top" dangerouslySetInnerHTML={{__html: t('idea.iteration.lyric')}} />
-                </IterationMappingList>
+                <dl className={outlinedBox({ purpose: 'lyric' })}>
+                  <dt className={outlinedBoxTitle({ purpose: 'lyric' })}>Starman</dt>
+                  <dd className={outlinedBoxItem({ divide: 'bottom', purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.artist', { name: 'David Bowie' })}} />
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.lightyear')}} />
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.zero')}} />
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.martian')}} />
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.crown')}} />
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.simpson')}} />
+                  <dd className={outlinedBoxItem({ divide: 'top', purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.lyric')}} />
+                </dl>
               </ListItem>
               <ListItem nomark>
-                <IterationMappingList>
-                  <IterationMappingTitle>Everybody Wants to Rule the World</IterationMappingTitle>
-                  <IterationMappingItems divide="bottom" dangerouslySetInnerHTML={{__html: t('idea.iteration.artist', { name: 'Tears For Fears' })}} />
-                  <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.bee')}} />
-                  <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.ready')}} />
-                  <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.click')}} />
-                  <IterationMappingItems dangerouslySetInnerHTML={{__html: t('idea.iteration.media.glee')}} />
-                  <IterationMappingItems divide="top" dangerouslySetInnerHTML={{__html: t('idea.iteration.lyric')}} />
-                </IterationMappingList>
+                <dl className={outlinedBox({ purpose: 'lyric' })}>
+                  <dt className={outlinedBoxTitle({ purpose: 'lyric'})}>Everybody Wants to Rule the World</dt>
+                  <dd className={outlinedBoxItem({ divide: 'bottom', purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.artist', { name: 'Tears For Fears' })}} />
+                  <dd  className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.bee')}} />
+                  <dd  className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.ready')}} />
+                  <dd  className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.click')}} />
+                  <dd  className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.glee')}} />
+                  <dd className={outlinedBoxItem({ divide: 'top', purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.lyric')}} />
+                </dl>
               </ListItem>
             </CabinList>
             <Paragraph dangerouslySetInnerHTML={{__html: t('idea.bySong.then')}} indent sectionend scheme="mono" />

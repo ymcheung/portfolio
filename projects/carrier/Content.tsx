@@ -12,6 +12,7 @@ import { FullBlock, Container } from '@components/layout';
 import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 
 import { ListItem, IconList, IconListItem } from '@components/layout';
+import { outlinedBox, outlinedBoxTitle, outlinedBoxItem } from '@components/outlinedBox';
 import { FeatureList } from '@projects/featured';
 import { PrototypeIframe } from '@elements/prototypeIframe';
 
@@ -20,6 +21,25 @@ import whyMailPreviewEn from '@public/projects/carrier/why/en/mailPreview.webp';
 import whyMailPreviewTw from '@public/projects/carrier/why/tw/mailPreview.webp';
 import flowEn from '@public/projects/carrier/flow/en.webp';
 import flowTw from '@public/projects/carrier/flow/tw.webp';
+
+const StatNumber = styled('strong', {
+  display: 'inline-block',
+  fontWeight: 600,
+
+  variants: {
+    position: {
+      total: {
+        fontSize: '40px',
+        lineHeight: '40px'
+      },
+      percentage: {
+        fontSize: '$24',
+        lineHeight: '24px',
+        fontStyle: 'italic'
+      }
+    }
+  }
+});
 
 const ParagraphImageContainer = styled('figure', {
   marginBottom: '$12',
@@ -100,20 +120,18 @@ export default function Content() {
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('stats.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('stats.description')}} indent />
-          <FeatureList space={itemSpace} siblings="hasSiblings">
-            <ListItem nomark>
-              <ContentTitle featurednumber="normal">63</ContentTitle>
+          <ul className={outlinedBox({ purpose: 'stats' })}>
+            <ListItem nomark className={outlinedBoxTitle({ purpose: 'stats' })}>
+              <StatNumber position="total">63</StatNumber>
               <Paragraph dangerouslySetInnerHTML={{__html: t('stats.respond.affix')}} purpose="affix" sectionend />
             </ListItem>
-          </FeatureList>
-          <IconList>
-            {t<string, statsProps[]>('stats.respond.findings', { returnObjects: true }).map(({ count, affix }, index: number) => (
-              <IconListItem purpose="noTitle" prefixwidth={24} nomark key={`statsFinding-${index}`}>
-                <ContentTitle as="strong" purpose="iconListItem">{count}</ContentTitle>
-                <Paragraph sectionend>{affix}</Paragraph>
-              </IconListItem>
-            ))}
-          </IconList>
+            <ListItem nomark className={outlinedBoxItem({ purpose: 'stats' })}>
+              <StatNumber position="percentage">23.8<small>%</small></StatNumber>
+              <Paragraph dangerouslySetInnerHTML={{__html: t('stats.respond.findings.fail')}} />
+              <StatNumber position="percentage">38.1<small>%</small></StatNumber>
+              <Paragraph dangerouslySetInnerHTML={{__html: t('stats.respond.findings.interested')}} sectionend />
+            </ListItem>
+          </ul>
         </Section>
         <Section>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('who.title')}} />
@@ -154,7 +172,7 @@ export default function Content() {
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('prototype.title')}} />
           <ContentTitle purpose="paragraph" dangerouslySetInnerHTML={{__html: t('prototype.appoint.title')}} />
           <Paragraph dangerouslySetInnerHTML={{__html: t('prototype.appoint.description')}} indent />
-          <PrototypeIframe src="https://www.figma.com/embed?embed_host=ymcheung&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FL60FGYm0zgyJNTPHF64lEn%2Fcarrier-express%3Fpage-id%3D247%253A286%26node-id%3D551%253A1280%26viewport%3D295%252C48%252C0.27%26scaling%3Dscale-down%26starting-point-node-id%3D551%253A1280%26show-proto-sidebar%3D1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} allowFullScreen loading="lazy" />
+          <PrototypeIframe src="https://www.figma.com/embed?embed_host=ymcheung&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FL60FGYm0zgyJNTPHF64lEn%2Fcarrier-express%3Fpage-id%3D247%253A286%26node-id%3D551%253A1021%26viewport%3D241%252C48%252C0.46%26scaling%3Dscale-down%26starting-point-node-id%3D551%253A1021%26show-proto-sidebar%3D1" responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} allowFullScreen loading="lazy" />
         </Section>
         <Section isgroupend>
           <ContentTitle purpose="section" dangerouslySetInnerHTML={{__html: t('screenshot.title')}} />

@@ -16,7 +16,7 @@
   "stats":
   {
     "title":
-      "Stats",
+      "Asking Pet Owners",
     "description":
       "I wanted to know how pet owners reminded themselves to take their cats/dogs to the vet for health checks and started a questionnaire from November 2021.",
     "respond":
@@ -24,26 +24,12 @@
       "affix":
         "Pet Owners",
       "findings":
-      [
-        {
-          "count":
-            43,
-          "affix":
-            "of them took their cats/dogs to health checks within a week after seeing the reminder."
-        },
-        {
-          "count":
-            15,
-          "affix":
-            "of them didn’t take their cats/dogs to health checks periodically."
-        },
-        {
-          "count":
-            24,
-          "affix":
-            "of them are interested in the service about health check for their cats/dogs."
-        }
-      ]
+      {
+        "fail":
+          "didn’t take their cats/dogs to health checks periodically.",
+        "interested":
+          "are interested in the service about health check for their cats/dogs."
+      }
     }
   },
   "who":
