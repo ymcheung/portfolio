@@ -168,10 +168,10 @@ export default function Content() {
                 <dl className={outlinedBox({ purpose: 'lyric' })}>
                   <dt className={outlinedBoxTitle({ purpose: 'lyric'})}>Everybody Wants to Rule the World</dt>
                   <dd className={outlinedBoxItem({ divide: 'bottom', purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.artist', { name: 'Tears For Fears' })}} />
-                  <dd  className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.bee')}} />
-                  <dd  className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.ready')}} />
-                  <dd  className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.click')}} />
-                  <dd  className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.glee')}} />
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.bee')}} />
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.ready')}} />
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.click')}} />
+                  <dd className={outlinedBoxItem({ purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.media.glee')}} />
                   <dd className={outlinedBoxItem({ divide: 'top', purpose: 'lyric' })} dangerouslySetInnerHTML={{__html: t('idea.iteration.lyric')}} />
                 </dl>
               </ListItem>
