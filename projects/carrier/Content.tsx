@@ -11,9 +11,8 @@ import LangSwitch from '@components/LangSwitch';
 import { FullBlock, Container } from '@components/layout';
 import { ContentTitle, Section, Paragraph, PostMarksHr, ParagraphPostmark } from '@components/contentStyles';
 
-import { ListItem, IconList, IconListItem } from '@components/layout';
+import { ListItem } from '@components/layout';
 import { outlinedBox, outlinedBoxTitle, outlinedBoxItem } from '@components/outlinedBox';
-import { FeatureList } from '@projects/featured';
 import { PrototypeIframe } from '@elements/prototypeIframe';
 
 import productivity from '@public/projects/carrier/why/productivity.webp';
@@ -42,7 +41,6 @@ const StatNumber = styled('strong', {
 });
 
 const ParagraphImageContainer = styled('figure', {
-  minHeight: '800px',
   marginBottom: '$12',
   padding: 0,
 
@@ -69,6 +67,7 @@ const ParagraphImageContainer = styled('figure', {
     },
     screendesktop: {
       mobile: {
+        minHeight: '800px',
         marginRight: 0,
         marginLeft: 0,
         overflowX: 'scroll'
