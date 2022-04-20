@@ -42,6 +42,7 @@ const StatNumber = styled('strong', {
 });
 
 const ParagraphImageContainer = styled('figure', {
+  minHeight: '800px',
   marginBottom: '$12',
   padding: 0,
 
@@ -181,7 +182,7 @@ export default function Content() {
         </Section>
       </Container>
       <FullBlock project="carrier" context="section">
-        <ParagraphImageContainer screendesktop={{ '@initial': 'mobile', '@m992': 'desktop' }}>
+        <ParagraphImageContainer screendesktop={{ '@initial': 'mobile', '@m1200': 'desktop' }}>
           <ParagraphImageScreenDesktop src={`/projects/carrier/gallery/${router.locale === 'en' ? 'en' : 'tw'}/newDesktop${resolvedTheme === 'dark' ? 'Dark' : 'Light'}.webp`} loading="lazy" alt={t('screenshot.alt')} />
         </ParagraphImageContainer>
       </FullBlock>
