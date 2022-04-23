@@ -1,0 +1,9 @@
+{
+  "trailingSlash": false,
+  "redirects": [{
+      "source": "/zh-Hant-TW/*",
+      "destination": "/zh-TW/*",
+      "permanent": true
+    }
+  ]
+}
