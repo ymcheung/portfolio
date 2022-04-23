@@ -1,6 +1,15 @@
-const { i18n } = require('./next-i18next.config')
+const { i18n } = require('./next-i18next.config');
 
 module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/zh-Hant-TW/:path*',
+        destination: '/zh-TW/:path*',
+        permanent: true
+      }
+    ];
+  },
   i18n,
   images: {
     formats: ['image/webp']
@@ -12,4 +21,4 @@ module.exports = {
 
     return config;
   }
-}
+};
