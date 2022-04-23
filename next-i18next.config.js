@@ -13,7 +13,7 @@ module.exports = {
       'process'
     ],
     defaultLocale: 'en',
-    locales: ['en', 'zh-Hant-TW'],
+    locales: ['en', 'zh-TW'],
     localeDetection: false
   }
 };

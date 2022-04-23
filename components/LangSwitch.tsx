@@ -69,7 +69,7 @@ function LangSwitch({ position, responsive }: LangSwitchProps) {
   const langName = i18n.language === 'en' ? '中文' : 'English';
 
   return(
-    <Link href={router.pathname} locale={router.locale === 'en' ? 'zh-Hant-TW' : 'en'} passHref>
+    <Link href={router.pathname} locale={router.locale === 'en' ? 'zh-TW' : 'en'} passHref>
       <Switch position={position} responsive={responsive}>
         <IconLangSwitch />
         <LangName>{langName}</LangName>
