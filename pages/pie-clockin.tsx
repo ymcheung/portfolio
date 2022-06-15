@@ -82,8 +82,8 @@ export default function ProjectPie() {
         hasPrev={t('nav:moment')}
         prevSlug="moment"
         prevBg="moment"
-        hasNext={t('nav:abtest')}
-        nextSlug="icook/a-b-test"
+        hasNext={t('nav:intersection')}
+        nextSlug="intersection"
         nextBg="generic"
       />
       <Footer responsive={{'@m768': 'max640'}} inproject={{'@m992': true}} />

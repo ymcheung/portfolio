@@ -15,9 +15,6 @@ const pages = fs.readdirSync(pagesPath);
         .filter((page) => {
           return page.indexOf('_') === -1;
         })
-        .filter((page) => {
-          return page.replace('.tsx', '') !== 'icook';
-        })
         .map((page) => {
           const path = page.replace('.tsx', '');
           const route = path === 'index' ? '' : path;
