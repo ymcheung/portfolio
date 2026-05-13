@@ -18,19 +18,13 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
-    "paths": {
-      "@home/*": ["home/*"],
-      "@elements/*": ["elements/*"],
-      "@components/*": ["components/*"],
-      "@utils/*": ["utils/*"],
-      "@projects/*": ["projects/*"],
-      "@public/*": ["public/*"]
-    }
+    "paths": {}
   },
   "include": [
-    "next-env.d.ts",
+    ".astro/types.d.ts",
+    "astro.config.mjs",
     "**/*.ts",
-    "**/*.tsx"],
+    "**/*.astro"],
   "exclude": [
     "node_modules"
   ]

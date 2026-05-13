@@ -1,0 +1,115 @@
+---
+import '../styles/global.css';
+import HomePage from '../components/HomePage.astro';
+import { AUTHOR, DESCRIPTION, TITLE } from '../lib/site';
+import { Font } from 'astro:assets';
+
+type Locale = 'en' | 'zh-TW';
+
+type Route = 'home';
+
+export function getStaticPaths() {
+  const routes: Route[] = ['home'];
+  const availableLocales: Locale[] = ['en', 'zh-TW'];
+
+  return availableLocales.flatMap((locale) => routes.map((route) => {
+    const slug = route === 'home' ? '' : route;
+    const path = locale === 'zh-TW' ? `zh-TW${slug ? `/${slug}` : ''}` : slug || undefined;
+
+    return {
+      params: { path },
+      props: { locale, route },
+    };
+  }));
+}
+
+const { locale, route } = Astro.props as { locale: Locale; route: Route };
+const pathname = route === 'home' ? '/' : `/${route}`;
+const localizedPath = locale === 'zh-TW' ? `/zh-TW${pathname === '/' ? '' : pathname}` : pathname;
+const site = Astro.site?.toString().replace(/\/$/, '') || 'https://ymcheung.tw';
+const projectTitle = locale === 'zh-TW' ? '專案' : 'Projects';
+
+const metaByRoute = {
+  home: {
+    title: TITLE,
+    description: DESCRIPTION,
+    ogCover: '/home/ogCover.jpg',
+    datePublished: '2016-04-16',
+    dateModified: '2022-03-30',
+  },
+};
+
+const pageMeta = metaByRoute[route];
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': route === 'home'
+    ? [
+        {
+          '@type': 'WebPage',
+          name: TITLE,
+          description: DESCRIPTION,
+          datePublished: pageMeta.datePublished,
+          dateModified: pageMeta.dateModified,
+          publisher: {
+            '@type': 'ProfilePage',
+            name: AUTHOR,
+            sameAs: [
+              'https://www.linkedin.com/in/ymcheungtw/',
+              'https://github.com/ymcheung',
+              'https://build.intersection.tw',
+            ],
+          },
+        },
+      ]
+    : [
+        {
+          '@type': 'WebPage',
+          name: pageMeta.title,
+          description: pageMeta.description,
+          datePublished: pageMeta.datePublished,
+          dateModified: pageMeta.dateModified,
+          publisher: {
+            '@type': 'ProfilePage',
+            name: AUTHOR,
+            sameAs: [
+              'https://www.linkedin.com/in/ymcheungtw/',
+              'https://github.com/ymcheung',
+              'https://build.intersection.tw',
+            ],
+          },
+        },
+      ],
+};
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageMeta.title}</title>
+    <meta name="description" content={pageMeta.description} />
+    <link rel="canonical" href={`${site}${localizedPath}`} />
+    <meta property="og:title" content={pageMeta.title} />
+    <meta property="og:description" content={pageMeta.description} />
+    <meta property="og:url" content={`${site}${localizedPath}`} />
+    <meta property="og:image" content={`${site}${pageMeta.ogCover}`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <Font cssVariable="--font-overpass" preload />
+    <link rel="icon" href="/favicon/ym.ico" />
+    <link rel="icon" href="/favicon/ym.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/manifest.webmanifest" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <script is:inline>
+      const savedTheme = window.localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : prefersDark ? 'dark' : 'light';
+      document.documentElement.classList.toggle('dark', theme === 'dark');
+      document.documentElement.style.colorScheme = theme;
+    </script>
+  </head>
+  <body>
+    <HomePage locale={locale} projectTitle={projectTitle} />
+  </body>
+</html>

@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-overpass);
+}
+
+:root {
+  --shade-1600: 162 2% 99%;
+  --shade-1500: 162 2% 96%;
+  --shade-1400: 162 2% 84%;
+  --shade-1200: 162 2% 72%;
+  --shade-1000: 162 2% 64%;
+  --shade-800: 162 2% 56%;
+  --shade-700: 162 2% 48%;
+  --shade-600: 162 2% 40%;
+  --shade-300: 162 2% 24%;
+  --shade-100: 162 2% 10%;
+  --shade-0: 162 2% 6%;
+  --home-love-ui-text: var(--shade-100);
+  --footer-separate: var(--shade-1500);
+  --scheme-icon-dark-bg: var(--shade-1500);
+  --scheme-icon-light-bg: var(--shade-300);
+  --sun: 50 50% 70%;
+}
+
+:root.dark {
+  --shade-0: 162 2% 99%;
+  --shade-100: 162 2% 92%;
+  --shade-300: 162 2% 84%;
+  --shade-600: 162 2% 72%;
+  --shade-700: 162 2% 64%;
+  --shade-800: 162 2% 56%;
+  --shade-1000: 162 2% 48%;
+  --shade-1200: 162 2% 40%;
+  --shade-1400: 162 2% 24%;
+  --shade-1500: 162 2% 10%;
+  --shade-1600: 162 2% 6%;
+  --home-love-ui-text: var(--shade-1500);
+  --footer-separate: var(--shade-1400);
+  --scheme-icon-dark-bg: var(--shade-1500);
+  --scheme-icon-light-bg: var(--shade-1400);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-overpass);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes cans {
+  from {
+    background-position-y: 0;
+  }
+
+  to {
+    background-position-y: -360px;
+  }
+}
