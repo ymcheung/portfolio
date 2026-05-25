@@ -11,6 +11,7 @@
     "check": "astro check"
   },
   "dependencies": {
+    "@astrojs/markdoc": "^1.0.5",
     "@astrojs/svelte": "latest",
     "@tailwindcss/vite": "latest",
     "astro": "latest",

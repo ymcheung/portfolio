@@ -1,31 +1,81 @@
 ---
 import '../styles/global.css';
+import CommonFooter from '../components/CommonFooter.astro';
 import HomePage from '../components/HomePage.astro';
 import { AUTHOR, DESCRIPTION, TITLE } from '../lib/site';
 import { Font } from 'astro:assets';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
 
 type Locale = 'en' | 'zh-TW';
+type PageEntry = CollectionEntry<'pages'>;
 
-type Route = 'home';
+type HomeRoute = {
+  locale: Locale;
+  route: 'home';
+};
 
-export function getStaticPaths() {
-  const routes: Route[] = ['home'];
+type MarkdocRoute = {
+  entry: PageEntry;
+  locale: Locale;
+  route: 'markdoc';
+};
+
+type RouteProps = HomeRoute | MarkdocRoute;
+
+const normalizePath = (path: string) => path.replace(/^\/+|\/+$/g, '');
+const pathForEntry = (entry: PageEntry) => {
+  const path = normalizePath(entry.data.path ?? entry.id);
+
+  if (entry.data.locale === 'zh-TW' && !path.startsWith('zh-TW/')) {
+    return normalizePath(`zh-TW/${path}`);
+  }
+
+  return path || undefined;
+};
+
+export async function getStaticPaths() {
   const availableLocales: Locale[] = ['en', 'zh-TW'];
+  const pageEntries = await getCollection('pages', ({ data }) => !data.draft);
+  const normalizeEntryPath = (entry: PageEntry) => {
+    const path = (entry.data.path ?? entry.id).replace(/^\/+|\/+$/g, '');
 
-  return availableLocales.flatMap((locale) => routes.map((route) => {
-    const slug = route === 'home' ? '' : route;
-    const path = locale === 'zh-TW' ? `zh-TW${slug ? `/${slug}` : ''}` : slug || undefined;
+    if (entry.data.locale === 'zh-TW' && !path.startsWith('zh-TW/')) {
+      return `zh-TW/${path}`.replace(/^\/+|\/+$/g, '');
+    }
+
+    return path || undefined;
+  };
+
+  const homePaths = availableLocales.map((locale) => {
+    const path = locale === 'zh-TW' ? 'zh-TW' : undefined;
 
     return {
       params: { path },
-      props: { locale, route },
+      props: { locale, route: 'home' },
     };
+  });
+
+  const markdocPaths = pageEntries.map((entry) => ({
+    params: { path: normalizeEntryPath(entry) },
+    props: {
+      entry,
+      locale: entry.data.locale,
+      route: 'markdoc',
+    },
   }));
+
+  return [...homePaths, ...markdocPaths];
 }
 
-const { locale, route } = Astro.props as { locale: Locale; route: Route };
-const pathname = route === 'home' ? '/' : `/${route}`;
-const localizedPath = locale === 'zh-TW' ? `/zh-TW${pathname === '/' ? '' : pathname}` : pathname;
+const props = Astro.props as RouteProps;
+const { locale, route } = props;
+const markdoc = route === 'markdoc' ? await render(props.entry) : undefined;
+const Content = markdoc?.Content;
+const outputPath = route === 'home' ? (locale === 'zh-TW' ? 'zh-TW' : '') : pathForEntry(props.entry);
+const localizedPath = outputPath ? `/${outputPath}` : '/';
+const alternatePath = locale === 'en'
+  ? `/zh-TW${localizedPath === '/' ? '' : localizedPath}`
+  : localizedPath.replace(/^\/zh-TW(?=\/|$)/, '') || '/';
 const site = Astro.site?.toString().replace(/\/$/, '') || 'https://ymcheung.tw';
 const projectTitle = locale === 'zh-TW' ? '專案' : 'Projects';
 
@@ -39,46 +89,35 @@ const metaByRoute = {
   },
 };
 
-const pageMeta = metaByRoute[route];
+const pageMeta = route === 'home'
+  ? metaByRoute.home
+  : {
+      title: props.entry.data.title,
+      description: props.entry.data.description,
+      ogCover: props.entry.data.ogCover,
+      datePublished: props.entry.data.datePublished,
+      dateModified: props.entry.data.dateModified,
+    };
 const schema = {
   '@context': 'https://schema.org',
-  '@graph': route === 'home'
-    ? [
-        {
-          '@type': 'WebPage',
-          name: TITLE,
-          description: DESCRIPTION,
-          datePublished: pageMeta.datePublished,
-          dateModified: pageMeta.dateModified,
-          publisher: {
-            '@type': 'ProfilePage',
-            name: AUTHOR,
-            sameAs: [
-              'https://www.linkedin.com/in/ymcheungtw/',
-              'https://github.com/ymcheung',
-              'https://build.intersection.tw',
-            ],
-          },
-        },
-      ]
-    : [
-        {
-          '@type': 'WebPage',
-          name: pageMeta.title,
-          description: pageMeta.description,
-          datePublished: pageMeta.datePublished,
-          dateModified: pageMeta.dateModified,
-          publisher: {
-            '@type': 'ProfilePage',
-            name: AUTHOR,
-            sameAs: [
-              'https://www.linkedin.com/in/ymcheungtw/',
-              'https://github.com/ymcheung',
-              'https://build.intersection.tw',
-            ],
-          },
-        },
-      ],
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: pageMeta.title,
+      description: pageMeta.description,
+      datePublished: pageMeta.datePublished,
+      dateModified: pageMeta.dateModified,
+      publisher: {
+        '@type': 'ProfilePage',
+        name: AUTHOR,
+        sameAs: [
+          'https://www.linkedin.com/in/ymcheungtw/',
+          'https://github.com/ymcheung',
+          'https://build.intersection.tw',
+        ],
+      },
+    },
+  ],
 };
 ---
 <!doctype html>
@@ -110,6 +149,22 @@ const schema = {
     </script>
   </head>
   <body>
-    <HomePage locale={locale} projectTitle={projectTitle} />
+    {route === 'home' ? (
+      <HomePage locale={locale} projectTitle={projectTitle} />
+    ) : (
+      <div class="min-h-screen bg-[hsl(var(--shade-1600))] text-[hsl(var(--shade-100))]">
+        <header class="px-4 pb-4 pt-6">
+          <h1 class="mx-auto mb-6 grid max-w-160 px-2 font-sans min-[768px]:px-4">
+            <span class="m-0 text-[24px] font-semibold leading-8 text-[hsl(var(--shade-0))]">
+              {pageMeta.title}
+            </span>
+          </h1>
+        </header>
+        <main class="mx-auto max-w-160 px-6 pb-16 text-[hsl(var(--shade-600))]">
+          {Content && <Content />}
+        </main>
+        <CommonFooter locale={locale} langHref={alternatePath} />
+      </div>
+    )}
   </body>
 </html>

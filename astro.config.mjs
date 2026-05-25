@@ -1,4 +1,5 @@
 import { defineConfig, fontProviders } from 'astro/config';
+import markdoc from '@astrojs/markdoc';
 import svelte from '@astrojs/svelte';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -20,7 +21,7 @@ export default defineConfig({
       styles: ['italic'],
     },
   ],
-  integrations: [svelte()],
+  integrations: [markdoc(), svelte()],
   vite: {
     plugins: [tailwindcss()],
   },
