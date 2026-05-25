@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import CommonFooter from '../components/CommonFooter.astro';
 import HomePage from '../components/HomePage.astro';
-import { AUTHOR, DESCRIPTION, TITLE } from '../lib/site';
+import { AUTHOR, DESCRIPTION } from '../lib/site';
 import { Font } from 'astro:assets';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 
@@ -81,7 +81,7 @@ const projectTitle = locale === 'zh-TW' ? '專案' : 'Projects';
 
 const metaByRoute = {
   home: {
-    title: TITLE,
+    title: AUTHOR,
     description: DESCRIPTION,
     ogCover: '/home/ogCover.jpg',
     datePublished: '2016-04-16',
