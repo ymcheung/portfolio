@@ -147,15 +147,15 @@ const schema = {
     {route === 'home' ? (
       <HomePage locale={locale} projectTitle={projectTitle} />
     ) : (
-      <div class="min-h-screen bg-[hsl(var(--shade-1600))] text-[hsl(var(--shade-100))]">
+      <div class="min-h-screen bg-shade-1600 text-shade-100">
         <header class="px-4 pb-4 pt-6">
-          <h1 class="mx-auto mb-6 grid max-w-160 px-2 font-sans min-[768px]:px-4">
-            <span class="m-0 text-[24px] font-semibold leading-8 text-[hsl(var(--shade-0))]">
+          <h1 class="mx-auto mb-6 grid max-w-160 px-2 font-sans md:px-4">
+            <span class="m-0 text-2xl font-semibold leading-8 text-shade-0">
               {pageMeta.title}
             </span>
           </h1>
         </header>
-        <main class="mx-auto max-w-160 px-6 pb-16 text-[hsl(var(--shade-600))]">
+        <main class="mx-auto max-w-160 px-6 pb-16 text-shade-600">
           {Content && <Content />}
         </main>
         <CommonFooter locale={locale} langHref={alternatePath ?? null} />

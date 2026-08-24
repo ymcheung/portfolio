@@ -4,6 +4,20 @@
 
 @theme inline {
   --font-sans: var(--font-overpass);
+  --color-shade-0: hsl(var(--shade-0));
+  --color-shade-100: hsl(var(--shade-100));
+  --color-shade-300: hsl(var(--shade-300));
+  --color-shade-600: hsl(var(--shade-600));
+  --color-shade-700: hsl(var(--shade-700));
+  --color-shade-1400: hsl(var(--shade-1400));
+  --color-shade-1500: hsl(var(--shade-1500));
+  --color-shade-1600: hsl(var(--shade-1600));
+  --color-footer-separate: hsl(var(--footer-separate));
+  --text-display: 1.75rem;
+  --tracking-heading: 0.0625rem;
+  --animate-cans: cans 36s linear infinite;
+  --background-image-cans: url('/home/cans.svg');
+  --background-size-cans: 7.5rem 7.5rem;
 }
 
 :root {

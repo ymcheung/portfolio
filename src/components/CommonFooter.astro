@@ -16,21 +16,23 @@ const langHref = providedLangHref === undefined ? getRelativeLocaleUrl(otherLoca
 const langLabel = locale === 'en' ? '中文' : 'English';
 ---
 
-<footer class="mbs-2 mx-auto px-4 pb-8 min-[992px]:max-w-[960px]">
+<footer class="mbs-2 mx-auto max-w-200 px-4 pb-8">
   <div>
-    <hr class="ml-0 mr-auto w-30 border-0 border-b border-solid border-b-[hsl(var(--footer-separate))]" />
-    <div class="mbs-4">
-      <strong class="mr-2 font-sans text-[18px] font-bold italic text-[hsl(var(--shade-100))]">{AUTHOR}</strong>
-      <span class="font-sans text-[14px] text-[hsl(var(--shade-600))]">{currentYear}</span>
-    </div>
-    <div class="mt-0 grid h-12 grid-flow-col auto-cols-max items-center gap-2">
-      <ThemeToggle client:load />
-      {langHref && (
-        <a href={langHref} hreflang={otherLocale} class="inline-flex h-7 items-center rounded bg-[hsl(var(--shade-1500))] px-2 font-sans text-sm leading-none text-[hsl(var(--shade-600))] transition-colors hover:bg-[hsl(var(--shade-1400))]">
-          <Icon name="lang" />
-          <span class="ms-1">{langLabel}</span>
-        </a>
-      )}
+    <hr class="ml-0 mr-auto w-30 border-0 border-b border-solid border-b-footer-separate" />
+    <div class="mbs-4 grid grid-flow-col auto-cols-max items-center gap-4">
+      <div class="whitespace-nowrap">
+        <strong class="mr-2 font-sans text-lg font-bold italic text-shade-100">{AUTHOR}</strong>
+        <span class="font-sans text-sm text-shade-600">{currentYear}</span>
+      </div>
+      <div class="grid h-12 grid-flow-col auto-cols-max items-center gap-2">
+        <ThemeToggle client:load />
+        {langHref && (
+          <a href={langHref} hreflang={otherLocale} class="inline-grid h-7 grid-flow-col items-center rounded bg-shade-1500 px-2 font-sans text-sm leading-none text-shade-600 transition-colors hover:bg-shade-1400">
+            <Icon name="lang" />
+            <span class="ms-1">{langLabel}</span>
+          </a>
+        )}
+      </div>
     </div>
   </div>
 </footer>

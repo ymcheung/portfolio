@@ -12,23 +12,23 @@ type Props = {
 const { locale, projectTitle } = Astro.props;
 ---
 
-<div class="min-h-screen bg-[hsl(var(--shade-1600))] text-[hsl(var(--shade-100))]">
-  <header class="relative min-h-40 overflow-hidden border-b-2 border-[hsl(var(--shade-1400))] pt-12 md:min-h-48">
-    <div class="mx-auto px-4 min-[992px]:max-w-240">
-      <strong class="relative z-10 -ml-0.5 inline-block font-sans text-[20px] font-extrabold italic leading-normal text-[hsl(var(--shade-0))]">
+<div class="min-h-screen bg-shade-1600 text-shade-100">
+  <header class="relative min-h-40 overflow-hidden border-b-2 border-shade-1400 pt-12 md:min-h-48">
+    <div class="mx-auto max-w-200 px-4">
+      <strong class="relative z-10 -ml-0.5 inline-block font-sans text-xl font-extrabold italic leading-normal text-shade-0">
         {AUTHOR}
       </strong>
-      <h1 class="relative z-10 m-0 max-w-150 font-sans text-[28px] font-normal italic leading-normal text-[hsl(var(--shade-600))]">
+      <h1 class="relative z-10 m-0 max-w-150 font-sans text-display font-normal italic leading-normal text-shade-600">
         {DESCRIPTION}
       </h1>
     </div>
-    <div class="absolute inset-x-0 bottom-0 z-0 h-35 animate-[cans_36s_linear_infinite] bg-[url('/home/cans.svg')] bg-[length:120px_120px] after:absolute after:inset-x-0 after:bottom-0 after:h-35 after:bg-gradient-to-b after:from-[hsl(var(--shade-1600))] after:to-transparent motion-reduce:animate-none"></div>
+    <div class="absolute inset-x-0 bottom-0 z-0 h-35 animate-cans bg-cans bg-size-(--background-size-cans) after:absolute after:inset-x-0 after:bottom-0 after:h-35 after:bg-gradient-to-b after:from-shade-1600 after:to-transparent motion-reduce:animate-none"></div>
   </header>
 
-  <main class="mx-auto mbs-8 px-4 min-[992px]:max-w-[960px]">
+  <main class="mx-auto mbs-8 max-w-200 px-4">
     <section aria-labelledby="projects-title">
       <h2 id="projects-title" class:list={[
-        'm-0 font-sans text-[18px] font-extrabold leading-normal tracking-[1px] text-[hsl(var(--shade-700))]',
+        'm-0 font-sans text-lg font-extrabold leading-normal tracking-heading text-shade-700',
         locale === 'en' && 'italic',
       ]}>
         {projectTitle}
@@ -36,7 +36,7 @@ const { locale, projectTitle } = Astro.props;
     </section>
   </main>
 
-  <aside class="mbs-12 mx-auto grid grid-cols-[48px_192px] items-center gap-3 px-4 min-[992px]:max-w-[960px]">
+  <aside class="mbs-12 mx-auto grid max-w-200 grid-flow-col auto-cols-max items-center gap-3 px-4">
     <a class="-ms-2" href="https://github.com/ymcheung" target="_blank" rel="noopener" aria-label="Github Profile">
       <Icon name="github" />
     </a>

@@ -20,7 +20,7 @@
 
 <button
   type="button"
-  class="inline-flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden border-0 bg-transparent -ms-2 p-0 text-[hsl(var(--shade-300))]"
+  class="inline-grid h-12 w-12 cursor-pointer place-items-center overflow-hidden border-0 bg-transparent -ms-2 p-0 text-shade-300"
   aria-label={theme === 'dark' ? '切換 Scheme：亮色' : '切換 Scheme：暗色'}
 
   on:click={() => applyTheme(theme === 'dark' ? 'light' : 'dark')}
