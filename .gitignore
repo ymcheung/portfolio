@@ -50,3 +50,5 @@ yarn-error.log*
 # https
 https_cert
 server.js
+
+.codegraph

@@ -11,16 +11,16 @@
     "check": "astro check"
   },
   "dependencies": {
-    "@astrojs/markdoc": "^1.0.5",
-    "@astrojs/svelte": "latest",
+    "@astrojs/markdoc": "^2.0.8",
+    "@astrojs/svelte": "^9.0.1",
     "@tailwindcss/vite": "latest",
-    "astro": "latest",
+    "astro": "^7.2.4",
     "svelte": "latest",
     "tailwindcss": "latest"
   },
   "license": "MIT",
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
+    "@astrojs/check": "^0.9.10",
     "@types/node": "latest",
     "prettier": "^3.8.3",
     "prettier-eslint": "^12.0.0",

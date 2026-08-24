@@ -5,6 +5,19 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: process.env.PUBLIC_HOSTNAME || process.env.NEXT_PUBLIC_HOSTNAME || 'https://ymcheung.tw',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', { path: 'tw', codes: ['zh-Hant-TW'] }],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
+  redirects: {
+    '/zh-TW': {
+      status: 301,
+      destination: '/tw',
+    },
+  },
   fonts: [
     {
       provider: fontProviders.fontsource(),

@@ -2,20 +2,21 @@
 import ThemeToggle from './ThemeToggle.svelte';
 import Icon from './Icons.astro';
 import { AUTHOR } from '../lib/site';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 type Props = {
-  locale: 'en' | 'zh-TW';
-  langHref?: string;
+  locale: 'en' | 'zh-Hant-TW';
+  langHref?: string | null;
 };
 
 const { locale, langHref: providedLangHref } = Astro.props;
 const currentYear = new Date().getFullYear();
-const otherLocale = locale === 'en' ? 'zh-TW' : 'en';
-const langHref = providedLangHref ?? (locale === 'en' ? '/zh-TW/' : '/');
+const otherLocale = locale === 'en' ? 'zh-Hant-TW' : 'en';
+const langHref = providedLangHref === undefined ? getRelativeLocaleUrl(otherLocale) : providedLangHref;
 const langLabel = locale === 'en' ? '中文' : 'English';
 ---
 
-<footer class="mbs-2 mx-auto px-4 pb-8 min-[992px]:max-w-[960px] min-[1200px]:max-w-[1168px]">
+<footer class="mbs-2 mx-auto px-4 pb-8 min-[992px]:max-w-[960px]">
   <div>
     <hr class="ml-0 mr-auto w-30 border-0 border-b border-solid border-b-[hsl(var(--footer-separate))]" />
     <div class="mbs-4">
@@ -24,10 +25,12 @@ const langLabel = locale === 'en' ? '中文' : 'English';
     </div>
     <div class="mt-0 grid h-12 grid-flow-col auto-cols-max items-center gap-2">
       <ThemeToggle client:load />
-      <a href={langHref} hreflang={otherLocale} class="inline-flex h-7 items-center rounded bg-[hsl(var(--shade-1500))] px-2 font-sans text-sm leading-none text-[hsl(var(--shade-600))] transition-colors hover:bg-[hsl(var(--shade-1400))]">
-        <Icon name="lang" />
-        <span class="ms-1">{langLabel}</span>
-      </a>
+      {langHref && (
+        <a href={langHref} hreflang={otherLocale} class="inline-flex h-7 items-center rounded bg-[hsl(var(--shade-1500))] px-2 font-sans text-sm leading-none text-[hsl(var(--shade-600))] transition-colors hover:bg-[hsl(var(--shade-1400))]">
+          <Icon name="lang" />
+          <span class="ms-1">{langLabel}</span>
+        </a>
+      )}
     </div>
   </div>
 </footer>

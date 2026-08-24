@@ -5,79 +5,68 @@ import HomePage from '../components/HomePage.astro';
 import { AUTHOR, DESCRIPTION } from '../lib/site';
 import { Font } from 'astro:assets';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
-type Locale = 'en' | 'zh-TW';
+type Locale = 'en' | 'zh-Hant-TW';
 type PageEntry = CollectionEntry<'pages'>;
 
 type HomeRoute = {
-  locale: Locale;
   route: 'home';
 };
 
 type MarkdocRoute = {
+  alternatePath?: string;
   entry: PageEntry;
-  locale: Locale;
   route: 'markdoc';
 };
 
 type RouteProps = HomeRoute | MarkdocRoute;
 
-const normalizePath = (path: string) => path.replace(/^\/+|\/+$/g, '');
-const pathForEntry = (entry: PageEntry) => {
-  const path = normalizePath(entry.data.path ?? entry.id);
-
-  if (entry.data.locale === 'zh-TW' && !path.startsWith('zh-TW/')) {
-    return normalizePath(`zh-TW/${path}`);
-  }
-
-  return path || undefined;
-};
-
 export async function getStaticPaths() {
-  const availableLocales: Locale[] = ['en', 'zh-TW'];
+  const normalizePath = (path: string) => path.replace(/^\/+|\/+$/g, '');
+  const contentPath = (entry: PageEntry) => normalizePath(entry.data.path ?? entry.id);
+  const availableLocales: Locale[] = ['en', 'zh-Hant-TW'];
   const pageEntries = await getCollection('pages', ({ data }) => !data.draft);
-  const normalizeEntryPath = (entry: PageEntry) => {
-    const path = (entry.data.path ?? entry.id).replace(/^\/+|\/+$/g, '');
-
-    if (entry.data.locale === 'zh-TW' && !path.startsWith('zh-TW/')) {
-      return `zh-TW/${path}`.replace(/^\/+|\/+$/g, '');
-    }
-
-    return path || undefined;
-  };
 
   const homePaths = availableLocales.map((locale) => {
-    const path = locale === 'zh-TW' ? 'zh-TW' : undefined;
+    const path = normalizePath(getRelativeLocaleUrl(locale));
 
     return {
-      params: { path },
-      props: { locale, route: 'home' },
+      params: { path: path || undefined },
+      props: { route: 'home' },
     };
   });
 
-  const markdocPaths = pageEntries.map((entry) => ({
-    params: { path: normalizeEntryPath(entry) },
-    props: {
-      entry,
-      locale: entry.data.locale,
-      route: 'markdoc',
-    },
-  }));
+  const markdocPaths = pageEntries.map((entry) => {
+    const path = contentPath(entry);
+    const otherLocale: Locale = entry.data.locale === 'en' ? 'zh-Hant-TW' : 'en';
+    const hasTranslation = pageEntries.some(
+      (candidate) => candidate.data.locale === otherLocale && contentPath(candidate) === path,
+    );
+
+    return {
+      params: { path: normalizePath(getRelativeLocaleUrl(entry.data.locale, path)) },
+      props: {
+        alternatePath: hasTranslation ? getRelativeLocaleUrl(otherLocale, path) : undefined,
+        entry,
+        route: 'markdoc',
+      },
+    };
+  });
 
   return [...homePaths, ...markdocPaths];
 }
 
 const props = Astro.props as RouteProps;
-const { locale, route } = props;
+const { route } = props;
+const locale = Astro.currentLocale as Locale;
 const markdoc = route === 'markdoc' ? await render(props.entry) : undefined;
 const Content = markdoc?.Content;
-const outputPath = route === 'home' ? (locale === 'zh-TW' ? 'zh-TW' : '') : pathForEntry(props.entry);
-const localizedPath = outputPath ? `/${outputPath}` : '/';
-const alternatePath = locale === 'en'
-  ? `/zh-TW${localizedPath === '/' ? '' : localizedPath}`
-  : localizedPath.replace(/^\/zh-TW(?=\/|$)/, '') || '/';
+const localizedPath = Astro.url.pathname;
+const otherLocale: Locale = locale === 'en' ? 'zh-Hant-TW' : 'en';
+const alternatePath = route === 'home' ? getRelativeLocaleUrl(otherLocale) : props.alternatePath;
 const site = Astro.site?.toString().replace(/\/$/, '') || 'https://ymcheung.tw';
-const projectTitle = locale === 'zh-TW' ? '專案' : 'Projects';
+const projectTitle = locale === 'zh-Hant-TW' ? '專案' : 'Projects';
 
 const metaByRoute = {
   home: {
@@ -128,6 +117,12 @@ const schema = {
     <title>{pageMeta.title}</title>
     <meta name="description" content={pageMeta.description} />
     <link rel="canonical" href={`${site}${localizedPath}`} />
+    {alternatePath && (
+      <>
+        <link rel="alternate" hreflang={locale} href={`${site}${localizedPath}`} />
+        <link rel="alternate" hreflang={otherLocale} href={`${site}${alternatePath}`} />
+      </>
+    )}
     <meta property="og:title" content={pageMeta.title} />
     <meta property="og:description" content={pageMeta.description} />
     <meta property="og:url" content={`${site}${localizedPath}`} />
@@ -163,7 +158,7 @@ const schema = {
         <main class="mx-auto max-w-160 px-6 pb-16 text-[hsl(var(--shade-600))]">
           {Content && <Content />}
         </main>
-        <CommonFooter locale={locale} langHref={alternatePath} />
+        <CommonFooter locale={locale} langHref={alternatePath ?? null} />
       </div>
     )}
   </body>

@@ -10,7 +10,7 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    locale: z.enum(['en', 'zh-TW']).default('en'),
+    locale: z.enum(['en', 'zh-Hant-TW']).default('en'),
     path: z.string().optional(),
     ogCover: z.string().default('/home/ogCover.jpg'),
     datePublished: z.string().optional(),
