@@ -1,0 +1,66 @@
+---
+import Icon from './Icons.astro';
+import BannerBuildUI from './BannerBuildUI.astro';
+import CommonFooter from './CommonFooter.astro';
+import { AUTHOR, DESCRIPTION } from '../lib/site';
+
+type Props = {
+  locale: 'en' | 'zh-Hant-TW';
+  projectTitle: string;
+};
+
+const { locale, projectTitle } = Astro.props;
+const project = locale === 'zh-Hant-TW'
+  ? { title: '中山路', description: '以餐酒館量身打造的點餐與記帳' }
+  : { title: 'ZhongShan Rd. 中山路', description: 'Owned Business Center' };
+const projectHref = locale === 'en'
+  ? 'https://zhongshanroad.chungli.works/?locale=en&utm_source=portfolio&utm_medium=web'
+  : 'https://zhongshanroad.chungli.works/?utm_source=portfolio&utm_medium=web';
+---
+
+<div class="min-h-screen bg-shade-1600 text-shade-100">
+  <header class="relative min-h-40 overflow-hidden border-b-2 border-shade-1400 pt-12 md:min-h-48">
+    <div class="mx-auto max-w-200 px-4">
+      <strong class="relative z-10 -ml-0.5 inline-block font-sans text-xl font-extrabold italic leading-normal text-shade-0">
+        {AUTHOR}
+      </strong>
+      <h1 class="relative z-10 m-0 max-w-150 font-sans text-display font-normal italic leading-normal text-shade-600">
+        {DESCRIPTION}
+      </h1>
+    </div>
+    <div class="absolute inset-x-0 bottom-0 z-0 h-35 animate-cans bg-cans bg-size-(--background-size-cans) after:absolute after:inset-x-0 after:bottom-0 after:h-35 after:bg-gradient-to-b after:from-shade-1600 after:to-transparent motion-reduce:animate-none"></div>
+  </header>
+
+  <main class="mx-auto mbs-8 max-w-200 px-4">
+    <section aria-labelledby="projects-title">
+      <h2 id="projects-title" class:list={[
+        'm-0 font-sans text-lg font-extrabold leading-normal tracking-heading text-shade-700',
+        locale === 'en' && 'italic',
+      ]}>
+        {projectTitle}
+      </h2>
+      <article class="mt-4 grid grid-flow-col auto-cols-max items-center gap-4">
+        <img src="/home/zhongshan-rd.png" alt="ZhongShan Rd. 中山路" width="48" height="48" />
+        <div>
+          <h3 class="m-0 font-sans text-lg font-semibold leading-normal text-shade-0">
+            <a href={projectHref} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2">
+              {project.title}
+            </a>
+          </h3>
+          <p class="m-0 font-sans text-sm leading-normal text-shade-600">{project.description}</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <aside class="mbs-12 mx-auto grid max-w-200 grid-flow-col auto-cols-max items-center gap-3 px-4">
+    <a class="-ms-2" href="https://github.com/ymcheung" target="_blank" rel="noopener" aria-label="Github Profile">
+      <Icon name="github" />
+    </a>
+    <a href="https://build.intersection.tw" target="_blank" rel="noopener">
+      <BannerBuildUI />
+    </a>
+  </aside>
+
+  <CommonFooter locale={locale} />
+</div>

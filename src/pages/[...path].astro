@@ -1,0 +1,165 @@
+---
+import '../styles/global.css';
+import CommonFooter from '../components/CommonFooter.astro';
+import HomePage from '../components/HomePage.astro';
+import { AUTHOR, DESCRIPTION } from '../lib/site';
+import { Font } from 'astro:assets';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+type Locale = 'en' | 'zh-Hant-TW';
+type PageEntry = CollectionEntry<'pages'>;
+
+type HomeRoute = {
+  route: 'home';
+};
+
+type MarkdocRoute = {
+  alternatePath?: string;
+  entry: PageEntry;
+  route: 'markdoc';
+};
+
+type RouteProps = HomeRoute | MarkdocRoute;
+
+export async function getStaticPaths() {
+  const normalizePath = (path: string) => path.replace(/^\/+|\/+$/g, '');
+  const contentPath = (entry: PageEntry) => normalizePath(entry.data.path ?? entry.id);
+  const availableLocales: Locale[] = ['en', 'zh-Hant-TW'];
+  const pageEntries = await getCollection('pages', ({ data }) => !data.draft);
+
+  const homePaths = availableLocales.map((locale) => {
+    const path = normalizePath(getRelativeLocaleUrl(locale));
+
+    return {
+      params: { path: path || undefined },
+      props: { route: 'home' },
+    };
+  });
+
+  const markdocPaths = pageEntries.map((entry) => {
+    const path = contentPath(entry);
+    const otherLocale: Locale = entry.data.locale === 'en' ? 'zh-Hant-TW' : 'en';
+    const hasTranslation = pageEntries.some(
+      (candidate) => candidate.data.locale === otherLocale && contentPath(candidate) === path,
+    );
+
+    return {
+      params: { path: normalizePath(getRelativeLocaleUrl(entry.data.locale, path)) },
+      props: {
+        alternatePath: hasTranslation ? getRelativeLocaleUrl(otherLocale, path) : undefined,
+        entry,
+        route: 'markdoc',
+      },
+    };
+  });
+
+  return [...homePaths, ...markdocPaths];
+}
+
+const props = Astro.props as RouteProps;
+const { route } = props;
+const locale = Astro.currentLocale as Locale;
+const markdoc = route === 'markdoc' ? await render(props.entry) : undefined;
+const Content = markdoc?.Content;
+const localizedPath = Astro.url.pathname;
+const otherLocale: Locale = locale === 'en' ? 'zh-Hant-TW' : 'en';
+const alternatePath = route === 'home' ? getRelativeLocaleUrl(otherLocale) : props.alternatePath;
+const site = Astro.site?.toString().replace(/\/$/, '') || 'https://ymcheung.tw';
+const projectTitle = locale === 'zh-Hant-TW' ? '專案' : 'Projects';
+
+const metaByRoute = {
+  home: {
+    title: AUTHOR,
+    description: DESCRIPTION,
+    ogCover: '/home/ogCover.jpg',
+    datePublished: '2016-04-16',
+    dateModified: '2022-03-30',
+  },
+};
+
+const pageMeta = route === 'home'
+  ? metaByRoute.home
+  : {
+      title: props.entry.data.title,
+      description: props.entry.data.description,
+      ogCover: props.entry.data.ogCover,
+      datePublished: props.entry.data.datePublished,
+      dateModified: props.entry.data.dateModified,
+    };
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: pageMeta.title,
+      description: pageMeta.description,
+      datePublished: pageMeta.datePublished,
+      dateModified: pageMeta.dateModified,
+      publisher: {
+        '@type': 'ProfilePage',
+        name: AUTHOR,
+        sameAs: [
+          'https://www.linkedin.com/in/ymcheungtw/',
+          'https://github.com/ymcheung',
+          'https://build.intersection.tw',
+        ],
+      },
+    },
+  ],
+};
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageMeta.title}</title>
+    <meta name="description" content={pageMeta.description} />
+    <link rel="canonical" href={`${site}${localizedPath}`} />
+    {alternatePath && (
+      <>
+        <link rel="alternate" hreflang={locale} href={`${site}${localizedPath}`} />
+        <link rel="alternate" hreflang={otherLocale} href={`${site}${alternatePath}`} />
+      </>
+    )}
+    <meta property="og:title" content={pageMeta.title} />
+    <meta property="og:description" content={pageMeta.description} />
+    <meta property="og:url" content={`${site}${localizedPath}`} />
+    <meta property="og:image" content={`${site}${pageMeta.ogCover}`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <Font cssVariable="--font-overpass" preload />
+    <link rel="icon" href="/favicon/ym.ico" />
+    <link rel="icon" href="/favicon/ym.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/manifest.webmanifest" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <script is:inline>
+      const savedTheme = window.localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : prefersDark ? 'dark' : 'light';
+      document.documentElement.classList.toggle('dark', theme === 'dark');
+      document.documentElement.style.colorScheme = theme;
+    </script>
+  </head>
+  <body>
+    {route === 'home' ? (
+      <HomePage locale={locale} projectTitle={projectTitle} />
+    ) : (
+      <div class="min-h-screen bg-shade-1600 text-shade-100">
+        <header class="px-4 pb-4 pt-6">
+          <h1 class="mx-auto mb-6 grid max-w-160 px-2 font-sans md:px-4">
+            <span class="m-0 text-2xl font-semibold leading-8 text-shade-0">
+              {pageMeta.title}
+            </span>
+          </h1>
+        </header>
+        <main class="mx-auto max-w-160 px-6 pb-16 text-shade-600">
+          {Content && <Content />}
+        </main>
+        <CommonFooter locale={locale} langHref={alternatePath ?? null} />
+      </div>
+    )}
+  </body>
+</html>

@@ -1,0 +1,41 @@
+import { defineConfig, fontProviders } from 'astro/config';
+import markdoc from '@astrojs/markdoc';
+import svelte from '@astrojs/svelte';
+import tailwindcss from '@tailwindcss/vite';
+
+export default defineConfig({
+  site: process.env.PUBLIC_HOSTNAME || process.env.NEXT_PUBLIC_HOSTNAME || 'https://ymcheung.tw',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', { path: 'tw', codes: ['zh-Hant-TW'] }],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
+  redirects: {
+    '/zh-TW': {
+      status: 301,
+      destination: '/tw',
+    },
+  },
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Overpass',
+      cssVariable: '--font-overpass',
+      weights: [300, 400, 600, 800],
+      styles: ['normal'],
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Overpass',
+      cssVariable: '--font-overpass',
+      weights: [400, 700, 800],
+      styles: ['italic'],
+    },
+  ],
+  integrations: [markdoc(), svelte()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+});
