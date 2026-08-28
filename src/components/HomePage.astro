@@ -10,6 +10,12 @@ type Props = {
 };
 
 const { locale, projectTitle } = Astro.props;
+const project = locale === 'zh-Hant-TW'
+  ? { title: '中山路', description: '以餐酒館量身打造的點餐與記帳' }
+  : { title: 'ZhongShan Rd. 中山路', description: 'Owned Business Center' };
+const projectHref = locale === 'en'
+  ? 'https://zhongshanroad.chungli.works/?locale=en&utm_source=portfolio&utm_medium=web'
+  : 'https://zhongshanroad.chungli.works/?utm_source=portfolio&utm_medium=web';
 ---
 
 <div class="min-h-screen bg-shade-1600 text-shade-100">
@@ -33,6 +39,17 @@ const { locale, projectTitle } = Astro.props;
       ]}>
         {projectTitle}
       </h2>
+      <article class="mt-4 grid grid-flow-col auto-cols-max items-center gap-4">
+        <img src="/home/zhongshan-rd.png" alt="ZhongShan Rd. 中山路" width="48" height="48" />
+        <div>
+          <h3 class="m-0 font-sans text-lg font-semibold leading-normal text-shade-0">
+            <a href={projectHref} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2">
+              {project.title}
+            </a>
+          </h3>
+          <p class="m-0 font-sans text-sm leading-normal text-shade-600">{project.description}</p>
+        </div>
+      </article>
     </section>
   </main>
 
