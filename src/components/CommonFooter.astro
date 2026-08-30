@@ -7,9 +7,10 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 type Props = {
   locale: 'en' | 'zh-Hant-TW';
   langHref?: string | null;
+  show3d?: boolean;
 };
 
-const { locale, langHref: providedLangHref } = Astro.props;
+const { locale, langHref: providedLangHref, show3d = false } = Astro.props;
 const currentYear = new Date().getFullYear();
 const otherLocale = locale === 'en' ? 'zh-Hant-TW' : 'en';
 const langHref = providedLangHref === undefined ? getRelativeLocaleUrl(otherLocale) : providedLangHref;
@@ -25,9 +26,9 @@ const langLabel = locale === 'en' ? '中文' : 'English';
         <span class="font-sans text-sm text-shade-600">{currentYear}</span>
       </div>
       <div class="grid h-12 grid-flow-col auto-cols-max items-center gap-2">
-        <ThemeToggle client:load />
+        <ThemeToggle client:load {locale} {show3d} />
         {langHref && (
-          <a href={langHref} hreflang={otherLocale} class="inline-grid h-7 grid-flow-col items-center rounded bg-shade-1500 px-2 font-sans text-sm leading-none text-shade-600 transition-colors hover:bg-shade-1400">
+          <a href={langHref} hreflang={otherLocale} class="inline-grid h-7 grid-flow-col items-center rounded bg-shade-1500 px-2 font-sans text-sm leading-none text-shade-600 transition-none hover:transition-colors hover:bg-shade-1400">
             <Icon name="lang" />
             <span class="ms-1">{langLabel}</span>
           </a>
