@@ -40,7 +40,9 @@ const projectHref = locale === 'en'
         {projectTitle}
       </h2>
       <article class="mt-4 grid grid-flow-col auto-cols-max items-center gap-4">
-        <img src="/home/zhongshan-rd.png" alt="ZhongShan Rd. 中山路" width="48" height="48" />
+        <span class="relative inline-grid size-12 before:absolute before:inset-0 before:hidden before:translate-x-0.5 before:bg-[oklch(65.421%_0.23214_28.66)] before:content-[''] before:mix-blend-screen before:[-webkit-mask:url('/home/zhongshan-rd.png')_center/contain_no-repeat] before:[mask:url('/home/zhongshan-rd.png')_center/contain_no-repeat] after:absolute after:inset-0 after:hidden after:-translate-x-0.5 after:bg-[oklch(84.854%_0.135_201.45)] after:content-[''] after:mix-blend-screen after:[-webkit-mask:url('/home/zhongshan-rd.png')_center/contain_no-repeat] after:[mask:url('/home/zhongshan-rd.png')_center/contain_no-repeat] [html.dark.anaglyph_&]:before:block [html.dark.anaglyph_&]:after:block">
+          <img class="size-full [html.dark.anaglyph_&]:opacity-0" src="/home/zhongshan-rd.png" alt="ZhongShan Rd. 中山路" width="48" height="48" />
+        </span>
         <div>
           <h3 class="m-0 font-sans text-lg font-semibold leading-normal text-shade-0">
             <a href={projectHref} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2">
@@ -62,5 +64,5 @@ const projectHref = locale === 'en'
     </a>
   </aside>
 
-  <CommonFooter locale={locale} />
+  <CommonFooter locale={locale} show3d />
 </div>

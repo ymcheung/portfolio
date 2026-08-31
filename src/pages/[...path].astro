@@ -131,6 +131,14 @@ const schema = {
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <Font cssVariable="--font-overpass" preload />
+    <script is:inline>
+      window.interAnalyticsConfig = {
+        endpoint: 'https://analytics.intersection.tw/v1',
+        siteKey: '66lq7tbt',
+        autoPageview: true,
+      };
+    </script>
+    <script is:inline defer src="https://analytics.chungli.works/client.js"></script>
     <ClientRouter />
     <script is:inline>
       let cansAnimationTime = 0;
@@ -157,10 +165,11 @@ const schema = {
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
       const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : prefersDark ? 'dark' : 'light';
       document.documentElement.classList.toggle('dark', theme === 'dark');
+      document.documentElement.classList.toggle('anaglyph', window.localStorage.getItem('anaglyph') === 'true');
       document.documentElement.style.colorScheme = theme;
     </script>
   </head>
-  <body>
+  <body class="font-sans antialiased">
     {route === 'home' ? (
       <HomePage locale={locale} projectTitle={projectTitle} />
     ) : (

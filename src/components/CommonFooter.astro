@@ -7,9 +7,10 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 type Props = {
   locale: 'en' | 'zh-Hant-TW';
   langHref?: string | null;
+  show3d?: boolean;
 };
 
-const { locale, langHref: providedLangHref } = Astro.props;
+const { locale, langHref: providedLangHref, show3d = false } = Astro.props;
 const currentYear = new Date().getFullYear();
 const otherLocale = locale === 'en' ? 'zh-Hant-TW' : 'en';
 const langHref = providedLangHref === undefined ? getRelativeLocaleUrl(otherLocale) : providedLangHref;
@@ -19,15 +20,15 @@ const langLabel = locale === 'en' ? '中文' : 'English';
 <footer class="mbs-2 mx-auto max-w-200 px-4 pb-8">
   <div>
     <hr class="ml-0 mr-auto w-30 border-0 border-b border-solid border-b-footer-separate" />
-    <div class="mbs-4 grid grid-flow-col auto-cols-max items-center gap-4">
+    <div class="mbs-2 grid grid-flow-col auto-cols-max items-center gap-4">
       <div class="whitespace-nowrap">
         <strong class="mr-2 font-sans text-lg font-bold italic text-shade-100">{AUTHOR}</strong>
         <span class="font-sans text-sm text-shade-600">{currentYear}</span>
       </div>
       <div class="grid h-12 grid-flow-col auto-cols-max items-center gap-2">
-        <ThemeToggle client:load />
+        <ThemeToggle client:load {locale} {show3d} />
         {langHref && (
-          <a href={langHref} hreflang={otherLocale} class="inline-grid h-7 grid-flow-col items-center rounded bg-shade-1500 px-2 font-sans text-sm leading-none text-shade-600 transition-colors hover:bg-shade-1400">
+          <a href={langHref} hreflang={otherLocale} class="inline-grid h-7 grid-flow-col items-center rounded bg-shade-1500 px-2 font-sans text-sm leading-none text-shade-600 transition-none hover:transition-colors hover:bg-shade-1400">
             <Icon name="lang" />
             <span class="ms-1">{langLabel}</span>
           </a>

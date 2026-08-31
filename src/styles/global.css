@@ -1,78 +1,28 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme inline {
   --font-sans: var(--font-overpass);
-  --color-shade-0: hsl(var(--shade-0));
-  --color-shade-100: hsl(var(--shade-100));
-  --color-shade-300: hsl(var(--shade-300));
-  --color-shade-600: hsl(var(--shade-600));
-  --color-shade-700: hsl(var(--shade-700));
-  --color-shade-1400: hsl(var(--shade-1400));
-  --color-shade-1500: hsl(var(--shade-1500));
-  --color-shade-1600: hsl(var(--shade-1600));
-  --color-footer-separate: hsl(var(--footer-separate));
+  --color-shade-0: light-dark(oklch(17.043% 0.00107 176.47), oklch(99.248% 0.00012 176.64));
+  --color-shade-100: light-dark(oklch(21.659% 0.00168 176.43), oklch(93.94% 0.00093 176.63));
+  --color-shade-300: light-dark(oklch(36.287% 0.00353 176.37), oklch(87.781% 0.0019 176.59));
+  --color-shade-600: light-dark(oklch(51.346% 0.00539 176.35), oklch(78.332% 0.00341 176.53));
+  --color-shade-700: light-dark(oklch(58.457% 0.00627 176.34), oklch(71.873% 0.00447 176.48));
+  --color-shade-800: light-dark(oklch(65.266% 0.00559 176.41), oklch(65.266% 0.00559 176.41));
+  --color-shade-1000: light-dark(oklch(71.873% 0.00447 176.48), oklch(58.457% 0.00627 176.34));
+  --color-shade-1200: light-dark(oklch(78.332% 0.00341 176.53), oklch(51.346% 0.00539 176.35));
+  --color-shade-1400: light-dark(oklch(87.781% 0.0019 176.59), oklch(36.287% 0.00353 176.37));
+  --color-shade-1500: light-dark(oklch(96.982% 0.00046 176.64), oklch(21.659% 0.00168 176.43));
+  --color-shade-1600: light-dark(oklch(99.248% 0.00012 176.64), oklch(17.043% 0.00107 176.47));
+  --color-footer-separate: light-dark(oklch(96.982% 0.00046 176.64), oklch(36.287% 0.00353 176.37));
+  --color-home-love-ui-text: oklch(21.659% 0.00168 176.43);
+  --color-scheme-icon-dark-bg: light-dark(oklch(96.982% 0.00046 176.64), oklch(21.659% 0.00168 176.43));
+  --color-scheme-icon-light-bg: oklch(36.287% 0.00353 176.37);
+  --color-sun: oklch(84.082% 0.08362 98.24);
   --text-display: 1.75rem;
   --tracking-heading: 0.0625rem;
   --animate-cans: cans 36s linear infinite;
   --background-image-cans: url('/home/cans.svg');
   --background-size-cans: 7.5rem 7.5rem;
-}
-
-:root {
-  --shade-1600: 162 2% 99%;
-  --shade-1500: 162 2% 96%;
-  --shade-1400: 162 2% 84%;
-  --shade-1200: 162 2% 72%;
-  --shade-1000: 162 2% 64%;
-  --shade-800: 162 2% 56%;
-  --shade-700: 162 2% 48%;
-  --shade-600: 162 2% 40%;
-  --shade-300: 162 2% 24%;
-  --shade-100: 162 2% 10%;
-  --shade-0: 162 2% 6%;
-  --home-love-ui-text: var(--shade-100);
-  --footer-separate: var(--shade-1500);
-  --scheme-icon-dark-bg: var(--shade-1500);
-  --scheme-icon-light-bg: var(--shade-300);
-  --sun: 50 50% 70%;
-}
-
-:root.dark {
-  --shade-0: 162 2% 99%;
-  --shade-100: 162 2% 92%;
-  --shade-300: 162 2% 84%;
-  --shade-600: 162 2% 72%;
-  --shade-700: 162 2% 64%;
-  --shade-800: 162 2% 56%;
-  --shade-1000: 162 2% 48%;
-  --shade-1200: 162 2% 40%;
-  --shade-1400: 162 2% 24%;
-  --shade-1500: 162 2% 10%;
-  --shade-1600: 162 2% 6%;
-  --home-love-ui-text: var(--shade-1500);
-  --footer-separate: var(--shade-1400);
-  --scheme-icon-dark-bg: var(--shade-1500);
-  --scheme-icon-light-bg: var(--shade-1400);
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 100%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-overpass);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 @keyframes cans {
