@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { play } from 'cuelume';
   import { onMount } from 'svelte';
 
   let { locale, show3d = false }: { locale: 'en' | 'zh-Hant-TW'; show3d?: boolean } = $props();
@@ -23,6 +24,12 @@
     anaglyph = nextAnaglyph;
     document.documentElement.classList.toggle('anaglyph', nextAnaglyph);
     localStorage.setItem('anaglyph', String(nextAnaglyph));
+  }
+
+  function toggleAnaglyph() {
+    const nextAnaglyph = !anaglyph;
+    applyAnaglyph(nextAnaglyph);
+    play(nextAnaglyph ? 'sparkle' : 'whisper', { volume: 0.4 });
   }
 
   onMount(() => {
@@ -63,7 +70,7 @@
       aria-label={glassesAriaLabel}
       aria-pressed={anaglyph}
       title={glassesHint}
-      onclick={() => applyAnaglyph(!anaglyph)}
+      onclick={toggleAnaglyph}
     >
       <span class="inline-grid h-7 w-7 place-items-center rounded bg-shade-1500 transition-colors duration-150 ease-out group-hover:bg-shade-1400">
         <svg

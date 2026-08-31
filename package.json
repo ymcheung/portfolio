@@ -15,6 +15,7 @@
     "@astrojs/svelte": "^9.0.1",
     "@tailwindcss/vite": "latest",
     "astro": "^7.2.4",
+    "cuelume": "^0.2.2",
     "svelte": "latest",
     "tailwindcss": "latest"
   },
