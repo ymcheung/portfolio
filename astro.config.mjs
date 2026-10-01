@@ -2,8 +2,11 @@ import { defineConfig, fontProviders } from 'astro/config';
 import markdoc from '@astrojs/markdoc';
 import svelte from '@astrojs/svelte';
 import tailwindcss from '@tailwindcss/vite';
+import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
+  adapter: cloudflare({ imageService: 'compile' }),
+  session: false,
   site: process.env.PUBLIC_HOSTNAME || process.env.NEXT_PUBLIC_HOSTNAME || 'https://ymcheung.tw',
   i18n: {
     defaultLocale: 'en',

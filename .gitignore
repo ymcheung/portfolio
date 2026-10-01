@@ -20,6 +20,8 @@ public/sitemap.xml
 # astro
 /.astro/
 /dist/
+/.wrangler/
+.dev.vars*
 
 # production
 /build
