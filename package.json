@@ -11,9 +11,11 @@
     "dev": "pnpm install && astro dev",
     "build": "astro build",
     "deploy": "astro build && wrangler deploy",
+    "deploy:preview": "node scripts/deploy-preview.mjs",
     "preview": "astro preview",
     "start": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "check:theme": "astro build && node scripts/check-theme.mjs"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.3.3",

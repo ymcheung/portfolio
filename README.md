@@ -28,6 +28,7 @@ The development server runs at http://localhost:4321.
 
 ```sh
 pnpm check
+pnpm check:theme
 pnpm build
 pnpm preview
 ```
@@ -43,6 +44,20 @@ The Cloudflare adapter generates the Static Assets and Wrangler deployment confi
 
 For Cloudflare Workers Builds, use `pnpm build` as the build command and `pnpm exec wrangler deploy` as the deploy command. Set `PUBLIC_HOSTNAME` in the build environment if deploying with a different canonical domain.
 
-Add a root `wrangler.jsonc` only when you need a different Worker name, custom domains, or resource bindings. The adapter supplies the entrypoint, asset paths, and compatibility settings automatically.
+`wrangler.jsonc` sets the Worker name and enables preview URLs. The adapter supplies the entrypoint, asset paths, and compatibility settings automatically.
+
+### Branch previews from the CLI
+
+```sh
+pnpm deploy:preview
+```
+
+This builds the current checkout and uploads a Worker version without changing the production deployment. Wrangler prints the version URL and a stable branch alias URL. Running the command again on the same branch updates that alias.
+
+Aliases use `branch-` followed by the lowercase branch name, with punctuation replaced by hyphens. For example, `feature/header` becomes `branch-feature-header`. Branch names that normalize to the same alias share a preview URL. The normalized branch name must be at most 43 characters. A detached checkout requires switching to a named branch first.
+
+Previews are public and include local uncommitted changes. They keep the configured production canonical URL unless you set `PUBLIC_HOSTNAME` before building. Uploads run when you invoke the command; Git pushes do not automatically trigger this CLI workflow.
+
+Run `node scripts/deploy-preview.mjs --check` to verify branch alias handling.
 
 `server.example.js` and `.eslintrc` are legacy Next.js files and are not used by the current scripts.
