@@ -11,7 +11,7 @@
     "dev": "pnpm install && astro dev",
     "build": "astro build",
     "deploy": "astro build && wrangler deploy",
-    "deploy:preview": "node scripts/deploy-preview.mjs",
+    "deploy:preview": "astro build && wrangler preview",
     "preview": "astro preview",
     "start": "astro preview",
     "check": "astro check",

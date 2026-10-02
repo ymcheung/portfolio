@@ -42,7 +42,19 @@ pnpm deploy
 
 The Cloudflare adapter generates the Static Assets and Wrangler deployment configuration. The Worker name defaults to `ym-portfolio` from `package.json`. The current site deploys only static assets, including real HTTP redirects for `/zh-TW` and `/zh-TW/`. If you add a route with `export const prerender = false`, the adapter also generates the Worker entrypoint for on-demand rendering.
 
-For Cloudflare Workers Builds, use `pnpm build` as the build command and `pnpm exec wrangler deploy` as the deploy command. Set `PUBLIC_HOSTNAME` in the build environment if deploying with a different canonical domain.
+### Automatic deployments with Cloudflare Workers Builds
+
+Connect the `ymcheung/portfolio` GitHub repository in the Worker's Settings > Build. Configure these settings and enable Preview Builds under Branch control:
+
+| Setting | Value |
+| --- | --- |
+| Production branch | `main` |
+| Root directory | Repository root |
+| Build command | `pnpm build` |
+| Deploy command | `pnpm exec wrangler deploy` |
+| Preview command | `pnpm exec wrangler preview` |
+
+Once connected, pushes to `main` deploy production and pushes to other branches update native Worker Previews. Cloudflare manages build authentication. No GitHub Actions workflow is needed. Set `PUBLIC_HOSTNAME` in the build environment if deploying with a different canonical domain.
 
 `wrangler.jsonc` sets the Worker name and enables preview URLs. The adapter supplies the entrypoint, asset paths, and compatibility settings automatically.
 
@@ -52,12 +64,8 @@ For Cloudflare Workers Builds, use `pnpm build` as the build command and `pnpm e
 pnpm deploy:preview
 ```
 
-This builds the current checkout and uploads a Worker version without changing the production deployment. Wrangler prints the version URL and a stable branch alias URL. Running the command again on the same branch updates that alias.
+This builds the current checkout and creates or updates a native Worker Preview for the current Git branch without changing production. Wrangler prints its preview URL. This replaces the earlier `branch-*` version aliases with Cloudflare's native preview naming.
 
-Aliases use `branch-` followed by the lowercase branch name, with punctuation replaced by hyphens. For example, `feature/header` becomes `branch-feature-header`. Branch names that normalize to the same alias share a preview URL. The normalized branch name must be at most 43 characters. A detached checkout requires switching to a named branch first.
-
-Previews are public and include local uncommitted changes. They keep the configured production canonical URL unless you set `PUBLIC_HOSTNAME` before building. Uploads run when you invoke the command; Git pushes do not automatically trigger this CLI workflow.
-
-Run `node scripts/deploy-preview.mjs --check` to verify branch alias handling.
+CLI previews include local uncommitted changes; automatic builds use pushed commits. Previews keep the configured production canonical URL unless you set `PUBLIC_HOSTNAME` before building.
 
 `server.example.js` and `.eslintrc` are legacy Next.js files and are not used by the current scripts.
