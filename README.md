@@ -40,7 +40,7 @@ pnpm exec wrangler login
 pnpm deploy
 ```
 
-The Cloudflare adapter generates the Static Assets and Wrangler deployment configuration. The Worker name defaults to `ym-portfolio` from `package.json`. The current site deploys only static assets, including real HTTP redirects for `/zh-TW` and `/zh-TW/`. If you add a route with `export const prerender = false`, the adapter also generates the Worker entrypoint for on-demand rendering.
+The Cloudflare adapter generates the Static Assets and Wrangler deployment configuration. The Worker name is `portfolio`, set in `wrangler.jsonc`. The current site deploys only static assets, including real HTTP redirects for `/zh-TW` and `/zh-TW/`. If you add a route with `export const prerender = false`, the adapter also generates the Worker entrypoint for on-demand rendering.
 
 ### Automatic deployments with Cloudflare Workers Builds
 
