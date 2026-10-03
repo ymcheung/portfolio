@@ -58,6 +58,8 @@ Once connected, pushes to `main` deploy production and pushes to other branches 
 
 `wrangler.jsonc` sets the Worker name and enables preview URLs. The adapter supplies the entrypoint, asset paths, and compatibility settings automatically.
 
+The `portfolio` Worker has `preview.ymcheung.tw` connected for Preview in Cloudflare's Domains settings. Branch previews use `https://<branch>.preview.ymcheung.tw`; Cloudflare normalizes branch names, so `feature/branch-preview-deploys` becomes `feature-branch-preview-deploys.preview.ymcheung.tw`.
+
 ### Branch previews from the CLI
 
 ```sh
