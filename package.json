@@ -1,5 +1,5 @@
 {
-  "name": "ym-portfolio",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -11,9 +11,11 @@
     "dev": "pnpm install && astro dev",
     "build": "astro build",
     "deploy": "astro build && wrangler deploy",
+    "deploy:preview": "astro build && wrangler preview",
     "preview": "astro preview",
     "start": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "check:theme": "astro build && node scripts/check-theme.mjs"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.3.3",

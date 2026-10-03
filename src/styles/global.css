@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
 @theme inline {
   --font-sans: var(--font-overpass);
   --color-shade-0: light-dark(oklch(17.043% 0.00107 176.47), oklch(99.248% 0.00012 176.64));
