@@ -173,7 +173,7 @@ const schema = {
     {route === 'home' ? (
       <HomePage locale={locale} projectTitle={projectTitle} />
     ) : (
-      <div class="min-h-screen bg-shade-1600 text-shade-100">
+      <div class="flex min-h-dvh flex-col bg-shade-1600 text-shade-100 [&>*]:shrink-0">
         <header class="px-4 pb-4 pt-6">
           <h1 class="mx-auto mb-6 grid max-w-160 px-2 font-sans md:px-4">
             <span class="m-0 text-2xl font-semibold leading-8 text-shade-0">
@@ -181,10 +181,12 @@ const schema = {
             </span>
           </h1>
         </header>
-        <main class="mx-auto max-w-160 px-6 pb-16 text-shade-600">
+        <main class="mx-auto w-full max-w-160 px-6 text-shade-600">
           {Content && <Content />}
         </main>
-        <CommonFooter locale={locale} langHref={alternatePath ?? null} />
+        <div class="mt-auto pt-10">
+          <CommonFooter locale={locale} langHref={alternatePath ?? null} />
+        </div>
       </div>
     )}
   </body>
