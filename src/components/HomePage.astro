@@ -18,7 +18,7 @@ const projectHref = locale === 'en'
   : 'https://zhongshanroad.chungli.works/?utm_source=portfolio&utm_medium=web';
 ---
 
-<div class="min-h-screen bg-shade-1600 text-shade-100">
+<div class="flex min-h-dvh flex-col bg-shade-1600 text-shade-100 [&>*]:shrink-0">
   <header class="relative min-h-40 overflow-hidden border-b-2 border-shade-1400 pt-12 md:min-h-48">
     <div class="mx-auto max-w-200 px-4">
       <strong class="relative z-10 -ml-0.5 inline-block font-sans text-xl font-extrabold italic leading-normal text-shade-0">
@@ -31,7 +31,7 @@ const projectHref = locale === 'en'
     <div transition:persist class="absolute inset-x-0 bottom-0 z-0 h-35 animate-cans bg-cans bg-size-(--background-size-cans) after:absolute after:inset-x-0 after:bottom-0 after:h-35 after:bg-gradient-to-b after:from-shade-1600 after:to-transparent motion-reduce:animate-none"></div>
   </header>
 
-  <main class="mx-auto mbs-8 max-w-200 px-4">
+  <main class="mx-auto mbs-8 w-full max-w-200 px-4">
     <section aria-labelledby="projects-title">
       <h2 id="projects-title" class:list={[
         'm-0 font-sans text-lg font-extrabold leading-normal tracking-heading text-shade-700',
@@ -55,14 +55,16 @@ const projectHref = locale === 'en'
     </section>
   </main>
 
-  <aside class="mbs-12 mx-auto grid max-w-200 grid-flow-col auto-cols-max items-center gap-3 px-4">
-    <a class="-ms-2" href="https://github.com/ymcheung" target="_blank" rel="noopener" aria-label="Github Profile">
-      <Icon name="github" />
-    </a>
-    <a href="https://build.intersection.tw" target="_blank" rel="noopener">
-      <BannerBuildUI />
-    </a>
-  </aside>
+  <div class="mt-auto pt-12">
+    <aside class="mx-auto grid max-w-200 grid-flow-col auto-cols-max items-center gap-3 px-4">
+      <a class="-ms-2" href="https://github.com/ymcheung" target="_blank" rel="noopener" aria-label="Github Profile">
+        <Icon name="github" />
+      </a>
+      <a href="https://build.intersection.tw" target="_blank" rel="noopener">
+        <BannerBuildUI />
+      </a>
+    </aside>
 
-  <CommonFooter locale={locale} show3d />
+    <CommonFooter locale={locale} show3d />
+  </div>
 </div>
